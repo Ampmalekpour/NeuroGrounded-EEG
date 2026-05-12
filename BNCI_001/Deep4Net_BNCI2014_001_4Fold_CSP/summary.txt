@@ -1,0 +1,94 @@
+Deep4Net + 4-fold CV + CSP-based channel reduction
+
+Subject 01 | mean=71.18% | std=2.71%
+  Fold 1: 71.53%
+  Fold 2: 67.36%
+  Fold 3: 70.83%
+  Fold 4: 75.00%
+  Fold 1 channels: POz, CP3, P1, FC3, P2, Pz, C5, C3, C6, C4, FC1, FCz
+  Fold 2 channels: C5, POz, FC4, C6, FC3, C3, C4, CP3, FC2, P2, P1, FCz
+  Fold 3 channels: C5, POz, C6, P2, Pz, FC4, C4, P1, Fz, FC2, CP4, CP3
+  Fold 4 channels: FC4, C4, FC2, C5, CP3, C3, C6, P1, C2, FC3, Cz, FCz
+
+Subject 02 | mean=32.47% | std=9.41%
+  Fold 1: 19.44%
+  Fold 2: 29.17%
+  Fold 3: 36.11%
+  Fold 4: 45.14%
+  Fold 1 channels: CPz, P2, FCz, P1, CP2, Pz, C2, POz, Cz, CP3, FC2, FC4
+  Fold 2 channels: CP1, C6, CP2, CP4, C4, P1, C2, CPz, C1, Cz, FC3, Pz
+  Fold 3 channels: CP3, C3, C1, CP1, C5, C6, FC1, Cz, C2, CPz, FC2, FC3
+  Fold 4 channels: CP3, P1, POz, C6, CP1, Pz, FC4, C3, FC2, C1, C2, Cz
+
+Subject 03 | mean=77.43% | std=2.11%
+  Fold 1: 79.17%
+  Fold 2: 75.00%
+  Fold 3: 79.86%
+  Fold 4: 75.69%
+  Fold 1 channels: POz, Pz, P1, P2, CP3, C6, CPz, CP1, FC3, CP2, C5, CP4
+  Fold 2 channels: POz, CP1, CPz, Pz, CP2, P2, P1, FC1, C1, CP3, FCz, FC3
+  Fold 3 channels: POz, Pz, P1, P2, CPz, CP2, CP1, CP4, CP3, C5, Fz, C4
+  Fold 4 channels: Fz, POz, Pz, FC3, FC1, FCz, P1, P2, FC2, CP4, CP3, CP2
+
+Subject 04 | mean=45.31% | std=3.69%
+  Fold 1: 43.06%
+  Fold 2: 40.97%
+  Fold 3: 46.53%
+  Fold 4: 50.69%
+  Fold 1 channels: FC3, FCz, FC2, Fz, C6, FC1, CP4, C3, C4, FC4, Cz, C2
+  Fold 2 channels: FC4, CP4, C4, FC1, Fz, FC2, C6, FC3, CP2, FCz, C2, P2
+  Fold 3 channels: C6, C4, FC4, CP4, FC2, P2, C2, FCz, CP2, Fz, POz, FC3
+  Fold 4 channels: FCz, FC2, Cz, C4, FC1, FC4, CP2, CP4, CPz, FC3, C2, P1
+
+Subject 05 | mean=32.12% | std=1.42%
+  Fold 1: 29.86%
+  Fold 2: 31.94%
+  Fold 3: 33.33%
+  Fold 4: 33.33%
+  Fold 1 channels: C6, CP4, P2, CP2, P1, Pz, C4, POz, CP1, CPz, C1, CP3
+  Fold 2 channels: POz, P1, C6, Pz, CP3, P2, CP4, CP1, CPz, C5, C3, Cz
+  Fold 3 channels: POz, CP4, P2, CPz, Pz, CP2, C4, C6, CP3, C2, FC4, CP1
+  Fold 4 channels: POz, CP4, P2, P1, Pz, C6, Fz, CP2, CP1, FC2, FC4, FCz
+
+Subject 06 | mean=42.53% | std=4.82%
+  Fold 1: 40.97%
+  Fold 2: 38.19%
+  Fold 3: 40.28%
+  Fold 4: 50.69%
+  Fold 1 channels: Fz, FCz, FC2, C5, FC1, FC4, C2, POz, P2, Pz, C6, C4
+  Fold 2 channels: Fz, C5, CP3, FC4, FC2, C6, C3, C2, FCz, C4, P2, C1
+  Fold 3 channels: FC4, FC2, C2, Fz, C4, FCz, FC1, CP3, C6, FC3, CP4, Pz
+  Fold 4 channels: FC4, C6, C2, FC2, Pz, P1, Cz, P2, C1, CP3, CP1, C4
+
+Subject 07 | mean=62.15% | std=7.36%
+  Fold 1: 50.69%
+  Fold 2: 70.14%
+  Fold 3: 61.11%
+  Fold 4: 66.67%
+  Fold 1 channels: CP4, CPz, Pz, CP2, P1, C6, CP1, P2, C1, C2, C4, POz
+  Fold 2 channels: CP4, C1, P2, P1, C5, POz, FC1, C3, CP2, Cz, CPz, C2
+  Fold 3 channels: P2, CPz, Pz, POz, P1, CP4, C1, CP3, CP2, CP1, Cz, C3
+  Fold 4 channels: POz, CP2, CP4, P1, Pz, P2, CPz, C4, CP3, C2, C1, Cz
+
+Subject 08 | mean=77.26% | std=2.42%
+  Fold 1: 77.08%
+  Fold 2: 81.25%
+  Fold 3: 75.69%
+  Fold 4: 75.00%
+  Fold 1 channels: P1, POz, Pz, CP4, P2, C5, CP1, CP3, FC4, C3, Cz, FC2
+  Fold 2 channels: P1, POz, C4, C6, CP1, CP3, CP4, C5, CP2, P2, Pz, Cz
+  Fold 3 channels: POz, CP3, P1, CP1, CPz, C3, Pz, P2, FC3, C5, CP4, CP2
+  Fold 4 channels: P1, Cz, POz, Pz, CP3, CP1, FCz, CP4, CPz, FC2, FC4, C4
+
+Subject 09 | mean=78.12% | std=3.28%
+  Fold 1: 79.17%
+  Fold 2: 77.08%
+  Fold 3: 82.64%
+  Fold 4: 73.61%
+  Fold 1 channels: FC3, C3, C1, CP2, Fz, FC4, CP4, P2, C4, C5, C6, FC2
+  Fold 2 channels: C4, CP2, CP4, POz, FC4, C6, P2, Fz, C2, C1, FC2, Cz
+  Fold 3 channels: P2, Fz, P1, FC1, POz, CP4, FCz, CP1, C4, FC3, FC4, Pz
+  Fold 4 channels: C3, FCz, P2, C1, Fz, CP2, FC1, C4, CP1, CP4, C5, Cz
+
+Overall mean across subjects = 57.62%
+Overall std across subjects  = 18.45%

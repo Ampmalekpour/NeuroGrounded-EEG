@@ -1,0 +1,251 @@
+Deep4Net_BNCI2014_001 — PAPER SUMMARY REPORT
+Full 22-channel baseline + Reduced-channel comparison
+
+================================================================================
+
+SUBJECT 01
+------------------------------------------------------------
+  Fold 1: 74.31%
+  Fold 2: 76.39%
+  Fold 3: 73.61%
+  Fold 4: 79.86%
+  Subject accuracy: 76.04% ± 2.43%
+
+CORRELATION RESULTS (with ERD maps):
+                  grad | ERD_L +0.115 | ERD_R +0.333 | (L-R) -0.152 | comb +0.549 | vsGrad +1.000
+          grad_x_input | ERD_L +0.110 | ERD_R +0.338 | (L-R) -0.157 | comb +0.549 | vsGrad +1.000
+  integrated_gradients | ERD_L +0.197 | ERD_R +0.228 | (L-R) -0.048 | comb +0.493 | vsGrad +0.989
+            smoothgrad | ERD_L +0.119 | ERD_R +0.330 | (L-R) -0.148 | comb +0.547 | vsGrad +1.000
+
+BEST CHANNELS — Average of ALL methods:
+  Top-8 : CP3 (1.0000), CP4 (0.9878), Cz (0.9172), C4 (0.8841), CPz (0.6292), CP1 (0.6074), C3 (0.5918), C1 (0.5650)
+  Top-12: CP3 (1.0000), CP4 (0.9878), Cz (0.9172), C4 (0.8841), CPz (0.6292), CP1 (0.6074), C3 (0.5918), C1 (0.5650), FC3 (0.5573), CP2 (0.5292), FC4 (0.5242), P1 (0.5156)
+
+BEST CHANNELS — Average of BEST methods:
+  Top-8 : CP3 (1.0000), CP4 (0.9766), Cz (0.9140), C4 (0.8728), CPz (0.6269), CP1 (0.6066), C3 (0.5907), C1 (0.5631)
+  Top-12: CP3 (1.0000), CP4 (0.9766), Cz (0.9140), C4 (0.8728), CPz (0.6269), CP1 (0.6066), C3 (0.5907), C1 (0.5631), FC3 (0.5552), CP2 (0.5260), FC4 (0.5192), P1 (0.5149)
+
+================================================================================
+
+SUBJECT 02
+------------------------------------------------------------
+  Fold 1: 20.83%
+  Fold 2: 27.78%
+  Fold 3: 38.19%
+  Fold 4: 30.56%
+  Subject accuracy: 29.34% ± 6.22%
+
+CORRELATION RESULTS (with ERD maps):
+                  grad | ERD_L +0.288 | ERD_R -0.017 | (L-R) +0.415 | comb +0.201 | vsGrad +1.000
+          grad_x_input | ERD_L +0.259 | ERD_R -0.036 | (L-R) +0.387 | comb +0.173 | vsGrad +0.999
+  integrated_gradients | ERD_L +0.290 | ERD_R -0.014 | (L-R) +0.417 | comb +0.203 | vsGrad +0.998
+            smoothgrad | ERD_L +0.289 | ERD_R -0.016 | (L-R) +0.416 | comb +0.202 | vsGrad +1.000
+
+BEST CHANNELS — Average of ALL methods:
+  Top-8 : Cz (1.0000), FC2 (0.8383), C1 (0.8367), FC1 (0.7187), FC3 (0.6899), C2 (0.6790), POz (0.6743), C6 (0.6053)
+  Top-12: Cz (1.0000), FC2 (0.8383), C1 (0.8367), FC1 (0.7187), FC3 (0.6899), C2 (0.6790), POz (0.6743), C6 (0.6053), FC4 (0.5912), FCz (0.5889), Fz (0.5614), CP1 (0.5612)
+
+BEST CHANNELS — Average of BEST methods:
+  Top-8 : Cz (1.0000), FC2 (0.8383), C1 (0.8352), FC1 (0.7164), FC3 (0.6895), C2 (0.6778), POz (0.6684), C6 (0.6026)
+  Top-12: Cz (1.0000), FC2 (0.8383), C1 (0.8352), FC1 (0.7164), FC3 (0.6895), C2 (0.6778), POz (0.6684), C6 (0.6026), FC4 (0.5904), FCz (0.5883), Fz (0.5633), CP1 (0.5576)
+
+================================================================================
+
+SUBJECT 03
+------------------------------------------------------------
+  Fold 1: 85.42%
+  Fold 2: 81.94%
+  Fold 3: 80.56%
+  Fold 4: 81.94%
+  Subject accuracy: 82.47% ± 1.80%
+
+CORRELATION RESULTS (with ERD maps):
+                  grad | ERD_L -0.080 | ERD_R -0.075 | (L-R) -0.005 | comb -0.080 | vsGrad +1.000
+          grad_x_input | ERD_L -0.090 | ERD_R -0.084 | (L-R) -0.005 | comb -0.090 | vsGrad +1.000
+  integrated_gradients | ERD_L -0.165 | ERD_R -0.156 | (L-R) -0.007 | comb -0.166 | vsGrad +0.961
+            smoothgrad | ERD_L -0.082 | ERD_R -0.077 | (L-R) -0.005 | comb -0.082 | vsGrad +1.000
+
+BEST CHANNELS — Average of ALL methods:
+  Top-8 : CPz (1.0000), C4 (0.6498), C3 (0.5654), CP4 (0.4871), CP3 (0.4461), FCz (0.3999), Cz (0.3991), P2 (0.3757)
+  Top-12: CPz (1.0000), C4 (0.6498), C3 (0.5654), CP4 (0.4871), CP3 (0.4461), FCz (0.3999), Cz (0.3991), P2 (0.3757), FC4 (0.3600), CP2 (0.3517), CP1 (0.3353), POz (0.3309)
+
+BEST CHANNELS — Average of BEST methods:
+  Top-8 : CPz (1.0000), C4 (0.6703), C3 (0.5906), CP4 (0.4996), CP3 (0.4540), Cz (0.4119), FCz (0.4118), P2 (0.3858)
+  Top-12: CPz (1.0000), C4 (0.6703), C3 (0.5906), CP4 (0.4996), CP3 (0.4540), Cz (0.4119), FCz (0.4118), P2 (0.3858), FC4 (0.3692), CP2 (0.3620), CP1 (0.3432), POz (0.3421)
+
+================================================================================
+
+SUBJECT 04
+------------------------------------------------------------
+  Fold 1: 52.78%
+  Fold 2: 56.94%
+  Fold 3: 56.25%
+  Fold 4: 56.94%
+  Subject accuracy: 55.73% ± 1.73%
+
+CORRELATION RESULTS (with ERD maps):
+                  grad | ERD_L -0.599 | ERD_R +0.026 | (L-R) -0.495 | comb -0.361 | vsGrad +1.000
+          grad_x_input | ERD_L -0.615 | ERD_R +0.028 | (L-R) -0.509 | comb -0.369 | vsGrad +0.999
+  integrated_gradients | ERD_L -0.609 | ERD_R +0.003 | (L-R) -0.484 | comb -0.382 | vsGrad +0.998
+            smoothgrad | ERD_L -0.599 | ERD_R +0.025 | (L-R) -0.494 | comb -0.362 | vsGrad +1.000
+
+BEST CHANNELS — Average of ALL methods:
+  Top-8 : CP3 (1.0000), POz (0.9489), CP2 (0.8688), P2 (0.8294), C6 (0.7755), CP1 (0.7553), CP4 (0.7342), Cz (0.7040)
+  Top-12: CP3 (1.0000), POz (0.9489), CP2 (0.8688), P2 (0.8294), C6 (0.7755), CP1 (0.7553), CP4 (0.7342), Cz (0.7040), C2 (0.6109), P1 (0.6003), Pz (0.5956), C4 (0.5135)
+
+BEST CHANNELS — Average of BEST methods:
+  Top-8 : CP3 (1.0000), POz (0.9475), CP2 (0.8632), P2 (0.8280), C6 (0.7795), CP1 (0.7552), CP4 (0.7311), Cz (0.7032)
+  Top-12: CP3 (1.0000), POz (0.9475), CP2 (0.8632), P2 (0.8280), C6 (0.7795), CP1 (0.7552), CP4 (0.7311), Cz (0.7032), C2 (0.6062), P1 (0.5988), Pz (0.5953), C4 (0.5114)
+
+================================================================================
+
+SUBJECT 05
+------------------------------------------------------------
+  Fold 1: 30.56%
+  Fold 2: 31.94%
+  Fold 3: 34.03%
+  Fold 4: 35.42%
+  Subject accuracy: 32.99% ± 1.87%
+
+CORRELATION RESULTS (with ERD maps):
+                  grad | ERD_L -0.248 | ERD_R -0.215 | (L-R) -0.006 | comb -0.236 | vsGrad +1.000
+          grad_x_input | ERD_L -0.293 | ERD_R -0.264 | (L-R) +0.020 | comb -0.284 | vsGrad +0.997
+  integrated_gradients | ERD_L -0.290 | ERD_R -0.270 | (L-R) +0.040 | comb -0.285 | vsGrad +0.996
+            smoothgrad | ERD_L -0.247 | ERD_R -0.214 | (L-R) -0.005 | comb -0.235 | vsGrad +1.000
+
+BEST CHANNELS — Average of ALL methods:
+  Top-8 : Pz (1.0000), P2 (0.9453), Cz (0.8834), CPz (0.8785), POz (0.7853), CP2 (0.7813), C5 (0.7339), P1 (0.6780)
+  Top-12: Pz (1.0000), P2 (0.9453), Cz (0.8834), CPz (0.8785), POz (0.7853), CP2 (0.7813), C5 (0.7339), P1 (0.6780), C3 (0.6775), Fz (0.6748), CP3 (0.6714), C2 (0.6674)
+
+BEST CHANNELS — Average of BEST methods:
+  Top-8 : Pz (1.0000), P2 (0.9439), Cz (0.8867), CPz (0.8785), POz (0.7869), CP2 (0.7787), C5 (0.7354), Fz (0.6797)
+  Top-12: Pz (1.0000), P2 (0.9439), Cz (0.8867), CPz (0.8785), POz (0.7869), CP2 (0.7787), C5 (0.7354), Fz (0.6797), P1 (0.6784), C3 (0.6759), CP3 (0.6718), C2 (0.6717)
+
+================================================================================
+
+SUBJECT 06
+------------------------------------------------------------
+  Fold 1: 41.67%
+  Fold 2: 43.06%
+  Fold 3: 40.97%
+  Fold 4: 45.14%
+  Subject accuracy: 42.71% ± 1.59%
+
+CORRELATION RESULTS (with ERD maps):
+                  grad | ERD_L +0.281 | ERD_R +0.308 | (L-R) -0.145 | comb +0.304 | vsGrad +1.000
+          grad_x_input | ERD_L +0.183 | ERD_R +0.210 | (L-R) -0.116 | comb +0.203 | vsGrad +0.992
+  integrated_gradients | ERD_L +0.223 | ERD_R +0.243 | (L-R) -0.113 | comb +0.240 | vsGrad +0.996
+            smoothgrad | ERD_L +0.283 | ERD_R +0.310 | (L-R) -0.145 | comb +0.306 | vsGrad +1.000
+
+BEST CHANNELS — Average of ALL methods:
+  Top-8 : POz (1.0000), CP3 (0.8959), C4 (0.8959), CPz (0.8858), Cz (0.8625), FCz (0.8063), Pz (0.7626), C1 (0.7331)
+  Top-12: POz (1.0000), CP3 (0.8959), C4 (0.8959), CPz (0.8858), Cz (0.8625), FCz (0.8063), Pz (0.7626), C1 (0.7331), P2 (0.7257), CP4 (0.7074), CP1 (0.6990), C6 (0.6822)
+
+BEST CHANNELS — Average of BEST methods:
+  Top-8 : POz (1.0000), CP3 (0.8926), CPz (0.8884), C4 (0.8841), Cz (0.8655), FCz (0.8060), Pz (0.7638), C1 (0.7336)
+  Top-12: POz (1.0000), CP3 (0.8926), CPz (0.8884), C4 (0.8841), Cz (0.8655), FCz (0.8060), Pz (0.7638), C1 (0.7336), P2 (0.7307), CP4 (0.7046), CP1 (0.7020), C6 (0.6791)
+
+================================================================================
+
+SUBJECT 07
+------------------------------------------------------------
+  Fold 1: 74.31%
+  Fold 2: 77.78%
+  Fold 3: 79.17%
+  Fold 4: 77.08%
+  Subject accuracy: 77.08% ± 1.77%
+
+CORRELATION RESULTS (with ERD maps):
+                  grad | ERD_L -0.343 | ERD_R -0.486 | (L-R) +0.089 | comb -0.417 | vsGrad +1.000
+          grad_x_input | ERD_L -0.338 | ERD_R -0.485 | (L-R) +0.097 | comb -0.414 | vsGrad +1.000
+  integrated_gradients | ERD_L -0.303 | ERD_R -0.447 | (L-R) +0.108 | comb -0.377 | vsGrad +0.990
+            smoothgrad | ERD_L -0.344 | ERD_R -0.487 | (L-R) +0.088 | comb -0.418 | vsGrad +1.000
+
+BEST CHANNELS — Average of ALL methods:
+  Top-8 : C3 (1.0000), CP3 (0.4076), Cz (0.3859), CPz (0.3126), C4 (0.3000), C5 (0.2832), FC3 (0.2768), FCz (0.2550)
+  Top-12: C3 (1.0000), CP3 (0.4076), Cz (0.3859), CPz (0.3126), C4 (0.3000), C5 (0.2832), FC3 (0.2768), FCz (0.2550), C1 (0.2151), CP1 (0.2108), CP4 (0.2103), CP2 (0.1871)
+
+BEST CHANNELS — Average of BEST methods:
+  Top-8 : C3 (1.0000), CP3 (0.4045), Cz (0.3742), CPz (0.3037), C4 (0.2918), C5 (0.2817), FC3 (0.2757), FCz (0.2502)
+  Top-12: C3 (1.0000), CP3 (0.4045), Cz (0.3742), CPz (0.3037), C4 (0.2918), C5 (0.2817), FC3 (0.2757), FCz (0.2502), C1 (0.2123), CP1 (0.2045), CP4 (0.2043), CP2 (0.1823)
+
+================================================================================
+
+SUBJECT 08
+------------------------------------------------------------
+  Fold 1: 83.33%
+  Fold 2: 88.19%
+  Fold 3: 79.17%
+  Fold 4: 78.47%
+  Subject accuracy: 82.29% ± 3.88%
+
+CORRELATION RESULTS (with ERD maps):
+                  grad | ERD_L -0.155 | ERD_R -0.204 | (L-R) +0.020 | comb -0.209 | vsGrad +1.000
+          grad_x_input | ERD_L -0.161 | ERD_R -0.208 | (L-R) +0.018 | comb -0.215 | vsGrad +1.000
+  integrated_gradients | ERD_L -0.157 | ERD_R -0.166 | (L-R) -0.014 | comb -0.190 | vsGrad +0.995
+            smoothgrad | ERD_L -0.157 | ERD_R -0.203 | (L-R) +0.017 | comb -0.210 | vsGrad +1.000
+
+BEST CHANNELS — Average of ALL methods:
+  Top-8 : CPz (1.0000), CP3 (0.8016), POz (0.5725), CP4 (0.5622), Cz (0.5242), CP1 (0.4693), Pz (0.4667), CP2 (0.4553)
+  Top-12: CPz (1.0000), CP3 (0.8016), POz (0.5725), CP4 (0.5622), Cz (0.5242), CP1 (0.4693), Pz (0.4667), CP2 (0.4553), FC4 (0.3894), FC3 (0.3886), C5 (0.3842), C3 (0.3609)
+
+BEST CHANNELS — Average of BEST methods:
+  Top-8 : CPz (1.0000), CP3 (0.7943), POz (0.5684), CP4 (0.5551), Cz (0.5224), CP1 (0.4672), Pz (0.4666), CP2 (0.4492)
+  Top-12: CPz (1.0000), CP3 (0.7943), POz (0.5684), CP4 (0.5551), Cz (0.5224), CP1 (0.4672), Pz (0.4666), CP2 (0.4492), FC3 (0.3847), FC4 (0.3841), C5 (0.3807), C3 (0.3577)
+
+================================================================================
+
+SUBJECT 09
+------------------------------------------------------------
+  Fold 1: 78.47%
+  Fold 2: 76.39%
+  Fold 3: 81.94%
+  Fold 4: 79.17%
+  Subject accuracy: 78.99% ± 1.99%
+
+CORRELATION RESULTS (with ERD maps):
+                  grad | ERD_L -0.396 | ERD_R +0.126 | (L-R) -0.470 | comb -0.250 | vsGrad +1.000
+          grad_x_input | ERD_L -0.412 | ERD_R +0.161 | (L-R) -0.506 | comb -0.246 | vsGrad +0.997
+  integrated_gradients | ERD_L -0.559 | ERD_R -0.051 | (L-R) -0.530 | comb -0.455 | vsGrad +0.897
+            smoothgrad | ERD_L -0.396 | ERD_R +0.123 | (L-R) -0.469 | comb -0.251 | vsGrad +1.000
+
+BEST CHANNELS — Average of ALL methods:
+  Top-8 : CPz (1.0000), CP3 (0.9369), C5 (0.7964), C4 (0.7402), CP4 (0.6876), Cz (0.6839), C3 (0.6307), POz (0.5723)
+  Top-12: CPz (1.0000), CP3 (0.9369), C5 (0.7964), C4 (0.7402), CP4 (0.6876), Cz (0.6839), C3 (0.6307), POz (0.5723), Pz (0.5654), FC4 (0.5212), C6 (0.5199), P1 (0.5170)
+
+BEST CHANNELS — Average of BEST methods:
+  Top-8 : CPz (1.0000), CP3 (0.9270), C5 (0.7896), C4 (0.7698), CP4 (0.7096), Cz (0.6873), C3 (0.6196), POz (0.5739)
+  Top-12: CPz (1.0000), CP3 (0.9270), C5 (0.7896), C4 (0.7698), CP4 (0.7096), Cz (0.6873), C3 (0.6196), POz (0.5739), Pz (0.5652), FC4 (0.5354), C6 (0.5317), P1 (0.5158)
+
+================================================================================
+
+GRAND MEAN ACCURACY (22 channels): 61.96% ± 20.72%
+
+AVERAGED CORRELATIONS (over all subjects):
+                  grad → ERD_(L-R) corr = -0.083
+          grad_x_input → ERD_(L-R) corr = -0.086
+  integrated_gradients → ERD_(L-R) corr = -0.070
+            smoothgrad → ERD_(L-R) corr = -0.083
+
+GRAND BEST CHANNELS — Average of ALL methods (Top-12):
+CP3 (1.0000), CPz (0.9977), Cz (0.9536), POz (0.8213), C3 (0.8154), CP4 (0.8154), C4 (0.7648), CP1 (0.7004), CP2 (0.6987), P2 (0.6835), C5 (0.6727), Pz (0.6644)
+
+GRAND BEST CHANNELS — Average of BEST methods (Top-12):
+CP3 (1.0000), CPz (0.9980), Cz (0.9567), POz (0.8224), CP4 (0.8179), C3 (0.8174), C4 (0.7685), CP1 (0.7016), CP2 (0.6999), P2 (0.6853), C5 (0.6728), Pz (0.6650)
+
+
+################################################################################
+REDUCED-CHANNEL RESULTS (12 channels — best_methods)
+################################################################################
+
+Subject 01: 22ch = 76.04% | Reduced = 72.57%
+Subject 02: 22ch = 29.34% | Reduced = 28.65%
+Subject 03: 22ch = 82.47% | Reduced = 81.42%
+Subject 04: 22ch = 55.73% | Reduced = 51.22%
+Subject 05: 22ch = 32.99% | Reduced = 32.64%
+Subject 06: 22ch = 42.71% | Reduced = 43.58%
+Subject 07: 22ch = 77.08% | Reduced = 67.88%
+Subject 08: 22ch = 82.29% | Reduced = 80.38%
+Subject 09: 22ch = 78.99% | Reduced = 77.78%
+
+GRAND MEAN: 22ch = 61.96% | Reduced = 59.57%

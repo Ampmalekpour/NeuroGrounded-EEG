@@ -1,0 +1,12 @@
+Subject: 5
+Fold 1 Accuracy (%): 40.97
+Fold 2 Accuracy (%): 37.50
+Fold 3 Accuracy (%): 35.42
+Fold 4 Accuracy (%): 31.94
+Mean Accuracy (%): 36.46
+Std Accuracy (%): 3.28
+
+Fold 1 selected channels: Fz, POz, P1, FC3, C5, C2, CP4, FC4, FC2, FC1, P2, C1
+Fold 2 selected channels: C2, FC3, C5, CP4, Fz, FC4, Pz, P1, FC1, CP2, CPz, CP1
+Fold 3 selected channels: FC3, CP4, P1, POz, FC1, FCz, C2, FC2, Fz, C3, C1, Cz
+Fold 4 selected channels: POz, CP3, FC4, Fz, C2, Cz, FCz, P2, Pz, P1, CP4, CP2
