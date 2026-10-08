@@ -1,0 +1,3 @@
+# Experiment outputs. results.json / fold_results.csv are small and may be committed
+# deliberately (git add -f); bulky figures and arrays are ignored.
+results/
