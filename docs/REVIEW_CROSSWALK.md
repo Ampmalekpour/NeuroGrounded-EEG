@@ -1,8 +1,8 @@
 # Reviewer comments vs. the original scripts and the current code
 
-Applies to `Deep4net/HGD`, `EEGItNet/HGD` and `EEGNetV4/HGD` (identical pipeline; EEG-ITNet and EEGNetv4
-differ only in the model and in not using exponential moving standardisation; EEGNetv4 keeps its original
-350-epoch budget).
+Applies to `Deep4net/HGD`, `EEGItNet/HGD`, `EEGNetV4/HGD` and `EEGConformer/HGD` (identical pipeline; EEG-ITNet
+and EEGNetv4 differ only in the model and in not using exponential moving standardisation; EEGNetv4 keeps its
+original 350-epoch budget; EEGConformer keeps its own preprocessing/training recipe, see section D).
 "Original Deep4Net" = `Deep4Net_BD_HGD_BD_Final_2_Class_new.py` and `..._4_Class_old.py`.
 The original EEGNetv4 2-class script had the same feet-vs-left-hand mask (`[0, 1]`) and ERD labels 0/1 as
 the Deep4Net one; its 4-class script used labels 0/1 for the ERD references.
@@ -51,3 +51,23 @@ the real HGD run has not been executed from this environment.
 * `X=(trials, 22, n_times)`: with the unchanged windowing, `n_times` is printed at load time and stored
   in `results.json`. Confirm it matches what the manuscript states (400 samples = 4 s at 100 Hz).
 * The label check passes silently; it raises if braindecode's mapping ever differs.
+
+
+## D. EEGConformer-specific findings (original scripts)
+
+Read from `EEGConformer_BD_HGD_BD_Final_2_LR.py`, `..._LR_REST.py` and the three `EEGConformer_Channel_Reduction_*.py`
+scripts. These are in addition to the problems in section A.
+
+| # | Original behaviour | Status |
+|---|---|---|
+| 1 | **Checkpoint and learning-rate schedule chosen on the TEST fold** (`best_acc` / `scheduler.step` use `test_acc`; the validation block is never used). Reported accuracy is therefore optimistically biased. | **FIXED**: validation block. |
+| 2 | In the main script `best_state = model.state_dict().copy()` is a shallow copy, so the "best" checkpoint is just the live final weights (final-epoch test accuracy). The CSP/MI/ReliefF scripts used `copy.deepcopy` (true best-on-test). The "22ch/Ours" and CSP/MI/RLF rows were therefore **not selected the same way**, which favours the three baselines. (My reading of the code; consistent with the review's point that the comparison needs a uniform protocol.) | **FIXED**: one training function for every method. |
+| 3 | Saliency computed on the test loader. | **FIXED**: validation block (z-scored like the model input). |
+| 4 | CSP/MI/ReliefF: one global montage from all 14 subjects. | **FIXED**: leave-one-subject-out. |
+| 5 | The reduced-montage experiment re-picked channels *before* the average reference, so its reference differed from the 22-channel model (CSP/MI/RLF subset the 22-channel data after referencing). | **FIXED**: referenced once over 22 channels; reduced montages are column subsets. |
+| 6 | `raw.pick_channels` without `ordered=True` can return channels in recording order (MNE-version dependent), and labels were taken from the annotation list rather than from the epochs actually created (a dropped epoch would misalign X and y). | **FIXED**: ordered picks with an assertion; labels come from `epochs.events`. |
+| 7 | ERD in dB from PSD, baseline 0-0.4 s *after* the cue, method choice by `-ERD_combined` correlation. | **FIXED**: shared pre-cue ERD (8-30 Hz, trial-averaged power ratio) and the sign-invariant alignment metrics. |
+| 8 | 2-class and 4-class used different model/scheduler settings (depth 2/6, heads 4/10, dropout 0.6/0.5, patience 15/10). | **OPEN / PAPER**: kept as in the originals (`CONFORMER_CFG`), stored in `results.json`; choose one configuration or justify both. |
+| 9 | The only 4-class script was a fixed 12-channel run for subjects 10-14 (Cz, C3, C2, C4, C1, CP2, Pz, CPz, CP6, CP3, FC1, FC4); there was no 4-class 22-channel/saliency script. | **OPEN**: the 4-class folder is new; its settings come from that script - please confirm. |
+| 10 | CSP used `reg=1e-4`, `log=True`; MI/ReliefF used raw variance; no seeds beyond 42. | **FIXED**: log-variance features, prior-weighted ReliefF, `EEG_SEEDS`. CSP keeps `reg=1e-4`. |
+| 11 | Fixed 100 epochs, no early stopping, no per-fold predictions saved. | Fixed budget kept (original); predictions, confusion matrices and class counts are now saved. |

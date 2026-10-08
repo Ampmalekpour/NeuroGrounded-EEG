@@ -1,6 +1,6 @@
-# deep4net_hgd_4class_csp.py
+# eegconformer_hgd_2class_csp.py
 #
-# Deep4Net on HGD, 4class: CSP-ranked 12-channel montage (the "CSP" row).
+# EEGConformer on HGD, 2class: CSP-ranked 12-channel montage (the "CSP" row).
 #
 # Method (fully specified for reproducibility):
 #   * input   : the preprocessed 22-channel trials, whole window
@@ -13,14 +13,14 @@ import os
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.dirname(HERE))          # folder holding deep4net_hgd_common.py
-os.environ["EEG_CLASS_MODE"] = "4class"           # this folder is the 4class experiment
+sys.path.insert(0, os.path.dirname(HERE))          # folder holding eegconformer_hgd_common.py
+os.environ["EEG_CLASS_MODE"] = "2class"           # this folder is the 2class experiment
 os.environ.setdefault("EEG_RESULTS_DIR", os.path.join(HERE, "results"))
 
 import numpy as np
 from mne.decoding import CSP
 
-import deep4net_hgd_common as C
+import eegconformer_hgd_common as C
 
 CSP_N_COMPONENTS = 4
 
@@ -42,7 +42,7 @@ def csp_scores(X, y):
 
 
 def main():
-    print("\n" + "=" * 80 + "\nPHASE 1: PER-SUBJECT CSP SCORES (22 ch) - 4class\n" + "=" * 80)
+    print("\n" + "=" * 80 + "\nPHASE 1: PER-SUBJECT CSP SCORES (22 ch) - 2class\n" + "=" * 80)
     subject_scores = {}
     for sid in C.SUBJECT_IDS:
         X, y, _ = C.load_subject_windows(sid, C.FULL_CHANNELS, C.CLASS_MODE)
@@ -57,9 +57,9 @@ def main():
                                               "csp_reg": getattr(C, "CSP_REG", None),
                                               "csp_4class": "one-vs-rest, averaged"})
     C.write_text_report(os.path.join(C.experiment_dir("csp_reduced"), "csp_reduced_report.txt"),
-                        "Deep4Net - HGD - CSP 12-channel (LOSO) - 4class", records, montages)
+                        "EEGConformer - HGD - CSP 12-channel (LOSO) - 2class", records, montages)
     s = C.summarize(records)
-    print(f"\nCSP 4class: {s['grand_mean']*100:.2f}% +/- {s['grand_std_across_subjects']*100:.2f}%")
+    print(f"\nCSP 2class: {s['grand_mean']*100:.2f}% +/- {s['grand_std_across_subjects']*100:.2f}%")
 
 
 if __name__ == "__main__":
