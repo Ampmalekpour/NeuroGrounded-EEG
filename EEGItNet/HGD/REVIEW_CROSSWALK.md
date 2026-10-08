@@ -5,17 +5,16 @@ Status key: **FIXED** (changed in revised code), **PARTIAL**, **UNCHANGED** (cod
 
 "Original" = the old `eegitnet_hgd_paper_ready_full_vs_reduced_no_occlusion.py` (2-class and 4-class
 copies) plus the old CSP/MI/ReliefF scripts. "Revised" = the five files in this folder.
-The revised saliency script (`eegitnet_hgd_saliency_reduced.py`) has not been supplied, so every
-saliency/"Ours" item is UNVERIFIED beyond what `common` shows.
+The revised saliency script (`eegitnet_hgd_saliency_reduced.py`) is now included and has been read.
 
 ## A. What was wrong in the original code
 
 | # | Problem in original code | Review # | Revised status |
 |---|---|---|---|
 | 1 | Old CSP/MI/ReliefF 2-class scripts masked labels `[0, 1]` (feet vs left hand) instead of left vs right, so the baselines solved a different task than "Ours". | 1, 11, 15 | **FIXED**: all scripts use `apply_class_mode()` (left=1, right=3 -> 0/1). |
-| 2 | Saliency was computed on the **test fold** (`compute_fold_channel_importances(model, X_te, y_te)`), then the reduced model was scored on those same test trials. | 6 | **PARTIAL / UNVERIFIED**: `common` now documents "call with validation set", but the function itself does not enforce it; the caller is in the missing saliency script. |
-| 3 | One **global** montage averaged over all 14 subjects, including the one being tested. | 6, 16 | **FIXED for CSP/MI/ReliefF** (`loso_montage`: subject S's montage uses only the other 13). **UNVERIFIED for saliency.** |
-| 4 | Attribution methods were chosen by correlation with ERD_(L-R) and that same correlation was then used as validation (circular). | 8 | **UNCHANGED**: `correlations_report` says ERD_(L-R) still drives method/channel choice. |
+| 2 | Saliency was computed on the **test fold** (`compute_fold_channel_importances(model, X_te, y_te)`), then the reduced model was scored on those same test trials. | 6 | **FIXED**: the saliency script passes `X[val_idx], y[val_idx]` to `compute_fold_channel_importances`. (The function itself still does not enforce this.) |
+| 3 | One **global** montage averaged over all 14 subjects, including the one being tested. | 6, 16 | **FIXED** for CSP/MI/ReliefF and saliency (`loso_montage`: subject S's montage uses only the other 13), **except** the residual leak in section B (method ranking). |
+| 4 | Attribution methods were chosen by correlation with ERD_(L-R) and that same correlation was then used as validation (circular). | 8 | **UNCHANGED**: `best_methods` is still ranked by mean ERD_(L-R) correlation (saliency script lines 141-146); the other three correlations are report-only. |
 | 5 | Saliency is `abs()`-averaged and averaged over all classes; ERD is signed; L-R flips sign with subtraction order. Sign of r was then interpreted. | 7, 9 | **UNCHANGED** (same `abs().mean` code; extra correlations only logged). |
 | 6 | ERD "baseline" is samples 0-0.5 s of a window that starts **at the cue** (post-cue), not the pre-cue interval stated in the paper. | 13 | **UNCHANGED** (`compute_class_erd_map`, `trial_start_offset_samples=0`). |
 | 7 | Test accuracy evaluated and printed every epoch inside the training loop. Not used for checkpoint choice (val loss is), but invites leakage and costs compute. | 6 | **UNCHANGED**. |
@@ -28,6 +27,17 @@ saliency/"Ours" item is UNVERIFIED beyond what `common` shows.
 | 14 | Only global selection exists; paper describes Local and Global subsets. | 5, 16 | **PAPER**: remove "Local" or implement it. |
 
 ## B. New issues found in the revised code
+
+- **Residual leak in the saliency montage.** `best_methods` is ranked by the ERD_(L-R) correlation
+  averaged over **all 14** subjects, so held-out subject S's saliency and its ERD map (computed from all
+  of S's trials, including the test blocks) influence which methods build S's "LOSO" montage. The effect
+  is probably small, but the "never uses S's data" claim is not strictly true. Fix: rank methods per
+  held-out subject from the other 13 only.
+- **Two different 22ch runs.** The saliency script retrains its own 22-channel models and the baseline
+  script trains another set. They will give different numbers (different RNG state), so decide which one
+  fills the `22ch` table row, or the row and the "Ours" comparison will not share a baseline.
+- Saliency uses the true-class logit averaged over all classes, but is compared only with the left-vs-right
+  ERD reference, including in the 4-class run (feet/rest trials contribute to saliency, not to the reference).
 
 - **ReliefF does not match paper Eq. 8**: nearest misses are pooled across all other classes with no
   per-class prior weighting. The header comment claiming it is correct for >2 classes overstates this.

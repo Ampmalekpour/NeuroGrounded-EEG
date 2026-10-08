@@ -10,7 +10,7 @@ Full-22-channel baseline and 12-channel reduced-montage experiments, for both
 | `eegitnet_hgd_csp_reduced.py` | `CSP` | CSP-ranked 12-channel montage (4-class via one-vs-rest) |
 | `eegitnet_hgd_mi_reduced.py` | `MI` | Mutual-information-ranked montage |
 | `eegitnet_hgd_relieff_reduced.py` | `RLF` | ReliefF-ranked montage |
-| `eegitnet_hgd_saliency_reduced.py` | `Ours` | **Not yet in the repo** (referenced by `common`) |
+| `eegitnet_hgd_saliency_reduced.py` | `Ours` | Saliency-ranked montage (validation-set saliency, LOSO) |
 
 Run from this directory (scripts import `eegitnet_hgd_common` and write their
 outputs, git-ignored, to the working directory):
@@ -21,6 +21,7 @@ python eegitnet_hgd_baseline_full22.py
 python eegitnet_hgd_csp_reduced.py
 python eegitnet_hgd_mi_reduced.py
 python eegitnet_hgd_relieff_reduced.py
+python eegitnet_hgd_saliency_reduced.py
 ```
 
 ## What changed relative to the earlier per-method scripts
