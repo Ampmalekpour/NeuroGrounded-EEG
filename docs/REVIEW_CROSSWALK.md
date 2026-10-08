@@ -1,8 +1,11 @@
 # Reviewer comments vs. the original scripts and the current code
 
-Applies to `Deep4net/HGD` and `EEGItNet/HGD` (identical pipeline; EEG-ITNet differs only in the model
-and in not using exponential moving standardisation).
+Applies to `Deep4net/HGD`, `EEGItNet/HGD` and `EEGNetV4/HGD` (identical pipeline; EEG-ITNet and EEGNetv4
+differ only in the model and in not using exponential moving standardisation; EEGNetv4 keeps its original
+350-epoch budget).
 "Original Deep4Net" = `Deep4Net_BD_HGD_BD_Final_2_Class_new.py` and `..._4_Class_old.py`.
+The original EEGNetv4 2-class script had the same feet-vs-left-hand mask (`[0, 1]`) and ERD labels 0/1 as
+the Deep4Net one; its 4-class script used labels 0/1 for the ERD references.
 The original EEG-ITNet saliency scripts used the correct left/right labels (1/3); its old CSP/MI/ReliefF
 scripts masked labels `[0, 1]` (feet vs left hand) instead.
 Status: **FIXED** (changed here), **PAPER** (manuscript edit), **OPEN** (needs data or a decision).

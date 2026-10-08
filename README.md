@@ -23,7 +23,7 @@ Deep4net/
 EEGItNet/
   HGD/                                same structure as Deep4net/HGD (common + 2class/ + 4class/)
 EEGNetV4/
-  HGD/legacy_unrevised/               old pre-review scripts (not yet ported)
+  HGD/                                same structure (common + 2class/ + 4class/ + legacy_unrevised/)
 analysis/equivalence_stats.py         paired TOST / CI / per-subject losses from results.json files
 docs/REVIEW_CROSSWALK.md              reviewer comments vs original code vs this code
 ```
@@ -55,8 +55,8 @@ python deep4net_hgd_2class_mi.py
 python deep4net_hgd_2class_controls.py sensorimotor random erd
 ```
 
-For the other settings run the same files from `Deep4net\HGD\4class`, `EEGItNet\HGD\2class`
-or `EEGItNet\HGD\4class`.
+For the other settings run the same files from `Deep4net\HGD\4class`, `EEGItNet\HGD\2class|4class`
+or `EEGNetV4\HGD\2class|4class` (replace the `deep4net_` prefix with `eegitnet_` / `eegnetv4_`).
 
 Optional environment variables: `EEG_SEEDS`, `EEG_SUBJECTS`, `EEG_MAX_EPOCHS`, `EEG_PATIENCE`,
 `EEG_RESULTS_DIR`, `EEG_SYNTHETIC`, `EEG_ATTR_SELECTION` (`all` default | `best`, exploratory).
