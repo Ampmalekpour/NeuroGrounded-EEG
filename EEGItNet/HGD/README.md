@@ -35,6 +35,9 @@ python eegitnet_hgd_relieff_reduced.py
 4. **Saliency from validation data**: `compute_fold_channel_importances` is
    documented to take the validation split, not the test split.
 
+See `REVIEW_CROSSWALK.md` for a point-by-point comparison of the original code,
+the revised code and the reviewer's comments.
+
 ## Known open items (reviewer report)
 
 - Preprocessing here (100 Hz, 4-38 Hz, 0-4 s, no EMS) differs from paper
