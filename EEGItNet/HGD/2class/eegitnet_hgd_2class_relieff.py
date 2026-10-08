@@ -1,21 +1,25 @@
-# deep4net_hgd_relieff_reduced.py
+# eegitnet_hgd_2class_relieff.py
 #
-# ReliefF-ranked 12-channel montage for Deep4Net on HGD (the "RLF" row).
+# EEG-ITNet on HGD, 2class: ReliefF-ranked 12-channel montage (the "RLF" row).
 #
-# Implements ReliefF (Kononenko, 1994) as in manuscript Eq. 8, for any number of classes:
+# ReliefF (Kononenko, 1994) as in manuscript Eq. 8, for any number of classes:
 #   W_j <- W_j - (1/(m k)) sum_k diff(j, R, H_k)
 #              + (1/(m k)) sum_{C != class(R)} [P(C) / (1 - P(class(R)))] sum_k diff(j, R, M_k(C))
-# i.e. k nearest HITS of the same class, and k nearest MISSES from EACH other class,
-# weighted by the class priors. (The earlier script pooled misses over all other classes.)
-#   * feature : log temporal variance per channel, min-max scaled to [0, 1] (so diff() is in [0, 1])
-#   * distance: Euclidean over all 22 channel features
-#   * k = 10, every trial is used as R (m = n_trials)
+# i.e. k nearest HITS of the same class and k nearest MISSES from EACH other class, prior-weighted.
+#   * feature : log temporal variance per channel, min-max scaled to [0, 1] (diff() in [0, 1])
+#   * distance: Euclidean over all 22 channel features;  k = 10;  every trial is used as R
 #   * montage : leave-one-subject-out
-
 import os
+import sys
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.dirname(HERE))          # folder holding eegitnet_hgd_common.py
+os.environ["EEG_CLASS_MODE"] = "2class"           # this folder is the 2class experiment
+os.environ.setdefault("EEG_RESULTS_DIR", os.path.join(HERE, "results"))
+
 import numpy as np
 
-import deep4net_hgd_common as C
+import eegitnet_hgd_common as C
 
 RELIEFF_K = 10
 
@@ -43,34 +47,30 @@ def relieff_scores(X, y, k=RELIEFF_K):
             if c == ci or len(class_idx[c]) == 0:
                 continue
             near = class_idx[c][np.argsort(dist[i, class_idx[c]])[:k]]
-            weight = prior[c] / (1.0 - prior[ci])
-            w += weight * np.abs(feats[i] - feats[near]).mean(axis=0) / n
+            w += prior[c] / (1.0 - prior[ci]) * np.abs(feats[i] - feats[near]).mean(axis=0) / n
     return C.normalize_importance(w)
 
 
-def run(class_mode):
-    print("\n" + "=" * 80 + f"\nPHASE 1: PER-SUBJECT RELIEFF SCORES (22 ch) - {class_mode}\n" + "=" * 80)
+def main():
+    print("\n" + "=" * 80 + "\nPHASE 1: PER-SUBJECT RELIEFF SCORES (22 ch) - 2class\n" + "=" * 80)
     subject_scores = {}
     for sid in C.SUBJECT_IDS:
-        X, y, _ = C.load_subject_windows(sid, C.FULL_CHANNELS, class_mode)
+        X, y, _ = C.load_subject_windows(sid, C.FULL_CHANNELS, C.CLASS_MODE)
         subject_scores[sid] = relieff_scores(X, y)
         top = C.top_k_channels(subject_scores[sid], C.FULL_CHANNELS, C.REDUCED_N_CHANNELS)
         print(f"  S{sid:02d} ReliefF top-{C.REDUCED_N_CHANNELS}: " + ", ".join(f"{c} ({v:.3f})" for c, v in top))
 
     montages = C.loso_montage(subject_scores, C.FULL_CHANNELS, C.REDUCED_N_CHANNELS)
-    records, _ = C.run_experiment("relieff_reduced", class_mode, montages,
+    records, _ = C.run_experiment("relieff_reduced", C.CLASS_MODE, montages,
                                   extra_meta={"selection": "ReliefF, LOSO montage",
                                               "feature": "log temporal variance, min-max scaled",
                                               "relieff_k": RELIEFF_K,
                                               "relieff_misses": "k nearest per other class, prior-weighted"})
-    out_dir = C.experiment_dir("relieff_reduced", class_mode)
-    C.write_text_report(os.path.join(out_dir, "relieff_reduced_report.txt"),
-                        f"Deep4Net - HGD - ReliefF 12-channel (LOSO) - {class_mode}", records, montages)
-    return C.summarize(records)
+    C.write_text_report(os.path.join(C.experiment_dir("relieff_reduced"), "relieff_reduced_report.txt"),
+                        "EEG-ITNet - HGD - ReliefF 12-channel (LOSO) - 2class", records, montages)
+    s = C.summarize(records)
+    print(f"\nReliefF 2class: {s['grand_mean']*100:.2f}% +/- {s['grand_std_across_subjects']*100:.2f}%")
 
 
 if __name__ == "__main__":
-    results = {cm: run(cm) for cm in C.CLASS_MODES}
-    print("\n" + "=" * 80 + "\nSUMMARY - RELIEFF REDUCTION\n" + "=" * 80)
-    for cm, s in results.items():
-        print(f"{cm}: {s['grand_mean']*100:.2f}% +/- {s['grand_std_across_subjects']*100:.2f}%")
+    main()

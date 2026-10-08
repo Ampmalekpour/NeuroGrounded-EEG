@@ -1,11 +1,15 @@
-# Reviewer comments vs. the original Deep4Net scripts and this folder
+# Reviewer comments vs. the original scripts and the current code
 
-"Original" = `Deep4Net_BD_HGD_BD_Final_2_Class_new.py` and `..._4_Class_old.py`.
+Applies to `Deep4net/HGD` and `EEGItNet/HGD` (identical pipeline; EEG-ITNet differs only in the model
+and in not using exponential moving standardisation).
+"Original Deep4Net" = `Deep4Net_BD_HGD_BD_Final_2_Class_new.py` and `..._4_Class_old.py`.
+The original EEG-ITNet saliency scripts used the correct left/right labels (1/3); its old CSP/MI/ReliefF
+scripts masked labels `[0, 1]` (feet vs left hand) instead.
 Status: **FIXED** (changed here), **PAPER** (manuscript edit), **OPEN** (needs data or a decision).
 Everything marked FIXED was exercised end to end on synthetic data (2- and 4-class, 2 seeds);
 the real HGD run has not been executed from this environment.
 
-## A. Problems found in the original Deep4Net scripts
+## A. Problems found in the original scripts
 
 | # | Original behaviour | Review # | Status |
 |---|---|---|---|
@@ -19,10 +23,10 @@ the real HGD run has not been executed from this environment.
 | 8 | Only accuracies printed/saved; no predictions, class counts or machine-readable results. | 1, 2, 15 | **FIXED**: `results.json` / `fold_results.csv` with y_true, y_pred, confusion matrix, class counts, chance and majority-class accuracy. |
 | 9 | Single seed; weights not provably re-initialised per fold. | 14 | **FIXED**: `EEG_SEEDS` list; every (seed, subject, fold) has its own seed and a freshly built model. Run 3+ seeds for the paper. |
 | 10 | CSP/MI/ReliefF settings undefined; ReliefF pooled misses over classes. | 12 | **FIXED**: all settings are in the script headers and `results.json`; ReliefF follows Eq. 8 (k misses per class, prior-weighted); features are log-variance. |
-| 11 | No fixed / random / ERD-only montage controls. | 12 | **FIXED**: `deep4net_hgd_controls_reduced.py`. |
+| 11 | No fixed / random / ERD-only montage controls. | 12 | **FIXED**: `*_controls.py`. |
 | 12 | No equivalence analysis code; no CI or per-subject losses. | 10 | **FIXED**: `analysis/equivalence_stats.py` (90% CI, TOST p, margin sensitivity, worst loss, # subjects exceeding the margin). The margin itself still needs a justification in the paper. |
 | 13 | `ReduceLROnPlateau(verbose=True)` fails on current PyTorch. | – | **FIXED**. |
-| 14 | Two different 22-channel runs (baseline vs the one used for saliency) would give different numbers. | – | **FIXED**: per-fold seeding makes them identical. |
+| 14 | Two different 22-channel runs (baseline vs the one used for saliency) would give different numbers. | – | **FIXED**: per-fold seeding makes them identical, and the main script produces the 22ch row itself (the separate baseline script was removed). |
 
 ## B. Items that are not code fixes
 

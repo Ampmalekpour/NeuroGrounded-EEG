@@ -1,6 +1,3 @@
-# Experiment outputs are written to the working directory by the scripts
-EEGItNet_HGD_Output/
-EEGItNet_HGD_CSP_Output/
-EEGItNet_HGD_MI_Output/
-EEGItNet_HGD_ReliefF_Output/
-EEGITNet_HGD_Saliency_Output/
+# Experiment outputs. results.json / fold_results.csv are small and may be committed
+# deliberately (git add -f); bulky figures and arrays are ignored.
+results/

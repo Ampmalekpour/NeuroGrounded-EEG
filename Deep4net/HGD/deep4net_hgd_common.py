@@ -1,12 +1,12 @@
 # deep4net_hgd_common.py
 #
-# Shared code for all Deep4Net / HGD (Schirrmeister2017) experiments:
-#   deep4net_hgd_baseline_full22.py   full 22-channel baseline          ("22ch")
-#   deep4net_hgd_saliency_reduced.py  saliency-ranked 12 channels       ("Ours")
-#   deep4net_hgd_csp_reduced.py       CSP-ranked 12 channels            ("CSP")
-#   deep4net_hgd_mi_reduced.py        mutual-information-ranked         ("MI")
-#   deep4net_hgd_relieff_reduced.py   ReliefF-ranked                    ("RLF")
-#   deep4net_hgd_controls_reduced.py  fixed / random / ERD-only montages (controls)
+# Shared code for all Deep4Net / HGD (Schirrmeister2017) experiments. It is imported by the
+# scripts in the 2class/ and 4class/ folders next to this file:
+#   *_saliency.py   full 22-channel baseline ("22ch") + saliency-ranked 12 channels ("Ours")
+#   *_csp.py        CSP-ranked 12 channels            ("CSP")
+#   *_mi.py         mutual-information-ranked         ("MI")
+#   *_relieff.py    ReliefF-ranked                    ("RLF")
+#   *_controls.py   fixed / random / ERD-only montages (controls)
 #
 # Everything that must not drift between methods lives here: label handling,
 # preprocessing, folds, the training loop, leave-one-subject-out (LOSO) montages,
@@ -28,9 +28,10 @@
 # Environment variables (all optional):
 #   EEG_SEEDS=42,43,44       random seeds (default 42)
 #   EEG_SUBJECTS=1,2,3       subject subset (default 1..14)
-#   EEG_CLASS_MODES=2class   subset of 2class,4class
+#   (the class mode is fixed by the folder: each script in 2class/ or 4class/ sets
+#    EEG_CLASS_MODE itself before importing this module)
 #   EEG_MAX_EPOCHS, EEG_PATIENCE
-#   EEG_RESULTS_DIR          output root (default <this folder>/results)
+#   EEG_RESULTS_DIR          output root (scripts set it to <their folder>/results)
 #   EEG_SYNTHETIC=1          use synthetic data (pipeline dry-run, no download)
 
 import os
@@ -86,14 +87,19 @@ def _env_str_list(name, default):
 
 SEEDS = _env_int_list("EEG_SEEDS", [42])
 SUBJECT_IDS = _env_int_list("EEG_SUBJECTS", range(1, 15))
-CLASS_MODES = _env_str_list("EEG_CLASS_MODES", ["2class", "4class"])
+MODEL_NAME = "Deep4Net"
+USE_EMS = True            # exponential moving standardisation, as in the original Deep4Net scripts
+CLASS_MODE = os.environ.get("EEG_CLASS_MODE", "")
+if CLASS_MODE not in ("2class", "4class"):
+    raise SystemExit("Run the scripts inside the 2class/ or 4class/ folders "
+                     "(they set EEG_CLASS_MODE before importing this module).")
 SYNTHETIC = os.environ.get("EEG_SYNTHETIC", "0") == "1"
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 RESULTS_ROOT = os.environ.get("EEG_RESULTS_DIR", os.path.join(HERE, "results"))
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
-print("Using device:", DEVICE, "| seeds:", SEEDS, "| subjects:", list(SUBJECT_IDS),
+print("Using device:", DEVICE, "| class mode:", CLASS_MODE, "| seeds:", SEEDS, "| subjects:", list(SUBJECT_IDS),
       "| synthetic:", SYNTHETIC)
 
 # NOTE: preprocessing / training constants are deliberately left exactly as in the
@@ -141,12 +147,13 @@ ERD_BAND_HZ = (8.0, 30.0)
 
 def config_snapshot():
     return {
-        "model": "Deep4Net",
+        "model": MODEL_NAME, "class_mode": CLASS_MODE,
         "dataset": DATASET_NAME,
         "note_dataset": "HGD contains EXECUTED movements (not imagined).",
         "sfreq_hz": TARGET_SFREQ,
         "classification_band_hz": [LOW_CUT_HZ, HIGH_CUT_HZ],
-        "ems": {"factor_new": EMS_FACTOR_NEW, "init_block_size": EMS_INIT_BLOCK},
+        "ems": ({"factor_new": EMS_FACTOR_NEW, "init_block_size": EMS_INIT_BLOCK}
+                if USE_EMS else None),
         "trial_start_offset_s": TRIAL_START_OFFSET_S,
         "trial_stop_offset_s": TRIAL_STOP_OFFSET_S,
         "max_epochs": MAX_EPOCHS, "patience": PATIENCE, "batch_size": BATCH_SIZE,
@@ -291,9 +298,11 @@ def load_subject_windows(subject_id, channels, class_mode):
             Preprocessor(scale_to_microvolts, apply_on_array=True),
             Preprocessor("resample", sfreq=TARGET_SFREQ),
             Preprocessor("filter", l_freq=LOW_CUT_HZ, h_freq=HIGH_CUT_HZ),
-            Preprocessor(exponential_moving_standardize,
-                         factor_new=EMS_FACTOR_NEW, init_block_size=EMS_INIT_BLOCK),
         ]
+        if USE_EMS:
+            preprocessors.append(Preprocessor(exponential_moving_standardize,
+                                              factor_new=EMS_FACTOR_NEW,
+                                              init_block_size=EMS_INIT_BLOCK))
         with warnings.catch_warnings():
             warnings.simplefilter("ignore")
             preprocess(dataset, preprocessors, n_jobs=1)
@@ -401,7 +410,7 @@ def build_model(n_chans, n_times, n_classes):
     return Deep4Net(
         n_chans=n_chans, n_outputs=n_classes, n_times=n_times,
         final_conv_length="auto", drop_prob=DROPOUT,
-    ).to(DEVICE)
+    ).to(DEVICE)  # MODEL-SPECIFIC LINE (the EEG-ITNet copy of this file differs only here)
 
 
 def train_one_fold(X, y, train_idx, val_idx, test_idx, seed, tag=""):
@@ -574,8 +583,9 @@ def compute_fold_channel_importances(model, X, y, methods, batch_size=32):
 # ────────────────────────────────────────────────
 # Experiment runner (baseline / reduced / saliency collection)
 # ────────────────────────────────────────────────
-def experiment_dir(exp_name, class_mode):
-    path = os.path.join(RESULTS_ROOT, exp_name, class_mode)
+def experiment_dir(exp_name, class_mode=None):
+    """One folder per experiment; the class mode is fixed by the 2class/4class folder."""
+    path = os.path.join(RESULTS_ROOT, exp_name)
     os.makedirs(path, exist_ok=True)
     return path
 
