@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 .venv/
 results/
+logs/
+run_all_status.json
+report/*/figures/

@@ -71,3 +71,34 @@ scripts. These are in addition to the problems in section A.
 | 9 | The only 4-class script was a fixed 12-channel run for subjects 10-14 (Cz, C3, C2, C4, C1, CP2, Pz, CPz, CP6, CP3, FC1, FC4); there was no 4-class 22-channel/saliency script. | **OPEN**: the 4-class folder is new; its settings come from that script - please confirm. |
 | 10 | CSP used `reg=1e-4`, `log=True`; MI/ReliefF used raw variance; no seeds beyond 42. | **FIXED**: log-variance features, prior-weighted ReliefF, `EEG_SEEDS`. CSP keeps `reg=1e-4`. |
 | 11 | Fixed 100 epochs, no early stopping, no per-fold predictions saved. | Fixed budget kept (original); predictions, confusion matrices and class counts are now saved. |
+
+
+## E. EEGNetv4 on BNCI2014-001 (original scripts `EN_BD_BNCI_BD_Final_1.py`, `eegnetv4_bnci_csp_2.py`, `eegnetv4_bnci_mutual_information.py`, `eegnetv4_bnci_relieff.py`, `test_for_cor.py`)
+
+| # | Original behaviour | Status |
+|---|---|---|
+| 1 | **Wrong ERD labels.** `infer_target_name_mapping_from_y` assumes 0=left, 1=right, 2=feet, 3=tongue; braindecode maps BNCI events alphabetically (feet=0, left_hand=1, right_hand=2, tongue=3). The "left-hand ERD" was feet and the "right-hand ERD" was left hand, so the L-R contrast and the method ranking used the wrong maps. | **FIXED** (names asserted at load time) |
+| 2 | Saliency computed on the test fold. | **FIXED**: validation block |
+| 3 | CSP and MI: one global montage from all 9 subjects, including the tested one. | **FIXED**: leave-one-subject-out |
+| 4 | ReliefF: per-subject montage computed from **all** of that subject's trials (including its test blocks), and 10 channels instead of 12. | **FIXED**: LOSO, 12 channels |
+| 5 | Occlusion as a 5th attribution method (the manuscript lists four). | Dropped from the ranking; channel removal is now a separate faithfulness test (T8) |
+| 6 | Test accuracy evaluated every epoch; one seed; only text reports. | **FIXED** |
+| 7 | CSP: 8 components, MNE multi-class CSP, mean of absolute patterns. | Unified with the other datasets (4 components, one-vs-rest, sum of absolute patterns) |
+| 8 | Manuscript Sec. 3.4 describes 350 epochs, lr 1e-3, wd 1e-3, mixup, scaling, noise, channel dropout, SWA and test-time augmentation; the code used 800 epochs, lr 2e-3, wd 5e-4 and no augmentation/SWA/TTA. | **PAPER**: describe what was run. Augmentation is a tuning candidate; SWA/TTA are not implemented |
+| 9 | `test_for_cor.py` changes preprocessing (8-30 Hz, average reference, dropout 0.25, active-window saliency) to raise the saliency-ERD correlation. | Not used: tuning on the reported metric is circular (review 8) |
+| 10 | No 2-class BNCI script. | **ADDED** (`2class/`) |
+
+New in this folder: `*_tune.py` (validation-only, leave-one-subject-out profile choice applied to every method),
+deletion and model-randomisation checks (review 8), and `run_all.py` + `analysis/aggregate_results.py` that
+produce tables T1-T9.
+
+## F. Found while porting BNCI: HGD windows are 8 s long
+
+braindecode gives every MOABB event the dataset `interval` as its duration (verified in the installed
+braindecode source: `annots.duration += offset - onset`). For Schirrmeister2017 the interval is [0, 4] s, so
+the HGD scripts' `trial_stop_offset = +4 s` produces windows from the cue to **8 s** after it (800 samples at
+100 Hz). With a 3-4 s inter-trial interval these windows can include the start of the next trial. The
+manuscript says 0.5-2.5 s. This applies to the original HGD scripts of every model and to the HGD folders
+here (which kept the original windowing on purpose); EEGConformer/HGD is not affected (0-4 s epochs).
+**OPEN**: confirm with the printed `X=(..., n_times)` in a real HGD log, then decide whether to switch HGD to
+a 0-4 s (or 0.5-2.5 s) window.

@@ -24,9 +24,12 @@ EEGItNet/
   HGD/                                same structure as Deep4net/HGD (common + 2class/ + 4class/)
 EEGNetV4/
   HGD/                                same structure (common + 2class/ + 4class/ + legacy_unrevised/)
+  BNCI_001/                           BNCI2014-001: common + 2class/ + 4class/ (+ *_tune.py)
+    run_all.py                        runs every step for both class modes and builds report/REPORT.md
 EEGConformer/
   HGD/                                same structure; keeps the Conformer pipeline (500 Hz, 100 epochs)
 analysis/equivalence_stats.py         paired TOST / CI / per-subject losses from results.json files
+analysis/aggregate_results.py         builds the reviewer tables (T1-T9) for one model/dataset folder
 docs/REVIEW_CROSSWALK.md              reviewer comments vs original code vs this code
 ```
 
