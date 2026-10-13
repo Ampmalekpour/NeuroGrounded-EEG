@@ -1,28 +1,33 @@
-# run_all.py
+# run_all.py  (repository root)
 #
-# Coordinator for EEGNetv4 / BNCI2014-001: runs every experiment in turn for both class modes and
-# then builds the reviewer tables.
+# Coordinator for BNCI2014-001: runs every experiment of EEGNetV4 first and then of EEG-ITNet,
+# for both class modes, builds each model's reviewer tables and finally a cross-model summary.
 #
-# For each class mode (2class, then 4class) the steps run in this order:
+#   EEGNetV4/BNCI_001  ->  EEGItNet/BNCI_001
+#
+# For each model and class mode (2class, then 4class) the steps run in this order:
 #   tune      fair, validation-only choice of the training profile (leave-one-subject-out)
-#   saliency  22-channel baseline + saliency montage ("22ch", "Ours"), ERD/ERS maps, alignment,
-#             deletion and randomisation checks, topomaps
+#   saliency  22-channel baseline + saliency montage ("22ch", "Ours"), ERD/ERS maps, saliency-ERD
+#             correlations (sign-invariant + original), deletion and randomisation checks,
+#             exploratory physiology correlations, topomaps
 #   csp, relieff, mi   classical 12-channel montages
 #   controls  fixed sensorimotor, random and ERD-only 12-channel montages
-# and finally
-#   aggregate -> report/REPORT.md, report/<class>/T*.csv, report/<class>/figures/
+# and then
+#   aggregate -> <model folder>/report/REPORT.md (+ T*.csv, figures/) for every model, and
+#                reports/BNCI_001/SUMMARY.md (+ C*.csv) comparing the models
 #
 # Each step runs as its own process inside its class folder. Output is shown and also saved to
-# <class>/logs/<step>.log. A step whose results already exist is skipped, so an interrupted run can
-# simply be started again (use --force to redo steps).
+# <model folder>/<class>/logs/<step>.log. A step whose results already exist is skipped, so an
+# interrupted run can simply be started again (use --force to redo steps).
 #
 # Examples
-#   python run_all.py                            # everything, both class modes
-#   python run_all.py --classes 4class           # one class mode
-#   python run_all.py --steps saliency csp       # some steps only
-#   python run_all.py --steps aggregate          # rebuild the tables from existing results
-#   python run_all.py --no-tune                  # skip tuning (profile 'original' unless tuned before)
-# Environment variables (EEG_SEEDS, EEG_SUBJECTS, EEG_SYNTHETIC, ...) are passed on to every step.
+#   python run_all.py                                 # everything: EEGNetV4 then EEG-ITNet
+#   python run_all.py --models eegitnet               # one model only
+#   python run_all.py --classes 2class                # one class mode
+#   python run_all.py --steps saliency csp            # some steps only
+#   python run_all.py --steps aggregate               # rebuild all tables from existing results
+#   python run_all.py --no-tune                       # skip tuning (profile 'original' unless tuned before)
+# Environment variables (EEG_SEEDS, EEG_SUBJECTS, EEG_SYNTHETIC, EEG_SKIP_PHYSIOLOGY, ...) are passed on.
 
 import os
 import sys
@@ -33,7 +38,12 @@ import argparse
 import subprocess
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-REPO = os.path.abspath(os.path.join(HERE, "..", ".."))
+REPO = HERE
+MODELS = {                      # run in this order
+    "eegnetv4": os.path.join(REPO, "EEGNetV4", "BNCI_001"),
+    "eegitnet": os.path.join(REPO, "EEGItNet", "BNCI_001"),
+}
+COMBINED_OUT = os.path.join(REPO, "reports", "BNCI_001")
 AGGREGATOR = os.path.join(REPO, "analysis", "aggregate_results.py")
 STEPS = ["tune", "saliency", "csp", "relieff", "mi", "controls"]
 DONE = {
@@ -76,6 +86,7 @@ def run_step(cls_dir, step, controls, log_path):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--models", nargs="*", default=list(MODELS), help=f"subset of {list(MODELS)}")
     ap.add_argument("--classes", nargs="*", default=["2class", "4class"])
     ap.add_argument("--steps", nargs="*", default=STEPS + ["aggregate"],
                     help=f"subset of {STEPS + ['aggregate']}")
@@ -91,14 +102,18 @@ def main():
     if unknown:
         raise SystemExit(f"unknown steps: {sorted(unknown)}")
 
+    bad = set(a.models) - set(MODELS)
+    if bad:
+        raise SystemExit(f"unknown models: {sorted(bad)}; choose from {list(MODELS)}")
+    models = [m for m in MODELS if m in a.models]
     status_path = os.path.join(HERE, "run_all_status.json")
     status = json.load(open(status_path, encoding="utf-8")) if os.path.exists(status_path) else {}
     failed = []
-    for cls in a.classes:
-        cls_dir = os.path.join(HERE, cls)
+    for model, cls in [(m, c) for m in models for c in a.classes]:      # EEGNetV4 first, then EEG-ITNet
+        cls_dir = os.path.join(MODELS[model], cls)
         results_dir = os.path.join(cls_dir, "results")
         for step in [s for s in STEPS if s in steps]:
-            key = f"{cls}/{step}"
+            key = f"{model}/{cls}/{step}"
             if not a.force and is_done(results_dir, step, a.controls):
                 print(f"[run_all] {key}: results exist - skipped (use --force to redo)")
                 status[key] = dict(status.get(key, {}), state="skipped (done)")
@@ -119,18 +134,25 @@ def main():
                     raise SystemExit(1)
 
     if "aggregate" in steps:
-        cmd = [sys.executable, AGGREGATOR, HERE, "--classes", *a.classes, "--margin", str(a.margin)]
-        print("\n[run_all] building tables: " + " ".join(cmd))
+        for model in models:
+            cmd = [sys.executable, AGGREGATOR, MODELS[model], "--classes", *a.classes, "--margin", str(a.margin)]
+            print("\n[run_all] building tables: " + " ".join(cmd))
+            if subprocess.call(cmd, cwd=REPO) != 0:
+                failed.append(f"aggregate {model}")
+        cmd = [sys.executable, AGGREGATOR, "--combine", *[MODELS[m] for m in MODELS],
+               "--classes", *a.classes, "--out", COMBINED_OUT]
+        print("\n[run_all] cross-model summary: " + " ".join(cmd))
         if subprocess.call(cmd, cwd=REPO) != 0:
-            failed.append("aggregate")
+            failed.append("aggregate combined")
 
     print("\n[run_all] summary:")
     for k, v in status.items():
-        print(f"  {k:<20} {v.get('state', '')}  {v.get('minutes', '')} min")
+        print(f"  {k:<30} {v.get('state', '')}  {v.get('minutes', '')} min")
     if failed:
         print("[run_all] FAILED steps: " + ", ".join(failed))
         raise SystemExit(1)
-    print(f"[run_all] done. Tables: {os.path.join(HERE, 'report', 'REPORT.md')}")
+    print("[run_all] done. Tables: " + ", ".join(os.path.join(MODELS[m], "report", "REPORT.md") for m in models)
+          + f" and {os.path.join(COMBINED_OUT, 'SUMMARY.md')}")
 
 
 if __name__ == "__main__":

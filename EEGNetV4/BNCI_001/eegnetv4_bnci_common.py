@@ -176,6 +176,7 @@ MONTAGE = mne.channels.make_standard_montage("standard_1005")
 ERD_BASELINE_S = (-0.5, 0.0)     # PRE-cue baseline (as described in the manuscript)
 ERD_ACTIVE_S = (1.0, 3.0)
 ERD_BAND_HZ = (8.0, 30.0)
+ERD_SFREQ = 128                  # ERD/physiology maps: same sampling rate for every model
 
 
 def config_snapshot():
@@ -206,8 +207,10 @@ def config_snapshot():
                                     "evaluation only, never used for any choice",
                          "ranking": "mean of the four attribution maps from the VALIDATION block"},
         "randomisation_check": "Spearman between trained-model and untrained-model saliency",
-        "erd": {"baseline_s": ERD_BASELINE_S, "active_s": ERD_ACTIVE_S,
+        "erd": {"baseline_s": ERD_BASELINE_S, "active_s": ERD_ACTIVE_S, "sfreq_hz": ERD_SFREQ,
                 "band_hz": ERD_BAND_HZ, "standardisation": "none"},
+        "physiology_exploratory": {"sfreq_hz": PHYS_SFREQ, "bands_hz": PHYS_BANDS,
+                                   "epoch_s": PHYS_KEEP_S, "used_for_decisions": False},
         "full_channels": FULL_CHANNELS, "reduced_n_channels": REDUCED_N_CHANNELS,
         "seeds": SEEDS, "subject_ids": list(SUBJECT_IDS), "label_names": LABEL_NAMES,
         "versions": {"torch": torch.__version__, "mne": mne.__version__, "numpy": np.__version__},
@@ -303,7 +306,7 @@ def _check_label_mapping(dataset, y_all):
               f"(some windows dropped); name check passed, order check skipped")
 
 
-def _synthetic_windows(channels, n_times, seed, n_per_class=60, pre_samples=0):
+def _synthetic_windows(channels, n_times, seed, n_per_class=60, pre_samples=0, sfreq=None):
     """Synthetic 4-class data with lateralised mu-band-like variance changes, used only
     for pipeline dry-runs (EEG_SYNTHETIC=1). Returns X (trials, ch, n_times), y (0..3)."""
     rng = np.random.default_rng(seed)
@@ -319,7 +322,7 @@ def _synthetic_windows(channels, n_times, seed, n_per_class=60, pre_samples=0):
             gain[ch["C3"]] = 0.4
         if y[k] == FEET_LABEL and "Cz" in ch:
             gain[ch["Cz"]] = 0.4
-        X[k, :, pre_samples + int(1.0 * TARGET_SFREQ):] *= gain[:, None]
+        X[k, :, pre_samples + int(1.0 * (sfreq or TARGET_SFREQ)):] *= gain[:, None]
     return X, y
 
 
@@ -343,7 +346,8 @@ def load_subject_windows(subject_id, channels, class_mode, cfg=None):
             Preprocessor("pick_channels", ch_names=list(channels), ordered=True),
             Preprocessor(scale_to_microvolts, apply_on_array=True),
             Preprocessor("resample", sfreq=TARGET_SFREQ),
-            Preprocessor("filter", l_freq=cfg["band_hz"][0], h_freq=cfg["band_hz"][1]),
+            Preprocessor("filter", l_freq=cfg["band_hz"][0], h_freq=cfg["band_hz"][1],
+                         **({"method": "iir", "iir_params": cfg["iir"]} if cfg.get("iir") else {})),
         ]
         if USE_EMS:
             preprocessors.append(Preprocessor(exponential_moving_standardize,
@@ -860,16 +864,19 @@ def write_text_report(path, title, records, montages=None, lines=None):
 # 8-30 Hz, NO exponential moving standardisation, trial-averaged power ratio.
 # ────────────────────────────────────────────────
 def load_subject_for_erd(subject_id, channels):
-    pre = int(round(-ERD_BASELINE_S[0] * TARGET_SFREQ))      # samples before the cue
+    """Left/right-hand trials for the ERD maps. Always at ERD_SFREQ, whatever the model's sampling
+    rate, so every model in this dataset is compared with the SAME reference maps."""
+    sf = ERD_SFREQ
+    pre = int(round(-ERD_BASELINE_S[0] * sf))                 # samples before the cue
     if SYNTHETIC:
-        X, y = _synthetic_windows(list(channels), pre + int(4.5 * TARGET_SFREQ),
-                                  seed=subject_id + 500, pre_samples=pre)
+        X, y = _synthetic_windows(list(channels), pre + int(4.5 * sf),
+                                  seed=subject_id + 500, pre_samples=pre, sfreq=sf)
     else:
         dataset = MOABBDataset(DATASET_NAME, subject_ids=[subject_id])
         preprocessors = [
             Preprocessor("pick_channels", ch_names=list(channels), ordered=True),
             Preprocessor(scale_to_microvolts, apply_on_array=True),
-            Preprocessor("resample", sfreq=TARGET_SFREQ),
+            Preprocessor("resample", sfreq=sf),
             Preprocessor("filter", l_freq=ERD_BAND_HZ[0], h_freq=ERD_BAND_HZ[1]),
         ]
         with warnings.catch_warnings():
@@ -880,12 +887,12 @@ def load_subject_for_erd(subject_id, channels):
         X, y = extract_xy(windows)
         _check_label_mapping(dataset, y)
         del dataset, windows
-    need = pre + int(ERD_ACTIVE_S[1] * TARGET_SFREQ)
+    need = pre + int(ERD_ACTIVE_S[1] * sf)
     assert X.shape[2] >= need, (
         f"ERD windows have {X.shape[2]} samples, need >= {need} "
         f"(cue-0.5 s .. cue+3 s). Check the annotation duration / stop offset.")
     mask = np.isin(y, [LEFT_HAND_LABEL, RIGHT_HAND_LABEL])
-    return X[mask], y[mask], TARGET_SFREQ
+    return X[mask], y[mask], sf
 
 
 def compute_class_erd_map(X_class, sfreq, n_channels):
@@ -911,7 +918,7 @@ def compute_subject_erd_maps(subject_id, channels):
 
 def get_erd_maps(subject_id, channels):
     """Cached on disk (results/erd_cache) so every script reuses the same maps."""
-    key = hashlib.md5(("|".join(channels) + f"|{SYNTHETIC}").encode()).hexdigest()[:10]
+    key = hashlib.md5(("|".join(channels) + f"|{SYNTHETIC}|{ERD_SFREQ}").encode()).hexdigest()[:10]
     cache_dir = os.path.join(RESULTS_ROOT, "erd_cache")
     os.makedirs(cache_dir, exist_ok=True)
     path = os.path.join(cache_dir, f"S{subject_id:02d}_{key}.npz")
@@ -944,7 +951,13 @@ def _corr(a, b, kind):
     return float(spearmanr(a[ok], b[ok])[0])
 
 
-def alignment_metrics(sal_all, sal_by_class, erd, class_mode):
+def alignment_metrics(sal_all, sal_by_class, erd, class_mode, grad_ref=None):
+    """Sign-invariant metrics (used in the paper's argument) plus the ORIGINAL scripts'
+    correlations, kept so the old numbers can be reproduced and compared:
+      orig_ERD_L / orig_ERD_R / orig_ERD_LR / orig_ERD_comb   corr(saliency_all, ERD map)
+      orig_vs_grad                                           corr(saliency_all, plain-gradient saliency)
+    The orig_* values correlate an unsigned map with a signed one: report them, but do not read
+    the sign as 'agreement'."""
     left_id, right_id = class_ids(class_mode)
     d_l, d_r = -erd["ERD_L"], -erd["ERD_R"]
     magnitude = 0.5 * (np.abs(erd["ERD_L"]) + np.abs(erd["ERD_R"]))
@@ -960,7 +973,26 @@ def alignment_metrics(sal_all, sal_by_class, erd, class_mode):
         else:
             out[f"class_specific_{kind}"] = float("nan")
             out[f"lateralisation_{kind}"] = float("nan")
+        for name, key in (("ERD_L", "ERD_L"), ("ERD_R", "ERD_R"), ("ERD_LR", "ERD_(L-R)"),
+                          ("ERD_comb", "ERD_comb")):
+            out[f"orig_{name}_{kind}"] = _corr(sal_all, erd[key], kind)
+        out[f"orig_vs_grad_{kind}"] = (_corr(sal_all, grad_ref, kind) if grad_ref is not None
+                                       else float("nan"))
     return out
+
+
+def fisher_mean_ci(values, confidence=0.95):
+    """Mean of correlations and CI via Fisher z (stays inside [-1, 1])."""
+    r = np.array([x for x in values if np.isfinite(x)], dtype=float)
+    if len(r) == 0:
+        return {"n": 0, "mean": float("nan"), "ci_low": float("nan"), "ci_high": float("nan")}
+    z = np.arctanh(np.clip(r, -0.999999, 0.999999))
+    m = float(np.tanh(z.mean()))
+    if len(z) < 2:
+        return {"n": 1, "mean": m, "ci_low": float("nan"), "ci_high": float("nan")}
+    h = student_t.ppf(0.5 + confidence / 2, len(z) - 1) * z.std(ddof=1) / np.sqrt(len(z))
+    return {"n": int(len(z)), "mean": m, "ci_low": float(np.tanh(z.mean() - h)),
+            "ci_high": float(np.tanh(z.mean() + h))}
 
 
 def summarize_metric(values, confidence=0.95):
@@ -1013,3 +1045,229 @@ def plot_erd_ers_topomaps(erd_l, erd_r, contrast, comb, info, out_png):
     plt.colorbar(plt.cm.ScalarMappable(cmap="RdBu_r", norm=plt.Normalize(-limit, limit)), cax=cbar_ax)
     fig.savefig(out_png, dpi=300, bbox_inches="tight")
     plt.close(fig)
+
+
+# ────────────────────────────────────────────────
+# EXPLORATORY physiology block (curiosity only)
+#
+# More neurophysiological channel maps beyond the 8-30 Hz ERD, all computed from the
+# same raw recordings (left/right-hand trials, no EMS, no model involved), and their
+# correlation with the saliency maps. NOTHING here is used for any choice: montages,
+# profiles and the paper's alignment statistics use only the ERD maps above.
+#
+#   ERD_<band>_L/R/mag   band-limited ERD% (theta 4-8, mu 8-13, beta 13-30, low-gamma 30-40 Hz),
+#                        active 1-3 s vs pre-cue baseline; mag = (|L|+|R|)/2
+#   ERS_beta_rebound_*   post-imagery beta (13-30 Hz) power 4-5 s after the cue vs baseline
+#   logpow_8_30          log 8-30 Hz power during imagery (absolute, not relative)
+#   r2_signed / r2_abs   left-vs-right discriminability of log 8-30 Hz power per channel
+#                        (signed r^2 and r^2 of the point-biserial correlation)
+#   TFR_ERD_dB_L/R/mag   Morlet time-frequency ERD in dB, 8-30 Hz, 1-3 s vs baseline
+#   ITC_4_30             inter-trial phase coherence 4-30 Hz, 0-1 s after the cue
+#   ERP_abs_0.2_0.8      mean |amplitude| of the cue-evoked potential (< 5 Hz), 0.2-0.8 s
+#   SlowPot_0.5_3        mean slow-potential amplitude (< 5 Hz), 0.5-3 s (MRCP/CNV-like)
+# For every map: corr(saliency, map) and corr(saliency, |map|), Pearson and Spearman, per
+# attribution method and for the mean of the four methods ("mean4"); for maps with a left
+# and a right version also the class-specific corr(saliency_L, |map_L|), corr(saliency_R, |map_R|).
+# ────────────────────────────────────────────────
+PHYS_SFREQ = ERD_SFREQ
+PHYS_TMIN, PHYS_TMAX = -1.5, 5.5          # loaded epoch (0.5 s padding for filter edges)
+PHYS_KEEP_S = (-1.0, 5.0)
+PHYS_BANDS = {"theta": (4.0, 8.0), "mu": (8.0, 13.0), "beta": (13.0, 30.0), "lowgamma": (30.0, 40.0)}
+
+
+def load_subject_for_physiology(subject_id, channels):
+    """Left/right-hand epochs, PHYS_TMIN..PHYS_TMAX around the cue, 0.1-40 Hz, uV, no EMS.
+    Built with MNE from the annotation names (not braindecode windows), so trials whose window
+    would run past the end of a run are simply dropped instead of failing."""
+    sf = PHYS_SFREQ
+    n = int(round((PHYS_TMAX - PHYS_TMIN) * sf)) + 1
+    if SYNTHETIC:
+        X, y = _synthetic_windows(list(channels), n, seed=subject_id + 900,
+                                  pre_samples=int(round(-PHYS_TMIN * sf)), sfreq=sf)
+        mask = np.isin(y, [LEFT_HAND_LABEL, RIGHT_HAND_LABEL])
+        return X[mask].astype(np.float64), y[mask], sf
+    dataset = MOABBDataset(DATASET_NAME, subject_ids=[subject_id])
+    Xs, ys = [], []
+    want = {LABEL_NAMES[LEFT_HAND_LABEL]: LEFT_HAND_LABEL, LABEL_NAMES[RIGHT_HAND_LABEL]: RIGHT_HAND_LABEL}
+    for d in dataset.datasets:
+        raw = d.raw.copy().load_data().pick(list(channels))
+        raw.reorder_channels(list(channels))
+        raw.apply_function(scale_to_microvolts, channel_wise=False)
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore")
+            raw.resample(sf, npad="auto")
+            raw.filter(0.1, 40.0, verbose=False)
+        present = {k: v + 1 for k, v in want.items() if k in set(raw.annotations.description)}
+        if not present:
+            continue
+        events, _ = mne.events_from_annotations(raw, event_id=present, verbose=False)
+        ep = mne.Epochs(raw, events, event_id=present, tmin=PHYS_TMIN, tmax=PHYS_TMAX,
+                        baseline=None, preload=True, reject_by_annotation=False, verbose=False)
+        Xs.append(ep.get_data()[:, :, :n])
+        ys.append(ep.events[:, 2] - 1)
+    del dataset
+    gc.collect()
+    return np.concatenate(Xs).astype(np.float64), np.concatenate(ys).astype(np.int64), sf
+
+
+def _seg(sf, t0, t1):
+    """Sample slice of the loaded epoch for times t0..t1 (s, relative to the cue)."""
+    return slice(int(round((t0 - PHYS_TMIN) * sf)), int(round((t1 - PHYS_TMIN) * sf)))
+
+
+def _bandpass(X, sf, lo, hi):
+    return mne.filter.filter_data(X, sf, lo, hi, method="iir",
+                                  iir_params=dict(order=4, ftype="butter", output="sos"), verbose=False)
+
+
+def _erd_pct(Xb, sf, active):
+    base = np.mean(Xb[:, :, _seg(sf, *ERD_BASELINE_S)] ** 2, axis=(0, 2))
+    act = np.mean(Xb[:, :, _seg(sf, *active)] ** 2, axis=(0, 2))
+    return 100.0 * (act - base) / (base + 1e-12)
+
+
+def physiology_maps(X, y, sf):
+    """{name: vector over channels}. X: (trials, channels, times) from load_subject_for_physiology."""
+    L, R = y == LEFT_HAND_LABEL, y == RIGHT_HAND_LABEL
+    maps = {}
+    for band, (lo, hi) in PHYS_BANDS.items():
+        Xb = _bandpass(X, sf, lo, hi)
+        el, er = _erd_pct(Xb[L], sf, ERD_ACTIVE_S), _erd_pct(Xb[R], sf, ERD_ACTIVE_S)
+        maps[f"ERD_{band}_L"], maps[f"ERD_{band}_R"] = el, er
+        maps[f"ERD_{band}_mag"] = 0.5 * (np.abs(el) + np.abs(er))
+        if band == "beta":
+            rl, rr = _erd_pct(Xb[L], sf, (4.0, 5.0)), _erd_pct(Xb[R], sf, (4.0, 5.0))
+            maps["ERS_beta_rebound_L"], maps["ERS_beta_rebound_R"] = rl, rr
+            maps["ERS_beta_rebound_mag"] = 0.5 * (np.abs(rl) + np.abs(rr))
+
+    X830 = _bandpass(X, sf, 8.0, 30.0)
+    logp = np.log(np.mean(X830[:, :, _seg(sf, *ERD_ACTIVE_S)] ** 2, axis=2) + 1e-12)   # trials x ch
+    maps["logpow_8_30"] = logp.mean(axis=0)
+    lab = R.astype(float)[L | R]
+    r = np.array([np.corrcoef(logp[L | R, c], lab)[0, 1] if logp[L | R, c].std() > 0 else 0.0
+                  for c in range(X.shape[1])])
+    maps["r2_signed"], maps["r2_abs"] = np.sign(r) * r ** 2, r ** 2
+
+    freqs = np.arange(8.0, 31.0, 2.0)
+    keep = _seg(sf, *PHYS_KEEP_S)
+    for cls, m in (("L", L), ("R", R)):
+        p = mne.time_frequency.tfr_array_morlet(X[m][:, :, keep], sf, freqs, n_cycles=freqs / 2.0,
+                                                output="avg_power", verbose=False)       # ch x f x t
+        t = np.arange(p.shape[-1]) / sf + PHYS_KEEP_S[0]
+        base = p[:, :, (t >= ERD_BASELINE_S[0]) & (t < ERD_BASELINE_S[1])].mean(axis=2)
+        act = p[:, :, (t >= ERD_ACTIVE_S[0]) & (t < ERD_ACTIVE_S[1])].mean(axis=2)
+        maps[f"TFR_ERD_dB_{cls}"] = (10.0 * np.log10((act + 1e-20) / (base + 1e-20))).mean(axis=1)
+    maps["TFR_ERD_dB_mag"] = 0.5 * (np.abs(maps["TFR_ERD_dB_L"]) + np.abs(maps["TFR_ERD_dB_R"]))
+
+    fi = np.arange(4.0, 31.0, 2.0)
+    itc = mne.time_frequency.tfr_array_morlet(X[L | R][:, :, keep], sf, fi, n_cycles=fi / 2.0,
+                                              output="itc", verbose=False)                # ch x f x t
+    t = np.arange(itc.shape[-1]) / sf + PHYS_KEEP_S[0]
+    maps["ITC_4_30"] = np.abs(itc[:, :, (t >= 0.0) & (t < 1.0)]).mean(axis=(1, 2))
+
+    slow = mne.filter.filter_data(X[L | R], sf, None, 5.0, method="iir",
+                                  iir_params=dict(order=4, ftype="butter", output="sos"), verbose=False)
+    slow = slow - slow[:, :, _seg(sf, *ERD_BASELINE_S)].mean(axis=2, keepdims=True)
+    avg = slow.mean(axis=0)                                                                 # ch x t
+    maps["ERP_abs_0.2_0.8"] = np.abs(avg[:, _seg(sf, 0.2, 0.8)]).mean(axis=1)
+    maps["SlowPot_0.5_3"] = avg[:, _seg(sf, 0.5, 3.0)].mean(axis=1)
+    return {k: np.asarray(v, dtype=np.float32) for k, v in maps.items()}
+
+
+def get_physiology_maps(subject_id, channels):
+    key = hashlib.md5(("|".join(channels) + f"|{SYNTHETIC}|{PHYS_SFREQ}|v1").encode()).hexdigest()[:10]
+    cache_dir = os.path.join(RESULTS_ROOT, "physiology_cache")
+    os.makedirs(cache_dir, exist_ok=True)
+    path = os.path.join(cache_dir, f"S{subject_id:02d}_{key}.npz")
+    if os.path.exists(path):
+        z = np.load(path)
+        return {k: z[k] for k in z.files}
+    X, y, sf = load_subject_for_physiology(subject_id, channels)
+    maps = physiology_maps(X, y, sf)
+    np.savez(path, **maps)
+    return maps
+
+
+def physiology_correlations(sal_all, sal_by_class, maps, class_mode):
+    left_id, right_id = class_ids(class_mode)
+    out = {}
+    for name, vec in maps.items():
+        for kind in ("pearson", "spearman"):
+            out[f"{name}|{kind}"] = _corr(sal_all, vec, kind)
+            out[f"{name}|abs|{kind}"] = _corr(sal_all, np.abs(vec), kind)
+    pairs = sorted({k[:-2] for k in maps if k.endswith("_L") and k[:-2] + "_R" in maps})
+    if left_id in sal_by_class and right_id in sal_by_class:
+        for base in pairs:
+            for kind in ("pearson", "spearman"):
+                cl = _corr(sal_by_class[left_id], np.abs(maps[base + "_L"]), kind)
+                cr = _corr(sal_by_class[right_id], np.abs(maps[base + "_R"]), kind)
+                out[f"{base}_classspecific|abs|{kind}"] = float(np.nanmean([cl, cr]))
+    return out
+
+
+def plot_map_grid(maps, info, out_png, title):
+    names = list(maps)
+    ncol = 6
+    nrow = int(np.ceil(len(names) / ncol))
+    fig, axes = plt.subplots(nrow, ncol, figsize=(3.2 * ncol, 3.2 * nrow))
+    for ax in np.ravel(axes):
+        ax.axis("off")
+    for ax, n in zip(np.ravel(axes), names):
+        v = np.asarray(maps[n], dtype=float)
+        if not np.all(np.isfinite(v)):
+            continue
+        signed = v.min() < 0 < v.max()
+        lim = float(np.max(np.abs(v))) or 1.0
+        mne.viz.plot_topomap(v, info, axes=ax, show=False, cmap="RdBu_r" if signed else "viridis",
+                             vlim=(-lim, lim) if signed else (None, None))
+        ax.set_title(n, fontsize=8)
+    fig.suptitle(title)
+    fig.savefig(out_png, dpi=150, bbox_inches="tight")
+    plt.close(fig)
+
+
+def run_physiology(subject_sal, out_dir, channels=None):
+    """EXPLORATORY. Writes physiology_correlations.json, physiology_maps_group.png and the
+    per-subject maps (physiology_maps_SXX.npz). Never raises: a failure is recorded in the json
+    so the main pipeline is not affected."""
+    channels = list(channels or FULL_CHANNELS)
+    payload = {"class_mode": CLASS_MODE, "exploratory": True,
+               "note": ("Curiosity analysis. Not used for montage, profile or method choices; the "
+                        "paper's alignment uses only the 8-30 Hz ERD maps (alignment_metrics.json)."),
+               "maps": {}, "per_subject": {}, "summary": {}}
+    try:
+        all_maps = {}
+        for sid, by_method in subject_sal.items():
+            maps = get_physiology_maps(sid, channels)
+            all_maps[sid] = maps
+            np.savez(os.path.join(out_dir, f"physiology_maps_S{sid:02d}.npz"), **maps)
+            sal = dict(by_method)
+            sal["mean4"] = {
+                "all": normalize_importance(np.mean([v["all"] for v in by_method.values()], axis=0)),
+                "by_class": {c: normalize_importance(np.mean([v["by_class"][c] for v in by_method.values()
+                                                              if c in v["by_class"]], axis=0))
+                             for c in next(iter(by_method.values()))["by_class"]}}
+            payload["per_subject"][str(sid)] = {
+                m: physiology_correlations(v["all"], v["by_class"], maps, CLASS_MODE) for m, v in sal.items()}
+        names = list(next(iter(all_maps.values())))
+        payload["maps"] = {n: "see block comment in the common module" for n in names}
+        first = next(iter(payload["per_subject"].values()))
+        for m in first:
+            payload["summary"][m] = {k: fisher_mean_ci([payload["per_subject"][s][m][k]
+                                                        for s in payload["per_subject"]])
+                                     for k in first[m]}
+        group = {n: np.mean([all_maps[s][n] for s in all_maps], axis=0) for n in names}
+        plot_map_grid(group, make_topo_info(channels), os.path.join(out_dir, "physiology_maps_group.png"),
+                      f"Group physiology maps ({CLASS_MODE}, left/right-hand trials) - exploratory")
+        print("\nEXPLORATORY physiology correlations (mean4 saliency, Pearson, Fisher mean over subjects):")
+        for k, s in payload["summary"]["mean4"].items():
+            if k.endswith("|pearson") and "|abs|" not in k:
+                print(f"  {k[:-8]:<28} r = {s['mean']:+.3f} [{s['ci_low']:+.3f}, {s['ci_high']:+.3f}]")
+    except Exception as exc:                                        # exploratory: never fatal
+        import traceback
+        traceback.print_exc()
+        payload["error"] = f"{type(exc).__name__}: {exc}"
+        print(f"[physiology] skipped: {payload['error']}")
+    with open(os.path.join(out_dir, "physiology_correlations.json"), "w", encoding="utf-8") as f:
+        json.dump(payload, f, indent=1)
+    return payload

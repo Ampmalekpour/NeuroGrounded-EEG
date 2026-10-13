@@ -102,3 +102,21 @@ manuscript says 0.5-2.5 s. This applies to the original HGD scripts of every mod
 here (which kept the original windowing on purpose); EEGConformer/HGD is not affected (0-4 s epochs).
 **OPEN**: confirm with the printed `X=(..., n_times)` in a real HGD log, then decide whether to switch HGD to
 a 0-4 s (or 0.5-2.5 s) window.
+
+## G. EEG-ITNet on BNCI2014-001 (original scripts `EEGITNet_BNCI_Final_Pipeline.py`, `_CSP.py`, `_MI.py`, `_ReliefF.py`, `et_v66.py`)
+
+| # | Original behaviour | Status |
+|---|---|---|
+| 1 | Saliency computed on the **test** fold of each StratifiedKFold split. | **FIXED**: validation block |
+| 2 | Saliency montage: top-3 attribution methods chosen by their mean **ERD_(L-R) correlation**, then one global top-12 montage from all 9 subjects. Choosing by the reported metric is circular, and the tested subject's data shape its own montage. | **FIXED**: all four methods averaged by default (`EEG_ATTR_SELECTION=best` keeps an exploratory, LOSO version), leave-one-subject-out montages |
+| 3 | CSP, MI and ReliefF: one **global** top-12 montage from all 9 subjects (including the tested one), computed from all trials. | **FIXED**: leave-one-subject-out |
+| 4 | `StratifiedKFold(4, shuffle=True)` and **no validation set**: neighbouring trials of the same run end up in train and test, and nothing is held out for any choice. | **CHANGED**: 4 chronological blocks (train / validation / test), same folds as EEGNetV4 so the two models are directly comparable. The training set is half of the trials instead of 75 %, so accuracy will be lower than in the original logs |
+| 5 | ERD maps from the band-passed, **EMS-standardised** training data (EMS removes slow power changes, which is exactly what ERD measures). | **FIXED**: ERD from raw µV data, pre-cue baseline, at 128 Hz for every model so EEGNetV4 and EEG-ITNet are compared with identical maps |
+| 6 | The manuscript describes TTA on validation data; the code applies TTA to the test fold only (there is no validation set). | Now TTA is applied to both validation and test predictions; describe it as such in the paper |
+| 7 | 4-class results only from `et_v66.py`, which reports accuracy and nothing else. | **ADDED**: full 4-class pipeline (`4class/`) |
+| 8 | Correlations printed per subject (saliency vs ERD_L, ERD_R, ERD_(L-R), ERD_comb, and vs grad) but not summarised with CIs. | **KEPT and extended**: the same correlations (T7b, Pearson + Spearman) plus the sign-invariant ones (T7), participant level with Fisher-z CIs |
+| 9 | Fixed recipe (350 epochs, SWA, TTA, mixup, augmentation, label smoothing 0.1, grad clip 10). | **KEPT** as profile `original`; `*_tune.py` chooses between it and three variants on validation data only |
+
+Both BNCI models also run an **exploratory physiology block** (band-wise ERD, beta rebound, r², TFR ERD in dB,
+ITC, ERP, slow potential) and report its correlation with saliency in T10 / `reports/BNCI_001/SUMMARY.md`.
+It is curiosity only and is not used for any choice. The root `run_all.py` runs EEGNetV4 and then EEG-ITNet.

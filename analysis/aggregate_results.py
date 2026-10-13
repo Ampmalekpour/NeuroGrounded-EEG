@@ -14,9 +14,15 @@
 #   T6 seed stability                                                    (review 14)
 #   T7 saliency-ERD alignment, participant level with 95% CI              (review 7, 9)
 #   T8 faithfulness: deletion test and model-randomisation check          (review 8)
+#   T7b the original scripts' correlations: saliency vs ERD_L/R/(L-R)/comb and vs plain gradient
 #   T9 configuration and selected training profile                       (review 13, 14)
+#   T10 EXPLORATORY: saliency vs other physiological maps (band ERD, beta rebound, r^2, TFR, ITC,
+#       ERP, slow potential); curiosity only, not used anywhere in the pipeline
 # and copies the topomaps of the 22-channel run to report/<class>/figures/.
 # Missing experiments are skipped and listed in the report.
+#
+#   python analysis/aggregate_results.py --combine EEGNetV4/BNCI_001 EEGItNet/BNCI_001 --out reports/BNCI_001
+# builds a cross-model summary (accuracy, alignment, physiology) from several folders.
 
 import os
 import sys
@@ -43,6 +49,8 @@ METHODS = [
 ALIGN_KEYS = ["magnitude_pearson", "class_specific_pearson", "lateralisation_pearson",
               "magnitude_spearman", "class_specific_spearman", "lateralisation_spearman",
               "legacy_signed_LR_pearson"]
+ORIG_KEYS = [f"orig_{n}_{k}" for n in ("ERD_L", "ERD_R", "ERD_LR", "ERD_comb", "vs_grad")
+             for k in ("pearson", "spearman")]
 
 
 # ───────────────────────────── loading ─────────────────────────────
@@ -198,6 +206,32 @@ def md_table(header, rows):
     lines = ["| " + " | ".join(header) + " |", "|" + "|".join(["---"] * len(header)) + "|"]
     lines += ["| " + " | ".join(str(c) for c in row) + " |" for row in rows]
     return "\n".join(lines)
+
+
+PHYS_HEADER = ["Map", "Pearson r", "95% CI", "Pearson r (|map|)", "Spearman r", "Spearman r (|map|)", "n"]
+
+
+def physiology_rows(ph, method):
+    summ = ph["summary"].get(method, {})
+    names = []
+    for k in summ:
+        name = k.split("|")[0]
+        if name not in names:
+            names.append(name)
+    rows = []
+    for name in names:
+        def g(key):
+            return summ.get(key, {}).get("mean", float("nan"))
+        if f"{name}|pearson" in summ:
+            s = summ[f"{name}|pearson"]
+            rows.append([name, num(s["mean"]), f"[{num(s['ci_low'])}, {num(s['ci_high'])}]",
+                         num(g(f"{name}|abs|pearson")), num(g(f"{name}|spearman")),
+                         num(g(f"{name}|abs|spearman")), s["n"]])
+        else:                                             # class-specific entries (abs only)
+            s = summ[f"{name}|abs|pearson"]
+            rows.append([name, "—", "—", f"{num(s['mean'])} [{num(s['ci_low'])}, {num(s['ci_high'])}]",
+                         "—", num(g(f"{name}|abs|spearman")), s["n"]])
+    return rows
 
 
 # ───────────────────────────── tables ─────────────────────────────
@@ -362,6 +396,41 @@ def build_class_report(folder, cls, out_dir, margin):
                "strength (−ERD) and are sign-invariant; `legacy_signed_LR` is the old statistic, shown only "
                "for comparison (its sign is not interpretable). Mean and CI via Fisher z. Per-subject values: "
                "`results/full22/alignment_metrics.json`.", md_table(header7, rows7)]
+        rows7b = []
+        for m in al["summary"]:
+            for k in ORIG_KEYS:
+                vals = [per_subject[s][m][k] for s in per_subject if k in per_subject[s].get(m, {})]
+                if not vals:
+                    continue
+                mean, lo, hi, n = fisher_mean_ci(vals)
+                rows7b.append([m, k.replace("orig_", ""), num(mean), f"[{num(lo)}, {num(hi)}]", n])
+        if rows7b:
+            header7b = ["Attribution", "Correlation", "Mean r (Fisher)", "95% CI", "n subjects"]
+            write_csv(os.path.join(out_dir, "T7b_original_correlations.csv"), header7b, rows7b)
+            md += ["### T7b. Correlations as computed by the original scripts",
+                   "corr(saliency, ERD_L / ERD_R / ERD_(L−R) / ERD_comb) and corr(saliency, plain-gradient "
+                   "saliency), participant level. Kept so the earlier numbers can be compared; an unsigned "
+                   "map is correlated with a signed one, so the sign is not 'agreement' (use T7).",
+                   md_table(header7b, rows7b)]
+
+    # T10 exploratory physiology
+    phys_path = os.path.join(results_root, "full22", "physiology_correlations.json")
+    if os.path.exists(phys_path):
+        ph = _load(phys_path)
+        if ph.get("error"):
+            md += ["### T10. Exploratory physiology correlations", f"_Skipped: {ph['error']}_"]
+        elif ph.get("summary"):
+            rows10 = physiology_rows(ph, "mean4")
+            header10 = PHYS_HEADER
+            write_csv(os.path.join(out_dir, "T10_physiology_mean4.csv"), header10, rows10)
+            all_rows = [[m] + r for m in ph["summary"] for r in physiology_rows(ph, m)]
+            write_csv(os.path.join(out_dir, "T10_physiology_all_methods.csv"), ["Attribution"] + header10, all_rows)
+            md += ["### T10. EXPLORATORY: saliency vs other physiological maps",
+                   "Curiosity only — not used for any choice; the paper's alignment is T7. Saliency = mean of the "
+                   "four attribution maps (`mean4`); per method in `T10_physiology_all_methods.csv`. "
+                   "r = corr(saliency, map), |map| = corr(saliency, |map|), class-specific = mean of "
+                   "corr(saliency_L, |map_L|) and corr(saliency_R, |map_R|). Fisher-z mean over subjects. "
+                   "Group maps: `figures/physiology_maps_group.png`.", md_table(header10, rows10)]
 
     # T8 faithfulness / randomisation
     recs22 = methods.get("22ch", {}).get("records", [])
@@ -442,7 +511,80 @@ def build_class_report(folder, cls, out_dir, margin):
     return "\n\n".join(md)
 
 
+# ───────────────────────────── cross-model summary ─────────────────────────────
+def model_name(folder, cls):
+    for p in glob.glob(os.path.join(folder, cls, "results", "*", "results.json")):
+        return _load(p)["meta"].get("config", {}).get("model", os.path.basename(os.path.dirname(folder)))
+    return os.path.basename(os.path.dirname(folder))
+
+
+def build_combined(folders, classes, out):
+    os.makedirs(out, exist_ok=True)
+    md = [f"# Cross-model summary — {', '.join(os.path.relpath(f, os.getcwd()) for f in folders)}",
+          f"Generated {datetime.datetime.now():%Y-%m-%d %H:%M}. Per-model details: `<model folder>/report/REPORT.md`."]
+    labels = [lab for _, lab in METHODS]
+    acc_rows, al_rows, phys = [], [], {}
+    for folder in folders:
+        for cls in classes:
+            root = os.path.join(folder, cls, "results")
+            methods, _ = load_methods(root)
+            if not methods:
+                continue
+            name = model_name(folder, cls)
+            row = [name, cls]
+            for lab in labels:
+                if lab in methods:
+                    v = list(method_subject_acc(methods[lab]).values())
+                    row.append(f"{pct(np.mean(v))} ± {pct(np.std(v, ddof=1)) if len(v) > 1 else '—'}")
+                else:
+                    row.append("—")
+            acc_rows.append(row)
+            ap_ = os.path.join(root, "full22", "alignment_metrics.json")
+            if os.path.exists(ap_):
+                al = _load(ap_)
+                ps = al["per_subject"]
+                for m in al["summary"]:
+                    vals = []
+                    for k in ("magnitude_pearson", "class_specific_pearson", "lateralisation_pearson",
+                              "orig_ERD_LR_pearson", "orig_ERD_comb_pearson"):
+                        v = [ps[s][m][k] for s in ps if k in ps[s].get(m, {})]
+                        vals.append(num(fisher_mean_ci(v)[0]) if v else "—")
+                    al_rows.append([name, cls, m] + vals)
+            pp = os.path.join(root, "full22", "physiology_correlations.json")
+            if os.path.exists(pp):
+                ph = _load(pp)
+                for k, s in ph.get("summary", {}).get("mean4", {}).items():
+                    if k.endswith("|pearson") and "|abs|" not in k:
+                        phys.setdefault(k.split("|")[0], {})[f"{name} {cls}"] = s["mean"]
+    h1 = ["Model", "Class"] + labels
+    write_csv(os.path.join(out, "C1_accuracy.csv"), h1, acc_rows)
+    md += ["## C1. Test accuracy (%), mean ± SD across subjects", md_table(h1, acc_rows) if acc_rows else "_none_"]
+    h2 = ["Model", "Class", "Attribution", "magnitude r", "class-specific r", "lateralisation r",
+          "orig ERD_(L−R) r", "orig ERD_comb r"]
+    write_csv(os.path.join(out, "C2_alignment.csv"), h2, al_rows)
+    md += ["## C2. Saliency–ERD correlations (Pearson, Fisher mean over subjects)",
+           "First three: sign-invariant metrics used in the paper. Last two: as in the original scripts.",
+           md_table(h2, al_rows) if al_rows else "_none_"]
+    cols = sorted({c for v in phys.values() for c in v})
+    rows3 = [[mname] + [num(v.get(c, float("nan"))) for c in cols] for mname, v in phys.items()]
+    write_csv(os.path.join(out, "C3_physiology_exploratory.csv"), ["Map"] + cols, rows3)
+    md += ["## C3. EXPLORATORY: corr(mean saliency, physiological map), Pearson, Fisher mean",
+           "Curiosity only; not used anywhere in the pipeline.",
+           md_table(["Map"] + cols, rows3) if rows3 else "_none_"]
+    with open(os.path.join(out, "SUMMARY.md"), "w", encoding="utf-8") as f:
+        f.write("\n\n".join(md) + "\n")
+    print(f"Cross-model summary written to {os.path.join(out, 'SUMMARY.md')}")
+
+
 def main():
+    if "--combine" in sys.argv:
+        ap = argparse.ArgumentParser()
+        ap.add_argument("--combine", nargs="+", required=True, help="model/dataset folders")
+        ap.add_argument("--classes", nargs="*", default=["2class", "4class"])
+        ap.add_argument("--out", required=True)
+        a = ap.parse_args()
+        build_combined([os.path.abspath(f) for f in a.combine], a.classes, os.path.abspath(a.out))
+        return 0
     ap = argparse.ArgumentParser()
     ap.add_argument("folder", help="model/dataset folder, e.g. EEGNetV4/BNCI_001")
     ap.add_argument("--classes", nargs="*", default=["2class", "4class"])

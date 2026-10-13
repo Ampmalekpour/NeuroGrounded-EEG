@@ -22,19 +22,31 @@ Deep4net/
   BNCI_001/legacy_unrevised/          old Deep4Net BNCI2014-001 scripts and outputs
 EEGItNet/
   HGD/                                same structure as Deep4net/HGD (common + 2class/ + 4class/)
+  BNCI_001/                           BNCI2014-001: common + 2class/ + 4class/ (+ *_tune.py)
 EEGNetV4/
   HGD/                                same structure (common + 2class/ + 4class/ + legacy_unrevised/)
   BNCI_001/                           BNCI2014-001: common + 2class/ + 4class/ (+ *_tune.py)
-    run_all.py                        runs every step for both class modes and builds report/REPORT.md
 EEGConformer/
   HGD/                                same structure; keeps the Conformer pipeline (500 Hz, 100 epochs)
+run_all.py                            BNCI2014-001 coordinator: EEGNetV4 then EEG-ITNet, all steps, all tables
+reports/BNCI_001/SUMMARY.md           cross-model summary written by run_all.py
 analysis/equivalence_stats.py         paired TOST / CI / per-subject losses from results.json files
-analysis/aggregate_results.py         builds the reviewer tables (T1-T9) for one model/dataset folder
+analysis/aggregate_results.py         builds the reviewer tables (T1-T10) for one model/dataset folder (--combine: across models)
 docs/REVIEW_CROSSWALK.md              reviewer comments vs original code vs this code
 ```
 
 Each `2class/` or `4class/` folder is self-contained to run: scripts import the `*_common.py`
 one level up, fix the class mode themselves, and write to `<that folder>/results/`.
+
+## BNCI2014-001: one command for both models
+
+```powershell
+cd D:\EEG\NeuroGrounded-EEG
+$env:EEG_SEEDS="42,43,44"
+python run_all.py            # EEGNetV4/BNCI_001, then EEGItNet/BNCI_001; tables + figures + summary
+```
+
+See `EEGNetV4/BNCI_001/README.md` and `EEGItNet/BNCI_001/README.md`.
 
 ## Setup and run (Windows PowerShell)
 
