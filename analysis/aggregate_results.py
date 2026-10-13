@@ -513,8 +513,7 @@ def build_class_report(folder, cls, out_dir, margin):
 
 # ───────────────────────────── cross-model summary ─────────────────────────────
 def model_name(folder, cls):
-    for p in glob.glob(os.path.join(folder, cls, "results", "*", "results.json")):
-        return _load(p)["meta"].get("config", {}).get("model", os.path.basename(os.path.dirname(folder)))
+    """Model folder name (e.g. EEGNetV4, EEGItNet); the exact braindecode class is in each T9_config.json."""
     return os.path.basename(os.path.dirname(folder))
 
 
