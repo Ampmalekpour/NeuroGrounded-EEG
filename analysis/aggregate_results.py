@@ -159,6 +159,19 @@ def mean_ci(values):
     return m, m - h, m + h, len(v)
 
 
+def fisher_mean_ci(values):
+    """Mean correlation and 95% CI via Fisher z (keeps the interval inside [-1, 1])."""
+    r = np.array([x for x in values if np.isfinite(x)], dtype=float)
+    if len(r) == 0:
+        return float("nan"), float("nan"), float("nan"), 0
+    z = np.arctanh(np.clip(r, -0.999999, 0.999999))
+    m = float(np.tanh(z.mean()))
+    if len(z) < 2:
+        return m, float("nan"), float("nan"), len(z)
+    h = stats.t.ppf(0.975, len(z) - 1) * z.std(ddof=1) / np.sqrt(len(z))
+    return m, float(np.tanh(z.mean() - h)), float(np.tanh(z.mean() + h)), len(z)
+
+
 # ───────────────────────────── output helpers ─────────────────────────────
 def pct(x, nd=2):
     return "—" if x is None or not np.isfinite(x) else f"{100 * x:.{nd}f}"
@@ -289,7 +302,7 @@ def build_class_report(folder, cls, out_dir, margin):
         write_csv(os.path.join(out_dir, "T4_ours_vs_other_montages.csv"), header4, rows4)
         md += ["### T4. Saliency montage (Ours) vs every other 12-channel montage",
                "Positive = Ours more accurate. Holm correction across the comparisons in this table.",
-               md_table(header4, rows4)]
+               md_table(header4, rows4) if rows4 else "_No other 12-channel montage available yet._"]
 
     # T5 confusion / collapse
     header5 = ["Method", "Pooled acc", "Per-class recall", "Predicted share per class",
@@ -331,19 +344,23 @@ def build_class_report(folder, cls, out_dir, margin):
     align_path = os.path.join(results_root, "full22", "alignment_metrics.json")
     if os.path.exists(align_path):
         al = _load(align_path)
-        header7 = ["Attribution", "Metric", "Mean", "95% CI", "SD", "n subjects"]
+        header7 = ["Attribution", "Metric", "Mean r (Fisher)", "95% CI", "SD of r", "n subjects"]
         rows7 = []
-        for m, metrics in al["summary"].items():
+        per_subject = al["per_subject"]
+        for m in al["summary"]:
             for k in ALIGN_KEYS:
-                if k in metrics:
-                    s = metrics[k]
-                    rows7.append([m, k, num(s["mean"]), f"[{num(s['ci_low'])}, {num(s['ci_high'])}]",
-                                  num(s["sd"]), s["n"]])
+                vals = [per_subject[s][m][k] for s in per_subject if k in per_subject[s].get(m, {})]
+                if not vals:
+                    continue
+                mean, lo, hi, n = fisher_mean_ci(vals)
+                finite = [v for v in vals if np.isfinite(v)]
+                sd = float(np.std(finite, ddof=1)) if len(finite) > 1 else float("nan")
+                rows7.append([m, k, num(mean), f"[{num(lo)}, {num(hi)}]", num(sd), n])
         write_csv(os.path.join(out_dir, "T7_alignment.csv"), header7, rows7)
         md += ["### T7. Saliency vs ERD/ERS alignment (participant level)",
                "magnitude / class_specific / lateralisation compare unsigned saliency with desynchronisation "
                "strength (−ERD) and are sign-invariant; `legacy_signed_LR` is the old statistic, shown only "
-               "for comparison (its sign is not interpretable). Per-subject values: "
+               "for comparison (its sign is not interpretable). Mean and CI via Fisher z. Per-subject values: "
                "`results/full22/alignment_metrics.json`.", md_table(header7, rows7)]
 
     # T8 faithfulness / randomisation
@@ -385,7 +402,7 @@ def build_class_report(folder, cls, out_dir, margin):
                 for r in rando:
                     per_s.setdefault(r["subject"], []).append(r["randomisation_spearman"][m])
                 vals = [float(np.nanmean(v)) for v in per_s.values()]
-                mean, lo, hi, n = mean_ci(vals)
+                mean, lo, hi, n = fisher_mean_ci(vals)
                 rows8b.append([m, num(mean), f"[{num(lo)}, {num(hi)}]", n])
             write_csv(os.path.join(out_dir, "T8_randomisation_check.csv"), header8b, rows8b)
             md += ["### T8b. Model-randomisation sanity check",
