@@ -4,12 +4,12 @@ __pycache__/
 
 # Results ARE tracked so they can be reviewed from GitHub: results.json, fold/subject CSVs,
 # alignment_metrics.json, physiology_correlations.json, selected_profile.json, text reports,
-# logs, run_all_status.json, report/ tables and reports/.
+# logs, run_all_status*.json, report*/ tables and reports/. Both protocols are covered
+# (results/ = blocks, results_session/ = session).
 # Only heavy or regenerable files are ignored:
-**/results/**/*.npy
-**/results/**/*.npz
-**/results/**/*.png
-**/results/**/erd_cache/
-**/results/**/physiology_cache/
-report/*/figures/
-**/report/*/figures/
+**/results*/**/*.npy
+**/results*/**/*.npz
+**/results*/**/*.png
+**/results*/**/erd_cache/
+**/results*/**/physiology_cache/
+**/report*/*/figures/

@@ -94,16 +94,29 @@ if CLASS_MODE not in ("2class", "4class"):
 SYNTHETIC = os.environ.get("EEG_SYNTHETIC", "0") == "1"
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-RESULTS_ROOT = os.environ.get("EEG_RESULTS_DIR", os.path.join(HERE, "results"))
+# ---- Evaluation protocol --------------------------------------------------------------------
+# session (default): the official BCI IV-2a split. Train on session 1 ("0train"), test on session 2
+#   ("1test"). The last VAL_FRACTION of session 1 (chronological) is the validation set used for
+#   early stopping, profile tuning and saliency. The model is then refitted on ALL of session 1 with
+#   the chosen number of epochs, and the softmax outputs of all seeds are averaged (seed ensemble).
+#   Session 2 is scored once, at the end, and never used for any choice.
+# blocks: 4 chronological blocks within the pooled sessions (train / validation / test), the
+#   protocol of the first revision. Kept as a robustness check; it writes to results/.
+PROTOCOL = os.environ.get("EEG_PROTOCOL", "session")
+if PROTOCOL not in ("session", "blocks"):
+    raise SystemExit("EEG_PROTOCOL must be 'session' or 'blocks'")
+VAL_FRACTION = 0.25
+REFIT = os.environ.get("EEG_REFIT", "1") == "1"
+MIN_REFIT_EPOCHS = 20
+RESULTS_ROOT = os.environ.get("EEG_RESULTS_DIR",
+                              os.path.join(HERE, "results" if PROTOCOL == "blocks" else "results_session"))
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 print("Using device:", DEVICE, "| class mode:", CLASS_MODE, "| seeds:", SEEDS, "| subjects:", list(SUBJECT_IDS),
-      "| synthetic:", SYNTHETIC)
+      "| synthetic:", SYNTHETIC, "| protocol:", PROTOCOL)
 
-# NOTE: preprocessing / training constants are deliberately left exactly as in the
-# original Deep4Net scripts. Differences from the manuscript (Section 3.2/3.4) are
-# resolved by editing the manuscript, not the code. They are written to every
-# results.json (see config_snapshot) so the paper can quote them exactly.
+# Every preprocessing / training constant is written to results.json (config_snapshot), so the
+# paper can quote exactly what was run.
 DATASET_NAME = "BNCI2014_001"
 
 TARGET_SFREQ = 250                # native BNCI rate, as in the original scripts
@@ -144,6 +157,12 @@ SELECTED_PROFILE_FILE = os.path.join(RESULTS_ROOT, "selected_profile.json")
 # deletion (faithfulness) test: channels removed from the TEST block of each fold
 FAITH_K = [2, 4, 6]
 FAITH_RANDOM_DRAWS = 10
+
+# recipes without early stopping (fixed epochs + SWA) set this to True: their refit simply uses
+# max_epochs, and models that are not needed for saliency skip the first (validation) fit
+FIXED_EPOCHS = True
+# profiles tried by *_tune.py unless EEG_TUNE_CANDIDATES is set
+TUNE_CANDIDATES = ["original", "cue_0_4"]   # cue_0_4 won 8/9 subjects in the blocks run; EEG_TUNE_CANDIDATES widens it
 
 
 def profile_name_for(subject_id=None):
@@ -212,8 +231,11 @@ def config_snapshot():
         "tta": TTA,
         "checkpoint_rule": "SWA average from swa_start_frac*max_epochs + BN update (no early stopping); "
                            "validation block only scored, never used for checkpointing",
-        "folds": "4 chronological blocks; test block i, validation block i-1, rest train "
-                 "(original: shuffled StratifiedKFold(4), no validation set)",
+        "folds": FOLDS_NOTE[PROTOCOL],
+        "original_protocol": "shuffled StratifiedKFold(4) over both sessions, no validation set",
+        "protocol": {"name": PROTOCOL, "val_fraction": VAL_FRACTION, "refit": REFIT,
+                     "min_refit_epochs": MIN_REFIT_EPOCHS, "fixed_epochs": FIXED_EPOCHS,
+                     "seed_ensemble": PROTOCOL == "session" and len(SEEDS) > 1},
         "attribution": {"methods": ATTR_METHODS, "ig_steps": IG_STEPS,
                         "smoothgrad_samples": SMOOTHGRAD_SAMPLES,
                         "smoothgrad_noise_std": SMOOTHGRAD_NOISE_STD,
@@ -274,6 +296,24 @@ def class_ids(class_mode):
     if class_mode == "4class":
         return LEFT_HAND_LABEL, RIGHT_HAND_LABEL
     raise ValueError(f"Unknown class_mode: {class_mode!r}")
+
+
+def class_mask(y, class_mode):
+    """Trials kept by a class mode (same rule as apply_class_mode)."""
+    if class_mode == "2class":
+        return np.isin(y, [LEFT_HAND_LABEL, RIGHT_HAND_LABEL])
+    return np.ones(len(y), dtype=bool)
+
+
+def _window_sessions(windows):
+    """Session index per window: 0 = first (training) session, 1 = second (evaluation) session.
+    BNCI2014-001 sessions are named '0train' and '1test', so sorting the names gives the order."""
+    names = []
+    for d in windows.datasets:
+        desc = d.description
+        names.extend([str(desc["session"]) if "session" in desc else "0"] * len(d))
+    order = sorted(set(names))
+    return np.array([order.index(n) for n in names], dtype=np.int64)
 
 
 def apply_class_mode(X, y, class_mode):
@@ -357,6 +397,7 @@ def load_subject_windows(subject_id, channels, class_mode, cfg=None):
     n_expected = window_n_samples(cfg)
     if SYNTHETIC:
         X, y = _synthetic_windows(list(channels), n_expected, seed=subject_id)
+        sessions = (np.arange(len(y)) >= len(y) // 2).astype(np.int64)      # first half = session 1
     else:
         dataset = MOABBDataset(DATASET_NAME, subject_ids=[subject_id])
         preprocessors = [
@@ -380,18 +421,21 @@ def load_subject_windows(subject_id, channels, class_mode, cfg=None):
             preload=True,
         )
         X, y = extract_xy(windows)
+        sessions = _window_sessions(windows)
         _check_label_mapping(dataset, y)
         del dataset, windows
         gc.collect()
         assert X.shape[2] == n_expected, (
             f"window has {X.shape[2]} samples, expected {n_expected} for {cfg['window_s']} s; "
             f"check EVENT_DURATION_S")
+    sessions = sessions[class_mask(y, class_mode)]
     X, y = apply_class_mode(X, y, class_mode)
 
     names = class_names(class_mode)
     counts = {names[c]: int((y == c).sum()) for c in range(len(names))}
     info = {"n_trials": int(len(y)), "n_channels": int(X.shape[1]), "n_times": int(X.shape[2]),
-            "class_counts": counts, "profile": cfg["name"], "window_s": list(cfg["window_s"])}
+            "class_counts": counts, "profile": cfg["name"], "window_s": list(cfg["window_s"]),
+            "sessions": sessions, "n_per_session": [int((sessions == s).sum()) for s in (0, 1)]}
     print(f"  S{subject_id:02d} [{class_mode}] profile={cfg['name']} X={X.shape} class counts={counts}")
     assert len(np.unique(y)) == len(names), f"Missing classes: {counts}"
     return X.astype(np.float32), y.astype(np.int64), info
@@ -407,6 +451,36 @@ def make_blockwise_folds(n_samples, n_blocks=4):
         train_idx = np.concatenate([blocks[b] for b in train_blocks])
         folds.append((train_idx, blocks[val_i], blocks[test_i]))
     return folds
+
+
+FOLDS_NOTE = {
+    "session": "train on session 1 (last 25% of it = validation, chronological), refit on all of "
+               "session 1, test once on session 2 (official BCI IV-2a split)",
+    "blocks": "4 chronological blocks; test block i, validation block i-1, rest train",
+}
+
+
+def make_folds(n_samples, info=None):
+    """[(train, validation, test), ...] for the current PROTOCOL."""
+    if PROTOCOL == "blocks":
+        return make_blockwise_folds(n_samples)
+    s = np.asarray(info["sessions"])
+    first, second = np.where(s == 0)[0], np.where(s == 1)[0]
+    if len(first) == 0 or len(second) == 0:
+        raise RuntimeError("session protocol needs two sessions; found "
+                           f"{len(first)} / {len(second)} trials. Use EEG_PROTOCOL=blocks.")
+    n_val = max(1, int(round(VAL_FRACTION * len(first))))
+    return [(first[:-n_val], first[-n_val:], second)]
+
+
+def load_selection_trials(subject_id, channels, class_mode, cfg=None):
+    """Trials that channel-SELECTION methods (CSP, MI, ReliefF) may use: under the session protocol
+    only session 1, so session 2 never influences any choice (montages are also leave-one-subject-out)."""
+    X, y, info = load_subject_windows(subject_id, channels, class_mode, cfg)
+    if PROTOCOL == "session":
+        keep = np.asarray(info["sessions"]) == 0
+        X, y = X[keep], y[keep]
+    return X, y, info
 
 
 def batch_iter(X, y, batch_size, shuffle=True, drop_last=False):
@@ -431,6 +505,16 @@ def predict(model, X, batch_size=256):
     for start in range(0, len(X), batch_size):
         xb = torch.tensor(X[start:start + batch_size], dtype=torch.float32, device=DEVICE)
         out.append(torch.argmax(model(xb), dim=1).cpu().numpy())
+    return np.concatenate(out)
+
+
+@torch.no_grad()
+def predict_proba(model, X, batch_size=256):
+    model.eval()
+    out = []
+    for start in range(0, len(X), batch_size):
+        xb = torch.tensor(X[start:start + batch_size], dtype=torch.float32, device=DEVICE)
+        out.append(torch.softmax(model(xb), dim=1).cpu().numpy())
     return np.concatenate(out)
 
 
@@ -526,7 +610,7 @@ def smoothed_nll(out, targets, smoothing):
 
 
 @torch.no_grad()
-def predict_tta(model, X, use_tta=True, batch_size=256):
+def predict_proba_tta(model, X, use_tta=True, batch_size=256):
     """Original test-time augmentation: mean softmax of the input, input + 2% noise and input x 0.9."""
     model.eval()
     out = []
@@ -536,15 +620,22 @@ def predict_tta(model, X, use_tta=True, batch_size=256):
         if use_tta:
             p = p + F.softmax(model(xb + torch.randn_like(xb) * (xb.std() * TTA["noise_rel_std"])), dim=1)
             p = p + F.softmax(model(xb * TTA["scale"]), dim=1)
-        out.append(torch.argmax(p, dim=1).cpu().numpy())
+            p = p / 3.0
+        out.append(p.cpu().numpy())
     return np.concatenate(out)
 
 
-def train_one_fold(X, y, train_idx, val_idx, test_idx, seed, tag="", cfg=None, evaluate_test=True):
+def predict_tta(model, X, use_tta=True, batch_size=256):
+    return predict_proba_tta(model, X, use_tta, batch_size).argmax(axis=1)
+
+
+def train_one_fold(X, y, train_idx, val_idx, test_idx, seed, tag="", cfg=None, evaluate_test=True,
+                   final_epochs=None):
     """Original EEG-ITNet recipe with the profile `cfg`: fixed number of epochs, SWA from
-    swa_start_frac*max_epochs, BN update, TTA. The validation block is only SCORED (used by the
-    tuning step and for saliency); the TEST block is touched once, after training, and never when
-    evaluate_test=False (the tuning script)."""
+    swa_start_frac*max_epochs, BN update, TTA. The validation trials are only SCORED (used by the
+    tuning step and for saliency); the TEST trials are touched once, after training, and never when
+    evaluate_test=False (the tuning script). final_epochs (refit): number of epochs; val_idx may be
+    empty."""
     seed_everything(seed)
     cfg = cfg or get_cfg()
     X_tr, y_tr = X[train_idx], y[train_idx]
@@ -555,11 +646,12 @@ def train_one_fold(X, y, train_idx, val_idx, test_idx, seed, tag="", cfg=None, e
     model = build_model(n_chans, n_times, n_classes, cfg)
     swa_model = AveragedModel(model).to(DEVICE)
     optimizer = torch.optim.AdamW(model.parameters(), lr=cfg["lr"], weight_decay=cfg["weight_decay"])
-    scheduler = CosineAnnealingLR(optimizer, T_max=cfg["max_epochs"])
-    swa_start = max(1, int(round(cfg["swa_start_frac"] * cfg["max_epochs"])))
+    max_epochs = int(final_epochs or cfg["max_epochs"])
+    scheduler = CosineAnnealingLR(optimizer, T_max=max_epochs)
+    swa_start = max(1, int(round(cfg["swa_start_frac"] * max_epochs)))
     smoothing = cfg["label_smoothing"]
 
-    for epoch in range(1, cfg["max_epochs"] + 1):
+    for epoch in range(1, max_epochs + 1):
         model.train()
         losses = []
         for xb, yb in batch_iter(X_tr, y_tr, cfg["batch_size"], shuffle=True, drop_last=True):
@@ -581,17 +673,20 @@ def train_one_fold(X, y, train_idx, val_idx, test_idx, seed, tag="", cfg=None, e
         if epoch >= swa_start:
             swa_model.update_parameters(model)
         if epoch == 1 or epoch % 50 == 0:
-            print(f"{tag} Ep {epoch:03d} | tr {np.mean(losses):.4f} | "
-                  f"val (current weights) {(predict(model, X_val) == y_val).mean():.1%}")
+            val_txt = (f"val (current weights) {(predict(model, X_val) == y_val).mean():.1%}"
+                       if len(y_val) else "refit, no validation")
+            print(f"{tag} Ep {epoch:03d}/{max_epochs} | tr {np.mean(losses):.4f} | {val_txt}")
 
     update_bn([xb for xb, _ in batch_iter(X_tr, y_tr, cfg["batch_size"], shuffle=False)], swa_model,
               device=DEVICE)
     final = swa_model.module
     final.eval()
-    val_acc = float((predict_tta(final, X_val, cfg["tta"]) == y_val).mean())
+    val_acc = float((predict_tta(final, X_val, cfg["tta"]) == y_val).mean()) if len(y_val) else float("nan")
+    test_proba = None
     if evaluate_test:
         y_te = y[test_idx]
-        y_pred = predict_tta(final, X[test_idx], cfg["tta"])
+        test_proba = predict_proba_tta(final, X[test_idx], cfg["tta"])
+        y_pred = test_proba.argmax(axis=1)
         test_acc = float((y_pred == y_te).mean())
     else:
         y_te = y_pred = np.zeros(0, dtype=np.int64)
@@ -603,10 +698,10 @@ def train_one_fold(X, y, train_idx, val_idx, test_idx, seed, tag="", cfg=None, e
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
 
-    return {"test_acc": test_acc, "val_acc": val_acc, "best_epoch": cfg["max_epochs"],
-            "epochs_run": cfg["max_epochs"], "y_true": y_te, "y_pred": y_pred,
+    return {"test_acc": test_acc, "val_acc": val_acc, "best_epoch": max_epochs,
+            "epochs_run": max_epochs, "y_true": y_te, "y_pred": y_pred,
             "best_state": best_state, "n_chans": n_chans, "n_times": n_times,
-            "n_classes": n_classes, "cfg": cfg}
+            "n_classes": n_classes, "cfg": cfg, "test_proba": test_proba}
 
 
 def _confusion(y_true, y_pred, n_classes):
@@ -745,61 +840,137 @@ def deletion_test(model, X, y, ranking, seed):
     return out
 
 
+def session_fit(X, y, tr, va, te, seed, tag, cfg, need_val_model):
+    """Session protocol for one seed:
+      1. fit on session-1 training part, validation part for early stopping (and saliency)
+      2. refit on ALL of session 1 with the chosen number of epochs (REFIT=1)
+    Returns the train_one_fold dict of the final model plus 'val_state' (the step-1 model, used for
+    saliency on the validation trials) and the step-1 validation accuracy."""
+    first = None
+    if need_val_model or not FIXED_EPOCHS or not REFIT:
+        first = train_one_fold(X, y, tr, va, te, seed, tag=tag + " [fit]", cfg=cfg,
+                               evaluate_test=not REFIT)
+    if not REFIT:
+        first["val_state"] = first["best_state"]
+        return first
+    n_ep = int(cfg["max_epochs"]) if FIXED_EPOCHS else max(int(first["best_epoch"]), MIN_REFIT_EPOCHS)
+    full = np.concatenate([tr, va])
+    res = train_one_fold(X, y, full, np.zeros(0, dtype=np.int64), te, seed, tag=tag + " [refit]",
+                         cfg=cfg, final_epochs=n_ep)
+    res["val_acc"] = first["val_acc"] if first else float("nan")
+    res["val_state"] = first["best_state"] if first else None
+    res["fit_best_epoch"] = int(first["best_epoch"]) if first else None
+    return res
+
+
+def _ensemble_record(sid, class_mode, channels, seed_recs, probas, y_te, tr, va, te, n_times):
+    proba = np.mean(probas, axis=0)
+    y_pred = proba.argmax(axis=1)
+    res = {"y_true": y_te, "y_pred": y_pred, "test_acc": float((y_pred == y_te).mean()),
+           "val_acc": float(np.nanmean([r["val_acc"] for r in seed_recs])) if seed_recs else float("nan"),
+           "best_epoch": int(np.mean([r["best_epoch"] for r in seed_recs])),
+           "epochs_run": int(np.mean([r["epochs_run"] for r in seed_recs])), "n_times": n_times}
+    rec = make_fold_record(sid, -1, 1, class_mode, channels, res, tr, va, te)
+    rec["ensemble_of_seeds"] = [r["seed"] for r in seed_recs]
+    rec["seed_accs"] = [r["test_acc"] for r in seed_recs]
+    for key in ("faithfulness", "randomisation_spearman"):            # mean over seeds
+        vals = [r[key] for r in seed_recs if key in r]
+        if vals:
+            rec[key] = _mean_nested(vals)
+    return rec
+
+
+def _mean_nested(dicts):
+    out = {}
+    for k, v in dicts[0].items():
+        if isinstance(v, dict):
+            out[k] = _mean_nested([d[k] for d in dicts])
+        else:
+            out[k] = float(np.nanmean([d[k] for d in dicts]))
+    return out
+
+
 def run_experiment(exp_name, class_mode, montages, collect_saliency=False,
                    methods=ATTR_METHODS, extra_meta=None):
-    """Train EEG-ITNet for every subject / seed / fold on that subject's montage, with that
-    subject's profile. With collect_saliency: attributions on each fold's VALIDATION block, the
-    deletion test on its TEST block (evaluation only) and the model-randomisation check.
-    Returns (records, subject_saliency)."""
+    """Train the model for every subject / seed (/ fold) on that subject's montage, with that
+    subject's profile, under PROTOCOL. With collect_saliency: attributions on the VALIDATION trials,
+    the deletion test on the TEST trials (evaluation only) and the model-randomisation check.
+    Session protocol: `records` holds one seed-ensemble record per subject, `seed_records` the
+    individual seeds. Returns (records, subject_saliency)."""
     out_dir = experiment_dir(exp_name, class_mode)
-    records, subject_saliency, profiles_used = [], {}, {}
+    records, seed_records, subject_saliency, profiles_used = [], [], {}, {}
 
     for sid in SUBJECT_IDS:
         channels = list(montages[sid])
         cfg = get_cfg(sid)
         profiles_used[sid] = cfg["name"]
         print("\n" + "=" * 80)
-        print(f"SUBJECT {sid:02d} — {exp_name} — {class_mode} — profile {cfg['name']} — "
+        print(f"SUBJECT {sid:02d} — {exp_name} — {class_mode} — {PROTOCOL} — profile {cfg['name']} — "
               f"{len(channels)} ch: {', '.join(channels)}")
         print("=" * 80)
-        X, y, _info = load_subject_windows(sid, channels, class_mode, cfg)
-        folds = make_blockwise_folds(len(y), n_blocks=4)
+        X, y, info = load_subject_windows(sid, channels, class_mode, cfg)
+        folds = make_folds(len(y), info)
 
         sal_all = {m: [] for m in methods}
         sal_cls = {m: {} for m in methods}
 
-        for seed in SEEDS:
-            for fold_i, (tr, va, te) in enumerate(folds, start=1):
+        for fold_i, (tr, va, te) in enumerate(folds, start=1):
+            fold_recs, probas = [], []
+            for seed in SEEDS:
                 tag = f"S{sid:02d} seed{seed} F{fold_i}"
                 fseed = fold_seed(seed, sid, fold_i)
-                res = train_one_fold(X, y, tr, va, te, fseed, tag=tag, cfg=cfg)
-                rec = make_fold_record(sid, seed, fold_i, class_mode, channels, res, tr, va, te)
+                if PROTOCOL == "session":
+                    res = session_fit(X, y, tr, va, te, fseed, tag, cfg, need_val_model=collect_saliency)
+                    rec = make_fold_record(sid, seed, fold_i, class_mode, channels, res,
+                                           np.concatenate([tr, va]) if REFIT else tr, va, te)
+                    rec["refit"] = REFIT
+                    rec["fit_best_epoch"] = res.get("fit_best_epoch")
+                    val_state = res["val_state"]
+                else:
+                    res = train_one_fold(X, y, tr, va, te, fseed, tag=tag, cfg=cfg)
+                    rec = make_fold_record(sid, seed, fold_i, class_mode, channels, res, tr, va, te)
+                    val_state = res["best_state"]
                 rec["profile"] = cfg["name"]
                 print(f"{tag}: test {res['test_acc']*100:.2f}% "
-                      f"(val {res['val_acc']*100:.2f}%, best epoch {res['best_epoch']})")
+                      f"(val {res['val_acc']*100:.2f}%, epochs {res['best_epoch']})")
                 if collect_saliency:
-                    model = build_model(res["n_chans"], res["n_times"], res["n_classes"], cfg)
-                    model.load_state_dict(res["best_state"])
-                    model.eval()
-                    imps = compute_fold_channel_importances(model, X[va], y[va], methods)
+                    vmodel = build_model(res["n_chans"], res["n_times"], res["n_classes"], cfg)
+                    vmodel.load_state_dict(val_state)
+                    vmodel.eval()
+                    imps = compute_fold_channel_importances(vmodel, X[va], y[va], methods)
                     for m in methods:
                         sal_all[m].append(imps[m]["all"])
                         for c, v in imps[m]["by_class"].items():
                             sal_cls[m].setdefault(c, []).append(v)
                     ranking = normalize_importance(np.mean([imps[m]["all"] for m in methods], axis=0))
-                    rec["faithfulness"] = deletion_test(model, X[te], y[te], ranking, seed=fseed)
+                    fmodel = build_model(res["n_chans"], res["n_times"], res["n_classes"], cfg)
+                    fmodel.load_state_dict(res["best_state"])
+                    fmodel.eval()
+                    rec["faithfulness"] = deletion_test(fmodel, X[te], y[te], ranking, seed=fseed)
                     seed_everything(fseed + 7)
                     rand_model = build_model(res["n_chans"], res["n_times"], res["n_classes"], cfg)
                     rand_model.eval()
                     rimps = compute_fold_channel_importances(rand_model, X[va], y[va], methods)
                     rec["randomisation_spearman"] = {
                         m: _corr(imps[m]["all"], rimps[m]["all"], "spearman") for m in methods}
-                    del model, rand_model
+                    del vmodel, fmodel, rand_model
                     gc.collect()
                     if torch.cuda.is_available():
                         torch.cuda.empty_cache()
-                records.append(rec)
+                fold_recs.append(rec)
+                if res.get("test_proba") is not None:
+                    probas.append(res["test_proba"])
                 del res
+            if PROTOCOL == "session":
+                seed_records.extend(fold_recs)
+                ens = _ensemble_record(sid, class_mode, channels, fold_recs, probas, y[te],
+                                       np.concatenate([tr, va]) if REFIT else tr, va, te, X.shape[2])
+                ens["profile"] = cfg["name"]
+                records.append(ens)
+                print(f"S{sid:02d} seed ensemble ({len(probas)} seeds): test {ens['test_acc']*100:.2f}% "
+                      f"(single seeds {', '.join(f'{a*100:.1f}' for a in ens['seed_accs'])})")
+            else:
+                records.extend(fold_recs)
 
         if collect_saliency:
             subject_saliency[sid] = {
@@ -811,13 +982,13 @@ def run_experiment(exp_name, class_mode, montages, collect_saliency=False,
         del X, y
         gc.collect()
 
-    meta = {"experiment": exp_name, "class_mode": class_mode,
+    meta = {"experiment": exp_name, "class_mode": class_mode, "protocol": PROTOCOL,
             "montages": {str(k): list(v) for k, v in montages.items()},
             "profiles_used": {str(k): v for k, v in profiles_used.items()},
             "config": config_snapshot()}
     if extra_meta:
         meta.update(extra_meta)
-    write_results(out_dir, records, meta)
+    write_results(out_dir, records, meta, seed_records=seed_records or None)
     return records, subject_saliency
 
 
@@ -850,10 +1021,16 @@ def summarize(records):
             "chance_acc": records[0]["chance_acc"] if records else None}
 
 
-def write_results(out_dir, records, meta):
+def write_results(out_dir, records, meta, seed_records=None):
+    """records: what the tables use (session protocol: one seed-ensemble record per subject);
+    seed_records: the individual seeds (session protocol only)."""
     summary = summarize(records)
+    payload = {"meta": meta, "summary": summary, "records": records}
+    if seed_records:
+        payload["seed_records"] = seed_records
+        payload["seed_summary"] = summarize(seed_records)
     with open(os.path.join(out_dir, "results.json"), "w", encoding="utf-8") as f:
-        json.dump({"meta": meta, "summary": summary, "records": records}, f)
+        json.dump(payload, f)
     with open(os.path.join(out_dir, "fold_results.csv"), "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(["subject", "seed", "fold", "n_train", "n_val", "n_test", "n_channels",

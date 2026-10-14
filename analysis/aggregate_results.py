@@ -3,6 +3,8 @@
 # Build the tables the reviewer asked for, for ONE model/dataset folder, from the saved result files.
 #
 #   python analysis/aggregate_results.py EEGNetV4/BNCI_001 [--classes 2class 4class] [--margin 6]
+#                                        [--results-subdir results_session] [--out <folder>/report_session]
+# --results-subdir picks the protocol's results folder (results = blocks, results_session = session).
 #
 # Reads <folder>/<class>/results/<experiment>/results.json (plus alignment_metrics.json and
 # selected_profile.json) and writes <folder>/report/REPORT.md and, per class mode, CSV files:
@@ -70,13 +72,14 @@ def load_methods(results_root):
                 continue
             draws = [_load(p) for p in paths]
             out[label] = {"records": [r for d in draws for r in d["records"]],
+                          "seed_records": [r for d in draws for r in d.get("seed_records", [])] or None,
                           "meta": draws[0]["meta"], "draws": [d["records"] for d in draws],
                           "draw_montages": [d["meta"]["montages"] for d in draws]}
             continue
         path = os.path.join(results_root, exp, "results.json")
         if os.path.exists(path):
             d = _load(path)
-            out[label] = {"records": d["records"], "meta": d["meta"]}
+            out[label] = {"records": d["records"], "meta": d["meta"], "seed_records": d.get("seed_records")}
         else:
             missing.append(label)
     return out, missing
@@ -235,8 +238,8 @@ def physiology_rows(ph, method):
 
 
 # ───────────────────────────── tables ─────────────────────────────
-def build_class_report(folder, cls, out_dir, margin):
-    results_root = os.path.join(folder, cls, "results")
+def build_class_report(folder, cls, out_dir, margin, results_subdir="results"):
+    results_root = os.path.join(folder, cls, results_subdir)
     os.makedirs(out_dir, exist_ok=True)
     methods, missing = load_methods(results_root)
     md = [f"## {cls}"]
@@ -260,10 +263,16 @@ def build_class_report(folder, cls, out_dir, margin):
         sd = float(np.std(finite, ddof=1)) if len(finite) > 1 else float("nan")
         rows.append([label] + [pct(v) for v in vals] + [pct(np.mean(finite)), pct(sd)])
     write_csv(os.path.join(out_dir, "T1_accuracy_per_subject.csv"), header, rows)
-    n_seeds = len({r["seed"] for r in next(iter(methods.values()))["records"]})
+    first = next(iter(methods.values()))
+    if first.get("seed_records"):
+        n_seeds = len({r["seed"] for r in first["seed_records"]})
+        how = (f"Session protocol: trained on session 1, tested once on session 2. Subject accuracy = "
+               f"seed ensemble (mean softmax of {n_seeds} seeds); single seeds in T6.")
+    else:
+        n_seeds = len({r["seed"] for r in first["records"]})
+        how = f"Subject accuracy = mean over the folds, then over seeds ({n_seeds} seed(s))."
     md += [f"### T1. Test accuracy (%) per subject — chance {pct(chance, 1)}%",
-           f"Subject accuracy = mean over the 4 folds, then over seeds ({n_seeds} seed(s)). "
-           "SD = across subjects. Random = mean of the random-montage draws.",
+           how + " SD = across subjects. Random = mean of the random-montage draws.",
            md_table(header, rows)]
 
     # T2 montages
@@ -288,7 +297,8 @@ def build_class_report(folder, cls, out_dir, margin):
         if label == "22ch" or "draw_montages" in e:
             continue
         monts = [tuple(e["meta"]["montages"].get(str(s), [])) for s in subjects]
-        summary_rows.append([label, len(set(monts)), " ".join(max(set(monts), key=monts.count))])
+        most = max(monts, key=monts.count)                 # ties -> lowest subject id (deterministic)
+        summary_rows.append([label, len(set(monts)), " ".join(most)])
     if summary_rows:
         md.append(md_table(["Method", "Distinct montages across subjects", "Most frequent montage"], summary_rows))
 
@@ -367,12 +377,15 @@ def build_class_report(folder, cls, out_dir, margin):
     header6 = ["Method", "Seeds", "Grand mean per seed (%)", "Mean across seeds", "SD across seeds"]
     rows6 = []
     for label, e in methods.items():
-        g = seed_grand_means(e["records"])
+        g = seed_grand_means(e.get("seed_records") or e["records"])
         v = np.array(list(g.values()))
         rows6.append([label, len(g), ", ".join(f"{s}: {pct(x)}" for s, x in g.items()), pct(v.mean()),
                       pct(v.std(ddof=1)) if len(v) > 1 else "—"])
     write_csv(os.path.join(out_dir, "T6_seed_stability.csv"), header6, rows6)
-    md += ["### T6. Seed stability", md_table(header6, rows6)]
+    md += ["### T6. Seed stability"]
+    if first.get("seed_records"):
+        md.append("Grand mean of each single seed, before the seed ensemble used in T1.")
+    md.append(md_table(header6, rows6))
 
     # T7 alignment
     align_path = os.path.join(results_root, "full22", "alignment_metrics.json")
@@ -517,15 +530,15 @@ def model_name(folder, cls):
     return os.path.basename(os.path.dirname(folder))
 
 
-def build_combined(folders, classes, out):
+def build_combined(folders, classes, out, results_subdir="results"):
     os.makedirs(out, exist_ok=True)
     md = [f"# Cross-model summary — {', '.join(os.path.relpath(f, os.getcwd()) for f in folders)}",
-          f"Generated {datetime.datetime.now():%Y-%m-%d %H:%M}. Per-model details: `<model folder>/report/REPORT.md`."]
+          f"Generated {datetime.datetime.now():%Y-%m-%d %H:%M}. Per-model details: `<model folder>/report*/REPORT.md` (results folder `<class>/{results_subdir}/`)."]
     labels = [lab for _, lab in METHODS]
     acc_rows, al_rows, phys = [], [], {}
     for folder in folders:
         for cls in classes:
-            root = os.path.join(folder, cls, "results")
+            root = os.path.join(folder, cls, results_subdir)
             methods, _ = load_methods(root)
             if not methods:
                 continue
@@ -581,14 +594,18 @@ def main():
         ap.add_argument("--combine", nargs="+", required=True, help="model/dataset folders")
         ap.add_argument("--classes", nargs="*", default=["2class", "4class"])
         ap.add_argument("--out", required=True)
+        ap.add_argument("--results-subdir", default="results")
         a = ap.parse_args()
-        build_combined([os.path.abspath(f) for f in a.combine], a.classes, os.path.abspath(a.out))
+        build_combined([os.path.abspath(f) for f in a.combine], a.classes, os.path.abspath(a.out),
+                       a.results_subdir)
         return 0
     ap = argparse.ArgumentParser()
     ap.add_argument("folder", help="model/dataset folder, e.g. EEGNetV4/BNCI_001")
     ap.add_argument("--classes", nargs="*", default=["2class", "4class"])
     ap.add_argument("--margin", type=float, default=6.0, help="TOST equivalence margin (percentage points)")
     ap.add_argument("--out", default=None, help="output folder (default <folder>/report)")
+    ap.add_argument("--results-subdir", default="results",
+                    help="results folder inside each class folder (results = blocks, results_session = session)")
     a = ap.parse_args()
 
     folder = os.path.abspath(a.folder)
@@ -596,9 +613,9 @@ def main():
     os.makedirs(out, exist_ok=True)
     parts = [f"# Results report — {os.path.relpath(folder, os.getcwd())}",
              f"Generated {datetime.datetime.now():%Y-%m-%d %H:%M} from the saved `results.json` files. "
-             f"TOST margin ±{a.margin:g} percentage points."]
+             f"TOST margin ±{a.margin:g} percentage points. Results folder: `<class>/{a.results_subdir}/`."]
     for cls in a.classes:
-        parts.append(build_class_report(folder, cls, os.path.join(out, cls), a.margin))
+        parts.append(build_class_report(folder, cls, os.path.join(out, cls), a.margin, a.results_subdir))
     with open(os.path.join(out, "REPORT.md"), "w", encoding="utf-8") as f:
         f.write("\n\n".join(parts) + "\n")
     print(f"Report written to {os.path.join(out, 'REPORT.md')}")

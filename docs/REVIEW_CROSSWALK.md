@@ -120,3 +120,29 @@ a 0-4 s (or 0.5-2.5 s) window.
 Both BNCI models also run an **exploratory physiology block** (band-wise ERD, beta rebound, r², TFR ERD in dB,
 ITC, ERP, slow potential) and report its correlation with saliency in T10 / `reports/BNCI_001/SUMMARY.md`.
 It is curiosity only and is not used for any choice. The root `run_all.py` runs EEGNetV4 and then EEG-ITNet.
+
+## H. Second revision on BNCI2014-001: session protocol and all four models
+
+**Why.** In the first revision every fold trained on only half of a subject's trials (chronological blocks),
+so accuracy dropped below the paper's (which used shuffled folds, i.e. leakage between neighbouring trials).
+The fix that is both cleaner and more accurate is the dataset's own protocol.
+
+| # | Change | Why it is clean |
+|---|---|---|
+| 1 | **Session protocol (default).** Train on session 1, test on session 2 (official BCI IV-2a split). | Session 2 is recorded on another day and is scored once, at the end; results are comparable with the literature |
+| 2 | Validation = last 25 % of session 1 (chronological); used for early stopping, profile tuning and saliency. | Nothing from session 2 influences any choice |
+| 3 | **Refit** on all of session 1 with the chosen number of epochs (EEGNetV4: best validation epoch; SWA recipes: fixed 350 epochs). | Uses only training-session data |
+| 4 | **Seed ensemble**: softmax outputs of all seeds averaged (default seeds 42, 43, 44); single seeds still reported (T6). | All seeds are averaged, none is picked |
+| 5 | CSP / MI / ReliefF scores computed from session 1 only (still leave-one-subject-out). | Session 2 never shapes a montage |
+| 6 | Deletion (faithfulness) test on session 2 with the refitted model; ranking from validation saliency. | Evaluation only |
+| 7 | **Deep4Net and EEGConformer added on BNCI**, with the paper's BNCI recipe (the legacy Deep4Net BNCI script used exactly this recipe). | Same recipe and tuning rule as EEG-ITNet |
+
+Not used on purpose:
+- **Euclidean alignment.** It improves cross-session accuracy, but it whitens the data with a spatial matrix,
+  which mixes the channels. Channel saliency would then no longer belong to single electrodes, and that is
+  what this paper interprets.
+- **Cross-subject pretraining.** It would help weak subjects, but it changes the "subject-dependent" framing
+  of the paper.
+
+The first-revision protocol is still available (`--protocol blocks`, results in `results/`); the session
+protocol writes to `results_session/`, `logs_session/`, `report_session/` and `reports/BNCI_001_session/`.

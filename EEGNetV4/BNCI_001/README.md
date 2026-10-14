@@ -7,12 +7,19 @@
 
 ```powershell
 cd D:\EEG\NeuroGrounded-EEG
-$env:EEG_SEEDS="42,43,44"
-python run_all.py                      # EEGNetV4 first, then EEG-ITNet (both on BNCI2014-001)
+python run_all.py                      # EEGNetV4 -> EEG-ITNet -> Deep4Net -> EEGConformer, session protocol
 python run_all.py --models eegnetv4    # only this model
 ```
 
-The root `run_all.py` runs, for each model, `2class` and then `4class`:
+**Protocol** (`--protocol`, default `session`):
+- `session`: train on session 1, validate on its last 25 %, refit on all of session 1, test once on
+  session 2, average the seeds (default seeds 42, 43, 44). This is the official BCI IV-2a split.
+  Output goes to `<class>/results_session/`, `<class>/logs_session/`, `report_session/` and
+  `reports/BNCI_001_session/`.
+- `blocks`: the first-revision protocol (4 chronological blocks). Output goes to `results/`, `logs/`,
+  `report/` and `reports/BNCI_001/`. The two never overwrite each other.
+
+For each model, `2class` then `4class`:
 
 | Step | Script | What it produces |
 |---|---|---|
@@ -22,12 +29,11 @@ The root `run_all.py` runs, for each model, `2class` and then `4class`:
 | 4 relieff | `*_relieff.py` | "RLF" row |
 | 5 mi | `*_mi.py` | "MI" row |
 | 6 controls | `*_controls.py` | fixed sensorimotor, 5 random, ERD-only montages |
-| 7 aggregate | `analysis/aggregate_results.py` | `report/REPORT.md` + CSV tables + figures, and `reports/BNCI_001/SUMMARY.md` across models |
+| 7 aggregate | `analysis/aggregate_results.py` | `report*/REPORT.md` + CSV tables + figures, and a cross-model summary |
 
-- Logs: `<class>/logs/<step>.log`; progress: `run_all_status.json` (repository root).
 - If it stops, run it again: finished steps are skipped (`--force` redoes them).
-- Useful options: `--models eegnetv4`, `--classes 4class`, `--steps saliency csp`, `--steps aggregate` (tables only), `--no-tune`.
-- Dry run without data (minutes, CPU): `$env:EEG_SYNTHETIC="1"; $env:EEG_SUBJECTS="1,2,3"; $env:EEG_MAX_EPOCHS="2"`.
+- Useful options: `--models eegnetv4 deep4net`, `--classes 4class`, `--steps saliency csp`, `--steps aggregate`, `--no-tune`.
+- Dry run without data (CPU): `$env:EEG_SYNTHETIC="1"; $env:EEG_SUBJECTS="1,2,3"; $env:EEG_MAX_EPOCHS="2"`.
 
 ## Reviewer tables (`report/`)
 
@@ -94,11 +100,9 @@ What I deliberately did **not** do, because it would not be fair:
   average reference, dropout 0.25, active-window saliency); it optimises the quantity you then report,
   which is the circularity in review comment 8.
 
-Bigger levers that would change the protocol (not done, your decision):
-- **Session-wise evaluation:** the standard IV-2a split (train on session T, test on session E) makes
-  results comparable with the literature.
-- **More training data per fold:** currently 288 trials (2 of the 4 blocks).
+Protocol levers (now in place, session protocol): the official session split (more training data,
+comparable with the literature), refit on all of session 1, and a seed ensemble.
 
-Use **3 or more seeds** (`EEG_SEEDS`).
+The session protocol uses seeds 42, 43, 44 by default (`EEG_SEEDS` changes it).
 
 `run_all.py --no-tune` or `EEG_PROFILE=original` reproduces your original settings exactly.

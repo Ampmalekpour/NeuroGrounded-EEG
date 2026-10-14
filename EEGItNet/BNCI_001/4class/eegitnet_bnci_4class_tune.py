@@ -2,7 +2,7 @@
 #
 # EEG-ITNet on BNCI2014-001, 4class: FAIR, validation-only choice of the training/preprocessing profile.
 #
-# Every candidate profile in PROFILES (eegitnet_bnci_common.py) is trained on the 22-channel data for
+# Every candidate profile in TUNE_CANDIDATES (eegitnet_bnci_common.py) is trained on the 22-channel data for
 # every subject and fold; only the VALIDATION accuracy is recorded (the test block is never scored).
 # For each subject S the profile with the best mean validation accuracy over the OTHER subjects is
 # chosen (leave-one-subject-out), so no data of S influence S's settings. The choice is written to
@@ -14,7 +14,8 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))          # folder holding eegitnet_bnci_common.py
 os.environ["EEG_CLASS_MODE"] = "4class"           # this folder is the 4class experiment
-os.environ.setdefault("EEG_RESULTS_DIR", os.path.join(HERE, "results"))
+os.environ.setdefault("EEG_RESULTS_DIR", os.path.join(
+    HERE, "results" if os.environ.get("EEG_PROTOCOL", "session") == "blocks" else "results_session"))
 
 import csv
 import json
@@ -22,7 +23,7 @@ import numpy as np
 
 import eegitnet_bnci_common as C
 
-CANDIDATES = [p for p in os.environ.get("EEG_TUNE_CANDIDATES", ",".join(C.PROFILES)).split(",") if p]
+CANDIDATES = [p for p in os.environ.get("EEG_TUNE_CANDIDATES", ",".join(C.TUNE_CANDIDATES)).split(",") if p]
 
 
 def main():
@@ -32,9 +33,9 @@ def main():
         cfg = C.get_cfg(name=name)
         val_acc[name] = {}
         for sid in C.SUBJECT_IDS:
-            X, y, _ = C.load_subject_windows(sid, C.FULL_CHANNELS, C.CLASS_MODE, cfg)
+            X, y, info = C.load_subject_windows(sid, C.FULL_CHANNELS, C.CLASS_MODE, cfg)
             accs = []
-            for fold_i, (tr, va, te) in enumerate(C.make_blockwise_folds(len(y)), start=1):
+            for fold_i, (tr, va, te) in enumerate(C.make_folds(len(y), info), start=1):
                 res = C.train_one_fold(X, y, tr, va, te, C.fold_seed(seed, sid, fold_i),
                                        tag=f"[tune {name}] S{sid:02d} F{fold_i}", cfg=cfg,
                                        evaluate_test=False)
