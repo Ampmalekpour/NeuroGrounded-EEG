@@ -1,0 +1,51 @@
+EEG-ITNet - BNCI2014-001 - control 'control_random_draw2' - 2class
+================================================================================
+
+Subject 01: 59.03%  | montage: Fz, FC3, FC1, FC4, C5, C3, C1, Cz, C6, CP4, Pz, POz
+    seed 42 fold 1: 54.17% (majority-class 50.0%)
+    seed 42 fold 2: 61.11% (majority-class 50.0%)
+    seed 42 fold 3: 54.17% (majority-class 50.0%)
+    seed 42 fold 4: 66.67% (majority-class 50.0%)
+Subject 02: 54.51%  | montage: FC3, FCz, C1, Cz, C2, C4, CP3, CPz, CP2, CP4, Pz, POz
+    seed 42 fold 1: 58.33% (majority-class 50.0%)
+    seed 42 fold 2: 56.94% (majority-class 50.0%)
+    seed 42 fold 3: 45.83% (majority-class 50.0%)
+    seed 42 fold 4: 56.94% (majority-class 50.0%)
+Subject 03: 69.44%  | montage: Fz, FC1, FCz, FC4, C5, Cz, C4, CP3, CP1, P1, P2, POz
+    seed 42 fold 1: 56.94% (majority-class 50.0%)
+    seed 42 fold 2: 69.44% (majority-class 50.0%)
+    seed 42 fold 3: 84.72% (majority-class 50.0%)
+    seed 42 fold 4: 66.67% (majority-class 50.0%)
+Subject 04: 66.32%  | montage: Fz, FCz, FC4, C5, C3, C1, Cz, C4, C6, CP4, P1, POz
+    seed 42 fold 1: 69.44% (majority-class 50.0%)
+    seed 42 fold 2: 65.28% (majority-class 50.0%)
+    seed 42 fold 3: 59.72% (majority-class 50.0%)
+    seed 42 fold 4: 70.83% (majority-class 50.0%)
+Subject 05: 63.19%  | montage: Fz, FC1, FC4, C5, C1, Cz, C4, C6, CP1, CP2, P1, POz
+    seed 42 fold 1: 56.94% (majority-class 50.0%)
+    seed 42 fold 2: 66.67% (majority-class 50.0%)
+    seed 42 fold 3: 68.06% (majority-class 50.0%)
+    seed 42 fold 4: 61.11% (majority-class 50.0%)
+Subject 06: 57.99%  | montage: Fz, FC2, C5, C1, Cz, C2, C4, CP3, CP1, CPz, CP4, POz
+    seed 42 fold 1: 52.78% (majority-class 50.0%)
+    seed 42 fold 2: 54.17% (majority-class 50.0%)
+    seed 42 fold 3: 58.33% (majority-class 50.0%)
+    seed 42 fold 4: 66.67% (majority-class 50.0%)
+Subject 07: 64.24%  | montage: FCz, FC2, C5, C3, C1, Cz, CP3, CP2, P1, Pz, P2, POz
+    seed 42 fold 1: 66.67% (majority-class 50.0%)
+    seed 42 fold 2: 61.11% (majority-class 50.0%)
+    seed 42 fold 3: 58.33% (majority-class 50.0%)
+    seed 42 fold 4: 70.83% (majority-class 50.0%)
+Subject 08: 84.38%  | montage: Fz, FC3, FCz, C5, C3, C1, C6, CPz, CP2, CP4, P1, P2
+    seed 42 fold 1: 77.78% (majority-class 50.0%)
+    seed 42 fold 2: 84.72% (majority-class 50.0%)
+    seed 42 fold 3: 91.67% (majority-class 50.0%)
+    seed 42 fold 4: 83.33% (majority-class 50.0%)
+Subject 09: 64.58%  | montage: FC3, FC1, FCz, C1, C2, C4, CP3, CP2, CP4, P1, Pz, P2
+    seed 42 fold 1: 59.72% (majority-class 50.0%)
+    seed 42 fold 2: 54.17% (majority-class 50.0%)
+    seed 42 fold 3: 69.44% (majority-class 50.0%)
+    seed 42 fold 4: 75.00% (majority-class 50.0%)
+
+GRAND MEAN: 64.85% +/- 8.63% (SD across subjects)
+chance 50.0% | mean majority-class 50.0%

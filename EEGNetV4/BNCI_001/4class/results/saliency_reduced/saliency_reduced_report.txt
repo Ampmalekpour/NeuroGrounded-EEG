@@ -1,0 +1,66 @@
+EEGNetv4 - BNCI2014-001 - SALIENCY 12-channel (LOSO) - 4class
+================================================================================
+
+Subject 01: 70.83%  | montage: C3, CP3, CPz, C4, Cz, POz, CP4, C5, CP2, C1, FCz, Pz
+    seed 42 fold 1: 70.83% (majority-class 25.0%)
+    seed 42 fold 2: 75.00% (majority-class 25.0%)
+    seed 42 fold 3: 72.22% (majority-class 25.0%)
+    seed 42 fold 4: 65.28% (majority-class 25.0%)
+Subject 02: 31.42%  | montage: CP3, C3, CPz, C4, C1, Cz, CP4, POz, C5, CP2, C2, CP1
+    seed 42 fold 1: 38.89% (majority-class 25.0%)
+    seed 42 fold 2: 24.31% (majority-class 25.0%)
+    seed 42 fold 3: 25.69% (majority-class 25.0%)
+    seed 42 fold 4: 36.81% (majority-class 25.0%)
+Subject 03: 83.33%  | montage: CP3, C3, C4, Cz, POz, C1, CP4, CPz, C5, CP2, C2, C6
+    seed 42 fold 1: 85.42% (majority-class 25.0%)
+    seed 42 fold 2: 79.86% (majority-class 25.0%)
+    seed 42 fold 3: 86.11% (majority-class 25.0%)
+    seed 42 fold 4: 81.94% (majority-class 25.0%)
+Subject 04: 40.97%  | montage: C3, CP3, C4, CPz, Cz, C1, CP4, POz, C5, CP2, FCz, C2
+    seed 42 fold 1: 33.33% (majority-class 25.0%)
+    seed 42 fold 2: 29.17% (majority-class 25.0%)
+    seed 42 fold 3: 58.33% (majority-class 25.0%)
+    seed 42 fold 4: 43.06% (majority-class 25.0%)
+Subject 05: 33.33%  | montage: CP3, C3, C4, CPz, Cz, CP4, POz, C1, CP2, C5, C2, Pz
+    seed 42 fold 1: 36.11% (majority-class 25.0%)
+    seed 42 fold 2: 26.39% (majority-class 25.0%)
+    seed 42 fold 3: 47.92% (majority-class 25.0%)
+    seed 42 fold 4: 22.92% (majority-class 25.0%)
+Subject 06: 43.06%  | montage: CP3, C3, CPz, Cz, C4, C1, CP4, POz, CP2, C2, CP1, C5
+    seed 42 fold 1: 43.75% (majority-class 25.0%)
+    seed 42 fold 2: 40.97% (majority-class 25.0%)
+    seed 42 fold 3: 41.67% (majority-class 25.0%)
+    seed 42 fold 4: 45.83% (majority-class 25.0%)
+Subject 07: 73.09%  | montage: CP3, CPz, C4, Cz, C3, CP4, POz, C1, CP2, C5, C2, CP1
+    seed 42 fold 1: 69.44% (majority-class 25.0%)
+    seed 42 fold 2: 75.00% (majority-class 25.0%)
+    seed 42 fold 3: 77.08% (majority-class 25.0%)
+    seed 42 fold 4: 70.83% (majority-class 25.0%)
+Subject 08: 75.17%  | montage: C3, CP3, C4, C1, CPz, Cz, POz, C5, C2, CP2, CP4, FCz
+    seed 42 fold 1: 82.64% (majority-class 25.0%)
+    seed 42 fold 2: 70.14% (majority-class 25.0%)
+    seed 42 fold 3: 75.00% (majority-class 25.0%)
+    seed 42 fold 4: 72.92% (majority-class 25.0%)
+Subject 09: 85.59%  | montage: CP3, C3, Cz, C1, CPz, POz, C4, CP4, CP2, C2, FCz, C5
+    seed 42 fold 1: 87.50% (majority-class 25.0%)
+    seed 42 fold 2: 82.64% (majority-class 25.0%)
+    seed 42 fold 3: 93.06% (majority-class 25.0%)
+    seed 42 fold 4: 79.17% (majority-class 25.0%)
+
+GRAND MEAN: 59.65% +/- 22.06% (SD across subjects)
+chance 25.0% | mean majority-class 25.0%
+
+Attribution methods used: all
+Alignment (participant-level mean [95% CI]):
+                  grad magnitude_pearson        +0.094 [-0.231, +0.420] n=9
+                  grad class_specific_pearson   +0.347 [+0.229, +0.464] n=9
+                  grad lateralisation_pearson   +0.154 [-0.070, +0.377] n=9
+          grad_x_input magnitude_pearson        +0.075 [-0.264, +0.415] n=9
+          grad_x_input class_specific_pearson   +0.344 [+0.229, +0.459] n=9
+          grad_x_input lateralisation_pearson   +0.101 [-0.132, +0.334] n=9
+  integrated_gradients magnitude_pearson        +0.082 [-0.250, +0.415] n=9
+  integrated_gradients class_specific_pearson   +0.321 [+0.199, +0.443] n=9
+  integrated_gradients lateralisation_pearson   +0.043 [-0.157, +0.243] n=9
+            smoothgrad magnitude_pearson        +0.093 [-0.232, +0.419] n=9
+            smoothgrad class_specific_pearson   +0.348 [+0.232, +0.465] n=9
+            smoothgrad lateralisation_pearson   +0.154 [-0.069, +0.377] n=9

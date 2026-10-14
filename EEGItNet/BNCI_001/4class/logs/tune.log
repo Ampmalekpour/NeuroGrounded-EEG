@@ -1,0 +1,292 @@
+$ D:\EEG\braindec\.venv\Scripts\python.exe -u D:\EEG\NeuroGrounded-EEG\EEGItNet\BNCI_001\4class\eegitnet_bnci_4class_tune.py
+Using device: cuda | class mode: 4class | seeds: [42] | subjects: [1, 2, 3, 4, 5, 6, 7, 8, 9] | synthetic: False
+  S01 [4class] profile=original X=(576, 22, 1125) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+D:\EEG\braindec\.venv\lib\site-packages\torch\nn\modules\conv.py:459: UserWarning: Using padding='same' with even kernel lengths and odd dilation may require a zero-padded copy of the input be created (Triggered internally at ..\aten\src\ATen\native\Convolution.cpp:1004.)
+  return F.conv2d(input, weight, bias, self.stride,
+[tune original] S01 F1 Ep 001 | tr 1.4299 | val (current weights) 26.4%
+[tune original] S01 F1 Ep 050 | tr 0.8476 | val (current weights) 46.5%
+[tune original] S01 F1 Ep 100 | tr 0.6547 | val (current weights) 52.1%
+[tune original] S01 F1 Ep 150 | tr 0.7854 | val (current weights) 54.9%
+[tune original] S01 F1 Ep 200 | tr 0.7672 | val (current weights) 52.8%
+[tune original] S01 F1 Ep 250 | tr 0.6294 | val (current weights) 55.6%
+[tune original] S01 F1 Ep 300 | tr 0.6892 | val (current weights) 56.2%
+[tune original] S01 F1 Ep 350 | tr 0.5856 | val (current weights) 55.6%
+[tune original] S01 F2 Ep 001 | tr 1.4472 | val (current weights) 25.0%
+[tune original] S01 F2 Ep 050 | tr 0.6996 | val (current weights) 55.6%
+[tune original] S01 F2 Ep 100 | tr 0.7072 | val (current weights) 51.4%
+[tune original] S01 F2 Ep 150 | tr 0.7604 | val (current weights) 50.7%
+[tune original] S01 F2 Ep 200 | tr 0.7147 | val (current weights) 51.4%
+[tune original] S01 F2 Ep 250 | tr 0.6499 | val (current weights) 52.8%
+[tune original] S01 F2 Ep 300 | tr 0.6852 | val (current weights) 52.1%
+[tune original] S01 F2 Ep 350 | tr 0.6034 | val (current weights) 54.2%
+[tune original] S01 F3 Ep 001 | tr 1.4208 | val (current weights) 28.5%
+[tune original] S01 F3 Ep 050 | tr 0.7967 | val (current weights) 49.3%
+[tune original] S01 F3 Ep 100 | tr 0.7290 | val (current weights) 62.5%
+[tune original] S01 F3 Ep 150 | tr 0.7695 | val (current weights) 56.9%
+[tune original] S01 F3 Ep 200 | tr 0.7894 | val (current weights) 57.6%
+[tune original] S01 F3 Ep 250 | tr 0.5887 | val (current weights) 58.3%
+[tune original] S01 F3 Ep 300 | tr 0.6620 | val (current weights) 60.4%
+[tune original] S01 F3 Ep 350 | tr 0.6811 | val (current weights) 61.1%
+[tune original] S01 F4 Ep 001 | tr 1.4453 | val (current weights) 27.1%
+[tune original] S01 F4 Ep 050 | tr 0.8191 | val (current weights) 47.2%
+[tune original] S01 F4 Ep 100 | tr 0.8190 | val (current weights) 51.4%
+[tune original] S01 F4 Ep 150 | tr 0.6169 | val (current weights) 47.9%
+[tune original] S01 F4 Ep 200 | tr 0.6407 | val (current weights) 50.0%
+[tune original] S01 F4 Ep 250 | tr 0.6567 | val (current weights) 51.4%
+[tune original] S01 F4 Ep 300 | tr 0.7413 | val (current weights) 52.1%
+[tune original] S01 F4 Ep 350 | tr 0.6370 | val (current weights) 52.1%
+[tune]       original S01: mean validation accuracy 55.03%
+  S02 [4class] profile=original X=(576, 22, 1125) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune original] S02 F1 Ep 001 | tr 1.4222 | val (current weights) 26.4%
+[tune original] S02 F1 Ep 050 | tr 1.0095 | val (current weights) 29.9%
+[tune original] S02 F1 Ep 100 | tr 1.0330 | val (current weights) 29.2%
+[tune original] S02 F1 Ep 150 | tr 0.7197 | val (current weights) 34.0%
+[tune original] S02 F1 Ep 200 | tr 0.6900 | val (current weights) 31.9%
+[tune original] S02 F1 Ep 250 | tr 0.7591 | val (current weights) 28.5%
+[tune original] S02 F1 Ep 300 | tr 0.7947 | val (current weights) 30.6%
+[tune original] S02 F1 Ep 350 | tr 0.8206 | val (current weights) 29.2%
+[tune original] S02 F2 Ep 001 | tr 1.4594 | val (current weights) 26.4%
+[tune original] S02 F2 Ep 050 | tr 0.9547 | val (current weights) 30.6%
+[tune original] S02 F2 Ep 100 | tr 0.9101 | val (current weights) 29.2%
+[tune original] S02 F2 Ep 150 | tr 0.8117 | val (current weights) 29.2%
+[tune original] S02 F2 Ep 200 | tr 0.8238 | val (current weights) 27.1%
+[tune original] S02 F2 Ep 250 | tr 0.6659 | val (current weights) 27.1%
+[tune original] S02 F2 Ep 300 | tr 0.7580 | val (current weights) 23.6%
+[tune original] S02 F2 Ep 350 | tr 0.7259 | val (current weights) 27.1%
+[tune original] S02 F3 Ep 001 | tr 1.4258 | val (current weights) 25.0%
+[tune original] S02 F3 Ep 050 | tr 0.9231 | val (current weights) 27.1%
+[tune original] S02 F3 Ep 100 | tr 0.8104 | val (current weights) 26.4%
+[tune original] S02 F3 Ep 150 | tr 0.7282 | val (current weights) 30.6%
+[tune original] S02 F3 Ep 200 | tr 0.7997 | val (current weights) 28.5%
+[tune original] S02 F3 Ep 250 | tr 0.8369 | val (current weights) 28.5%
+[tune original] S02 F3 Ep 300 | tr 1.0120 | val (current weights) 30.6%
+[tune original] S02 F3 Ep 350 | tr 0.6623 | val (current weights) 29.2%
+[tune original] S02 F4 Ep 001 | tr 1.4327 | val (current weights) 25.0%
+[tune original] S02 F4 Ep 050 | tr 0.9753 | val (current weights) 29.2%
+[tune original] S02 F4 Ep 100 | tr 0.8204 | val (current weights) 34.7%
+[tune original] S02 F4 Ep 150 | tr 0.7841 | val (current weights) 37.5%
+[tune original] S02 F4 Ep 200 | tr 0.7737 | val (current weights) 37.5%
+[tune original] S02 F4 Ep 250 | tr 0.8086 | val (current weights) 33.3%
+[tune original] S02 F4 Ep 300 | tr 0.6592 | val (current weights) 36.1%
+[tune original] S02 F4 Ep 350 | tr 0.6603 | val (current weights) 35.4%
+[tune]       original S02: mean validation accuracy 30.56%
+  S03 [4class] profile=original X=(576, 22, 1125) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune original] S03 F1 Ep 001 | tr 1.3944 | val (current weights) 30.6%
+[tune original] S03 F1 Ep 050 | tr 0.8374 | val (current weights) 32.6%
+[tune original] S03 F1 Ep 100 | tr 0.7858 | val (current weights) 41.0%
+[tune original] S03 F1 Ep 150 | tr 0.8122 | val (current weights) 51.4%
+[tune original] S03 F1 Ep 200 | tr 0.7082 | val (current weights) 51.4%
+[tune original] S03 F1 Ep 250 | tr 0.6174 | val (current weights) 54.2%
+[tune original] S03 F1 Ep 300 | tr 0.5767 | val (current weights) 54.9%
+[tune original] S03 F1 Ep 350 | tr 0.5667 | val (current weights) 54.2%
+[tune original] S03 F2 Ep 001 | tr 1.4286 | val (current weights) 27.1%
+[tune original] S03 F2 Ep 050 | tr 0.8585 | val (current weights) 37.5%
+[tune original] S03 F2 Ep 100 | tr 0.8089 | val (current weights) 45.8%
+[tune original] S03 F2 Ep 150 | tr 0.5983 | val (current weights) 53.5%
+[tune original] S03 F2 Ep 200 | tr 0.5895 | val (current weights) 54.9%
+[tune original] S03 F2 Ep 250 | tr 0.6135 | val (current weights) 54.2%
+[tune original] S03 F2 Ep 300 | tr 0.5916 | val (current weights) 56.2%
+[tune original] S03 F2 Ep 350 | tr 0.7261 | val (current weights) 55.6%
+[tune original] S03 F3 Ep 001 | tr 1.4313 | val (current weights) 21.5%
+[tune original] S03 F3 Ep 050 | tr 0.9056 | val (current weights) 41.7%
+[tune original] S03 F3 Ep 100 | tr 0.6543 | val (current weights) 49.3%
+[tune original] S03 F3 Ep 150 | tr 0.6227 | val (current weights) 53.5%
+[tune original] S03 F3 Ep 200 | tr 0.6007 | val (current weights) 52.1%
+[tune original] S03 F3 Ep 250 | tr 0.6935 | val (current weights) 55.6%
+[tune original] S03 F3 Ep 300 | tr 0.7050 | val (current weights) 54.2%
+[tune original] S03 F3 Ep 350 | tr 0.6337 | val (current weights) 56.2%
+[tune original] S03 F4 Ep 001 | tr 1.4260 | val (current weights) 25.7%
+[tune original] S03 F4 Ep 050 | tr 0.8090 | val (current weights) 42.4%
+[tune original] S03 F4 Ep 100 | tr 0.7770 | val (current weights) 44.4%
+[tune original] S03 F4 Ep 150 | tr 0.7804 | val (current weights) 48.6%
+[tune original] S03 F4 Ep 200 | tr 0.6539 | val (current weights) 50.0%
+[tune original] S03 F4 Ep 250 | tr 0.6687 | val (current weights) 50.0%
+[tune original] S03 F4 Ep 300 | tr 0.6175 | val (current weights) 48.6%
+[tune original] S03 F4 Ep 350 | tr 0.7260 | val (current weights) 48.6%
+[tune]       original S03: mean validation accuracy 51.91%
+  S04 [4class] profile=original X=(576, 22, 1125) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune original] S04 F1 Ep 001 | tr 1.4079 | val (current weights) 25.0%
+[tune original] S04 F1 Ep 050 | tr 0.8493 | val (current weights) 39.6%
+[tune original] S04 F1 Ep 100 | tr 0.7641 | val (current weights) 45.1%
+[tune original] S04 F1 Ep 150 | tr 0.7072 | val (current weights) 44.4%
+[tune original] S04 F1 Ep 200 | tr 0.6882 | val (current weights) 45.1%
+[tune original] S04 F1 Ep 250 | tr 0.6257 | val (current weights) 43.8%
+[tune original] S04 F1 Ep 300 | tr 0.6553 | val (current weights) 45.1%
+[tune original] S04 F1 Ep 350 | tr 0.5895 | val (current weights) 45.1%
+[tune original] S04 F2 Ep 001 | tr 1.4391 | val (current weights) 27.1%
+[tune original] S04 F2 Ep 050 | tr 0.8397 | val (current weights) 40.3%
+[tune original] S04 F2 Ep 100 | tr 0.6908 | val (current weights) 40.3%
+[tune original] S04 F2 Ep 150 | tr 0.6692 | val (current weights) 34.7%
+[tune original] S04 F2 Ep 200 | tr 0.6366 | val (current weights) 35.4%
+[tune original] S04 F2 Ep 250 | tr 0.6356 | val (current weights) 37.5%
+[tune original] S04 F2 Ep 300 | tr 0.7083 | val (current weights) 37.5%
+[tune original] S04 F2 Ep 350 | tr 0.8496 | val (current weights) 38.2%
+[tune original] S04 F3 Ep 001 | tr 1.4240 | val (current weights) 18.8%
+[tune original] S04 F3 Ep 050 | tr 0.8755 | val (current weights) 32.6%
+[tune original] S04 F3 Ep 100 | tr 0.8238 | val (current weights) 33.3%
+[tune original] S04 F3 Ep 150 | tr 0.7847 | val (current weights) 34.7%
+[tune original] S04 F3 Ep 200 | tr 0.7504 | val (current weights) 36.8%
+[tune original] S04 F3 Ep 250 | tr 0.6389 | val (current weights) 36.8%
+[tune original] S04 F3 Ep 300 | tr 0.6211 | val (current weights) 36.8%
+[tune original] S04 F3 Ep 350 | tr 0.6477 | val (current weights) 36.8%
+[tune original] S04 F4 Ep 001 | tr 1.4155 | val (current weights) 30.6%
+[tune original] S04 F4 Ep 050 | tr 0.9625 | val (current weights) 47.9%
+[tune original] S04 F4 Ep 100 | tr 0.7152 | val (current weights) 48.6%
+[tune original] S04 F4 Ep 150 | tr 0.7712 | val (current weights) 46.5%
+[tune original] S04 F4 Ep 200 | tr 0.6444 | val (current weights) 43.8%
+[tune original] S04 F4 Ep 250 | tr 0.6593 | val (current weights) 47.9%
+[tune original] S04 F4 Ep 300 | tr 0.7683 | val (current weights) 45.8%
+[tune original] S04 F4 Ep 350 | tr 0.6055 | val (current weights) 46.5%
+[tune]       original S04: mean validation accuracy 41.15%
+  S05 [4class] profile=original X=(576, 22, 1125) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune original] S05 F1 Ep 001 | tr 1.4517 | val (current weights) 24.3%
+[tune original] S05 F1 Ep 050 | tr 1.0508 | val (current weights) 35.4%
+[tune original] S05 F1 Ep 100 | tr 0.7113 | val (current weights) 31.2%
+[tune original] S05 F1 Ep 150 | tr 0.8586 | val (current weights) 36.1%
+[tune original] S05 F1 Ep 200 | tr 0.6964 | val (current weights) 36.8%
+[tune original] S05 F1 Ep 250 | tr 0.8285 | val (current weights) 38.2%
+[tune original] S05 F1 Ep 300 | tr 0.7745 | val (current weights) 37.5%
+[tune original] S05 F1 Ep 350 | tr 0.6264 | val (current weights) 36.1%
+[tune original] S05 F2 Ep 001 | tr 1.4442 | val (current weights) 26.4%
+[tune original] S05 F2 Ep 050 | tr 0.8973 | val (current weights) 34.7%
+[tune original] S05 F2 Ep 100 | tr 1.0296 | val (current weights) 36.1%
+[tune original] S05 F2 Ep 150 | tr 0.6609 | val (current weights) 35.4%
+[tune original] S05 F2 Ep 200 | tr 0.6462 | val (current weights) 35.4%
+[tune original] S05 F2 Ep 250 | tr 0.6880 | val (current weights) 37.5%
+[tune original] S05 F2 Ep 300 | tr 0.7204 | val (current weights) 36.1%
+[tune original] S05 F2 Ep 350 | tr 0.6386 | val (current weights) 35.4%
+[tune original] S05 F3 Ep 001 | tr 1.4192 | val (current weights) 25.0%
+[tune original] S05 F3 Ep 050 | tr 0.9561 | val (current weights) 32.6%
+[tune original] S05 F3 Ep 100 | tr 0.8113 | val (current weights) 31.9%
+[tune original] S05 F3 Ep 150 | tr 0.8073 | val (current weights) 34.7%
+[tune original] S05 F3 Ep 200 | tr 0.7945 | val (current weights) 36.8%
+[tune original] S05 F3 Ep 250 | tr 0.6974 | val (current weights) 38.2%
+[tune original] S05 F3 Ep 300 | tr 0.7819 | val (current weights) 37.5%
+[tune original] S05 F3 Ep 350 | tr 0.6841 | val (current weights) 38.2%
+[tune original] S05 F4 Ep 001 | tr 1.4318 | val (current weights) 26.4%
+[tune original] S05 F4 Ep 050 | tr 0.9141 | val (current weights) 30.6%
+[tune original] S05 F4 Ep 100 | tr 0.7448 | val (current weights) 31.9%
+[tune original] S05 F4 Ep 150 | tr 0.8541 | val (current weights) 31.2%
+[tune original] S05 F4 Ep 200 | tr 0.7883 | val (current weights) 31.9%
+[tune original] S05 F4 Ep 250 | tr 0.6527 | val (current weights) 35.4%
+[tune original] S05 F4 Ep 300 | tr 0.6107 | val (current weights) 36.8%
+[tune original] S05 F4 Ep 350 | tr 0.8227 | val (current weights) 34.0%
+[tune]       original S05: mean validation accuracy 36.63%
+  S06 [4class] profile=original X=(576, 22, 1125) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune original] S06 F1 Ep 001 | tr 1.4084 | val (current weights) 18.1%
+[tune original] S06 F1 Ep 050 | tr 0.9336 | val (current weights) 31.9%
+[tune original] S06 F1 Ep 100 | tr 0.7278 | val (current weights) 36.8%
+[tune original] S06 F1 Ep 150 | tr 0.7369 | val (current weights) 36.1%
+[tune original] S06 F1 Ep 200 | tr 0.6874 | val (current weights) 39.6%
+[tune original] S06 F1 Ep 250 | tr 0.7250 | val (current weights) 38.2%
+[tune original] S06 F1 Ep 300 | tr 0.7583 | val (current weights) 39.6%
+[tune original] S06 F1 Ep 350 | tr 0.7222 | val (current weights) 41.7%
+[tune original] S06 F2 Ep 001 | tr 1.3996 | val (current weights) 27.8%
+[tune original] S06 F2 Ep 050 | tr 0.8733 | val (current weights) 29.9%
+[tune original] S06 F2 Ep 100 | tr 0.8036 | val (current weights) 33.3%
+[tune original] S06 F2 Ep 150 | tr 0.7054 | val (current weights) 33.3%
+[tune original] S06 F2 Ep 200 | tr 0.7014 | val (current weights) 35.4%
+[tune original] S06 F2 Ep 250 | tr 0.7079 | val (current weights) 31.2%
+[tune original] S06 F2 Ep 300 | tr 0.6407 | val (current weights) 31.9%
+[tune original] S06 F2 Ep 350 | tr 0.7906 | val (current weights) 31.9%
+[tune original] S06 F3 Ep 001 | tr 1.4489 | val (current weights) 22.9%
+[tune original] S06 F3 Ep 050 | tr 0.9072 | val (current weights) 36.1%
+[tune original] S06 F3 Ep 100 | tr 0.7667 | val (current weights) 37.5%
+[tune original] S06 F3 Ep 150 | tr 0.7434 | val (current weights) 35.4%
+[tune original] S06 F3 Ep 200 | tr 0.6846 | val (current weights) 37.5%
+[tune original] S06 F3 Ep 250 | tr 0.6693 | val (current weights) 38.2%
+[tune original] S06 F3 Ep 300 | tr 0.7025 | val (current weights) 38.9%
+[tune original] S06 F3 Ep 350 | tr 0.6907 | val (current weights) 41.0%
+[tune original] S06 F4 Ep 001 | tr 1.4393 | val (current weights) 25.0%
+[tune original] S06 F4 Ep 050 | tr 0.8784 | val (current weights) 34.0%
+[tune original] S06 F4 Ep 100 | tr 0.8384 | val (current weights) 35.4%
+[tune original] S06 F4 Ep 150 | tr 0.6822 | val (current weights) 32.6%
+[tune original] S06 F4 Ep 200 | tr 0.6706 | val (current weights) 34.7%
+[tune original] S06 F4 Ep 250 | tr 0.6533 | val (current weights) 33.3%
+[tune original] S06 F4 Ep 300 | tr 0.7169 | val (current weights) 33.3%
+[tune original] S06 F4 Ep 350 | tr 0.6718 | val (current weights) 33.3%
+[tune]       original S06: mean validation accuracy 36.81%
+  S07 [4class] profile=original X=(576, 22, 1125) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune original] S07 F1 Ep 001 | tr 1.4227 | val (current weights) 26.4%
+[tune original] S07 F1 Ep 050 | tr 0.8222 | val (current weights) 40.3%
+[tune original] S07 F1 Ep 100 | tr 0.7733 | val (current weights) 45.1%
+[tune original] S07 F1 Ep 150 | tr 0.8179 | val (current weights) 46.5%
+[tune original] S07 F1 Ep 200 | tr 0.6089 | val (current weights) 49.3%
+[tune original] S07 F1 Ep 250 | tr 0.7489 | val (current weights) 46.5%
+[tune original] S07 F1 Ep 300 | tr 0.7088 | val (current weights) 47.9%
+[tune original] S07 F1 Ep 350 | tr 0.6297 | val (current weights) 47.2%
+[tune original] S07 F2 Ep 001 | tr 1.4539 | val (current weights) 27.1%
+[tune original] S07 F2 Ep 050 | tr 0.8168 | val (current weights) 35.4%
+[tune original] S07 F2 Ep 100 | tr 0.7679 | val (current weights) 35.4%
+[tune original] S07 F2 Ep 150 | tr 0.8477 | val (current weights) 35.4%
+[tune original] S07 F2 Ep 200 | tr 0.7090 | val (current weights) 36.1%
+[tune original] S07 F2 Ep 250 | tr 0.6416 | val (current weights) 37.5%
+[tune original] S07 F2 Ep 300 | tr 0.6282 | val (current weights) 36.8%
+[tune original] S07 F2 Ep 350 | tr 0.7194 | val (current weights) 36.8%
+[tune original] S07 F3 Ep 001 | tr 1.4412 | val (current weights) 22.9%
+[tune original] S07 F3 Ep 050 | tr 0.9719 | val (current weights) 43.1%
+[tune original] S07 F3 Ep 100 | tr 0.7646 | val (current weights) 46.5%
+[tune original] S07 F3 Ep 150 | tr 0.7076 | val (current weights) 47.2%
+[tune original] S07 F3 Ep 200 | tr 0.7963 | val (current weights) 48.6%
+[tune original] S07 F3 Ep 250 | tr 0.8493 | val (current weights) 45.1%
+[tune original] S07 F3 Ep 300 | tr 0.7100 | val (current weights) 45.8%
+[tune original] S07 F3 Ep 350 | tr 0.7632 | val (current weights) 45.8%
+[tune original] S07 F4 Ep 001 | tr 1.4497 | val (current weights) 25.0%
+[tune original] S07 F4 Ep 050 | tr 0.8431 | val (current weights) 41.7%
+[tune original] S07 F4 Ep 100 | tr 0.6665 | val (current weights) 37.5%
+[tune original] S07 F4 Ep 150 | tr 0.6603 | val (current weights) 40.3%
+[tune original] S07 F4 Ep 200 | tr 0.6932 | val (current weights) 41.0%
+[tune original] S07 F4 Ep 250 | tr 0.5936 | val (current weights) 43.1%
+[tune original] S07 F4 Ep 300 | tr 0.5992 | val (current weights) 42.4%
+[tune original] S07 F4 Ep 350 | tr 0.5835 | val (current weights) 42.4%
+[tune]       original S07: mean validation accuracy 44.10%
+  S08 [4class] profile=original X=(576, 22, 1125) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune original] S08 F1 Ep 001 | tr 1.4229 | val (current weights) 29.2%
+[tune original] S08 F1 Ep 050 | tr 0.7733 | val (current weights) 40.3%
+[tune original] S08 F1 Ep 100 | tr 0.6894 | val (current weights) 41.7%
+[tune original] S08 F1 Ep 150 | tr 0.6189 | val (current weights) 43.8%
+[tune original] S08 F1 Ep 200 | tr 0.8787 | val (current weights) 51.4%
+[tune original] S08 F1 Ep 250 | tr 0.7723 | val (current weights) 50.0%
+[tune original] S08 F1 Ep 300 | tr 0.7332 | val (current weights) 47.9%
+[tune original] S08 F1 Ep 350 | tr 0.5719 | val (current weights) 47.9%
+[tune original] S08 F2 Ep 001 | tr 1.4340 | val (current weights) 21.5%
+[tune original] S08 F2 Ep 050 | tr 0.7788 | val (current weights) 57.6%
+[tune original] S08 F2 Ep 100 | tr 0.7115 | val (current weights) 59.0%
+[tune original] S08 F2 Ep 150 | tr 0.6148 | val (current weights) 64.6%
+[tune original] S08 F2 Ep 200 | tr 0.5997 | val (current weights) 64.6%
+[tune original] S08 F2 Ep 250 | tr 0.8113 | val (current weights) 63.9%
+[tune original] S08 F2 Ep 300 | tr 0.6444 | val (current weights) 62.5%
+[tune original] S08 F2 Ep 350 | tr 0.6839 | val (current weights) 64.6%
+[tune original] S08 F3 Ep 001 | tr 1.4250 | val (current weights) 25.0%
+[tune original] S08 F3 Ep 050 | tr 0.8546 | val (current weights) 52.8%
+[tune original] S08 F3 Ep 100 | tr 0.8259 | val (current weights) 49.3%
+[tune original] S08 F3 Ep 150 | tr 0.6166 | val (current weights) 47.9%
+[tune original] S08 F3 Ep 200 | tr 0.7692 | val (current weights) 47.9%
+[tune original] S08 F3 Ep 250 | tr 0.7169 | val (current weights) 50.7%
+[tune original] S08 F3 Ep 300 | tr 0.5877 | val (current weights) 50.7%
+[tune original] S08 F3 Ep 350 | tr 0.7507 | val (current weights) 50.7%
+[tune original] S08 F4 Ep 001 | tr 1.4264 | val (current weights) 25.0%
+[tune original] S08 F4 Ep 050 | tr 0.9845 | val (current weights) 50.7%
+[tune original] S08 F4 Ep 100 | tr 0.7395 | val (current weights) 56.2%
+[tune original] S08 F4 Ep 150 | tr 0.7247 | val (current weights) 56.9%
+[tune original] S08 F4 Ep 200 | tr 0.6078 | val (current weights) 59.0%
+[tune original] S08 F4 Ep 250 | tr 0.6589 | val (current weights) 60.4%
+[tune original] S08 F4 Ep 300 | tr 0.7216 | val (current weights) 60.4%
+[tune original] S08 F4 Ep 350 | tr 0.6567 | val (current weights) 59.0%
+[tune]       original S08: mean validation accuracy 55.03%

@@ -1,0 +1,116 @@
+{
+ "eegnetv4/2class/tune": {
+  "state": "ok",
+  "minutes": 19.1,
+  "log": "EEGNetV4\\BNCI_001\\2class\\logs\\tune.log",
+  "finished": "2026-10-13 23:05:10"
+ },
+ "eegnetv4/2class/saliency": {
+  "state": "ok",
+  "minutes": 10.0,
+  "log": "EEGNetV4\\BNCI_001\\2class\\logs\\saliency.log",
+  "finished": "2026-10-13 23:15:08"
+ },
+ "eegnetv4/2class/csp": {
+  "state": "ok",
+  "minutes": 3.4,
+  "log": "EEGNetV4\\BNCI_001\\2class\\logs\\csp.log",
+  "finished": "2026-10-13 23:18:30"
+ },
+ "eegnetv4/2class/relieff": {
+  "state": "ok",
+  "minutes": 3.1,
+  "log": "EEGNetV4\\BNCI_001\\2class\\logs\\relieff.log",
+  "finished": "2026-10-13 23:21:33"
+ },
+ "eegnetv4/2class/mi": {
+  "state": "ok",
+  "minutes": 3.0,
+  "log": "EEGNetV4\\BNCI_001\\2class\\logs\\mi.log",
+  "finished": "2026-10-13 23:24:35"
+ },
+ "eegnetv4/2class/controls": {
+  "state": "ok",
+  "minutes": 16.9,
+  "log": "EEGNetV4\\BNCI_001\\2class\\logs\\controls.log",
+  "finished": "2026-10-13 23:41:28"
+ },
+ "eegnetv4/4class/tune": {
+  "state": "ok",
+  "minutes": 33.4,
+  "log": "EEGNetV4\\BNCI_001\\4class\\logs\\tune.log",
+  "finished": "2026-10-14 00:14:51"
+ },
+ "eegnetv4/4class/saliency": {
+  "state": "ok",
+  "minutes": 13.7,
+  "log": "EEGNetV4\\BNCI_001\\4class\\logs\\saliency.log",
+  "finished": "2026-10-14 00:28:31"
+ },
+ "eegnetv4/4class/csp": {
+  "state": "ok",
+  "minutes": 5.2,
+  "log": "EEGNetV4\\BNCI_001\\4class\\logs\\csp.log",
+  "finished": "2026-10-14 00:33:42"
+ },
+ "eegnetv4/4class/relieff": {
+  "state": "ok",
+  "minutes": 4.4,
+  "log": "EEGNetV4\\BNCI_001\\4class\\logs\\relieff.log",
+  "finished": "2026-10-14 00:38:06"
+ },
+ "eegnetv4/4class/mi": {
+  "state": "ok",
+  "minutes": 4.9,
+  "log": "EEGNetV4\\BNCI_001\\4class\\logs\\mi.log",
+  "finished": "2026-10-14 00:43:00"
+ },
+ "eegnetv4/4class/controls": {
+  "state": "ok",
+  "minutes": 29.8,
+  "log": "EEGNetV4\\BNCI_001\\4class\\logs\\controls.log",
+  "finished": "2026-10-14 01:12:47"
+ },
+ "eegitnet/2class/tune": {
+  "state": "ok",
+  "minutes": 44.2,
+  "log": "EEGItNet\\BNCI_001\\2class\\logs\\tune.log",
+  "finished": "2026-10-14 01:57:00"
+ },
+ "eegitnet/2class/saliency": {
+  "state": "ok",
+  "minutes": 21.5,
+  "log": "EEGItNet\\BNCI_001\\2class\\logs\\saliency.log",
+  "finished": "2026-10-14 02:18:31"
+ },
+ "eegitnet/2class/csp": {
+  "state": "ok",
+  "minutes": 7.4,
+  "log": "EEGItNet\\BNCI_001\\2class\\logs\\csp.log",
+  "finished": "2026-10-14 02:25:52"
+ },
+ "eegitnet/2class/relieff": {
+  "state": "ok",
+  "minutes": 7.3,
+  "log": "EEGItNet\\BNCI_001\\2class\\logs\\relieff.log",
+  "finished": "2026-10-14 02:33:12"
+ },
+ "eegitnet/2class/mi": {
+  "state": "ok",
+  "minutes": 7.3,
+  "log": "EEGItNet\\BNCI_001\\2class\\logs\\mi.log",
+  "finished": "2026-10-14 02:40:32"
+ },
+ "eegitnet/2class/controls": {
+  "state": "ok",
+  "minutes": 47.6,
+  "log": "EEGItNet\\BNCI_001\\2class\\logs\\controls.log",
+  "finished": "2026-10-14 03:28:06"
+ },
+ "eegitnet/4class/tune": {
+  "state": "FAILED (exit 1073807364)",
+  "minutes": 122.5,
+  "log": "EEGItNet\\BNCI_001\\4class\\logs\\tune.log",
+  "finished": "2026-10-14 05:30:35"
+ }
+}

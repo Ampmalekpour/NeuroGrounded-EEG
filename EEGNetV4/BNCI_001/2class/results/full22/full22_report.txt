@@ -1,0 +1,51 @@
+EEGNetv4 - BNCI2014-001 - FULL 22-CHANNEL BASELINE - 2class
+================================================================================
+
+Subject 01: 79.86%
+    seed 42 fold 1: 80.56% (majority-class 50.0%)
+    seed 42 fold 2: 83.33% (majority-class 50.0%)
+    seed 42 fold 3: 76.39% (majority-class 50.0%)
+    seed 42 fold 4: 79.17% (majority-class 50.0%)
+Subject 02: 50.69%
+    seed 42 fold 1: 54.17% (majority-class 50.0%)
+    seed 42 fold 2: 47.22% (majority-class 50.0%)
+    seed 42 fold 3: 51.39% (majority-class 50.0%)
+    seed 42 fold 4: 50.00% (majority-class 50.0%)
+Subject 03: 93.75%
+    seed 42 fold 1: 90.28% (majority-class 50.0%)
+    seed 42 fold 2: 94.44% (majority-class 50.0%)
+    seed 42 fold 3: 97.22% (majority-class 50.0%)
+    seed 42 fold 4: 93.06% (majority-class 50.0%)
+Subject 04: 55.21%
+    seed 42 fold 1: 65.28% (majority-class 50.0%)
+    seed 42 fold 2: 55.56% (majority-class 50.0%)
+    seed 42 fold 3: 48.61% (majority-class 50.0%)
+    seed 42 fold 4: 51.39% (majority-class 50.0%)
+Subject 05: 60.76%
+    seed 42 fold 1: 55.56% (majority-class 50.0%)
+    seed 42 fold 2: 79.17% (majority-class 50.0%)
+    seed 42 fold 3: 59.72% (majority-class 50.0%)
+    seed 42 fold 4: 48.61% (majority-class 50.0%)
+Subject 06: 55.21%
+    seed 42 fold 1: 52.78% (majority-class 50.0%)
+    seed 42 fold 2: 55.56% (majority-class 50.0%)
+    seed 42 fold 3: 55.56% (majority-class 50.0%)
+    seed 42 fold 4: 56.94% (majority-class 50.0%)
+Subject 07: 77.43%
+    seed 42 fold 1: 79.17% (majority-class 50.0%)
+    seed 42 fold 2: 72.22% (majority-class 50.0%)
+    seed 42 fold 3: 76.39% (majority-class 50.0%)
+    seed 42 fold 4: 81.94% (majority-class 50.0%)
+Subject 08: 92.71%
+    seed 42 fold 1: 95.83% (majority-class 50.0%)
+    seed 42 fold 2: 87.50% (majority-class 50.0%)
+    seed 42 fold 3: 95.83% (majority-class 50.0%)
+    seed 42 fold 4: 91.67% (majority-class 50.0%)
+Subject 09: 90.28%
+    seed 42 fold 1: 87.50% (majority-class 50.0%)
+    seed 42 fold 2: 88.89% (majority-class 50.0%)
+    seed 42 fold 3: 95.83% (majority-class 50.0%)
+    seed 42 fold 4: 88.89% (majority-class 50.0%)
+
+GRAND MEAN: 72.88% +/- 17.55% (SD across subjects)
+chance 50.0% | mean majority-class 50.0%

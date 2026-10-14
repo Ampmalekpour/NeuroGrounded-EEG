@@ -1,0 +1,813 @@
+$ D:\EEG\braindec\.venv\Scripts\python.exe -u D:\EEG\NeuroGrounded-EEG\EEGNetV4\BNCI_001\4class\eegnetv4_bnci_4class_saliency.py
+Using device: cuda | class mode: 4class | seeds: [42] | subjects: [1, 2, 3, 4, 5, 6, 7, 8, 9] | synthetic: False
+
+================================================================================
+SUBJECT 01 â€” full22 â€” 4class â€” profile original â€” 22 ch: Fz, FC3, FC1, FCz, FC2, FC4, C5, C3, C1, Cz, C2, C4, C6, CP3, CP1, CPz, CP2, CP4, P1, Pz, P2, POz
+================================================================================
+  S01 [4class] profile=original X=(576, 22, 256) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+S01 seed42 F1 Ep 001 | tr 1.4709 | val 22.9% | best_val_loss=1.3874 (ep 1)
+S01 seed42 F1 Ep 050 | tr 0.8370 | val 31.2% | best_val_loss=1.3874 (ep 1)
+S01 seed42 F1 Ep 100 | tr 0.6805 | val 59.0% | best_val_loss=0.8109 (ep 97)
+S01 seed42 F1 Ep 150 | tr 0.6224 | val 69.4% | best_val_loss=0.7495 (ep 126)
+S01 seed42 F1 Ep 200 | tr 0.5560 | val 70.8% | best_val_loss=0.7212 (ep 188)
+S01 seed42 F1 Ep 250 | tr 0.5531 | val 69.4% | best_val_loss=0.7212 (ep 188)
+S01 seed42 F1 Ep 300 | tr 0.5204 | val 73.6% | best_val_loss=0.7212 (ep 188)
+S01 seed42 F1 Early stop @ ep 308 (best epoch 188)
+S01 seed42 F1: test 70.83% (val 76.39%, best epoch 188)
+S01 seed42 F2 Ep 001 | tr 1.4850 | val 23.6% | best_val_loss=1.3871 (ep 1)
+S01 seed42 F2 Ep 050 | tr 0.8133 | val 45.1% | best_val_loss=1.3445 (ep 48)
+S01 seed42 F2 Ep 100 | tr 0.6351 | val 67.4% | best_val_loss=0.8835 (ep 95)
+S01 seed42 F2 Ep 150 | tr 0.5558 | val 66.7% | best_val_loss=0.8037 (ep 131)
+S01 seed42 F2 Ep 200 | tr 0.4851 | val 69.4% | best_val_loss=0.7643 (ep 199)
+S01 seed42 F2 Ep 250 | tr 0.4197 | val 69.4% | best_val_loss=0.7643 (ep 199)
+S01 seed42 F2 Ep 300 | tr 0.4751 | val 69.4% | best_val_loss=0.7419 (ep 254)
+S01 seed42 F2 Ep 350 | tr 0.4090 | val 68.1% | best_val_loss=0.7419 (ep 254)
+S01 seed42 F2 Early stop @ ep 374 (best epoch 254)
+S01 seed42 F2: test 74.31% (val 73.61%, best epoch 254)
+S01 seed42 F3 Ep 001 | tr 1.4743 | val 25.0% | best_val_loss=1.3880 (ep 1)
+S01 seed42 F3 Ep 050 | tr 0.8008 | val 34.7% | best_val_loss=1.3855 (ep 7)
+S01 seed42 F3 Ep 100 | tr 0.6704 | val 68.8% | best_val_loss=0.7537 (ep 99)
+S01 seed42 F3 Ep 150 | tr 0.6123 | val 71.5% | best_val_loss=0.7259 (ep 137)
+S01 seed42 F3 Ep 200 | tr 0.6111 | val 70.8% | best_val_loss=0.7259 (ep 137)
+S01 seed42 F3 Ep 250 | tr 0.5119 | val 70.1% | best_val_loss=0.7259 (ep 137)
+S01 seed42 F3 Early stop @ ep 257 (best epoch 137)
+S01 seed42 F3: test 68.06% (val 73.61%, best epoch 137)
+S01 seed42 F4 Ep 001 | tr 1.4866 | val 24.3% | best_val_loss=1.3867 (ep 1)
+S01 seed42 F4 Ep 050 | tr 0.9059 | val 38.9% | best_val_loss=1.2911 (ep 50)
+S01 seed42 F4 Ep 100 | tr 0.7543 | val 67.4% | best_val_loss=0.8210 (ep 100)
+S01 seed42 F4 Ep 150 | tr 0.6115 | val 69.4% | best_val_loss=0.7328 (ep 122)
+S01 seed42 F4 Ep 200 | tr 0.5742 | val 72.2% | best_val_loss=0.7106 (ep 200)
+S01 seed42 F4 Ep 250 | tr 0.5010 | val 72.2% | best_val_loss=0.6951 (ep 201)
+S01 seed42 F4 Ep 300 | tr 0.4746 | val 68.8% | best_val_loss=0.6951 (ep 201)
+S01 seed42 F4 Early stop @ ep 321 (best epoch 201)
+S01 seed42 F4: test 70.14% (val 72.92%, best epoch 201)
+
+================================================================================
+SUBJECT 02 â€” full22 â€” 4class â€” profile original â€” 22 ch: Fz, FC3, FC1, FCz, FC2, FC4, C5, C3, C1, Cz, C2, C4, C6, CP3, CP1, CPz, CP2, CP4, P1, Pz, P2, POz
+================================================================================
+  S02 [4class] profile=original X=(576, 22, 256) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+S02 seed42 F1 Ep 001 | tr 1.4935 | val 28.5% | best_val_loss=1.3865 (ep 1)
+S02 seed42 F1 Ep 050 | tr 1.2811 | val 20.8% | best_val_loss=1.3865 (ep 1)
+S02 seed42 F1 Ep 100 | tr 1.0725 | val 22.9% | best_val_loss=1.3865 (ep 1)
+S02 seed42 F1 Early stop @ ep 121 (best epoch 1)
+S02 seed42 F1: test 23.61% (val 28.47%, best epoch 1)
+S02 seed42 F2 Ep 001 | tr 1.4830 | val 26.4% | best_val_loss=1.3867 (ep 1)
+S02 seed42 F2 Ep 050 | tr 1.2923 | val 30.6% | best_val_loss=1.3867 (ep 1)
+S02 seed42 F2 Ep 100 | tr 1.1591 | val 31.9% | best_val_loss=1.3864 (ep 75)
+S02 seed42 F2 Ep 150 | tr 1.0786 | val 38.2% | best_val_loss=1.3864 (ep 75)
+S02 seed42 F2 Early stop @ ep 195 (best epoch 75)
+S02 seed42 F2: test 23.61% (val 30.56%, best epoch 75)
+S02 seed42 F3 Ep 001 | tr 1.4076 | val 29.9% | best_val_loss=1.3860 (ep 1)
+S02 seed42 F3 Ep 050 | tr 1.2619 | val 25.0% | best_val_loss=1.3860 (ep 1)
+S02 seed42 F3 Ep 100 | tr 1.1238 | val 33.3% | best_val_loss=1.3860 (ep 1)
+S02 seed42 F3 Early stop @ ep 121 (best epoch 1)
+S02 seed42 F3: test 24.31% (val 29.86%, best epoch 1)
+S02 seed42 F4 Ep 001 | tr 1.4700 | val 25.0% | best_val_loss=1.3865 (ep 1)
+S02 seed42 F4 Ep 050 | tr 1.2478 | val 25.7% | best_val_loss=1.3758 (ep 43)
+S02 seed42 F4 Ep 100 | tr 1.1311 | val 32.6% | best_val_loss=1.3651 (ep 80)
+S02 seed42 F4 Ep 150 | tr 1.0740 | val 23.6% | best_val_loss=1.3590 (ep 146)
+S02 seed42 F4 Ep 200 | tr 0.9360 | val 34.0% | best_val_loss=1.3537 (ep 169)
+S02 seed42 F4 Ep 250 | tr 0.8749 | val 34.7% | best_val_loss=1.3537 (ep 169)
+S02 seed42 F4 Early stop @ ep 289 (best epoch 169)
+S02 seed42 F4: test 24.31% (val 34.03%, best epoch 169)
+
+================================================================================
+SUBJECT 03 â€” full22 â€” 4class â€” profile original â€” 22 ch: Fz, FC3, FC1, FCz, FC2, FC4, C5, C3, C1, Cz, C2, C4, C6, CP3, CP1, CPz, CP2, CP4, P1, Pz, P2, POz
+================================================================================
+  S03 [4class] profile=original X=(576, 22, 256) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+S03 seed42 F1 Ep 001 | tr 1.4704 | val 25.0% | best_val_loss=1.3859 (ep 1)
+S03 seed42 F1 Ep 050 | tr 0.8059 | val 50.0% | best_val_loss=1.2501 (ep 50)
+S03 seed42 F1 Ep 100 | tr 0.7121 | val 74.3% | best_val_loss=0.6584 (ep 99)
+S03 seed42 F1 Ep 150 | tr 0.6068 | val 76.4% | best_val_loss=0.5568 (ep 145)
+S03 seed42 F1 Ep 200 | tr 0.5141 | val 91.0% | best_val_loss=0.4816 (ep 197)
+S03 seed42 F1 Ep 250 | tr 0.4919 | val 88.9% | best_val_loss=0.4747 (ep 205)
+S03 seed42 F1 Ep 300 | tr 0.4854 | val 89.6% | best_val_loss=0.4747 (ep 205)
+S03 seed42 F1 Early stop @ ep 325 (best epoch 205)
+S03 seed42 F1: test 88.89% (val 92.36%, best epoch 205)
+S03 seed42 F2 Ep 001 | tr 1.4323 | val 25.7% | best_val_loss=1.3858 (ep 1)
+S03 seed42 F2 Ep 050 | tr 0.7730 | val 47.9% | best_val_loss=1.3858 (ep 1)
+S03 seed42 F2 Ep 100 | tr 0.6280 | val 66.0% | best_val_loss=0.7980 (ep 87)
+S03 seed42 F2 Ep 150 | tr 0.4901 | val 82.6% | best_val_loss=0.5846 (ep 150)
+S03 seed42 F2 Ep 200 | tr 0.4740 | val 78.5% | best_val_loss=0.5157 (ep 195)
+S03 seed42 F2 Ep 250 | tr 0.4015 | val 84.0% | best_val_loss=0.5073 (ep 237)
+S03 seed42 F2 Ep 300 | tr 0.3902 | val 84.7% | best_val_loss=0.4988 (ep 290)
+S03 seed42 F2 Ep 350 | tr 0.3642 | val 86.1% | best_val_loss=0.4988 (ep 290)
+S03 seed42 F2 Ep 400 | tr 0.3650 | val 87.5% | best_val_loss=0.4917 (ep 372)
+S03 seed42 F2 Ep 450 | tr 0.3684 | val 86.8% | best_val_loss=0.4917 (ep 372)
+S03 seed42 F2 Early stop @ ep 492 (best epoch 372)
+S03 seed42 F2: test 82.64% (val 87.50%, best epoch 372)
+S03 seed42 F3 Ep 001 | tr 1.5295 | val 22.9% | best_val_loss=1.3864 (ep 1)
+S03 seed42 F3 Ep 050 | tr 0.8210 | val 37.5% | best_val_loss=1.3864 (ep 1)
+S03 seed42 F3 Ep 100 | tr 0.6601 | val 70.1% | best_val_loss=0.7988 (ep 100)
+S03 seed42 F3 Ep 150 | tr 0.5282 | val 72.2% | best_val_loss=0.7519 (ep 141)
+S03 seed42 F3 Ep 200 | tr 0.4159 | val 83.3% | best_val_loss=0.6361 (ep 195)
+S03 seed42 F3 Ep 250 | tr 0.4142 | val 84.0% | best_val_loss=0.5994 (ep 218)
+S03 seed42 F3 Ep 300 | tr 0.3953 | val 83.3% | best_val_loss=0.5916 (ep 282)
+S03 seed42 F3 Ep 350 | tr 0.3800 | val 81.9% | best_val_loss=0.5877 (ep 334)
+S03 seed42 F3 Ep 400 | tr 0.3588 | val 84.0% | best_val_loss=0.5877 (ep 334)
+S03 seed42 F3 Ep 450 | tr 0.3815 | val 79.9% | best_val_loss=0.5863 (ep 437)
+S03 seed42 F3 Ep 500 | tr 0.3716 | val 77.8% | best_val_loss=0.5805 (ep 474)
+S03 seed42 F3 Ep 550 | tr 0.3794 | val 81.9% | best_val_loss=0.5805 (ep 474)
+S03 seed42 F3 Early stop @ ep 594 (best epoch 474)
+S03 seed42 F3: test 86.81% (val 81.94%, best epoch 474)
+S03 seed42 F4 Ep 001 | tr 1.5022 | val 23.6% | best_val_loss=1.3864 (ep 1)
+S03 seed42 F4 Ep 050 | tr 0.7325 | val 63.2% | best_val_loss=1.0460 (ep 49)
+S03 seed42 F4 Ep 100 | tr 0.6237 | val 83.3% | best_val_loss=0.5720 (ep 93)
+S03 seed42 F4 Ep 150 | tr 0.5041 | val 84.0% | best_val_loss=0.5341 (ep 148)
+S03 seed42 F4 Ep 200 | tr 0.4811 | val 87.5% | best_val_loss=0.5181 (ep 167)
+S03 seed42 F4 Ep 250 | tr 0.4557 | val 84.7% | best_val_loss=0.5116 (ep 246)
+S03 seed42 F4 Ep 300 | tr 0.4485 | val 83.3% | best_val_loss=0.5116 (ep 246)
+S03 seed42 F4 Ep 350 | tr 0.4220 | val 84.7% | best_val_loss=0.5100 (ep 347)
+S03 seed42 F4 Ep 400 | tr 0.4009 | val 84.0% | best_val_loss=0.4997 (ep 366)
+S03 seed42 F4 Ep 450 | tr 0.4001 | val 84.0% | best_val_loss=0.4997 (ep 366)
+S03 seed42 F4 Early stop @ ep 486 (best epoch 366)
+S03 seed42 F4: test 87.50% (val 86.81%, best epoch 366)
+
+================================================================================
+SUBJECT 04 â€” full22 â€” 4class â€” profile k64_long â€” 22 ch: Fz, FC3, FC1, FCz, FC2, FC4, C5, C3, C1, Cz, C2, C4, C6, CP3, CP1, CPz, CP2, CP4, P1, Pz, P2, POz
+================================================================================
+  S04 [4class] profile=k64_long X=(576, 22, 448) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+S04 seed42 F1 Ep 001 | tr 1.4762 | val 26.4% | best_val_loss=1.3858 (ep 1)
+S04 seed42 F1 Ep 050 | tr 1.0399 | val 33.3% | best_val_loss=1.3858 (ep 1)
+S04 seed42 F1 Ep 100 | tr 0.8319 | val 48.6% | best_val_loss=1.0353 (ep 97)
+S04 seed42 F1 Ep 150 | tr 0.7079 | val 50.0% | best_val_loss=1.0007 (ep 120)
+S04 seed42 F1 Ep 200 | tr 0.6551 | val 51.4% | best_val_loss=1.0007 (ep 120)
+S04 seed42 F1 Early stop @ ep 240 (best epoch 120)
+S04 seed42 F1: test 43.06% (val 56.94%, best epoch 120)
+S04 seed42 F2 Ep 001 | tr 1.4959 | val 25.0% | best_val_loss=1.3860 (ep 1)
+S04 seed42 F2 Ep 050 | tr 0.9435 | val 25.0% | best_val_loss=1.3860 (ep 1)
+S04 seed42 F2 Ep 100 | tr 0.7648 | val 41.0% | best_val_loss=1.3860 (ep 1)
+S04 seed42 F2 Early stop @ ep 121 (best epoch 1)
+S04 seed42 F2: test 24.31% (val 25.00%, best epoch 1)
+S04 seed42 F3 Ep 001 | tr 1.4681 | val 24.3% | best_val_loss=1.3863 (ep 1)
+S04 seed42 F3 Ep 050 | tr 1.0057 | val 27.1% | best_val_loss=1.3863 (ep 1)
+S04 seed42 F3 Ep 100 | tr 0.8752 | val 39.6% | best_val_loss=1.2680 (ep 86)
+S04 seed42 F3 Ep 150 | tr 0.7184 | val 43.8% | best_val_loss=1.2139 (ep 113)
+S04 seed42 F3 Ep 200 | tr 0.6614 | val 45.8% | best_val_loss=1.2139 (ep 113)
+S04 seed42 F3 Early stop @ ep 233 (best epoch 113)
+S04 seed42 F3: test 46.53% (val 43.75%, best epoch 113)
+S04 seed42 F4 Ep 001 | tr 1.4999 | val 25.0% | best_val_loss=1.3865 (ep 1)
+S04 seed42 F4 Ep 050 | tr 1.0979 | val 29.9% | best_val_loss=1.2790 (ep 49)
+S04 seed42 F4 Ep 100 | tr 0.9133 | val 45.1% | best_val_loss=1.1443 (ep 82)
+S04 seed42 F4 Ep 150 | tr 0.8623 | val 44.4% | best_val_loss=1.1418 (ep 109)
+S04 seed42 F4 Ep 200 | tr 0.6653 | val 41.7% | best_val_loss=1.1418 (ep 109)
+S04 seed42 F4 Early stop @ ep 229 (best epoch 109)
+S04 seed42 F4: test 47.92% (val 49.31%, best epoch 109)
+
+================================================================================
+SUBJECT 05 â€” full22 â€” 4class â€” profile k64_long â€” 22 ch: Fz, FC3, FC1, FCz, FC2, FC4, C5, C3, C1, Cz, C2, C4, C6, CP3, CP1, CPz, CP2, CP4, P1, Pz, P2, POz
+================================================================================
+  S05 [4class] profile=k64_long X=(576, 22, 448) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+S05 seed42 F1 Ep 001 | tr 1.5359 | val 29.2% | best_val_loss=1.3865 (ep 1)
+S05 seed42 F1 Ep 050 | tr 1.1429 | val 25.0% | best_val_loss=1.3852 (ep 15)
+S05 seed42 F1 Ep 100 | tr 0.9143 | val 35.4% | best_val_loss=1.3852 (ep 15)
+S05 seed42 F1 Ep 150 | tr 0.8176 | val 41.7% | best_val_loss=1.3708 (ep 104)
+S05 seed42 F1 Ep 200 | tr 0.7694 | val 37.5% | best_val_loss=1.3708 (ep 104)
+S05 seed42 F1 Ep 250 | tr 0.7334 | val 38.9% | best_val_loss=1.3553 (ep 238)
+S05 seed42 F1 Ep 300 | tr 0.6517 | val 42.4% | best_val_loss=1.3484 (ep 263)
+S05 seed42 F1 Ep 350 | tr 0.6129 | val 43.8% | best_val_loss=1.3415 (ep 319)
+S05 seed42 F1 Ep 400 | tr 0.5858 | val 46.5% | best_val_loss=1.3080 (ep 375)
+S05 seed42 F1 Ep 450 | tr 0.6365 | val 44.4% | best_val_loss=1.3080 (ep 375)
+S05 seed42 F1 Early stop @ ep 495 (best epoch 375)
+S05 seed42 F1: test 45.14% (val 45.83%, best epoch 375)
+S05 seed42 F2 Ep 001 | tr 1.4660 | val 22.9% | best_val_loss=1.3868 (ep 1)
+S05 seed42 F2 Ep 050 | tr 1.1530 | val 26.4% | best_val_loss=1.3860 (ep 13)
+S05 seed42 F2 Ep 100 | tr 0.9061 | val 27.1% | best_val_loss=1.3860 (ep 13)
+S05 seed42 F2 Early stop @ ep 133 (best epoch 13)
+S05 seed42 F2: test 26.39% (val 25.00%, best epoch 13)
+S05 seed42 F3 Ep 001 | tr 1.4323 | val 27.8% | best_val_loss=1.3864 (ep 1)
+S05 seed42 F3 Ep 050 | tr 1.2112 | val 25.0% | best_val_loss=1.3736 (ep 40)
+S05 seed42 F3 Ep 100 | tr 1.0344 | val 29.2% | best_val_loss=1.3736 (ep 40)
+S05 seed42 F3 Ep 150 | tr 0.8794 | val 30.6% | best_val_loss=1.3736 (ep 40)
+S05 seed42 F3 Early stop @ ep 160 (best epoch 40)
+S05 seed42 F3: test 25.00% (val 30.56%, best epoch 40)
+S05 seed42 F4 Ep 001 | tr 1.4604 | val 29.9% | best_val_loss=1.3856 (ep 1)
+S05 seed42 F4 Ep 050 | tr 1.1379 | val 24.3% | best_val_loss=1.3852 (ep 4)
+S05 seed42 F4 Ep 100 | tr 0.9879 | val 23.6% | best_val_loss=1.3852 (ep 4)
+S05 seed42 F4 Early stop @ ep 124 (best epoch 4)
+S05 seed42 F4: test 27.08% (val 27.08%, best epoch 4)
+
+================================================================================
+SUBJECT 06 â€” full22 â€” 4class â€” profile original â€” 22 ch: Fz, FC3, FC1, FCz, FC2, FC4, C5, C3, C1, Cz, C2, C4, C6, CP3, CP1, CPz, CP2, CP4, P1, Pz, P2, POz
+================================================================================
+  S06 [4class] profile=original X=(576, 22, 256) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+S06 seed42 F1 Ep 001 | tr 1.4983 | val 20.1% | best_val_loss=1.3870 (ep 1)
+S06 seed42 F1 Ep 050 | tr 1.2175 | val 26.4% | best_val_loss=1.3810 (ep 50)
+S06 seed42 F1 Ep 100 | tr 1.0792 | val 42.4% | best_val_loss=1.2574 (ep 92)
+S06 seed42 F1 Ep 150 | tr 0.8942 | val 45.1% | best_val_loss=1.2362 (ep 148)
+S06 seed42 F1 Ep 200 | tr 0.8169 | val 47.9% | best_val_loss=1.2192 (ep 161)
+S06 seed42 F1 Ep 250 | tr 0.8101 | val 47.2% | best_val_loss=1.2192 (ep 161)
+S06 seed42 F1 Early stop @ ep 281 (best epoch 161)
+S06 seed42 F1: test 36.11% (val 49.31%, best epoch 161)
+S06 seed42 F2 Ep 001 | tr 1.5093 | val 26.4% | best_val_loss=1.3865 (ep 1)
+S06 seed42 F2 Ep 050 | tr 1.2067 | val 32.6% | best_val_loss=1.3864 (ep 49)
+S06 seed42 F2 Ep 100 | tr 1.0615 | val 38.2% | best_val_loss=1.3766 (ep 94)
+S06 seed42 F2 Ep 150 | tr 0.9746 | val 40.3% | best_val_loss=1.3691 (ep 142)
+S06 seed42 F2 Ep 200 | tr 0.8843 | val 34.0% | best_val_loss=1.3567 (ep 159)
+S06 seed42 F2 Ep 250 | tr 0.8915 | val 44.4% | best_val_loss=1.3413 (ep 203)
+S06 seed42 F2 Ep 300 | tr 0.7792 | val 38.9% | best_val_loss=1.3413 (ep 203)
+S06 seed42 F2 Early stop @ ep 323 (best epoch 203)
+S06 seed42 F2: test 36.11% (val 43.75%, best epoch 203)
+S06 seed42 F3 Ep 001 | tr 1.4832 | val 23.6% | best_val_loss=1.3870 (ep 1)
+S06 seed42 F3 Ep 050 | tr 1.2268 | val 27.8% | best_val_loss=1.3860 (ep 7)
+S06 seed42 F3 Ep 100 | tr 1.0755 | val 38.9% | best_val_loss=1.3216 (ep 86)
+S06 seed42 F3 Ep 150 | tr 0.9549 | val 39.6% | best_val_loss=1.2712 (ep 145)
+S06 seed42 F3 Ep 200 | tr 0.8524 | val 40.3% | best_val_loss=1.2712 (ep 145)
+S06 seed42 F3 Ep 250 | tr 0.8310 | val 41.7% | best_val_loss=1.2712 (ep 145)
+S06 seed42 F3 Early stop @ ep 265 (best epoch 145)
+S06 seed42 F3: test 44.44% (val 42.36%, best epoch 145)
+S06 seed42 F4 Ep 001 | tr 1.4384 | val 22.2% | best_val_loss=1.3872 (ep 1)
+S06 seed42 F4 Ep 050 | tr 1.2266 | val 27.8% | best_val_loss=1.3866 (ep 9)
+S06 seed42 F4 Ep 100 | tr 1.0671 | val 34.7% | best_val_loss=1.3019 (ep 98)
+S06 seed42 F4 Ep 150 | tr 0.9319 | val 35.4% | best_val_loss=1.2748 (ep 125)
+S06 seed42 F4 Ep 200 | tr 0.8873 | val 36.1% | best_val_loss=1.2748 (ep 125)
+S06 seed42 F4 Early stop @ ep 245 (best epoch 125)
+S06 seed42 F4: test 46.53% (val 37.50%, best epoch 125)
+
+================================================================================
+SUBJECT 07 â€” full22 â€” 4class â€” profile original â€” 22 ch: Fz, FC3, FC1, FCz, FC2, FC4, C5, C3, C1, Cz, C2, C4, C6, CP3, CP1, CPz, CP2, CP4, P1, Pz, P2, POz
+================================================================================
+  S07 [4class] profile=original X=(576, 22, 256) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+S07 seed42 F1 Ep 001 | tr 1.5204 | val 25.0% | best_val_loss=1.3861 (ep 1)
+S07 seed42 F1 Ep 050 | tr 0.9423 | val 25.0% | best_val_loss=1.3861 (ep 1)
+S07 seed42 F1 Ep 100 | tr 0.6503 | val 61.8% | best_val_loss=0.8713 (ep 97)
+S07 seed42 F1 Ep 150 | tr 0.5748 | val 65.3% | best_val_loss=0.7160 (ep 134)
+S07 seed42 F1 Ep 200 | tr 0.5005 | val 72.2% | best_val_loss=0.6524 (ep 186)
+S07 seed42 F1 Ep 250 | tr 0.4633 | val 75.7% | best_val_loss=0.6218 (ep 221)
+S07 seed42 F1 Ep 300 | tr 0.4213 | val 72.9% | best_val_loss=0.5927 (ep 272)
+S07 seed42 F1 Ep 350 | tr 0.4041 | val 72.2% | best_val_loss=0.5927 (ep 272)
+S07 seed42 F1 Early stop @ ep 392 (best epoch 272)
+S07 seed42 F1: test 85.42% (val 79.17%, best epoch 272)
+S07 seed42 F2 Ep 001 | tr 1.4913 | val 25.7% | best_val_loss=1.3867 (ep 1)
+S07 seed42 F2 Ep 050 | tr 0.8556 | val 25.0% | best_val_loss=1.3861 (ep 11)
+S07 seed42 F2 Ep 100 | tr 0.6516 | val 69.4% | best_val_loss=0.7249 (ep 99)
+S07 seed42 F2 Ep 150 | tr 0.5806 | val 79.2% | best_val_loss=0.5892 (ep 145)
+S07 seed42 F2 Ep 200 | tr 0.5295 | val 81.2% | best_val_loss=0.5545 (ep 175)
+S07 seed42 F2 Ep 250 | tr 0.4805 | val 81.2% | best_val_loss=0.5247 (ep 221)
+S07 seed42 F2 Ep 300 | tr 0.4350 | val 84.0% | best_val_loss=0.5247 (ep 221)
+S07 seed42 F2 Early stop @ ep 341 (best epoch 221)
+S07 seed42 F2: test 82.64% (val 82.64%, best epoch 221)
+S07 seed42 F3 Ep 001 | tr 1.4592 | val 25.0% | best_val_loss=1.3863 (ep 1)
+S07 seed42 F3 Ep 050 | tr 0.8857 | val 25.0% | best_val_loss=1.3863 (ep 1)
+S07 seed42 F3 Ep 100 | tr 0.6771 | val 66.0% | best_val_loss=0.7673 (ep 99)
+S07 seed42 F3 Ep 150 | tr 0.6506 | val 66.0% | best_val_loss=0.7260 (ep 132)
+S07 seed42 F3 Ep 200 | tr 0.5858 | val 63.2% | best_val_loss=0.7098 (ep 169)
+S07 seed42 F3 Ep 250 | tr 0.5416 | val 62.5% | best_val_loss=0.7098 (ep 169)
+S07 seed42 F3 Early stop @ ep 289 (best epoch 169)
+S07 seed42 F3: test 72.22% (val 72.22%, best epoch 169)
+S07 seed42 F4 Ep 001 | tr 1.4563 | val 25.7% | best_val_loss=1.3857 (ep 1)
+S07 seed42 F4 Ep 050 | tr 0.9871 | val 27.8% | best_val_loss=1.3856 (ep 10)
+S07 seed42 F4 Ep 100 | tr 0.6366 | val 67.4% | best_val_loss=0.7949 (ep 97)
+S07 seed42 F4 Ep 150 | tr 0.5431 | val 69.4% | best_val_loss=0.7337 (ep 126)
+S07 seed42 F4 Ep 200 | tr 0.4837 | val 70.8% | best_val_loss=0.7337 (ep 126)
+S07 seed42 F4 Ep 250 | tr 0.4254 | val 72.2% | best_val_loss=0.6969 (ep 246)
+S07 seed42 F4 Ep 300 | tr 0.4778 | val 72.9% | best_val_loss=0.6690 (ep 258)
+S07 seed42 F4 Ep 350 | tr 0.4137 | val 71.5% | best_val_loss=0.6690 (ep 258)
+S07 seed42 F4 Early stop @ ep 378 (best epoch 258)
+S07 seed42 F4: test 72.22% (val 77.78%, best epoch 258)
+
+================================================================================
+SUBJECT 08 â€” full22 â€” 4class â€” profile original â€” 22 ch: Fz, FC3, FC1, FCz, FC2, FC4, C5, C3, C1, Cz, C2, C4, C6, CP3, CP1, CPz, CP2, CP4, P1, Pz, P2, POz
+================================================================================
+  S08 [4class] profile=original X=(576, 22, 256) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+S08 seed42 F1 Ep 001 | tr 1.4461 | val 26.4% | best_val_loss=1.3857 (ep 1)
+S08 seed42 F1 Ep 050 | tr 0.8968 | val 49.3% | best_val_loss=1.3452 (ep 50)
+S08 seed42 F1 Ep 100 | tr 0.7135 | val 72.9% | best_val_loss=0.8284 (ep 97)
+S08 seed42 F1 Ep 150 | tr 0.6427 | val 78.5% | best_val_loss=0.7287 (ep 140)
+S08 seed42 F1 Ep 200 | tr 0.5786 | val 77.1% | best_val_loss=0.7081 (ep 152)
+S08 seed42 F1 Ep 250 | tr 0.5818 | val 75.7% | best_val_loss=0.7076 (ep 224)
+S08 seed42 F1 Ep 300 | tr 0.6146 | val 75.7% | best_val_loss=0.7076 (ep 224)
+S08 seed42 F1 Ep 350 | tr 0.5421 | val 79.2% | best_val_loss=0.6971 (ep 316)
+S08 seed42 F1 Ep 400 | tr 0.5141 | val 78.5% | best_val_loss=0.6971 (ep 316)
+S08 seed42 F1 Early stop @ ep 436 (best epoch 316)
+S08 seed42 F1: test 78.47% (val 79.86%, best epoch 316)
+S08 seed42 F2 Ep 001 | tr 1.4423 | val 23.6% | best_val_loss=1.3867 (ep 1)
+S08 seed42 F2 Ep 050 | tr 0.8205 | val 57.6% | best_val_loss=1.2147 (ep 49)
+S08 seed42 F2 Ep 100 | tr 0.6123 | val 79.2% | best_val_loss=0.6789 (ep 98)
+S08 seed42 F2 Ep 150 | tr 0.6271 | val 77.8% | best_val_loss=0.6491 (ep 145)
+S08 seed42 F2 Ep 200 | tr 0.5256 | val 78.5% | best_val_loss=0.6453 (ep 154)
+S08 seed42 F2 Ep 250 | tr 0.5383 | val 73.6% | best_val_loss=0.6453 (ep 154)
+S08 seed42 F2 Early stop @ ep 274 (best epoch 154)
+S08 seed42 F2: test 76.39% (val 77.78%, best epoch 154)
+S08 seed42 F3 Ep 001 | tr 1.4344 | val 24.3% | best_val_loss=1.3874 (ep 1)
+S08 seed42 F3 Ep 050 | tr 0.7571 | val 53.5% | best_val_loss=1.2482 (ep 50)
+S08 seed42 F3 Ep 100 | tr 0.6374 | val 67.4% | best_val_loss=0.7750 (ep 96)
+S08 seed42 F3 Ep 150 | tr 0.5973 | val 68.1% | best_val_loss=0.7750 (ep 96)
+S08 seed42 F3 Ep 200 | tr 0.5862 | val 68.1% | best_val_loss=0.7750 (ep 96)
+S08 seed42 F3 Early stop @ ep 216 (best epoch 96)
+S08 seed42 F3: test 75.69% (val 70.83%, best epoch 96)
+S08 seed42 F4 Ep 001 | tr 1.4691 | val 25.0% | best_val_loss=1.3860 (ep 1)
+S08 seed42 F4 Ep 050 | tr 0.8168 | val 58.3% | best_val_loss=1.3169 (ep 50)
+S08 seed42 F4 Ep 100 | tr 0.6821 | val 75.7% | best_val_loss=0.7674 (ep 89)
+S08 seed42 F4 Ep 150 | tr 0.6046 | val 79.9% | best_val_loss=0.6767 (ep 143)
+S08 seed42 F4 Ep 200 | tr 0.5878 | val 81.2% | best_val_loss=0.6662 (ep 195)
+S08 seed42 F4 Ep 250 | tr 0.5020 | val 81.2% | best_val_loss=0.6596 (ep 224)
+S08 seed42 F4 Ep 300 | tr 0.5231 | val 81.9% | best_val_loss=0.6346 (ep 296)
+S08 seed42 F4 Ep 350 | tr 0.4524 | val 84.7% | best_val_loss=0.6256 (ep 315)
+S08 seed42 F4 Ep 400 | tr 0.4824 | val 82.6% | best_val_loss=0.6159 (ep 379)
+S08 seed42 F4 Ep 450 | tr 0.4498 | val 82.6% | best_val_loss=0.6159 (ep 379)
+S08 seed42 F4 Ep 500 | tr 0.4334 | val 82.6% | best_val_loss=0.6010 (ep 492)
+S08 seed42 F4 Ep 550 | tr 0.3961 | val 82.6% | best_val_loss=0.6010 (ep 492)
+S08 seed42 F4 Ep 600 | tr 0.4226 | val 81.9% | best_val_loss=0.6010 (ep 492)
+S08 seed42 F4 Early stop @ ep 612 (best epoch 492)
+S08 seed42 F4: test 69.44% (val 81.25%, best epoch 492)
+
+================================================================================
+SUBJECT 09 â€” full22 â€” 4class â€” profile original â€” 22 ch: Fz, FC3, FC1, FCz, FC2, FC4, C5, C3, C1, Cz, C2, C4, C6, CP3, CP1, CPz, CP2, CP4, P1, Pz, P2, POz
+================================================================================
+  S09 [4class] profile=original X=(576, 22, 256) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+S09 seed42 F1 Ep 001 | tr 1.4987 | val 27.1% | best_val_loss=1.3859 (ep 1)
+S09 seed42 F1 Ep 050 | tr 0.6367 | val 31.2% | best_val_loss=1.3813 (ep 5)
+S09 seed42 F1 Ep 100 | tr 0.5832 | val 81.2% | best_val_loss=0.6241 (ep 93)
+S09 seed42 F1 Ep 150 | tr 0.4876 | val 77.8% | best_val_loss=0.6159 (ep 113)
+S09 seed42 F1 Ep 200 | tr 0.4414 | val 77.1% | best_val_loss=0.6124 (ep 187)
+S09 seed42 F1 Ep 250 | tr 0.3977 | val 77.8% | best_val_loss=0.6028 (ep 209)
+S09 seed42 F1 Ep 300 | tr 0.3755 | val 80.6% | best_val_loss=0.6028 (ep 209)
+S09 seed42 F1 Ep 350 | tr 0.3801 | val 81.2% | best_val_loss=0.5945 (ep 310)
+S09 seed42 F1 Ep 400 | tr 0.3762 | val 80.6% | best_val_loss=0.5945 (ep 310)
+S09 seed42 F1 Early stop @ ep 430 (best epoch 310)
+S09 seed42 F1: test 82.64% (val 80.56%, best epoch 310)
+S09 seed42 F2 Ep 001 | tr 1.4581 | val 25.0% | best_val_loss=1.3864 (ep 1)
+S09 seed42 F2 Ep 050 | tr 0.6471 | val 25.7% | best_val_loss=1.3864 (ep 1)
+S09 seed42 F2 Ep 100 | tr 0.5009 | val 70.1% | best_val_loss=0.7558 (ep 98)
+S09 seed42 F2 Ep 150 | tr 0.4773 | val 79.2% | best_val_loss=0.6429 (ep 130)
+S09 seed42 F2 Ep 200 | tr 0.4491 | val 81.2% | best_val_loss=0.6008 (ep 192)
+S09 seed42 F2 Ep 250 | tr 0.3875 | val 78.5% | best_val_loss=0.6008 (ep 192)
+S09 seed42 F2 Ep 300 | tr 0.3726 | val 75.7% | best_val_loss=0.6008 (ep 192)
+S09 seed42 F2 Early stop @ ep 312 (best epoch 192)
+S09 seed42 F2: test 83.33% (val 80.56%, best epoch 192)
+S09 seed42 F3 Ep 001 | tr 1.4535 | val 27.8% | best_val_loss=1.3861 (ep 1)
+S09 seed42 F3 Ep 050 | tr 0.7497 | val 39.6% | best_val_loss=1.3828 (ep 6)
+S09 seed42 F3 Ep 100 | tr 0.5778 | val 84.7% | best_val_loss=0.5952 (ep 99)
+S09 seed42 F3 Ep 150 | tr 0.5374 | val 85.4% | best_val_loss=0.5387 (ep 143)
+S09 seed42 F3 Ep 200 | tr 0.4747 | val 88.2% | best_val_loss=0.5179 (ep 192)
+S09 seed42 F3 Ep 250 | tr 0.4266 | val 88.2% | best_val_loss=0.4930 (ep 250)
+S09 seed42 F3 Ep 300 | tr 0.4121 | val 88.2% | best_val_loss=0.4909 (ep 253)
+S09 seed42 F3 Ep 350 | tr 0.3802 | val 88.2% | best_val_loss=0.4909 (ep 253)
+S09 seed42 F3 Early stop @ ep 373 (best epoch 253)
+S09 seed42 F3: test 88.89% (val 90.97%, best epoch 253)
+S09 seed42 F4 Ep 001 | tr 1.4595 | val 23.6% | best_val_loss=1.3854 (ep 1)
+S09 seed42 F4 Ep 050 | tr 0.6750 | val 47.9% | best_val_loss=1.3812 (ep 50)
+S09 seed42 F4 Ep 100 | tr 0.5484 | val 86.8% | best_val_loss=0.4984 (ep 93)
+S09 seed42 F4 Ep 150 | tr 0.4940 | val 87.5% | best_val_loss=0.4539 (ep 140)
+S09 seed42 F4 Ep 200 | tr 0.4002 | val 88.9% | best_val_loss=0.4456 (ep 170)
+S09 seed42 F4 Ep 250 | tr 0.3825 | val 88.2% | best_val_loss=0.4456 (ep 170)
+S09 seed42 F4 Early stop @ ep 290 (best epoch 170)
+S09 seed42 F4: test 81.94% (val 88.19%, best epoch 170)
+Results written to D:\EEG\NeuroGrounded-EEG\EEGNetV4\BNCI_001\4class\results\full22 (grand mean 58.97% over 9 subjects; chance 25.0%, majority 25.0%)
+Report saved: D:\EEG\NeuroGrounded-EEG\EEGNetV4\BNCI_001\4class\results\full22\full22_report.txt
+
+Saliency-ERD correlations (Pearson). orig_* = as in the original scripts; the last three are the sign-invariant metrics used in the paper.
+subj               method          ERD_L          ERD_R         ERD_LR       ERD_comb        vs_grad      magnitude class_specific lateralisation
+S01                 grad         -0.015         -0.188         +0.130         -0.140         +1.000         +0.145         +0.266         +0.586
+S01         grad_x_input         -0.012         -0.173         +0.121         -0.127         +1.000         +0.132         +0.238         +0.554
+S01 integrated_gradients         -0.007         -0.161         +0.115         -0.116         +0.995         +0.121         +0.200         +0.421
+S01           smoothgrad         -0.015         -0.189         +0.131         -0.141         +1.000         +0.146         +0.268         +0.587
+S02                 grad         -0.280         -0.003         -0.251         -0.217         +1.000         -0.217         +0.025         -0.136
+S02         grad_x_input         -0.359         +0.032         -0.344         -0.259         +0.992         -0.259         +0.031         -0.193
+S02 integrated_gradients         -0.335         +0.023         -0.318         -0.245         +0.995         -0.245         +0.003         -0.208
+S02           smoothgrad         -0.280         -0.004         -0.251         -0.217         +1.000         -0.217         +0.025         -0.136
+S03                 grad         -0.342         -0.426         +0.263         -0.431         +1.000         +0.403         +0.491         +0.499
+S03         grad_x_input         -0.341         -0.417         +0.251         -0.424         +0.999         +0.377         +0.482         +0.466
+S03 integrated_gradients         -0.344         -0.474         +0.324         -0.463         +0.994         +0.432         +0.508         +0.380
+S03           smoothgrad         -0.339         -0.421         +0.258         -0.426         +1.000         +0.398         +0.491         +0.503
+S04                 grad         -0.538         -0.437         -0.043         -0.593         +1.000         -0.620         +0.448         +0.050
+S04         grad_x_input         -0.572         -0.423         -0.083         -0.604         +0.998         -0.636         +0.440         +0.040
+S04 integrated_gradients         -0.551         -0.385         -0.101         -0.568         +0.979         -0.621         +0.399         -0.038
+S04           smoothgrad         -0.538         -0.437         -0.043         -0.593         +1.000         -0.620         +0.449         +0.052
+S05                 grad         -0.216         -0.340         +0.231         -0.367         +1.000         +0.022         +0.280         -0.256
+S05         grad_x_input         -0.245         -0.341         +0.219         -0.380         +0.999         +0.033         +0.275         -0.293
+S05 integrated_gradients         -0.216         -0.318         +0.209         -0.350         +0.998         +0.040         +0.257         -0.271
+S05           smoothgrad         -0.228         -0.354         +0.239         -0.383         +0.999         +0.015         +0.295         -0.255
+S06                 grad         -0.400         -0.270         -0.175         -0.351         +1.000         -0.326         +0.300         +0.315
+S06         grad_x_input         -0.478         -0.372         -0.130         -0.447         +0.992         -0.423         +0.355         +0.258
+S06 integrated_gradients         -0.437         -0.338         -0.123         -0.408         +0.989         -0.387         +0.317         +0.186
+S06           smoothgrad         -0.400         -0.271         -0.173         -0.353         +1.000         -0.327         +0.300         +0.318
+S07                 grad         -0.328         -0.546         +0.138         -0.439         +1.000         +0.443         +0.471         +0.230
+S07         grad_x_input         -0.330         -0.549         +0.138         -0.442         +1.000         +0.446         +0.475         +0.228
+S07 integrated_gradients         -0.322         -0.534         +0.133         -0.430         +0.999         +0.434         +0.440         +0.146
+S07           smoothgrad         -0.326         -0.545         +0.140         -0.439         +1.000         +0.442         +0.469         +0.211
+S08                 grad         -0.427         -0.333         -0.215         -0.396         +1.000         +0.279         +0.337         +0.209
+S08         grad_x_input         -0.442         -0.339         -0.232         -0.406         +0.999         +0.289         +0.315         +0.078
+S08 integrated_gradients         -0.419         -0.323         -0.218         -0.386         +0.997         +0.255         +0.288         +0.024
+S08           smoothgrad         -0.428         -0.336         -0.211         -0.397         +1.000         +0.279         +0.339         +0.213
+S09                 grad         -0.720         -0.581         -0.599         -0.720         +1.000         +0.721         +0.501         -0.114
+S09         grad_x_input         -0.718         -0.584         -0.594         -0.720         +0.998         +0.721         +0.482         -0.231
+S09 integrated_gradients         -0.711         -0.577         -0.589         -0.712         +0.997         +0.713         +0.479         -0.249
+S09           smoothgrad         -0.722         -0.585         -0.598         -0.722         +1.000         +0.724         +0.501         -0.106
+Fisher-z mean over subjects:
+mean                 grad         -0.381         -0.358         -0.068         -0.422         +1.000         +0.109         +0.354         +0.168
+mean         grad_x_input         -0.407         -0.363         -0.084         -0.439         +0.999         +0.086         +0.350         +0.112
+mean integrated_gradients         -0.389         -0.354         -0.072         -0.424         +0.996         +0.095         +0.328         +0.047
+mean           smoothgrad         -0.382         -0.360         -0.066         -0.424         +1.000         +0.108         +0.355         +0.169
+
+EXPLORATORY physiology correlations (mean4 saliency, Pearson, Fisher mean over subjects):
+  ERD_theta_L                  r = -0.207 [-0.376, -0.025]
+  ERD_theta_R                  r = -0.202 [-0.416, +0.033]
+  ERD_theta_mag                r = +0.102 [-0.161, +0.352]
+  ERD_mu_L                     r = -0.307 [-0.509, -0.073]
+  ERD_mu_R                     r = -0.311 [-0.475, -0.127]
+  ERD_mu_mag                   r = +0.043 [-0.278, +0.355]
+  ERD_beta_L                   r = -0.320 [-0.422, -0.211]
+  ERD_beta_R                   r = -0.205 [-0.423, +0.035]
+  ERD_beta_mag                 r = -0.004 [-0.273, +0.266]
+  ERS_beta_rebound_L           r = -0.159 [-0.327, +0.018]
+  ERS_beta_rebound_R           r = -0.097 [-0.319, +0.135]
+  ERS_beta_rebound_mag         r = -0.180 [-0.357, +0.009]
+  ERD_lowgamma_L               r = -0.164 [-0.395, +0.086]
+  ERD_lowgamma_R               r = -0.290 [-0.447, -0.117]
+  ERD_lowgamma_mag             r = -0.095 [-0.421, +0.252]
+  logpow_8_30                  r = +0.004 [-0.196, +0.204]
+  r2_signed                    r = +0.097 [-0.224, +0.398]
+  r2_abs                       r = +0.102 [-0.210, +0.395]
+  TFR_ERD_dB_L                 r = -0.392 [-0.512, -0.257]
+  TFR_ERD_dB_R                 r = -0.316 [-0.523, -0.075]
+  TFR_ERD_dB_mag               r = +0.161 [-0.144, +0.438]
+  ITC_4_30                     r = +0.019 [-0.177, +0.213]
+  ERP_abs_0.2_0.8              r = +0.047 [-0.124, +0.216]
+  SlowPot_0.5_3                r = +0.085 [-0.117, +0.280]
+
+================================================================================
+SUBJECT 01 â€” saliency_reduced â€” 4class â€” profile original â€” 12 ch: C3, CP3, CPz, C4, Cz, POz, CP4, C5, CP2, C1, FCz, Pz
+================================================================================
+  S01 [4class] profile=original X=(576, 12, 256) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+S01 seed42 F1 Ep 001 | tr 1.4837 | val 31.2% | best_val_loss=1.3862 (ep 1)
+S01 seed42 F1 Ep 050 | tr 0.8862 | val 34.0% | best_val_loss=1.3112 (ep 50)
+S01 seed42 F1 Ep 100 | tr 0.7613 | val 61.8% | best_val_loss=0.8352 (ep 96)
+S01 seed42 F1 Ep 150 | tr 0.6699 | val 66.7% | best_val_loss=0.7633 (ep 150)
+S01 seed42 F1 Ep 200 | tr 0.5634 | val 68.1% | best_val_loss=0.7185 (ep 181)
+S01 seed42 F1 Ep 250 | tr 0.5335 | val 70.8% | best_val_loss=0.7067 (ep 235)
+S01 seed42 F1 Ep 300 | tr 0.5322 | val 73.6% | best_val_loss=0.6922 (ep 280)
+S01 seed42 F1 Ep 350 | tr 0.5134 | val 73.6% | best_val_loss=0.6769 (ep 324)
+S01 seed42 F1 Ep 400 | tr 0.4945 | val 78.5% | best_val_loss=0.6734 (ep 392)
+S01 seed42 F1 Ep 450 | tr 0.4725 | val 78.5% | best_val_loss=0.6624 (ep 438)
+S01 seed42 F1 Ep 500 | tr 0.4849 | val 78.5% | best_val_loss=0.6624 (ep 438)
+S01 seed42 F1 Ep 550 | tr 0.4439 | val 77.1% | best_val_loss=0.6624 (ep 438)
+S01 seed42 F1 Early stop @ ep 558 (best epoch 438)
+S01 seed42 F1: test 70.83% (val 79.17%, best epoch 438)
+S01 seed42 F2 Ep 001 | tr 1.4385 | val 24.3% | best_val_loss=1.3866 (ep 1)
+S01 seed42 F2 Ep 050 | tr 0.8220 | val 41.7% | best_val_loss=1.3865 (ep 2)
+S01 seed42 F2 Ep 100 | tr 0.6837 | val 67.4% | best_val_loss=0.9209 (ep 98)
+S01 seed42 F2 Ep 150 | tr 0.5864 | val 66.0% | best_val_loss=0.8545 (ep 150)
+S01 seed42 F2 Ep 200 | tr 0.5378 | val 64.6% | best_val_loss=0.8545 (ep 150)
+S01 seed42 F2 Ep 250 | tr 0.5261 | val 61.8% | best_val_loss=0.8545 (ep 150)
+S01 seed42 F2 Early stop @ ep 270 (best epoch 150)
+S01 seed42 F2: test 75.00% (val 65.97%, best epoch 150)
+S01 seed42 F3 Ep 001 | tr 1.4720 | val 24.3% | best_val_loss=1.3866 (ep 1)
+S01 seed42 F3 Ep 050 | tr 0.8289 | val 34.7% | best_val_loss=1.3866 (ep 1)
+S01 seed42 F3 Ep 100 | tr 0.7000 | val 68.1% | best_val_loss=0.7903 (ep 98)
+S01 seed42 F3 Ep 150 | tr 0.6504 | val 72.2% | best_val_loss=0.7351 (ep 145)
+S01 seed42 F3 Ep 200 | tr 0.6285 | val 75.0% | best_val_loss=0.7095 (ep 193)
+S01 seed42 F3 Ep 250 | tr 0.5304 | val 72.9% | best_val_loss=0.7095 (ep 193)
+S01 seed42 F3 Ep 300 | tr 0.5432 | val 77.1% | best_val_loss=0.7054 (ep 300)
+S01 seed42 F3 Ep 350 | tr 0.5136 | val 75.0% | best_val_loss=0.6972 (ep 301)
+S01 seed42 F3 Ep 400 | tr 0.4827 | val 75.0% | best_val_loss=0.6972 (ep 301)
+S01 seed42 F3 Early stop @ ep 421 (best epoch 301)
+S01 seed42 F3: test 72.22% (val 77.78%, best epoch 301)
+S01 seed42 F4 Ep 001 | tr 1.4555 | val 23.6% | best_val_loss=1.3858 (ep 1)
+S01 seed42 F4 Ep 050 | tr 0.8098 | val 38.9% | best_val_loss=1.3858 (ep 1)
+S01 seed42 F4 Ep 100 | tr 0.7537 | val 68.8% | best_val_loss=0.8033 (ep 99)
+S01 seed42 F4 Ep 150 | tr 0.6520 | val 68.1% | best_val_loss=0.7814 (ep 125)
+S01 seed42 F4 Ep 200 | tr 0.6132 | val 65.3% | best_val_loss=0.7814 (ep 125)
+S01 seed42 F4 Early stop @ ep 245 (best epoch 125)
+S01 seed42 F4: test 65.28% (val 70.83%, best epoch 125)
+
+================================================================================
+SUBJECT 02 â€” saliency_reduced â€” 4class â€” profile original â€” 12 ch: CP3, C3, CPz, C4, C1, Cz, CP4, POz, C5, CP2, C2, CP1
+================================================================================
+  S02 [4class] profile=original X=(576, 12, 256) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+S02 seed42 F1 Ep 001 | tr 1.4816 | val 22.2% | best_val_loss=1.3865 (ep 1)
+S02 seed42 F1 Ep 050 | tr 1.3135 | val 27.1% | best_val_loss=1.3854 (ep 19)
+S02 seed42 F1 Ep 100 | tr 1.1991 | val 31.2% | best_val_loss=1.3817 (ep 63)
+S02 seed42 F1 Ep 150 | tr 1.0173 | val 29.2% | best_val_loss=1.3817 (ep 63)
+S02 seed42 F1 Ep 200 | tr 0.9504 | val 38.9% | best_val_loss=1.3231 (ep 197)
+S02 seed42 F1 Ep 250 | tr 0.8488 | val 38.9% | best_val_loss=1.3231 (ep 197)
+S02 seed42 F1 Ep 300 | tr 0.9070 | val 36.8% | best_val_loss=1.3231 (ep 197)
+S02 seed42 F1 Early stop @ ep 317 (best epoch 197)
+S02 seed42 F1: test 38.89% (val 38.89%, best epoch 197)
+S02 seed42 F2 Ep 001 | tr 1.4780 | val 25.7% | best_val_loss=1.3861 (ep 1)
+S02 seed42 F2 Ep 050 | tr 1.3046 | val 29.2% | best_val_loss=1.3781 (ep 49)
+S02 seed42 F2 Ep 100 | tr 1.1777 | val 34.0% | best_val_loss=1.3603 (ep 79)
+S02 seed42 F2 Ep 150 | tr 1.0510 | val 31.9% | best_val_loss=1.3603 (ep 79)
+S02 seed42 F2 Early stop @ ep 199 (best epoch 79)
+S02 seed42 F2: test 24.31% (val 36.11%, best epoch 79)
+S02 seed42 F3 Ep 001 | tr 1.4493 | val 27.1% | best_val_loss=1.3864 (ep 1)
+S02 seed42 F3 Ep 050 | tr 1.2362 | val 31.2% | best_val_loss=1.3864 (ep 1)
+S02 seed42 F3 Ep 100 | tr 1.1645 | val 25.7% | best_val_loss=1.3864 (ep 1)
+S02 seed42 F3 Early stop @ ep 121 (best epoch 1)
+S02 seed42 F3: test 25.69% (val 27.08%, best epoch 1)
+S02 seed42 F4 Ep 001 | tr 1.5097 | val 25.7% | best_val_loss=1.3865 (ep 1)
+S02 seed42 F4 Ep 050 | tr 1.3157 | val 27.1% | best_val_loss=1.3865 (ep 1)
+S02 seed42 F4 Ep 100 | tr 1.1598 | val 29.9% | best_val_loss=1.3730 (ep 92)
+S02 seed42 F4 Ep 150 | tr 0.9813 | val 39.6% | best_val_loss=1.2902 (ep 148)
+S02 seed42 F4 Ep 200 | tr 0.9082 | val 48.6% | best_val_loss=1.1778 (ep 176)
+S02 seed42 F4 Ep 250 | tr 0.8257 | val 48.6% | best_val_loss=1.1778 (ep 176)
+S02 seed42 F4 Early stop @ ep 296 (best epoch 176)
+S02 seed42 F4: test 36.81% (val 47.92%, best epoch 176)
+
+================================================================================
+SUBJECT 03 â€” saliency_reduced â€” 4class â€” profile original â€” 12 ch: CP3, C3, C4, Cz, POz, C1, CP4, CPz, C5, CP2, C2, C6
+================================================================================
+  S03 [4class] profile=original X=(576, 12, 256) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+S03 seed42 F1 Ep 001 | tr 1.4756 | val 24.3% | best_val_loss=1.3865 (ep 1)
+S03 seed42 F1 Ep 050 | tr 0.8872 | val 29.2% | best_val_loss=1.3861 (ep 6)
+S03 seed42 F1 Ep 100 | tr 0.6703 | val 63.9% | best_val_loss=0.9099 (ep 88)
+S03 seed42 F1 Ep 150 | tr 0.6322 | val 71.5% | best_val_loss=0.6905 (ep 141)
+S03 seed42 F1 Ep 200 | tr 0.5763 | val 76.4% | best_val_loss=0.6449 (ep 168)
+S03 seed42 F1 Ep 250 | tr 0.5333 | val 78.5% | best_val_loss=0.5864 (ep 231)
+S03 seed42 F1 Ep 300 | tr 0.4992 | val 83.3% | best_val_loss=0.5254 (ep 294)
+S03 seed42 F1 Ep 350 | tr 0.4773 | val 82.6% | best_val_loss=0.5254 (ep 294)
+S03 seed42 F1 Ep 400 | tr 0.4534 | val 85.4% | best_val_loss=0.5148 (ep 399)
+S03 seed42 F1 Ep 450 | tr 0.4181 | val 79.2% | best_val_loss=0.5148 (ep 399)
+S03 seed42 F1 Ep 500 | tr 0.4312 | val 82.6% | best_val_loss=0.5148 (ep 399)
+S03 seed42 F1 Early stop @ ep 519 (best epoch 399)
+S03 seed42 F1: test 85.42% (val 84.03%, best epoch 399)
+S03 seed42 F2 Ep 001 | tr 1.4805 | val 22.2% | best_val_loss=1.3866 (ep 1)
+S03 seed42 F2 Ep 050 | tr 0.8102 | val 44.4% | best_val_loss=1.3866 (ep 1)
+S03 seed42 F2 Ep 100 | tr 0.6884 | val 62.5% | best_val_loss=0.8080 (ep 96)
+S03 seed42 F2 Ep 150 | tr 0.6263 | val 71.5% | best_val_loss=0.6880 (ep 143)
+S03 seed42 F2 Ep 200 | tr 0.5342 | val 82.6% | best_val_loss=0.5657 (ep 199)
+S03 seed42 F2 Ep 250 | tr 0.4651 | val 86.1% | best_val_loss=0.5263 (ep 246)
+S03 seed42 F2 Ep 300 | tr 0.4331 | val 86.1% | best_val_loss=0.5102 (ep 279)
+S03 seed42 F2 Ep 350 | tr 0.4182 | val 88.2% | best_val_loss=0.5102 (ep 279)
+S03 seed42 F2 Early stop @ ep 399 (best epoch 279)
+S03 seed42 F2: test 79.86% (val 88.19%, best epoch 279)
+S03 seed42 F3 Ep 001 | tr 1.4910 | val 22.9% | best_val_loss=1.3865 (ep 1)
+S03 seed42 F3 Ep 050 | tr 0.7651 | val 45.8% | best_val_loss=1.3860 (ep 5)
+S03 seed42 F3 Ep 100 | tr 0.6073 | val 70.8% | best_val_loss=0.7215 (ep 96)
+S03 seed42 F3 Ep 150 | tr 0.5263 | val 81.2% | best_val_loss=0.6135 (ep 140)
+S03 seed42 F3 Ep 200 | tr 0.4603 | val 81.9% | best_val_loss=0.6135 (ep 140)
+S03 seed42 F3 Ep 250 | tr 0.4247 | val 79.9% | best_val_loss=0.5878 (ep 240)
+S03 seed42 F3 Ep 300 | tr 0.4496 | val 81.2% | best_val_loss=0.5878 (ep 240)
+S03 seed42 F3 Ep 350 | tr 0.3631 | val 81.2% | best_val_loss=0.5804 (ep 342)
+S03 seed42 F3 Ep 400 | tr 0.4039 | val 83.3% | best_val_loss=0.5804 (ep 342)
+S03 seed42 F3 Ep 450 | tr 0.3890 | val 83.3% | best_val_loss=0.5796 (ep 420)
+S03 seed42 F3 Ep 500 | tr 0.3856 | val 81.9% | best_val_loss=0.5796 (ep 420)
+S03 seed42 F3 Early stop @ ep 540 (best epoch 420)
+S03 seed42 F3: test 86.11% (val 82.64%, best epoch 420)
+S03 seed42 F4 Ep 001 | tr 1.4397 | val 25.0% | best_val_loss=1.3862 (ep 1)
+S03 seed42 F4 Ep 050 | tr 0.8038 | val 43.8% | best_val_loss=1.3862 (ep 1)
+S03 seed42 F4 Ep 100 | tr 0.6950 | val 74.3% | best_val_loss=0.7265 (ep 100)
+S03 seed42 F4 Ep 150 | tr 0.5594 | val 72.9% | best_val_loss=0.6807 (ep 143)
+S03 seed42 F4 Ep 200 | tr 0.5548 | val 81.2% | best_val_loss=0.6184 (ep 193)
+S03 seed42 F4 Ep 250 | tr 0.5006 | val 75.7% | best_val_loss=0.6184 (ep 193)
+S03 seed42 F4 Ep 300 | tr 0.4364 | val 79.9% | best_val_loss=0.5951 (ep 296)
+S03 seed42 F4 Ep 350 | tr 0.4169 | val 80.6% | best_val_loss=0.5914 (ep 347)
+S03 seed42 F4 Ep 400 | tr 0.4572 | val 79.2% | best_val_loss=0.5914 (ep 347)
+S03 seed42 F4 Ep 450 | tr 0.4365 | val 78.5% | best_val_loss=0.5861 (ep 444)
+S03 seed42 F4 Ep 500 | tr 0.4247 | val 81.9% | best_val_loss=0.5861 (ep 444)
+S03 seed42 F4 Ep 550 | tr 0.4332 | val 82.6% | best_val_loss=0.5861 (ep 444)
+S03 seed42 F4 Early stop @ ep 564 (best epoch 444)
+S03 seed42 F4: test 81.94% (val 80.56%, best epoch 444)
+
+================================================================================
+SUBJECT 04 â€” saliency_reduced â€” 4class â€” profile k64_long â€” 12 ch: C3, CP3, C4, CPz, Cz, C1, CP4, POz, C5, CP2, FCz, C2
+================================================================================
+  S04 [4class] profile=k64_long X=(576, 12, 448) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+S04 seed42 F1 Ep 001 | tr 1.4628 | val 25.0% | best_val_loss=1.3857 (ep 1)
+S04 seed42 F1 Ep 050 | tr 1.0854 | val 32.6% | best_val_loss=1.3857 (ep 1)
+S04 seed42 F1 Ep 100 | tr 0.8557 | val 43.1% | best_val_loss=1.1728 (ep 99)
+S04 seed42 F1 Ep 150 | tr 0.7904 | val 47.2% | best_val_loss=1.1722 (ep 110)
+S04 seed42 F1 Ep 200 | tr 0.7263 | val 43.8% | best_val_loss=1.1699 (ep 153)
+S04 seed42 F1 Ep 250 | tr 0.6696 | val 44.4% | best_val_loss=1.1699 (ep 153)
+S04 seed42 F1 Early stop @ ep 273 (best epoch 153)
+S04 seed42 F1: test 33.33% (val 45.83%, best epoch 153)
+S04 seed42 F2 Ep 001 | tr 1.5332 | val 23.6% | best_val_loss=1.3867 (ep 1)
+S04 seed42 F2 Ep 050 | tr 0.9330 | val 25.0% | best_val_loss=1.3867 (ep 1)
+S04 seed42 F2 Ep 100 | tr 0.8145 | val 33.3% | best_val_loss=1.3867 (ep 1)
+S04 seed42 F2 Early stop @ ep 121 (best epoch 1)
+S04 seed42 F2: test 29.17% (val 23.61%, best epoch 1)
+S04 seed42 F3 Ep 001 | tr 1.4791 | val 25.0% | best_val_loss=1.3862 (ep 1)
+S04 seed42 F3 Ep 050 | tr 1.0212 | val 25.0% | best_val_loss=1.3862 (ep 1)
+S04 seed42 F3 Ep 100 | tr 0.8404 | val 39.6% | best_val_loss=1.3862 (ep 1)
+S04 seed42 F3 Ep 150 | tr 0.7144 | val 47.9% | best_val_loss=1.1690 (ep 127)
+S04 seed42 F3 Ep 200 | tr 0.6442 | val 47.2% | best_val_loss=1.1690 (ep 127)
+S04 seed42 F3 Early stop @ ep 247 (best epoch 127)
+S04 seed42 F3: test 58.33% (val 47.92%, best epoch 127)
+S04 seed42 F4 Ep 001 | tr 1.4548 | val 29.2% | best_val_loss=1.3864 (ep 1)
+S04 seed42 F4 Ep 050 | tr 1.1464 | val 29.9% | best_val_loss=1.3864 (ep 1)
+S04 seed42 F4 Ep 100 | tr 0.9489 | val 39.6% | best_val_loss=1.2072 (ep 94)
+S04 seed42 F4 Ep 150 | tr 0.8449 | val 43.8% | best_val_loss=1.1642 (ep 145)
+S04 seed42 F4 Ep 200 | tr 0.7270 | val 41.7% | best_val_loss=1.1581 (ep 162)
+S04 seed42 F4 Ep 250 | tr 0.6622 | val 45.8% | best_val_loss=1.1581 (ep 162)
+S04 seed42 F4 Early stop @ ep 282 (best epoch 162)
+S04 seed42 F4: test 43.06% (val 44.44%, best epoch 162)
+
+================================================================================
+SUBJECT 05 â€” saliency_reduced â€” 4class â€” profile k64_long â€” 12 ch: CP3, C3, C4, CPz, Cz, CP4, POz, C1, CP2, C5, C2, Pz
+================================================================================
+  S05 [4class] profile=k64_long X=(576, 12, 448) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+S05 seed42 F1 Ep 001 | tr 1.4979 | val 23.6% | best_val_loss=1.3868 (ep 1)
+S05 seed42 F1 Ep 050 | tr 1.1898 | val 25.7% | best_val_loss=1.3836 (ep 32)
+S05 seed42 F1 Ep 100 | tr 1.0343 | val 36.8% | best_val_loss=1.3836 (ep 32)
+S05 seed42 F1 Ep 150 | tr 0.8943 | val 36.8% | best_val_loss=1.3659 (ep 147)
+S05 seed42 F1 Ep 200 | tr 0.7765 | val 42.4% | best_val_loss=1.3473 (ep 179)
+S05 seed42 F1 Ep 250 | tr 0.6860 | val 40.3% | best_val_loss=1.3473 (ep 179)
+S05 seed42 F1 Early stop @ ep 299 (best epoch 179)
+S05 seed42 F1: test 36.11% (val 43.06%, best epoch 179)
+S05 seed42 F2 Ep 001 | tr 1.4784 | val 25.0% | best_val_loss=1.3868 (ep 1)
+S05 seed42 F2 Ep 050 | tr 1.1435 | val 25.0% | best_val_loss=1.3857 (ep 16)
+S05 seed42 F2 Ep 100 | tr 0.9009 | val 24.3% | best_val_loss=1.3857 (ep 16)
+S05 seed42 F2 Early stop @ ep 136 (best epoch 16)
+S05 seed42 F2: test 26.39% (val 23.61%, best epoch 16)
+S05 seed42 F3 Ep 001 | tr 1.5134 | val 25.0% | best_val_loss=1.3864 (ep 1)
+S05 seed42 F3 Ep 050 | tr 1.1714 | val 29.9% | best_val_loss=1.3819 (ep 45)
+S05 seed42 F3 Ep 100 | tr 0.8700 | val 47.2% | best_val_loss=1.1331 (ep 92)
+S05 seed42 F3 Ep 150 | tr 0.7754 | val 53.5% | best_val_loss=1.0692 (ep 140)
+S05 seed42 F3 Ep 200 | tr 0.7100 | val 52.1% | best_val_loss=1.0527 (ep 160)
+S05 seed42 F3 Ep 250 | tr 0.6674 | val 51.4% | best_val_loss=1.0527 (ep 160)
+S05 seed42 F3 Early stop @ ep 280 (best epoch 160)
+S05 seed42 F3: test 47.92% (val 54.86%, best epoch 160)
+S05 seed42 F4 Ep 001 | tr 1.4955 | val 24.3% | best_val_loss=1.3862 (ep 1)
+S05 seed42 F4 Ep 050 | tr 1.1672 | val 21.5% | best_val_loss=1.3862 (ep 1)
+S05 seed42 F4 Ep 100 | tr 1.0393 | val 24.3% | best_val_loss=1.3862 (ep 1)
+S05 seed42 F4 Early stop @ ep 121 (best epoch 1)
+S05 seed42 F4: test 22.92% (val 24.31%, best epoch 1)
+
+================================================================================
+SUBJECT 06 â€” saliency_reduced â€” 4class â€” profile original â€” 12 ch: CP3, C3, CPz, Cz, C4, C1, CP4, POz, CP2, C2, CP1, C5
+================================================================================
+  S06 [4class] profile=original X=(576, 12, 256) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+S06 seed42 F1 Ep 001 | tr 1.4091 | val 25.0% | best_val_loss=1.3865 (ep 1)
+S06 seed42 F1 Ep 050 | tr 1.2501 | val 36.8% | best_val_loss=1.3263 (ep 48)
+S06 seed42 F1 Ep 100 | tr 1.0902 | val 41.0% | best_val_loss=1.2638 (ep 82)
+S06 seed42 F1 Ep 150 | tr 1.0101 | val 41.7% | best_val_loss=1.2603 (ep 127)
+S06 seed42 F1 Ep 200 | tr 0.9775 | val 40.3% | best_val_loss=1.2572 (ep 159)
+S06 seed42 F1 Ep 250 | tr 0.8772 | val 46.5% | best_val_loss=1.2572 (ep 159)
+S06 seed42 F1 Ep 300 | tr 0.8363 | val 46.5% | best_val_loss=1.2455 (ep 297)
+S06 seed42 F1 Ep 350 | tr 0.8949 | val 48.6% | best_val_loss=1.2455 (ep 297)
+S06 seed42 F1 Ep 400 | tr 0.7453 | val 45.1% | best_val_loss=1.2455 (ep 297)
+S06 seed42 F1 Early stop @ ep 417 (best epoch 297)
+S06 seed42 F1: test 43.75% (val 48.61%, best epoch 297)
+S06 seed42 F2 Ep 001 | tr 1.4561 | val 23.6% | best_val_loss=1.3849 (ep 1)
+S06 seed42 F2 Ep 050 | tr 1.2197 | val 25.0% | best_val_loss=1.3849 (ep 1)
+S06 seed42 F2 Ep 100 | tr 1.0537 | val 32.6% | best_val_loss=1.3849 (ep 1)
+S06 seed42 F2 Ep 150 | tr 0.9416 | val 43.1% | best_val_loss=1.3410 (ep 118)
+S06 seed42 F2 Ep 200 | tr 0.8420 | val 45.1% | best_val_loss=1.3303 (ep 189)
+S06 seed42 F2 Ep 250 | tr 0.8490 | val 48.6% | best_val_loss=1.3242 (ep 206)
+S06 seed42 F2 Ep 300 | tr 0.7978 | val 47.9% | best_val_loss=1.3242 (ep 206)
+S06 seed42 F2 Early stop @ ep 326 (best epoch 206)
+S06 seed42 F2: test 40.97% (val 45.14%, best epoch 206)
+S06 seed42 F3 Ep 001 | tr 1.4461 | val 25.7% | best_val_loss=1.3861 (ep 1)
+S06 seed42 F3 Ep 050 | tr 1.1770 | val 31.9% | best_val_loss=1.3612 (ep 50)
+S06 seed42 F3 Ep 100 | tr 1.1210 | val 41.0% | best_val_loss=1.2832 (ep 100)
+S06 seed42 F3 Ep 150 | tr 1.0157 | val 39.6% | best_val_loss=1.2832 (ep 100)
+S06 seed42 F3 Ep 200 | tr 0.9240 | val 41.0% | best_val_loss=1.2832 (ep 100)
+S06 seed42 F3 Early stop @ ep 220 (best epoch 100)
+S06 seed42 F3: test 41.67% (val 40.97%, best epoch 100)
+S06 seed42 F4 Ep 001 | tr 1.5085 | val 25.0% | best_val_loss=1.3857 (ep 1)
+S06 seed42 F4 Ep 050 | tr 1.2545 | val 29.9% | best_val_loss=1.3840 (ep 36)
+S06 seed42 F4 Ep 100 | tr 1.0710 | val 44.4% | best_val_loss=1.3102 (ep 94)
+S06 seed42 F4 Ep 150 | tr 1.0105 | val 46.5% | best_val_loss=1.2423 (ep 144)
+S06 seed42 F4 Ep 200 | tr 0.8601 | val 43.8% | best_val_loss=1.2272 (ep 161)
+S06 seed42 F4 Ep 250 | tr 0.8319 | val 49.3% | best_val_loss=1.1906 (ep 245)
+S06 seed42 F4 Ep 300 | tr 0.7516 | val 50.0% | best_val_loss=1.1906 (ep 245)
+S06 seed42 F4 Ep 350 | tr 0.7638 | val 47.9% | best_val_loss=1.1906 (ep 245)
+S06 seed42 F4 Early stop @ ep 365 (best epoch 245)
+S06 seed42 F4: test 45.83% (val 47.92%, best epoch 245)
+
+================================================================================
+SUBJECT 07 â€” saliency_reduced â€” 4class â€” profile original â€” 12 ch: CP3, CPz, C4, Cz, C3, CP4, POz, C1, CP2, C5, C2, CP1
+================================================================================
+  S07 [4class] profile=original X=(576, 12, 256) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+S07 seed42 F1 Ep 001 | tr 1.4587 | val 26.4% | best_val_loss=1.3865 (ep 1)
+S07 seed42 F1 Ep 050 | tr 0.9400 | val 25.0% | best_val_loss=1.3863 (ep 7)
+S07 seed42 F1 Ep 100 | tr 0.7423 | val 63.9% | best_val_loss=0.8248 (ep 97)
+S07 seed42 F1 Ep 150 | tr 0.6735 | val 66.7% | best_val_loss=0.7927 (ep 126)
+S07 seed42 F1 Ep 200 | tr 0.5891 | val 65.3% | best_val_loss=0.7786 (ep 194)
+S07 seed42 F1 Ep 250 | tr 0.5804 | val 66.0% | best_val_loss=0.7786 (ep 194)
+S07 seed42 F1 Ep 300 | tr 0.5526 | val 66.7% | best_val_loss=0.7786 (ep 194)
+S07 seed42 F1 Early stop @ ep 314 (best epoch 194)
+S07 seed42 F1: test 69.44% (val 70.14%, best epoch 194)
+S07 seed42 F2 Ep 001 | tr 1.4827 | val 22.9% | best_val_loss=1.3865 (ep 1)
+S07 seed42 F2 Ep 050 | tr 0.9579 | val 25.0% | best_val_loss=1.3865 (ep 1)
+S07 seed42 F2 Ep 100 | tr 0.7185 | val 58.3% | best_val_loss=0.8835 (ep 98)
+S07 seed42 F2 Ep 150 | tr 0.5777 | val 68.8% | best_val_loss=0.7084 (ep 120)
+S07 seed42 F2 Ep 200 | tr 0.5900 | val 72.2% | best_val_loss=0.6999 (ep 193)
+S07 seed42 F2 Ep 250 | tr 0.5208 | val 71.5% | best_val_loss=0.6860 (ep 211)
+S07 seed42 F2 Ep 300 | tr 0.5166 | val 70.1% | best_val_loss=0.6817 (ep 260)
+S07 seed42 F2 Ep 350 | tr 0.4677 | val 71.5% | best_val_loss=0.6817 (ep 260)
+S07 seed42 F2 Early stop @ ep 380 (best epoch 260)
+S07 seed42 F2: test 75.00% (val 75.00%, best epoch 260)
+S07 seed42 F3 Ep 001 | tr 1.4845 | val 25.0% | best_val_loss=1.3863 (ep 1)
+S07 seed42 F3 Ep 050 | tr 1.0495 | val 25.0% | best_val_loss=1.3863 (ep 1)
+S07 seed42 F3 Ep 100 | tr 0.7809 | val 66.0% | best_val_loss=0.7865 (ep 100)
+S07 seed42 F3 Ep 150 | tr 0.6265 | val 69.4% | best_val_loss=0.6830 (ep 136)
+S07 seed42 F3 Ep 200 | tr 0.6439 | val 81.9% | best_val_loss=0.6084 (ep 199)
+S07 seed42 F3 Ep 250 | tr 0.5739 | val 83.3% | best_val_loss=0.5997 (ep 246)
+S07 seed42 F3 Ep 300 | tr 0.5244 | val 79.9% | best_val_loss=0.5738 (ep 291)
+S07 seed42 F3 Ep 350 | tr 0.5077 | val 80.6% | best_val_loss=0.5673 (ep 341)
+S07 seed42 F3 Ep 400 | tr 0.4898 | val 81.9% | best_val_loss=0.5621 (ep 395)
+S07 seed42 F3 Ep 450 | tr 0.4669 | val 79.9% | best_val_loss=0.5531 (ep 443)
+S07 seed42 F3 Ep 500 | tr 0.4648 | val 85.4% | best_val_loss=0.5501 (ep 494)
+S07 seed42 F3 Ep 550 | tr 0.4960 | val 84.0% | best_val_loss=0.5476 (ep 537)
+S07 seed42 F3 Ep 600 | tr 0.4701 | val 83.3% | best_val_loss=0.5476 (ep 537)
+S07 seed42 F3 Ep 650 | tr 0.4829 | val 81.9% | best_val_loss=0.5476 (ep 537)
+S07 seed42 F3 Early stop @ ep 657 (best epoch 537)
+S07 seed42 F3: test 77.08% (val 84.03%, best epoch 537)
+S07 seed42 F4 Ep 001 | tr 1.4623 | val 25.0% | best_val_loss=1.3865 (ep 1)
+S07 seed42 F4 Ep 050 | tr 0.9156 | val 27.8% | best_val_loss=1.3865 (ep 1)
+S07 seed42 F4 Ep 100 | tr 0.6607 | val 65.3% | best_val_loss=0.8660 (ep 97)
+S07 seed42 F4 Ep 150 | tr 0.6055 | val 67.4% | best_val_loss=0.7888 (ep 149)
+S07 seed42 F4 Ep 200 | tr 0.5066 | val 72.2% | best_val_loss=0.7628 (ep 185)
+S07 seed42 F4 Ep 250 | tr 0.5124 | val 70.8% | best_val_loss=0.7628 (ep 185)
+S07 seed42 F4 Ep 300 | tr 0.4616 | val 69.4% | best_val_loss=0.7628 (ep 185)
+S07 seed42 F4 Early stop @ ep 305 (best epoch 185)
+S07 seed42 F4: test 70.83% (val 72.22%, best epoch 185)
+
+================================================================================
+SUBJECT 08 â€” saliency_reduced â€” 4class â€” profile original â€” 12 ch: C3, CP3, C4, C1, CPz, Cz, POz, C5, C2, CP2, CP4, FCz
+================================================================================
+  S08 [4class] profile=original X=(576, 12, 256) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+S08 seed42 F1 Ep 001 | tr 1.5193 | val 27.8% | best_val_loss=1.3855 (ep 1)
+S08 seed42 F1 Ep 050 | tr 0.9200 | val 50.0% | best_val_loss=1.3852 (ep 5)
+S08 seed42 F1 Ep 100 | tr 0.7296 | val 70.8% | best_val_loss=0.8840 (ep 98)
+S08 seed42 F1 Ep 150 | tr 0.6598 | val 74.3% | best_val_loss=0.7377 (ep 126)
+S08 seed42 F1 Ep 200 | tr 0.6330 | val 74.3% | best_val_loss=0.7377 (ep 126)
+S08 seed42 F1 Ep 250 | tr 0.6467 | val 72.2% | best_val_loss=0.7163 (ep 229)
+S08 seed42 F1 Ep 300 | tr 0.5978 | val 63.9% | best_val_loss=0.7163 (ep 229)
+S08 seed42 F1 Early stop @ ep 349 (best epoch 229)
+S08 seed42 F1: test 82.64% (val 76.39%, best epoch 229)
+S08 seed42 F2 Ep 001 | tr 1.5396 | val 24.3% | best_val_loss=1.3860 (ep 1)
+S08 seed42 F2 Ep 050 | tr 0.8369 | val 48.6% | best_val_loss=1.3426 (ep 50)
+S08 seed42 F2 Ep 100 | tr 0.7235 | val 66.0% | best_val_loss=0.8632 (ep 89)
+S08 seed42 F2 Ep 150 | tr 0.6194 | val 78.5% | best_val_loss=0.6649 (ep 148)
+S08 seed42 F2 Ep 200 | tr 0.5920 | val 79.9% | best_val_loss=0.6649 (ep 148)
+S08 seed42 F2 Ep 250 | tr 0.5407 | val 77.1% | best_val_loss=0.6599 (ep 238)
+S08 seed42 F2 Ep 300 | tr 0.5486 | val 80.6% | best_val_loss=0.6585 (ep 286)
+S08 seed42 F2 Ep 350 | tr 0.5332 | val 79.2% | best_val_loss=0.6585 (ep 286)
+S08 seed42 F2 Ep 400 | tr 0.5061 | val 76.4% | best_val_loss=0.6585 (ep 286)
+S08 seed42 F2 Early stop @ ep 406 (best epoch 286)
+S08 seed42 F2: test 70.14% (val 81.94%, best epoch 286)
+S08 seed42 F3 Ep 001 | tr 1.4855 | val 20.8% | best_val_loss=1.3871 (ep 1)
+S08 seed42 F3 Ep 050 | tr 0.7757 | val 56.2% | best_val_loss=1.3833 (ep 50)
+S08 seed42 F3 Ep 100 | tr 0.6746 | val 72.2% | best_val_loss=0.7750 (ep 95)
+S08 seed42 F3 Ep 150 | tr 0.5528 | val 72.2% | best_val_loss=0.7739 (ep 150)
+S08 seed42 F3 Ep 200 | tr 0.5829 | val 71.5% | best_val_loss=0.7739 (ep 150)
+S08 seed42 F3 Ep 250 | tr 0.5113 | val 73.6% | best_val_loss=0.7491 (ep 228)
+S08 seed42 F3 Ep 300 | tr 0.5458 | val 73.6% | best_val_loss=0.7491 (ep 228)
+S08 seed42 F3 Early stop @ ep 348 (best epoch 228)
+S08 seed42 F3: test 75.00% (val 74.31%, best epoch 228)
+S08 seed42 F4 Ep 001 | tr 1.4759 | val 21.5% | best_val_loss=1.3862 (ep 1)
+S08 seed42 F4 Ep 050 | tr 0.8707 | val 49.3% | best_val_loss=1.3862 (ep 1)
+S08 seed42 F4 Ep 100 | tr 0.6541 | val 75.7% | best_val_loss=0.7690 (ep 100)
+S08 seed42 F4 Ep 150 | tr 0.6136 | val 75.7% | best_val_loss=0.6859 (ep 117)
+S08 seed42 F4 Ep 200 | tr 0.6004 | val 75.0% | best_val_loss=0.6521 (ep 162)
+S08 seed42 F4 Ep 250 | tr 0.4982 | val 77.8% | best_val_loss=0.6521 (ep 162)
+S08 seed42 F4 Early stop @ ep 282 (best epoch 162)
+S08 seed42 F4: test 72.92% (val 80.56%, best epoch 162)
+
+================================================================================
+SUBJECT 09 â€” saliency_reduced â€” 4class â€” profile original â€” 12 ch: CP3, C3, Cz, C1, CPz, POz, C4, CP4, CP2, C2, FCz, C5
+================================================================================
+  S09 [4class] profile=original X=(576, 12, 256) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+S09 seed42 F1 Ep 001 | tr 1.4246 | val 30.6% | best_val_loss=1.3848 (ep 1)
+S09 seed42 F1 Ep 050 | tr 0.6972 | val 31.2% | best_val_loss=1.3843 (ep 3)
+S09 seed42 F1 Ep 100 | tr 0.5826 | val 73.6% | best_val_loss=0.7149 (ep 100)
+S09 seed42 F1 Ep 150 | tr 0.5478 | val 77.1% | best_val_loss=0.6749 (ep 145)
+S09 seed42 F1 Ep 200 | tr 0.4810 | val 80.6% | best_val_loss=0.6476 (ep 187)
+S09 seed42 F1 Ep 250 | tr 0.4504 | val 81.2% | best_val_loss=0.6429 (ep 210)
+S09 seed42 F1 Ep 300 | tr 0.4453 | val 81.2% | best_val_loss=0.6365 (ep 278)
+S09 seed42 F1 Ep 350 | tr 0.4572 | val 81.2% | best_val_loss=0.6347 (ep 350)
+S09 seed42 F1 Ep 400 | tr 0.4508 | val 79.9% | best_val_loss=0.6207 (ep 365)
+S09 seed42 F1 Ep 450 | tr 0.3917 | val 79.9% | best_val_loss=0.6207 (ep 365)
+S09 seed42 F1 Early stop @ ep 485 (best epoch 365)
+S09 seed42 F1: test 87.50% (val 80.56%, best epoch 365)
+S09 seed42 F2 Ep 001 | tr 1.4268 | val 24.3% | best_val_loss=1.3856 (ep 1)
+S09 seed42 F2 Ep 050 | tr 0.6513 | val 29.9% | best_val_loss=1.3854 (ep 3)
+S09 seed42 F2 Ep 100 | tr 0.5222 | val 74.3% | best_val_loss=0.7799 (ep 100)
+S09 seed42 F2 Ep 150 | tr 0.4776 | val 81.9% | best_val_loss=0.5867 (ep 149)
+S09 seed42 F2 Ep 200 | tr 0.4262 | val 81.2% | best_val_loss=0.5726 (ep 183)
+S09 seed42 F2 Ep 250 | tr 0.4198 | val 84.0% | best_val_loss=0.5712 (ep 235)
+S09 seed42 F2 Ep 300 | tr 0.4007 | val 83.3% | best_val_loss=0.5491 (ep 267)
+S09 seed42 F2 Ep 350 | tr 0.3591 | val 81.2% | best_val_loss=0.5491 (ep 267)
+S09 seed42 F2 Early stop @ ep 387 (best epoch 267)
+S09 seed42 F2: test 82.64% (val 85.42%, best epoch 267)
+S09 seed42 F3 Ep 001 | tr 1.4506 | val 24.3% | best_val_loss=1.3862 (ep 1)
+S09 seed42 F3 Ep 050 | tr 0.6825 | val 36.1% | best_val_loss=1.3862 (ep 2)
+S09 seed42 F3 Ep 100 | tr 0.6098 | val 82.6% | best_val_loss=0.6515 (ep 100)
+S09 seed42 F3 Ep 150 | tr 0.4988 | val 84.0% | best_val_loss=0.5890 (ep 144)
+S09 seed42 F3 Ep 200 | tr 0.4695 | val 85.4% | best_val_loss=0.5843 (ep 186)
+S09 seed42 F3 Ep 250 | tr 0.4734 | val 82.6% | best_val_loss=0.5843 (ep 186)
+S09 seed42 F3 Ep 300 | tr 0.4045 | val 83.3% | best_val_loss=0.5843 (ep 186)
+S09 seed42 F3 Early stop @ ep 306 (best epoch 186)
+S09 seed42 F3: test 93.06% (val 85.42%, best epoch 186)
+S09 seed42 F4 Ep 001 | tr 1.4477 | val 24.3% | best_val_loss=1.3871 (ep 1)
+S09 seed42 F4 Ep 050 | tr 0.7692 | val 33.3% | best_val_loss=1.3871 (ep 1)
+S09 seed42 F4 Ep 100 | tr 0.5773 | val 84.0% | best_val_loss=0.5548 (ep 100)
+S09 seed42 F4 Ep 150 | tr 0.5687 | val 84.0% | best_val_loss=0.5173 (ep 126)
+S09 seed42 F4 Ep 200 | tr 0.4774 | val 84.7% | best_val_loss=0.5012 (ep 197)
+S09 seed42 F4 Ep 250 | tr 0.4654 | val 86.8% | best_val_loss=0.4852 (ep 243)
+S09 seed42 F4 Ep 300 | tr 0.4616 | val 84.0% | best_val_loss=0.4763 (ep 286)
+S09 seed42 F4 Ep 350 | tr 0.4059 | val 86.8% | best_val_loss=0.4763 (ep 286)
+S09 seed42 F4 Ep 400 | tr 0.3914 | val 88.9% | best_val_loss=0.4763 (ep 286)
+S09 seed42 F4 Early stop @ ep 406 (best epoch 286)
+S09 seed42 F4: test 79.17% (val 89.58%, best epoch 286)
+Results written to D:\EEG\NeuroGrounded-EEG\EEGNetV4\BNCI_001\4class\results\saliency_reduced (grand mean 59.65% over 9 subjects; chance 25.0%, majority 25.0%)
+Report saved: D:\EEG\NeuroGrounded-EEG\EEGNetV4\BNCI_001\4class\results\saliency_reduced\saliency_reduced_report.txt
+
+================================================================================
+FINAL SUMMARY - EEGNetv4 BNCI2014-001 4class
+================================================================================
+22ch 58.97%  ->  saliency 12ch 59.65%  (chance 25.0%, majority 25.0%)
+[0m

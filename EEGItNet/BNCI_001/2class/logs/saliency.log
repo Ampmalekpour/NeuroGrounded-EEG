@@ -1,0 +1,858 @@
+$ D:\EEG\braindec\.venv\Scripts\python.exe -u D:\EEG\NeuroGrounded-EEG\EEGItNet\BNCI_001\2class\eegitnet_bnci_2class_saliency.py
+Using device: cuda | class mode: 2class | seeds: [42] | subjects: [1, 2, 3, 4, 5, 6, 7, 8, 9] | synthetic: False
+
+================================================================================
+SUBJECT 01 â€” full22 â€” 2class â€” profile cue_0_4 â€” 22 ch: Fz, FC3, FC1, FCz, FC2, FC4, C5, C3, C1, Cz, C2, C4, C6, CP3, CP1, CPz, CP2, CP4, P1, Pz, P2, POz
+================================================================================
+  S01 [2class] profile=cue_0_4 X=(288, 22, 1000) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+D:\EEG\braindec\.venv\lib\site-packages\torch\nn\modules\conv.py:459: UserWarning: Using padding='same' with even kernel lengths and odd dilation may require a zero-padded copy of the input be created (Triggered internally at ..\aten\src\ATen\native\Convolution.cpp:1004.)
+  return F.conv2d(input, weight, bias, self.stride,
+S01 seed42 F1 Ep 001 | tr 0.6886 | val (current weights) 44.4%
+S01 seed42 F1 Ep 050 | tr 0.4818 | val (current weights) 54.2%
+S01 seed42 F1 Ep 100 | tr 0.4226 | val (current weights) 55.6%
+S01 seed42 F1 Ep 150 | tr 0.4463 | val (current weights) 61.1%
+S01 seed42 F1 Ep 200 | tr 0.4058 | val (current weights) 59.7%
+S01 seed42 F1 Ep 250 | tr 0.4312 | val (current weights) 62.5%
+S01 seed42 F1 Ep 300 | tr 0.4341 | val (current weights) 66.7%
+S01 seed42 F1 Ep 350 | tr 0.3779 | val (current weights) 66.7%
+S01 seed42 F1: test 69.44% (val 63.89%, best epoch 350)
+S01 seed42 F2 Ep 001 | tr 0.7191 | val (current weights) 51.4%
+S01 seed42 F2 Ep 050 | tr 0.4396 | val (current weights) 70.8%
+S01 seed42 F2 Ep 100 | tr 0.4289 | val (current weights) 68.1%
+S01 seed42 F2 Ep 150 | tr 0.4034 | val (current weights) 61.1%
+S01 seed42 F2 Ep 200 | tr 0.4010 | val (current weights) 62.5%
+S01 seed42 F2 Ep 250 | tr 0.4766 | val (current weights) 69.4%
+S01 seed42 F2 Ep 300 | tr 0.5356 | val (current weights) 65.3%
+S01 seed42 F2 Ep 350 | tr 0.3830 | val (current weights) 65.3%
+S01 seed42 F2: test 70.83% (val 69.44%, best epoch 350)
+S01 seed42 F3 Ep 001 | tr 0.7282 | val (current weights) 44.4%
+S01 seed42 F3 Ep 050 | tr 0.5299 | val (current weights) 54.2%
+S01 seed42 F3 Ep 100 | tr 0.4860 | val (current weights) 63.9%
+S01 seed42 F3 Ep 150 | tr 0.4585 | val (current weights) 69.4%
+S01 seed42 F3 Ep 200 | tr 0.4074 | val (current weights) 70.8%
+S01 seed42 F3 Ep 250 | tr 0.4388 | val (current weights) 72.2%
+S01 seed42 F3 Ep 300 | tr 0.4976 | val (current weights) 73.6%
+S01 seed42 F3 Ep 350 | tr 0.4099 | val (current weights) 72.2%
+S01 seed42 F3: test 70.83% (val 73.61%, best epoch 350)
+S01 seed42 F4 Ep 001 | tr 0.7267 | val (current weights) 52.8%
+S01 seed42 F4 Ep 050 | tr 0.5658 | val (current weights) 56.9%
+S01 seed42 F4 Ep 100 | tr 0.5099 | val (current weights) 66.7%
+S01 seed42 F4 Ep 150 | tr 0.4286 | val (current weights) 72.2%
+S01 seed42 F4 Ep 200 | tr 0.4674 | val (current weights) 69.4%
+S01 seed42 F4 Ep 250 | tr 0.4435 | val (current weights) 72.2%
+S01 seed42 F4 Ep 300 | tr 0.3819 | val (current weights) 72.2%
+S01 seed42 F4 Ep 350 | tr 0.5230 | val (current weights) 72.2%
+S01 seed42 F4: test 72.22% (val 73.61%, best epoch 350)
+
+================================================================================
+SUBJECT 02 â€” full22 â€” 2class â€” profile cue_0_4 â€” 22 ch: Fz, FC3, FC1, FCz, FC2, FC4, C5, C3, C1, Cz, C2, C4, C6, CP3, CP1, CPz, CP2, CP4, P1, Pz, P2, POz
+================================================================================
+  S02 [2class] profile=cue_0_4 X=(288, 22, 1000) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S02 seed42 F1 Ep 001 | tr 0.7221 | val (current weights) 56.9%
+S02 seed42 F1 Ep 050 | tr 0.5620 | val (current weights) 54.2%
+S02 seed42 F1 Ep 100 | tr 0.5156 | val (current weights) 58.3%
+S02 seed42 F1 Ep 150 | tr 0.4389 | val (current weights) 63.9%
+S02 seed42 F1 Ep 200 | tr 0.4534 | val (current weights) 63.9%
+S02 seed42 F1 Ep 250 | tr 0.4304 | val (current weights) 65.3%
+S02 seed42 F1 Ep 300 | tr 0.4860 | val (current weights) 65.3%
+S02 seed42 F1 Ep 350 | tr 0.4043 | val (current weights) 65.3%
+S02 seed42 F1: test 63.89% (val 66.67%, best epoch 350)
+S02 seed42 F2 Ep 001 | tr 0.7468 | val (current weights) 45.8%
+S02 seed42 F2 Ep 050 | tr 0.5977 | val (current weights) 56.9%
+S02 seed42 F2 Ep 100 | tr 0.4958 | val (current weights) 58.3%
+S02 seed42 F2 Ep 150 | tr 0.4889 | val (current weights) 58.3%
+S02 seed42 F2 Ep 200 | tr 0.4705 | val (current weights) 52.8%
+S02 seed42 F2 Ep 250 | tr 0.4630 | val (current weights) 52.8%
+S02 seed42 F2 Ep 300 | tr 0.4510 | val (current weights) 54.2%
+S02 seed42 F2 Ep 350 | tr 0.4784 | val (current weights) 55.6%
+S02 seed42 F2: test 59.72% (val 54.17%, best epoch 350)
+S02 seed42 F3 Ep 001 | tr 0.7391 | val (current weights) 54.2%
+S02 seed42 F3 Ep 050 | tr 0.5370 | val (current weights) 54.2%
+S02 seed42 F3 Ep 100 | tr 0.4695 | val (current weights) 54.2%
+S02 seed42 F3 Ep 150 | tr 0.4567 | val (current weights) 52.8%
+S02 seed42 F3 Ep 200 | tr 0.4224 | val (current weights) 52.8%
+S02 seed42 F3 Ep 250 | tr 0.4209 | val (current weights) 55.6%
+S02 seed42 F3 Ep 300 | tr 0.4289 | val (current weights) 56.9%
+S02 seed42 F3 Ep 350 | tr 0.4116 | val (current weights) 55.6%
+S02 seed42 F3: test 59.72% (val 55.56%, best epoch 350)
+S02 seed42 F4 Ep 001 | tr 0.6965 | val (current weights) 51.4%
+S02 seed42 F4 Ep 050 | tr 0.5283 | val (current weights) 51.4%
+S02 seed42 F4 Ep 100 | tr 0.5038 | val (current weights) 59.7%
+S02 seed42 F4 Ep 150 | tr 0.4315 | val (current weights) 58.3%
+S02 seed42 F4 Ep 200 | tr 0.4240 | val (current weights) 55.6%
+S02 seed42 F4 Ep 250 | tr 0.4522 | val (current weights) 56.9%
+S02 seed42 F4 Ep 300 | tr 0.5284 | val (current weights) 58.3%
+S02 seed42 F4 Ep 350 | tr 0.4483 | val (current weights) 56.9%
+S02 seed42 F4: test 54.17% (val 58.33%, best epoch 350)
+
+================================================================================
+SUBJECT 03 â€” full22 â€” 2class â€” profile cue_0_4 â€” 22 ch: Fz, FC3, FC1, FCz, FC2, FC4, C5, C3, C1, Cz, C2, C4, C6, CP3, CP1, CPz, CP2, CP4, P1, Pz, P2, POz
+================================================================================
+  S03 [2class] profile=cue_0_4 X=(288, 22, 1000) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S03 seed42 F1 Ep 001 | tr 0.7279 | val (current weights) 51.4%
+S03 seed42 F1 Ep 050 | tr 0.4524 | val (current weights) 66.7%
+S03 seed42 F1 Ep 100 | tr 0.5195 | val (current weights) 75.0%
+S03 seed42 F1 Ep 150 | tr 0.4151 | val (current weights) 68.1%
+S03 seed42 F1 Ep 200 | tr 0.4620 | val (current weights) 77.8%
+S03 seed42 F1 Ep 250 | tr 0.4875 | val (current weights) 77.8%
+S03 seed42 F1 Ep 300 | tr 0.3847 | val (current weights) 77.8%
+S03 seed42 F1 Ep 350 | tr 0.4749 | val (current weights) 77.8%
+S03 seed42 F1: test 63.89% (val 79.17%, best epoch 350)
+S03 seed42 F2 Ep 001 | tr 0.6852 | val (current weights) 50.0%
+S03 seed42 F2 Ep 050 | tr 0.5226 | val (current weights) 68.1%
+S03 seed42 F2 Ep 100 | tr 0.4179 | val (current weights) 81.9%
+S03 seed42 F2 Ep 150 | tr 0.4000 | val (current weights) 81.9%
+S03 seed42 F2 Ep 200 | tr 0.4078 | val (current weights) 77.8%
+S03 seed42 F2 Ep 250 | tr 0.3826 | val (current weights) 80.6%
+S03 seed42 F2 Ep 300 | tr 0.3685 | val (current weights) 81.9%
+S03 seed42 F2 Ep 350 | tr 0.6161 | val (current weights) 81.9%
+S03 seed42 F2: test 77.78% (val 79.17%, best epoch 350)
+S03 seed42 F3 Ep 001 | tr 0.7125 | val (current weights) 50.0%
+S03 seed42 F3 Ep 050 | tr 0.5319 | val (current weights) 55.6%
+S03 seed42 F3 Ep 100 | tr 0.4213 | val (current weights) 72.2%
+S03 seed42 F3 Ep 150 | tr 0.4620 | val (current weights) 70.8%
+S03 seed42 F3 Ep 200 | tr 0.3798 | val (current weights) 73.6%
+S03 seed42 F3 Ep 250 | tr 0.3857 | val (current weights) 75.0%
+S03 seed42 F3 Ep 300 | tr 0.4046 | val (current weights) 76.4%
+S03 seed42 F3 Ep 350 | tr 0.3980 | val (current weights) 75.0%
+S03 seed42 F3: test 81.94% (val 73.61%, best epoch 350)
+S03 seed42 F4 Ep 001 | tr 0.7230 | val (current weights) 48.6%
+S03 seed42 F4 Ep 050 | tr 0.4974 | val (current weights) 59.7%
+S03 seed42 F4 Ep 100 | tr 0.4127 | val (current weights) 66.7%
+S03 seed42 F4 Ep 150 | tr 0.4243 | val (current weights) 66.7%
+S03 seed42 F4 Ep 200 | tr 0.4189 | val (current weights) 69.4%
+S03 seed42 F4 Ep 250 | tr 0.4012 | val (current weights) 72.2%
+S03 seed42 F4 Ep 300 | tr 0.4720 | val (current weights) 70.8%
+S03 seed42 F4 Ep 350 | tr 0.5005 | val (current weights) 69.4%
+S03 seed42 F4: test 66.67% (val 69.44%, best epoch 350)
+
+================================================================================
+SUBJECT 04 â€” full22 â€” 2class â€” profile cue_0_4 â€” 22 ch: Fz, FC3, FC1, FCz, FC2, FC4, C5, C3, C1, Cz, C2, C4, C6, CP3, CP1, CPz, CP2, CP4, P1, Pz, P2, POz
+================================================================================
+  S04 [2class] profile=cue_0_4 X=(288, 22, 1000) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S04 seed42 F1 Ep 001 | tr 0.7019 | val (current weights) 54.2%
+S04 seed42 F1 Ep 050 | tr 0.4970 | val (current weights) 68.1%
+S04 seed42 F1 Ep 100 | tr 0.4832 | val (current weights) 70.8%
+S04 seed42 F1 Ep 150 | tr 0.4330 | val (current weights) 65.3%
+S04 seed42 F1 Ep 200 | tr 0.3944 | val (current weights) 69.4%
+S04 seed42 F1 Ep 250 | tr 0.3790 | val (current weights) 66.7%
+S04 seed42 F1 Ep 300 | tr 0.4144 | val (current weights) 66.7%
+S04 seed42 F1 Ep 350 | tr 0.3936 | val (current weights) 66.7%
+S04 seed42 F1: test 72.22% (val 66.67%, best epoch 350)
+S04 seed42 F2 Ep 001 | tr 0.7167 | val (current weights) 59.7%
+S04 seed42 F2 Ep 050 | tr 0.5039 | val (current weights) 62.5%
+S04 seed42 F2 Ep 100 | tr 0.4777 | val (current weights) 72.2%
+S04 seed42 F2 Ep 150 | tr 0.4053 | val (current weights) 72.2%
+S04 seed42 F2 Ep 200 | tr 0.4383 | val (current weights) 70.8%
+S04 seed42 F2 Ep 250 | tr 0.4012 | val (current weights) 73.6%
+S04 seed42 F2 Ep 300 | tr 0.4321 | val (current weights) 73.6%
+S04 seed42 F2 Ep 350 | tr 0.3932 | val (current weights) 75.0%
+S04 seed42 F2: test 75.00% (val 73.61%, best epoch 350)
+S04 seed42 F3 Ep 001 | tr 0.7322 | val (current weights) 47.2%
+S04 seed42 F3 Ep 050 | tr 0.4985 | val (current weights) 59.7%
+S04 seed42 F3 Ep 100 | tr 0.5744 | val (current weights) 58.3%
+S04 seed42 F3 Ep 150 | tr 0.4560 | val (current weights) 63.9%
+S04 seed42 F3 Ep 200 | tr 0.3928 | val (current weights) 61.1%
+S04 seed42 F3 Ep 250 | tr 0.3843 | val (current weights) 63.9%
+S04 seed42 F3 Ep 300 | tr 0.4040 | val (current weights) 62.5%
+S04 seed42 F3 Ep 350 | tr 0.5407 | val (current weights) 62.5%
+S04 seed42 F3: test 65.28% (val 62.50%, best epoch 350)
+S04 seed42 F4 Ep 001 | tr 0.7274 | val (current weights) 50.0%
+S04 seed42 F4 Ep 050 | tr 0.4578 | val (current weights) 66.7%
+S04 seed42 F4 Ep 100 | tr 0.4390 | val (current weights) 70.8%
+S04 seed42 F4 Ep 150 | tr 0.4124 | val (current weights) 75.0%
+S04 seed42 F4 Ep 200 | tr 0.4059 | val (current weights) 72.2%
+S04 seed42 F4 Ep 250 | tr 0.5169 | val (current weights) 68.1%
+S04 seed42 F4 Ep 300 | tr 0.4630 | val (current weights) 69.4%
+S04 seed42 F4 Ep 350 | tr 0.4708 | val (current weights) 72.2%
+S04 seed42 F4: test 70.83% (val 70.83%, best epoch 350)
+
+================================================================================
+SUBJECT 05 â€” full22 â€” 2class â€” profile cue_0_4 â€” 22 ch: Fz, FC3, FC1, FCz, FC2, FC4, C5, C3, C1, Cz, C2, C4, C6, CP3, CP1, CPz, CP2, CP4, P1, Pz, P2, POz
+================================================================================
+  S05 [2class] profile=cue_0_4 X=(288, 22, 1000) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S05 seed42 F1 Ep 001 | tr 0.7333 | val (current weights) 55.6%
+S05 seed42 F1 Ep 050 | tr 0.4862 | val (current weights) 63.9%
+S05 seed42 F1 Ep 100 | tr 0.4450 | val (current weights) 61.1%
+S05 seed42 F1 Ep 150 | tr 0.5073 | val (current weights) 66.7%
+S05 seed42 F1 Ep 200 | tr 0.4131 | val (current weights) 65.3%
+S05 seed42 F1 Ep 250 | tr 0.5131 | val (current weights) 63.9%
+S05 seed42 F1 Ep 300 | tr 0.4781 | val (current weights) 68.1%
+S05 seed42 F1 Ep 350 | tr 0.4672 | val (current weights) 65.3%
+S05 seed42 F1: test 58.33% (val 66.67%, best epoch 350)
+S05 seed42 F2 Ep 001 | tr 0.7400 | val (current weights) 58.3%
+S05 seed42 F2 Ep 050 | tr 0.4867 | val (current weights) 51.4%
+S05 seed42 F2 Ep 100 | tr 0.4627 | val (current weights) 54.2%
+S05 seed42 F2 Ep 150 | tr 0.4036 | val (current weights) 52.8%
+S05 seed42 F2 Ep 200 | tr 0.4842 | val (current weights) 58.3%
+S05 seed42 F2 Ep 250 | tr 0.4349 | val (current weights) 58.3%
+S05 seed42 F2 Ep 300 | tr 0.3886 | val (current weights) 58.3%
+S05 seed42 F2 Ep 350 | tr 0.4398 | val (current weights) 58.3%
+S05 seed42 F2: test 58.33% (val 58.33%, best epoch 350)
+S05 seed42 F3 Ep 001 | tr 0.7107 | val (current weights) 51.4%
+S05 seed42 F3 Ep 050 | tr 0.5035 | val (current weights) 61.1%
+S05 seed42 F3 Ep 100 | tr 0.5523 | val (current weights) 56.9%
+S05 seed42 F3 Ep 150 | tr 0.5384 | val (current weights) 61.1%
+S05 seed42 F3 Ep 200 | tr 0.4407 | val (current weights) 61.1%
+S05 seed42 F3 Ep 250 | tr 0.4737 | val (current weights) 58.3%
+S05 seed42 F3 Ep 300 | tr 0.4397 | val (current weights) 58.3%
+S05 seed42 F3 Ep 350 | tr 0.4582 | val (current weights) 59.7%
+S05 seed42 F3: test 58.33% (val 59.72%, best epoch 350)
+S05 seed42 F4 Ep 001 | tr 0.7156 | val (current weights) 50.0%
+S05 seed42 F4 Ep 050 | tr 0.5286 | val (current weights) 59.7%
+S05 seed42 F4 Ep 100 | tr 0.5218 | val (current weights) 52.8%
+S05 seed42 F4 Ep 150 | tr 0.4145 | val (current weights) 54.2%
+S05 seed42 F4 Ep 200 | tr 0.4437 | val (current weights) 56.9%
+S05 seed42 F4 Ep 250 | tr 0.3980 | val (current weights) 52.8%
+S05 seed42 F4 Ep 300 | tr 0.5336 | val (current weights) 52.8%
+S05 seed42 F4 Ep 350 | tr 0.3991 | val (current weights) 52.8%
+S05 seed42 F4: test 66.67% (val 52.78%, best epoch 350)
+
+================================================================================
+SUBJECT 06 â€” full22 â€” 2class â€” profile cue_0_4 â€” 22 ch: Fz, FC3, FC1, FCz, FC2, FC4, C5, C3, C1, Cz, C2, C4, C6, CP3, CP1, CPz, CP2, CP4, P1, Pz, P2, POz
+================================================================================
+  S06 [2class] profile=cue_0_4 X=(288, 22, 1000) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S06 seed42 F1 Ep 001 | tr 0.7241 | val (current weights) 45.8%
+S06 seed42 F1 Ep 050 | tr 0.5076 | val (current weights) 58.3%
+S06 seed42 F1 Ep 100 | tr 0.4510 | val (current weights) 59.7%
+S06 seed42 F1 Ep 150 | tr 0.4560 | val (current weights) 56.9%
+S06 seed42 F1 Ep 200 | tr 0.4836 | val (current weights) 59.7%
+S06 seed42 F1 Ep 250 | tr 0.4395 | val (current weights) 58.3%
+S06 seed42 F1 Ep 300 | tr 0.4306 | val (current weights) 58.3%
+S06 seed42 F1 Ep 350 | tr 0.4639 | val (current weights) 56.9%
+S06 seed42 F1: test 61.11% (val 58.33%, best epoch 350)
+S06 seed42 F2 Ep 001 | tr 0.7344 | val (current weights) 51.4%
+S06 seed42 F2 Ep 050 | tr 0.4673 | val (current weights) 52.8%
+S06 seed42 F2 Ep 100 | tr 0.4268 | val (current weights) 47.2%
+S06 seed42 F2 Ep 150 | tr 0.4144 | val (current weights) 40.3%
+S06 seed42 F2 Ep 200 | tr 0.4076 | val (current weights) 44.4%
+S06 seed42 F2 Ep 250 | tr 0.4379 | val (current weights) 44.4%
+S06 seed42 F2 Ep 300 | tr 0.3885 | val (current weights) 43.1%
+S06 seed42 F2 Ep 350 | tr 0.4115 | val (current weights) 43.1%
+S06 seed42 F2: test 59.72% (val 43.06%, best epoch 350)
+S06 seed42 F3 Ep 001 | tr 0.7155 | val (current weights) 58.3%
+S06 seed42 F3 Ep 050 | tr 0.5137 | val (current weights) 68.1%
+S06 seed42 F3 Ep 100 | tr 0.4952 | val (current weights) 69.4%
+S06 seed42 F3 Ep 150 | tr 0.4766 | val (current weights) 69.4%
+S06 seed42 F3 Ep 200 | tr 0.4032 | val (current weights) 70.8%
+S06 seed42 F3 Ep 250 | tr 0.4407 | val (current weights) 72.2%
+S06 seed42 F3 Ep 300 | tr 0.4146 | val (current weights) 73.6%
+S06 seed42 F3 Ep 350 | tr 0.4181 | val (current weights) 75.0%
+S06 seed42 F3: test 56.94% (val 72.22%, best epoch 350)
+S06 seed42 F4 Ep 001 | tr 0.7239 | val (current weights) 50.0%
+S06 seed42 F4 Ep 050 | tr 0.5244 | val (current weights) 59.7%
+S06 seed42 F4 Ep 100 | tr 0.4222 | val (current weights) 63.9%
+S06 seed42 F4 Ep 150 | tr 0.4428 | val (current weights) 65.3%
+S06 seed42 F4 Ep 200 | tr 0.3984 | val (current weights) 68.1%
+S06 seed42 F4 Ep 250 | tr 0.4162 | val (current weights) 70.8%
+S06 seed42 F4 Ep 300 | tr 0.4157 | val (current weights) 69.4%
+S06 seed42 F4 Ep 350 | tr 0.5063 | val (current weights) 68.1%
+S06 seed42 F4: test 66.67% (val 68.06%, best epoch 350)
+
+================================================================================
+SUBJECT 07 â€” full22 â€” 2class â€” profile cue_0_4 â€” 22 ch: Fz, FC3, FC1, FCz, FC2, FC4, C5, C3, C1, Cz, C2, C4, C6, CP3, CP1, CPz, CP2, CP4, P1, Pz, P2, POz
+================================================================================
+  S07 [2class] profile=cue_0_4 X=(288, 22, 1000) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S07 seed42 F1 Ep 001 | tr 0.7329 | val (current weights) 50.0%
+S07 seed42 F1 Ep 050 | tr 0.4686 | val (current weights) 65.3%
+S07 seed42 F1 Ep 100 | tr 0.4338 | val (current weights) 63.9%
+S07 seed42 F1 Ep 150 | tr 0.4163 | val (current weights) 66.7%
+S07 seed42 F1 Ep 200 | tr 0.3921 | val (current weights) 65.3%
+S07 seed42 F1 Ep 250 | tr 0.4058 | val (current weights) 66.7%
+S07 seed42 F1 Ep 300 | tr 0.5065 | val (current weights) 66.7%
+S07 seed42 F1 Ep 350 | tr 0.3938 | val (current weights) 66.7%
+S07 seed42 F1: test 70.83% (val 66.67%, best epoch 350)
+S07 seed42 F2 Ep 001 | tr 0.7086 | val (current weights) 47.2%
+S07 seed42 F2 Ep 050 | tr 0.4337 | val (current weights) 63.9%
+S07 seed42 F2 Ep 100 | tr 0.4378 | val (current weights) 63.9%
+S07 seed42 F2 Ep 150 | tr 0.4257 | val (current weights) 63.9%
+S07 seed42 F2 Ep 200 | tr 0.4084 | val (current weights) 63.9%
+S07 seed42 F2 Ep 250 | tr 0.4426 | val (current weights) 62.5%
+S07 seed42 F2 Ep 300 | tr 0.4143 | val (current weights) 63.9%
+S07 seed42 F2 Ep 350 | tr 0.4756 | val (current weights) 63.9%
+S07 seed42 F2: test 61.11% (val 63.89%, best epoch 350)
+S07 seed42 F3 Ep 001 | tr 0.7244 | val (current weights) 50.0%
+S07 seed42 F3 Ep 050 | tr 0.4953 | val (current weights) 56.9%
+S07 seed42 F3 Ep 100 | tr 0.5116 | val (current weights) 58.3%
+S07 seed42 F3 Ep 150 | tr 0.4230 | val (current weights) 62.5%
+S07 seed42 F3 Ep 200 | tr 0.4102 | val (current weights) 68.1%
+S07 seed42 F3 Ep 250 | tr 0.4219 | val (current weights) 62.5%
+S07 seed42 F3 Ep 300 | tr 0.3851 | val (current weights) 66.7%
+S07 seed42 F3 Ep 350 | tr 0.3999 | val (current weights) 66.7%
+S07 seed42 F3: test 61.11% (val 65.28%, best epoch 350)
+S07 seed42 F4 Ep 001 | tr 0.7207 | val (current weights) 54.2%
+S07 seed42 F4 Ep 050 | tr 0.5202 | val (current weights) 72.2%
+S07 seed42 F4 Ep 100 | tr 0.4302 | val (current weights) 72.2%
+S07 seed42 F4 Ep 150 | tr 0.4402 | val (current weights) 66.7%
+S07 seed42 F4 Ep 200 | tr 0.3941 | val (current weights) 72.2%
+S07 seed42 F4 Ep 250 | tr 0.4695 | val (current weights) 70.8%
+S07 seed42 F4 Ep 300 | tr 0.4874 | val (current weights) 70.8%
+S07 seed42 F4 Ep 350 | tr 0.4113 | val (current weights) 72.2%
+S07 seed42 F4: test 75.00% (val 70.83%, best epoch 350)
+
+================================================================================
+SUBJECT 08 â€” full22 â€” 2class â€” profile cue_0_4 â€” 22 ch: Fz, FC3, FC1, FCz, FC2, FC4, C5, C3, C1, Cz, C2, C4, C6, CP3, CP1, CPz, CP2, CP4, P1, Pz, P2, POz
+================================================================================
+  S08 [2class] profile=cue_0_4 X=(288, 22, 1000) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S08 seed42 F1 Ep 001 | tr 0.7028 | val (current weights) 58.3%
+S08 seed42 F1 Ep 050 | tr 0.5690 | val (current weights) 66.7%
+S08 seed42 F1 Ep 100 | tr 0.4122 | val (current weights) 76.4%
+S08 seed42 F1 Ep 150 | tr 0.3827 | val (current weights) 77.8%
+S08 seed42 F1 Ep 200 | tr 0.3739 | val (current weights) 80.6%
+S08 seed42 F1 Ep 250 | tr 0.3673 | val (current weights) 81.9%
+S08 seed42 F1 Ep 300 | tr 0.3788 | val (current weights) 83.3%
+S08 seed42 F1 Ep 350 | tr 0.4018 | val (current weights) 81.9%
+S08 seed42 F1: test 86.11% (val 83.33%, best epoch 350)
+S08 seed42 F2 Ep 001 | tr 0.7201 | val (current weights) 51.4%
+S08 seed42 F2 Ep 050 | tr 0.5361 | val (current weights) 68.1%
+S08 seed42 F2 Ep 100 | tr 0.3871 | val (current weights) 81.9%
+S08 seed42 F2 Ep 150 | tr 0.3938 | val (current weights) 84.7%
+S08 seed42 F2 Ep 200 | tr 0.4147 | val (current weights) 87.5%
+S08 seed42 F2 Ep 250 | tr 0.3636 | val (current weights) 88.9%
+S08 seed42 F2 Ep 300 | tr 0.3651 | val (current weights) 88.9%
+S08 seed42 F2 Ep 350 | tr 0.3939 | val (current weights) 88.9%
+S08 seed42 F2: test 80.56% (val 91.67%, best epoch 350)
+S08 seed42 F3 Ep 001 | tr 0.7191 | val (current weights) 52.8%
+S08 seed42 F3 Ep 050 | tr 0.5128 | val (current weights) 58.3%
+S08 seed42 F3 Ep 100 | tr 0.5578 | val (current weights) 65.3%
+S08 seed42 F3 Ep 150 | tr 0.3919 | val (current weights) 76.4%
+S08 seed42 F3 Ep 200 | tr 0.5706 | val (current weights) 77.8%
+S08 seed42 F3 Ep 250 | tr 0.4771 | val (current weights) 77.8%
+S08 seed42 F3 Ep 300 | tr 0.3748 | val (current weights) 79.2%
+S08 seed42 F3 Ep 350 | tr 0.3710 | val (current weights) 79.2%
+S08 seed42 F3: test 88.89% (val 79.17%, best epoch 350)
+S08 seed42 F4 Ep 001 | tr 0.7292 | val (current weights) 63.9%
+S08 seed42 F4 Ep 050 | tr 0.4263 | val (current weights) 72.2%
+S08 seed42 F4 Ep 100 | tr 0.4408 | val (current weights) 81.9%
+S08 seed42 F4 Ep 150 | tr 0.3768 | val (current weights) 81.9%
+S08 seed42 F4 Ep 200 | tr 0.4050 | val (current weights) 83.3%
+S08 seed42 F4 Ep 250 | tr 0.4967 | val (current weights) 86.1%
+S08 seed42 F4 Ep 300 | tr 0.3762 | val (current weights) 84.7%
+S08 seed42 F4 Ep 350 | tr 0.4262 | val (current weights) 84.7%
+S08 seed42 F4: test 88.89% (val 84.72%, best epoch 350)
+
+================================================================================
+SUBJECT 09 â€” full22 â€” 2class â€” profile no_aug â€” 22 ch: Fz, FC3, FC1, FCz, FC2, FC4, C5, C3, C1, Cz, C2, C4, C6, CP3, CP1, CPz, CP2, CP4, P1, Pz, P2, POz
+================================================================================
+  S09 [2class] profile=no_aug X=(288, 22, 1125) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S09 seed42 F1 Ep 001 | tr 0.7004 | val (current weights) 43.1%
+S09 seed42 F1 Ep 050 | tr 0.3756 | val (current weights) 68.1%
+S09 seed42 F1 Ep 100 | tr 0.3725 | val (current weights) 72.2%
+S09 seed42 F1 Ep 150 | tr 0.3620 | val (current weights) 75.0%
+S09 seed42 F1 Ep 200 | tr 0.3547 | val (current weights) 77.8%
+S09 seed42 F1 Ep 250 | tr 0.3615 | val (current weights) 79.2%
+S09 seed42 F1 Ep 300 | tr 0.3631 | val (current weights) 77.8%
+S09 seed42 F1 Ep 350 | tr 0.3501 | val (current weights) 79.2%
+S09 seed42 F1: test 63.89% (val 76.39%, best epoch 350)
+S09 seed42 F2 Ep 001 | tr 0.7381 | val (current weights) 47.2%
+S09 seed42 F2 Ep 050 | tr 0.3942 | val (current weights) 51.4%
+S09 seed42 F2 Ep 100 | tr 0.3683 | val (current weights) 51.4%
+S09 seed42 F2 Ep 150 | tr 0.3783 | val (current weights) 52.8%
+S09 seed42 F2 Ep 200 | tr 0.3597 | val (current weights) 52.8%
+S09 seed42 F2 Ep 250 | tr 0.3638 | val (current weights) 52.8%
+S09 seed42 F2 Ep 300 | tr 0.3542 | val (current weights) 52.8%
+S09 seed42 F2 Ep 350 | tr 0.3527 | val (current weights) 52.8%
+S09 seed42 F2: test 58.33% (val 51.39%, best epoch 350)
+S09 seed42 F3 Ep 001 | tr 0.7275 | val (current weights) 50.0%
+S09 seed42 F3 Ep 050 | tr 0.4089 | val (current weights) 59.7%
+S09 seed42 F3 Ep 100 | tr 0.3833 | val (current weights) 61.1%
+S09 seed42 F3 Ep 150 | tr 0.3730 | val (current weights) 63.9%
+S09 seed42 F3 Ep 200 | tr 0.3701 | val (current weights) 66.7%
+S09 seed42 F3 Ep 250 | tr 0.3620 | val (current weights) 65.3%
+S09 seed42 F3 Ep 300 | tr 0.3677 | val (current weights) 68.1%
+S09 seed42 F3 Ep 350 | tr 0.3704 | val (current weights) 68.1%
+S09 seed42 F3: test 75.00% (val 61.11%, best epoch 350)
+S09 seed42 F4 Ep 001 | tr 0.7278 | val (current weights) 50.0%
+S09 seed42 F4 Ep 050 | tr 0.3992 | val (current weights) 69.4%
+S09 seed42 F4 Ep 100 | tr 0.3843 | val (current weights) 73.6%
+S09 seed42 F4 Ep 150 | tr 0.3564 | val (current weights) 80.6%
+S09 seed42 F4 Ep 200 | tr 0.3607 | val (current weights) 83.3%
+S09 seed42 F4 Ep 250 | tr 0.3604 | val (current weights) 83.3%
+S09 seed42 F4 Ep 300 | tr 0.3582 | val (current weights) 86.1%
+S09 seed42 F4 Ep 350 | tr 0.3528 | val (current weights) 84.7%
+S09 seed42 F4: test 70.83% (val 83.33%, best epoch 350)
+Results written to D:\EEG\NeuroGrounded-EEG\EEGItNet\BNCI_001\2class\results\full22 (grand mean 68.36% over 9 subjects; chance 50.0%, majority 50.0%)
+Report saved: D:\EEG\NeuroGrounded-EEG\EEGItNet\BNCI_001\2class\results\full22\full22_report.txt
+
+Saliency-ERD correlations (Pearson). orig_* = as in the original scripts; the last three are the sign-invariant metrics used in the paper.
+subj               method          ERD_L          ERD_R         ERD_LR       ERD_comb        vs_grad      magnitude class_specific lateralisation
+S01                 grad         +0.350         -0.184         +0.392         +0.106         +1.000         -0.094         -0.112         -0.589
+S01         grad_x_input         +0.376         -0.125         +0.367         +0.164         +0.997         -0.153         -0.165         -0.675
+S01 integrated_gradients         +0.328         +0.041         +0.207         +0.247         +0.940         -0.236         -0.216         -0.702
+S01           smoothgrad         +0.351         -0.184         +0.393         +0.107         +1.000         -0.094         -0.111         -0.587
+S02                 grad         -0.251         +0.081         -0.277         -0.151         +1.000         -0.151         +0.090         +0.355
+S02         grad_x_input         -0.290         +0.112         -0.331         -0.164         +0.997         -0.164         +0.089         -0.046
+S02 integrated_gradients         -0.299         +0.136         -0.353         -0.159         +0.991         -0.159         +0.079         -0.228
+S02           smoothgrad         -0.250         +0.077         -0.273         -0.152         +1.000         -0.152         +0.091         +0.318
+S03                 grad         +0.068         +0.042         +0.004         +0.057         +1.000         +0.150         -0.063         -0.598
+S03         grad_x_input         +0.051         +0.020         +0.018         +0.035         +0.996         +0.103         -0.075         -0.902
+S03 integrated_gradients         +0.114         +0.084         -0.012         +0.105         +0.975         +0.040         -0.140         -0.930
+S03           smoothgrad         +0.066         +0.040         +0.004         +0.055         +1.000         +0.152         -0.062         -0.601
+S04                 grad         -0.464         -0.064         -0.322         -0.310         +1.000         -0.199         +0.263         +0.113
+S04         grad_x_input         -0.472         -0.060         -0.332         -0.312         +0.999         -0.207         +0.264         +0.050
+S04 integrated_gradients         -0.436         -0.061         -0.302         -0.293         +0.996         -0.188         +0.246         -0.396
+S04           smoothgrad         -0.465         -0.064         -0.322         -0.311         +1.000         -0.200         +0.263         +0.092
+S05                 grad         +0.146         +0.178         -0.105         +0.206         +1.000         +0.249         -0.168         -0.370
+S05         grad_x_input         +0.102         +0.234         -0.182         +0.234         +0.995         +0.328         -0.186         -0.591
+S05 integrated_gradients         +0.093         +0.194         -0.147         +0.197         +0.994         +0.287         -0.157         -0.594
+S05           smoothgrad         +0.144         +0.171         -0.099         +0.200         +1.000         +0.243         -0.163         -0.359
+S06                 grad         -0.128         -0.061         -0.098         -0.099         +1.000         -0.108         +0.095         -0.015
+S06         grad_x_input         -0.247         -0.210         -0.039         -0.241         +0.984         -0.255         +0.210         -0.661
+S06 integrated_gradients         -0.275         -0.205         -0.090         -0.252         +0.975         -0.263         +0.225         -0.720
+S06           smoothgrad         -0.128         -0.061         -0.097         -0.099         +1.000         -0.108         +0.095         -0.024
+S07                 grad         +0.065         -0.103         +0.251         -0.007         +1.000         +0.011         +0.024         +0.217
+S07         grad_x_input         +0.103         -0.056         +0.256         +0.037         +0.996         -0.033         -0.017         +0.016
+S07 integrated_gradients         +0.103         -0.061         +0.262         +0.034         +0.992         -0.031         -0.018         -0.285
+S07           smoothgrad         +0.066         -0.103         +0.252         -0.006         +1.000         +0.010         +0.024         +0.221
+S08                 grad         -0.022         +0.098         -0.219         +0.037         +1.000         +0.042         -0.041         -0.473
+S08         grad_x_input         +0.014         +0.147         -0.240         +0.082         +0.997         -0.001         -0.091         -0.701
+S08 integrated_gradients         -0.001         +0.164         -0.297         +0.082         +0.947         +0.019         -0.093         -0.751
+S08           smoothgrad         -0.022         +0.097         -0.219         +0.037         +1.000         +0.042         -0.041         -0.475
+S09                 grad         -0.231         +0.108         -0.388         -0.128         +1.000         +0.129         +0.052         -0.231
+S09         grad_x_input         -0.236         +0.092         -0.384         -0.137         +0.997         +0.138         +0.031         -0.569
+S09 integrated_gradients         -0.196         +0.132         -0.356         -0.094         +0.985         +0.094         -0.024         -0.650
+S09           smoothgrad         -0.235         +0.106         -0.393         -0.132         +1.000         +0.133         +0.055         -0.225
+Fisher-z mean over subjects:
+mean                 grad         -0.055         +0.011         -0.086         -0.033         +1.000         +0.004         +0.016         -0.199
+mean         grad_x_input         -0.071         +0.017         -0.099         -0.035         +0.997         -0.027         +0.007         -0.527
+mean integrated_gradients         -0.067         +0.047         -0.125         -0.016         +0.985         -0.049         -0.011         -0.640
+mean           smoothgrad         -0.056         +0.009         -0.086         -0.035         +1.000         +0.003         +0.017         -0.204
+
+EXPLORATORY physiology correlations (mean4 saliency, Pearson, Fisher mean over subjects):
+  ERD_theta_L                  r = -0.062 [-0.255, +0.136]
+  ERD_theta_R                  r = -0.065 [-0.254, +0.129]
+  ERD_theta_mag                r = +0.007 [-0.205, +0.219]
+  ERD_mu_L                     r = -0.077 [-0.269, +0.121]
+  ERD_mu_R                     r = -0.031 [-0.253, +0.193]
+  ERD_mu_mag                   r = +0.017 [-0.082, +0.116]
+  ERD_beta_L                   r = +0.030 [-0.183, +0.240]
+  ERD_beta_R                   r = +0.057 [-0.104, +0.215]
+  ERD_beta_mag                 r = +0.094 [-0.114, +0.294]
+  ERS_beta_rebound_L           r = -0.005 [-0.120, +0.109]
+  ERS_beta_rebound_R           r = -0.024 [-0.219, +0.174]
+  ERS_beta_rebound_mag         r = -0.009 [-0.149, +0.130]
+  ERD_lowgamma_L               r = +0.061 [-0.154, +0.271]
+  ERD_lowgamma_R               r = -0.102 [-0.327, +0.133]
+  ERD_lowgamma_mag             r = -0.061 [-0.292, +0.178]
+  logpow_8_30                  r = -0.049 [-0.204, +0.109]
+  r2_signed                    r = +0.092 [-0.142, +0.316]
+  r2_abs                       r = +0.192 [+0.005, +0.365]
+  TFR_ERD_dB_L                 r = -0.046 [-0.248, +0.160]
+  TFR_ERD_dB_R                 r = +0.049 [-0.088, +0.184]
+  TFR_ERD_dB_mag               r = +0.070 [-0.045, +0.183]
+  ITC_4_30                     r = +0.047 [-0.115, +0.207]
+  ERP_abs_0.2_0.8              r = +0.079 [-0.088, +0.243]
+  SlowPot_0.5_3                r = -0.050 [-0.215, +0.118]
+
+================================================================================
+SUBJECT 01 â€” saliency_reduced â€” 2class â€” profile cue_0_4 â€” 12 ch: CP4, P2, FC3, P1, CP3, Cz, C1, C5, C4, C3, Fz, POz
+================================================================================
+  S01 [2class] profile=cue_0_4 X=(288, 12, 1000) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S01 seed42 F1 Ep 001 | tr 0.7371 | val (current weights) 47.2%
+S01 seed42 F1 Ep 050 | tr 0.5732 | val (current weights) 59.7%
+S01 seed42 F1 Ep 100 | tr 0.4750 | val (current weights) 61.1%
+S01 seed42 F1 Ep 150 | tr 0.4571 | val (current weights) 63.9%
+S01 seed42 F1 Ep 200 | tr 0.4381 | val (current weights) 63.9%
+S01 seed42 F1 Ep 250 | tr 0.4292 | val (current weights) 63.9%
+S01 seed42 F1 Ep 300 | tr 0.4204 | val (current weights) 63.9%
+S01 seed42 F1 Ep 350 | tr 0.3862 | val (current weights) 65.3%
+S01 seed42 F1: test 61.11% (val 62.50%, best epoch 350)
+S01 seed42 F2 Ep 001 | tr 0.7235 | val (current weights) 52.8%
+S01 seed42 F2 Ep 050 | tr 0.5190 | val (current weights) 63.9%
+S01 seed42 F2 Ep 100 | tr 0.4431 | val (current weights) 69.4%
+S01 seed42 F2 Ep 150 | tr 0.4301 | val (current weights) 68.1%
+S01 seed42 F2 Ep 200 | tr 0.4075 | val (current weights) 66.7%
+S01 seed42 F2 Ep 250 | tr 0.4884 | val (current weights) 68.1%
+S01 seed42 F2 Ep 300 | tr 0.5578 | val (current weights) 68.1%
+S01 seed42 F2 Ep 350 | tr 0.4250 | val (current weights) 68.1%
+S01 seed42 F2: test 66.67% (val 68.06%, best epoch 350)
+S01 seed42 F3 Ep 001 | tr 0.7030 | val (current weights) 47.2%
+S01 seed42 F3 Ep 050 | tr 0.5286 | val (current weights) 55.6%
+S01 seed42 F3 Ep 100 | tr 0.5015 | val (current weights) 59.7%
+S01 seed42 F3 Ep 150 | tr 0.4066 | val (current weights) 66.7%
+S01 seed42 F3 Ep 200 | tr 0.4311 | val (current weights) 66.7%
+S01 seed42 F3 Ep 250 | tr 0.4444 | val (current weights) 66.7%
+S01 seed42 F3 Ep 300 | tr 0.5022 | val (current weights) 70.8%
+S01 seed42 F3 Ep 350 | tr 0.4020 | val (current weights) 68.1%
+S01 seed42 F3: test 70.83% (val 66.67%, best epoch 350)
+S01 seed42 F4 Ep 001 | tr 0.7175 | val (current weights) 51.4%
+S01 seed42 F4 Ep 050 | tr 0.5760 | val (current weights) 54.2%
+S01 seed42 F4 Ep 100 | tr 0.5114 | val (current weights) 59.7%
+S01 seed42 F4 Ep 150 | tr 0.4238 | val (current weights) 65.3%
+S01 seed42 F4 Ep 200 | tr 0.5009 | val (current weights) 66.7%
+S01 seed42 F4 Ep 250 | tr 0.4066 | val (current weights) 66.7%
+S01 seed42 F4 Ep 300 | tr 0.4254 | val (current weights) 69.4%
+S01 seed42 F4 Ep 350 | tr 0.4935 | val (current weights) 66.7%
+S01 seed42 F4: test 59.72% (val 66.67%, best epoch 350)
+
+================================================================================
+SUBJECT 02 â€” saliency_reduced â€” 2class â€” profile cue_0_4 â€” 12 ch: CP4, FC3, P2, P1, CP3, Cz, C1, C5, C3, CP1, POz, FC2
+================================================================================
+  S02 [2class] profile=cue_0_4 X=(288, 12, 1000) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S02 seed42 F1 Ep 001 | tr 0.7141 | val (current weights) 47.2%
+S02 seed42 F1 Ep 050 | tr 0.5310 | val (current weights) 52.8%
+S02 seed42 F1 Ep 100 | tr 0.5107 | val (current weights) 52.8%
+S02 seed42 F1 Ep 150 | tr 0.4665 | val (current weights) 52.8%
+S02 seed42 F1 Ep 200 | tr 0.4856 | val (current weights) 56.9%
+S02 seed42 F1 Ep 250 | tr 0.4634 | val (current weights) 59.7%
+S02 seed42 F1 Ep 300 | tr 0.4890 | val (current weights) 58.3%
+S02 seed42 F1 Ep 350 | tr 0.4289 | val (current weights) 59.7%
+S02 seed42 F1: test 61.11% (val 62.50%, best epoch 350)
+S02 seed42 F2 Ep 001 | tr 0.7414 | val (current weights) 48.6%
+S02 seed42 F2 Ep 050 | tr 0.5735 | val (current weights) 63.9%
+S02 seed42 F2 Ep 100 | tr 0.4752 | val (current weights) 56.9%
+S02 seed42 F2 Ep 150 | tr 0.4775 | val (current weights) 62.5%
+S02 seed42 F2 Ep 200 | tr 0.4784 | val (current weights) 58.3%
+S02 seed42 F2 Ep 250 | tr 0.4694 | val (current weights) 59.7%
+S02 seed42 F2 Ep 300 | tr 0.4557 | val (current weights) 58.3%
+S02 seed42 F2 Ep 350 | tr 0.4878 | val (current weights) 59.7%
+S02 seed42 F2: test 56.94% (val 58.33%, best epoch 350)
+S02 seed42 F3 Ep 001 | tr 0.7152 | val (current weights) 48.6%
+S02 seed42 F3 Ep 050 | tr 0.5448 | val (current weights) 50.0%
+S02 seed42 F3 Ep 100 | tr 0.4738 | val (current weights) 55.6%
+S02 seed42 F3 Ep 150 | tr 0.4470 | val (current weights) 55.6%
+S02 seed42 F3 Ep 200 | tr 0.4213 | val (current weights) 61.1%
+S02 seed42 F3 Ep 250 | tr 0.4137 | val (current weights) 59.7%
+S02 seed42 F3 Ep 300 | tr 0.4559 | val (current weights) 59.7%
+S02 seed42 F3 Ep 350 | tr 0.4149 | val (current weights) 61.1%
+S02 seed42 F3: test 51.39% (val 59.72%, best epoch 350)
+S02 seed42 F4 Ep 001 | tr 0.7129 | val (current weights) 48.6%
+S02 seed42 F4 Ep 050 | tr 0.5356 | val (current weights) 61.1%
+S02 seed42 F4 Ep 100 | tr 0.4955 | val (current weights) 63.9%
+S02 seed42 F4 Ep 150 | tr 0.4441 | val (current weights) 63.9%
+S02 seed42 F4 Ep 200 | tr 0.4056 | val (current weights) 59.7%
+S02 seed42 F4 Ep 250 | tr 0.4405 | val (current weights) 61.1%
+S02 seed42 F4 Ep 300 | tr 0.4908 | val (current weights) 62.5%
+S02 seed42 F4 Ep 350 | tr 0.4553 | val (current weights) 61.1%
+S02 seed42 F4: test 63.89% (val 59.72%, best epoch 350)
+
+================================================================================
+SUBJECT 03 â€” saliency_reduced â€” 2class â€” profile cue_0_4 â€” 12 ch: CP4, CP3, FC3, P1, P2, Cz, C5, C1, C3, POz, Fz, CP2
+================================================================================
+  S03 [2class] profile=cue_0_4 X=(288, 12, 1000) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S03 seed42 F1 Ep 001 | tr 0.7213 | val (current weights) 48.6%
+S03 seed42 F1 Ep 050 | tr 0.5306 | val (current weights) 68.1%
+S03 seed42 F1 Ep 100 | tr 0.5545 | val (current weights) 68.1%
+S03 seed42 F1 Ep 150 | tr 0.4035 | val (current weights) 72.2%
+S03 seed42 F1 Ep 200 | tr 0.4715 | val (current weights) 75.0%
+S03 seed42 F1 Ep 250 | tr 0.4310 | val (current weights) 75.0%
+S03 seed42 F1 Ep 300 | tr 0.3938 | val (current weights) 75.0%
+S03 seed42 F1 Ep 350 | tr 0.5632 | val (current weights) 72.2%
+S03 seed42 F1: test 65.28% (val 73.61%, best epoch 350)
+S03 seed42 F2 Ep 001 | tr 0.7276 | val (current weights) 45.8%
+S03 seed42 F2 Ep 050 | tr 0.5028 | val (current weights) 62.5%
+S03 seed42 F2 Ep 100 | tr 0.4575 | val (current weights) 66.7%
+S03 seed42 F2 Ep 150 | tr 0.4010 | val (current weights) 68.1%
+S03 seed42 F2 Ep 200 | tr 0.4582 | val (current weights) 69.4%
+S03 seed42 F2 Ep 250 | tr 0.3822 | val (current weights) 72.2%
+S03 seed42 F2 Ep 300 | tr 0.3837 | val (current weights) 76.4%
+S03 seed42 F2 Ep 350 | tr 0.5774 | val (current weights) 76.4%
+S03 seed42 F2: test 58.33% (val 72.22%, best epoch 350)
+S03 seed42 F3 Ep 001 | tr 0.7244 | val (current weights) 48.6%
+S03 seed42 F3 Ep 050 | tr 0.5376 | val (current weights) 68.1%
+S03 seed42 F3 Ep 100 | tr 0.4548 | val (current weights) 72.2%
+S03 seed42 F3 Ep 150 | tr 0.4603 | val (current weights) 70.8%
+S03 seed42 F3 Ep 200 | tr 0.3745 | val (current weights) 70.8%
+S03 seed42 F3 Ep 250 | tr 0.3888 | val (current weights) 72.2%
+S03 seed42 F3 Ep 300 | tr 0.4134 | val (current weights) 75.0%
+S03 seed42 F3 Ep 350 | tr 0.4502 | val (current weights) 72.2%
+S03 seed42 F3: test 83.33% (val 72.22%, best epoch 350)
+S03 seed42 F4 Ep 001 | tr 0.7091 | val (current weights) 51.4%
+S03 seed42 F4 Ep 050 | tr 0.4876 | val (current weights) 65.3%
+S03 seed42 F4 Ep 100 | tr 0.3863 | val (current weights) 79.2%
+S03 seed42 F4 Ep 150 | tr 0.3936 | val (current weights) 79.2%
+S03 seed42 F4 Ep 200 | tr 0.4750 | val (current weights) 81.9%
+S03 seed42 F4 Ep 250 | tr 0.4633 | val (current weights) 80.6%
+S03 seed42 F4 Ep 300 | tr 0.4737 | val (current weights) 81.9%
+S03 seed42 F4 Ep 350 | tr 0.4676 | val (current weights) 81.9%
+S03 seed42 F4: test 73.61% (val 81.94%, best epoch 350)
+
+================================================================================
+SUBJECT 04 â€” saliency_reduced â€” 2class â€” profile cue_0_4 â€” 12 ch: FC3, CP4, P2, P1, CP3, C3, C5, Cz, CP1, C4, POz, C1
+================================================================================
+  S04 [2class] profile=cue_0_4 X=(288, 12, 1000) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S04 seed42 F1 Ep 001 | tr 0.7247 | val (current weights) 51.4%
+S04 seed42 F1 Ep 050 | tr 0.5311 | val (current weights) 63.9%
+S04 seed42 F1 Ep 100 | tr 0.5225 | val (current weights) 65.3%
+S04 seed42 F1 Ep 150 | tr 0.4871 | val (current weights) 65.3%
+S04 seed42 F1 Ep 200 | tr 0.4344 | val (current weights) 62.5%
+S04 seed42 F1 Ep 250 | tr 0.4178 | val (current weights) 65.3%
+S04 seed42 F1 Ep 300 | tr 0.4161 | val (current weights) 63.9%
+S04 seed42 F1 Ep 350 | tr 0.4289 | val (current weights) 63.9%
+S04 seed42 F1: test 66.67% (val 65.28%, best epoch 350)
+S04 seed42 F2 Ep 001 | tr 0.7320 | val (current weights) 50.0%
+S04 seed42 F2 Ep 050 | tr 0.5031 | val (current weights) 66.7%
+S04 seed42 F2 Ep 100 | tr 0.4416 | val (current weights) 73.6%
+S04 seed42 F2 Ep 150 | tr 0.4032 | val (current weights) 73.6%
+S04 seed42 F2 Ep 200 | tr 0.4133 | val (current weights) 80.6%
+S04 seed42 F2 Ep 250 | tr 0.3849 | val (current weights) 77.8%
+S04 seed42 F2 Ep 300 | tr 0.4258 | val (current weights) 76.4%
+S04 seed42 F2 Ep 350 | tr 0.3803 | val (current weights) 76.4%
+S04 seed42 F2: test 70.83% (val 79.17%, best epoch 350)
+S04 seed42 F3 Ep 001 | tr 0.7435 | val (current weights) 50.0%
+S04 seed42 F3 Ep 050 | tr 0.4890 | val (current weights) 69.4%
+S04 seed42 F3 Ep 100 | tr 0.5504 | val (current weights) 72.2%
+S04 seed42 F3 Ep 150 | tr 0.4852 | val (current weights) 69.4%
+S04 seed42 F3 Ep 200 | tr 0.4277 | val (current weights) 70.8%
+S04 seed42 F3 Ep 250 | tr 0.3811 | val (current weights) 72.2%
+S04 seed42 F3 Ep 300 | tr 0.4033 | val (current weights) 72.2%
+S04 seed42 F3 Ep 350 | tr 0.5123 | val (current weights) 70.8%
+S04 seed42 F3: test 73.61% (val 73.61%, best epoch 350)
+S04 seed42 F4 Ep 001 | tr 0.7307 | val (current weights) 59.7%
+S04 seed42 F4 Ep 050 | tr 0.4987 | val (current weights) 69.4%
+S04 seed42 F4 Ep 100 | tr 0.4612 | val (current weights) 72.2%
+S04 seed42 F4 Ep 150 | tr 0.3933 | val (current weights) 69.4%
+S04 seed42 F4 Ep 200 | tr 0.4237 | val (current weights) 68.1%
+S04 seed42 F4 Ep 250 | tr 0.4768 | val (current weights) 66.7%
+S04 seed42 F4 Ep 300 | tr 0.4727 | val (current weights) 66.7%
+S04 seed42 F4 Ep 350 | tr 0.4567 | val (current weights) 65.3%
+S04 seed42 F4: test 72.22% (val 65.28%, best epoch 350)
+
+================================================================================
+SUBJECT 05 â€” saliency_reduced â€” 2class â€” profile cue_0_4 â€” 12 ch: CP4, P2, FC3, P1, CP3, C5, Cz, C1, CP1, C3, C4, CP2
+================================================================================
+  S05 [2class] profile=cue_0_4 X=(288, 12, 1000) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S05 seed42 F1 Ep 001 | tr 0.7104 | val (current weights) 50.0%
+S05 seed42 F1 Ep 050 | tr 0.5370 | val (current weights) 62.5%
+S05 seed42 F1 Ep 100 | tr 0.5579 | val (current weights) 66.7%
+S05 seed42 F1 Ep 150 | tr 0.5386 | val (current weights) 58.3%
+S05 seed42 F1 Ep 200 | tr 0.4332 | val (current weights) 61.1%
+S05 seed42 F1 Ep 250 | tr 0.5062 | val (current weights) 62.5%
+S05 seed42 F1 Ep 300 | tr 0.5109 | val (current weights) 62.5%
+S05 seed42 F1 Ep 350 | tr 0.5089 | val (current weights) 62.5%
+S05 seed42 F1: test 61.11% (val 62.50%, best epoch 350)
+S05 seed42 F2 Ep 001 | tr 0.7031 | val (current weights) 48.6%
+S05 seed42 F2 Ep 050 | tr 0.5105 | val (current weights) 62.5%
+S05 seed42 F2 Ep 100 | tr 0.4522 | val (current weights) 63.9%
+S05 seed42 F2 Ep 150 | tr 0.4702 | val (current weights) 59.7%
+S05 seed42 F2 Ep 200 | tr 0.5278 | val (current weights) 63.9%
+S05 seed42 F2 Ep 250 | tr 0.4398 | val (current weights) 59.7%
+S05 seed42 F2 Ep 300 | tr 0.4236 | val (current weights) 61.1%
+S05 seed42 F2 Ep 350 | tr 0.4506 | val (current weights) 61.1%
+S05 seed42 F2: test 59.72% (val 59.72%, best epoch 350)
+S05 seed42 F3 Ep 001 | tr 0.7286 | val (current weights) 47.2%
+S05 seed42 F3 Ep 050 | tr 0.5697 | val (current weights) 61.1%
+S05 seed42 F3 Ep 100 | tr 0.5171 | val (current weights) 63.9%
+S05 seed42 F3 Ep 150 | tr 0.5999 | val (current weights) 62.5%
+S05 seed42 F3 Ep 200 | tr 0.4326 | val (current weights) 63.9%
+S05 seed42 F3 Ep 250 | tr 0.4690 | val (current weights) 65.3%
+S05 seed42 F3 Ep 300 | tr 0.4535 | val (current weights) 66.7%
+S05 seed42 F3 Ep 350 | tr 0.4218 | val (current weights) 65.3%
+S05 seed42 F3: test 63.89% (val 63.89%, best epoch 350)
+S05 seed42 F4 Ep 001 | tr 0.7074 | val (current weights) 54.2%
+S05 seed42 F4 Ep 050 | tr 0.5390 | val (current weights) 52.8%
+S05 seed42 F4 Ep 100 | tr 0.5082 | val (current weights) 51.4%
+S05 seed42 F4 Ep 150 | tr 0.4380 | val (current weights) 54.2%
+S05 seed42 F4 Ep 200 | tr 0.5110 | val (current weights) 50.0%
+S05 seed42 F4 Ep 250 | tr 0.4177 | val (current weights) 52.8%
+S05 seed42 F4 Ep 300 | tr 0.6153 | val (current weights) 54.2%
+S05 seed42 F4 Ep 350 | tr 0.3919 | val (current weights) 50.0%
+S05 seed42 F4: test 68.06% (val 51.39%, best epoch 350)
+
+================================================================================
+SUBJECT 06 â€” saliency_reduced â€” 2class â€” profile cue_0_4 â€” 12 ch: CP4, FC3, P2, P1, CP3, C5, Cz, POz, CP1, C3, C1, CP2
+================================================================================
+  S06 [2class] profile=cue_0_4 X=(288, 12, 1000) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S06 seed42 F1 Ep 001 | tr 0.7128 | val (current weights) 51.4%
+S06 seed42 F1 Ep 050 | tr 0.4993 | val (current weights) 59.7%
+S06 seed42 F1 Ep 100 | tr 0.4442 | val (current weights) 61.1%
+S06 seed42 F1 Ep 150 | tr 0.4585 | val (current weights) 63.9%
+S06 seed42 F1 Ep 200 | tr 0.4528 | val (current weights) 62.5%
+S06 seed42 F1 Ep 250 | tr 0.4513 | val (current weights) 62.5%
+S06 seed42 F1 Ep 300 | tr 0.4032 | val (current weights) 63.9%
+S06 seed42 F1 Ep 350 | tr 0.4678 | val (current weights) 63.9%
+S06 seed42 F1: test 62.50% (val 61.11%, best epoch 350)
+S06 seed42 F2 Ep 001 | tr 0.7252 | val (current weights) 41.7%
+S06 seed42 F2 Ep 050 | tr 0.4825 | val (current weights) 47.2%
+S06 seed42 F2 Ep 100 | tr 0.4680 | val (current weights) 55.6%
+S06 seed42 F2 Ep 150 | tr 0.4571 | val (current weights) 52.8%
+S06 seed42 F2 Ep 200 | tr 0.4546 | val (current weights) 52.8%
+S06 seed42 F2 Ep 250 | tr 0.4551 | val (current weights) 50.0%
+S06 seed42 F2 Ep 300 | tr 0.3951 | val (current weights) 51.4%
+S06 seed42 F2 Ep 350 | tr 0.3955 | val (current weights) 50.0%
+S06 seed42 F2: test 62.50% (val 51.39%, best epoch 350)
+S06 seed42 F3 Ep 001 | tr 0.7254 | val (current weights) 55.6%
+S06 seed42 F3 Ep 050 | tr 0.5463 | val (current weights) 69.4%
+S06 seed42 F3 Ep 100 | tr 0.5067 | val (current weights) 68.1%
+S06 seed42 F3 Ep 150 | tr 0.4886 | val (current weights) 73.6%
+S06 seed42 F3 Ep 200 | tr 0.4145 | val (current weights) 70.8%
+S06 seed42 F3 Ep 250 | tr 0.4798 | val (current weights) 73.6%
+S06 seed42 F3 Ep 300 | tr 0.4627 | val (current weights) 70.8%
+S06 seed42 F3 Ep 350 | tr 0.4252 | val (current weights) 70.8%
+S06 seed42 F3: test 54.17% (val 73.61%, best epoch 350)
+S06 seed42 F4 Ep 001 | tr 0.7068 | val (current weights) 51.4%
+S06 seed42 F4 Ep 050 | tr 0.5222 | val (current weights) 54.2%
+S06 seed42 F4 Ep 100 | tr 0.4690 | val (current weights) 62.5%
+S06 seed42 F4 Ep 150 | tr 0.4377 | val (current weights) 62.5%
+S06 seed42 F4 Ep 200 | tr 0.3914 | val (current weights) 61.1%
+S06 seed42 F4 Ep 250 | tr 0.4218 | val (current weights) 61.1%
+S06 seed42 F4 Ep 300 | tr 0.4320 | val (current weights) 61.1%
+S06 seed42 F4 Ep 350 | tr 0.4933 | val (current weights) 61.1%
+S06 seed42 F4: test 65.28% (val 61.11%, best epoch 350)
+
+================================================================================
+SUBJECT 07 â€” saliency_reduced â€” 2class â€” profile cue_0_4 â€” 12 ch: CP4, P1, P2, FC3, CP3, Cz, CP2, C5, Fz, C3, CP1, C4
+================================================================================
+  S07 [2class] profile=cue_0_4 X=(288, 12, 1000) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S07 seed42 F1 Ep 001 | tr 0.7348 | val (current weights) 51.4%
+S07 seed42 F1 Ep 050 | tr 0.4815 | val (current weights) 63.9%
+S07 seed42 F1 Ep 100 | tr 0.4787 | val (current weights) 66.7%
+S07 seed42 F1 Ep 150 | tr 0.4555 | val (current weights) 69.4%
+S07 seed42 F1 Ep 200 | tr 0.4556 | val (current weights) 66.7%
+S07 seed42 F1 Ep 250 | tr 0.4383 | val (current weights) 66.7%
+S07 seed42 F1 Ep 300 | tr 0.5519 | val (current weights) 65.3%
+S07 seed42 F1 Ep 350 | tr 0.4077 | val (current weights) 65.3%
+S07 seed42 F1: test 69.44% (val 65.28%, best epoch 350)
+S07 seed42 F2 Ep 001 | tr 0.6956 | val (current weights) 55.6%
+S07 seed42 F2 Ep 050 | tr 0.4879 | val (current weights) 58.3%
+S07 seed42 F2 Ep 100 | tr 0.4534 | val (current weights) 58.3%
+S07 seed42 F2 Ep 150 | tr 0.4678 | val (current weights) 59.7%
+S07 seed42 F2 Ep 200 | tr 0.4218 | val (current weights) 61.1%
+S07 seed42 F2 Ep 250 | tr 0.4656 | val (current weights) 59.7%
+S07 seed42 F2 Ep 300 | tr 0.4478 | val (current weights) 58.3%
+S07 seed42 F2 Ep 350 | tr 0.5165 | val (current weights) 58.3%
+S07 seed42 F2: test 68.06% (val 58.33%, best epoch 350)
+S07 seed42 F3 Ep 001 | tr 0.7204 | val (current weights) 47.2%
+S07 seed42 F3 Ep 050 | tr 0.5129 | val (current weights) 69.4%
+S07 seed42 F3 Ep 100 | tr 0.5301 | val (current weights) 65.3%
+S07 seed42 F3 Ep 150 | tr 0.4249 | val (current weights) 62.5%
+S07 seed42 F3 Ep 200 | tr 0.4337 | val (current weights) 68.1%
+S07 seed42 F3 Ep 250 | tr 0.4450 | val (current weights) 65.3%
+S07 seed42 F3 Ep 300 | tr 0.3847 | val (current weights) 66.7%
+S07 seed42 F3 Ep 350 | tr 0.4002 | val (current weights) 66.7%
+S07 seed42 F3: test 70.83% (val 65.28%, best epoch 350)
+S07 seed42 F4 Ep 001 | tr 0.7149 | val (current weights) 50.0%
+S07 seed42 F4 Ep 050 | tr 0.5318 | val (current weights) 65.3%
+S07 seed42 F4 Ep 100 | tr 0.4495 | val (current weights) 68.1%
+S07 seed42 F4 Ep 150 | tr 0.4303 | val (current weights) 69.4%
+S07 seed42 F4 Ep 200 | tr 0.3813 | val (current weights) 63.9%
+S07 seed42 F4 Ep 250 | tr 0.4832 | val (current weights) 61.1%
+S07 seed42 F4 Ep 300 | tr 0.5063 | val (current weights) 66.7%
+S07 seed42 F4 Ep 350 | tr 0.3897 | val (current weights) 63.9%
+S07 seed42 F4: test 70.83% (val 65.28%, best epoch 350)
+
+================================================================================
+SUBJECT 08 â€” saliency_reduced â€” 2class â€” profile cue_0_4 â€” 12 ch: CP4, P1, FC3, P2, CP3, Cz, C3, CP1, C5, POz, C1, FC2
+================================================================================
+  S08 [2class] profile=cue_0_4 X=(288, 12, 1000) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S08 seed42 F1 Ep 001 | tr 0.7298 | val (current weights) 44.4%
+S08 seed42 F1 Ep 050 | tr 0.5484 | val (current weights) 84.7%
+S08 seed42 F1 Ep 100 | tr 0.4048 | val (current weights) 86.1%
+S08 seed42 F1 Ep 150 | tr 0.3795 | val (current weights) 88.9%
+S08 seed42 F1 Ep 200 | tr 0.3938 | val (current weights) 90.3%
+S08 seed42 F1 Ep 250 | tr 0.4158 | val (current weights) 91.7%
+S08 seed42 F1 Ep 300 | tr 0.3875 | val (current weights) 90.3%
+S08 seed42 F1 Ep 350 | tr 0.4050 | val (current weights) 91.7%
+S08 seed42 F1: test 91.67% (val 90.28%, best epoch 350)
+S08 seed42 F2 Ep 001 | tr 0.7170 | val (current weights) 51.4%
+S08 seed42 F2 Ep 050 | tr 0.5718 | val (current weights) 86.1%
+S08 seed42 F2 Ep 100 | tr 0.3802 | val (current weights) 93.1%
+S08 seed42 F2 Ep 150 | tr 0.3699 | val (current weights) 97.2%
+S08 seed42 F2 Ep 200 | tr 0.4160 | val (current weights) 98.6%
+S08 seed42 F2 Ep 250 | tr 0.3702 | val (current weights) 97.2%
+S08 seed42 F2 Ep 300 | tr 0.3593 | val (current weights) 97.2%
+S08 seed42 F2 Ep 350 | tr 0.4015 | val (current weights) 98.6%
+S08 seed42 F2: test 76.39% (val 98.61%, best epoch 350)
+S08 seed42 F3 Ep 001 | tr 0.7463 | val (current weights) 52.8%
+S08 seed42 F3 Ep 050 | tr 0.4881 | val (current weights) 56.9%
+S08 seed42 F3 Ep 100 | tr 0.5036 | val (current weights) 75.0%
+S08 seed42 F3 Ep 150 | tr 0.3713 | val (current weights) 75.0%
+S08 seed42 F3 Ep 200 | tr 0.5779 | val (current weights) 77.8%
+S08 seed42 F3 Ep 250 | tr 0.5138 | val (current weights) 80.6%
+S08 seed42 F3 Ep 300 | tr 0.3742 | val (current weights) 80.6%
+S08 seed42 F3 Ep 350 | tr 0.3626 | val (current weights) 79.2%
+S08 seed42 F3: test 84.72% (val 77.78%, best epoch 350)
+S08 seed42 F4 Ep 001 | tr 0.7261 | val (current weights) 50.0%
+S08 seed42 F4 Ep 050 | tr 0.4600 | val (current weights) 61.1%
+S08 seed42 F4 Ep 100 | tr 0.5353 | val (current weights) 72.2%
+S08 seed42 F4 Ep 150 | tr 0.4024 | val (current weights) 86.1%
+S08 seed42 F4 Ep 200 | tr 0.4477 | val (current weights) 83.3%
+S08 seed42 F4 Ep 250 | tr 0.4951 | val (current weights) 84.7%
+S08 seed42 F4 Ep 300 | tr 0.3904 | val (current weights) 86.1%
+S08 seed42 F4 Ep 350 | tr 0.4404 | val (current weights) 86.1%
+S08 seed42 F4: test 76.39% (val 87.50%, best epoch 350)
+
+================================================================================
+SUBJECT 09 â€” saliency_reduced â€” 2class â€” profile no_aug â€” 12 ch: P2, CP4, FC3, P1, CP3, Cz, CP2, C5, C3, C1, C6, Fz
+================================================================================
+  S09 [2class] profile=no_aug X=(288, 12, 1125) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S09 seed42 F1 Ep 001 | tr 0.7229 | val (current weights) 50.0%
+S09 seed42 F1 Ep 050 | tr 0.3950 | val (current weights) 76.4%
+S09 seed42 F1 Ep 100 | tr 0.3697 | val (current weights) 76.4%
+S09 seed42 F1 Ep 150 | tr 0.3677 | val (current weights) 76.4%
+S09 seed42 F1 Ep 200 | tr 0.3502 | val (current weights) 76.4%
+S09 seed42 F1 Ep 250 | tr 0.3512 | val (current weights) 76.4%
+S09 seed42 F1 Ep 300 | tr 0.3641 | val (current weights) 76.4%
+S09 seed42 F1 Ep 350 | tr 0.3607 | val (current weights) 76.4%
+S09 seed42 F1: test 65.28% (val 76.39%, best epoch 350)
+S09 seed42 F2 Ep 001 | tr 0.7138 | val (current weights) 50.0%
+S09 seed42 F2 Ep 050 | tr 0.3827 | val (current weights) 52.8%
+S09 seed42 F2 Ep 100 | tr 0.3731 | val (current weights) 56.9%
+S09 seed42 F2 Ep 150 | tr 0.3806 | val (current weights) 56.9%
+S09 seed42 F2 Ep 200 | tr 0.3660 | val (current weights) 59.7%
+S09 seed42 F2 Ep 250 | tr 0.3669 | val (current weights) 59.7%
+S09 seed42 F2 Ep 300 | tr 0.3554 | val (current weights) 59.7%
+S09 seed42 F2 Ep 350 | tr 0.3694 | val (current weights) 59.7%
+S09 seed42 F2: test 61.11% (val 58.33%, best epoch 350)
+S09 seed42 F3 Ep 001 | tr 0.7125 | val (current weights) 44.4%
+S09 seed42 F3 Ep 050 | tr 0.4253 | val (current weights) 59.7%
+S09 seed42 F3 Ep 100 | tr 0.3867 | val (current weights) 68.1%
+S09 seed42 F3 Ep 150 | tr 0.3701 | val (current weights) 73.6%
+S09 seed42 F3 Ep 200 | tr 0.3652 | val (current weights) 73.6%
+S09 seed42 F3 Ep 250 | tr 0.3732 | val (current weights) 76.4%
+S09 seed42 F3 Ep 300 | tr 0.3580 | val (current weights) 76.4%
+S09 seed42 F3 Ep 350 | tr 0.3755 | val (current weights) 76.4%
+S09 seed42 F3: test 73.61% (val 70.83%, best epoch 350)
+S09 seed42 F4 Ep 001 | tr 0.7032 | val (current weights) 54.2%
+S09 seed42 F4 Ep 050 | tr 0.4114 | val (current weights) 72.2%
+S09 seed42 F4 Ep 100 | tr 0.3793 | val (current weights) 79.2%
+S09 seed42 F4 Ep 150 | tr 0.3769 | val (current weights) 81.9%
+S09 seed42 F4 Ep 200 | tr 0.3739 | val (current weights) 81.9%
+S09 seed42 F4 Ep 250 | tr 0.3663 | val (current weights) 83.3%
+S09 seed42 F4 Ep 300 | tr 0.3724 | val (current weights) 83.3%
+S09 seed42 F4 Ep 350 | tr 0.3654 | val (current weights) 83.3%
+S09 seed42 F4: test 69.44% (val 81.94%, best epoch 350)
+Results written to D:\EEG\NeuroGrounded-EEG\EEGItNet\BNCI_001\2class\results\saliency_reduced (grand mean 67.52% over 9 subjects; chance 50.0%, majority 50.0%)
+Report saved: D:\EEG\NeuroGrounded-EEG\EEGItNet\BNCI_001\2class\results\saliency_reduced\saliency_reduced_report.txt
+
+================================================================================
+FINAL SUMMARY - EEG-ITNet BNCI2014-001 2class
+================================================================================
+22ch 68.36%  ->  saliency 12ch 67.52%  (chance 50.0%, majority 50.0%)
+[0m
