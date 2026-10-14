@@ -1,0 +1,13 @@
+Model,Class,Attribution,magnitude r,class-specific r,lateralisation r,orig ERD_(L−R) r,orig ERD_comb r
+EEGNetV4,2class,grad,0.100,0.170,-0.184,-0.079,-0.194
+EEGNetV4,2class,grad_x_input,0.075,0.156,-0.382,-0.090,-0.194
+EEGNetV4,2class,integrated_gradients,0.056,0.136,-0.353,-0.083,-0.169
+EEGNetV4,2class,smoothgrad,0.100,0.172,-0.181,-0.078,-0.196
+EEGNetV4,4class,grad,0.109,0.354,0.168,-0.068,-0.422
+EEGNetV4,4class,grad_x_input,0.086,0.350,0.112,-0.084,-0.439
+EEGNetV4,4class,integrated_gradients,0.095,0.328,0.047,-0.072,-0.424
+EEGNetV4,4class,smoothgrad,0.108,0.355,0.169,-0.066,-0.424
+EEGItNet,2class,grad,0.004,0.016,-0.199,-0.086,-0.033
+EEGItNet,2class,grad_x_input,-0.027,0.007,-0.527,-0.099,-0.035
+EEGItNet,2class,integrated_gradients,-0.049,-0.011,-0.640,-0.125,-0.016
+EEGItNet,2class,smoothgrad,0.003,0.017,-0.204,-0.086,-0.035

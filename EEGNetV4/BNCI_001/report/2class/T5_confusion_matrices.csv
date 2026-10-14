@@ -1,0 +1,17 @@
+Method,True class,pred left_hand,pred right_hand
+22ch,left_hand,1047,249
+22ch,right_hand,454,842
+Ours,left_hand,926,370
+Ours,right_hand,422,874
+CSP,left_hand,905,391
+CSP,right_hand,362,934
+RLF,left_hand,922,374
+RLF,right_hand,373,923
+MI,left_hand,936,360
+MI,right_hand,417,879
+Fixed sensorimotor,left_hand,915,381
+Fixed sensorimotor,right_hand,421,875
+ERD-only,left_hand,916,380
+ERD-only,right_hand,408,888
+Random (mean of draws),left_hand,4603,1877
+Random (mean of draws),right_hand,2213,4267

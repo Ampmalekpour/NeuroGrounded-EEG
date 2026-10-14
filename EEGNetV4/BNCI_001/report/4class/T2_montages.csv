@@ -1,0 +1,109 @@
+Method,Subject,Profile,N channels,Channels
+22ch,S01,original,22,Fz FC3 FC1 FCz FC2 FC4 C5 C3 C1 Cz C2 C4 C6 CP3 CP1 CPz CP2 CP4 P1 Pz P2 POz
+22ch,S02,original,22,Fz FC3 FC1 FCz FC2 FC4 C5 C3 C1 Cz C2 C4 C6 CP3 CP1 CPz CP2 CP4 P1 Pz P2 POz
+22ch,S03,original,22,Fz FC3 FC1 FCz FC2 FC4 C5 C3 C1 Cz C2 C4 C6 CP3 CP1 CPz CP2 CP4 P1 Pz P2 POz
+22ch,S04,k64_long,22,Fz FC3 FC1 FCz FC2 FC4 C5 C3 C1 Cz C2 C4 C6 CP3 CP1 CPz CP2 CP4 P1 Pz P2 POz
+22ch,S05,k64_long,22,Fz FC3 FC1 FCz FC2 FC4 C5 C3 C1 Cz C2 C4 C6 CP3 CP1 CPz CP2 CP4 P1 Pz P2 POz
+22ch,S06,original,22,Fz FC3 FC1 FCz FC2 FC4 C5 C3 C1 Cz C2 C4 C6 CP3 CP1 CPz CP2 CP4 P1 Pz P2 POz
+22ch,S07,original,22,Fz FC3 FC1 FCz FC2 FC4 C5 C3 C1 Cz C2 C4 C6 CP3 CP1 CPz CP2 CP4 P1 Pz P2 POz
+22ch,S08,original,22,Fz FC3 FC1 FCz FC2 FC4 C5 C3 C1 Cz C2 C4 C6 CP3 CP1 CPz CP2 CP4 P1 Pz P2 POz
+22ch,S09,original,22,Fz FC3 FC1 FCz FC2 FC4 C5 C3 C1 Cz C2 C4 C6 CP3 CP1 CPz CP2 CP4 P1 Pz P2 POz
+Ours,S01,original,12,C3 CP3 CPz C4 Cz POz CP4 C5 CP2 C1 FCz Pz
+Ours,S02,original,12,CP3 C3 CPz C4 C1 Cz CP4 POz C5 CP2 C2 CP1
+Ours,S03,original,12,CP3 C3 C4 Cz POz C1 CP4 CPz C5 CP2 C2 C6
+Ours,S04,k64_long,12,C3 CP3 C4 CPz Cz C1 CP4 POz C5 CP2 FCz C2
+Ours,S05,k64_long,12,CP3 C3 C4 CPz Cz CP4 POz C1 CP2 C5 C2 Pz
+Ours,S06,original,12,CP3 C3 CPz Cz C4 C1 CP4 POz CP2 C2 CP1 C5
+Ours,S07,original,12,CP3 CPz C4 Cz C3 CP4 POz C1 CP2 C5 C2 CP1
+Ours,S08,original,12,C3 CP3 C4 C1 CPz Cz POz C5 C2 CP2 CP4 FCz
+Ours,S09,original,12,CP3 C3 Cz C1 CPz POz C4 CP4 CP2 C2 FCz C5
+CSP,S01,original,12,P2 Pz P1 CP3 CP4 CP1 CP2 POz C3 CPz C4 C1
+CSP,S02,original,12,P2 CP3 P1 Pz CP4 C3 POz CP1 CP2 C4 CPz C1
+CSP,S03,original,12,CP3 P2 CP4 P1 C3 Pz CP1 CP2 POz C4 CPz C1
+CSP,S04,k64_long,12,CP3 CP4 C3 P2 P1 Pz CP1 CP2 C4 POz CPz C1
+CSP,S05,k64_long,12,P2 CP4 CP3 P1 Pz CP2 CP1 C3 C4 POz CPz C1
+CSP,S06,original,12,CP3 CP4 P2 P1 Pz CP1 C3 CP2 POz C4 CPz C1
+CSP,S07,original,12,CP3 P2 CP4 P1 Pz CP2 CP1 C3 POz C4 CPz C1
+CSP,S08,original,12,CP3 CP4 C3 P2 P1 Pz CP1 CP2 POz C4 CPz C1
+CSP,S09,original,12,CP4 P2 CP3 P1 Pz CP2 POz C3 CP1 C4 CPz C2
+RLF,S01,original,12,C3 CP4 CP3 C4 Fz POz P2 FC2 P1 FC3 Pz FC4
+RLF,S02,original,12,C3 CP4 CP3 C4 P1 P2 POz Pz CPz Fz CP2 CP1
+RLF,S03,original,12,CP4 C3 CP3 C4 Fz POz P1 P2 FC2 FC3 FCz FC4
+RLF,S04,k64_long,12,C3 CP4 CP3 C4 Fz FC2 FC3 P1 P2 FCz FC4 FC1
+RLF,S05,k64_long,12,C3 CP4 CP3 C4 P1 P2 POz FC2 FC3 CPz Cz FCz
+RLF,S06,original,12,CP4 C3 CP3 Fz P2 POz P1 FC2 FC3 C4 FCz FC1
+RLF,S07,original,12,CP4 CP3 C3 C4 Fz POz FC2 P2 P1 FC3 FC4 FCz
+RLF,S08,original,12,C3 CP4 CP3 C4 Fz POz FC2 FC3 P2 P1 FCz FC1
+RLF,S09,original,12,C3 CP4 CP3 Fz C4 POz P2 FC2 FC3 P1 FCz FC4
+MI,S01,original,12,P2 C3 CP3 CP2 P1 CPz C4 CP1 FCz CP4 C1 FC1
+MI,S02,original,12,C3 P2 CP3 CP4 CP2 P1 C4 CP1 POz FC3 FCz CPz
+MI,S03,original,12,P2 C3 CP3 P1 CP2 CP4 FCz CPz POz C4 FC1 CP1
+MI,S04,k64_long,12,C3 P2 CP3 C4 CP2 CP4 P1 FCz FC1 FC3 C1 CPz
+MI,S05,k64_long,12,CP3 C3 P2 P1 CP4 CP2 C4 CPz FC1 CP1 POz C1
+MI,S06,original,12,P2 CP3 C3 P1 CP4 FCz CPz C4 CP2 POz FC1 FC3
+MI,S07,original,12,P2 CP3 P1 C3 CP2 CP4 FC1 C4 CPz CP1 C1 Pz
+MI,S08,original,12,P2 C3 CP3 FCz P1 CP2 CP4 FC1 C4 CP1 C1 FC3
+MI,S09,original,12,P2 C3 CP3 P1 CP2 FCz CP4 FC1 CPz FC3 C4 C1
+Fixed sensorimotor,S01,original,12,FC3 FC1 FC2 FC4 C3 C1 Cz C2 C4 CP3 CPz CP4
+Fixed sensorimotor,S02,original,12,FC3 FC1 FC2 FC4 C3 C1 Cz C2 C4 CP3 CPz CP4
+Fixed sensorimotor,S03,original,12,FC3 FC1 FC2 FC4 C3 C1 Cz C2 C4 CP3 CPz CP4
+Fixed sensorimotor,S04,k64_long,12,FC3 FC1 FC2 FC4 C3 C1 Cz C2 C4 CP3 CPz CP4
+Fixed sensorimotor,S05,k64_long,12,FC3 FC1 FC2 FC4 C3 C1 Cz C2 C4 CP3 CPz CP4
+Fixed sensorimotor,S06,original,12,FC3 FC1 FC2 FC4 C3 C1 Cz C2 C4 CP3 CPz CP4
+Fixed sensorimotor,S07,original,12,FC3 FC1 FC2 FC4 C3 C1 Cz C2 C4 CP3 CPz CP4
+Fixed sensorimotor,S08,original,12,FC3 FC1 FC2 FC4 C3 C1 Cz C2 C4 CP3 CPz CP4
+Fixed sensorimotor,S09,original,12,FC3 FC1 FC2 FC4 C3 C1 Cz C2 C4 CP3 CPz CP4
+ERD-only,S01,original,12,P2 CP4 C3 CPz POz Pz CP2 P1 CP3 C4 CP1 Cz
+ERD-only,S02,original,12,P2 CP4 Pz CP3 POz P1 C3 CPz CP2 C4 CP1 Cz
+ERD-only,S03,original,12,P2 CP4 Pz P1 CP2 CPz CP3 C4 POz Cz C2 CP1
+ERD-only,S04,k64_long,12,P2 Pz CP3 CP4 CPz P1 POz C3 CP2 CP1 C4 Cz
+ERD-only,S05,k64_long,12,P2 CP4 CPz CP3 Pz CP2 C4 C3 P1 Cz POz CP1
+ERD-only,S06,original,12,CP4 P2 C4 C3 CP2 CP3 Pz CPz POz P1 C2 Cz
+ERD-only,S07,original,12,P2 POz Pz CP4 P1 CPz CP3 CP2 C3 C4 CP1 Cz
+ERD-only,S08,original,12,CP3 CP4 C3 P2 C4 CPz P1 CP2 Pz Cz CP1 POz
+ERD-only,S09,original,12,P2 CP4 Pz P1 CPz POz CP2 CP3 C3 Cz C4 CP1
+Random (mean of draws) draw 0,S01,original,12,FC3 FC1 FCz FC2 C1 CP1 CPz CP2 CP4 Pz P2 POz
+Random (mean of draws) draw 0,S02,original,12,Fz FC3 FCz C5 C1 C4 CP3 CP1 CPz P1 Pz P2
+Random (mean of draws) draw 0,S03,original,12,FC3 FC1 FC2 FC4 C3 C1 C2 C6 CP3 CP1 Pz POz
+Random (mean of draws) draw 0,S04,k64_long,12,FC3 FCz FC2 C5 C3 C1 CP3 CPz CP2 CP4 P1 POz
+Random (mean of draws) draw 0,S05,k64_long,12,Fz FC3 FCz FC2 FC4 C3 Cz C4 CP3 CP2 CP4 P1
+Random (mean of draws) draw 0,S06,original,12,FC1 FC2 C3 C1 Cz C2 C4 CP3 CP1 CPz P1 POz
+Random (mean of draws) draw 0,S07,original,12,Fz FC3 FC1 FCz FC4 C1 Cz C6 CP3 CPz CP2 P1
+Random (mean of draws) draw 0,S08,original,12,FCz FC2 C5 C1 Cz C6 CP3 CP1 P1 Pz P2 POz
+Random (mean of draws) draw 0,S09,original,12,Fz FC1 FC4 C5 C3 Cz C2 C6 CPz P1 Pz POz
+Random (mean of draws) draw 1,S01,original,12,FC3 FC2 FC4 C1 C2 C4 C6 CP3 CP1 CPz P1 Pz
+Random (mean of draws) draw 1,S02,original,12,FC3 FC1 FC2 FC4 C5 C1 Cz C6 CP1 CP2 CP4 Pz
+Random (mean of draws) draw 1,S03,original,12,FC3 FC2 FC4 C5 C3 Cz C2 C6 CP4 P1 P2 POz
+Random (mean of draws) draw 1,S04,k64_long,12,Fz FCz C3 C1 Cz C2 CP1 CP2 CP4 P1 Pz POz
+Random (mean of draws) draw 1,S05,k64_long,12,FC1 FCz FC2 C3 C1 C2 C6 CP3 CP4 P1 Pz POz
+Random (mean of draws) draw 1,S06,original,12,FC1 FC2 FC4 C5 C1 Cz C2 C6 CP1 CPz CP4 POz
+Random (mean of draws) draw 1,S07,original,12,Fz FC3 FC1 FCz C3 C1 C4 CP3 CP2 Pz P2 POz
+Random (mean of draws) draw 1,S08,original,12,Fz FCz C5 C3 Cz C6 CP3 CP1 CPz CP2 CP4 Pz
+Random (mean of draws) draw 1,S09,original,12,Fz FC3 FC2 FC4 C5 C3 C4 C6 CPz CP2 CP4 P2
+Random (mean of draws) draw 2,S01,original,12,Fz FC3 FC1 FC4 C5 C3 C1 Cz C6 CP4 Pz POz
+Random (mean of draws) draw 2,S02,original,12,FC3 FCz C1 Cz C2 C4 CP3 CPz CP2 CP4 Pz POz
+Random (mean of draws) draw 2,S03,original,12,Fz FC1 FCz FC4 C5 Cz C4 CP3 CP1 P1 P2 POz
+Random (mean of draws) draw 2,S04,k64_long,12,Fz FCz FC4 C5 C3 C1 Cz C4 C6 CP4 P1 POz
+Random (mean of draws) draw 2,S05,k64_long,12,Fz FC1 FC4 C5 C1 Cz C4 C6 CP1 CP2 P1 POz
+Random (mean of draws) draw 2,S06,original,12,Fz FC2 C5 C1 Cz C2 C4 CP3 CP1 CPz CP4 POz
+Random (mean of draws) draw 2,S07,original,12,FCz FC2 C5 C3 C1 Cz CP3 CP2 P1 Pz P2 POz
+Random (mean of draws) draw 2,S08,original,12,Fz FC3 FCz C5 C3 C1 C6 CPz CP2 CP4 P1 P2
+Random (mean of draws) draw 2,S09,original,12,FC3 FC1 FCz C1 C2 C4 CP3 CP2 CP4 P1 Pz P2
+Random (mean of draws) draw 3,S01,original,12,Fz FC3 FC2 FC4 C5 C1 CP1 CPz CP4 P1 Pz POz
+Random (mean of draws) draw 3,S02,original,12,Fz FC2 C3 C1 Cz C4 CP3 CP1 CPz CP2 P2 POz
+Random (mean of draws) draw 3,S03,original,12,Fz FC1 FC2 FC4 C4 C6 CP3 CPz CP2 CP4 Pz P2
+Random (mean of draws) draw 3,S04,k64_long,12,Fz FC1 FCz FC4 C5 C2 C4 C6 CPz CP2 P1 Pz
+Random (mean of draws) draw 3,S05,k64_long,12,Fz FC3 FC2 FC4 C5 Cz C2 C4 C6 CP3 CP2 CP4
+Random (mean of draws) draw 3,S06,original,12,FC1 FCz FC2 Cz C2 C4 CP3 CP2 CP4 P1 Pz P2
+Random (mean of draws) draw 3,S07,original,12,Fz FCz FC2 C1 C2 C4 CP3 CP1 CP2 CP4 P1 POz
+Random (mean of draws) draw 3,S08,original,12,Fz FC4 C5 C3 C1 Cz C2 CP3 CP1 CPz P1 P2
+Random (mean of draws) draw 3,S09,original,12,FC3 FC1 FCz FC2 C3 C1 C4 C6 CP3 CPz Pz POz
+Random (mean of draws) draw 4,S01,original,12,FCz FC2 FC4 C5 C1 C4 C6 CP2 CP4 P1 P2 POz
+Random (mean of draws) draw 4,S02,original,12,Fz FC1 C5 C3 C1 C2 C4 CP3 CP1 CPz P1 POz
+Random (mean of draws) draw 4,S03,original,12,FC3 FC1 FCz C5 C3 Cz C2 C4 CP1 CPz P2 POz
+Random (mean of draws) draw 4,S04,k64_long,12,Fz FC3 FC1 FCz C5 C3 C2 C6 CP3 CP2 CP4 POz
+Random (mean of draws) draw 4,S05,k64_long,12,Fz FC3 FCz FC4 C1 Cz C6 CP1 CPz CP4 Pz POz
+Random (mean of draws) draw 4,S06,original,12,FCz FC4 C5 C3 C1 Cz C4 C6 CP2 P1 Pz POz
+Random (mean of draws) draw 4,S07,original,12,Fz FC3 FC1 FC4 C2 C4 CP3 CP1 CP4 P1 Pz POz
+Random (mean of draws) draw 4,S08,original,12,Fz FC3 FC1 FCz C3 C1 Cz C6 CP1 CP2 CP4 P1
+Random (mean of draws) draw 4,S09,original,12,FC3 FC1 FCz FC2 FC4 C5 C3 C2 CP3 CPz CP2 Pz

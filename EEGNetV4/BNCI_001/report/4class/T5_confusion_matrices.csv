@@ -1,0 +1,33 @@
+Method,True class,pred feet,pred left_hand,pred right_hand,pred tongue
+22ch,feet,718,210,112,256
+22ch,left_hand,156,834,175,131
+22ch,right_hand,162,259,746,129
+22ch,tongue,251,165,121,759
+Ours,feet,696,188,123,289
+Ours,left_hand,118,817,218,143
+Ours,right_hand,99,250,773,174
+Ours,tongue,208,154,128,806
+CSP,feet,680,229,126,261
+CSP,left_hand,111,849,201,135
+CSP,right_hand,93,286,747,170
+CSP,tongue,230,170,131,765
+RLF,feet,590,202,170,334
+RLF,left_hand,144,779,235,138
+RLF,right_hand,158,222,755,161
+RLF,tongue,267,140,150,739
+MI,feet,681,169,168,278
+MI,left_hand,140,756,271,129
+MI,right_hand,132,215,783,166
+MI,tongue,251,116,160,769
+Fixed sensorimotor,feet,693,182,145,276
+Fixed sensorimotor,left_hand,105,834,212,145
+Fixed sensorimotor,right_hand,100,233,812,151
+Fixed sensorimotor,tongue,210,145,149,792
+ERD-only,feet,705,156,147,288
+ERD-only,left_hand,94,794,240,168
+ERD-only,right_hand,94,215,789,198
+ERD-only,tongue,179,129,139,849
+Random (mean of draws),feet,3224,957,845,1454
+Random (mean of draws),left_hand,513,4012,1175,780
+Random (mean of draws),right_hand,510,1182,3858,930
+Random (mean of draws),tongue,1052,699,798,3931

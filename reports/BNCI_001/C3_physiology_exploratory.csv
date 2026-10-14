@@ -1,0 +1,25 @@
+Map,EEGItNet 2class,EEGNetV4 2class,EEGNetV4 4class
+ERD_theta_L,-0.062,-0.059,-0.207
+ERD_theta_R,-0.065,-0.005,-0.202
+ERD_theta_mag,0.007,-0.011,0.102
+ERD_mu_L,-0.077,-0.171,-0.307
+ERD_mu_R,-0.031,-0.079,-0.311
+ERD_mu_mag,0.017,0.117,0.043
+ERD_beta_L,0.030,-0.127,-0.320
+ERD_beta_R,0.057,-0.058,-0.205
+ERD_beta_mag,0.094,0.034,-0.004
+ERS_beta_rebound_L,-0.005,-0.010,-0.159
+ERS_beta_rebound_R,-0.024,-0.013,-0.097
+ERS_beta_rebound_mag,-0.009,0.012,-0.180
+ERD_lowgamma_L,0.061,-0.075,-0.164
+ERD_lowgamma_R,-0.102,-0.200,-0.290
+ERD_lowgamma_mag,-0.061,-0.093,-0.095
+logpow_8_30,-0.049,-0.127,0.004
+r2_signed,0.092,0.138,0.097
+r2_abs,0.192,0.348,0.102
+TFR_ERD_dB_L,-0.046,-0.210,-0.392
+TFR_ERD_dB_R,0.049,-0.138,-0.316
+TFR_ERD_dB_mag,0.070,0.106,0.161
+ITC_4_30,0.047,-0.017,0.019
+ERP_abs_0.2_0.8,0.079,-0.049,0.047
+SlowPot_0.5_3,-0.050,0.055,0.085

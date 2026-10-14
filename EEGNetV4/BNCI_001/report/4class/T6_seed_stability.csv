@@ -1,0 +1,9 @@
+Method,Seeds,Grand mean per seed (%),Mean across seeds,SD across seeds
+22ch,1,42: 58.97,58.97,—
+Ours,1,42: 59.65,59.65,—
+CSP,1,42: 58.66,58.66,—
+RLF,1,42: 55.23,55.23,—
+MI,1,42: 57.66,57.66,—
+Fixed sensorimotor,1,42: 60.40,60.40,—
+ERD-only,1,42: 60.51,60.51,—
+Random (mean of draws),1,42: 57.97,57.97,—

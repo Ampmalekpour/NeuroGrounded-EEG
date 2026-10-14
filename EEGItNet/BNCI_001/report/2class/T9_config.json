@@ -1,0 +1,346 @@
+{
+ "model": "EEGITNet",
+ "class_mode": "2class",
+ "dataset": "BNCI2014_001",
+ "note_dataset": "BNCI2014-001 / BCI Competition IV-2a: motor IMAGERY, 2 sessions x 288 trials.",
+ "deletion_test_prediction": "plain forward pass (no TTA) so removals are compared deterministically",
+ "sfreq_hz": 250,
+ "ems": {
+  "factor_new": 0.001,
+  "init_block_size": 1000
+ },
+ "event_duration_s": 4.0,
+ "profiles": {
+  "original": {
+   "band_hz": [
+    4.0,
+    38.0
+   ],
+   "iir": {
+    "order": 6,
+    "ftype": "cheby1",
+    "rp": 0.5
+   },
+   "window_s": [
+    -0.5,
+    4.0
+   ],
+   "dropout": 0.4,
+   "lr": 0.001,
+   "weight_decay": 0.001,
+   "label_smoothing": 0.1,
+   "batch_size": 64,
+   "max_epochs": 350,
+   "swa_start_frac": 0.7142857142857143,
+   "augment": true,
+   "mixup_p": 0.5,
+   "mixup_alpha": 0.2,
+   "tta": true,
+   "grad_clip": 10.0,
+   "patience": null
+  },
+  "cue_0_4": {
+   "band_hz": [
+    4.0,
+    38.0
+   ],
+   "iir": {
+    "order": 6,
+    "ftype": "cheby1",
+    "rp": 0.5
+   },
+   "window_s": [
+    0.0,
+    4.0
+   ],
+   "dropout": 0.4,
+   "lr": 0.001,
+   "weight_decay": 0.001,
+   "label_smoothing": 0.1,
+   "batch_size": 64,
+   "max_epochs": 350,
+   "swa_start_frac": 0.7142857142857143,
+   "augment": true,
+   "mixup_p": 0.5,
+   "mixup_alpha": 0.2,
+   "tta": true,
+   "grad_clip": 10.0,
+   "patience": null
+  },
+  "no_aug": {
+   "band_hz": [
+    4.0,
+    38.0
+   ],
+   "iir": {
+    "order": 6,
+    "ftype": "cheby1",
+    "rp": 0.5
+   },
+   "window_s": [
+    -0.5,
+    4.0
+   ],
+   "dropout": 0.4,
+   "lr": 0.001,
+   "weight_decay": 0.001,
+   "label_smoothing": 0.1,
+   "batch_size": 64,
+   "max_epochs": 350,
+   "swa_start_frac": 0.7142857142857143,
+   "augment": false,
+   "mixup_p": 0.0,
+   "mixup_alpha": 0.2,
+   "tta": true,
+   "grad_clip": 10.0,
+   "patience": null
+  },
+  "drop_0.25": {
+   "band_hz": [
+    4.0,
+    38.0
+   ],
+   "iir": {
+    "order": 6,
+    "ftype": "cheby1",
+    "rp": 0.5
+   },
+   "window_s": [
+    -0.5,
+    4.0
+   ],
+   "dropout": 0.25,
+   "lr": 0.001,
+   "weight_decay": 0.001,
+   "label_smoothing": 0.1,
+   "batch_size": 64,
+   "max_epochs": 350,
+   "swa_start_frac": 0.7142857142857143,
+   "augment": true,
+   "mixup_p": 0.5,
+   "mixup_alpha": 0.2,
+   "tta": true,
+   "grad_clip": 10.0,
+   "patience": null
+  }
+ },
+ "augmentation": {
+  "noise_p": 0.5,
+  "noise_rel_std": 0.05,
+  "scale_p": 0.5,
+  "scale": [
+   0.8,
+   1.2
+  ],
+  "channel_drop_p": 0.3,
+  "channel_drop_max": 3
+ },
+ "profile_default": "original",
+ "profile_selection": {
+  "class_mode": "2class",
+  "rule": "leave-one-subject-out mean validation accuracy",
+  "per_subject": {
+   "1": "cue_0_4",
+   "2": "cue_0_4",
+   "3": "cue_0_4",
+   "4": "cue_0_4",
+   "5": "cue_0_4",
+   "6": "cue_0_4",
+   "7": "cue_0_4",
+   "8": "cue_0_4",
+   "9": "no_aug"
+  },
+  "overall": "cue_0_4",
+  "unanimous": false,
+  "validation_accuracy": {
+   "original": {
+    "1": 0.6458333333333334,
+    "2": 0.5451388888888888,
+    "3": 0.7222222222222223,
+    "4": 0.65625,
+    "5": 0.6145833333333333,
+    "6": 0.6215277777777778,
+    "7": 0.6909722222222222,
+    "8": 0.8611111111111112,
+    "9": 0.7604166666666666
+   },
+   "cue_0_4": {
+    "1": 0.701388888888889,
+    "2": 0.5868055555555556,
+    "3": 0.7534722222222223,
+    "4": 0.6840277777777778,
+    "5": 0.59375,
+    "6": 0.6041666666666667,
+    "7": 0.6666666666666666,
+    "8": 0.8472222222222222,
+    "9": 0.767361111111111
+   },
+   "no_aug": {
+    "1": 0.6770833333333334,
+    "2": 0.5208333333333333,
+    "3": 0.7534722222222222,
+    "4": 0.704861111111111,
+    "5": 0.6041666666666666,
+    "6": 0.6319444444444444,
+    "7": 0.7013888888888888,
+    "8": 0.8576388888888888,
+    "9": 0.6805555555555556
+   },
+   "drop_0.25": {
+    "1": 0.6006944444444444,
+    "2": 0.5416666666666667,
+    "3": 0.6909722222222222,
+    "4": 0.6527777777777778,
+    "5": 0.59375,
+    "6": 0.6006944444444444,
+    "7": 0.6701388888888888,
+    "8": 0.8020833333333334,
+    "9": 0.7916666666666666
+   }
+  },
+  "mean_validation_accuracy": {
+   "original": 0.679783950617284,
+   "cue_0_4": 0.689429012345679,
+   "no_aug": 0.6813271604938271,
+   "drop_0.25": 0.660493827160494
+  },
+  "seed": 42,
+  "candidates": [
+   "original",
+   "cue_0_4",
+   "no_aug",
+   "drop_0.25"
+  ]
+ },
+ "env_overrides": {
+  "EEG_PROFILE": null,
+  "EEG_MAX_EPOCHS": null,
+  "EEG_PATIENCE": null
+ },
+ "model_fixed": "braindecode EEGITNet defaults (drop_prob from the profile)",
+ "optimizer": "AdamW",
+ "scheduler": "CosineAnnealingLR(T_max=max_epochs)",
+ "loss": "label-smoothed NLL (smoothing / (K-1) off-target), mixup",
+ "tta": {
+  "noise_rel_std": 0.02,
+  "scale": 0.9
+ },
+ "checkpoint_rule": "SWA average from swa_start_frac*max_epochs + BN update (no early stopping); validation block only scored, never used for checkpointing",
+ "folds": "4 chronological blocks; test block i, validation block i-1, rest train (original: shuffled StratifiedKFold(4), no validation set)",
+ "attribution": {
+  "methods": [
+   "grad",
+   "grad_x_input",
+   "integrated_gradients",
+   "smoothgrad"
+  ],
+  "ig_steps": 32,
+  "smoothgrad_samples": 12,
+  "smoothgrad_noise_std": 0.1,
+  "target": "pre-softmax logit of the true class",
+  "computed_on": "validation block of each fold"
+ },
+ "faithfulness": {
+  "k": [
+   2,
+   4,
+   6
+  ],
+  "random_draws": 10,
+  "removal": "channel set to 0 (its standardised mean) on the TEST block; evaluation only, never used for any choice",
+  "ranking": "mean of the four attribution maps from the VALIDATION block"
+ },
+ "randomisation_check": "Spearman between trained-model and untrained-model saliency",
+ "erd": {
+  "baseline_s": [
+   -0.5,
+   0.0
+  ],
+  "active_s": [
+   1.0,
+   3.0
+  ],
+  "sfreq_hz": 128,
+  "band_hz": [
+   8.0,
+   30.0
+  ],
+  "standardisation": "none"
+ },
+ "physiology_exploratory": {
+  "sfreq_hz": 128,
+  "bands_hz": {
+   "theta": [
+    4.0,
+    8.0
+   ],
+   "mu": [
+    8.0,
+    13.0
+   ],
+   "beta": [
+    13.0,
+    30.0
+   ],
+   "lowgamma": [
+    30.0,
+    40.0
+   ]
+  },
+  "epoch_s": [
+   -1.0,
+   5.0
+  ],
+  "used_for_decisions": false
+ },
+ "full_channels": [
+  "Fz",
+  "FC3",
+  "FC1",
+  "FCz",
+  "FC2",
+  "FC4",
+  "C5",
+  "C3",
+  "C1",
+  "Cz",
+  "C2",
+  "C4",
+  "C6",
+  "CP3",
+  "CP1",
+  "CPz",
+  "CP2",
+  "CP4",
+  "P1",
+  "Pz",
+  "P2",
+  "POz"
+ ],
+ "reduced_n_channels": 12,
+ "seeds": [
+  42
+ ],
+ "subject_ids": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "label_names": [
+  "feet",
+  "left_hand",
+  "right_hand",
+  "tongue"
+ ],
+ "versions": {
+  "torch": "2.0.1+cu118",
+  "mne": "1.9.0",
+  "numpy": "1.26.4"
+ }
+}
