@@ -1,0 +1,24 @@
+EEGConformer - BNCI2014-001 - FULL 22-CHANNEL BASELINE - 4class
+================================================================================
+
+Subject 01: 75.00%
+    seed -1 fold 1: 75.00% (majority-class 25.0%)
+Subject 02: 42.71%
+    seed -1 fold 1: 42.71% (majority-class 25.0%)
+Subject 03: 77.08%
+    seed -1 fold 1: 77.08% (majority-class 25.0%)
+Subject 04: 71.18%
+    seed -1 fold 1: 71.18% (majority-class 25.0%)
+Subject 05: 43.06%
+    seed -1 fold 1: 43.06% (majority-class 25.0%)
+Subject 06: 46.18%
+    seed -1 fold 1: 46.18% (majority-class 25.0%)
+Subject 07: 78.82%
+    seed -1 fold 1: 78.82% (majority-class 25.0%)
+Subject 08: 74.65%
+    seed -1 fold 1: 74.65% (majority-class 25.0%)
+Subject 09: 75.00%
+    seed -1 fold 1: 75.00% (majority-class 25.0%)
+
+GRAND MEAN: 64.85% +/- 15.81% (SD across subjects)
+chance 25.0% | mean majority-class 25.0%

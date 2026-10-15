@@ -1,0 +1,24 @@
+Deep4Net - BNCI2014-001 - MI 12-channel (LOSO) - 2class
+================================================================================
+
+Subject 01: 55.56%  | montage: CP4, P2, C2, P1, Cz, POz, Fz, C4, C1, CPz, C5, Pz
+    seed -1 fold 1: 55.56% (majority-class 50.0%)
+Subject 02: 52.78%  | montage: CP4, C2, POz, P1, Pz, Fz, P2, FC3, CPz, Cz, C5, C4
+    seed -1 fold 1: 52.78% (majority-class 50.0%)
+Subject 03: 59.03%  | montage: CP4, P2, C2, P1, Fz, Pz, Cz, C5, FC3, CPz, C4, POz
+    seed -1 fold 1: 59.03% (majority-class 50.0%)
+Subject 04: 55.56%  | montage: CP4, P2, C2, P1, Fz, Cz, C5, FC3, C3, Pz, CPz, C4
+    seed -1 fold 1: 55.56% (majority-class 50.0%)
+Subject 05: 60.42%  | montage: CP4, P2, POz, Fz, P1, Pz, Cz, FC3, CPz, C3, C2, C5
+    seed -1 fold 1: 60.42% (majority-class 50.0%)
+Subject 06: 55.56%  | montage: P2, P1, POz, C2, Pz, Cz, Fz, CP4, C3, C1, C4, CPz
+    seed -1 fold 1: 55.56% (majority-class 50.0%)
+Subject 07: 54.17%  | montage: CP4, POz, P2, P1, Fz, Pz, Cz, C5, C2, FC3, C3, C1
+    seed -1 fold 1: 54.17% (majority-class 50.0%)
+Subject 08: 88.89%  | montage: P2, P1, POz, Fz, C2, CP4, C5, Pz, C3, FC3, CPz, C1
+    seed -1 fold 1: 88.89% (majority-class 50.0%)
+Subject 09: 87.50%  | montage: CP4, P1, C2, Fz, POz, P2, Pz, CPz, C3, C5, FC3, Cz
+    seed -1 fold 1: 87.50% (majority-class 50.0%)
+
+GRAND MEAN: 63.27% +/- 14.32% (SD across subjects)
+chance 50.0% | mean majority-class 50.0%

@@ -1,0 +1,361 @@
+$ D:\EEG\braindec\.venv\Scripts\python.exe -u D:\EEG\NeuroGrounded-EEG\Deep4net\BNCI_001\4class\deep4net_bnci_4class_csp.py   [EEG_PROTOCOL=session]
+Using device: cuda | class mode: 4class | seeds: [42, 43, 44] | subjects: [1, 2, 3, 4, 5, 6, 7, 8, 9] | synthetic: False | protocol: session
+
+================================================================================
+PHASE 1: PER-SUBJECT CSP SCORES (22 ch) - 4class
+================================================================================
+  S01 [4class] profile=original X=(576, 22, 1125) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+  S01 CSP top-12: CP4 (1.000), C4 (0.984), CP3 (0.921), FC2 (0.919), FCz (0.905), Fz (0.850), C6 (0.816), FC1 (0.799), FC4 (0.788), P1 (0.742), FC3 (0.741), P2 (0.711)
+  S02 [4class] profile=cue_0_4 X=(576, 22, 1000) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+  S02 CSP top-12: Cz (1.000), C4 (0.943), FCz (0.925), C6 (0.908), FC2 (0.904), CP4 (0.895), CP2 (0.884), C2 (0.873), FC4 (0.873), Fz (0.853), CPz (0.841), FC1 (0.798)
+  S03 [4class] profile=original X=(576, 22, 1125) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+  S03 CSP top-12: Pz (1.000), P2 (1.000), CP3 (0.969), P1 (0.932), CP4 (0.916), POz (0.891), CP1 (0.879), C3 (0.877), CPz (0.862), CP2 (0.859), C4 (0.771), FC3 (0.724)
+  S04 [4class] profile=cue_0_4 X=(576, 22, 1000) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+  S04 CSP top-12: P2 (1.000), CP4 (0.916), POz (0.904), CP2 (0.877), Pz (0.850), P1 (0.840), CPz (0.762), CP3 (0.757), CP1 (0.722), C3 (0.644), C4 (0.634), C5 (0.632)
+  S05 [4class] profile=cue_0_4 X=(576, 22, 1000) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+  S05 CSP top-12: CP3 (1.000), P1 (0.975), FC2 (0.956), CP1 (0.933), Pz (0.920), FCz (0.907), CPz (0.906), Cz (0.896), C2 (0.890), FC4 (0.885), Fz (0.884), C3 (0.881)
+  S06 [4class] profile=cue_0_4 X=(576, 22, 1000) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+  S06 CSP top-12: P1 (1.000), CP3 (0.991), P2 (0.923), Pz (0.916), CP1 (0.912), POz (0.880), C3 (0.825), CP4 (0.810), CP2 (0.783), CPz (0.731), C5 (0.700), C4 (0.670)
+  S07 [4class] profile=cue_0_4 X=(576, 22, 1000) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+  S07 CSP top-12: CPz (1.000), C3 (0.951), P1 (0.942), CP4 (0.933), Pz (0.927), CP1 (0.893), C4 (0.889), CP3 (0.882), P2 (0.876), CP2 (0.873), C1 (0.772), POz (0.715)
+  S08 [4class] profile=cue_0_4 X=(576, 22, 1000) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+  S08 CSP top-12: P2 (1.000), Pz (0.937), POz (0.933), CP2 (0.894), CPz (0.887), P1 (0.877), CP4 (0.813), Cz (0.703), CP1 (0.698), C2 (0.674), C4 (0.629), C6 (0.619)
+  S09 [4class] profile=original X=(576, 22, 1125) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+  S09 CSP top-12: CP3 (1.000), P1 (0.952), CP1 (0.919), Pz (0.798), C3 (0.767), Fz (0.708), CPz (0.700), POz (0.669), FCz (0.668), C5 (0.666), C1 (0.660), P2 (0.657)
+
+================================================================================
+SUBJECT 01 — csp_reduced — 4class — session — profile original — 12 ch: P1, P2, Pz, CP3, CPz, CP1, CP4, CP2, POz, C3, C4, C2
+================================================================================
+  S01 [4class] profile=original X=(576, 12, 1125) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S01 seed42 F1 [refit] Ep 001/350 | tr 2.0201 | refit, no validation
+S01 seed42 F1 [refit] Ep 050/350 | tr 0.9973 | refit, no validation
+S01 seed42 F1 [refit] Ep 100/350 | tr 0.6976 | refit, no validation
+S01 seed42 F1 [refit] Ep 150/350 | tr 0.7833 | refit, no validation
+S01 seed42 F1 [refit] Ep 200/350 | tr 0.7082 | refit, no validation
+S01 seed42 F1 [refit] Ep 250/350 | tr 0.5551 | refit, no validation
+S01 seed42 F1 [refit] Ep 300/350 | tr 0.6294 | refit, no validation
+S01 seed42 F1 [refit] Ep 350/350 | tr 0.5220 | refit, no validation
+S01 seed42 F1: test 50.69% (val nan%, epochs 350)
+S01 seed43 F1 [refit] Ep 001/350 | tr 1.8831 | refit, no validation
+S01 seed43 F1 [refit] Ep 050/350 | tr 0.9961 | refit, no validation
+S01 seed43 F1 [refit] Ep 100/350 | tr 0.7860 | refit, no validation
+S01 seed43 F1 [refit] Ep 150/350 | tr 0.5992 | refit, no validation
+S01 seed43 F1 [refit] Ep 200/350 | tr 0.6470 | refit, no validation
+S01 seed43 F1 [refit] Ep 250/350 | tr 0.5822 | refit, no validation
+S01 seed43 F1 [refit] Ep 300/350 | tr 0.6906 | refit, no validation
+S01 seed43 F1 [refit] Ep 350/350 | tr 0.5257 | refit, no validation
+S01 seed43 F1: test 61.81% (val nan%, epochs 350)
+S01 seed44 F1 [refit] Ep 001/350 | tr 1.8311 | refit, no validation
+S01 seed44 F1 [refit] Ep 050/350 | tr 1.0283 | refit, no validation
+S01 seed44 F1 [refit] Ep 100/350 | tr 0.9432 | refit, no validation
+S01 seed44 F1 [refit] Ep 150/350 | tr 0.6319 | refit, no validation
+S01 seed44 F1 [refit] Ep 200/350 | tr 0.8400 | refit, no validation
+S01 seed44 F1 [refit] Ep 250/350 | tr 0.6830 | refit, no validation
+S01 seed44 F1 [refit] Ep 300/350 | tr 0.8247 | refit, no validation
+S01 seed44 F1 [refit] Ep 350/350 | tr 0.5528 | refit, no validation
+S01 seed44 F1: test 57.99% (val nan%, epochs 350)
+D:\EEG\NeuroGrounded-EEG\Deep4net\BNCI_001\deep4net_bnci_common.py:857: RuntimeWarning: Mean of empty slice
+  "val_acc": float(np.nanmean([r["val_acc"] for r in seed_recs])) if seed_recs else float("nan"),
+S01 seed ensemble (3 seeds): test 58.68% (single seeds 50.7, 61.8, 58.0)
+
+================================================================================
+SUBJECT 02 — csp_reduced — 4class — session — profile cue_0_4 — 12 ch: P1, CP3, P2, Pz, CP4, CP1, POz, CPz, CP2, C3, C4, C2
+================================================================================
+  S02 [4class] profile=cue_0_4 X=(576, 12, 1000) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S02 seed42 F1 [refit] Ep 001/350 | tr 1.8739 | refit, no validation
+S02 seed42 F1 [refit] Ep 050/350 | tr 1.2126 | refit, no validation
+S02 seed42 F1 [refit] Ep 100/350 | tr 1.0100 | refit, no validation
+S02 seed42 F1 [refit] Ep 150/350 | tr 0.6205 | refit, no validation
+S02 seed42 F1 [refit] Ep 200/350 | tr 0.5410 | refit, no validation
+S02 seed42 F1 [refit] Ep 250/350 | tr 0.7123 | refit, no validation
+S02 seed42 F1 [refit] Ep 300/350 | tr 0.6800 | refit, no validation
+S02 seed42 F1 [refit] Ep 350/350 | tr 0.6944 | refit, no validation
+S02 seed42 F1: test 24.65% (val nan%, epochs 350)
+S02 seed43 F1 [refit] Ep 001/350 | tr 1.8675 | refit, no validation
+S02 seed43 F1 [refit] Ep 050/350 | tr 1.3026 | refit, no validation
+S02 seed43 F1 [refit] Ep 100/350 | tr 0.9379 | refit, no validation
+S02 seed43 F1 [refit] Ep 150/350 | tr 0.8857 | refit, no validation
+S02 seed43 F1 [refit] Ep 200/350 | tr 0.5554 | refit, no validation
+S02 seed43 F1 [refit] Ep 250/350 | tr 0.6009 | refit, no validation
+S02 seed43 F1 [refit] Ep 300/350 | tr 0.5949 | refit, no validation
+S02 seed43 F1 [refit] Ep 350/350 | tr 0.6522 | refit, no validation
+S02 seed43 F1: test 24.65% (val nan%, epochs 350)
+S02 seed44 F1 [refit] Ep 001/350 | tr 1.9204 | refit, no validation
+S02 seed44 F1 [refit] Ep 050/350 | tr 1.2831 | refit, no validation
+S02 seed44 F1 [refit] Ep 100/350 | tr 0.9005 | refit, no validation
+S02 seed44 F1 [refit] Ep 150/350 | tr 0.6175 | refit, no validation
+S02 seed44 F1 [refit] Ep 200/350 | tr 0.8776 | refit, no validation
+S02 seed44 F1 [refit] Ep 250/350 | tr 0.6850 | refit, no validation
+S02 seed44 F1 [refit] Ep 300/350 | tr 0.6984 | refit, no validation
+S02 seed44 F1 [refit] Ep 350/350 | tr 0.5225 | refit, no validation
+S02 seed44 F1: test 22.22% (val nan%, epochs 350)
+D:\EEG\NeuroGrounded-EEG\Deep4net\BNCI_001\deep4net_bnci_common.py:857: RuntimeWarning: Mean of empty slice
+  "val_acc": float(np.nanmean([r["val_acc"] for r in seed_recs])) if seed_recs else float("nan"),
+S02 seed ensemble (3 seeds): test 24.65% (single seeds 24.7, 24.7, 22.2)
+
+================================================================================
+SUBJECT 03 — csp_reduced — 4class — session — profile original — 12 ch: P1, CP3, CP4, P2, Pz, CP1, CPz, CP2, C4, POz, C3, Cz
+================================================================================
+  S03 [4class] profile=original X=(576, 12, 1125) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S03 seed42 F1 [refit] Ep 001/350 | tr 2.0596 | refit, no validation
+S03 seed42 F1 [refit] Ep 050/350 | tr 1.0617 | refit, no validation
+S03 seed42 F1 [refit] Ep 100/350 | tr 0.8248 | refit, no validation
+S03 seed42 F1 [refit] Ep 150/350 | tr 0.8304 | refit, no validation
+S03 seed42 F1 [refit] Ep 200/350 | tr 0.7325 | refit, no validation
+S03 seed42 F1 [refit] Ep 250/350 | tr 0.5589 | refit, no validation
+S03 seed42 F1 [refit] Ep 300/350 | tr 0.5380 | refit, no validation
+S03 seed42 F1 [refit] Ep 350/350 | tr 0.5300 | refit, no validation
+S03 seed42 F1: test 52.43% (val nan%, epochs 350)
+S03 seed43 F1 [refit] Ep 001/350 | tr 1.8940 | refit, no validation
+S03 seed43 F1 [refit] Ep 050/350 | tr 1.0430 | refit, no validation
+S03 seed43 F1 [refit] Ep 100/350 | tr 0.7584 | refit, no validation
+S03 seed43 F1 [refit] Ep 150/350 | tr 0.7144 | refit, no validation
+S03 seed43 F1 [refit] Ep 200/350 | tr 0.5772 | refit, no validation
+S03 seed43 F1 [refit] Ep 250/350 | tr 0.5493 | refit, no validation
+S03 seed43 F1 [refit] Ep 300/350 | tr 0.6427 | refit, no validation
+S03 seed43 F1 [refit] Ep 350/350 | tr 0.8028 | refit, no validation
+S03 seed43 F1: test 61.46% (val nan%, epochs 350)
+S03 seed44 F1 [refit] Ep 001/350 | tr 1.8389 | refit, no validation
+S03 seed44 F1 [refit] Ep 050/350 | tr 1.1058 | refit, no validation
+S03 seed44 F1 [refit] Ep 100/350 | tr 0.8480 | refit, no validation
+S03 seed44 F1 [refit] Ep 150/350 | tr 0.9197 | refit, no validation
+S03 seed44 F1 [refit] Ep 200/350 | tr 0.7087 | refit, no validation
+S03 seed44 F1 [refit] Ep 250/350 | tr 0.5605 | refit, no validation
+S03 seed44 F1 [refit] Ep 300/350 | tr 0.5575 | refit, no validation
+S03 seed44 F1 [refit] Ep 350/350 | tr 0.5875 | refit, no validation
+S03 seed44 F1: test 52.43% (val nan%, epochs 350)
+D:\EEG\NeuroGrounded-EEG\Deep4net\BNCI_001\deep4net_bnci_common.py:857: RuntimeWarning: Mean of empty slice
+  "val_acc": float(np.nanmean([r["val_acc"] for r in seed_recs])) if seed_recs else float("nan"),
+S03 seed ensemble (3 seeds): test 52.08% (single seeds 52.4, 61.5, 52.4)
+
+================================================================================
+SUBJECT 04 — csp_reduced — 4class — session — profile cue_0_4 — 12 ch: P1, CP3, CP4, P2, Pz, CP1, CPz, C4, CP2, POz, C3, Cz
+================================================================================
+  S04 [4class] profile=cue_0_4 X=(576, 12, 1000) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S04 seed42 F1 [refit] Ep 001/350 | tr 2.1698 | refit, no validation
+S04 seed42 F1 [refit] Ep 050/350 | tr 1.2516 | refit, no validation
+S04 seed42 F1 [refit] Ep 100/350 | tr 0.9569 | refit, no validation
+S04 seed42 F1 [refit] Ep 150/350 | tr 0.7284 | refit, no validation
+S04 seed42 F1 [refit] Ep 200/350 | tr 0.7300 | refit, no validation
+S04 seed42 F1 [refit] Ep 250/350 | tr 0.5460 | refit, no validation
+S04 seed42 F1 [refit] Ep 300/350 | tr 0.5690 | refit, no validation
+S04 seed42 F1 [refit] Ep 350/350 | tr 0.5494 | refit, no validation
+S04 seed42 F1: test 38.54% (val nan%, epochs 350)
+S04 seed43 F1 [refit] Ep 001/350 | tr 1.8866 | refit, no validation
+S04 seed43 F1 [refit] Ep 050/350 | tr 1.2821 | refit, no validation
+S04 seed43 F1 [refit] Ep 100/350 | tr 0.8671 | refit, no validation
+S04 seed43 F1 [refit] Ep 150/350 | tr 0.6315 | refit, no validation
+S04 seed43 F1 [refit] Ep 200/350 | tr 0.6022 | refit, no validation
+S04 seed43 F1 [refit] Ep 250/350 | tr 0.6560 | refit, no validation
+S04 seed43 F1 [refit] Ep 300/350 | tr 0.6033 | refit, no validation
+S04 seed43 F1 [refit] Ep 350/350 | tr 0.5509 | refit, no validation
+S04 seed43 F1: test 41.67% (val nan%, epochs 350)
+S04 seed44 F1 [refit] Ep 001/350 | tr 1.9797 | refit, no validation
+S04 seed44 F1 [refit] Ep 050/350 | tr 1.1668 | refit, no validation
+S04 seed44 F1 [refit] Ep 100/350 | tr 0.8609 | refit, no validation
+S04 seed44 F1 [refit] Ep 150/350 | tr 0.7769 | refit, no validation
+S04 seed44 F1 [refit] Ep 200/350 | tr 0.7482 | refit, no validation
+S04 seed44 F1 [refit] Ep 250/350 | tr 0.5420 | refit, no validation
+S04 seed44 F1 [refit] Ep 300/350 | tr 0.5214 | refit, no validation
+S04 seed44 F1 [refit] Ep 350/350 | tr 0.5384 | refit, no validation
+S04 seed44 F1: test 35.76% (val nan%, epochs 350)
+D:\EEG\NeuroGrounded-EEG\Deep4net\BNCI_001\deep4net_bnci_common.py:857: RuntimeWarning: Mean of empty slice
+  "val_acc": float(np.nanmean([r["val_acc"] for r in seed_recs])) if seed_recs else float("nan"),
+S04 seed ensemble (3 seeds): test 40.62% (single seeds 38.5, 41.7, 35.8)
+
+================================================================================
+SUBJECT 05 — csp_reduced — 4class — session — profile cue_0_4 — 12 ch: P1, P2, CP4, CP3, Pz, CP1, CP2, CPz, C4, POz, C3, C6
+================================================================================
+  S05 [4class] profile=cue_0_4 X=(576, 12, 1000) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S05 seed42 F1 [refit] Ep 001/350 | tr 2.0851 | refit, no validation
+S05 seed42 F1 [refit] Ep 050/350 | tr 1.1209 | refit, no validation
+S05 seed42 F1 [refit] Ep 100/350 | tr 0.6940 | refit, no validation
+S05 seed42 F1 [refit] Ep 150/350 | tr 0.7523 | refit, no validation
+S05 seed42 F1 [refit] Ep 200/350 | tr 0.6015 | refit, no validation
+S05 seed42 F1 [refit] Ep 250/350 | tr 0.6946 | refit, no validation
+S05 seed42 F1 [refit] Ep 300/350 | tr 0.6869 | refit, no validation
+S05 seed42 F1 [refit] Ep 350/350 | tr 0.5102 | refit, no validation
+S05 seed42 F1: test 28.12% (val nan%, epochs 350)
+S05 seed43 F1 [refit] Ep 001/350 | tr 1.7758 | refit, no validation
+S05 seed43 F1 [refit] Ep 050/350 | tr 1.1022 | refit, no validation
+S05 seed43 F1 [refit] Ep 100/350 | tr 0.8172 | refit, no validation
+S05 seed43 F1 [refit] Ep 150/350 | tr 0.5762 | refit, no validation
+S05 seed43 F1 [refit] Ep 200/350 | tr 0.5366 | refit, no validation
+S05 seed43 F1 [refit] Ep 250/350 | tr 0.5757 | refit, no validation
+S05 seed43 F1 [refit] Ep 300/350 | tr 0.5307 | refit, no validation
+S05 seed43 F1 [refit] Ep 350/350 | tr 0.5181 | refit, no validation
+S05 seed43 F1: test 26.39% (val nan%, epochs 350)
+S05 seed44 F1 [refit] Ep 001/350 | tr 1.9394 | refit, no validation
+S05 seed44 F1 [refit] Ep 050/350 | tr 1.2002 | refit, no validation
+S05 seed44 F1 [refit] Ep 100/350 | tr 0.9584 | refit, no validation
+S05 seed44 F1 [refit] Ep 150/350 | tr 0.5837 | refit, no validation
+S05 seed44 F1 [refit] Ep 200/350 | tr 0.6039 | refit, no validation
+S05 seed44 F1 [refit] Ep 250/350 | tr 0.6374 | refit, no validation
+S05 seed44 F1 [refit] Ep 300/350 | tr 0.7653 | refit, no validation
+S05 seed44 F1 [refit] Ep 350/350 | tr 0.6092 | refit, no validation
+S05 seed44 F1: test 29.17% (val nan%, epochs 350)
+D:\EEG\NeuroGrounded-EEG\Deep4net\BNCI_001\deep4net_bnci_common.py:857: RuntimeWarning: Mean of empty slice
+  "val_acc": float(np.nanmean([r["val_acc"] for r in seed_recs])) if seed_recs else float("nan"),
+S05 seed ensemble (3 seeds): test 26.39% (single seeds 28.1, 26.4, 29.2)
+
+================================================================================
+SUBJECT 06 — csp_reduced — 4class — session — profile cue_0_4 — 12 ch: P1, CP4, CP3, P2, Pz, CPz, CP1, CP2, C4, POz, C3, Cz
+================================================================================
+  S06 [4class] profile=cue_0_4 X=(576, 12, 1000) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S06 seed42 F1 [refit] Ep 001/350 | tr 1.7734 | refit, no validation
+S06 seed42 F1 [refit] Ep 050/350 | tr 1.0248 | refit, no validation
+S06 seed42 F1 [refit] Ep 100/350 | tr 0.6963 | refit, no validation
+S06 seed42 F1 [refit] Ep 150/350 | tr 0.6677 | refit, no validation
+S06 seed42 F1 [refit] Ep 200/350 | tr 0.5343 | refit, no validation
+S06 seed42 F1 [refit] Ep 250/350 | tr 0.5505 | refit, no validation
+S06 seed42 F1 [refit] Ep 300/350 | tr 0.6623 | refit, no validation
+S06 seed42 F1 [refit] Ep 350/350 | tr 0.6781 | refit, no validation
+S06 seed42 F1: test 26.39% (val nan%, epochs 350)
+S06 seed43 F1 [refit] Ep 001/350 | tr 1.8491 | refit, no validation
+S06 seed43 F1 [refit] Ep 050/350 | tr 1.1393 | refit, no validation
+S06 seed43 F1 [refit] Ep 100/350 | tr 0.7175 | refit, no validation
+S06 seed43 F1 [refit] Ep 150/350 | tr 0.6895 | refit, no validation
+S06 seed43 F1 [refit] Ep 200/350 | tr 0.5594 | refit, no validation
+S06 seed43 F1 [refit] Ep 250/350 | tr 0.8283 | refit, no validation
+S06 seed43 F1 [refit] Ep 300/350 | tr 0.7102 | refit, no validation
+S06 seed43 F1 [refit] Ep 350/350 | tr 0.5535 | refit, no validation
+S06 seed43 F1: test 27.78% (val nan%, epochs 350)
+S06 seed44 F1 [refit] Ep 001/350 | tr 2.0061 | refit, no validation
+S06 seed44 F1 [refit] Ep 050/350 | tr 1.0478 | refit, no validation
+S06 seed44 F1 [refit] Ep 100/350 | tr 0.7775 | refit, no validation
+S06 seed44 F1 [refit] Ep 150/350 | tr 0.6737 | refit, no validation
+S06 seed44 F1 [refit] Ep 200/350 | tr 0.6396 | refit, no validation
+S06 seed44 F1 [refit] Ep 250/350 | tr 0.6935 | refit, no validation
+S06 seed44 F1 [refit] Ep 300/350 | tr 0.6049 | refit, no validation
+S06 seed44 F1 [refit] Ep 350/350 | tr 0.5158 | refit, no validation
+S06 seed44 F1: test 24.31% (val nan%, epochs 350)
+D:\EEG\NeuroGrounded-EEG\Deep4net\BNCI_001\deep4net_bnci_common.py:857: RuntimeWarning: Mean of empty slice
+  "val_acc": float(np.nanmean([r["val_acc"] for r in seed_recs])) if seed_recs else float("nan"),
+S06 seed ensemble (3 seeds): test 26.04% (single seeds 26.4, 27.8, 24.3)
+
+================================================================================
+SUBJECT 07 — csp_reduced — 4class — session — profile cue_0_4 — 12 ch: P1, CP3, P2, CP4, Pz, CP1, CP2, POz, CPz, C4, C3, C2
+================================================================================
+  S07 [4class] profile=cue_0_4 X=(576, 12, 1000) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S07 seed42 F1 [refit] Ep 001/350 | tr 1.8933 | refit, no validation
+S07 seed42 F1 [refit] Ep 050/350 | tr 1.1969 | refit, no validation
+S07 seed42 F1 [refit] Ep 100/350 | tr 0.8975 | refit, no validation
+S07 seed42 F1 [refit] Ep 150/350 | tr 0.7879 | refit, no validation
+S07 seed42 F1 [refit] Ep 200/350 | tr 0.5592 | refit, no validation
+S07 seed42 F1 [refit] Ep 250/350 | tr 0.7362 | refit, no validation
+S07 seed42 F1 [refit] Ep 300/350 | tr 0.6816 | refit, no validation
+S07 seed42 F1 [refit] Ep 350/350 | tr 0.5251 | refit, no validation
+S07 seed42 F1: test 30.21% (val nan%, epochs 350)
+S07 seed43 F1 [refit] Ep 001/350 | tr 2.1627 | refit, no validation
+S07 seed43 F1 [refit] Ep 050/350 | tr 1.1126 | refit, no validation
+S07 seed43 F1 [refit] Ep 100/350 | tr 0.8381 | refit, no validation
+S07 seed43 F1 [refit] Ep 150/350 | tr 0.8744 | refit, no validation
+S07 seed43 F1 [refit] Ep 200/350 | tr 0.5561 | refit, no validation
+S07 seed43 F1 [refit] Ep 250/350 | tr 0.5223 | refit, no validation
+S07 seed43 F1 [refit] Ep 300/350 | tr 0.6145 | refit, no validation
+S07 seed43 F1 [refit] Ep 350/350 | tr 0.5608 | refit, no validation
+S07 seed43 F1: test 29.17% (val nan%, epochs 350)
+S07 seed44 F1 [refit] Ep 001/350 | tr 1.9413 | refit, no validation
+S07 seed44 F1 [refit] Ep 050/350 | tr 1.1761 | refit, no validation
+S07 seed44 F1 [refit] Ep 100/350 | tr 0.7869 | refit, no validation
+S07 seed44 F1 [refit] Ep 150/350 | tr 0.6621 | refit, no validation
+S07 seed44 F1 [refit] Ep 200/350 | tr 0.7121 | refit, no validation
+S07 seed44 F1 [refit] Ep 250/350 | tr 0.7090 | refit, no validation
+S07 seed44 F1 [refit] Ep 300/350 | tr 0.5501 | refit, no validation
+S07 seed44 F1 [refit] Ep 350/350 | tr 0.6824 | refit, no validation
+S07 seed44 F1: test 40.28% (val nan%, epochs 350)
+D:\EEG\NeuroGrounded-EEG\Deep4net\BNCI_001\deep4net_bnci_common.py:857: RuntimeWarning: Mean of empty slice
+  "val_acc": float(np.nanmean([r["val_acc"] for r in seed_recs])) if seed_recs else float("nan"),
+S07 seed ensemble (3 seeds): test 34.72% (single seeds 30.2, 29.2, 40.3)
+
+================================================================================
+SUBJECT 08 — csp_reduced — 4class — session — profile cue_0_4 — 12 ch: CP3, P1, CP4, P2, CP1, Pz, C4, C3, CPz, CP2, POz, C2
+================================================================================
+  S08 [4class] profile=cue_0_4 X=(576, 12, 1000) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S08 seed42 F1 [refit] Ep 001/350 | tr 1.7446 | refit, no validation
+S08 seed42 F1 [refit] Ep 050/350 | tr 1.0463 | refit, no validation
+S08 seed42 F1 [refit] Ep 100/350 | tr 0.8129 | refit, no validation
+S08 seed42 F1 [refit] Ep 150/350 | tr 0.6419 | refit, no validation
+S08 seed42 F1 [refit] Ep 200/350 | tr 0.8627 | refit, no validation
+S08 seed42 F1 [refit] Ep 250/350 | tr 0.8066 | refit, no validation
+S08 seed42 F1 [refit] Ep 300/350 | tr 0.7442 | refit, no validation
+S08 seed42 F1 [refit] Ep 350/350 | tr 0.5537 | refit, no validation
+S08 seed42 F1: test 59.38% (val nan%, epochs 350)
+S08 seed43 F1 [refit] Ep 001/350 | tr 1.8292 | refit, no validation
+S08 seed43 F1 [refit] Ep 050/350 | tr 1.0957 | refit, no validation
+S08 seed43 F1 [refit] Ep 100/350 | tr 0.8565 | refit, no validation
+S08 seed43 F1 [refit] Ep 150/350 | tr 0.6976 | refit, no validation
+S08 seed43 F1 [refit] Ep 200/350 | tr 0.7920 | refit, no validation
+S08 seed43 F1 [refit] Ep 250/350 | tr 0.5988 | refit, no validation
+S08 seed43 F1 [refit] Ep 300/350 | tr 0.6542 | refit, no validation
+S08 seed43 F1 [refit] Ep 350/350 | tr 0.5564 | refit, no validation
+S08 seed43 F1: test 62.15% (val nan%, epochs 350)
+S08 seed44 F1 [refit] Ep 001/350 | tr 1.7756 | refit, no validation
+S08 seed44 F1 [refit] Ep 050/350 | tr 1.1335 | refit, no validation
+S08 seed44 F1 [refit] Ep 100/350 | tr 0.8034 | refit, no validation
+S08 seed44 F1 [refit] Ep 150/350 | tr 0.6588 | refit, no validation
+S08 seed44 F1 [refit] Ep 200/350 | tr 0.6948 | refit, no validation
+S08 seed44 F1 [refit] Ep 250/350 | tr 0.8040 | refit, no validation
+S08 seed44 F1 [refit] Ep 300/350 | tr 0.5677 | refit, no validation
+S08 seed44 F1 [refit] Ep 350/350 | tr 0.5980 | refit, no validation
+S08 seed44 F1: test 62.15% (val nan%, epochs 350)
+D:\EEG\NeuroGrounded-EEG\Deep4net\BNCI_001\deep4net_bnci_common.py:857: RuntimeWarning: Mean of empty slice
+  "val_acc": float(np.nanmean([r["val_acc"] for r in seed_recs])) if seed_recs else float("nan"),
+S08 seed ensemble (3 seeds): test 63.54% (single seeds 59.4, 62.2, 62.2)
+
+================================================================================
+SUBJECT 09 — csp_reduced — 4class — session — profile original — 12 ch: CP4, P1, P2, CP3, Pz, CP2, CPz, CP1, C4, POz, C3, C2
+================================================================================
+  S09 [4class] profile=original X=(576, 12, 1125) class counts={'feet': 144, 'left_hand': 144, 'right_hand': 144, 'tongue': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S09 seed42 F1 [refit] Ep 001/350 | tr 1.9827 | refit, no validation
+S09 seed42 F1 [refit] Ep 050/350 | tr 1.1230 | refit, no validation
+S09 seed42 F1 [refit] Ep 100/350 | tr 0.6788 | refit, no validation
+S09 seed42 F1 [refit] Ep 150/350 | tr 0.6298 | refit, no validation
+S09 seed42 F1 [refit] Ep 200/350 | tr 0.7791 | refit, no validation
+S09 seed42 F1 [refit] Ep 250/350 | tr 0.6057 | refit, no validation
+S09 seed42 F1 [refit] Ep 300/350 | tr 0.9752 | refit, no validation
+S09 seed42 F1 [refit] Ep 350/350 | tr 0.5665 | refit, no validation
+S09 seed42 F1: test 71.18% (val nan%, epochs 350)
+S09 seed43 F1 [refit] Ep 001/350 | tr 1.9524 | refit, no validation
+S09 seed43 F1 [refit] Ep 050/350 | tr 0.9037 | refit, no validation
+S09 seed43 F1 [refit] Ep 100/350 | tr 0.6730 | refit, no validation
+S09 seed43 F1 [refit] Ep 150/350 | tr 0.5949 | refit, no validation
+S09 seed43 F1 [refit] Ep 200/350 | tr 0.6649 | refit, no validation
+S09 seed43 F1 [refit] Ep 250/350 | tr 0.5570 | refit, no validation
+S09 seed43 F1 [refit] Ep 300/350 | tr 0.5487 | refit, no validation
+S09 seed43 F1 [refit] Ep 350/350 | tr 0.5978 | refit, no validation
+S09 seed43 F1: test 75.00% (val nan%, epochs 350)
+S09 seed44 F1 [refit] Ep 001/350 | tr 2.2192 | refit, no validation
+S09 seed44 F1 [refit] Ep 050/350 | tr 0.9627 | refit, no validation
+S09 seed44 F1 [refit] Ep 100/350 | tr 0.7978 | refit, no validation
+S09 seed44 F1 [refit] Ep 150/350 | tr 0.7409 | refit, no validation
+S09 seed44 F1 [refit] Ep 200/350 | tr 0.5764 | refit, no validation
+S09 seed44 F1 [refit] Ep 250/350 | tr 0.5590 | refit, no validation
+S09 seed44 F1 [refit] Ep 300/350 | tr 0.5767 | refit, no validation
+S09 seed44 F1 [refit] Ep 350/350 | tr 0.5798 | refit, no validation
+S09 seed44 F1: test 69.10% (val nan%, epochs 350)
+D:\EEG\NeuroGrounded-EEG\Deep4net\BNCI_001\deep4net_bnci_common.py:857: RuntimeWarning: Mean of empty slice
+  "val_acc": float(np.nanmean([r["val_acc"] for r in seed_recs])) if seed_recs else float("nan"),
+S09 seed ensemble (3 seeds): test 72.57% (single seeds 71.2, 75.0, 69.1)
+Results written to D:\EEG\NeuroGrounded-EEG\Deep4net\BNCI_001\4class\results_session\csp_reduced (grand mean 44.37% over 9 subjects; chance 25.0%, majority 25.0%)
+Report saved: D:\EEG\NeuroGrounded-EEG\Deep4net\BNCI_001\4class\results_session\csp_reduced\csp_reduced_report.txt
+
+CSP 4class: 44.37% +/- 17.97%

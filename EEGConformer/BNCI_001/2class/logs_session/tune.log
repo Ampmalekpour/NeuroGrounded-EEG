@@ -1,0 +1,226 @@
+$ D:\EEG\braindec\.venv\Scripts\python.exe -u D:\EEG\NeuroGrounded-EEG\EEGConformer\BNCI_001\2class\eegconformer_bnci_2class_tune.py   [EEG_PROTOCOL=session]
+Using device: cuda | class mode: 2class | seeds: [42, 43, 44] | subjects: [1, 2, 3, 4, 5, 6, 7, 8, 9] | synthetic: False | protocol: session
+  S01 [2class] profile=original X=(288, 22, 1125) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune original] S01 F1 Ep 001/350 | tr 0.7001 | val (current weights) 55.6%
+[tune original] S01 F1 Ep 050/350 | tr 0.6648 | val (current weights) 58.3%
+[tune original] S01 F1 Ep 100/350 | tr 0.6505 | val (current weights) 80.6%
+[tune original] S01 F1 Ep 150/350 | tr 0.3801 | val (current weights) 80.6%
+[tune original] S01 F1 Ep 200/350 | tr 0.5876 | val (current weights) 80.6%
+[tune original] S01 F1 Ep 250/350 | tr 0.3542 | val (current weights) 75.0%
+[tune original] S01 F1 Ep 300/350 | tr 0.3836 | val (current weights) 72.2%
+[tune original] S01 F1 Ep 350/350 | tr 0.3539 | val (current weights) 80.6%
+[tune]       original S01: mean validation accuracy 80.56%
+  S02 [2class] profile=original X=(288, 22, 1125) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune original] S02 F1 Ep 001/350 | tr 0.7463 | val (current weights) 50.0%
+[tune original] S02 F1 Ep 050/350 | tr 0.7248 | val (current weights) 47.2%
+[tune original] S02 F1 Ep 100/350 | tr 0.6725 | val (current weights) 47.2%
+[tune original] S02 F1 Ep 150/350 | tr 0.5293 | val (current weights) 52.8%
+[tune original] S02 F1 Ep 200/350 | tr 0.4786 | val (current weights) 55.6%
+[tune original] S02 F1 Ep 250/350 | tr 0.4482 | val (current weights) 50.0%
+[tune original] S02 F1 Ep 300/350 | tr 0.4142 | val (current weights) 50.0%
+[tune original] S02 F1 Ep 350/350 | tr 0.4146 | val (current weights) 50.0%
+[tune]       original S02: mean validation accuracy 44.44%
+  S03 [2class] profile=original X=(288, 22, 1125) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune original] S03 F1 Ep 001/350 | tr 0.7036 | val (current weights) 50.0%
+[tune original] S03 F1 Ep 050/350 | tr 0.4383 | val (current weights) 86.1%
+[tune original] S03 F1 Ep 100/350 | tr 0.3612 | val (current weights) 80.6%
+[tune original] S03 F1 Ep 150/350 | tr 0.3454 | val (current weights) 86.1%
+[tune original] S03 F1 Ep 200/350 | tr 0.6407 | val (current weights) 80.6%
+[tune original] S03 F1 Ep 250/350 | tr 0.3458 | val (current weights) 86.1%
+[tune original] S03 F1 Ep 300/350 | tr 0.3512 | val (current weights) 83.3%
+[tune original] S03 F1 Ep 350/350 | tr 0.4614 | val (current weights) 86.1%
+[tune]       original S03: mean validation accuracy 86.11%
+  S04 [2class] profile=original X=(288, 22, 1125) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune original] S04 F1 Ep 001/350 | tr 0.6802 | val (current weights) 47.2%
+[tune original] S04 F1 Ep 050/350 | tr 0.6833 | val (current weights) 61.1%
+[tune original] S04 F1 Ep 100/350 | tr 0.4920 | val (current weights) 61.1%
+[tune original] S04 F1 Ep 150/350 | tr 0.4603 | val (current weights) 77.8%
+[tune original] S04 F1 Ep 200/350 | tr 0.4125 | val (current weights) 61.1%
+[tune original] S04 F1 Ep 250/350 | tr 0.3997 | val (current weights) 61.1%
+[tune original] S04 F1 Ep 300/350 | tr 0.3650 | val (current weights) 61.1%
+[tune original] S04 F1 Ep 350/350 | tr 0.3785 | val (current weights) 61.1%
+[tune]       original S04: mean validation accuracy 61.11%
+  S05 [2class] profile=original X=(288, 22, 1125) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune original] S05 F1 Ep 001/350 | tr 0.7051 | val (current weights) 50.0%
+[tune original] S05 F1 Ep 050/350 | tr 0.6020 | val (current weights) 50.0%
+[tune original] S05 F1 Ep 100/350 | tr 0.5564 | val (current weights) 47.2%
+[tune original] S05 F1 Ep 150/350 | tr 0.4347 | val (current weights) 47.2%
+[tune original] S05 F1 Ep 200/350 | tr 0.4330 | val (current weights) 55.6%
+[tune original] S05 F1 Ep 250/350 | tr 0.4191 | val (current weights) 52.8%
+[tune original] S05 F1 Ep 300/350 | tr 0.4271 | val (current weights) 58.3%
+[tune original] S05 F1 Ep 350/350 | tr 0.3706 | val (current weights) 58.3%
+[tune]       original S05: mean validation accuracy 58.33%
+  S06 [2class] profile=original X=(288, 22, 1125) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune original] S06 F1 Ep 001/350 | tr 0.7169 | val (current weights) 50.0%
+[tune original] S06 F1 Ep 050/350 | tr 0.6615 | val (current weights) 47.2%
+[tune original] S06 F1 Ep 100/350 | tr 0.4414 | val (current weights) 55.6%
+[tune original] S06 F1 Ep 150/350 | tr 0.5523 | val (current weights) 50.0%
+[tune original] S06 F1 Ep 200/350 | tr 0.3971 | val (current weights) 61.1%
+[tune original] S06 F1 Ep 250/350 | tr 0.3920 | val (current weights) 50.0%
+[tune original] S06 F1 Ep 300/350 | tr 0.3704 | val (current weights) 52.8%
+[tune original] S06 F1 Ep 350/350 | tr 0.4518 | val (current weights) 50.0%
+[tune]       original S06: mean validation accuracy 50.00%
+  S07 [2class] profile=original X=(288, 22, 1125) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune original] S07 F1 Ep 001/350 | tr 0.6957 | val (current weights) 50.0%
+[tune original] S07 F1 Ep 050/350 | tr 0.6332 | val (current weights) 50.0%
+[tune original] S07 F1 Ep 100/350 | tr 0.4795 | val (current weights) 69.4%
+[tune original] S07 F1 Ep 150/350 | tr 0.3993 | val (current weights) 69.4%
+[tune original] S07 F1 Ep 200/350 | tr 0.3819 | val (current weights) 75.0%
+[tune original] S07 F1 Ep 250/350 | tr 0.5319 | val (current weights) 69.4%
+[tune original] S07 F1 Ep 300/350 | tr 0.3620 | val (current weights) 69.4%
+[tune original] S07 F1 Ep 350/350 | tr 0.3836 | val (current weights) 69.4%
+[tune]       original S07: mean validation accuracy 72.22%
+  S08 [2class] profile=original X=(288, 22, 1125) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune original] S08 F1 Ep 001/350 | tr 0.7314 | val (current weights) 50.0%
+[tune original] S08 F1 Ep 050/350 | tr 0.5202 | val (current weights) 94.4%
+[tune original] S08 F1 Ep 100/350 | tr 0.5793 | val (current weights) 72.2%
+[tune original] S08 F1 Ep 150/350 | tr 0.3408 | val (current weights) 80.6%
+[tune original] S08 F1 Ep 200/350 | tr 0.3693 | val (current weights) 91.7%
+[tune original] S08 F1 Ep 250/350 | tr 0.3529 | val (current weights) 88.9%
+[tune original] S08 F1 Ep 300/350 | tr 0.4419 | val (current weights) 88.9%
+[tune original] S08 F1 Ep 350/350 | tr 0.3351 | val (current weights) 88.9%
+[tune]       original S08: mean validation accuracy 88.89%
+  S09 [2class] profile=original X=(288, 22, 1125) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune original] S09 F1 Ep 001/350 | tr 0.7242 | val (current weights) 50.0%
+[tune original] S09 F1 Ep 050/350 | tr 0.6183 | val (current weights) 66.7%
+[tune original] S09 F1 Ep 100/350 | tr 0.5864 | val (current weights) 86.1%
+[tune original] S09 F1 Ep 150/350 | tr 0.3646 | val (current weights) 97.2%
+[tune original] S09 F1 Ep 200/350 | tr 0.3483 | val (current weights) 97.2%
+[tune original] S09 F1 Ep 250/350 | tr 0.3651 | val (current weights) 94.4%
+[tune original] S09 F1 Ep 300/350 | tr 0.6260 | val (current weights) 97.2%
+[tune original] S09 F1 Ep 350/350 | tr 0.3377 | val (current weights) 97.2%
+[tune]       original S09: mean validation accuracy 97.22%
+  S01 [2class] profile=lr_2e-4 X=(288, 22, 1125) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune lr_2e-4] S01 F1 Ep 001/350 | tr 0.7001 | val (current weights) 44.4%
+[tune lr_2e-4] S01 F1 Ep 050/350 | tr 0.6940 | val (current weights) 44.4%
+[tune lr_2e-4] S01 F1 Ep 100/350 | tr 0.6507 | val (current weights) 55.6%
+[tune lr_2e-4] S01 F1 Ep 150/350 | tr 0.5322 | val (current weights) 75.0%
+[tune lr_2e-4] S01 F1 Ep 200/350 | tr 0.6021 | val (current weights) 77.8%
+[tune lr_2e-4] S01 F1 Ep 250/350 | tr 0.4183 | val (current weights) 77.8%
+[tune lr_2e-4] S01 F1 Ep 300/350 | tr 0.4504 | val (current weights) 80.6%
+[tune lr_2e-4] S01 F1 Ep 350/350 | tr 0.4144 | val (current weights) 80.6%
+[tune]        lr_2e-4 S01: mean validation accuracy 80.56%
+  S02 [2class] profile=lr_2e-4 X=(288, 22, 1125) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune lr_2e-4] S02 F1 Ep 001/350 | tr 0.7463 | val (current weights) 50.0%
+[tune lr_2e-4] S02 F1 Ep 050/350 | tr 0.7438 | val (current weights) 55.6%
+[tune lr_2e-4] S02 F1 Ep 100/350 | tr 0.6864 | val (current weights) 63.9%
+[tune lr_2e-4] S02 F1 Ep 150/350 | tr 0.6705 | val (current weights) 69.4%
+[tune lr_2e-4] S02 F1 Ep 200/350 | tr 0.6109 | val (current weights) 61.1%
+[tune lr_2e-4] S02 F1 Ep 250/350 | tr 0.5569 | val (current weights) 58.3%
+[tune lr_2e-4] S02 F1 Ep 300/350 | tr 0.5673 | val (current weights) 50.0%
+[tune lr_2e-4] S02 F1 Ep 350/350 | tr 0.5336 | val (current weights) 52.8%
+[tune]        lr_2e-4 S02: mean validation accuracy 50.00%
+  S03 [2class] profile=lr_2e-4 X=(288, 22, 1125) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune lr_2e-4] S03 F1 Ep 001/350 | tr 0.7036 | val (current weights) 50.0%
+[tune lr_2e-4] S03 F1 Ep 050/350 | tr 0.7015 | val (current weights) 61.1%
+[tune lr_2e-4] S03 F1 Ep 100/350 | tr 0.4126 | val (current weights) 77.8%
+[tune lr_2e-4] S03 F1 Ep 150/350 | tr 0.3790 | val (current weights) 83.3%
+[tune lr_2e-4] S03 F1 Ep 200/350 | tr 0.6046 | val (current weights) 83.3%
+[tune lr_2e-4] S03 F1 Ep 250/350 | tr 0.3692 | val (current weights) 83.3%
+[tune lr_2e-4] S03 F1 Ep 300/350 | tr 0.3850 | val (current weights) 83.3%
+[tune lr_2e-4] S03 F1 Ep 350/350 | tr 0.4867 | val (current weights) 83.3%
+[tune]        lr_2e-4 S03: mean validation accuracy 83.33%
+  S04 [2class] profile=lr_2e-4 X=(288, 22, 1125) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune lr_2e-4] S04 F1 Ep 001/350 | tr 0.6802 | val (current weights) 47.2%
+[tune lr_2e-4] S04 F1 Ep 050/350 | tr 0.7076 | val (current weights) 66.7%
+[tune lr_2e-4] S04 F1 Ep 100/350 | tr 0.6609 | val (current weights) 63.9%
+[tune lr_2e-4] S04 F1 Ep 150/350 | tr 0.6760 | val (current weights) 63.9%
+[tune lr_2e-4] S04 F1 Ep 200/350 | tr 0.5884 | val (current weights) 61.1%
+[tune lr_2e-4] S04 F1 Ep 250/350 | tr 0.5081 | val (current weights) 61.1%
+[tune lr_2e-4] S04 F1 Ep 300/350 | tr 0.5377 | val (current weights) 61.1%
+[tune lr_2e-4] S04 F1 Ep 350/350 | tr 0.5055 | val (current weights) 63.9%
+[tune]        lr_2e-4 S04: mean validation accuracy 58.33%
+  S05 [2class] profile=lr_2e-4 X=(288, 22, 1125) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune lr_2e-4] S05 F1 Ep 001/350 | tr 0.7051 | val (current weights) 50.0%
+[tune lr_2e-4] S05 F1 Ep 050/350 | tr 0.6580 | val (current weights) 44.4%
+[tune lr_2e-4] S05 F1 Ep 100/350 | tr 0.6517 | val (current weights) 50.0%
+[tune lr_2e-4] S05 F1 Ep 150/350 | tr 0.5006 | val (current weights) 44.4%
+[tune lr_2e-4] S05 F1 Ep 200/350 | tr 0.4938 | val (current weights) 61.1%
+[tune lr_2e-4] S05 F1 Ep 250/350 | tr 0.4467 | val (current weights) 50.0%
+[tune lr_2e-4] S05 F1 Ep 300/350 | tr 0.4316 | val (current weights) 52.8%
+[tune lr_2e-4] S05 F1 Ep 350/350 | tr 0.4151 | val (current weights) 52.8%
+[tune]        lr_2e-4 S05: mean validation accuracy 50.00%
+  S06 [2class] profile=lr_2e-4 X=(288, 22, 1125) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune lr_2e-4] S06 F1 Ep 001/350 | tr 0.7169 | val (current weights) 50.0%
+[tune lr_2e-4] S06 F1 Ep 050/350 | tr 0.6826 | val (current weights) 50.0%
+[tune lr_2e-4] S06 F1 Ep 100/350 | tr 0.5587 | val (current weights) 47.2%
+[tune lr_2e-4] S06 F1 Ep 150/350 | tr 0.6122 | val (current weights) 52.8%
+[tune lr_2e-4] S06 F1 Ep 200/350 | tr 0.4584 | val (current weights) 52.8%
+[tune lr_2e-4] S06 F1 Ep 250/350 | tr 0.4896 | val (current weights) 58.3%
+[tune lr_2e-4] S06 F1 Ep 300/350 | tr 0.3999 | val (current weights) 55.6%
+[tune lr_2e-4] S06 F1 Ep 350/350 | tr 0.4697 | val (current weights) 55.6%
+[tune]        lr_2e-4 S06: mean validation accuracy 55.56%
+  S07 [2class] profile=lr_2e-4 X=(288, 22, 1125) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune lr_2e-4] S07 F1 Ep 001/350 | tr 0.6957 | val (current weights) 50.0%
+[tune lr_2e-4] S07 F1 Ep 050/350 | tr 0.6598 | val (current weights) 50.0%
+[tune lr_2e-4] S07 F1 Ep 100/350 | tr 0.6633 | val (current weights) 52.8%
+[tune lr_2e-4] S07 F1 Ep 150/350 | tr 0.5027 | val (current weights) 66.7%
+[tune lr_2e-4] S07 F1 Ep 200/350 | tr 0.4139 | val (current weights) 63.9%
+[tune lr_2e-4] S07 F1 Ep 250/350 | tr 0.5464 | val (current weights) 69.4%
+[tune lr_2e-4] S07 F1 Ep 300/350 | tr 0.3718 | val (current weights) 69.4%
+[tune lr_2e-4] S07 F1 Ep 350/350 | tr 0.4283 | val (current weights) 69.4%
+[tune]        lr_2e-4 S07: mean validation accuracy 69.44%
+  S08 [2class] profile=lr_2e-4 X=(288, 22, 1125) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune lr_2e-4] S08 F1 Ep 001/350 | tr 0.7314 | val (current weights) 50.0%
+[tune lr_2e-4] S08 F1 Ep 050/350 | tr 0.6308 | val (current weights) 80.6%
+[tune lr_2e-4] S08 F1 Ep 100/350 | tr 0.5809 | val (current weights) 86.1%
+[tune lr_2e-4] S08 F1 Ep 150/350 | tr 0.3593 | val (current weights) 83.3%
+[tune lr_2e-4] S08 F1 Ep 200/350 | tr 0.3841 | val (current weights) 88.9%
+[tune lr_2e-4] S08 F1 Ep 250/350 | tr 0.3646 | val (current weights) 88.9%
+[tune lr_2e-4] S08 F1 Ep 300/350 | tr 0.4662 | val (current weights) 88.9%
+[tune lr_2e-4] S08 F1 Ep 350/350 | tr 0.3607 | val (current weights) 91.7%
+[tune]        lr_2e-4 S08: mean validation accuracy 88.89%
+  S09 [2class] profile=lr_2e-4 X=(288, 22, 1125) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune lr_2e-4] S09 F1 Ep 001/350 | tr 0.7242 | val (current weights) 50.0%
+[tune lr_2e-4] S09 F1 Ep 050/350 | tr 0.6638 | val (current weights) 63.9%
+[tune lr_2e-4] S09 F1 Ep 100/350 | tr 0.5929 | val (current weights) 77.8%
+[tune lr_2e-4] S09 F1 Ep 150/350 | tr 0.4112 | val (current weights) 86.1%
+[tune lr_2e-4] S09 F1 Ep 200/350 | tr 0.3915 | val (current weights) 88.9%
+[tune lr_2e-4] S09 F1 Ep 250/350 | tr 0.3994 | val (current weights) 91.7%
+[tune lr_2e-4] S09 F1 Ep 300/350 | tr 0.6675 | val (current weights) 88.9%
+[tune lr_2e-4] S09 F1 Ep 350/350 | tr 0.3912 | val (current weights) 88.9%
+[tune]        lr_2e-4 S09: mean validation accuracy 88.89%
+
+================================================================================
+PROFILE SELECTION - 2class (validation accuracy only)
+================================================================================
+        original: 70.99%
+         lr_2e-4: 69.44%
+chosen per subject (LOSO): {'1': 'original', '2': 'original', '3': 'original', '4': 'original', '5': 'original', '6': 'original', '7': 'original', '8': 'original', '9': 'original'}
+unanimous: True | written to D:\EEG\NeuroGrounded-EEG\EEGConformer\BNCI_001\2class\results_session\selected_profile.json

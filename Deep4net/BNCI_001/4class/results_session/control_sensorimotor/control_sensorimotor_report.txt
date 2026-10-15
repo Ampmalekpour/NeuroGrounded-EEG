@@ -1,0 +1,24 @@
+Deep4Net - BNCI2014-001 - control 'control_sensorimotor' - 4class
+================================================================================
+
+Subject 01: 65.28%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 65.28% (majority-class 25.0%)
+Subject 02: 23.61%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 23.61% (majority-class 25.0%)
+Subject 03: 51.39%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 51.39% (majority-class 25.0%)
+Subject 04: 26.04%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 26.04% (majority-class 25.0%)
+Subject 05: 27.43%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 27.43% (majority-class 25.0%)
+Subject 06: 24.31%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 24.31% (majority-class 25.0%)
+Subject 07: 41.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 41.67% (majority-class 25.0%)
+Subject 08: 67.01%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 67.01% (majority-class 25.0%)
+Subject 09: 71.53%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 71.53% (majority-class 25.0%)
+
+GRAND MEAN: 44.25% +/- 20.00% (SD across subjects)
+chance 25.0% | mean majority-class 25.0%

@@ -1,0 +1,24 @@
+EEGConformer - BNCI2014-001 - control 'control_random_draw4' - 2class
+================================================================================
+
+Subject 01: 81.94%  | montage: FCz, FC2, FC4, C5, C1, C4, C6, CP2, CP4, P1, P2, POz
+    seed -1 fold 1: 81.94% (majority-class 50.0%)
+Subject 02: 60.42%  | montage: Fz, FC1, C5, C3, C1, C2, C4, CP3, CP1, CPz, P1, POz
+    seed -1 fold 1: 60.42% (majority-class 50.0%)
+Subject 03: 92.36%  | montage: FC3, FC1, FCz, C5, C3, Cz, C2, C4, CP1, CPz, P2, POz
+    seed -1 fold 1: 92.36% (majority-class 50.0%)
+Subject 04: 73.61%  | montage: Fz, FC3, FC1, FCz, C5, C3, C2, C6, CP3, CP2, CP4, POz
+    seed -1 fold 1: 73.61% (majority-class 50.0%)
+Subject 05: 58.33%  | montage: Fz, FC3, FCz, FC4, C1, Cz, C6, CP1, CPz, CP4, Pz, POz
+    seed -1 fold 1: 58.33% (majority-class 50.0%)
+Subject 06: 61.81%  | montage: FCz, FC4, C5, C3, C1, Cz, C4, C6, CP2, P1, Pz, POz
+    seed -1 fold 1: 61.81% (majority-class 50.0%)
+Subject 07: 79.86%  | montage: Fz, FC3, FC1, FC4, C2, C4, CP3, CP1, CP4, P1, Pz, POz
+    seed -1 fold 1: 79.86% (majority-class 50.0%)
+Subject 08: 95.14%  | montage: Fz, FC3, FC1, FCz, C3, C1, Cz, C6, CP1, CP2, CP4, P1
+    seed -1 fold 1: 95.14% (majority-class 50.0%)
+Subject 09: 86.11%  | montage: FC3, FC1, FCz, FC2, FC4, C5, C3, C2, CP3, CPz, CP2, Pz
+    seed -1 fold 1: 86.11% (majority-class 50.0%)
+
+GRAND MEAN: 76.62% +/- 13.90% (SD across subjects)
+chance 50.0% | mean majority-class 50.0%

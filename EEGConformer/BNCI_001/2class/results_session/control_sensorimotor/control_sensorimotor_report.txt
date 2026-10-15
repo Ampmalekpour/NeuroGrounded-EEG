@@ -1,0 +1,24 @@
+EEGConformer - BNCI2014-001 - control 'control_sensorimotor' - 2class
+================================================================================
+
+Subject 01: 89.58%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 89.58% (majority-class 50.0%)
+Subject 02: 52.78%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 52.78% (majority-class 50.0%)
+Subject 03: 91.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 91.67% (majority-class 50.0%)
+Subject 04: 70.14%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 70.14% (majority-class 50.0%)
+Subject 05: 57.64%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 57.64% (majority-class 50.0%)
+Subject 06: 63.19%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 63.19% (majority-class 50.0%)
+Subject 07: 83.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 83.33% (majority-class 50.0%)
+Subject 08: 95.83%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 95.83% (majority-class 50.0%)
+Subject 09: 88.19%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 88.19% (majority-class 50.0%)
+
+GRAND MEAN: 76.93% +/- 16.17% (SD across subjects)
+chance 50.0% | mean majority-class 50.0%

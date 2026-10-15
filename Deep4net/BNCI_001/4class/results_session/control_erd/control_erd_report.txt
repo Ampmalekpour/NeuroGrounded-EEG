@@ -1,0 +1,24 @@
+Deep4Net - BNCI2014-001 - control 'control_erd' - 4class
+================================================================================
+
+Subject 01: 61.46%  | montage: P2, CP4, C3, CPz, POz, Pz, CP2, P1, CP3, C4, CP1, Cz
+    seed -1 fold 1: 61.46% (majority-class 25.0%)
+Subject 02: 22.57%  | montage: P2, CP4, Pz, CP3, POz, P1, C3, CPz, CP2, C4, CP1, Cz
+    seed -1 fold 1: 22.57% (majority-class 25.0%)
+Subject 03: 53.47%  | montage: P2, CP4, Pz, P1, CP2, CPz, CP3, C4, POz, Cz, C2, CP1
+    seed -1 fold 1: 53.47% (majority-class 25.0%)
+Subject 04: 40.62%  | montage: P2, Pz, CP3, CP4, CPz, P1, POz, C3, CP2, CP1, C4, Cz
+    seed -1 fold 1: 40.62% (majority-class 25.0%)
+Subject 05: 28.47%  | montage: P2, CP4, CPz, CP3, Pz, CP2, C4, C3, P1, Cz, POz, CP1
+    seed -1 fold 1: 28.47% (majority-class 25.0%)
+Subject 06: 26.74%  | montage: CP4, P2, C4, C3, CP2, CP3, Pz, CPz, POz, P1, C2, Cz
+    seed -1 fold 1: 26.74% (majority-class 25.0%)
+Subject 07: 31.25%  | montage: P2, POz, Pz, CP4, P1, CPz, CP3, CP2, C3, C4, CP1, Cz
+    seed -1 fold 1: 31.25% (majority-class 25.0%)
+Subject 08: 66.32%  | montage: CP3, CP4, C3, P2, C4, CPz, P1, CP2, Pz, Cz, CP1, POz
+    seed -1 fold 1: 66.32% (majority-class 25.0%)
+Subject 09: 73.26%  | montage: P2, CP4, Pz, P1, CPz, POz, CP2, CP3, C3, Cz, C4, CP1
+    seed -1 fold 1: 73.26% (majority-class 25.0%)
+
+GRAND MEAN: 44.91% +/- 19.09% (SD across subjects)
+chance 25.0% | mean majority-class 25.0%

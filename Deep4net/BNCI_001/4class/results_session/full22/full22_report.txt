@@ -1,0 +1,24 @@
+Deep4Net - BNCI2014-001 - FULL 22-CHANNEL BASELINE - 4class
+================================================================================
+
+Subject 01: 62.15%
+    seed -1 fold 1: 62.15% (majority-class 25.0%)
+Subject 02: 25.00%
+    seed -1 fold 1: 25.00% (majority-class 25.0%)
+Subject 03: 54.17%
+    seed -1 fold 1: 54.17% (majority-class 25.0%)
+Subject 04: 42.01%
+    seed -1 fold 1: 42.01% (majority-class 25.0%)
+Subject 05: 26.04%
+    seed -1 fold 1: 26.04% (majority-class 25.0%)
+Subject 06: 24.31%
+    seed -1 fold 1: 24.31% (majority-class 25.0%)
+Subject 07: 31.94%
+    seed -1 fold 1: 31.94% (majority-class 25.0%)
+Subject 08: 65.97%
+    seed -1 fold 1: 65.97% (majority-class 25.0%)
+Subject 09: 74.65%
+    seed -1 fold 1: 74.65% (majority-class 25.0%)
+
+GRAND MEAN: 45.14% +/- 19.57% (SD across subjects)
+chance 25.0% | mean majority-class 25.0%
