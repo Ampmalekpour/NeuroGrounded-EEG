@@ -1,0 +1,320 @@
+{
+ "model": "EEGConformer",
+ "class_mode": "2class",
+ "dataset": "BNCI2014_001",
+ "note_dataset": "BNCI2014-001 / BCI Competition IV-2a: motor IMAGERY, 2 sessions x 288 trials.",
+ "deletion_test_prediction": "plain forward pass (no TTA) so removals are compared deterministically",
+ "sfreq_hz": 250,
+ "ems": {
+  "factor_new": 0.001,
+  "init_block_size": 1000
+ },
+ "event_duration_s": 4.0,
+ "profiles": {
+  "original": {
+   "band_hz": [
+    4.0,
+    38.0
+   ],
+   "iir": {
+    "order": 6,
+    "ftype": "cheby1",
+    "rp": 0.5
+   },
+   "window_s": [
+    -0.5,
+    4.0
+   ],
+   "dropout": 0.6,
+   "lr": 0.001,
+   "weight_decay": 0.001,
+   "label_smoothing": 0.1,
+   "batch_size": 64,
+   "max_epochs": 350,
+   "swa_start_frac": 0.7142857142857143,
+   "augment": true,
+   "mixup_p": 0.5,
+   "mixup_alpha": 0.2,
+   "tta": true,
+   "grad_clip": 10.0,
+   "patience": null
+  },
+  "lr_2e-4": {
+   "band_hz": [
+    4.0,
+    38.0
+   ],
+   "iir": {
+    "order": 6,
+    "ftype": "cheby1",
+    "rp": 0.5
+   },
+   "window_s": [
+    -0.5,
+    4.0
+   ],
+   "dropout": 0.6,
+   "lr": 0.0002,
+   "weight_decay": 0.001,
+   "label_smoothing": 0.1,
+   "batch_size": 64,
+   "max_epochs": 350,
+   "swa_start_frac": 0.7142857142857143,
+   "augment": true,
+   "mixup_p": 0.5,
+   "mixup_alpha": 0.2,
+   "tta": true,
+   "grad_clip": 10.0,
+   "patience": null
+  },
+  "cue_0_4": {
+   "band_hz": [
+    4.0,
+    38.0
+   ],
+   "iir": {
+    "order": 6,
+    "ftype": "cheby1",
+    "rp": 0.5
+   },
+   "window_s": [
+    0.0,
+    4.0
+   ],
+   "dropout": 0.6,
+   "lr": 0.001,
+   "weight_decay": 0.001,
+   "label_smoothing": 0.1,
+   "batch_size": 64,
+   "max_epochs": 350,
+   "swa_start_frac": 0.7142857142857143,
+   "augment": true,
+   "mixup_p": 0.5,
+   "mixup_alpha": 0.2,
+   "tta": true,
+   "grad_clip": 10.0,
+   "patience": null
+  }
+ },
+ "augmentation": {
+  "noise_p": 0.5,
+  "noise_rel_std": 0.05,
+  "scale_p": 0.5,
+  "scale": [
+   0.8,
+   1.2
+  ],
+  "channel_drop_p": 0.3,
+  "channel_drop_max": 3
+ },
+ "profile_default": "original",
+ "profile_selection": {
+  "class_mode": "2class",
+  "rule": "leave-one-subject-out mean validation accuracy",
+  "per_subject": {
+   "1": "original",
+   "2": "original",
+   "3": "original",
+   "4": "original",
+   "5": "original",
+   "6": "original",
+   "7": "original",
+   "8": "original",
+   "9": "original"
+  },
+  "overall": "original",
+  "unanimous": true,
+  "validation_accuracy": {
+   "original": {
+    "1": 0.8055555555555556,
+    "2": 0.4444444444444444,
+    "3": 0.8611111111111112,
+    "4": 0.6111111111111112,
+    "5": 0.5833333333333334,
+    "6": 0.5,
+    "7": 0.7222222222222222,
+    "8": 0.8888888888888888,
+    "9": 0.9722222222222222
+   },
+   "lr_2e-4": {
+    "1": 0.8055555555555556,
+    "2": 0.5,
+    "3": 0.8333333333333334,
+    "4": 0.5833333333333334,
+    "5": 0.5,
+    "6": 0.5555555555555556,
+    "7": 0.6944444444444444,
+    "8": 0.8888888888888888,
+    "9": 0.8888888888888888
+   }
+  },
+  "mean_validation_accuracy": {
+   "original": 0.7098765432098766,
+   "lr_2e-4": 0.6944444444444444
+  },
+  "seed": 42,
+  "candidates": [
+   "original",
+   "lr_2e-4"
+  ]
+ },
+ "env_overrides": {
+  "EEG_PROFILE": null,
+  "EEG_MAX_EPOCHS": null,
+  "EEG_PATIENCE": null
+ },
+ "model_fixed": {
+  "n_filters_time": 40,
+  "filter_time_length": 25,
+  "pool": [
+   75,
+   15
+  ],
+  "size_per_class": {
+   "2class": {
+    "att_depth": 2,
+    "att_heads": 4
+   },
+   "4class": {
+    "att_depth": 6,
+    "att_heads": 10
+   }
+  }
+ },
+ "optimizer": "AdamW",
+ "scheduler": "CosineAnnealingLR(T_max=max_epochs)",
+ "loss": "label-smoothed NLL (smoothing / (K-1) off-target), mixup",
+ "tta": {
+  "noise_rel_std": 0.02,
+  "scale": 0.9
+ },
+ "checkpoint_rule": "SWA average from swa_start_frac*max_epochs + BN update (no early stopping); validation block only scored, never used for checkpointing",
+ "folds": "train on session 1 (last 25% of it = validation, chronological), refit on all of session 1, test once on session 2 (official BCI IV-2a split)",
+ "original_protocol": "shuffled StratifiedKFold(4) over both sessions, no validation set (paper Sec. 3.4)",
+ "protocol": {
+  "name": "session",
+  "val_fraction": 0.25,
+  "refit": true,
+  "min_refit_epochs": 20,
+  "fixed_epochs": true,
+  "seed_ensemble": true
+ },
+ "attribution": {
+  "methods": [
+   "grad",
+   "grad_x_input",
+   "integrated_gradients",
+   "smoothgrad"
+  ],
+  "ig_steps": 32,
+  "smoothgrad_samples": 12,
+  "smoothgrad_noise_std": 0.1,
+  "target": "pre-softmax logit of the true class",
+  "computed_on": "validation block of each fold"
+ },
+ "faithfulness": {
+  "k": [
+   2,
+   4,
+   6
+  ],
+  "random_draws": 10,
+  "removal": "channel set to 0 (its standardised mean) on the TEST block; evaluation only, never used for any choice",
+  "ranking": "mean of the four attribution maps from the VALIDATION block"
+ },
+ "randomisation_check": "Spearman between trained-model and untrained-model saliency",
+ "erd": {
+  "baseline_s": [
+   -0.5,
+   0.0
+  ],
+  "active_s": [
+   1.0,
+   3.0
+  ],
+  "sfreq_hz": 128,
+  "band_hz": [
+   8.0,
+   30.0
+  ],
+  "standardisation": "none"
+ },
+ "physiology_exploratory": {
+  "sfreq_hz": 128,
+  "bands_hz": {
+   "theta": [
+    4.0,
+    8.0
+   ],
+   "mu": [
+    8.0,
+    13.0
+   ],
+   "beta": [
+    13.0,
+    30.0
+   ],
+   "lowgamma": [
+    30.0,
+    40.0
+   ]
+  },
+  "epoch_s": [
+   -1.0,
+   5.0
+  ],
+  "used_for_decisions": false
+ },
+ "full_channels": [
+  "Fz",
+  "FC3",
+  "FC1",
+  "FCz",
+  "FC2",
+  "FC4",
+  "C5",
+  "C3",
+  "C1",
+  "Cz",
+  "C2",
+  "C4",
+  "C6",
+  "CP3",
+  "CP1",
+  "CPz",
+  "CP2",
+  "CP4",
+  "P1",
+  "Pz",
+  "P2",
+  "POz"
+ ],
+ "reduced_n_channels": 12,
+ "seeds": [
+  42,
+  43,
+  44
+ ],
+ "subject_ids": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "label_names": [
+  "feet",
+  "left_hand",
+  "right_hand",
+  "tongue"
+ ],
+ "versions": {
+  "torch": "2.0.1+cu118",
+  "mne": "1.9.0",
+  "numpy": "1.26.4"
+ }
+}

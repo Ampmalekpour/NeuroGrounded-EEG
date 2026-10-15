@@ -1,0 +1,21 @@
+Method,True class,pred feet,pred left_hand,pred right_hand,pred tongue
+22ch,feet,376,85,82,105
+22ch,left_hand,48,438,104,58
+22ch,right_hand,44,119,421,64
+22ch,tongue,73,74,55,446
+Ours,feet,315,97,106,130
+Ours,left_hand,54,444,102,48
+Ours,right_hand,61,134,402,51
+Ours,tongue,93,79,70,406
+CSP,feet,326,103,94,125
+CSP,left_hand,48,429,131,40
+CSP,right_hand,54,130,410,54
+CSP,tongue,96,97,95,360
+RLF,feet,320,106,100,122
+RLF,left_hand,49,402,144,53
+RLF,right_hand,46,123,425,54
+RLF,tongue,86,87,108,367
+MI,feet,344,101,82,121
+MI,left_hand,49,426,125,48
+MI,right_hand,49,131,416,52
+MI,tongue,91,93,80,384

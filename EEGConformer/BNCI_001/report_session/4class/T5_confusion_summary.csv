@@ -1,0 +1,6 @@
+Method,Pooled acc,Per-class recall,Predicted share per class,Mean majority-class acc,Folds predicting one class ≥90%
+22ch,64.85,"feet 58.0, left_hand 67.6, right_hand 65.0, tongue 68.8","feet 20.9, left_hand 27.6, right_hand 25.5, tongue 26.0",25.00,0 / 9
+Ours,60.46,"feet 48.6, left_hand 68.5, right_hand 62.0, tongue 62.7","feet 20.2, left_hand 29.1, right_hand 26.2, tongue 24.5",25.00,0 / 9
+CSP,58.83,"feet 50.3, left_hand 66.2, right_hand 63.3, tongue 55.6","feet 20.2, left_hand 29.3, right_hand 28.2, tongue 22.3",25.00,0 / 9
+RLF,58.41,"feet 49.4, left_hand 62.0, right_hand 65.6, tongue 56.6","feet 19.3, left_hand 27.7, right_hand 30.0, tongue 23.0",25.00,0 / 9
+MI,60.57,"feet 53.1, left_hand 65.7, right_hand 64.2, tongue 59.3","feet 20.6, left_hand 29.0, right_hand 27.1, tongue 23.3",25.00,0 / 9

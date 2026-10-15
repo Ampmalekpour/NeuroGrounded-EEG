@@ -1,0 +1,151 @@
+Attribution,Map,Pearson r,95% CI,Pearson r (|map|),Spearman r,Spearman r (|map|),n
+grad,ERD_theta_L,-0.068,"[-0.264, 0.134]",0.019,-0.096,0.062,9
+grad,ERD_theta_R,-0.326,"[-0.435, -0.209]",0.112,-0.329,0.122,9
+grad,ERD_theta_mag,0.104,"[-0.139, 0.336]",0.104,0.116,0.116,9
+grad,ERD_mu_L,-0.130,"[-0.411, 0.173]",0.264,-0.109,0.272,9
+grad,ERD_mu_R,-0.243,"[-0.532, 0.097]",0.361,-0.174,0.333,9
+grad,ERD_mu_mag,0.429,"[0.199, 0.614]",0.429,0.409,0.409,9
+grad,ERD_beta_L,0.032,"[-0.344, 0.398]",0.046,0.094,0.016,9
+grad,ERD_beta_R,0.058,"[-0.305, 0.406]",0.091,0.156,0.080,9
+grad,ERD_beta_mag,0.113,"[-0.363, 0.542]",0.113,0.090,0.090,9
+grad,ERS_beta_rebound_L,-0.165,"[-0.484, 0.193]",0.071,-0.181,0.057,9
+grad,ERS_beta_rebound_R,0.012,"[-0.180, 0.204]",-0.067,0.023,-0.037,9
+grad,ERS_beta_rebound_mag,-0.041,"[-0.364, 0.291]",-0.041,-0.007,-0.007,9
+grad,ERD_lowgamma_L,-0.085,"[-0.340, 0.182]",-0.009,-0.041,-0.042,9
+grad,ERD_lowgamma_R,-0.004,"[-0.367, 0.360]",-0.067,0.034,-0.003,9
+grad,ERD_lowgamma_mag,-0.061,"[-0.370, 0.260]",-0.061,-0.021,-0.021,9
+grad,logpow_8_30,0.128,"[-0.090, 0.334]",0.128,0.130,0.130,9
+grad,r2_signed,-0.004,"[-0.424, 0.417]",0.400,0.066,0.297,9
+grad,r2_abs,0.400,"[0.041, 0.667]",0.400,0.297,0.297,9
+grad,TFR_ERD_dB_L,-0.052,"[-0.396, 0.304]",0.039,0.014,-0.042,9
+grad,TFR_ERD_dB_R,-0.145,"[-0.504, 0.256]",0.239,-0.059,0.179,9
+grad,TFR_ERD_dB_mag,0.235,"[-0.191, 0.586]",0.235,0.132,0.132,9
+grad,ITC_4_30,0.116,"[-0.145, 0.363]",0.116,0.084,0.084,9
+grad,ERP_abs_0.2_0.8,0.253,"[-0.074, 0.532]",0.253,0.238,0.238,9
+grad,SlowPot_0.5_3,-0.217,"[-0.516, 0.129]",0.034,-0.277,0.117,9
+grad,ERD_beta_classspecific,—,—,"0.050 [-0.326, 0.412]",—,0.024,9
+grad,ERD_lowgamma_classspecific,—,—,"-0.036 [-0.229, 0.159]",—,-0.017,9
+grad,ERD_mu_classspecific,—,—,"0.301 [0.125, 0.459]",—,0.305,9
+grad,ERD_theta_classspecific,—,—,"0.055 [-0.115, 0.223]",—,0.091,9
+grad,ERS_beta_rebound_classspecific,—,—,"-0.001 [-0.252, 0.250]",—,0.006,9
+grad,TFR_ERD_dB_classspecific,—,—,"0.134 [-0.204, 0.443]",—,0.072,9
+grad_x_input,ERD_theta_L,-0.090,"[-0.283, 0.111]",0.029,-0.115,0.075,9
+grad_x_input,ERD_theta_R,-0.342,"[-0.447, -0.228]",0.111,-0.345,0.130,9
+grad_x_input,ERD_theta_mag,0.112,"[-0.144, 0.354]",0.112,0.131,0.131,9
+grad_x_input,ERD_mu_L,-0.149,"[-0.431, 0.160]",0.260,-0.115,0.259,9
+grad_x_input,ERD_mu_R,-0.247,"[-0.535, 0.091]",0.351,-0.180,0.330,9
+grad_x_input,ERD_mu_mag,0.422,"[0.190, 0.610]",0.422,0.399,0.399,9
+grad_x_input,ERD_beta_L,0.023,"[-0.373, 0.411]",0.040,0.097,0.002,9
+grad_x_input,ERD_beta_R,0.062,"[-0.312, 0.420]",0.090,0.173,0.080,9
+grad_x_input,ERD_beta_mag,0.111,"[-0.385, 0.557]",0.111,0.086,0.086,9
+grad_x_input,ERS_beta_rebound_L,-0.179,"[-0.509, 0.196]",0.064,-0.187,0.050,9
+grad_x_input,ERS_beta_rebound_R,0.011,"[-0.192, 0.214]",-0.066,0.032,-0.027,9
+grad_x_input,ERS_beta_rebound_mag,-0.047,"[-0.383, 0.299]",-0.047,-0.010,-0.010,9
+grad_x_input,ERD_lowgamma_L,-0.083,"[-0.353, 0.199]",-0.013,-0.024,-0.040,9
+grad_x_input,ERD_lowgamma_R,-0.006,"[-0.381, 0.370]",-0.083,0.038,-0.015,9
+grad_x_input,ERD_lowgamma_mag,-0.072,"[-0.392, 0.264]",-0.072,-0.029,-0.029,9
+grad_x_input,logpow_8_30,0.131,"[-0.090, 0.341]",0.131,0.140,0.140,9
+grad_x_input,r2_signed,0.011,"[-0.413, 0.431]",0.414,0.079,0.303,9
+grad_x_input,r2_abs,0.414,"[0.051, 0.681]",0.414,0.303,0.303,9
+grad_x_input,TFR_ERD_dB_L,-0.075,"[-0.432, 0.303]",0.029,0.012,-0.062,9
+grad_x_input,TFR_ERD_dB_R,-0.150,"[-0.516, 0.263]",0.240,-0.047,0.186,9
+grad_x_input,TFR_ERD_dB_mag,0.229,"[-0.211, 0.592]",0.229,0.123,0.123,9
+grad_x_input,ITC_4_30,0.116,"[-0.158, 0.374]",0.116,0.085,0.085,9
+grad_x_input,ERP_abs_0.2_0.8,0.262,"[-0.082, 0.550]",0.262,0.254,0.254,9
+grad_x_input,SlowPot_0.5_3,-0.229,"[-0.529, 0.122]",0.041,-0.303,0.141,9
+grad_x_input,ERD_beta_classspecific,—,—,"0.048 [-0.347, 0.430]",—,0.018,9
+grad_x_input,ERD_lowgamma_classspecific,—,—,"-0.042 [-0.242, 0.162]",—,-0.019,9
+grad_x_input,ERD_mu_classspecific,—,—,"0.293 [0.114, 0.453]",—,0.289,9
+grad_x_input,ERD_theta_classspecific,—,—,"0.049 [-0.127, 0.222]",—,0.082,9
+grad_x_input,ERS_beta_rebound_classspecific,—,—,"-0.001 [-0.264, 0.262]",—,0.014,9
+grad_x_input,TFR_ERD_dB_classspecific,—,—,"0.136 [-0.219, 0.459]",—,0.066,9
+integrated_gradients,ERD_theta_L,-0.069,"[-0.262, 0.129]",0.011,-0.106,0.070,9
+integrated_gradients,ERD_theta_R,-0.336,"[-0.453, -0.208]",0.107,-0.343,0.134,9
+integrated_gradients,ERD_theta_mag,0.100,"[-0.150, 0.337]",0.100,0.131,0.131,9
+integrated_gradients,ERD_mu_L,-0.135,"[-0.411, 0.164]",0.255,-0.097,0.240,9
+integrated_gradients,ERD_mu_R,-0.252,"[-0.551, 0.106]",0.367,-0.198,0.353,9
+integrated_gradients,ERD_mu_mag,0.423,"[0.207, 0.599]",0.423,0.394,0.394,9
+integrated_gradients,ERD_beta_L,0.024,"[-0.369, 0.409]",0.036,0.116,0.017,9
+integrated_gradients,ERD_beta_R,0.051,"[-0.320, 0.409]",0.075,0.168,0.073,9
+integrated_gradients,ERD_beta_mag,0.098,"[-0.390, 0.542]",0.098,0.097,0.097,9
+integrated_gradients,ERS_beta_rebound_L,-0.173,"[-0.501, 0.198]",0.071,-0.181,0.058,9
+integrated_gradients,ERS_beta_rebound_R,-0.011,"[-0.220, 0.198]",-0.084,0.021,-0.035,9
+integrated_gradients,ERS_beta_rebound_mag,-0.054,"[-0.387, 0.292]",-0.054,-0.008,-0.008,9
+integrated_gradients,ERD_lowgamma_L,-0.103,"[-0.383, 0.195]",-0.016,-0.035,-0.048,9
+integrated_gradients,ERD_lowgamma_R,0.001,"[-0.368, 0.370]",-0.082,0.030,-0.009,9
+integrated_gradients,ERD_lowgamma_mag,-0.069,"[-0.401, 0.279]",-0.069,-0.033,-0.033,9
+integrated_gradients,logpow_8_30,0.125,"[-0.098, 0.335]",0.125,0.105,0.105,9
+integrated_gradients,r2_signed,0.000,"[-0.457, 0.457]",0.412,0.035,0.277,9
+integrated_gradients,r2_abs,0.412,"[0.053, 0.677]",0.412,0.277,0.277,9
+integrated_gradients,TFR_ERD_dB_L,-0.067,"[-0.429, 0.314]",0.025,0.023,-0.073,9
+integrated_gradients,TFR_ERD_dB_R,-0.156,"[-0.521, 0.258]",0.241,-0.072,0.198,9
+integrated_gradients,TFR_ERD_dB_mag,0.229,"[-0.204, 0.587]",0.229,0.125,0.125,9
+integrated_gradients,ITC_4_30,0.100,"[-0.183, 0.367]",0.100,0.068,0.068,9
+integrated_gradients,ERP_abs_0.2_0.8,0.254,"[-0.085, 0.540]",0.254,0.242,0.242,9
+integrated_gradients,SlowPot_0.5_3,-0.207,"[-0.514, 0.147]",0.019,-0.285,0.124,9
+integrated_gradients,ERD_beta_classspecific,—,—,"0.032 [-0.345, 0.400]",—,0.026,9
+integrated_gradients,ERD_lowgamma_classspecific,—,—,"-0.046 [-0.244, 0.156]",—,-0.012,9
+integrated_gradients,ERD_mu_classspecific,—,—,"0.288 [0.127, 0.435]",—,0.281,9
+integrated_gradients,ERD_theta_classspecific,—,—,"0.036 [-0.134, 0.204]",—,0.084,9
+integrated_gradients,ERS_beta_rebound_classspecific,—,—,"-0.010 [-0.271, 0.251]",—,-0.001,9
+integrated_gradients,TFR_ERD_dB_classspecific,—,—,"0.119 [-0.205, 0.419]",—,0.055,9
+smoothgrad,ERD_theta_L,-0.068,"[-0.264, 0.134]",0.019,-0.097,0.060,9
+smoothgrad,ERD_theta_R,-0.326,"[-0.434, -0.208]",0.112,-0.328,0.120,9
+smoothgrad,ERD_theta_mag,0.104,"[-0.139, 0.336]",0.104,0.114,0.114,9
+smoothgrad,ERD_mu_L,-0.130,"[-0.411, 0.173]",0.264,-0.107,0.270,9
+smoothgrad,ERD_mu_R,-0.242,"[-0.532, 0.098]",0.361,-0.172,0.332,9
+smoothgrad,ERD_mu_mag,0.429,"[0.199, 0.614]",0.429,0.407,0.407,9
+smoothgrad,ERD_beta_L,0.032,"[-0.343, 0.398]",0.046,0.093,0.015,9
+smoothgrad,ERD_beta_R,0.059,"[-0.304, 0.407]",0.091,0.154,0.082,9
+smoothgrad,ERD_beta_mag,0.112,"[-0.363, 0.541]",0.112,0.091,0.091,9
+smoothgrad,ERS_beta_rebound_L,-0.164,"[-0.483, 0.193]",0.071,-0.182,0.056,9
+smoothgrad,ERS_beta_rebound_R,0.013,"[-0.179, 0.204]",-0.066,0.022,-0.037,9
+smoothgrad,ERS_beta_rebound_mag,-0.040,"[-0.363, 0.292]",-0.040,-0.009,-0.009,9
+smoothgrad,ERD_lowgamma_L,-0.083,"[-0.338, 0.183]",-0.009,-0.040,-0.042,9
+smoothgrad,ERD_lowgamma_R,-0.003,"[-0.365, 0.360]",-0.067,0.038,0.000,9
+smoothgrad,ERD_lowgamma_mag,-0.061,"[-0.369, 0.260]",-0.061,-0.019,-0.019,9
+smoothgrad,logpow_8_30,0.128,"[-0.090, 0.334]",0.128,0.129,0.129,9
+smoothgrad,r2_signed,-0.003,"[-0.422, 0.417]",0.400,0.064,0.295,9
+smoothgrad,r2_abs,0.400,"[0.042, 0.667]",0.400,0.295,0.295,9
+smoothgrad,TFR_ERD_dB_L,-0.052,"[-0.394, 0.304]",0.039,0.015,-0.041,9
+smoothgrad,TFR_ERD_dB_R,-0.144,"[-0.502, 0.257]",0.239,-0.058,0.178,9
+smoothgrad,TFR_ERD_dB_mag,0.234,"[-0.190, 0.585]",0.234,0.133,0.133,9
+smoothgrad,ITC_4_30,0.117,"[-0.145, 0.363]",0.117,0.086,0.086,9
+smoothgrad,ERP_abs_0.2_0.8,0.254,"[-0.074, 0.532]",0.254,0.239,0.239,9
+smoothgrad,SlowPot_0.5_3,-0.218,"[-0.517, 0.129]",0.035,-0.277,0.114,9
+smoothgrad,ERD_beta_classspecific,—,—,"0.050 [-0.327, 0.413]",—,0.024,9
+smoothgrad,ERD_lowgamma_classspecific,—,—,"-0.036 [-0.228, 0.159]",—,-0.017,9
+smoothgrad,ERD_mu_classspecific,—,—,"0.301 [0.125, 0.459]",—,0.305,9
+smoothgrad,ERD_theta_classspecific,—,—,"0.055 [-0.115, 0.222]",—,0.092,9
+smoothgrad,ERS_beta_rebound_classspecific,—,—,"-0.000 [-0.251, 0.251]",—,0.009,9
+smoothgrad,TFR_ERD_dB_classspecific,—,—,"0.133 [-0.204, 0.443]",—,0.072,9
+mean4,ERD_theta_L,-0.074,"[-0.268, 0.126]",0.019,-0.111,0.068,9
+mean4,ERD_theta_R,-0.333,"[-0.442, -0.214]",0.111,-0.334,0.127,9
+mean4,ERD_theta_mag,0.105,"[-0.142, 0.340]",0.105,0.123,0.123,9
+mean4,ERD_mu_L,-0.137,"[-0.419, 0.168]",0.262,-0.106,0.255,9
+mean4,ERD_mu_R,-0.247,"[-0.538, 0.097]",0.360,-0.183,0.347,9
+mean4,ERD_mu_mag,0.427,"[0.199, 0.611]",0.427,0.405,0.405,9
+mean4,ERD_beta_L,0.027,"[-0.359, 0.405]",0.043,0.094,0.009,9
+mean4,ERD_beta_R,0.057,"[-0.310, 0.410]",0.087,0.163,0.077,9
+mean4,ERD_beta_mag,0.109,"[-0.375, 0.546]",0.109,0.087,0.087,9
+mean4,ERS_beta_rebound_L,-0.171,"[-0.495, 0.195]",0.069,-0.185,0.054,9
+mean4,ERS_beta_rebound_R,0.006,"[-0.193, 0.205]",-0.071,0.026,-0.029,9
+mean4,ERS_beta_rebound_mag,-0.046,"[-0.375, 0.293]",-0.046,-0.008,-0.008,9
+mean4,ERD_lowgamma_L,-0.089,"[-0.355, 0.190]",-0.011,-0.036,-0.039,9
+mean4,ERD_lowgamma_R,-0.003,"[-0.371, 0.365]",-0.075,0.030,-0.004,9
+mean4,ERD_lowgamma_mag,-0.065,"[-0.384, 0.267]",-0.065,-0.019,-0.019,9
+mean4,logpow_8_30,0.128,"[-0.091, 0.336]",0.128,0.128,0.128,9
+mean4,r2_signed,0.002,"[-0.430, 0.433]",0.408,0.060,0.290,9
+mean4,r2_abs,0.408,"[0.047, 0.675]",0.408,0.290,0.290,9
+mean4,TFR_ERD_dB_L,-0.063,"[-0.416, 0.307]",0.034,0.012,-0.053,9
+mean4,TFR_ERD_dB_R,-0.149,"[-0.511, 0.258]",0.241,-0.059,0.190,9
+mean4,TFR_ERD_dB_mag,0.233,"[-0.199, 0.589]",0.233,0.131,0.131,9
+mean4,ITC_4_30,0.112,"[-0.158, 0.367]",0.112,0.079,0.079,9
+mean4,ERP_abs_0.2_0.8,0.256,"[-0.078, 0.538]",0.256,0.245,0.245,9
+mean4,SlowPot_0.5_3,-0.218,"[-0.519, 0.132]",0.032,-0.290,0.129,9
+mean4,ERD_beta_classspecific,—,—,"0.045 [-0.337, 0.414]",—,0.027,9
+mean4,ERD_lowgamma_classspecific,—,—,"-0.041 [-0.237, 0.159]",—,-0.013,9
+mean4,ERD_mu_classspecific,—,—,"0.297 [0.123, 0.453]",—,0.297,9
+mean4,ERD_theta_classspecific,—,—,"0.049 [-0.122, 0.217]",—,0.088,9
+mean4,ERS_beta_rebound_classspecific,—,—,"-0.004 [-0.260, 0.254]",—,0.015,9
+mean4,TFR_ERD_dB_classspecific,—,—,"0.131 [-0.208, 0.442]",—,0.072,9
