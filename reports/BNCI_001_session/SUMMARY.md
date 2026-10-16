@@ -1,15 +1,22 @@
-# Cross-model summary — EEGNetV4\BNCI_001, EEGItNet\BNCI_001, Deep4net\BNCI_001, EEGConformer\BNCI_001
+# Cross-model summary — EEGNetV4/BNCI_001, EEGItNet/BNCI_001, Deep4net/BNCI_001, EEGConformer/BNCI_001
 
+<<<<<<< HEAD
 Generated 2026-10-16 18:26. Per-model details: `<model folder>/report*/REPORT.md` (results folder `<class>/results_session/`).
+=======
+Generated 2026-10-16 07:38. Per-model details: `<model folder>/report*/REPORT.md` (results folder `<class>/results_session/`).
+>>>>>>> 0ad2323c13ee5db71740992ee2f6db6df505a6f8
 
 ## C1. Test accuracy (%), mean ± SD across subjects
 
 | Model | Class | 22ch | Ours | CSP | RLF | MI | Fixed sensorimotor | ERD-only | Random (mean of draws) |
 |---|---|---|---|---|---|---|---|---|---|
+<<<<<<< HEAD
 | EEGNetV4 | 2class | 67.13 ± 19.34 | 66.28 ± 18.29 | 69.98 ± 19.41 | 66.82 ± 18.59 | 66.20 ± 18.65 | 71.45 ± 18.43 | 64.58 ± 19.36 | 67.16 ± 17.40 |
 | EEGNetV4 | 4class | 62.73 ± 20.64 | 60.88 ± 19.28 | 57.68 ± 22.23 | 57.64 ± 20.88 | 59.84 ± 19.10 | 61.88 ± 19.74 | 60.26 ± 20.24 | 58.90 ± 21.00 |
 | EEGItNet | 2class | 71.06 ± 9.92 | 71.60 ± 10.48 | 69.06 ± 11.21 | 68.06 ± 12.30 | 66.67 ± 8.20 | 67.82 ± 11.06 | 70.91 ± 10.08 | 65.93 ± 9.21 |
 | EEGItNet | 4class | 50.96 ± 11.79 | 50.58 ± 10.73 | 50.04 ± 10.44 | 49.31 ± 11.98 | 50.08 ± 10.47 | 48.19 ± 12.01 | 49.81 ± 10.91 | 48.06 ± 10.21 |
+=======
+>>>>>>> 0ad2323c13ee5db71740992ee2f6db6df505a6f8
 | Deep4net | 2class | 65.59 ± 16.67 | 65.28 ± 15.60 | 66.44 ± 16.13 | 63.66 ± 15.78 | 63.27 ± 14.32 | 65.35 ± 16.69 | 65.20 ± 15.18 | 64.43 ± 14.40 |
 | Deep4net | 4class | 45.14 ± 19.57 | 45.33 ± 18.51 | 44.37 ± 17.97 | 44.98 ± 18.32 | 44.75 ± 18.43 | 44.25 ± 20.00 | 44.91 ± 19.09 | 43.78 ± 17.68 |
 | EEGConformer | 2class | 78.70 ± 13.70 | 76.39 ± 14.82 | 76.93 ± 15.53 | 75.85 ± 13.99 | 74.92 ± 14.85 | 76.93 ± 16.17 | 76.93 ± 14.39 | 76.05 ± 14.77 |
@@ -21,6 +28,7 @@ First three: sign-invariant metrics used in the paper. Last two: as in the origi
 
 | Model | Class | Attribution | magnitude r | class-specific r | lateralisation r | orig ERD_(L−R) r | orig ERD_comb r |
 |---|---|---|---|---|---|---|---|
+<<<<<<< HEAD
 | EEGNetV4 | 2class | grad | 0.118 | 0.224 | 0.011 | -0.187 | -0.218 |
 | EEGNetV4 | 2class | grad_x_input | 0.062 | 0.216 | -0.070 | -0.221 | -0.220 |
 | EEGNetV4 | 2class | integrated_gradients | 0.072 | 0.219 | -0.078 | -0.225 | -0.224 |
@@ -37,6 +45,8 @@ First three: sign-invariant metrics used in the paper. Last two: as in the origi
 | EEGItNet | 4class | grad_x_input | 0.172 | 0.164 | 0.022 | -0.068 | -0.176 |
 | EEGItNet | 4class | integrated_gradients | 0.153 | 0.140 | -0.077 | -0.075 | -0.155 |
 | EEGItNet | 4class | smoothgrad | 0.183 | 0.178 | 0.093 | -0.055 | -0.167 |
+=======
+>>>>>>> 0ad2323c13ee5db71740992ee2f6db6df505a6f8
 | Deep4net | 2class | grad | 0.115 | 0.136 | -0.156 | -0.005 | -0.164 |
 | Deep4net | 2class | grad_x_input | 0.082 | 0.114 | -0.349 | -0.014 | -0.151 |
 | Deep4net | 2class | integrated_gradients | 0.083 | 0.116 | -0.420 | -0.016 | -0.153 |
@@ -58,6 +68,7 @@ First three: sign-invariant metrics used in the paper. Last two: as in the origi
 
 Curiosity only; not used anywhere in the pipeline.
 
+<<<<<<< HEAD
 | Map | Deep4net 2class | Deep4net 4class | EEGConformer 2class | EEGConformer 4class | EEGItNet 2class | EEGItNet 4class | EEGNetV4 2class | EEGNetV4 4class |
 |---|---|---|---|---|---|---|---|---|
 | ERD_theta_L | -0.126 | -0.074 | 0.040 | -0.013 | -0.174 | -0.036 | -0.139 | -0.203 |
@@ -84,3 +95,31 @@ Curiosity only; not used anywhere in the pipeline.
 | ITC_4_30 | -0.185 | 0.112 | -0.141 | -0.025 | -0.054 | 0.040 | -0.130 | -0.056 |
 | ERP_abs_0.2_0.8 | -0.047 | 0.256 | -0.121 | -0.070 | -0.068 | 0.034 | -0.093 | 0.044 |
 | SlowPot_0.5_3 | 0.071 | -0.218 | 0.002 | 0.021 | -0.166 | -0.207 | -0.056 | 0.040 |
+=======
+| Map | Deep4net 2class | Deep4net 4class | EEGConformer 2class | EEGConformer 4class |
+|---|---|---|---|---|
+| ERD_theta_L | -0.126 | -0.074 | 0.040 | -0.013 |
+| ERD_theta_R | -0.170 | -0.333 | 0.012 | -0.015 |
+| ERD_theta_mag | -0.088 | 0.105 | -0.016 | -0.075 |
+| ERD_mu_L | -0.129 | -0.137 | -0.287 | -0.196 |
+| ERD_mu_R | -0.087 | -0.247 | -0.166 | -0.106 |
+| ERD_mu_mag | 0.187 | 0.427 | 0.032 | -0.078 |
+| ERD_beta_L | -0.038 | 0.027 | -0.096 | -0.106 |
+| ERD_beta_R | -0.022 | 0.057 | 0.089 | 0.012 |
+| ERD_beta_mag | -0.027 | 0.109 | 0.048 | 0.015 |
+| ERS_beta_rebound_L | -0.139 | -0.171 | 0.021 | -0.003 |
+| ERS_beta_rebound_R | -0.107 | 0.006 | -0.142 | -0.095 |
+| ERS_beta_rebound_mag | -0.150 | -0.046 | -0.038 | -0.005 |
+| ERD_lowgamma_L | -0.202 | -0.089 | -0.149 | -0.042 |
+| ERD_lowgamma_R | -0.079 | -0.003 | -0.088 | -0.070 |
+| ERD_lowgamma_mag | -0.068 | -0.065 | 0.033 | 0.075 |
+| logpow_8_30 | -0.163 | 0.128 | -0.107 | -0.152 |
+| r2_signed | 0.040 | 0.002 | 0.237 | 0.145 |
+| r2_abs | 0.139 | 0.408 | 0.282 | 0.146 |
+| TFR_ERD_dB_L | -0.159 | -0.063 | -0.237 | -0.207 |
+| TFR_ERD_dB_R | -0.147 | -0.149 | -0.034 | -0.042 |
+| TFR_ERD_dB_mag | 0.058 | 0.233 | 0.135 | 0.119 |
+| ITC_4_30 | -0.185 | 0.112 | -0.141 | -0.025 |
+| ERP_abs_0.2_0.8 | -0.047 | 0.256 | -0.121 | -0.070 |
+| SlowPot_0.5_3 | 0.071 | -0.218 | 0.002 | 0.021 |
+>>>>>>> 0ad2323c13ee5db71740992ee2f6db6df505a6f8
