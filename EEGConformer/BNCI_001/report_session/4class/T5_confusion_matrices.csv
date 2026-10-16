@@ -19,3 +19,15 @@ MI,feet,344,101,82,121
 MI,left_hand,49,426,125,48
 MI,right_hand,49,131,416,52
 MI,tongue,91,93,80,384
+Fixed sensorimotor,feet,338,94,97,119
+Fixed sensorimotor,left_hand,58,428,118,44
+Fixed sensorimotor,right_hand,57,130,402,59
+Fixed sensorimotor,tongue,104,104,80,360
+ERD-only,feet,354,76,91,127
+ERD-only,left_hand,61,406,131,50
+ERD-only,right_hand,63,115,419,51
+ERD-only,tongue,96,82,112,358
+Random (mean of draws),feet,1579,474,554,633
+Random (mean of draws),left_hand,296,2001,662,281
+Random (mean of draws),right_hand,303,626,1993,318
+Random (mean of draws),tongue,437,421,431,1951

@@ -1,0 +1,24 @@
+EEGConformer - BNCI2014-001 - control 'control_erd' - 4class
+================================================================================
+
+Subject 01: 69.79%  | montage: P2, CP4, C3, CPz, POz, Pz, CP2, P1, CP3, C4, CP1, Cz
+    seed -1 fold 1: 69.79% (majority-class 25.0%)
+Subject 02: 38.89%  | montage: P2, CP4, Pz, CP3, POz, P1, C3, CPz, CP2, C4, CP1, Cz
+    seed -1 fold 1: 38.89% (majority-class 25.0%)
+Subject 03: 70.83%  | montage: P2, CP4, Pz, P1, CP2, CPz, CP3, C4, POz, Cz, C2, CP1
+    seed -1 fold 1: 70.83% (majority-class 25.0%)
+Subject 04: 60.42%  | montage: P2, Pz, CP3, CP4, CPz, P1, POz, C3, CP2, CP1, C4, Cz
+    seed -1 fold 1: 60.42% (majority-class 25.0%)
+Subject 05: 38.19%  | montage: P2, CP4, CPz, CP3, Pz, CP2, C4, C3, P1, Cz, POz, CP1
+    seed -1 fold 1: 38.19% (majority-class 25.0%)
+Subject 06: 41.32%  | montage: CP4, P2, C4, C3, CP2, CP3, Pz, CPz, POz, P1, C2, Cz
+    seed -1 fold 1: 41.32% (majority-class 25.0%)
+Subject 07: 69.10%  | montage: P2, POz, Pz, CP4, P1, CPz, CP3, CP2, C3, C4, CP1, Cz
+    seed -1 fold 1: 69.10% (majority-class 25.0%)
+Subject 08: 70.14%  | montage: CP3, CP4, C3, P2, C4, CPz, P1, CP2, Pz, Cz, CP1, POz
+    seed -1 fold 1: 70.14% (majority-class 25.0%)
+Subject 09: 75.00%  | montage: P2, CP4, Pz, P1, CPz, POz, CP2, CP3, C3, Cz, C4, CP1
+    seed -1 fold 1: 75.00% (majority-class 25.0%)
+
+GRAND MEAN: 59.30% +/- 15.37% (SD across subjects)
+chance 25.0% | mean majority-class 25.0%

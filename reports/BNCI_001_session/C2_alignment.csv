@@ -1,16 +1,8 @@
 Model,Class,Attribution,magnitude r,class-specific r,lateralisation r,orig ERD_(L−R) r,orig ERD_comb r
-Deep4net,2class,grad,0.115,0.136,-0.156,-0.005,-0.164
-Deep4net,2class,grad_x_input,0.082,0.114,-0.349,-0.014,-0.151
-Deep4net,2class,integrated_gradients,0.083,0.116,-0.420,-0.016,-0.153
-Deep4net,2class,smoothgrad,0.114,0.136,-0.199,-0.005,-0.166
 Deep4net,4class,grad,0.308,0.111,0.447,0.053,-0.112
 Deep4net,4class,grad_x_input,0.293,0.108,0.262,0.041,-0.124
 Deep4net,4class,integrated_gradients,0.292,0.090,0.018,0.052,-0.113
 Deep4net,4class,smoothgrad,0.308,0.110,0.446,0.052,-0.112
-EEGConformer,2class,grad,0.053,0.198,0.015,-0.180,-0.223
-EEGConformer,2class,grad_x_input,0.033,0.197,0.060,-0.185,-0.219
-EEGConformer,2class,integrated_gradients,0.024,0.166,0.127,-0.137,-0.180
-EEGConformer,2class,smoothgrad,0.053,0.198,0.003,-0.180,-0.223
 EEGConformer,4class,grad,0.001,0.153,0.061,-0.144,-0.131
 EEGConformer,4class,grad_x_input,-0.031,0.154,0.056,-0.140,-0.142
 EEGConformer,4class,integrated_gradients,-0.089,0.127,0.061,-0.017,-0.133

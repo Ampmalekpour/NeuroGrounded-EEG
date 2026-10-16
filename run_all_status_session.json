@@ -136,5 +136,11 @@
   "minutes": 75.2,
   "log": "EEGConformer\\BNCI_001\\4class\\logs_session\\mi.log",
   "finished": "2026-10-15 17:33:15"
+ },
+ "eegconformer/4class/controls": {
+  "state": "ok",
+  "minutes": 178.6,
+  "log": "EEGConformer\\BNCI_001\\4class\\logs_session\\controls.log",
+  "finished": "2026-10-16 03:29:39"
  }
 }

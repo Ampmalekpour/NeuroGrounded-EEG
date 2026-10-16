@@ -4,3 +4,6 @@ Ours,60.46,"feet 48.6, left_hand 68.5, right_hand 62.0, tongue 62.7","feet 20.2,
 CSP,58.83,"feet 50.3, left_hand 66.2, right_hand 63.3, tongue 55.6","feet 20.2, left_hand 29.3, right_hand 28.2, tongue 22.3",25.00,0 / 9
 RLF,58.41,"feet 49.4, left_hand 62.0, right_hand 65.6, tongue 56.6","feet 19.3, left_hand 27.7, right_hand 30.0, tongue 23.0",25.00,0 / 9
 MI,60.57,"feet 53.1, left_hand 65.7, right_hand 64.2, tongue 59.3","feet 20.6, left_hand 29.0, right_hand 27.1, tongue 23.3",25.00,0 / 9
+Fixed sensorimotor,58.95,"feet 52.2, left_hand 66.0, right_hand 62.0, tongue 55.6","feet 21.5, left_hand 29.2, right_hand 26.9, tongue 22.5",25.00,0 / 9
+ERD-only,59.30,"feet 54.6, left_hand 62.7, right_hand 64.7, tongue 55.2","feet 22.1, left_hand 26.2, right_hand 29.1, tongue 22.6",25.00,0 / 9
+Random (mean of draws),58.06,"feet 48.7, left_hand 61.8, right_hand 61.5, tongue 60.2","feet 20.2, left_hand 27.2, right_hand 28.1, tongue 24.6",25.00,0 / 45
