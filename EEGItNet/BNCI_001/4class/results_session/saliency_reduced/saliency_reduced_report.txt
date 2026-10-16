@@ -1,0 +1,39 @@
+EEG-ITNet - BNCI2014-001 - SALIENCY 12-channel (LOSO) - 4class
+================================================================================
+
+Subject 01: 60.07%  | montage: POz, Fz, P2, Cz, CP4, CPz, C3, C5, CP3, FC3, CP1, CP2
+    seed -1 fold 1: 60.07% (majority-class 25.0%)
+Subject 02: 38.19%  | montage: POz, P2, CP4, Fz, FC3, P1, C3, Cz, CPz, CP3, CP1, C5
+    seed -1 fold 1: 38.19% (majority-class 25.0%)
+Subject 03: 55.90%  | montage: POz, P2, Cz, CP4, Fz, FC3, C5, P1, CP3, CP1, CPz, C3
+    seed -1 fold 1: 55.90% (majority-class 25.0%)
+Subject 04: 50.00%  | montage: POz, CP4, P2, C3, Fz, Cz, CPz, FC3, CP2, P1, C4, CP1
+    seed -1 fold 1: 50.00% (majority-class 25.0%)
+Subject 05: 36.11%  | montage: POz, P2, Fz, CP4, Cz, C3, P1, CPz, CP1, CP3, C5, FC3
+    seed -1 fold 1: 36.11% (majority-class 25.0%)
+Subject 06: 36.81%  | montage: POz, P2, CP4, Fz, FC3, C3, Cz, CP1, CPz, CP3, P1, FC2
+    seed -1 fold 1: 36.81% (majority-class 25.0%)
+Subject 07: 57.64%  | montage: POz, P2, CP4, Fz, Cz, FC3, C3, CP2, C5, P1, CPz, CP1
+    seed -1 fold 1: 57.64% (majority-class 25.0%)
+Subject 08: 57.64%  | montage: POz, P2, Cz, C3, Fz, CP4, FC3, C5, CP1, CP3, P1, C6
+    seed -1 fold 1: 57.64% (majority-class 25.0%)
+Subject 09: 62.85%  | montage: POz, P2, Fz, CP4, FC3, Cz, C3, C5, P1, CP2, CP3, CPz
+    seed -1 fold 1: 62.85% (majority-class 25.0%)
+
+GRAND MEAN: 50.58% +/- 10.73% (SD across subjects)
+chance 25.0% | mean majority-class 25.0%
+
+Attribution methods used: all
+Alignment (participant-level mean [95% CI]):
+                  grad magnitude_pearson        +0.168 [-0.080, +0.416] n=9
+                  grad class_specific_pearson   +0.166 [-0.037, +0.370] n=9
+                  grad lateralisation_pearson   +0.081 [-0.164, +0.325] n=9
+          grad_x_input magnitude_pearson        +0.157 [-0.104, +0.419] n=9
+          grad_x_input class_specific_pearson   +0.157 [-0.037, +0.351] n=9
+          grad_x_input lateralisation_pearson   +0.005 [-0.249, +0.259] n=9
+  integrated_gradients magnitude_pearson        +0.138 [-0.131, +0.407] n=9
+  integrated_gradients class_specific_pearson   +0.133 [-0.053, +0.319] n=9
+  integrated_gradients lateralisation_pearson   -0.078 [-0.338, +0.183] n=9
+            smoothgrad magnitude_pearson        +0.167 [-0.081, +0.415] n=9
+            smoothgrad class_specific_pearson   +0.166 [-0.037, +0.370] n=9
+            smoothgrad lateralisation_pearson   +0.080 [-0.164, +0.325] n=9

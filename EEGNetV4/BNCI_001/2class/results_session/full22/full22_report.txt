@@ -1,0 +1,24 @@
+EEGNetv4 - BNCI2014-001 - FULL 22-CHANNEL BASELINE - 2class
+================================================================================
+
+Subject 01: 50.69%
+    seed -1 fold 1: 50.69% (majority-class 50.0%)
+Subject 02: 45.14%
+    seed -1 fold 1: 45.14% (majority-class 50.0%)
+Subject 03: 93.06%
+    seed -1 fold 1: 93.06% (majority-class 50.0%)
+Subject 04: 63.89%
+    seed -1 fold 1: 63.89% (majority-class 50.0%)
+Subject 05: 52.08%
+    seed -1 fold 1: 52.08% (majority-class 50.0%)
+Subject 06: 59.03%
+    seed -1 fold 1: 59.03% (majority-class 50.0%)
+Subject 07: 57.64%
+    seed -1 fold 1: 57.64% (majority-class 50.0%)
+Subject 08: 92.36%
+    seed -1 fold 1: 92.36% (majority-class 50.0%)
+Subject 09: 90.28%
+    seed -1 fold 1: 90.28% (majority-class 50.0%)
+
+GRAND MEAN: 67.13% +/- 19.34% (SD across subjects)
+chance 50.0% | mean majority-class 50.0%

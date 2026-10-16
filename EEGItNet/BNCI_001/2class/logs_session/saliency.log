@@ -1,0 +1,947 @@
+$ D:\EEG\braindec\.venv\Scripts\python.exe -u D:\EEG\NeuroGrounded-EEG\EEGItNet\BNCI_001\2class\eegitnet_bnci_2class_saliency.py   [EEG_PROTOCOL=session]
+Using device: cuda | class mode: 2class | seeds: [42, 43, 44] | subjects: [1, 2, 3, 4, 5, 6, 7, 8, 9] | synthetic: False | protocol: session
+
+================================================================================
+SUBJECT 01 — full22 — 2class — session — profile cue_0_4 — 22 ch: Fz, FC3, FC1, FCz, FC2, FC4, C5, C3, C1, Cz, C2, C4, C6, CP3, CP1, CPz, CP2, CP4, P1, Pz, P2, POz
+================================================================================
+  S01 [2class] profile=cue_0_4 X=(288, 22, 1000) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+D:\EEG\braindec\.venv\lib\site-packages\torch\nn\modules\conv.py:459: UserWarning: Using padding='same' with even kernel lengths and odd dilation may require a zero-padded copy of the input be created (Triggered internally at ..\aten\src\ATen\native\Convolution.cpp:1004.)
+  return F.conv2d(input, weight, bias, self.stride,
+S01 seed42 F1 [fit] Ep 001/350 | tr 0.6633 | val (current weights) 61.1%
+S01 seed42 F1 [fit] Ep 050/350 | tr 0.5286 | val (current weights) 52.8%
+S01 seed42 F1 [fit] Ep 100/350 | tr 0.5838 | val (current weights) 50.0%
+S01 seed42 F1 [fit] Ep 150/350 | tr 0.4084 | val (current weights) 52.8%
+S01 seed42 F1 [fit] Ep 200/350 | tr 0.6208 | val (current weights) 55.6%
+S01 seed42 F1 [fit] Ep 250/350 | tr 0.3755 | val (current weights) 55.6%
+S01 seed42 F1 [fit] Ep 300/350 | tr 0.3903 | val (current weights) 55.6%
+S01 seed42 F1 [fit] Ep 350/350 | tr 0.3789 | val (current weights) 55.6%
+S01 seed42 F1 [refit] Ep 001/350 | tr 0.6809 | refit, no validation
+S01 seed42 F1 [refit] Ep 050/350 | tr 0.5142 | refit, no validation
+S01 seed42 F1 [refit] Ep 100/350 | tr 0.4261 | refit, no validation
+S01 seed42 F1 [refit] Ep 150/350 | tr 0.4498 | refit, no validation
+S01 seed42 F1 [refit] Ep 200/350 | tr 0.4009 | refit, no validation
+S01 seed42 F1 [refit] Ep 250/350 | tr 0.4467 | refit, no validation
+S01 seed42 F1 [refit] Ep 300/350 | tr 0.4328 | refit, no validation
+S01 seed42 F1 [refit] Ep 350/350 | tr 0.3797 | refit, no validation
+S01 seed42 F1: test 72.22% (val 55.56%, epochs 350)
+S01 seed43 F1 [fit] Ep 001/350 | tr 0.6864 | val (current weights) 44.4%
+S01 seed43 F1 [fit] Ep 050/350 | tr 0.5094 | val (current weights) 52.8%
+S01 seed43 F1 [fit] Ep 100/350 | tr 0.5501 | val (current weights) 55.6%
+S01 seed43 F1 [fit] Ep 150/350 | tr 0.4036 | val (current weights) 52.8%
+S01 seed43 F1 [fit] Ep 200/350 | tr 0.4072 | val (current weights) 50.0%
+S01 seed43 F1 [fit] Ep 250/350 | tr 0.6051 | val (current weights) 58.3%
+S01 seed43 F1 [fit] Ep 300/350 | tr 0.4116 | val (current weights) 55.6%
+S01 seed43 F1 [fit] Ep 350/350 | tr 0.6376 | val (current weights) 58.3%
+S01 seed43 F1 [refit] Ep 001/350 | tr 0.7366 | refit, no validation
+S01 seed43 F1 [refit] Ep 050/350 | tr 0.6181 | refit, no validation
+S01 seed43 F1 [refit] Ep 100/350 | tr 0.4389 | refit, no validation
+S01 seed43 F1 [refit] Ep 150/350 | tr 0.4152 | refit, no validation
+S01 seed43 F1 [refit] Ep 200/350 | tr 0.5129 | refit, no validation
+S01 seed43 F1 [refit] Ep 250/350 | tr 0.4114 | refit, no validation
+S01 seed43 F1 [refit] Ep 300/350 | tr 0.4151 | refit, no validation
+S01 seed43 F1 [refit] Ep 350/350 | tr 0.4339 | refit, no validation
+S01 seed43 F1: test 68.75% (val 52.78%, epochs 350)
+S01 seed44 F1 [fit] Ep 001/350 | tr 0.7050 | val (current weights) 38.9%
+S01 seed44 F1 [fit] Ep 050/350 | tr 0.6035 | val (current weights) 41.7%
+S01 seed44 F1 [fit] Ep 100/350 | tr 0.5003 | val (current weights) 52.8%
+S01 seed44 F1 [fit] Ep 150/350 | tr 0.5051 | val (current weights) 50.0%
+S01 seed44 F1 [fit] Ep 200/350 | tr 0.4320 | val (current weights) 50.0%
+S01 seed44 F1 [fit] Ep 250/350 | tr 0.4246 | val (current weights) 58.3%
+S01 seed44 F1 [fit] Ep 300/350 | tr 0.4186 | val (current weights) 61.1%
+S01 seed44 F1 [fit] Ep 350/350 | tr 0.4808 | val (current weights) 52.8%
+S01 seed44 F1 [refit] Ep 001/350 | tr 0.7330 | refit, no validation
+S01 seed44 F1 [refit] Ep 050/350 | tr 0.5453 | refit, no validation
+S01 seed44 F1 [refit] Ep 100/350 | tr 0.4450 | refit, no validation
+S01 seed44 F1 [refit] Ep 150/350 | tr 0.5115 | refit, no validation
+S01 seed44 F1 [refit] Ep 200/350 | tr 0.4718 | refit, no validation
+S01 seed44 F1 [refit] Ep 250/350 | tr 0.4511 | refit, no validation
+S01 seed44 F1 [refit] Ep 300/350 | tr 0.4520 | refit, no validation
+S01 seed44 F1 [refit] Ep 350/350 | tr 0.4396 | refit, no validation
+S01 seed44 F1: test 75.00% (val 61.11%, epochs 350)
+S01 seed ensemble (3 seeds): test 72.92% (single seeds 72.2, 68.8, 75.0)
+
+================================================================================
+SUBJECT 02 — full22 — 2class — session — profile original — 22 ch: Fz, FC3, FC1, FCz, FC2, FC4, C5, C3, C1, Cz, C2, C4, C6, CP3, CP1, CPz, CP2, CP4, P1, Pz, P2, POz
+================================================================================
+  S02 [2class] profile=original X=(288, 22, 1125) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S02 seed42 F1 [fit] Ep 001/350 | tr 0.7083 | val (current weights) 50.0%
+S02 seed42 F1 [fit] Ep 050/350 | tr 0.5169 | val (current weights) 50.0%
+S02 seed42 F1 [fit] Ep 100/350 | tr 0.5617 | val (current weights) 58.3%
+S02 seed42 F1 [fit] Ep 150/350 | tr 0.5015 | val (current weights) 55.6%
+S02 seed42 F1 [fit] Ep 200/350 | tr 0.4295 | val (current weights) 50.0%
+S02 seed42 F1 [fit] Ep 250/350 | tr 0.4393 | val (current weights) 50.0%
+S02 seed42 F1 [fit] Ep 300/350 | tr 0.4427 | val (current weights) 52.8%
+S02 seed42 F1 [fit] Ep 350/350 | tr 0.4532 | val (current weights) 52.8%
+S02 seed42 F1 [refit] Ep 001/350 | tr 0.7123 | refit, no validation
+S02 seed42 F1 [refit] Ep 050/350 | tr 0.5668 | refit, no validation
+S02 seed42 F1 [refit] Ep 100/350 | tr 0.5286 | refit, no validation
+S02 seed42 F1 [refit] Ep 150/350 | tr 0.4127 | refit, no validation
+S02 seed42 F1 [refit] Ep 200/350 | tr 0.4478 | refit, no validation
+S02 seed42 F1 [refit] Ep 250/350 | tr 0.4490 | refit, no validation
+S02 seed42 F1 [refit] Ep 300/350 | tr 0.4722 | refit, no validation
+S02 seed42 F1 [refit] Ep 350/350 | tr 0.3908 | refit, no validation
+S02 seed42 F1: test 56.25% (val 52.78%, epochs 350)
+S02 seed43 F1 [fit] Ep 001/350 | tr 0.7222 | val (current weights) 47.2%
+S02 seed43 F1 [fit] Ep 050/350 | tr 0.5180 | val (current weights) 44.4%
+S02 seed43 F1 [fit] Ep 100/350 | tr 0.5465 | val (current weights) 47.2%
+S02 seed43 F1 [fit] Ep 150/350 | tr 0.4418 | val (current weights) 50.0%
+S02 seed43 F1 [fit] Ep 200/350 | tr 0.4442 | val (current weights) 47.2%
+S02 seed43 F1 [fit] Ep 250/350 | tr 0.4244 | val (current weights) 50.0%
+S02 seed43 F1 [fit] Ep 300/350 | tr 0.4553 | val (current weights) 50.0%
+S02 seed43 F1 [fit] Ep 350/350 | tr 0.4434 | val (current weights) 50.0%
+S02 seed43 F1 [refit] Ep 001/350 | tr 0.7112 | refit, no validation
+S02 seed43 F1 [refit] Ep 050/350 | tr 0.5624 | refit, no validation
+S02 seed43 F1 [refit] Ep 100/350 | tr 0.4645 | refit, no validation
+S02 seed43 F1 [refit] Ep 150/350 | tr 0.4443 | refit, no validation
+S02 seed43 F1 [refit] Ep 200/350 | tr 0.4457 | refit, no validation
+S02 seed43 F1 [refit] Ep 250/350 | tr 0.5209 | refit, no validation
+S02 seed43 F1 [refit] Ep 300/350 | tr 0.4451 | refit, no validation
+S02 seed43 F1 [refit] Ep 350/350 | tr 0.4399 | refit, no validation
+S02 seed43 F1: test 54.17% (val 50.00%, epochs 350)
+S02 seed44 F1 [fit] Ep 001/350 | tr 0.7082 | val (current weights) 38.9%
+S02 seed44 F1 [fit] Ep 050/350 | tr 0.5519 | val (current weights) 41.7%
+S02 seed44 F1 [fit] Ep 100/350 | tr 0.4477 | val (current weights) 41.7%
+S02 seed44 F1 [fit] Ep 150/350 | tr 0.5967 | val (current weights) 44.4%
+S02 seed44 F1 [fit] Ep 200/350 | tr 0.4528 | val (current weights) 44.4%
+S02 seed44 F1 [fit] Ep 250/350 | tr 0.4452 | val (current weights) 44.4%
+S02 seed44 F1 [fit] Ep 300/350 | tr 0.4530 | val (current weights) 50.0%
+S02 seed44 F1 [fit] Ep 350/350 | tr 0.6239 | val (current weights) 50.0%
+S02 seed44 F1 [refit] Ep 001/350 | tr 0.7212 | refit, no validation
+S02 seed44 F1 [refit] Ep 050/350 | tr 0.5118 | refit, no validation
+S02 seed44 F1 [refit] Ep 100/350 | tr 0.4439 | refit, no validation
+S02 seed44 F1 [refit] Ep 150/350 | tr 0.6228 | refit, no validation
+S02 seed44 F1 [refit] Ep 200/350 | tr 0.4229 | refit, no validation
+S02 seed44 F1 [refit] Ep 250/350 | tr 0.5135 | refit, no validation
+S02 seed44 F1 [refit] Ep 300/350 | tr 0.4772 | refit, no validation
+S02 seed44 F1 [refit] Ep 350/350 | tr 0.4097 | refit, no validation
+S02 seed44 F1: test 55.56% (val 47.22%, epochs 350)
+S02 seed ensemble (3 seeds): test 55.56% (single seeds 56.2, 54.2, 55.6)
+
+================================================================================
+SUBJECT 03 — full22 — 2class — session — profile original — 22 ch: Fz, FC3, FC1, FCz, FC2, FC4, C5, C3, C1, Cz, C2, C4, C6, CP3, CP1, CPz, CP2, CP4, P1, Pz, P2, POz
+================================================================================
+  S03 [2class] profile=original X=(288, 22, 1125) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S03 seed42 F1 [fit] Ep 001/350 | tr 0.7228 | val (current weights) 52.8%
+S03 seed42 F1 [fit] Ep 050/350 | tr 0.5734 | val (current weights) 41.7%
+S03 seed42 F1 [fit] Ep 100/350 | tr 0.4900 | val (current weights) 41.7%
+S03 seed42 F1 [fit] Ep 150/350 | tr 0.4299 | val (current weights) 41.7%
+S03 seed42 F1 [fit] Ep 200/350 | tr 0.6155 | val (current weights) 41.7%
+S03 seed42 F1 [fit] Ep 250/350 | tr 0.3944 | val (current weights) 38.9%
+S03 seed42 F1 [fit] Ep 300/350 | tr 0.4038 | val (current weights) 38.9%
+S03 seed42 F1 [fit] Ep 350/350 | tr 0.5082 | val (current weights) 38.9%
+S03 seed42 F1 [refit] Ep 001/350 | tr 0.7183 | refit, no validation
+S03 seed42 F1 [refit] Ep 050/350 | tr 0.5003 | refit, no validation
+S03 seed42 F1 [refit] Ep 100/350 | tr 0.4824 | refit, no validation
+S03 seed42 F1 [refit] Ep 150/350 | tr 0.4024 | refit, no validation
+S03 seed42 F1 [refit] Ep 200/350 | tr 0.4646 | refit, no validation
+S03 seed42 F1 [refit] Ep 250/350 | tr 0.4470 | refit, no validation
+S03 seed42 F1 [refit] Ep 300/350 | tr 0.3811 | refit, no validation
+S03 seed42 F1 [refit] Ep 350/350 | tr 0.4550 | refit, no validation
+S03 seed42 F1: test 75.69% (val 38.89%, epochs 350)
+S03 seed43 F1 [fit] Ep 001/350 | tr 0.7344 | val (current weights) 41.7%
+S03 seed43 F1 [fit] Ep 050/350 | tr 0.4988 | val (current weights) 63.9%
+S03 seed43 F1 [fit] Ep 100/350 | tr 0.4589 | val (current weights) 63.9%
+S03 seed43 F1 [fit] Ep 150/350 | tr 0.4006 | val (current weights) 69.4%
+S03 seed43 F1 [fit] Ep 200/350 | tr 0.3990 | val (current weights) 66.7%
+S03 seed43 F1 [fit] Ep 250/350 | tr 0.5946 | val (current weights) 66.7%
+S03 seed43 F1 [fit] Ep 300/350 | tr 0.4434 | val (current weights) 72.2%
+S03 seed43 F1 [fit] Ep 350/350 | tr 0.3847 | val (current weights) 69.4%
+S03 seed43 F1 [refit] Ep 001/350 | tr 0.7072 | refit, no validation
+S03 seed43 F1 [refit] Ep 050/350 | tr 0.5649 | refit, no validation
+S03 seed43 F1 [refit] Ep 100/350 | tr 0.4193 | refit, no validation
+S03 seed43 F1 [refit] Ep 150/350 | tr 0.3799 | refit, no validation
+S03 seed43 F1 [refit] Ep 200/350 | tr 0.3854 | refit, no validation
+S03 seed43 F1 [refit] Ep 250/350 | tr 0.3891 | refit, no validation
+S03 seed43 F1 [refit] Ep 300/350 | tr 0.4744 | refit, no validation
+S03 seed43 F1 [refit] Ep 350/350 | tr 0.4010 | refit, no validation
+S03 seed43 F1: test 72.92% (val 66.67%, epochs 350)
+S03 seed44 F1 [fit] Ep 001/350 | tr 0.7164 | val (current weights) 44.4%
+S03 seed44 F1 [fit] Ep 050/350 | tr 0.5311 | val (current weights) 38.9%
+S03 seed44 F1 [fit] Ep 100/350 | tr 0.4559 | val (current weights) 55.6%
+S03 seed44 F1 [fit] Ep 150/350 | tr 0.5768 | val (current weights) 66.7%
+S03 seed44 F1 [fit] Ep 200/350 | tr 0.4126 | val (current weights) 72.2%
+S03 seed44 F1 [fit] Ep 250/350 | tr 0.4062 | val (current weights) 63.9%
+S03 seed44 F1 [fit] Ep 300/350 | tr 0.3827 | val (current weights) 66.7%
+S03 seed44 F1 [fit] Ep 350/350 | tr 0.3732 | val (current weights) 66.7%
+S03 seed44 F1 [refit] Ep 001/350 | tr 0.7248 | refit, no validation
+S03 seed44 F1 [refit] Ep 050/350 | tr 0.4750 | refit, no validation
+S03 seed44 F1 [refit] Ep 100/350 | tr 0.4003 | refit, no validation
+S03 seed44 F1 [refit] Ep 150/350 | tr 0.5161 | refit, no validation
+S03 seed44 F1 [refit] Ep 200/350 | tr 0.4163 | refit, no validation
+S03 seed44 F1 [refit] Ep 250/350 | tr 0.3811 | refit, no validation
+S03 seed44 F1 [refit] Ep 300/350 | tr 0.5065 | refit, no validation
+S03 seed44 F1 [refit] Ep 350/350 | tr 0.4205 | refit, no validation
+S03 seed44 F1: test 81.94% (val 66.67%, epochs 350)
+S03 seed ensemble (3 seeds): test 81.25% (single seeds 75.7, 72.9, 81.9)
+
+================================================================================
+SUBJECT 04 — full22 — 2class — session — profile cue_0_4 — 22 ch: Fz, FC3, FC1, FCz, FC2, FC4, C5, C3, C1, Cz, C2, C4, C6, CP3, CP1, CPz, CP2, CP4, P1, Pz, P2, POz
+================================================================================
+  S04 [2class] profile=cue_0_4 X=(288, 22, 1000) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S04 seed42 F1 [fit] Ep 001/350 | tr 0.7708 | val (current weights) 41.7%
+S04 seed42 F1 [fit] Ep 050/350 | tr 0.5833 | val (current weights) 55.6%
+S04 seed42 F1 [fit] Ep 100/350 | tr 0.4592 | val (current weights) 61.1%
+S04 seed42 F1 [fit] Ep 150/350 | tr 0.4008 | val (current weights) 63.9%
+S04 seed42 F1 [fit] Ep 200/350 | tr 0.4008 | val (current weights) 61.1%
+S04 seed42 F1 [fit] Ep 250/350 | tr 0.4168 | val (current weights) 61.1%
+S04 seed42 F1 [fit] Ep 300/350 | tr 0.4109 | val (current weights) 61.1%
+S04 seed42 F1 [fit] Ep 350/350 | tr 0.3912 | val (current weights) 61.1%
+S04 seed42 F1 [refit] Ep 001/350 | tr 0.7186 | refit, no validation
+S04 seed42 F1 [refit] Ep 050/350 | tr 0.5077 | refit, no validation
+S04 seed42 F1 [refit] Ep 100/350 | tr 0.4943 | refit, no validation
+S04 seed42 F1 [refit] Ep 150/350 | tr 0.4251 | refit, no validation
+S04 seed42 F1 [refit] Ep 200/350 | tr 0.3852 | refit, no validation
+S04 seed42 F1 [refit] Ep 250/350 | tr 0.3931 | refit, no validation
+S04 seed42 F1 [refit] Ep 300/350 | tr 0.3998 | refit, no validation
+S04 seed42 F1 [refit] Ep 350/350 | tr 0.4115 | refit, no validation
+S04 seed42 F1: test 65.28% (val 61.11%, epochs 350)
+S04 seed43 F1 [fit] Ep 001/350 | tr 0.7446 | val (current weights) 47.2%
+S04 seed43 F1 [fit] Ep 050/350 | tr 0.5978 | val (current weights) 58.3%
+S04 seed43 F1 [fit] Ep 100/350 | tr 0.5844 | val (current weights) 52.8%
+S04 seed43 F1 [fit] Ep 150/350 | tr 0.4698 | val (current weights) 61.1%
+S04 seed43 F1 [fit] Ep 200/350 | tr 0.4665 | val (current weights) 63.9%
+S04 seed43 F1 [fit] Ep 250/350 | tr 0.4112 | val (current weights) 63.9%
+S04 seed43 F1 [fit] Ep 300/350 | tr 0.4230 | val (current weights) 61.1%
+S04 seed43 F1 [fit] Ep 350/350 | tr 0.4148 | val (current weights) 63.9%
+S04 seed43 F1 [refit] Ep 001/350 | tr 0.7312 | refit, no validation
+S04 seed43 F1 [refit] Ep 050/350 | tr 0.5277 | refit, no validation
+S04 seed43 F1 [refit] Ep 100/350 | tr 0.4662 | refit, no validation
+S04 seed43 F1 [refit] Ep 150/350 | tr 0.4968 | refit, no validation
+S04 seed43 F1 [refit] Ep 200/350 | tr 0.4107 | refit, no validation
+S04 seed43 F1 [refit] Ep 250/350 | tr 0.3987 | refit, no validation
+S04 seed43 F1 [refit] Ep 300/350 | tr 0.4030 | refit, no validation
+S04 seed43 F1 [refit] Ep 350/350 | tr 0.3870 | refit, no validation
+S04 seed43 F1: test 72.22% (val 63.89%, epochs 350)
+S04 seed44 F1 [fit] Ep 001/350 | tr 0.7195 | val (current weights) 47.2%
+S04 seed44 F1 [fit] Ep 050/350 | tr 0.5289 | val (current weights) 50.0%
+S04 seed44 F1 [fit] Ep 100/350 | tr 0.4667 | val (current weights) 50.0%
+S04 seed44 F1 [fit] Ep 150/350 | tr 0.4679 | val (current weights) 66.7%
+S04 seed44 F1 [fit] Ep 200/350 | tr 0.5044 | val (current weights) 66.7%
+S04 seed44 F1 [fit] Ep 250/350 | tr 0.4445 | val (current weights) 69.4%
+S04 seed44 F1 [fit] Ep 300/350 | tr 0.6101 | val (current weights) 69.4%
+S04 seed44 F1 [fit] Ep 350/350 | tr 0.6449 | val (current weights) 69.4%
+S04 seed44 F1 [refit] Ep 001/350 | tr 0.6942 | refit, no validation
+S04 seed44 F1 [refit] Ep 050/350 | tr 0.5126 | refit, no validation
+S04 seed44 F1 [refit] Ep 100/350 | tr 0.4948 | refit, no validation
+S04 seed44 F1 [refit] Ep 150/350 | tr 0.4463 | refit, no validation
+S04 seed44 F1 [refit] Ep 200/350 | tr 0.4389 | refit, no validation
+S04 seed44 F1 [refit] Ep 250/350 | tr 0.3941 | refit, no validation
+S04 seed44 F1 [refit] Ep 300/350 | tr 0.5719 | refit, no validation
+S04 seed44 F1 [refit] Ep 350/350 | tr 0.3790 | refit, no validation
+S04 seed44 F1: test 70.83% (val 69.44%, epochs 350)
+S04 seed ensemble (3 seeds): test 70.83% (single seeds 65.3, 72.2, 70.8)
+
+================================================================================
+SUBJECT 05 — full22 — 2class — session — profile cue_0_4 — 22 ch: Fz, FC3, FC1, FCz, FC2, FC4, C5, C3, C1, Cz, C2, C4, C6, CP3, CP1, CPz, CP2, CP4, P1, Pz, P2, POz
+================================================================================
+  S05 [2class] profile=cue_0_4 X=(288, 22, 1000) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S05 seed42 F1 [fit] Ep 001/350 | tr 0.7097 | val (current weights) 55.6%
+S05 seed42 F1 [fit] Ep 050/350 | tr 0.5232 | val (current weights) 41.7%
+S05 seed42 F1 [fit] Ep 100/350 | tr 0.4711 | val (current weights) 38.9%
+S05 seed42 F1 [fit] Ep 150/350 | tr 0.4510 | val (current weights) 47.2%
+S05 seed42 F1 [fit] Ep 200/350 | tr 0.4278 | val (current weights) 50.0%
+S05 seed42 F1 [fit] Ep 250/350 | tr 0.4407 | val (current weights) 50.0%
+S05 seed42 F1 [fit] Ep 300/350 | tr 0.4338 | val (current weights) 52.8%
+S05 seed42 F1 [fit] Ep 350/350 | tr 0.4107 | val (current weights) 52.8%
+S05 seed42 F1 [refit] Ep 001/350 | tr 0.7211 | refit, no validation
+S05 seed42 F1 [refit] Ep 050/350 | tr 0.5090 | refit, no validation
+S05 seed42 F1 [refit] Ep 100/350 | tr 0.4594 | refit, no validation
+S05 seed42 F1 [refit] Ep 150/350 | tr 0.5001 | refit, no validation
+S05 seed42 F1 [refit] Ep 200/350 | tr 0.3874 | refit, no validation
+S05 seed42 F1 [refit] Ep 250/350 | tr 0.4972 | refit, no validation
+S05 seed42 F1 [refit] Ep 300/350 | tr 0.4790 | refit, no validation
+S05 seed42 F1 [refit] Ep 350/350 | tr 0.4626 | refit, no validation
+S05 seed42 F1: test 65.97% (val 50.00%, epochs 350)
+S05 seed43 F1 [fit] Ep 001/350 | tr 0.7537 | val (current weights) 50.0%
+S05 seed43 F1 [fit] Ep 050/350 | tr 0.4986 | val (current weights) 47.2%
+S05 seed43 F1 [fit] Ep 100/350 | tr 0.6089 | val (current weights) 44.4%
+S05 seed43 F1 [fit] Ep 150/350 | tr 0.4662 | val (current weights) 44.4%
+S05 seed43 F1 [fit] Ep 200/350 | tr 0.4278 | val (current weights) 50.0%
+S05 seed43 F1 [fit] Ep 250/350 | tr 0.4222 | val (current weights) 47.2%
+S05 seed43 F1 [fit] Ep 300/350 | tr 0.4845 | val (current weights) 50.0%
+S05 seed43 F1 [fit] Ep 350/350 | tr 0.4912 | val (current weights) 50.0%
+S05 seed43 F1 [refit] Ep 001/350 | tr 0.7058 | refit, no validation
+S05 seed43 F1 [refit] Ep 050/350 | tr 0.5603 | refit, no validation
+S05 seed43 F1 [refit] Ep 100/350 | tr 0.4692 | refit, no validation
+S05 seed43 F1 [refit] Ep 150/350 | tr 0.4122 | refit, no validation
+S05 seed43 F1 [refit] Ep 200/350 | tr 0.4868 | refit, no validation
+S05 seed43 F1 [refit] Ep 250/350 | tr 0.4302 | refit, no validation
+S05 seed43 F1 [refit] Ep 300/350 | tr 0.4603 | refit, no validation
+S05 seed43 F1 [refit] Ep 350/350 | tr 0.4680 | refit, no validation
+S05 seed43 F1: test 65.28% (val 50.00%, epochs 350)
+S05 seed44 F1 [fit] Ep 001/350 | tr 0.7141 | val (current weights) 58.3%
+S05 seed44 F1 [fit] Ep 050/350 | tr 0.5280 | val (current weights) 36.1%
+S05 seed44 F1 [fit] Ep 100/350 | tr 0.5050 | val (current weights) 58.3%
+S05 seed44 F1 [fit] Ep 150/350 | tr 0.4980 | val (current weights) 55.6%
+S05 seed44 F1 [fit] Ep 200/350 | tr 0.4158 | val (current weights) 61.1%
+S05 seed44 F1 [fit] Ep 250/350 | tr 0.4113 | val (current weights) 63.9%
+S05 seed44 F1 [fit] Ep 300/350 | tr 0.5801 | val (current weights) 61.1%
+S05 seed44 F1 [fit] Ep 350/350 | tr 0.4373 | val (current weights) 61.1%
+S05 seed44 F1 [refit] Ep 001/350 | tr 0.7242 | refit, no validation
+S05 seed44 F1 [refit] Ep 050/350 | tr 0.5566 | refit, no validation
+S05 seed44 F1 [refit] Ep 100/350 | tr 0.4547 | refit, no validation
+S05 seed44 F1 [refit] Ep 150/350 | tr 0.4484 | refit, no validation
+S05 seed44 F1 [refit] Ep 200/350 | tr 0.4358 | refit, no validation
+S05 seed44 F1 [refit] Ep 250/350 | tr 0.4208 | refit, no validation
+S05 seed44 F1 [refit] Ep 300/350 | tr 0.4327 | refit, no validation
+S05 seed44 F1 [refit] Ep 350/350 | tr 0.4844 | refit, no validation
+S05 seed44 F1: test 53.47% (val 63.89%, epochs 350)
+S05 seed ensemble (3 seeds): test 63.19% (single seeds 66.0, 65.3, 53.5)
+
+================================================================================
+SUBJECT 06 — full22 — 2class — session — profile original — 22 ch: Fz, FC3, FC1, FCz, FC2, FC4, C5, C3, C1, Cz, C2, C4, C6, CP3, CP1, CPz, CP2, CP4, P1, Pz, P2, POz
+================================================================================
+  S06 [2class] profile=original X=(288, 22, 1125) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S06 seed42 F1 [fit] Ep 001/350 | tr 0.7133 | val (current weights) 69.4%
+S06 seed42 F1 [fit] Ep 050/350 | tr 0.5162 | val (current weights) 66.7%
+S06 seed42 F1 [fit] Ep 100/350 | tr 0.4655 | val (current weights) 55.6%
+S06 seed42 F1 [fit] Ep 150/350 | tr 0.5421 | val (current weights) 58.3%
+S06 seed42 F1 [fit] Ep 200/350 | tr 0.4064 | val (current weights) 58.3%
+S06 seed42 F1 [fit] Ep 250/350 | tr 0.4516 | val (current weights) 55.6%
+S06 seed42 F1 [fit] Ep 300/350 | tr 0.4023 | val (current weights) 55.6%
+S06 seed42 F1 [fit] Ep 350/350 | tr 0.4242 | val (current weights) 52.8%
+S06 seed42 F1 [refit] Ep 001/350 | tr 0.7027 | refit, no validation
+S06 seed42 F1 [refit] Ep 050/350 | tr 0.4798 | refit, no validation
+S06 seed42 F1 [refit] Ep 100/350 | tr 0.4542 | refit, no validation
+S06 seed42 F1 [refit] Ep 150/350 | tr 0.3975 | refit, no validation
+S06 seed42 F1 [refit] Ep 200/350 | tr 0.4459 | refit, no validation
+S06 seed42 F1 [refit] Ep 250/350 | tr 0.4403 | refit, no validation
+S06 seed42 F1 [refit] Ep 300/350 | tr 0.4110 | refit, no validation
+S06 seed42 F1 [refit] Ep 350/350 | tr 0.4332 | refit, no validation
+S06 seed42 F1: test 60.42% (val 55.56%, epochs 350)
+S06 seed43 F1 [fit] Ep 001/350 | tr 0.7203 | val (current weights) 50.0%
+S06 seed43 F1 [fit] Ep 050/350 | tr 0.5001 | val (current weights) 52.8%
+S06 seed43 F1 [fit] Ep 100/350 | tr 0.4219 | val (current weights) 47.2%
+S06 seed43 F1 [fit] Ep 150/350 | tr 0.4383 | val (current weights) 47.2%
+S06 seed43 F1 [fit] Ep 200/350 | tr 0.4081 | val (current weights) 44.4%
+S06 seed43 F1 [fit] Ep 250/350 | tr 0.4267 | val (current weights) 44.4%
+S06 seed43 F1 [fit] Ep 300/350 | tr 0.3943 | val (current weights) 44.4%
+S06 seed43 F1 [fit] Ep 350/350 | tr 0.4358 | val (current weights) 44.4%
+S06 seed43 F1 [refit] Ep 001/350 | tr 0.7113 | refit, no validation
+S06 seed43 F1 [refit] Ep 050/350 | tr 0.4887 | refit, no validation
+S06 seed43 F1 [refit] Ep 100/350 | tr 0.4329 | refit, no validation
+S06 seed43 F1 [refit] Ep 150/350 | tr 0.4043 | refit, no validation
+S06 seed43 F1 [refit] Ep 200/350 | tr 0.4052 | refit, no validation
+S06 seed43 F1 [refit] Ep 250/350 | tr 0.4616 | refit, no validation
+S06 seed43 F1 [refit] Ep 300/350 | tr 0.3759 | refit, no validation
+S06 seed43 F1 [refit] Ep 350/350 | tr 0.4015 | refit, no validation
+S06 seed43 F1: test 60.42% (val 44.44%, epochs 350)
+S06 seed44 F1 [fit] Ep 001/350 | tr 0.7444 | val (current weights) 50.0%
+S06 seed44 F1 [fit] Ep 050/350 | tr 0.4776 | val (current weights) 52.8%
+S06 seed44 F1 [fit] Ep 100/350 | tr 0.4844 | val (current weights) 55.6%
+S06 seed44 F1 [fit] Ep 150/350 | tr 0.3845 | val (current weights) 52.8%
+S06 seed44 F1 [fit] Ep 200/350 | tr 0.3992 | val (current weights) 55.6%
+S06 seed44 F1 [fit] Ep 250/350 | tr 0.4096 | val (current weights) 52.8%
+S06 seed44 F1 [fit] Ep 300/350 | tr 0.5252 | val (current weights) 50.0%
+S06 seed44 F1 [fit] Ep 350/350 | tr 0.5239 | val (current weights) 52.8%
+S06 seed44 F1 [refit] Ep 001/350 | tr 0.7359 | refit, no validation
+S06 seed44 F1 [refit] Ep 050/350 | tr 0.4820 | refit, no validation
+S06 seed44 F1 [refit] Ep 100/350 | tr 0.4301 | refit, no validation
+S06 seed44 F1 [refit] Ep 150/350 | tr 0.5027 | refit, no validation
+S06 seed44 F1 [refit] Ep 200/350 | tr 0.4887 | refit, no validation
+S06 seed44 F1 [refit] Ep 250/350 | tr 0.3825 | refit, no validation
+S06 seed44 F1 [refit] Ep 300/350 | tr 0.4446 | refit, no validation
+S06 seed44 F1 [refit] Ep 350/350 | tr 0.4051 | refit, no validation
+S06 seed44 F1: test 59.03% (val 52.78%, epochs 350)
+S06 seed ensemble (3 seeds): test 61.11% (single seeds 60.4, 60.4, 59.0)
+
+================================================================================
+SUBJECT 07 — full22 — 2class — session — profile original — 22 ch: Fz, FC3, FC1, FCz, FC2, FC4, C5, C3, C1, Cz, C2, C4, C6, CP3, CP1, CPz, CP2, CP4, P1, Pz, P2, POz
+================================================================================
+  S07 [2class] profile=original X=(288, 22, 1125) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S07 seed42 F1 [fit] Ep 001/350 | tr 0.7162 | val (current weights) 61.1%
+S07 seed42 F1 [fit] Ep 050/350 | tr 0.4901 | val (current weights) 69.4%
+S07 seed42 F1 [fit] Ep 100/350 | tr 0.4694 | val (current weights) 69.4%
+S07 seed42 F1 [fit] Ep 150/350 | tr 0.4755 | val (current weights) 75.0%
+S07 seed42 F1 [fit] Ep 200/350 | tr 0.3867 | val (current weights) 63.9%
+S07 seed42 F1 [fit] Ep 250/350 | tr 0.5368 | val (current weights) 61.1%
+S07 seed42 F1 [fit] Ep 300/350 | tr 0.4099 | val (current weights) 66.7%
+S07 seed42 F1 [fit] Ep 350/350 | tr 0.4156 | val (current weights) 66.7%
+S07 seed42 F1 [refit] Ep 001/350 | tr 0.7466 | refit, no validation
+S07 seed42 F1 [refit] Ep 050/350 | tr 0.4766 | refit, no validation
+S07 seed42 F1 [refit] Ep 100/350 | tr 0.4277 | refit, no validation
+S07 seed42 F1 [refit] Ep 150/350 | tr 0.4186 | refit, no validation
+S07 seed42 F1 [refit] Ep 200/350 | tr 0.3743 | refit, no validation
+S07 seed42 F1 [refit] Ep 250/350 | tr 0.4040 | refit, no validation
+S07 seed42 F1 [refit] Ep 300/350 | tr 0.5068 | refit, no validation
+S07 seed42 F1 [refit] Ep 350/350 | tr 0.3866 | refit, no validation
+S07 seed42 F1: test 68.75% (val 66.67%, epochs 350)
+S07 seed43 F1 [fit] Ep 001/350 | tr 0.6667 | val (current weights) 41.7%
+S07 seed43 F1 [fit] Ep 050/350 | tr 0.5897 | val (current weights) 55.6%
+S07 seed43 F1 [fit] Ep 100/350 | tr 0.4689 | val (current weights) 58.3%
+S07 seed43 F1 [fit] Ep 150/350 | tr 0.4188 | val (current weights) 58.3%
+S07 seed43 F1 [fit] Ep 200/350 | tr 0.4017 | val (current weights) 55.6%
+S07 seed43 F1 [fit] Ep 250/350 | tr 0.5550 | val (current weights) 55.6%
+S07 seed43 F1 [fit] Ep 300/350 | tr 0.4993 | val (current weights) 55.6%
+S07 seed43 F1 [fit] Ep 350/350 | tr 0.3827 | val (current weights) 55.6%
+S07 seed43 F1 [refit] Ep 001/350 | tr 0.7249 | refit, no validation
+S07 seed43 F1 [refit] Ep 050/350 | tr 0.4878 | refit, no validation
+S07 seed43 F1 [refit] Ep 100/350 | tr 0.4279 | refit, no validation
+S07 seed43 F1 [refit] Ep 150/350 | tr 0.4891 | refit, no validation
+S07 seed43 F1 [refit] Ep 200/350 | tr 0.4278 | refit, no validation
+S07 seed43 F1 [refit] Ep 250/350 | tr 0.3765 | refit, no validation
+S07 seed43 F1 [refit] Ep 300/350 | tr 0.4476 | refit, no validation
+S07 seed43 F1 [refit] Ep 350/350 | tr 0.4734 | refit, no validation
+S07 seed43 F1: test 65.28% (val 55.56%, epochs 350)
+S07 seed44 F1 [fit] Ep 001/350 | tr 0.7007 | val (current weights) 50.0%
+S07 seed44 F1 [fit] Ep 050/350 | tr 0.6156 | val (current weights) 66.7%
+S07 seed44 F1 [fit] Ep 100/350 | tr 0.4770 | val (current weights) 72.2%
+S07 seed44 F1 [fit] Ep 150/350 | tr 0.4255 | val (current weights) 72.2%
+S07 seed44 F1 [fit] Ep 200/350 | tr 0.4168 | val (current weights) 66.7%
+S07 seed44 F1 [fit] Ep 250/350 | tr 0.3968 | val (current weights) 63.9%
+S07 seed44 F1 [fit] Ep 300/350 | tr 0.4059 | val (current weights) 63.9%
+S07 seed44 F1 [fit] Ep 350/350 | tr 0.4228 | val (current weights) 63.9%
+S07 seed44 F1 [refit] Ep 001/350 | tr 0.7577 | refit, no validation
+S07 seed44 F1 [refit] Ep 050/350 | tr 0.4855 | refit, no validation
+S07 seed44 F1 [refit] Ep 100/350 | tr 0.4337 | refit, no validation
+S07 seed44 F1 [refit] Ep 150/350 | tr 0.4697 | refit, no validation
+S07 seed44 F1 [refit] Ep 200/350 | tr 0.4175 | refit, no validation
+S07 seed44 F1 [refit] Ep 250/350 | tr 0.4043 | refit, no validation
+S07 seed44 F1 [refit] Ep 300/350 | tr 0.4064 | refit, no validation
+S07 seed44 F1 [refit] Ep 350/350 | tr 0.3816 | refit, no validation
+S07 seed44 F1: test 67.36% (val 63.89%, epochs 350)
+S07 seed ensemble (3 seeds): test 69.44% (single seeds 68.8, 65.3, 67.4)
+
+================================================================================
+SUBJECT 08 — full22 — 2class — session — profile cue_0_4 — 22 ch: Fz, FC3, FC1, FCz, FC2, FC4, C5, C3, C1, Cz, C2, C4, C6, CP3, CP1, CPz, CP2, CP4, P1, Pz, P2, POz
+================================================================================
+  S08 [2class] profile=cue_0_4 X=(288, 22, 1000) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S08 seed42 F1 [fit] Ep 001/350 | tr 0.7341 | val (current weights) 41.7%
+S08 seed42 F1 [fit] Ep 050/350 | tr 0.5287 | val (current weights) 55.6%
+S08 seed42 F1 [fit] Ep 100/350 | tr 0.6145 | val (current weights) 75.0%
+S08 seed42 F1 [fit] Ep 150/350 | tr 0.3848 | val (current weights) 77.8%
+S08 seed42 F1 [fit] Ep 200/350 | tr 0.3746 | val (current weights) 77.8%
+S08 seed42 F1 [fit] Ep 250/350 | tr 0.3689 | val (current weights) 77.8%
+S08 seed42 F1 [fit] Ep 300/350 | tr 0.4742 | val (current weights) 75.0%
+S08 seed42 F1 [fit] Ep 350/350 | tr 0.3970 | val (current weights) 75.0%
+S08 seed42 F1 [refit] Ep 001/350 | tr 0.6940 | refit, no validation
+S08 seed42 F1 [refit] Ep 050/350 | tr 0.5422 | refit, no validation
+S08 seed42 F1 [refit] Ep 100/350 | tr 0.3992 | refit, no validation
+S08 seed42 F1 [refit] Ep 150/350 | tr 0.3968 | refit, no validation
+S08 seed42 F1 [refit] Ep 200/350 | tr 0.3742 | refit, no validation
+S08 seed42 F1 [refit] Ep 250/350 | tr 0.3804 | refit, no validation
+S08 seed42 F1 [refit] Ep 300/350 | tr 0.3943 | refit, no validation
+S08 seed42 F1 [refit] Ep 350/350 | tr 0.3985 | refit, no validation
+S08 seed42 F1: test 85.42% (val 75.00%, epochs 350)
+S08 seed43 F1 [fit] Ep 001/350 | tr 0.6926 | val (current weights) 44.4%
+S08 seed43 F1 [fit] Ep 050/350 | tr 0.5464 | val (current weights) 52.8%
+S08 seed43 F1 [fit] Ep 100/350 | tr 0.4207 | val (current weights) 55.6%
+S08 seed43 F1 [fit] Ep 150/350 | tr 0.4279 | val (current weights) 66.7%
+S08 seed43 F1 [fit] Ep 200/350 | tr 0.4635 | val (current weights) 69.4%
+S08 seed43 F1 [fit] Ep 250/350 | tr 0.3799 | val (current weights) 69.4%
+S08 seed43 F1 [fit] Ep 300/350 | tr 0.5739 | val (current weights) 66.7%
+S08 seed43 F1 [fit] Ep 350/350 | tr 0.3888 | val (current weights) 69.4%
+S08 seed43 F1 [refit] Ep 001/350 | tr 0.7297 | refit, no validation
+S08 seed43 F1 [refit] Ep 050/350 | tr 0.6191 | refit, no validation
+S08 seed43 F1 [refit] Ep 100/350 | tr 0.4167 | refit, no validation
+S08 seed43 F1 [refit] Ep 150/350 | tr 0.3816 | refit, no validation
+S08 seed43 F1 [refit] Ep 200/350 | tr 0.4694 | refit, no validation
+S08 seed43 F1 [refit] Ep 250/350 | tr 0.4692 | refit, no validation
+S08 seed43 F1 [refit] Ep 300/350 | tr 0.3924 | refit, no validation
+S08 seed43 F1 [refit] Ep 350/350 | tr 0.4718 | refit, no validation
+S08 seed43 F1: test 81.94% (val 69.44%, epochs 350)
+S08 seed44 F1 [fit] Ep 001/350 | tr 0.7067 | val (current weights) 52.8%
+S08 seed44 F1 [fit] Ep 050/350 | tr 0.5380 | val (current weights) 61.1%
+S08 seed44 F1 [fit] Ep 100/350 | tr 0.4901 | val (current weights) 58.3%
+S08 seed44 F1 [fit] Ep 150/350 | tr 0.4410 | val (current weights) 61.1%
+S08 seed44 F1 [fit] Ep 200/350 | tr 0.4193 | val (current weights) 61.1%
+S08 seed44 F1 [fit] Ep 250/350 | tr 0.4006 | val (current weights) 63.9%
+S08 seed44 F1 [fit] Ep 300/350 | tr 0.3964 | val (current weights) 63.9%
+S08 seed44 F1 [fit] Ep 350/350 | tr 0.4903 | val (current weights) 66.7%
+S08 seed44 F1 [refit] Ep 001/350 | tr 0.7247 | refit, no validation
+S08 seed44 F1 [refit] Ep 050/350 | tr 0.5229 | refit, no validation
+S08 seed44 F1 [refit] Ep 100/350 | tr 0.4700 | refit, no validation
+S08 seed44 F1 [refit] Ep 150/350 | tr 0.4978 | refit, no validation
+S08 seed44 F1 [refit] Ep 200/350 | tr 0.3793 | refit, no validation
+S08 seed44 F1 [refit] Ep 250/350 | tr 0.5670 | refit, no validation
+S08 seed44 F1 [refit] Ep 300/350 | tr 0.4117 | refit, no validation
+S08 seed44 F1 [refit] Ep 350/350 | tr 0.4219 | refit, no validation
+S08 seed44 F1: test 80.56% (val 63.89%, epochs 350)
+S08 seed ensemble (3 seeds): test 84.72% (single seeds 85.4, 81.9, 80.6)
+
+================================================================================
+SUBJECT 09 — full22 — 2class — session — profile original — 22 ch: Fz, FC3, FC1, FCz, FC2, FC4, C5, C3, C1, Cz, C2, C4, C6, CP3, CP1, CPz, CP2, CP4, P1, Pz, P2, POz
+================================================================================
+  S09 [2class] profile=original X=(288, 22, 1125) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S09 seed42 F1 [fit] Ep 001/350 | tr 0.6947 | val (current weights) 50.0%
+S09 seed42 F1 [fit] Ep 050/350 | tr 0.5843 | val (current weights) 58.3%
+S09 seed42 F1 [fit] Ep 100/350 | tr 0.5555 | val (current weights) 75.0%
+S09 seed42 F1 [fit] Ep 150/350 | tr 0.3876 | val (current weights) 80.6%
+S09 seed42 F1 [fit] Ep 200/350 | tr 0.3680 | val (current weights) 77.8%
+S09 seed42 F1 [fit] Ep 250/350 | tr 0.4002 | val (current weights) 83.3%
+S09 seed42 F1 [fit] Ep 300/350 | tr 0.5602 | val (current weights) 80.6%
+S09 seed42 F1 [fit] Ep 350/350 | tr 0.3725 | val (current weights) 83.3%
+S09 seed42 F1 [refit] Ep 001/350 | tr 0.7089 | refit, no validation
+S09 seed42 F1 [refit] Ep 050/350 | tr 0.4515 | refit, no validation
+S09 seed42 F1 [refit] Ep 100/350 | tr 0.4288 | refit, no validation
+S09 seed42 F1 [refit] Ep 150/350 | tr 0.4293 | refit, no validation
+S09 seed42 F1 [refit] Ep 200/350 | tr 0.4067 | refit, no validation
+S09 seed42 F1 [refit] Ep 250/350 | tr 0.4555 | refit, no validation
+S09 seed42 F1 [refit] Ep 300/350 | tr 0.3908 | refit, no validation
+S09 seed42 F1 [refit] Ep 350/350 | tr 0.3730 | refit, no validation
+S09 seed42 F1: test 86.11% (val 83.33%, epochs 350)
+S09 seed43 F1 [fit] Ep 001/350 | tr 0.7113 | val (current weights) 50.0%
+S09 seed43 F1 [fit] Ep 050/350 | tr 0.5216 | val (current weights) 61.1%
+S09 seed43 F1 [fit] Ep 100/350 | tr 0.4158 | val (current weights) 61.1%
+S09 seed43 F1 [fit] Ep 150/350 | tr 0.6210 | val (current weights) 61.1%
+S09 seed43 F1 [fit] Ep 200/350 | tr 0.5711 | val (current weights) 66.7%
+S09 seed43 F1 [fit] Ep 250/350 | tr 0.4104 | val (current weights) 66.7%
+S09 seed43 F1 [fit] Ep 300/350 | tr 0.3971 | val (current weights) 66.7%
+S09 seed43 F1 [fit] Ep 350/350 | tr 0.3709 | val (current weights) 66.7%
+S09 seed43 F1 [refit] Ep 001/350 | tr 0.7234 | refit, no validation
+S09 seed43 F1 [refit] Ep 050/350 | tr 0.4947 | refit, no validation
+S09 seed43 F1 [refit] Ep 100/350 | tr 0.5728 | refit, no validation
+S09 seed43 F1 [refit] Ep 150/350 | tr 0.4249 | refit, no validation
+S09 seed43 F1 [refit] Ep 200/350 | tr 0.4221 | refit, no validation
+S09 seed43 F1 [refit] Ep 250/350 | tr 0.4719 | refit, no validation
+S09 seed43 F1 [refit] Ep 300/350 | tr 0.4200 | refit, no validation
+S09 seed43 F1 [refit] Ep 350/350 | tr 0.4174 | refit, no validation
+S09 seed43 F1: test 61.81% (val 66.67%, epochs 350)
+S09 seed44 F1 [fit] Ep 001/350 | tr 0.7443 | val (current weights) 58.3%
+S09 seed44 F1 [fit] Ep 050/350 | tr 0.5191 | val (current weights) 69.4%
+S09 seed44 F1 [fit] Ep 100/350 | tr 0.4142 | val (current weights) 72.2%
+S09 seed44 F1 [fit] Ep 150/350 | tr 0.3886 | val (current weights) 75.0%
+S09 seed44 F1 [fit] Ep 200/350 | tr 0.3656 | val (current weights) 80.6%
+S09 seed44 F1 [fit] Ep 250/350 | tr 0.3943 | val (current weights) 77.8%
+S09 seed44 F1 [fit] Ep 300/350 | tr 0.4311 | val (current weights) 80.6%
+S09 seed44 F1 [fit] Ep 350/350 | tr 0.4288 | val (current weights) 80.6%
+S09 seed44 F1 [refit] Ep 001/350 | tr 0.7175 | refit, no validation
+S09 seed44 F1 [refit] Ep 050/350 | tr 0.5476 | refit, no validation
+S09 seed44 F1 [refit] Ep 100/350 | tr 0.3952 | refit, no validation
+S09 seed44 F1 [refit] Ep 150/350 | tr 0.4081 | refit, no validation
+S09 seed44 F1 [refit] Ep 200/350 | tr 0.3683 | refit, no validation
+S09 seed44 F1 [refit] Ep 250/350 | tr 0.3808 | refit, no validation
+S09 seed44 F1 [refit] Ep 300/350 | tr 0.3818 | refit, no validation
+S09 seed44 F1 [refit] Ep 350/350 | tr 0.3851 | refit, no validation
+S09 seed44 F1: test 78.47% (val 75.00%, epochs 350)
+S09 seed ensemble (3 seeds): test 80.56% (single seeds 86.1, 61.8, 78.5)
+Results written to D:\EEG\NeuroGrounded-EEG\EEGItNet\BNCI_001\2class\results_session\full22 (grand mean 71.06% over 9 subjects; chance 50.0%, majority 50.0%)
+Report saved: D:\EEG\NeuroGrounded-EEG\EEGItNet\BNCI_001\2class\results_session\full22\full22_report.txt
+
+Saliency-ERD correlations (Pearson). orig_* = as in the original scripts; the last three are the sign-invariant metrics used in the paper.
+subj               method          ERD_L          ERD_R         ERD_LR       ERD_comb        vs_grad      magnitude class_specific lateralisation
+S01                 grad         -0.244         +0.182         -0.314         -0.037         +1.000         +0.076         +0.023         -0.295
+S01         grad_x_input         -0.179         +0.225         -0.299         +0.036         +0.996         +0.004         -0.027         -0.123
+S01 integrated_gradients         -0.225         +0.173         -0.293         -0.031         +0.989         +0.069         +0.020         -0.243
+S01           smoothgrad         -0.243         +0.181         -0.312         -0.037         +1.000         +0.076         +0.023         -0.310
+S02                 grad         -0.091         -0.255         +0.074         -0.202         +1.000         -0.202         +0.178         +0.128
+S02         grad_x_input         -0.232         -0.264         -0.049         -0.316         +0.978         -0.316         +0.270         +0.366
+S02 integrated_gradients         -0.239         -0.250         -0.063         -0.313         +0.979         -0.313         +0.260         +0.298
+S02           smoothgrad         -0.096         -0.255         +0.069         -0.206         +1.000         -0.206         +0.180         +0.127
+S03                 grad         -0.215         -0.155         +0.018         -0.196         +1.000         +0.029         +0.176         -0.324
+S03         grad_x_input         -0.301         -0.205         +0.009         -0.267         +0.986         -0.052         +0.217         -0.680
+S03 integrated_gradients         -0.307         -0.332         +0.170         -0.353         +0.907         -0.001         +0.286         -0.674
+S03           smoothgrad         -0.198         -0.134         +0.004         -0.175         +0.996         +0.019         +0.158         -0.332
+S04                 grad         -0.061         -0.257         +0.184         -0.201         +1.000         -0.243         +0.160         +0.036
+S04         grad_x_input         +0.008         -0.223         +0.209         -0.139         +0.995         -0.193         +0.101         -0.373
+S04 integrated_gradients         +0.049         -0.212         +0.233         -0.108         +0.987         -0.175         +0.077         -0.414
+S04           smoothgrad         -0.062         -0.257         +0.183         -0.201         +1.000         -0.243         +0.160         +0.043
+S05                 grad         +0.036         +0.244         -0.225         +0.215         +1.000         +0.106         -0.129         +0.376
+S05         grad_x_input         +0.003         +0.289         -0.286         +0.238         +0.995         +0.167         -0.122         +0.571
+S05 integrated_gradients         -0.029         +0.272         -0.285         +0.212         +0.987         +0.189         -0.106         +0.483
+S05           smoothgrad         +0.036         +0.244         -0.225         +0.215         +1.000         +0.106         -0.130         +0.372
+S06                 grad         -0.163         -0.034         -0.194         -0.102         +1.000         -0.124         +0.092         -0.246
+S06         grad_x_input         -0.239         -0.150         -0.122         -0.204         +0.990         -0.230         +0.179         +0.247
+S06 integrated_gradients         -0.250         -0.147         -0.145         -0.208         +0.990         -0.230         +0.183         +0.291
+S06           smoothgrad         -0.161         -0.033         -0.191         -0.101         +1.000         -0.122         +0.091         -0.236
+S07                 grad         -0.163         -0.355         +0.178         -0.256         +1.000         +0.253         +0.264         +0.164
+S07         grad_x_input         -0.115         -0.292         +0.181         -0.199         +0.993         +0.195         +0.197         -0.455
+S07 integrated_gradients         -0.154         -0.313         +0.140         -0.232         +0.981         +0.229         +0.217         -0.529
+S07           smoothgrad         -0.162         -0.354         +0.180         -0.255         +1.000         +0.252         +0.262         +0.146
+S08                 grad         -0.321         -0.170         -0.306         -0.257         +1.000         +0.330         +0.245         +0.432
+S08         grad_x_input         -0.243         -0.092         -0.298         -0.176         +0.996         +0.251         +0.167         +0.109
+S08 integrated_gradients         -0.280         -0.071         -0.407         -0.185         +0.980         +0.281         +0.174         -0.000
+S08           smoothgrad         -0.322         -0.172         -0.305         -0.259         +1.000         +0.331         +0.247         +0.424
+S09                 grad         -0.426         -0.106         -0.513         -0.343         +1.000         +0.346         +0.260         -0.115
+S09         grad_x_input         -0.399         -0.061         -0.506         -0.308         +0.995         +0.311         +0.224         -0.157
+S09 integrated_gradients         -0.307         -0.015         -0.410         -0.226         +0.954         +0.229         +0.152         -0.145
+S09           smoothgrad         -0.427         -0.106         -0.514         -0.344         +1.000         +0.347         +0.261         -0.113
+Fisher-z mean over subjects:
+mean                 grad         -0.187         -0.103         -0.130         -0.155         +1.000         +0.066         +0.143         +0.020
+mean         grad_x_input         -0.192         -0.087         -0.136         -0.151         +0.993         +0.015         +0.136         -0.066
+mean integrated_gradients         -0.196         -0.102         -0.124         -0.163         +0.979         +0.031         +0.142         -0.122
+mean           smoothgrad         -0.185         -0.101         -0.131         -0.154         +1.000         +0.065         +0.141         +0.016
+
+EXPLORATORY physiology correlations (mean4 saliency, Pearson, Fisher mean over subjects):
+  ERD_theta_L                  r = -0.174 [-0.317, -0.023]
+  ERD_theta_R                  r = -0.129 [-0.226, -0.030]
+  ERD_theta_mag                r = +0.125 [+0.002, +0.244]
+  ERD_mu_L                     r = -0.168 [-0.330, +0.003]
+  ERD_mu_R                     r = -0.086 [-0.252, +0.085]
+  ERD_mu_mag                   r = +0.116 [-0.069, +0.293]
+  ERD_beta_L                   r = -0.102 [-0.246, +0.047]
+  ERD_beta_R                   r = -0.028 [-0.217, +0.163]
+  ERD_beta_mag                 r = +0.055 [-0.087, +0.193]
+  ERS_beta_rebound_L           r = -0.136 [-0.230, -0.040]
+  ERS_beta_rebound_R           r = -0.030 [-0.229, +0.172]
+  ERS_beta_rebound_mag         r = -0.108 [-0.292, +0.084]
+  ERD_lowgamma_L               r = -0.033 [-0.184, +0.120]
+  ERD_lowgamma_R               r = -0.053 [-0.218, +0.115]
+  ERD_lowgamma_mag             r = +0.034 [-0.130, +0.196]
+  logpow_8_30                  r = -0.101 [-0.183, -0.017]
+  r2_signed                    r = +0.118 [-0.127, +0.349]
+  r2_abs                       r = +0.187 [-0.009, +0.369]
+  TFR_ERD_dB_L                 r = -0.165 [-0.288, -0.037]
+  TFR_ERD_dB_R                 r = -0.070 [-0.251, +0.116]
+  TFR_ERD_dB_mag               r = +0.066 [-0.144, +0.269]
+  ITC_4_30                     r = -0.054 [-0.248, +0.145]
+  ERP_abs_0.2_0.8              r = -0.068 [-0.228, +0.096]
+  SlowPot_0.5_3                r = -0.166 [-0.303, -0.021]
+
+================================================================================
+SUBJECT 01 — saliency_reduced — 2class — session — profile cue_0_4 — 12 ch: C4, CP4, C5, Fz, CPz, P2, CP3, CP2, CP1, FC3, FC1, P1
+================================================================================
+  S01 [2class] profile=cue_0_4 X=(288, 12, 1000) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S01 seed42 F1 [refit] Ep 001/350 | tr 0.7209 | refit, no validation
+S01 seed42 F1 [refit] Ep 050/350 | tr 0.5121 | refit, no validation
+S01 seed42 F1 [refit] Ep 100/350 | tr 0.4717 | refit, no validation
+S01 seed42 F1 [refit] Ep 150/350 | tr 0.4440 | refit, no validation
+S01 seed42 F1 [refit] Ep 200/350 | tr 0.4453 | refit, no validation
+S01 seed42 F1 [refit] Ep 250/350 | tr 0.4477 | refit, no validation
+S01 seed42 F1 [refit] Ep 300/350 | tr 0.4377 | refit, no validation
+S01 seed42 F1 [refit] Ep 350/350 | tr 0.4020 | refit, no validation
+S01 seed42 F1: test 69.44% (val nan%, epochs 350)
+S01 seed43 F1 [refit] Ep 001/350 | tr 0.7322 | refit, no validation
+S01 seed43 F1 [refit] Ep 050/350 | tr 0.6591 | refit, no validation
+S01 seed43 F1 [refit] Ep 100/350 | tr 0.4488 | refit, no validation
+S01 seed43 F1 [refit] Ep 150/350 | tr 0.4107 | refit, no validation
+S01 seed43 F1 [refit] Ep 200/350 | tr 0.4590 | refit, no validation
+S01 seed43 F1 [refit] Ep 250/350 | tr 0.3905 | refit, no validation
+S01 seed43 F1 [refit] Ep 300/350 | tr 0.4322 | refit, no validation
+S01 seed43 F1 [refit] Ep 350/350 | tr 0.4201 | refit, no validation
+S01 seed43 F1: test 77.08% (val nan%, epochs 350)
+S01 seed44 F1 [refit] Ep 001/350 | tr 0.7066 | refit, no validation
+S01 seed44 F1 [refit] Ep 050/350 | tr 0.5157 | refit, no validation
+S01 seed44 F1 [refit] Ep 100/350 | tr 0.4256 | refit, no validation
+S01 seed44 F1 [refit] Ep 150/350 | tr 0.5002 | refit, no validation
+S01 seed44 F1 [refit] Ep 200/350 | tr 0.4482 | refit, no validation
+S01 seed44 F1 [refit] Ep 250/350 | tr 0.4617 | refit, no validation
+S01 seed44 F1 [refit] Ep 300/350 | tr 0.4631 | refit, no validation
+S01 seed44 F1 [refit] Ep 350/350 | tr 0.4586 | refit, no validation
+S01 seed44 F1: test 71.53% (val nan%, epochs 350)
+D:\EEG\NeuroGrounded-EEG\EEGItNet\BNCI_001\eegitnet_bnci_common.py:870: RuntimeWarning: Mean of empty slice
+  "val_acc": float(np.nanmean([r["val_acc"] for r in seed_recs])) if seed_recs else float("nan"),
+S01 seed ensemble (3 seeds): test 72.22% (single seeds 69.4, 77.1, 71.5)
+
+================================================================================
+SUBJECT 02 — saliency_reduced — 2class — session — profile original — 12 ch: CP4, P2, C5, Fz, FC3, CPz, C4, CP2, P1, CP3, CP1, FC1
+================================================================================
+  S02 [2class] profile=original X=(288, 12, 1125) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S02 seed42 F1 [refit] Ep 001/350 | tr 0.7484 | refit, no validation
+S02 seed42 F1 [refit] Ep 050/350 | tr 0.5167 | refit, no validation
+S02 seed42 F1 [refit] Ep 100/350 | tr 0.4962 | refit, no validation
+S02 seed42 F1 [refit] Ep 150/350 | tr 0.4118 | refit, no validation
+S02 seed42 F1 [refit] Ep 200/350 | tr 0.4696 | refit, no validation
+S02 seed42 F1 [refit] Ep 250/350 | tr 0.4382 | refit, no validation
+S02 seed42 F1 [refit] Ep 300/350 | tr 0.4559 | refit, no validation
+S02 seed42 F1 [refit] Ep 350/350 | tr 0.3926 | refit, no validation
+S02 seed42 F1: test 59.72% (val nan%, epochs 350)
+S02 seed43 F1 [refit] Ep 001/350 | tr 0.7606 | refit, no validation
+S02 seed43 F1 [refit] Ep 050/350 | tr 0.5958 | refit, no validation
+S02 seed43 F1 [refit] Ep 100/350 | tr 0.4658 | refit, no validation
+S02 seed43 F1 [refit] Ep 150/350 | tr 0.4695 | refit, no validation
+S02 seed43 F1 [refit] Ep 200/350 | tr 0.5164 | refit, no validation
+S02 seed43 F1 [refit] Ep 250/350 | tr 0.5468 | refit, no validation
+S02 seed43 F1 [refit] Ep 300/350 | tr 0.4611 | refit, no validation
+S02 seed43 F1 [refit] Ep 350/350 | tr 0.4134 | refit, no validation
+S02 seed43 F1: test 57.64% (val nan%, epochs 350)
+S02 seed44 F1 [refit] Ep 001/350 | tr 0.7117 | refit, no validation
+S02 seed44 F1 [refit] Ep 050/350 | tr 0.5294 | refit, no validation
+S02 seed44 F1 [refit] Ep 100/350 | tr 0.4925 | refit, no validation
+S02 seed44 F1 [refit] Ep 150/350 | tr 0.6048 | refit, no validation
+S02 seed44 F1 [refit] Ep 200/350 | tr 0.4613 | refit, no validation
+S02 seed44 F1 [refit] Ep 250/350 | tr 0.5357 | refit, no validation
+S02 seed44 F1 [refit] Ep 300/350 | tr 0.4653 | refit, no validation
+S02 seed44 F1 [refit] Ep 350/350 | tr 0.4097 | refit, no validation
+S02 seed44 F1: test 55.56% (val nan%, epochs 350)
+D:\EEG\NeuroGrounded-EEG\EEGItNet\BNCI_001\eegitnet_bnci_common.py:870: RuntimeWarning: Mean of empty slice
+  "val_acc": float(np.nanmean([r["val_acc"] for r in seed_recs])) if seed_recs else float("nan"),
+S02 seed ensemble (3 seeds): test 56.94% (single seeds 59.7, 57.6, 55.6)
+
+================================================================================
+SUBJECT 03 — saliency_reduced — 2class — session — profile original — 12 ch: CP4, C5, P2, FC3, CPz, CP1, C4, CP3, CP2, Fz, P1, C6
+================================================================================
+  S03 [2class] profile=original X=(288, 12, 1125) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S03 seed42 F1 [refit] Ep 001/350 | tr 0.7327 | refit, no validation
+S03 seed42 F1 [refit] Ep 050/350 | tr 0.4413 | refit, no validation
+S03 seed42 F1 [refit] Ep 100/350 | tr 0.4887 | refit, no validation
+S03 seed42 F1 [refit] Ep 150/350 | tr 0.3863 | refit, no validation
+S03 seed42 F1 [refit] Ep 200/350 | tr 0.4571 | refit, no validation
+S03 seed42 F1 [refit] Ep 250/350 | tr 0.4755 | refit, no validation
+S03 seed42 F1 [refit] Ep 300/350 | tr 0.3819 | refit, no validation
+S03 seed42 F1 [refit] Ep 350/350 | tr 0.4574 | refit, no validation
+S03 seed42 F1: test 70.83% (val nan%, epochs 350)
+S03 seed43 F1 [refit] Ep 001/350 | tr 0.7138 | refit, no validation
+S03 seed43 F1 [refit] Ep 050/350 | tr 0.5306 | refit, no validation
+S03 seed43 F1 [refit] Ep 100/350 | tr 0.4345 | refit, no validation
+S03 seed43 F1 [refit] Ep 150/350 | tr 0.4165 | refit, no validation
+S03 seed43 F1 [refit] Ep 200/350 | tr 0.3809 | refit, no validation
+S03 seed43 F1 [refit] Ep 250/350 | tr 0.4503 | refit, no validation
+S03 seed43 F1 [refit] Ep 300/350 | tr 0.4982 | refit, no validation
+S03 seed43 F1 [refit] Ep 350/350 | tr 0.4252 | refit, no validation
+S03 seed43 F1: test 73.61% (val nan%, epochs 350)
+S03 seed44 F1 [refit] Ep 001/350 | tr 0.6920 | refit, no validation
+S03 seed44 F1 [refit] Ep 050/350 | tr 0.5247 | refit, no validation
+S03 seed44 F1 [refit] Ep 100/350 | tr 0.4157 | refit, no validation
+S03 seed44 F1 [refit] Ep 150/350 | tr 0.5425 | refit, no validation
+S03 seed44 F1 [refit] Ep 200/350 | tr 0.4422 | refit, no validation
+S03 seed44 F1 [refit] Ep 250/350 | tr 0.3862 | refit, no validation
+S03 seed44 F1 [refit] Ep 300/350 | tr 0.4809 | refit, no validation
+S03 seed44 F1 [refit] Ep 350/350 | tr 0.4006 | refit, no validation
+S03 seed44 F1: test 79.17% (val nan%, epochs 350)
+D:\EEG\NeuroGrounded-EEG\EEGItNet\BNCI_001\eegitnet_bnci_common.py:870: RuntimeWarning: Mean of empty slice
+  "val_acc": float(np.nanmean([r["val_acc"] for r in seed_recs])) if seed_recs else float("nan"),
+S03 seed ensemble (3 seeds): test 76.39% (single seeds 70.8, 73.6, 79.2)
+
+================================================================================
+SUBJECT 04 — saliency_reduced — 2class — session — profile cue_0_4 — 12 ch: CP4, C5, C4, CPz, CP2, FC3, Fz, P2, CP1, P1, C3, CP3
+================================================================================
+  S04 [2class] profile=cue_0_4 X=(288, 12, 1000) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S04 seed42 F1 [refit] Ep 001/350 | tr 0.7260 | refit, no validation
+S04 seed42 F1 [refit] Ep 050/350 | tr 0.5138 | refit, no validation
+S04 seed42 F1 [refit] Ep 100/350 | tr 0.5143 | refit, no validation
+S04 seed42 F1 [refit] Ep 150/350 | tr 0.4541 | refit, no validation
+S04 seed42 F1 [refit] Ep 200/350 | tr 0.4879 | refit, no validation
+S04 seed42 F1 [refit] Ep 250/350 | tr 0.4006 | refit, no validation
+S04 seed42 F1 [refit] Ep 300/350 | tr 0.5130 | refit, no validation
+S04 seed42 F1 [refit] Ep 350/350 | tr 0.3981 | refit, no validation
+S04 seed42 F1: test 65.28% (val nan%, epochs 350)
+S04 seed43 F1 [refit] Ep 001/350 | tr 0.7020 | refit, no validation
+S04 seed43 F1 [refit] Ep 050/350 | tr 0.5321 | refit, no validation
+S04 seed43 F1 [refit] Ep 100/350 | tr 0.4258 | refit, no validation
+S04 seed43 F1 [refit] Ep 150/350 | tr 0.4894 | refit, no validation
+S04 seed43 F1 [refit] Ep 200/350 | tr 0.4096 | refit, no validation
+S04 seed43 F1 [refit] Ep 250/350 | tr 0.3694 | refit, no validation
+S04 seed43 F1 [refit] Ep 300/350 | tr 0.3803 | refit, no validation
+S04 seed43 F1 [refit] Ep 350/350 | tr 0.3820 | refit, no validation
+S04 seed43 F1: test 68.06% (val nan%, epochs 350)
+S04 seed44 F1 [refit] Ep 001/350 | tr 0.6985 | refit, no validation
+S04 seed44 F1 [refit] Ep 050/350 | tr 0.5105 | refit, no validation
+S04 seed44 F1 [refit] Ep 100/350 | tr 0.5030 | refit, no validation
+S04 seed44 F1 [refit] Ep 150/350 | tr 0.4553 | refit, no validation
+S04 seed44 F1 [refit] Ep 200/350 | tr 0.4319 | refit, no validation
+S04 seed44 F1 [refit] Ep 250/350 | tr 0.4100 | refit, no validation
+S04 seed44 F1 [refit] Ep 300/350 | tr 0.6044 | refit, no validation
+S04 seed44 F1 [refit] Ep 350/350 | tr 0.3998 | refit, no validation
+S04 seed44 F1: test 70.14% (val nan%, epochs 350)
+D:\EEG\NeuroGrounded-EEG\EEGItNet\BNCI_001\eegitnet_bnci_common.py:870: RuntimeWarning: Mean of empty slice
+  "val_acc": float(np.nanmean([r["val_acc"] for r in seed_recs])) if seed_recs else float("nan"),
+S04 seed ensemble (3 seeds): test 67.36% (single seeds 65.3, 68.1, 70.1)
+
+================================================================================
+SUBJECT 05 — saliency_reduced — 2class — session — profile cue_0_4 — 12 ch: CP4, C5, P2, Fz, FC3, CPz, C4, CP1, C6, CP2, P1, CP3
+================================================================================
+  S05 [2class] profile=cue_0_4 X=(288, 12, 1000) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S05 seed42 F1 [refit] Ep 001/350 | tr 0.7296 | refit, no validation
+S05 seed42 F1 [refit] Ep 050/350 | tr 0.5523 | refit, no validation
+S05 seed42 F1 [refit] Ep 100/350 | tr 0.4488 | refit, no validation
+S05 seed42 F1 [refit] Ep 150/350 | tr 0.5383 | refit, no validation
+S05 seed42 F1 [refit] Ep 200/350 | tr 0.3876 | refit, no validation
+S05 seed42 F1 [refit] Ep 250/350 | tr 0.4936 | refit, no validation
+S05 seed42 F1 [refit] Ep 300/350 | tr 0.4771 | refit, no validation
+S05 seed42 F1 [refit] Ep 350/350 | tr 0.4722 | refit, no validation
+S05 seed42 F1: test 64.58% (val nan%, epochs 350)
+S05 seed43 F1 [refit] Ep 001/350 | tr 0.7158 | refit, no validation
+S05 seed43 F1 [refit] Ep 050/350 | tr 0.4946 | refit, no validation
+S05 seed43 F1 [refit] Ep 100/350 | tr 0.4683 | refit, no validation
+S05 seed43 F1 [refit] Ep 150/350 | tr 0.4379 | refit, no validation
+S05 seed43 F1 [refit] Ep 200/350 | tr 0.4552 | refit, no validation
+S05 seed43 F1 [refit] Ep 250/350 | tr 0.4477 | refit, no validation
+S05 seed43 F1 [refit] Ep 300/350 | tr 0.4562 | refit, no validation
+S05 seed43 F1 [refit] Ep 350/350 | tr 0.4666 | refit, no validation
+S05 seed43 F1: test 58.33% (val nan%, epochs 350)
+S05 seed44 F1 [refit] Ep 001/350 | tr 0.7301 | refit, no validation
+S05 seed44 F1 [refit] Ep 050/350 | tr 0.5023 | refit, no validation
+S05 seed44 F1 [refit] Ep 100/350 | tr 0.4484 | refit, no validation
+S05 seed44 F1 [refit] Ep 150/350 | tr 0.4275 | refit, no validation
+S05 seed44 F1 [refit] Ep 200/350 | tr 0.4112 | refit, no validation
+S05 seed44 F1 [refit] Ep 250/350 | tr 0.4146 | refit, no validation
+S05 seed44 F1 [refit] Ep 300/350 | tr 0.4209 | refit, no validation
+S05 seed44 F1 [refit] Ep 350/350 | tr 0.4943 | refit, no validation
+S05 seed44 F1: test 61.11% (val nan%, epochs 350)
+D:\EEG\NeuroGrounded-EEG\EEGItNet\BNCI_001\eegitnet_bnci_common.py:870: RuntimeWarning: Mean of empty slice
+  "val_acc": float(np.nanmean([r["val_acc"] for r in seed_recs])) if seed_recs else float("nan"),
+S05 seed ensemble (3 seeds): test 64.58% (single seeds 64.6, 58.3, 61.1)
+
+================================================================================
+SUBJECT 06 — saliency_reduced — 2class — session — profile original — 12 ch: CP4, C5, CP2, CP1, Fz, FC3, C4, P2, CPz, CP3, P1, FC1
+================================================================================
+  S06 [2class] profile=original X=(288, 12, 1125) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S06 seed42 F1 [refit] Ep 001/350 | tr 0.6971 | refit, no validation
+S06 seed42 F1 [refit] Ep 050/350 | tr 0.4546 | refit, no validation
+S06 seed42 F1 [refit] Ep 100/350 | tr 0.4277 | refit, no validation
+S06 seed42 F1 [refit] Ep 150/350 | tr 0.4170 | refit, no validation
+S06 seed42 F1 [refit] Ep 200/350 | tr 0.4627 | refit, no validation
+S06 seed42 F1 [refit] Ep 250/350 | tr 0.4489 | refit, no validation
+S06 seed42 F1 [refit] Ep 300/350 | tr 0.3924 | refit, no validation
+S06 seed42 F1 [refit] Ep 350/350 | tr 0.4507 | refit, no validation
+S06 seed42 F1: test 64.58% (val nan%, epochs 350)
+S06 seed43 F1 [refit] Ep 001/350 | tr 0.7108 | refit, no validation
+S06 seed43 F1 [refit] Ep 050/350 | tr 0.4946 | refit, no validation
+S06 seed43 F1 [refit] Ep 100/350 | tr 0.4242 | refit, no validation
+S06 seed43 F1 [refit] Ep 150/350 | tr 0.4308 | refit, no validation
+S06 seed43 F1 [refit] Ep 200/350 | tr 0.3873 | refit, no validation
+S06 seed43 F1 [refit] Ep 250/350 | tr 0.4327 | refit, no validation
+S06 seed43 F1 [refit] Ep 300/350 | tr 0.4145 | refit, no validation
+S06 seed43 F1 [refit] Ep 350/350 | tr 0.4093 | refit, no validation
+S06 seed43 F1: test 59.03% (val nan%, epochs 350)
+S06 seed44 F1 [refit] Ep 001/350 | tr 0.7249 | refit, no validation
+S06 seed44 F1 [refit] Ep 050/350 | tr 0.4888 | refit, no validation
+S06 seed44 F1 [refit] Ep 100/350 | tr 0.4374 | refit, no validation
+S06 seed44 F1 [refit] Ep 150/350 | tr 0.5426 | refit, no validation
+S06 seed44 F1 [refit] Ep 200/350 | tr 0.4973 | refit, no validation
+S06 seed44 F1 [refit] Ep 250/350 | tr 0.4170 | refit, no validation
+S06 seed44 F1 [refit] Ep 300/350 | tr 0.4462 | refit, no validation
+S06 seed44 F1 [refit] Ep 350/350 | tr 0.3960 | refit, no validation
+S06 seed44 F1: test 65.28% (val nan%, epochs 350)
+D:\EEG\NeuroGrounded-EEG\EEGItNet\BNCI_001\eegitnet_bnci_common.py:870: RuntimeWarning: Mean of empty slice
+  "val_acc": float(np.nanmean([r["val_acc"] for r in seed_recs])) if seed_recs else float("nan"),
+S06 seed ensemble (3 seeds): test 65.28% (single seeds 64.6, 59.0, 65.3)
+
+================================================================================
+SUBJECT 07 — saliency_reduced — 2class — session — profile original — 12 ch: CP4, C5, CP2, Fz, FC3, P2, CPz, CP1, C4, CP3, FC1, C2
+================================================================================
+  S07 [2class] profile=original X=(288, 12, 1125) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S07 seed42 F1 [refit] Ep 001/350 | tr 0.7039 | refit, no validation
+S07 seed42 F1 [refit] Ep 050/350 | tr 0.5216 | refit, no validation
+S07 seed42 F1 [refit] Ep 100/350 | tr 0.4193 | refit, no validation
+S07 seed42 F1 [refit] Ep 150/350 | tr 0.4382 | refit, no validation
+S07 seed42 F1 [refit] Ep 200/350 | tr 0.4185 | refit, no validation
+S07 seed42 F1 [refit] Ep 250/350 | tr 0.4525 | refit, no validation
+S07 seed42 F1 [refit] Ep 300/350 | tr 0.5414 | refit, no validation
+S07 seed42 F1 [refit] Ep 350/350 | tr 0.4560 | refit, no validation
+S07 seed42 F1: test 64.58% (val nan%, epochs 350)
+S07 seed43 F1 [refit] Ep 001/350 | tr 0.7197 | refit, no validation
+S07 seed43 F1 [refit] Ep 050/350 | tr 0.5236 | refit, no validation
+S07 seed43 F1 [refit] Ep 100/350 | tr 0.4524 | refit, no validation
+S07 seed43 F1 [refit] Ep 150/350 | tr 0.5264 | refit, no validation
+S07 seed43 F1 [refit] Ep 200/350 | tr 0.4326 | refit, no validation
+S07 seed43 F1 [refit] Ep 250/350 | tr 0.3885 | refit, no validation
+S07 seed43 F1 [refit] Ep 300/350 | tr 0.4419 | refit, no validation
+S07 seed43 F1 [refit] Ep 350/350 | tr 0.4738 | refit, no validation
+S07 seed43 F1: test 62.50% (val nan%, epochs 350)
+S07 seed44 F1 [refit] Ep 001/350 | tr 0.7101 | refit, no validation
+S07 seed44 F1 [refit] Ep 050/350 | tr 0.5007 | refit, no validation
+S07 seed44 F1 [refit] Ep 100/350 | tr 0.4561 | refit, no validation
+S07 seed44 F1 [refit] Ep 150/350 | tr 0.5437 | refit, no validation
+S07 seed44 F1 [refit] Ep 200/350 | tr 0.4538 | refit, no validation
+S07 seed44 F1 [refit] Ep 250/350 | tr 0.3825 | refit, no validation
+S07 seed44 F1 [refit] Ep 300/350 | tr 0.4585 | refit, no validation
+S07 seed44 F1 [refit] Ep 350/350 | tr 0.3761 | refit, no validation
+S07 seed44 F1: test 67.36% (val nan%, epochs 350)
+D:\EEG\NeuroGrounded-EEG\EEGItNet\BNCI_001\eegitnet_bnci_common.py:870: RuntimeWarning: Mean of empty slice
+  "val_acc": float(np.nanmean([r["val_acc"] for r in seed_recs])) if seed_recs else float("nan"),
+S07 seed ensemble (3 seeds): test 66.67% (single seeds 64.6, 62.5, 67.4)
+
+================================================================================
+SUBJECT 08 — saliency_reduced — 2class — session — profile cue_0_4 — 12 ch: C5, P2, CP4, C4, CPz, FC3, CP1, Fz, CP2, C6, P1, CP3
+================================================================================
+  S08 [2class] profile=cue_0_4 X=(288, 12, 1000) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S08 seed42 F1 [refit] Ep 001/350 | tr 0.7202 | refit, no validation
+S08 seed42 F1 [refit] Ep 050/350 | tr 0.5324 | refit, no validation
+S08 seed42 F1 [refit] Ep 100/350 | tr 0.3835 | refit, no validation
+S08 seed42 F1 [refit] Ep 150/350 | tr 0.3847 | refit, no validation
+S08 seed42 F1 [refit] Ep 200/350 | tr 0.3885 | refit, no validation
+S08 seed42 F1 [refit] Ep 250/350 | tr 0.3806 | refit, no validation
+S08 seed42 F1 [refit] Ep 300/350 | tr 0.3827 | refit, no validation
+S08 seed42 F1 [refit] Ep 350/350 | tr 0.3955 | refit, no validation
+S08 seed42 F1: test 89.58% (val nan%, epochs 350)
+S08 seed43 F1 [refit] Ep 001/350 | tr 0.7091 | refit, no validation
+S08 seed43 F1 [refit] Ep 050/350 | tr 0.6153 | refit, no validation
+S08 seed43 F1 [refit] Ep 100/350 | tr 0.4328 | refit, no validation
+S08 seed43 F1 [refit] Ep 150/350 | tr 0.3916 | refit, no validation
+S08 seed43 F1 [refit] Ep 200/350 | tr 0.4609 | refit, no validation
+S08 seed43 F1 [refit] Ep 250/350 | tr 0.4682 | refit, no validation
+S08 seed43 F1 [refit] Ep 300/350 | tr 0.4129 | refit, no validation
+S08 seed43 F1 [refit] Ep 350/350 | tr 0.4919 | refit, no validation
+S08 seed43 F1: test 77.08% (val nan%, epochs 350)
+S08 seed44 F1 [refit] Ep 001/350 | tr 0.7054 | refit, no validation
+S08 seed44 F1 [refit] Ep 050/350 | tr 0.5045 | refit, no validation
+S08 seed44 F1 [refit] Ep 100/350 | tr 0.4659 | refit, no validation
+S08 seed44 F1 [refit] Ep 150/350 | tr 0.4677 | refit, no validation
+S08 seed44 F1 [refit] Ep 200/350 | tr 0.3748 | refit, no validation
+S08 seed44 F1 [refit] Ep 250/350 | tr 0.5611 | refit, no validation
+S08 seed44 F1 [refit] Ep 300/350 | tr 0.4296 | refit, no validation
+S08 seed44 F1 [refit] Ep 350/350 | tr 0.4313 | refit, no validation
+S08 seed44 F1: test 84.03% (val nan%, epochs 350)
+D:\EEG\NeuroGrounded-EEG\EEGItNet\BNCI_001\eegitnet_bnci_common.py:870: RuntimeWarning: Mean of empty slice
+  "val_acc": float(np.nanmean([r["val_acc"] for r in seed_recs])) if seed_recs else float("nan"),
+S08 seed ensemble (3 seeds): test 88.89% (single seeds 89.6, 77.1, 84.0)
+
+================================================================================
+SUBJECT 09 — saliency_reduced — 2class — session — profile original — 12 ch: CP2, C5, CP4, P2, Fz, FC3, CPz, FC1, CP3, CP1, C4, P1
+================================================================================
+  S09 [2class] profile=original X=(288, 12, 1125) class counts={'left_hand': 144, 'right_hand': 144}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S09 seed42 F1 [refit] Ep 001/350 | tr 0.7057 | refit, no validation
+S09 seed42 F1 [refit] Ep 050/350 | tr 0.4978 | refit, no validation
+S09 seed42 F1 [refit] Ep 100/350 | tr 0.4829 | refit, no validation
+S09 seed42 F1 [refit] Ep 150/350 | tr 0.4589 | refit, no validation
+S09 seed42 F1 [refit] Ep 200/350 | tr 0.4243 | refit, no validation
+S09 seed42 F1 [refit] Ep 250/350 | tr 0.4535 | refit, no validation
+S09 seed42 F1 [refit] Ep 300/350 | tr 0.4041 | refit, no validation
+S09 seed42 F1 [refit] Ep 350/350 | tr 0.3978 | refit, no validation
+S09 seed42 F1: test 83.33% (val nan%, epochs 350)
+S09 seed43 F1 [refit] Ep 001/350 | tr 0.7250 | refit, no validation
+S09 seed43 F1 [refit] Ep 050/350 | tr 0.4295 | refit, no validation
+S09 seed43 F1 [refit] Ep 100/350 | tr 0.5840 | refit, no validation
+S09 seed43 F1 [refit] Ep 150/350 | tr 0.4046 | refit, no validation
+S09 seed43 F1 [refit] Ep 200/350 | tr 0.4022 | refit, no validation
+S09 seed43 F1 [refit] Ep 250/350 | tr 0.4515 | refit, no validation
+S09 seed43 F1 [refit] Ep 300/350 | tr 0.3900 | refit, no validation
+S09 seed43 F1 [refit] Ep 350/350 | tr 0.4010 | refit, no validation
+S09 seed43 F1: test 87.50% (val nan%, epochs 350)
+S09 seed44 F1 [refit] Ep 001/350 | tr 0.7293 | refit, no validation
+S09 seed44 F1 [refit] Ep 050/350 | tr 0.5157 | refit, no validation
+S09 seed44 F1 [refit] Ep 100/350 | tr 0.3993 | refit, no validation
+S09 seed44 F1 [refit] Ep 150/350 | tr 0.4058 | refit, no validation
+S09 seed44 F1 [refit] Ep 200/350 | tr 0.3862 | refit, no validation
+S09 seed44 F1 [refit] Ep 250/350 | tr 0.3645 | refit, no validation
+S09 seed44 F1 [refit] Ep 300/350 | tr 0.3663 | refit, no validation
+S09 seed44 F1 [refit] Ep 350/350 | tr 0.3934 | refit, no validation
+S09 seed44 F1: test 84.03% (val nan%, epochs 350)
+D:\EEG\NeuroGrounded-EEG\EEGItNet\BNCI_001\eegitnet_bnci_common.py:870: RuntimeWarning: Mean of empty slice
+  "val_acc": float(np.nanmean([r["val_acc"] for r in seed_recs])) if seed_recs else float("nan"),
+S09 seed ensemble (3 seeds): test 86.11% (single seeds 83.3, 87.5, 84.0)
+Results written to D:\EEG\NeuroGrounded-EEG\EEGItNet\BNCI_001\2class\results_session\saliency_reduced (grand mean 71.60% over 9 subjects; chance 50.0%, majority 50.0%)
+Report saved: D:\EEG\NeuroGrounded-EEG\EEGItNet\BNCI_001\2class\results_session\saliency_reduced\saliency_reduced_report.txt
+
+================================================================================
+FINAL SUMMARY - EEG-ITNet BNCI2014-001 2class
+================================================================================
+22ch 71.06%  ->  saliency 12ch 71.60%  (chance 50.0%, majority 50.0%)

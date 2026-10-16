@@ -1,0 +1,24 @@
+EEG-ITNet - BNCI2014-001 - ReliefF 12-channel (LOSO) - 4class
+================================================================================
+
+Subject 01: 60.42%  | montage: C3, CP3, CP1, P2, CPz, CP4, P1, Fz, CP2, POz, Pz, C5
+    seed -1 fold 1: 60.42% (majority-class 25.0%)
+Subject 02: 35.42%  | montage: C3, CP3, P2, CP4, P1, CP1, POz, CPz, Pz, C4, CP2, C5
+    seed -1 fold 1: 35.42% (majority-class 25.0%)
+Subject 03: 60.42%  | montage: CP3, C3, P2, P1, CP1, CPz, CP4, Fz, POz, Pz, CP2, C5
+    seed -1 fold 1: 60.42% (majority-class 25.0%)
+Subject 04: 47.57%  | montage: CP3, C3, CPz, CP4, P2, CP1, P1, Fz, Pz, C5, CP2, C4
+    seed -1 fold 1: 47.57% (majority-class 25.0%)
+Subject 05: 37.15%  | montage: CP3, C3, P2, CP4, P1, CP1, CPz, Pz, POz, CP2, Fz, C4
+    seed -1 fold 1: 37.15% (majority-class 25.0%)
+Subject 06: 31.94%  | montage: CP3, C3, CP4, P2, CPz, P1, CP2, CP1, Pz, Fz, C5, Cz
+    seed -1 fold 1: 31.94% (majority-class 25.0%)
+Subject 07: 49.65%  | montage: CP3, C3, P2, CP4, P1, CP1, CPz, POz, Fz, CP2, Pz, C5
+    seed -1 fold 1: 49.65% (majority-class 25.0%)
+Subject 08: 60.07%  | montage: CP3, C3, CP1, CP4, P1, P2, Fz, CPz, POz, CP2, C5, Cz
+    seed -1 fold 1: 60.07% (majority-class 25.0%)
+Subject 09: 61.11%  | montage: CP3, C3, P2, P1, CP1, CPz, CP4, POz, Fz, CP2, Pz, C5
+    seed -1 fold 1: 61.11% (majority-class 25.0%)
+
+GRAND MEAN: 49.31% +/- 11.98% (SD across subjects)
+chance 25.0% | mean majority-class 25.0%

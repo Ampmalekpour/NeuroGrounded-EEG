@@ -142,5 +142,149 @@
   "minutes": 178.6,
   "log": "EEGConformer\\BNCI_001\\4class\\logs_session\\controls.log",
   "finished": "2026-10-16 03:29:39"
+ },
+ "eegnetv4/2class/tune": {
+  "state": "skipped (done)",
+  "minutes": 5.8,
+  "log": "EEGNetV4\\BNCI_001\\2class\\logs_session\\tune.log",
+  "finished": "2026-10-16 12:03:45"
+ },
+ "eegnetv4/2class/saliency": {
+  "state": "ok",
+  "minutes": 5.6,
+  "log": "EEGNetV4\\BNCI_001\\2class\\logs_session\\saliency.log",
+  "finished": "2026-10-16 12:26:27"
+ },
+ "eegnetv4/2class/csp": {
+  "state": "ok",
+  "minutes": 2.9,
+  "log": "EEGNetV4\\BNCI_001\\2class\\logs_session\\csp.log",
+  "finished": "2026-10-16 12:29:21"
+ },
+ "eegnetv4/2class/relieff": {
+  "state": "ok",
+  "minutes": 3.0,
+  "log": "EEGNetV4\\BNCI_001\\2class\\logs_session\\relieff.log",
+  "finished": "2026-10-16 12:32:23"
+ },
+ "eegnetv4/2class/mi": {
+  "state": "ok",
+  "minutes": 2.9,
+  "log": "EEGNetV4\\BNCI_001\\2class\\logs_session\\mi.log",
+  "finished": "2026-10-16 12:35:18"
+ },
+ "eegnetv4/2class/controls": {
+  "state": "ok",
+  "minutes": 20.7,
+  "log": "EEGNetV4\\BNCI_001\\2class\\logs_session\\controls.log",
+  "finished": "2026-10-16 12:56:03"
+ },
+ "eegnetv4/4class/tune": {
+  "state": "ok",
+  "minutes": 14.3,
+  "log": "EEGNetV4\\BNCI_001\\4class\\logs_session\\tune.log",
+  "finished": "2026-10-16 13:10:21"
+ },
+ "eegnetv4/4class/saliency": {
+  "state": "ok",
+  "minutes": 34.8,
+  "log": "EEGNetV4\\BNCI_001\\4class\\logs_session\\saliency.log",
+  "finished": "2026-10-16 13:45:06"
+ },
+ "eegnetv4/4class/csp": {
+  "state": "ok",
+  "minutes": 5.5,
+  "log": "EEGNetV4\\BNCI_001\\4class\\logs_session\\csp.log",
+  "finished": "2026-10-16 13:50:36"
+ },
+ "eegnetv4/4class/relieff": {
+  "state": "ok",
+  "minutes": 4.7,
+  "log": "EEGNetV4\\BNCI_001\\4class\\logs_session\\relieff.log",
+  "finished": "2026-10-16 13:55:20"
+ },
+ "eegnetv4/4class/mi": {
+  "state": "ok",
+  "minutes": 5.8,
+  "log": "EEGNetV4\\BNCI_001\\4class\\logs_session\\mi.log",
+  "finished": "2026-10-16 14:01:07"
+ },
+ "eegnetv4/4class/controls": {
+  "state": "ok",
+  "minutes": 29.4,
+  "log": "EEGNetV4\\BNCI_001\\4class\\logs_session\\controls.log",
+  "finished": "2026-10-16 14:30:29"
+ },
+ "eegitnet/2class/tune": {
+  "state": "ok",
+  "minutes": 3.8,
+  "log": "EEGItNet\\BNCI_001\\2class\\logs_session\\tune.log",
+  "finished": "2026-10-16 14:34:15"
+ },
+ "eegitnet/2class/saliency": {
+  "state": "ok",
+  "minutes": 21.5,
+  "log": "EEGItNet\\BNCI_001\\2class\\logs_session\\saliency.log",
+  "finished": "2026-10-16 14:55:45"
+ },
+ "eegitnet/2class/csp": {
+  "state": "ok",
+  "minutes": 5.9,
+  "log": "EEGItNet\\BNCI_001\\2class\\logs_session\\csp.log",
+  "finished": "2026-10-16 15:01:40"
+ },
+ "eegitnet/2class/relieff": {
+  "state": "ok",
+  "minutes": 7.0,
+  "log": "EEGItNet\\BNCI_001\\2class\\logs_session\\relieff.log",
+  "finished": "2026-10-16 15:08:40"
+ },
+ "eegitnet/2class/mi": {
+  "state": "ok",
+  "minutes": 5.9,
+  "log": "EEGItNet\\BNCI_001\\2class\\logs_session\\mi.log",
+  "finished": "2026-10-16 15:14:36"
+ },
+ "eegitnet/2class/controls": {
+  "state": "ok",
+  "minutes": 39.3,
+  "log": "EEGItNet\\BNCI_001\\2class\\logs_session\\controls.log",
+  "finished": "2026-10-16 15:53:53"
+ },
+ "eegitnet/4class/tune": {
+  "state": "ok",
+  "minutes": 9.1,
+  "log": "EEGItNet\\BNCI_001\\4class\\logs_session\\tune.log",
+  "finished": "2026-10-16 16:02:56"
+ },
+ "eegitnet/4class/saliency": {
+  "state": "ok",
+  "minutes": 39.3,
+  "log": "EEGItNet\\BNCI_001\\4class\\logs_session\\saliency.log",
+  "finished": "2026-10-16 16:42:13"
+ },
+ "eegitnet/4class/csp": {
+  "state": "ok",
+  "minutes": 10.3,
+  "log": "EEGItNet\\BNCI_001\\4class\\logs_session\\csp.log",
+  "finished": "2026-10-16 16:52:34"
+ },
+ "eegitnet/4class/relieff": {
+  "state": "ok",
+  "minutes": 10.2,
+  "log": "EEGItNet\\BNCI_001\\4class\\logs_session\\relieff.log",
+  "finished": "2026-10-16 17:02:43"
+ },
+ "eegitnet/4class/mi": {
+  "state": "ok",
+  "minutes": 10.1,
+  "log": "EEGItNet\\BNCI_001\\4class\\logs_session\\mi.log",
+  "finished": "2026-10-16 17:12:51"
+ },
+ "eegitnet/4class/controls": {
+  "state": "ok",
+  "minutes": 74.0,
+  "log": "EEGItNet\\BNCI_001\\4class\\logs_session\\controls.log",
+  "finished": "2026-10-16 18:26:49"
  }
 }

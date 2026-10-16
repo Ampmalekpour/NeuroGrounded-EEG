@@ -1,0 +1,24 @@
+EEGNetv4 - BNCI2014-001 - MI 12-channel (LOSO) - 4class
+================================================================================
+
+Subject 01: 71.53%  | montage: CP3, C3, Pz, C1, CP1, P2, CPz, CP2, FC2, CP4, P1, FC1
+    seed -1 fold 1: 71.53% (majority-class 25.0%)
+Subject 02: 37.15%  | montage: CP3, C3, CP4, P2, CP1, CP2, Pz, C1, P1, C4, POz, CPz
+    seed -1 fold 1: 37.15% (majority-class 25.0%)
+Subject 03: 80.56%  | montage: CP3, C3, C1, P1, FC2, Pz, P2, POz, CP4, CP1, CPz, CP2
+    seed -1 fold 1: 80.56% (majority-class 25.0%)
+Subject 04: 43.40%  | montage: CP3, C3, C1, CP4, CP1, P1, Pz, FC2, FC1, POz, FC3, P2
+    seed -1 fold 1: 43.40% (majority-class 25.0%)
+Subject 05: 37.15%  | montage: CP3, C3, C1, Pz, P1, P2, CP4, CP1, FC1, CP2, CPz, C4
+    seed -1 fold 1: 37.15% (majority-class 25.0%)
+Subject 06: 42.71%  | montage: CP3, C1, Pz, C3, P1, P2, CP4, CP2, CPz, POz, FC1, FC2
+    seed -1 fold 1: 42.71% (majority-class 25.0%)
+Subject 07: 70.49%  | montage: CP3, Pz, C1, P1, CP4, P2, CP1, C3, CP2, FC2, C4, CPz
+    seed -1 fold 1: 70.49% (majority-class 25.0%)
+Subject 08: 76.74%  | montage: CP3, C3, C1, FC2, FC1, CP1, CP4, P1, C4, P2, Pz, CPz
+    seed -1 fold 1: 76.74% (majority-class 25.0%)
+Subject 09: 78.82%  | montage: CP3, C3, C1, FC2, Pz, FC1, P1, P2, CP1, FC3, CP2, CP4
+    seed -1 fold 1: 78.82% (majority-class 25.0%)
+
+GRAND MEAN: 59.84% +/- 19.10% (SD across subjects)
+chance 25.0% | mean majority-class 25.0%

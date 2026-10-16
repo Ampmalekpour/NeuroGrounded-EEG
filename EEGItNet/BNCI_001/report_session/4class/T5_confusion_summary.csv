@@ -1,0 +1,9 @@
+Method,Pooled acc,Per-class recall,Predicted share per class,Mean majority-class acc,Folds predicting one class ≥90%
+22ch,50.96,"feet 43.5, left_hand 56.6, right_hand 60.8, tongue 42.9","feet 22.3, left_hand 28.6, right_hand 31.2, tongue 17.9",25.00,0 / 9
+Ours,50.58,"feet 43.1, left_hand 56.9, right_hand 57.3, tongue 45.1","feet 22.3, left_hand 29.0, right_hand 29.7, tongue 18.9",25.00,0 / 9
+CSP,50.04,"feet 43.4, left_hand 57.3, right_hand 56.9, tongue 42.6","feet 22.1, left_hand 29.5, right_hand 30.1, tongue 18.3",25.00,0 / 9
+RLF,49.31,"feet 39.7, left_hand 54.8, right_hand 59.0, tongue 43.8","feet 21.2, left_hand 28.1, right_hand 32.2, tongue 18.5",25.00,0 / 9
+MI,50.08,"feet 42.9, left_hand 56.5, right_hand 57.6, tongue 43.4","feet 21.9, left_hand 29.7, right_hand 29.9, tongue 18.5",25.00,0 / 9
+Fixed sensorimotor,48.19,"feet 39.4, left_hand 55.1, right_hand 57.1, tongue 41.2","feet 20.8, left_hand 28.6, right_hand 30.6, tongue 20.0",25.00,0 / 9
+ERD-only,49.81,"feet 40.3, left_hand 57.6, right_hand 57.1, tongue 44.3","feet 21.1, left_hand 29.2, right_hand 30.8, tongue 18.9",25.00,0 / 9
+Random (mean of draws),48.06,"feet 40.2, left_hand 54.1, right_hand 55.6, tongue 42.3","feet 21.4, left_hand 28.6, right_hand 31.3, tongue 18.8",25.00,0 / 45

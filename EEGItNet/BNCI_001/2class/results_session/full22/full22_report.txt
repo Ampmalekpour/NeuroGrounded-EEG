@@ -1,0 +1,24 @@
+EEG-ITNet - BNCI2014-001 - FULL 22-CHANNEL BASELINE - 2class
+================================================================================
+
+Subject 01: 72.92%
+    seed -1 fold 1: 72.92% (majority-class 50.0%)
+Subject 02: 55.56%
+    seed -1 fold 1: 55.56% (majority-class 50.0%)
+Subject 03: 81.25%
+    seed -1 fold 1: 81.25% (majority-class 50.0%)
+Subject 04: 70.83%
+    seed -1 fold 1: 70.83% (majority-class 50.0%)
+Subject 05: 63.19%
+    seed -1 fold 1: 63.19% (majority-class 50.0%)
+Subject 06: 61.11%
+    seed -1 fold 1: 61.11% (majority-class 50.0%)
+Subject 07: 69.44%
+    seed -1 fold 1: 69.44% (majority-class 50.0%)
+Subject 08: 84.72%
+    seed -1 fold 1: 84.72% (majority-class 50.0%)
+Subject 09: 80.56%
+    seed -1 fold 1: 80.56% (majority-class 50.0%)
+
+GRAND MEAN: 71.06% +/- 9.92% (SD across subjects)
+chance 50.0% | mean majority-class 50.0%
