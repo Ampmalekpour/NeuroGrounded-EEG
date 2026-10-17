@@ -13,7 +13,8 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))          # folder holding eegconformer_hgd_common.py
 os.environ["EEG_CLASS_MODE"] = "4class"           # this folder is the 4class experiment
-os.environ.setdefault("EEG_RESULTS_DIR", os.path.join(HERE, "results"))
+os.environ.setdefault("EEG_RESULTS_DIR", os.path.join(
+    HERE, "results" if os.environ.get("EEG_PROTOCOL", "session") == "blocks" else "results_session"))
 
 import numpy as np
 

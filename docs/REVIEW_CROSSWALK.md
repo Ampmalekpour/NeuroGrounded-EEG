@@ -146,3 +146,20 @@ Not used on purpose:
 
 The first-revision protocol is still available (`--protocol blocks`, results in `results/`); the session
 protocol writes to `results_session/`, `logs_session/`, `report_session/` and `reports/BNCI_001_session/`.
+
+## I. HGD (Schirrmeister2017), second revision: all four models (original scripts in `<Model>/HGD/legacy_unrevised/original_scripts/`)
+
+| # | Original behaviour | Models | Status |
+|---|---|---|---|
+| 1 | **Wrong classes.** Labels `[0, 1]` under braindecode's alphabetical mapping (feet=0, left_hand=1, rest=2, right_hand=3) are feet vs left hand, while the code and paper call them left vs right. All "left/right" ERD maps and the ERD-based method ranking used the feet−left contrast. | EEGNetv4, Deep4Net (all files); EEG-ITNet CSP/MI/ReliefF | **FIXED**: 2class = left vs right hand; names asserted at load time |
+| 2 | **0–8 s windows.** `trial_stop_offset = +4 s` on a 4-s event gives windows to 8 s after the cue, into the inter-trial interval and the next trial. | EEGNetv4, Deep4Net, EEG-ITNet | **FIXED**: windows relative to the cue (0–4 s unless a profile says otherwise). Resolves section F |
+| 3 | **No 4-class model.** The EEG-ITNet and Deep4Net HGD scripts are 2-class only, which explains the reviewer's finding that the 4-class EEG-ITNet HGD table equals the 2-class one. | EEG-ITNet, Deep4Net | **FIXED**: 2class and 4class for every model |
+| 4 | **Test fold drove training.** EEGConformer's LR scheduler used test accuracy and its "best" checkpoint came from the test fold. Some files stored a shallow `state_dict().copy()`, so "best" was the last epoch. | EEGConformer | **FIXED**: validation loss only; deep copies |
+| 5 | **Saliency on the test fold; one global montage from all 14 subjects (test trials included); attribution methods chosen by their ERD correlation.** CSP/MI/ReliefF were also fitted on all trials. | all | **FIXED**: validation saliency, leave-one-subject-out montages, all methods averaged, selection methods see the training runs only |
+| 6 | **Official HGD split ignored.** Train and test runs were pooled into chronological blocks (train = 50 % of the trials). | all | **FIXED**: default = official training runs → test runs, with refit and seed ensemble (`--protocol blocks` still available) |
+| 7 | **Post-cue ERD baseline** (0–0.5 s or 0–0.4 s after the cue). | all | **FIXED**: pre-cue baseline −0.5–0 s, raw µV, the same maps for every model |
+| 8 | Inconsistent preprocessing between the saliency and the CSP/MI/ReliefF files (normalisation, re-referencing), and the EEGConformer first script's integrated gradients and SmoothGrad were zeros (non-leaf tensor). | EEGNetv4, EEGConformer | **FIXED**: one loader and one attribution code for every method |
+| 9 | One recipe for all models except EEGConformer. | — | **KEPT** as profile `original`. Each model also gets literature candidates (EEGNet: Lawhern 2018; EEG-ITNet: Salami 2022; Deep4Net: Schirrmeister 2017; EEGConformer: Song 2022), chosen per subject on validation data only |
+
+HGD contains executed movements; the manuscript should say so. Physiology block for HGD adds a high-gamma
+(60–90 Hz) ERD map, since Schirrmeister et al. (2017) found high gamma informative on this dataset.

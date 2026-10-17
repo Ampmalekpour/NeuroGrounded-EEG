@@ -1,17 +1,46 @@
-# EEGNetv4 on HGD (Schirrmeister2017)
+# EEGNetv4 on HGD (High-Gamma Dataset, Schirrmeister2017) — second revision
 
-Same structure and scripts as `Deep4net/HGD`: `eegnetv4_hgd_common.py` plus `2class/` and `4class/`
-folders with `_saliency` (main: 22ch + Ours), `_csp`, `_relieff`, `_mi` and `_controls`.
+14 subjects, 22 sensorimotor channels, **executed** movements (not imagined).
+`2class` = left vs right hand, `4class` = feet / left hand / rest / right hand.
 
-`eegnetv4_hgd_common.py` differs from the Deep4Net common module only in the model builder and in:
-* no exponential moving standardisation (the original EEGNetv4 scripts did not use it);
-* **350 maximum epochs** (the original EEGNetv4 scripts used 350; the other models use 600).
+## Run (Windows PowerShell, repository root)
 
-Model: `EEGNetv4(F1=8, D=2, F2=16, kernel_length=64, third_kernel_size=(8, 4), drop_prob=0.30)`.
-The builder tries the current argument names first and falls back to the older ones
-(`in_chans`, `n_classes`, `input_window_samples`). If your braindecode no longer ships `EEGNetv4`
-it uses the renamed `EEGNet` with the same hyper-parameters; the model name stored in every
-`results.json` says which class was actually used.
+```powershell
+cd D:\EEG\NeuroGrounded-EEG
+python run_all.py --dataset hgd --models eegnetv4
+```
 
-`legacy_unrevised/` holds the earlier CSP / MI / ReliefF scripts, unchanged.
-Run instructions: see the repository `README.md`.
+- Steps, both class modes in turn: tune, saliency, csp, relieff, mi, controls, then the tables.
+- If it stops, run the same command again; finished steps are skipped.
+- Results: `EEGNetV4/HGD/report_session/REPORT.md` and `reports/HGD_session/SUMMARY.md`.
+- Your first-revision HGD results stay in `<class>/results/` and are never touched (new runs write to
+  `<class>/results_session/`).
+
+## Protocol (default `session` = the official HGD split)
+
+- Train on the official **training runs** (~880 trials in 4-class, ~440 in 2-class).
+- Validation = the last 25 % of the training runs, in time order. It is used for early stopping, the
+  learning-rate schedule, the profile choice and the saliency.
+- The model is then refitted on all training runs, and the plateau learning rates are replayed.
+- Test once on the official **test runs** (~160 / ~80 trials). Seeds 42, 43, 44 are averaged.
+- The test runs are never used for any choice, and CSP/MI/ReliefF see the training runs only.
+- Montages are leave-one-subject-out.
+
+## What was wrong in the original scripts (`legacy_unrevised/original_scripts/`)
+
+- **Wrong classes:** labels `[0, 1]` are feet vs left hand under braindecode's alphabetical mapping, not left
+  vs right. So the "left/right" ERD maps and the ERD-based method ranking used the wrong contrast.
+- **8-s windows:** the stop offset of +4 s gave 0–8 s windows that run into the next trial.
+- **Test data in selection:** saliency was computed on the test fold, and one global montage came from all
+  14 subjects (test trials included). The attribution methods were chosen by their ERD correlation.
+- **Post-cue ERD baseline**, and inconsistent normalisation between the files.
+
+Full list: `docs/REVIEW_CROSSWALK.md`, section I.
+
+## Training recipes (picked per subject on validation data only, by `*_tune.py`)
+
+| Profile | Settings | Source |
+|---|---|---|
+| `original` | 100 Hz, 4–38 Hz, no standardisation, 0–4 s, F1 8 / D 2 / F2 16, kernel 64, dropout 0.3, AdamW 5e-4 / 1e-4, plateau (0.5, 30) on val loss, ≤600 epochs, patience 150, batch 96, label smoothing 0.1, clip 10 | your scripts / paper Sec. 3.4, window fixed |
+| `ems` | `original` + exponential moving standardisation | braindecode / Schirrmeister 2017 standard for HGD |
+| `lawhern128` | 128 Hz, kernel 64 (fs/2), EMS, 0.5–4 s, dropout 0.25, lr 1e-3, cosine, batch 64 | EEGNet paper (Lawhern et al. 2018), within-subject |

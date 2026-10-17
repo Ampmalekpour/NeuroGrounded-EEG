@@ -21,7 +21,8 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))          # folder holding eegnetv4_hgd_common.py
 os.environ["EEG_CLASS_MODE"] = "2class"           # this folder is the 2class experiment
-os.environ.setdefault("EEG_RESULTS_DIR", os.path.join(HERE, "results"))
+os.environ.setdefault("EEG_RESULTS_DIR", os.path.join(
+    HERE, "results" if os.environ.get("EEG_PROTOCOL", "session") == "blocks" else "results_session"))
 
 import json
 import numpy as np
@@ -34,6 +35,11 @@ SELECTION_METRIC = "magnitude_pearson"
 METRIC_KEYS = ["magnitude_pearson", "magnitude_spearman", "class_specific_pearson",
                "class_specific_spearman", "lateralisation_pearson", "lateralisation_spearman",
                "legacy_signed_LR_pearson", "legacy_signed_LR_spearman"]
+# correlations exactly as the ORIGINAL scripts computed them (saliency vs each ERD map, and vs the
+# plain-gradient map); reported for comparison with the earlier numbers, not used for any choice
+ORIG_KEYS = [f"orig_{n}_{k}" for n in ("ERD_L", "ERD_R", "ERD_LR", "ERD_comb", "vs_grad")
+             for k in ("pearson", "spearman")]
+METRIC_KEYS = METRIC_KEYS + ORIG_KEYS
 assert ATTR_SELECTION in ("all", "best"), "EEG_ATTR_SELECTION must be 'all' or 'best'"
 
 
@@ -41,9 +47,27 @@ def compute_alignment(subject_sal):
     metrics = {}
     for sid, by_method in subject_sal.items():
         erd = C.get_erd_maps(sid, C.FULL_CHANNELS)
-        metrics[sid] = {m: C.alignment_metrics(v["all"], v["by_class"], erd, C.CLASS_MODE)
+        grad_ref = by_method["grad"]["all"] if "grad" in by_method else None
+        metrics[sid] = {m: C.alignment_metrics(v["all"], v["by_class"], erd, C.CLASS_MODE, grad_ref=grad_ref)
                         for m, v in by_method.items()}
+    print_correlations(metrics)
     return metrics
+
+
+def print_correlations(metrics):
+    """Per-subject correlation table in the style of the original scripts (Pearson)."""
+    cols = ["orig_ERD_L", "orig_ERD_R", "orig_ERD_LR", "orig_ERD_comb", "orig_vs_grad",
+            "magnitude", "class_specific", "lateralisation"]
+    print("\nSaliency-ERD correlations (Pearson). orig_* = as in the original scripts; the last three "
+          "are the sign-invariant metrics used in the paper.")
+    print(f"{'subj':>4} {'method':>20} " + " ".join(f"{c.replace('orig_', ''):>14}" for c in cols))
+    for sid, by_m in metrics.items():
+        for m, v in by_m.items():
+            print(f"S{sid:02d} {m:>20} " + " ".join(f"{v[c + '_pearson']:>+14.3f}" for c in cols))
+    print("Fisher-z mean over subjects:")
+    for m in next(iter(metrics.values())):
+        vals = [C.fisher_mean_ci([metrics[s][m][c + "_pearson"] for s in metrics])["mean"] for c in cols]
+        print(f"{'mean':>4} {m:>20} " + " ".join(f"{x:>+14.3f}" for x in vals))
 
 
 def saliency_montages(subject_sal, metrics):
@@ -108,6 +132,10 @@ def main():
     metrics = compute_alignment(subject_sal)
     align_summary = save_alignment(full_dir, metrics)
     save_figures(full_dir, subject_sal)
+    # EXPLORATORY (curiosity only): more physiological maps and their correlation with saliency.
+    # Never used for any choice; failures are recorded and do not stop the pipeline.
+    if os.environ.get("EEG_SKIP_PHYSIOLOGY", "0") != "1":
+        C.run_physiology(subject_sal, full_dir)
 
     # Phase 2: LOSO montages and retraining
     montages, chosen = saliency_montages(subject_sal, metrics)

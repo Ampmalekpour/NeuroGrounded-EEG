@@ -1,18 +1,21 @@
 # run_all.py  (repository root)
 #
-# Coordinator for BNCI2014-001. Runs every experiment of each model in this order:
+# Coordinator for both datasets (--dataset bnci | hgd, default bnci). Runs every experiment of each
+# model in this order:
 #
-#   EEGNetV4/BNCI_001 -> EEGItNet/BNCI_001 -> Deep4net/BNCI_001 -> EEGConformer/BNCI_001
+#   EEGNetV4 -> EEG-ITNet -> Deep4Net -> EEGConformer     (folders <Model>/BNCI_001 or <Model>/HGD)
 #
 # for both class modes, then builds each model's reviewer tables and a cross-model summary.
 #
 # Protocols (--protocol):
-#   session (default)  official BCI IV-2a split: train on session 1, validate on its last 25 %,
-#                      refit on all of session 1, test once on session 2, average the seeds
-#                      (seed ensemble). Writes to <class>/results_session/, <class>/logs_session/,
-#                      <model>/report_session/ and reports/BNCI_001_session/.
+#   session (default)  the dataset's OFFICIAL split. BNCI2014-001: train on session 1, test on
+#                      session 2. HGD: train on the official training runs, test on the official test
+#                      runs. Validation = last 25 % of the training data; refit on all of it; test
+#                      once; seeds averaged (seed ensemble). Writes to <class>/results_session/,
+#                      <class>/logs_session/, <model folder>/report_session/ and
+#                      reports/<BNCI_001|HGD>_session/.
 #   blocks             4 chronological blocks (first revision). Writes to <class>/results/,
-#                      <class>/logs/, <model>/report/ and reports/BNCI_001/.
+#                      <class>/logs/, <model folder>/report/ and reports/<BNCI_001|HGD>/.
 # The two protocols never write into each other's folders, so earlier results are kept.
 #
 # For each model and class mode (2class, then 4class) the steps run in this order:
@@ -29,7 +32,8 @@
 # again (--force redoes steps). A failed step stops the run (--keep-going continues).
 #
 # Examples
-#   python run_all.py                                  # all 4 models, session protocol
+#   python run_all.py                                  # all 4 models, BNCI, session protocol
+#   python run_all.py --dataset hgd --models eegnetv4  # EEGNetV4 on HGD
 #   python run_all.py --models eegitnet deep4net       # some models (still in the fixed order)
 #   python run_all.py --classes 2class                 # one class mode
 #   python run_all.py --steps aggregate                # rebuild all tables from existing results
@@ -47,18 +51,26 @@ import subprocess
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = HERE
-MODELS = {                      # run in this order
-    "eegnetv4": os.path.join(REPO, "EEGNetV4", "BNCI_001"),
-    "eegitnet": os.path.join(REPO, "EEGItNet", "BNCI_001"),
-    "deep4net": os.path.join(REPO, "Deep4net", "BNCI_001"),
-    "eegconformer": os.path.join(REPO, "EEGConformer", "BNCI_001"),
+MODEL_DIRS = {                  # run in this order
+    "eegnetv4": "EEGNetV4",
+    "eegitnet": "EEGItNet",
+    "deep4net": "Deep4net",
+    "eegconformer": "EEGConformer",
 }
-PROTOCOL_DIRS = {               # results, logs, per-model report, combined report, status file
-    "session": ("results_session", "logs_session", "report_session",
-                os.path.join(REPO, "reports", "BNCI_001_session"), "run_all_status_session.json"),
-    "blocks": ("results", "logs", "report",
-               os.path.join(REPO, "reports", "BNCI_001"), "run_all_status.json"),
+DATASET_DIRS = {"bnci": "BNCI_001", "hgd": "HGD"}
+PROTOCOL_DIRS = {               # results, logs, per-model report, combined-report suffix, status suffix
+    "session": ("results_session", "logs_session", "report_session", "_session", "_session"),
+    "blocks": ("results", "logs", "report", "", ""),
 }
+
+
+def protocol_paths(dataset, protocol):
+    """(results, logs, report, combined report folder, status file) for a dataset and protocol.
+    The BNCI names are unchanged from earlier runs, so their status files and reports are reused."""
+    res_sub, log_sub, rep_sub, rep_suffix, status_suffix = PROTOCOL_DIRS[protocol]
+    ds = DATASET_DIRS[dataset]
+    status = f"run_all_status{status_suffix}.json" if dataset == "bnci" else f"run_all_status_hgd{status_suffix}.json"
+    return res_sub, log_sub, rep_sub, os.path.join(REPO, "reports", ds + rep_suffix), status
 AGGREGATOR = os.path.join(REPO, "analysis", "aggregate_results.py")
 STEPS = ["tune", "saliency", "csp", "relieff", "mi", "controls"]
 DONE = {
@@ -101,8 +113,9 @@ def run_step(cls_dir, step, controls, log_path, results_dir, protocol):
 
 def main():
     ap = argparse.ArgumentParser(description="BNCI2014-001 coordinator (see the header of run_all.py)")
+    ap.add_argument("--dataset", choices=list(DATASET_DIRS), default="bnci")
     ap.add_argument("--protocol", choices=list(PROTOCOL_DIRS), default="session")
-    ap.add_argument("--models", nargs="*", default=list(MODELS), help=f"subset of {list(MODELS)}")
+    ap.add_argument("--models", nargs="*", default=list(MODEL_DIRS), help=f"subset of {list(MODEL_DIRS)}")
     ap.add_argument("--classes", nargs="*", default=["2class", "4class"])
     ap.add_argument("--steps", nargs="*", default=STEPS + ["aggregate"],
                     help=f"subset of {STEPS + ['aggregate']}")
@@ -117,14 +130,15 @@ def main():
     unknown = set(steps) - set(STEPS + ["aggregate"])
     if unknown:
         raise SystemExit(f"unknown steps: {sorted(unknown)}")
-    bad = set(a.models) - set(MODELS)
+    bad = set(a.models) - set(MODEL_DIRS)
     if bad:
-        raise SystemExit(f"unknown models: {sorted(bad)}; choose from {list(MODELS)}")
+        raise SystemExit(f"unknown models: {sorted(bad)}; choose from {list(MODEL_DIRS)}")
+    MODELS = {m: os.path.join(REPO, d, DATASET_DIRS[a.dataset]) for m, d in MODEL_DIRS.items()}
     models = [m for m in MODELS if m in a.models]                    # always in the fixed order
-    res_sub, log_sub, rep_sub, combined_out, status_name = PROTOCOL_DIRS[a.protocol]
+    res_sub, log_sub, rep_sub, combined_out, status_name = protocol_paths(a.dataset, a.protocol)
     if a.protocol == "session" and not os.environ.get("EEG_SEEDS"):
         os.environ["EEG_SEEDS"] = "42,43,44"                          # needed for the seed ensemble
-    print(f"[run_all] protocol={a.protocol} models={models} classes={a.classes} "
+    print(f"[run_all] dataset={a.dataset} protocol={a.protocol} models={models} classes={a.classes} "
           f"seeds={os.environ.get('EEG_SEEDS', '42')} -> {res_sub}/")
 
     status_path = os.path.join(HERE, status_name)

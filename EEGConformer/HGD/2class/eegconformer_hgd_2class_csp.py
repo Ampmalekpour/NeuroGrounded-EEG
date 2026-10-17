@@ -15,7 +15,8 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))          # folder holding eegconformer_hgd_common.py
 os.environ["EEG_CLASS_MODE"] = "2class"           # this folder is the 2class experiment
-os.environ.setdefault("EEG_RESULTS_DIR", os.path.join(HERE, "results"))
+os.environ.setdefault("EEG_RESULTS_DIR", os.path.join(
+    HERE, "results" if os.environ.get("EEG_PROTOCOL", "session") == "blocks" else "results_session"))
 
 import numpy as np
 from mne.decoding import CSP
@@ -45,7 +46,7 @@ def main():
     print("\n" + "=" * 80 + "\nPHASE 1: PER-SUBJECT CSP SCORES (22 ch) - 2class\n" + "=" * 80)
     subject_scores = {}
     for sid in C.SUBJECT_IDS:
-        X, y, _ = C.load_subject_windows(sid, C.FULL_CHANNELS, C.CLASS_MODE)
+        X, y, _ = C.load_selection_trials(sid, C.FULL_CHANNELS, C.CLASS_MODE)
         subject_scores[sid] = csp_scores(X, y)
         top = C.top_k_channels(subject_scores[sid], C.FULL_CHANNELS, C.REDUCED_N_CHANNELS)
         print(f"  S{sid:02d} CSP top-{C.REDUCED_N_CHANNELS}: " + ", ".join(f"{c} ({v:.3f})" for c, v in top))
