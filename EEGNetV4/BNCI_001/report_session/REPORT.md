@@ -1,6 +1,6 @@
-# Results report — EEGNetV4\BNCI_001
+# Results report — EEGNetV4/BNCI_001
 
-Generated 2026-10-16 18:26 from the saved `results.json` files. TOST margin ±6 percentage points. Results folder: `<class>/results_session/`.
+Generated 2026-10-17 10:50 from the saved `results.json` files. TOST margin ±6 percentage points. Results folder: `<class>/results_session/`.
 
 ## 2class
 
@@ -254,8 +254,6 @@ folds: "train on session 1 (last 25% of it = validation, chronological), refit o
 seeds: [42, 43, 44]
 ```
 
-Figures (50 topomaps: saliency per method/subject, group maps, ERD/ERS) copied to `2class\figures`.
-
 ## 4class
 
 ### T1. Test accuracy (%) per subject — chance 25.0%
@@ -507,5 +505,3 @@ checkpoint_rule: "lowest validation loss, early stopping with patience"
 folds: "train on session 1 (last 25% of it = validation, chronological), refit on all of session 1, test once on session 2 (official BCI IV-2a split)"
 seeds: [42, 43, 44]
 ```
-
-Figures (50 topomaps: saliency per method/subject, group maps, ERD/ERS) copied to `4class\figures`.

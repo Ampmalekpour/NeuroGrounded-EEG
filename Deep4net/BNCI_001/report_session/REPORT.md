@@ -1,6 +1,6 @@
 # Results report — Deep4net/BNCI_001
 
-Generated 2026-10-16 07:38 from the saved `results.json` files. TOST margin ±6 percentage points. Results folder: `<class>/results_session/`.
+Generated 2026-10-17 10:50 from the saved `results.json` files. TOST margin ±6 percentage points. Results folder: `<class>/results_session/`.
 
 ## 2class
 
