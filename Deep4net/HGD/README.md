@@ -14,17 +14,24 @@ python run_all.py --dataset hgd --models deep4net
 - If it stops, run the same command again; finished steps are skipped.
 - Results: `Deep4net/HGD/report_session/REPORT.md` and `reports/HGD_session/SUMMARY.md`.
 - Your first-revision HGD results stay in `<class>/results/` and are never touched (new runs write to
-  `<class>/results_session/`).
+  `<class>/results_session/`). The invalid first session run is kept in `*_invalid_v1/` folders.
 
-## Protocol (default `session` = the official HGD split)
+## Protocol (default `session`)
 
-- Train on the official **training runs** (~880 trials in 4-class, ~440 in 2-class).
-- Validation = the last 25 % of the training runs, in time order. It is used for early stopping, the
-  learning-rate schedule, the profile choice and the saliency.
-- The model is then refitted on all training runs, and the plateau learning rates are replayed.
-- Test once on the official **test runs** (~160 / ~80 trials). Seeds 42, 43, 44 are averaged.
-- The test runs are never used for any choice, and CSP/MI/ReliefF see the training runs only.
-- Montages are leave-one-subject-out.
+- **Duplicated recordings are dropped.** For subjects 6–14, MOABB's "test" file is an exact copy of the
+  training file (see `analysis/hgd_data_check.csv`). Testing on it would mean testing on training data.
+- **Test set, one rule for all 14 subjects:**
+  - subjects 1–5: the genuine official test run (160 trials in 4-class, 80 in 2-class);
+  - subjects 6–14: the chronologically last 160 trials (80 in 2-class) of the single recording, at most
+    20 % of the trials (subject 11 has only 160 trials, so 32).
+- **Validation** = the last 25 % of the remaining training trials, in time order. It is used for
+  checkpoints, the learning-rate schedule, the profile choice and the saliency.
+- **Checkpoint** = the highest validation accuracy, never before epoch 20. The lowest-loss rule had kept
+  the untrained epoch-1 model for ~15 % of the 2-class seeds.
+- **Refit** on all training trials (the plateau learning rates are replayed), then test once. Seeds 42,
+  43 and 44 are averaged.
+- The test trials are never used for any choice. CSP/MI/ReliefF see only the training and validation
+  trials. Montages are leave-one-subject-out.
 
 ## What was wrong in the original scripts (`legacy_unrevised/original_scripts/`)
 

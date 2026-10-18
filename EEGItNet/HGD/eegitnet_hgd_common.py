@@ -129,6 +129,9 @@ EVENT_DURATION_S = 4.0
 SPLIT_KEY = "run"
 
 # ---- Training / preprocessing profiles -----------------------------------------------------
+# Checkpoint: highest VALIDATION accuracy (loss breaks ties), not before epoch 20. With the small HGD
+# 2-class validation sets, lowest-loss selection kept the untrained epoch-1 model for ~15 % of the
+# seeds (one-class predictions); the refit uses the chosen epoch count (>= MIN_REFIT_EPOCHS).
 # "original" = the provided HGD scripts for this model, with the bugs fixed (see header). The others
 # are literature settings for this architecture. *_tune.py picks one per subject using ONLY the other
 # subjects' VALIDATION accuracy (the test runs are never scored); whatever is chosen is used for every
@@ -136,7 +139,7 @@ SPLIT_KEY = "run"
 _BASE = dict(sfreq=100, band_hz=(4.0, 38.0), window_s=(0.0, 4.0), norm=None, car=False,
              lr=5e-4, weight_decay=1e-4, scheduler="plateau", plateau_factor=0.5, plateau_patience=30,
              max_epochs=600, patience=150, batch_size=96, label_smoothing=0.1, grad_clip=10.0,
-             dropout=0.3, augment=False)
+             dropout=0.3, augment=False, select_on="val_acc", min_select_epoch=20)
 PROFILES = {
     # the provided HGD EEG-ITNet script (dropout 0.3, 100 Hz), window fixed to 0-4 s
     "original":  dict(_BASE),
@@ -219,6 +222,8 @@ def config_snapshot():
         "ems_params": {"factor_new": EMS_FACTOR_NEW, "init_block_size": EMS_INIT_BLOCK,
                        "used_when": "profile norm == 'ems'"},
         "split_key": SPLIT_KEY,
+        "duplicated_recordings_dropped": DEDUP_LOG,
+        "holdout_when_no_genuine_test_run": {"trials_4class": HOLDOUT_TRIALS, "max_fraction": HOLDOUT_MAX_FRAC},
         "event_duration_s": EVENT_DURATION_S,
         "profiles": PROFILES, "augmentation": AUGMENT, "profile_default": DEFAULT_PROFILE,
         "profile_selection": selection,
@@ -403,7 +408,7 @@ def load_subject_windows(subject_id, channels, class_mode, cfg=None):
         X, y = _synthetic_windows(list(channels), n_expected, seed=subject_id)
         sessions = (np.arange(len(y)) >= int(0.85 * len(y))).astype(np.int64)   # ~ HGD train/test sizes
     else:
-        dataset = MOABBDataset(DATASET_NAME, subject_ids=[subject_id])
+        dataset = distinct_recordings(MOABBDataset(DATASET_NAME, subject_ids=[subject_id]), subject_id)
         preprocessors = [
             Preprocessor("pick_channels", ch_names=list(channels), ordered=True),
             Preprocessor(scale_to_microvolts, apply_on_array=True),
@@ -468,25 +473,69 @@ FOLDS_NOTE = {
 }
 
 
+# ---- Duplicated recordings in the MOABB copy of HGD ------------------------------------------
+# For subjects 6-14 the "1test" recording delivered by MOABB is an exact copy of "0train" (same
+# signal, same events; checked with analysis/check_hgd_data.py). Testing on it would test on the
+# training data. Such duplicates are dropped at load time, in every loader (models, ERD, physiology).
+# Those subjects then have one recording, and the session protocol holds out its chronologically
+# last HOLDOUT_TRIALS trials (the size of the official HGD test set; at most HOLDOUT_MAX_FRAC of the
+# trials) as the test set. Subjects 1-5 keep their genuine official test run.
+HOLDOUT_TRIALS = 160             # 4-class count; scaled to the class mode (80 for 2class)
+HOLDOUT_MAX_FRAC = 0.2
+DEDUP_LOG = {}                   # subject -> list of dropped runs (written to results.json)
+
+
+def _signal_fingerprint(raw, n=20000):
+    data = raw.get_data(picks=[0, 1, 2], start=1000, stop=min(raw.n_times, 1000 + n))
+    return hashlib.md5(np.round(data * 1e9).astype(np.int64).tobytes()).hexdigest()
+
+
+def distinct_recordings(dataset, subject_id):
+    """Drop recordings whose signal is identical to an earlier recording of the same subject."""
+    from braindecode.datasets import BaseConcatDataset
+    seen, keep, dropped = {}, [], []
+    for d in dataset.datasets:
+        fp = _signal_fingerprint(d.raw)
+        name = str(d.description.get(SPLIT_KEY, "?"))
+        if fp in seen:
+            dropped.append(f"{name} (copy of {seen[fp]})")
+            continue
+        seen[fp] = name
+        keep.append(d)
+    if dropped:
+        DEDUP_LOG[int(subject_id)] = dropped
+        print(f"  S{int(subject_id):02d}: dropped duplicated recording(s): {', '.join(dropped)}")
+    return BaseConcatDataset(keep) if dropped else dataset
+
+
 def make_folds(n_samples, info=None):
-    """[(train, validation, test), ...] for the current PROTOCOL."""
+    """[(train, validation, test), ...] for the current PROTOCOL.
+    session: test = the official test run when it is a genuine recording; otherwise (duplicated
+    test file, see DEDUP_LOG) the chronologically last HOLDOUT_TRIALS trials (scaled to the class
+    mode, at most HOLDOUT_MAX_FRAC). Validation = last VAL_FRACTION of the remaining training data."""
     if PROTOCOL == "blocks":
         return make_blockwise_folds(n_samples)
     s = np.asarray(info["sessions"])
     first, second = np.where(s == 0)[0], np.where(s == 1)[0]
-    if len(first) == 0 or len(second) == 0:
-        raise RuntimeError("session protocol needs two sessions; found "
-                           f"{len(first)} / {len(second)} trials. Use EEG_PROTOCOL=blocks.")
+    if len(first) == 0:
+        raise RuntimeError("no training trials found")
+    if len(second) == 0:                         # no genuine test recording: chronological hold-out
+        n_classes_mode = len(class_names(CLASS_MODE))
+        n_te = min(int(round(HOLDOUT_TRIALS * n_classes_mode / 4)),
+                   int(round(HOLDOUT_MAX_FRAC * len(first))))
+        first, second = first[:-n_te], first[-n_te:]
     n_val = max(1, int(round(VAL_FRACTION * len(first))))
     return [(first[:-n_val], first[-n_val:], second)]
 
 
 def load_selection_trials(subject_id, channels, class_mode, cfg=None):
     """Trials that channel-SELECTION methods (CSP, MI, ReliefF) may use: under the session protocol
-    only session 1, so session 2 never influences any choice (montages are also leave-one-subject-out)."""
+    exactly the training + validation trials of make_folds, so the test trials (official test run or
+    hold-out) never influence any choice (montages are also leave-one-subject-out)."""
     X, y, info = load_subject_windows(subject_id, channels, class_mode, cfg)
     if PROTOCOL == "session":
-        keep = np.asarray(info["sessions"]) == 0
+        (tr, va, _te), = make_folds(len(y), info)
+        keep = np.sort(np.concatenate([tr, va]))
         X, y = X[keep], y[keep]
     return X, y, info
 
@@ -649,8 +698,10 @@ def train_one_fold(X, y, train_idx, val_idx, test_idx, seed, tag="", cfg=None, e
     scheduler, on_val = (None, False) if replay else make_scheduler(optimizer, cfg, max_epochs)
     aug = cfg.get("augment", False)
 
-    best_state, best_val_loss, best_val_acc, best_epoch, no_improve = None, float("inf"), 0.0, 0, 0
+    best_state, best_val_loss, best_val_acc, best_epoch, no_improve = None, float("inf"), -1.0, 0, 0
     epochs_run, lr_history = 0, []
+    select_on = cfg.get("select_on", "val_loss")
+    min_select = int(cfg.get("min_select_epoch", 1))
     for epoch in range(1, max_epochs + 1):
         epochs_run = epoch
         if replay:
@@ -688,24 +739,30 @@ def train_one_fold(X, y, train_idx, val_idx, test_idx, seed, tag="", cfg=None, e
                 scheduler.step(val_loss)
             else:
                 scheduler.step()
-        if val_loss < best_val_loss:
-            best_val_loss, best_val_acc, best_epoch = val_loss, val_acc, epoch
-            best_state = copy.deepcopy(model.state_dict())
-            no_improve = 0
+        if select_on == "val_acc":           # accuracy first, loss breaks ties
+            improved = val_acc > best_val_acc or (val_acc == best_val_acc and val_loss < best_val_loss)
         else:
-            no_improve += 1
+            improved = val_loss < best_val_loss
+        if epoch >= min_select:              # no checkpoint from the first (untrained) epochs
+            if improved:
+                best_val_loss, best_val_acc, best_epoch = val_loss, val_acc, epoch
+                best_state = copy.deepcopy(model.state_dict())
+                no_improve = 0
+            else:
+                no_improve += 1
 
         if epoch == 1 or epoch % 50 == 0:
             print(f"{tag} Ep {epoch:03d} | tr {np.mean(losses):.4f} | val {val_acc:.1%} | "
-                  f"best_val_loss={best_val_loss:.4f} (ep {best_epoch}) | lr {lr_history[-1]:.1e}")
+                  f"best val acc {max(best_val_acc, 0):.1%} (ep {best_epoch}) | lr {lr_history[-1]:.1e}")
         if no_improve >= cfg["patience"]:
             print(f"{tag} Early stop @ ep {epoch} (best epoch {best_epoch})")
             break
 
     if final_epochs:
         best_state, best_epoch, best_val_acc = copy.deepcopy(model.state_dict()), max_epochs, float("nan")
-    if best_state is None:
-        raise RuntimeError("No best state found")
+    if best_state is None:                   # training shorter than the warm-up: keep the final weights
+        best_state, best_epoch = copy.deepcopy(model.state_dict()), epochs_run
+        best_val_acc = evaluate(model, X_val, y_val, criterion)[1] if len(y_val) else float("nan")
     model.load_state_dict(best_state)
     test_proba = None
     if evaluate_test:
@@ -1115,7 +1172,7 @@ def load_subject_for_erd(subject_id, channels):
         X, y = _synthetic_windows(list(channels), pre + int(4.5 * sf),
                                   seed=subject_id + 500, pre_samples=pre, sfreq=sf)
     else:
-        dataset = MOABBDataset(DATASET_NAME, subject_ids=[subject_id])
+        dataset = distinct_recordings(MOABBDataset(DATASET_NAME, subject_ids=[subject_id]), subject_id)
         preprocessors = [
             Preprocessor("pick_channels", ch_names=list(channels), ordered=True),
             Preprocessor(scale_to_microvolts, apply_on_array=True),
@@ -1332,7 +1389,7 @@ def load_subject_for_physiology(subject_id, channels):
                                   pre_samples=int(round(-PHYS_TMIN * sf)), sfreq=sf)
         mask = np.isin(y, [LEFT_HAND_LABEL, RIGHT_HAND_LABEL])
         return X[mask].astype(np.float64), y[mask], sf
-    dataset = MOABBDataset(DATASET_NAME, subject_ids=[subject_id])
+    dataset = distinct_recordings(MOABBDataset(DATASET_NAME, subject_ids=[subject_id]), subject_id)
     Xs, ys = [], []
     want = {LABEL_NAMES[LEFT_HAND_LABEL]: LEFT_HAND_LABEL, LABEL_NAMES[RIGHT_HAND_LABEL]: RIGHT_HAND_LABEL}
     for d in dataset.datasets:
