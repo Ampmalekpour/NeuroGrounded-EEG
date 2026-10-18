@@ -1,0 +1,24 @@
+EEGNetv4 - HGD - ReliefF 12-channel (LOSO) - 2class
+================================================================================
+
+Subject 01: 50.00%  | montage: CP3, CP2, CP4, CP1, CP5, FC2, CP6, C4, C3, C1, FC5, FCz
+    seed -1 fold 1: 50.00% (majority-class 50.0%)
+Subject 02: 85.00%  | montage: CP3, CP5, CP2, CP1, CP4, FC2, C2, FC4, Cz, C3, C5, C4
+    seed -1 fold 1: 85.00% (majority-class 50.0%)
+Subject 03: 97.50%  | montage: CP3, CP5, CP1, CP6, C2, CP2, FC2, Cz, FC5, C4, CP4, C3
+    seed -1 fold 1: 97.50% (majority-class 50.0%)
+Subject 04: 95.00%  | montage: CP3, CP5, CP1, CP2, FC2, C2, Cz, FC4, FC5, CP6, C4, C5
+    seed -1 fold 1: 95.00% (majority-class 50.0%)
+Subject 05: 68.75%  | montage: CP3, CP1, CP5, CP4, C2, CP6, FC2, CP2, Cz, C4, C3, FC4
+    seed -1 fold 1: 68.75% (majority-class 50.0%)
+Subject 06: 99.55%  | montage: CP3, CP2, CP5, CP1, FC5, Cz, C5, C2, CP6, Pz, FC1, FC3
+    seed -1 fold 1: 99.55% (majority-class 50.0%)
+Subject 07: 100.00%  | montage: CP2, CP3, CP4, C2, CP1, CP5, CP6, FC2, Pz, C4, C1, C3
+    seed -1 fold 1: 100.00% (majority-class 50.0%)
+Subject 08: 88.41%  | montage: CP3, CP5, CP1, Cz, CP4, FC2, FC4, CP2, C2, CP6, C5, FCz
+    seed -1 fold 1: 88.41% (majority-class 50.0%)
+Subject 09: 83.41%  | montage: CP3, CP2, CP5, C2, CP1, CP6, CP4, FC4, FC2, Cz, C5, Pz
+    seed -1 fold 1: 83.41% (majority-class 50.0%)
+
+GRAND MEAN: 85.29% +/- 16.57% (SD across subjects)
+chance 50.0% | mean majority-class 50.0%

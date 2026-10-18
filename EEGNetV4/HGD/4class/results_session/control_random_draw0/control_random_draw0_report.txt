@@ -1,0 +1,24 @@
+EEGNetv4 - HGD - control 'control_random_draw0' - 4class
+================================================================================
+
+Subject 01: 71.88%  | montage: FC3, FC1, FCz, FC2, C3, CP5, CP3, CP1, CPz, CP4, CP6, Pz
+    seed -1 fold 1: 71.88% (majority-class 25.0%)
+Subject 02: 81.25%  | montage: FC5, FC3, FCz, FC6, C3, C2, C6, CP5, CP3, CP2, CP4, CP6
+    seed -1 fold 1: 81.25% (majority-class 25.0%)
+Subject 03: 91.88%  | montage: FC3, FC1, FC2, FC4, C5, C3, Cz, C4, C6, CP5, CP4, Pz
+    seed -1 fold 1: 91.88% (majority-class 25.0%)
+Subject 04: 93.12%  | montage: FC3, FCz, FC2, FC6, C5, C3, C6, CP3, CP1, CPz, CP2, Pz
+    seed -1 fold 1: 93.12% (majority-class 25.0%)
+Subject 05: 84.38%  | montage: FC5, FC3, FCz, FC2, FC4, C5, C1, C2, C6, CP1, CPz, CP2
+    seed -1 fold 1: 84.38% (majority-class 25.0%)
+Subject 06: 97.95%  | montage: FC1, FC2, C5, C3, C1, Cz, C2, C6, CP5, CP3, CP2, Pz
+    seed -1 fold 1: 97.95% (majority-class 25.0%)
+Subject 07: 88.98%  | montage: FC5, FC3, FC1, FCz, FC4, C3, C1, C4, C6, CP3, CP1, CP2
+    seed -1 fold 1: 88.98% (majority-class 25.0%)
+Subject 08: 96.48%  | montage: FCz, FC2, FC6, C3, C1, C4, C6, CP5, CP2, CP4, CP6, Pz
+    seed -1 fold 1: 96.48% (majority-class 25.1%)
+Subject 09: 95.23%  | montage: FC5, FC1, FC4, FC6, C5, C1, Cz, C4, CP3, CP2, CP4, Pz
+    seed -1 fold 1: 95.23% (majority-class 25.0%)
+
+GRAND MEAN: 89.02% +/- 8.48% (SD across subjects)
+chance 25.0% | mean majority-class 25.0%

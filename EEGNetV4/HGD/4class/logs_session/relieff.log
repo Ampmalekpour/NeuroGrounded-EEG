@@ -1,0 +1,396 @@
+$ D:\EEG\braindec\.venv\Scripts\python.exe -u D:\EEG\NeuroGrounded-EEG\EEGNetV4\HGD\4class\eegnetv4_hgd_4class_relieff.py   [EEG_PROTOCOL=session]
+Using device: cuda | class mode: 4class | seeds: [42, 43, 44] | subjects: [1, 2, 3, 4, 5, 6, 7, 8, 9] | synthetic: False | protocol: session
+
+================================================================================
+PHASE 1: PER-SUBJECT RELIEFF SCORES (22 ch) - 4class
+================================================================================
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S01 [4class] profile=lawhern128 X=(480, 22, 448) class counts={'feet': 120, 'left_hand': 120, 'rest': 120, 'right_hand': 120}
+  S01 ReliefF top-12: C4 (1.000), C1 (0.901), C2 (0.807), CP3 (0.697), C3 (0.545), CP1 (0.511), CP4 (0.420), Pz (0.321), CP2 (0.283), Cz (0.267), CPz (0.206), C6 (0.192)
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S02 [4class] profile=lawhern128 X=(973, 22, 448) class counts={'feet': 244, 'left_hand': 242, 'rest': 243, 'right_hand': 244}
+  S02 ReliefF top-12: CP1 (1.000), C4 (0.826), CP3 (0.752), FCz (0.605), C1 (0.590), FC5 (0.556), CP2 (0.534), C2 (0.507), C3 (0.506), FC1 (0.502), C6 (0.499), CPz (0.456)
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S03 [4class] profile=lawhern128 X=(1040, 22, 448) class counts={'feet': 260, 'left_hand': 260, 'rest': 260, 'right_hand': 260}
+  S03 ReliefF top-12: C1 (1.000), C4 (0.955), CP3 (0.909), CP4 (0.902), CP2 (0.887), C2 (0.717), CP1 (0.619), CPz (0.499), C3 (0.498), FC5 (0.470), FC2 (0.467), C6 (0.441)
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S04 [4class] profile=lawhern128 X=(1057, 22, 448) class counts={'feet': 265, 'left_hand': 264, 'rest': 264, 'right_hand': 264}
+  S04 ReliefF top-12: C3 (1.000), C2 (0.819), C4 (0.699), CP3 (0.450), CP2 (0.428), C1 (0.384), Pz (0.376), CP1 (0.340), CP4 (0.274), FCz (0.228), FC6 (0.227), FC1 (0.222)
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S05 [4class] profile=lawhern128 X=(880, 22, 448) class counts={'feet': 220, 'left_hand': 220, 'rest': 220, 'right_hand': 220}
+  S05 ReliefF top-12: C1 (1.000), C3 (0.997), C2 (0.913), C4 (0.762), CP2 (0.419), CP3 (0.376), FC3 (0.324), Pz (0.289), CP1 (0.288), C5 (0.230), FCz (0.222), CPz (0.213)
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S06 [4class] profile=lawhern128 X=(1760, 22, 448) class counts={'feet': 440, 'left_hand': 440, 'rest': 440, 'right_hand': 440}
+  S06 ReliefF top-12: C4 (1.000), Pz (0.984), C1 (0.856), C2 (0.751), C3 (0.749), CP4 (0.679), CP3 (0.467), FC1 (0.417), CP5 (0.395), FCz (0.342), C5 (0.328), CPz (0.318)
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S07 [4class] profile=lawhern128 X=(1760, 22, 448) class counts={'feet': 440, 'left_hand': 440, 'rest': 440, 'right_hand': 440}
+  S07 ReliefF top-12: C2 (1.000), C1 (0.757), C3 (0.549), CP3 (0.513), CP1 (0.425), CPz (0.373), CP2 (0.358), CP5 (0.331), C4 (0.291), FC1 (0.246), C5 (0.239), C6 (0.233)
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S08 [4class] profile=lawhern128 X=(1308, 22, 448) class counts={'feet': 326, 'left_hand': 328, 'rest': 326, 'right_hand': 328}
+  S08 ReliefF top-12: C1 (1.000), C4 (0.981), C2 (0.885), CP1 (0.777), CP2 (0.721), C3 (0.685), CP3 (0.574), CPz (0.472), FC1 (0.443), FC4 (0.429), CP6 (0.403), FC2 (0.369)
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S09 [4class] profile=lawhern128 X=(1760, 22, 448) class counts={'feet': 440, 'left_hand': 440, 'rest': 440, 'right_hand': 440}
+  S09 ReliefF top-12: C2 (1.000), C1 (0.513), CP3 (0.312), CP5 (0.294), C4 (0.291), C5 (0.264), Cz (0.230), CP1 (0.207), C3 (0.202), FC3 (0.197), CP4 (0.181), CP6 (0.172)
+
+================================================================================
+SUBJECT 01 — relieff_reduced — 4class — session — profile lawhern128 — 12 ch: C2, C1, C4, C3, CP3, CP1, CP2, Pz, CPz, FC1, CP4, FC5
+================================================================================
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S01 [4class] profile=lawhern128 X=(480, 12, 448) class counts={'feet': 120, 'left_hand': 120, 'rest': 120, 'right_hand': 120}
+S01 seed42 F1 [fit] Ep 001 | tr 1.4332 | val 21.2% | best_val_loss=1.3865 (ep 1) | lr 1.0e-03
+S01 seed42 F1 [fit] Ep 050 | tr 0.4743 | val 22.5% | best_val_loss=1.3344 (ep 18) | lr 9.8e-04
+S01 seed42 F1 [fit] Ep 100 | tr 0.2198 | val 58.8% | best_val_loss=1.0540 (ep 100) | lr 9.1e-04
+S01 seed42 F1 [fit] Ep 150 | tr 0.1415 | val 68.8% | best_val_loss=0.8800 (ep 116) | lr 8.0e-04
+S01 seed42 F1 [fit] Ep 200 | tr 0.1143 | val 72.5% | best_val_loss=0.8800 (ep 116) | lr 6.6e-04
+S01 seed42 F1 [fit] Early stop @ ep 216 (best epoch 116)
+S01 seed42 F1 [refit] Ep 001/116 | tr 1.4142 (refit, no early stopping)
+S01 seed42 F1 [refit] Ep 050/116 | tr 0.4204 (refit, no early stopping)
+S01 seed42 F1 [refit] Ep 100/116 | tr 0.3330 (refit, no early stopping)
+S01 seed42 F1: test 71.88% (val 65.00%, epochs 116)
+S01 seed43 F1 [fit] Ep 001 | tr 1.4435 | val 28.7% | best_val_loss=1.3865 (ep 1) | lr 1.0e-03
+S01 seed43 F1 [fit] Ep 050 | tr 0.4937 | val 31.2% | best_val_loss=1.3352 (ep 19) | lr 9.8e-04
+S01 seed43 F1 [fit] Ep 100 | tr 0.2896 | val 60.0% | best_val_loss=0.9725 (ep 94) | lr 9.1e-04
+S01 seed43 F1 [fit] Ep 150 | tr 0.1326 | val 67.5% | best_val_loss=0.9298 (ep 139) | lr 8.0e-04
+S01 seed43 F1 [fit] Ep 200 | tr 0.0907 | val 72.5% | best_val_loss=0.8701 (ep 193) | lr 6.6e-04
+S01 seed43 F1 [fit] Ep 250 | tr 0.0809 | val 76.2% | best_val_loss=0.8701 (ep 193) | lr 5.0e-04
+S01 seed43 F1 [fit] Early stop @ ep 293 (best epoch 193)
+S01 seed43 F1 [refit] Ep 001/193 | tr 1.4414 (refit, no early stopping)
+S01 seed43 F1 [refit] Ep 050/193 | tr 0.4595 (refit, no early stopping)
+S01 seed43 F1 [refit] Ep 100/193 | tr 0.3085 (refit, no early stopping)
+S01 seed43 F1 [refit] Ep 150/193 | tr 0.2831 (refit, no early stopping)
+S01 seed43 F1: test 67.50% (val 72.50%, epochs 193)
+S01 seed44 F1 [fit] Ep 001 | tr 1.4476 | val 21.2% | best_val_loss=1.3854 (ep 1) | lr 1.0e-03
+S01 seed44 F1 [fit] Ep 050 | tr 0.4092 | val 45.0% | best_val_loss=1.3603 (ep 17) | lr 9.8e-04
+S01 seed44 F1 [fit] Ep 100 | tr 0.2052 | val 53.8% | best_val_loss=1.2988 (ep 98) | lr 9.1e-04
+S01 seed44 F1 [fit] Ep 150 | tr 0.1134 | val 70.0% | best_val_loss=0.7712 (ep 148) | lr 8.0e-04
+S01 seed44 F1 [fit] Ep 200 | tr 0.0972 | val 78.8% | best_val_loss=0.5944 (ep 171) | lr 6.6e-04
+S01 seed44 F1 [fit] Ep 250 | tr 0.0709 | val 78.8% | best_val_loss=0.5944 (ep 171) | lr 5.0e-04
+S01 seed44 F1 [fit] Early stop @ ep 271 (best epoch 171)
+S01 seed44 F1 [refit] Ep 001/171 | tr 1.4419 (refit, no early stopping)
+S01 seed44 F1 [refit] Ep 050/171 | tr 0.3895 (refit, no early stopping)
+S01 seed44 F1 [refit] Ep 100/171 | tr 0.2907 (refit, no early stopping)
+S01 seed44 F1 [refit] Ep 150/171 | tr 0.2371 (refit, no early stopping)
+S01 seed44 F1: test 71.88% (val 75.00%, epochs 171)
+S01 seed ensemble (3 seeds): test 69.38% (single seeds 71.9, 67.5, 71.9)
+
+================================================================================
+SUBJECT 02 — relieff_reduced — 4class — session — profile lawhern128 — 12 ch: C2, C1, C4, C3, CP3, CP2, CP1, Pz, CP4, CPz, FC1, CP5
+================================================================================
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S02 [4class] profile=lawhern128 X=(973, 12, 448) class counts={'feet': 244, 'left_hand': 242, 'rest': 243, 'right_hand': 244}
+S02 seed42 F1 [fit] Ep 001 | tr 1.3756 | val 28.6% | best_val_loss=1.3851 (ep 1) | lr 1.0e-03
+S02 seed42 F1 [fit] Ep 050 | tr 0.4080 | val 67.5% | best_val_loss=0.7603 (ep 47) | lr 9.8e-04
+S02 seed42 F1 [fit] Ep 100 | tr 0.3221 | val 72.4% | best_val_loss=0.6571 (ep 63) | lr 9.1e-04
+S02 seed42 F1 [fit] Ep 150 | tr 0.2510 | val 72.9% | best_val_loss=0.6571 (ep 63) | lr 8.0e-04
+S02 seed42 F1 [fit] Early stop @ ep 163 (best epoch 63)
+S02 seed42 F1 [refit] Ep 001/63 | tr 1.3735 (refit, no early stopping)
+S02 seed42 F1 [refit] Ep 050/63 | tr 0.5134 (refit, no early stopping)
+S02 seed42 F1: test 79.38% (val 73.40%, epochs 63)
+S02 seed43 F1 [fit] Ep 001 | tr 1.4204 | val 26.6% | best_val_loss=1.3845 (ep 1) | lr 1.0e-03
+S02 seed43 F1 [fit] Ep 050 | tr 0.4495 | val 65.5% | best_val_loss=0.8640 (ep 50) | lr 9.8e-04
+S02 seed43 F1 [fit] Ep 100 | tr 0.2916 | val 75.4% | best_val_loss=0.6572 (ep 70) | lr 9.1e-04
+S02 seed43 F1 [fit] Ep 150 | tr 0.2194 | val 77.8% | best_val_loss=0.6572 (ep 70) | lr 8.0e-04
+S02 seed43 F1 [fit] Early stop @ ep 170 (best epoch 70)
+S02 seed43 F1 [refit] Ep 001/70 | tr 1.4068 (refit, no early stopping)
+S02 seed43 F1 [refit] Ep 050/70 | tr 0.5147 (refit, no early stopping)
+S02 seed43 F1: test 72.50% (val 72.91%, epochs 70)
+S02 seed44 F1 [fit] Ep 001 | tr 1.4319 | val 21.7% | best_val_loss=1.3861 (ep 1) | lr 1.0e-03
+S02 seed44 F1 [fit] Ep 050 | tr 0.4765 | val 73.4% | best_val_loss=0.7771 (ep 50) | lr 9.8e-04
+S02 seed44 F1 [fit] Ep 100 | tr 0.3014 | val 75.4% | best_val_loss=0.5948 (ep 100) | lr 9.1e-04
+S02 seed44 F1 [fit] Ep 150 | tr 0.2390 | val 74.9% | best_val_loss=0.5948 (ep 100) | lr 8.0e-04
+S02 seed44 F1 [fit] Ep 200 | tr 0.2219 | val 73.9% | best_val_loss=0.5948 (ep 100) | lr 6.6e-04
+S02 seed44 F1 [fit] Early stop @ ep 200 (best epoch 100)
+S02 seed44 F1 [refit] Ep 001/100 | tr 1.4156 (refit, no early stopping)
+S02 seed44 F1 [refit] Ep 050/100 | tr 0.4968 (refit, no early stopping)
+S02 seed44 F1 [refit] Ep 100/100 | tr 0.4081 (refit, no early stopping)
+S02 seed44 F1: test 80.62% (val 75.37%, epochs 100)
+S02 seed ensemble (3 seeds): test 81.88% (single seeds 79.4, 72.5, 80.6)
+
+================================================================================
+SUBJECT 03 — relieff_reduced — 4class — session — profile lawhern128 — 12 ch: C2, C1, C4, C3, CP3, CP1, CP2, Pz, CPz, FC1, CP5, FC5
+================================================================================
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S03 [4class] profile=lawhern128 X=(1040, 12, 448) class counts={'feet': 260, 'left_hand': 260, 'rest': 260, 'right_hand': 260}
+S03 seed42 F1 [fit] Ep 001 | tr 1.4015 | val 28.2% | best_val_loss=1.3861 (ep 1) | lr 1.0e-03
+S03 seed42 F1 [fit] Ep 050 | tr 0.1799 | val 89.1% | best_val_loss=0.3797 (ep 43) | lr 9.8e-04
+S03 seed42 F1 [fit] Ep 100 | tr 0.1020 | val 89.1% | best_val_loss=0.3797 (ep 43) | lr 9.1e-04
+S03 seed42 F1 [fit] Early stop @ ep 143 (best epoch 43)
+S03 seed42 F1 [refit] Ep 001/43 | tr 1.3964 (refit, no early stopping)
+S03 seed42 F1: test 91.25% (val 89.55%, epochs 43)
+S03 seed43 F1 [fit] Ep 001 | tr 1.4247 | val 25.0% | best_val_loss=1.3859 (ep 1) | lr 1.0e-03
+S03 seed43 F1 [fit] Ep 050 | tr 0.1967 | val 86.8% | best_val_loss=0.3883 (ep 47) | lr 9.8e-04
+S03 seed43 F1 [fit] Ep 100 | tr 0.0930 | val 90.5% | best_val_loss=0.3648 (ep 51) | lr 9.1e-04
+S03 seed43 F1 [fit] Ep 150 | tr 0.0916 | val 90.0% | best_val_loss=0.3648 (ep 51) | lr 8.0e-04
+S03 seed43 F1 [fit] Early stop @ ep 151 (best epoch 51)
+S03 seed43 F1 [refit] Ep 001/51 | tr 1.4279 (refit, no early stopping)
+S03 seed43 F1 [refit] Ep 050/51 | tr 0.2657 (refit, no early stopping)
+S03 seed43 F1: test 90.00% (val 90.45%, epochs 51)
+S03 seed44 F1 [fit] Ep 001 | tr 1.4581 | val 19.5% | best_val_loss=1.3869 (ep 1) | lr 1.0e-03
+S03 seed44 F1 [fit] Ep 050 | tr 0.2314 | val 87.3% | best_val_loss=0.5856 (ep 43) | lr 9.8e-04
+S03 seed44 F1 [fit] Ep 100 | tr 0.1603 | val 89.1% | best_val_loss=0.5856 (ep 43) | lr 9.1e-04
+S03 seed44 F1 [fit] Early stop @ ep 143 (best epoch 43)
+S03 seed44 F1 [refit] Ep 001/43 | tr 1.4442 (refit, no early stopping)
+S03 seed44 F1: test 88.12% (val 85.00%, epochs 43)
+S03 seed ensemble (3 seeds): test 92.50% (single seeds 91.2, 90.0, 88.1)
+
+================================================================================
+SUBJECT 04 — relieff_reduced — 4class — session — profile lawhern128 — 12 ch: C1, C2, C4, C3, CP3, CP1, CP2, Pz, CPz, CP4, FC1, FC5
+================================================================================
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S04 [4class] profile=lawhern128 X=(1057, 12, 448) class counts={'feet': 265, 'left_hand': 264, 'rest': 264, 'right_hand': 264}
+S04 seed42 F1 [fit] Ep 001 | tr 1.3613 | val 25.4% | best_val_loss=1.3847 (ep 1) | lr 1.0e-03
+S04 seed42 F1 [fit] Ep 050 | tr 0.1170 | val 93.8% | best_val_loss=0.1620 (ep 50) | lr 9.8e-04
+S04 seed42 F1 [fit] Ep 100 | tr 0.0460 | val 97.3% | best_val_loss=0.0553 (ep 98) | lr 9.1e-04
+S04 seed42 F1 [fit] Ep 150 | tr 0.0349 | val 98.2% | best_val_loss=0.0507 (ep 149) | lr 8.0e-04
+S04 seed42 F1 [fit] Ep 200 | tr 0.0308 | val 96.9% | best_val_loss=0.0445 (ep 174) | lr 6.6e-04
+S04 seed42 F1 [fit] Ep 250 | tr 0.0347 | val 96.9% | best_val_loss=0.0427 (ep 247) | lr 5.0e-04
+S04 seed42 F1 [fit] Ep 300 | tr 0.0258 | val 96.4% | best_val_loss=0.0397 (ep 261) | lr 3.5e-04
+S04 seed42 F1 [fit] Ep 350 | tr 0.0251 | val 96.4% | best_val_loss=0.0397 (ep 261) | lr 2.1e-04
+S04 seed42 F1 [fit] Early stop @ ep 361 (best epoch 261)
+S04 seed42 F1 [refit] Ep 001/261 | tr 1.3179 (refit, no early stopping)
+S04 seed42 F1 [refit] Ep 050/261 | tr 0.2197 (refit, no early stopping)
+S04 seed42 F1 [refit] Ep 100/261 | tr 0.2949 (refit, no early stopping)
+S04 seed42 F1 [refit] Ep 150/261 | tr 0.1800 (refit, no early stopping)
+S04 seed42 F1 [refit] Ep 200/261 | tr 0.1067 (refit, no early stopping)
+S04 seed42 F1 [refit] Ep 250/261 | tr 0.0728 (refit, no early stopping)
+S04 seed42 F1: test 95.62% (val 98.21%, epochs 261)
+S04 seed43 F1 [fit] Ep 001 | tr 1.4587 | val 36.2% | best_val_loss=1.3848 (ep 1) | lr 1.0e-03
+S04 seed43 F1 [fit] Ep 050 | tr 0.1257 | val 93.8% | best_val_loss=0.1982 (ep 47) | lr 9.8e-04
+S04 seed43 F1 [fit] Ep 100 | tr 0.0554 | val 95.5% | best_val_loss=0.0971 (ep 80) | lr 9.1e-04
+S04 seed43 F1 [fit] Ep 150 | tr 0.0544 | val 95.5% | best_val_loss=0.0882 (ep 121) | lr 8.0e-04
+S04 seed43 F1 [fit] Ep 200 | tr 0.0332 | val 96.0% | best_val_loss=0.0733 (ep 172) | lr 6.6e-04
+S04 seed43 F1 [fit] Ep 250 | tr 0.0259 | val 96.9% | best_val_loss=0.0733 (ep 172) | lr 5.0e-04
+S04 seed43 F1 [fit] Early stop @ ep 272 (best epoch 172)
+S04 seed43 F1 [refit] Ep 001/172 | tr 1.3843 (refit, no early stopping)
+S04 seed43 F1 [refit] Ep 050/172 | tr 0.2873 (refit, no early stopping)
+S04 seed43 F1 [refit] Ep 100/172 | tr 0.1817 (refit, no early stopping)
+S04 seed43 F1 [refit] Ep 150/172 | tr 0.1108 (refit, no early stopping)
+S04 seed43 F1: test 96.25% (val 97.32%, epochs 172)
+S04 seed44 F1 [fit] Ep 001 | tr 1.3662 | val 25.4% | best_val_loss=1.3816 (ep 1) | lr 1.0e-03
+S04 seed44 F1 [fit] Ep 050 | tr 0.1203 | val 91.1% | best_val_loss=0.1895 (ep 46) | lr 9.8e-04
+S04 seed44 F1 [fit] Ep 100 | tr 0.0620 | val 96.4% | best_val_loss=0.0967 (ep 97) | lr 9.1e-04
+S04 seed44 F1 [fit] Ep 150 | tr 0.0501 | val 95.5% | best_val_loss=0.0841 (ep 138) | lr 8.0e-04
+S04 seed44 F1 [fit] Ep 200 | tr 0.0324 | val 96.4% | best_val_loss=0.0787 (ep 161) | lr 6.6e-04
+S04 seed44 F1 [fit] Ep 250 | tr 0.0347 | val 97.3% | best_val_loss=0.0753 (ep 227) | lr 5.0e-04
+S04 seed44 F1 [fit] Ep 300 | tr 0.0339 | val 96.0% | best_val_loss=0.0753 (ep 227) | lr 3.5e-04
+S04 seed44 F1 [fit] Early stop @ ep 327 (best epoch 227)
+S04 seed44 F1 [refit] Ep 001/227 | tr 1.3218 (refit, no early stopping)
+S04 seed44 F1 [refit] Ep 050/227 | tr 0.3347 (refit, no early stopping)
+S04 seed44 F1 [refit] Ep 100/227 | tr 0.2432 (refit, no early stopping)
+S04 seed44 F1 [refit] Ep 150/227 | tr 0.4097 (refit, no early stopping)
+S04 seed44 F1 [refit] Ep 200/227 | tr 0.1366 (refit, no early stopping)
+S04 seed44 F1: test 96.88% (val 96.88%, epochs 227)
+S04 seed ensemble (3 seeds): test 97.50% (single seeds 95.6, 96.2, 96.9)
+
+================================================================================
+SUBJECT 05 — relieff_reduced — 4class — session — profile lawhern128 — 12 ch: C2, C4, C1, C3, CP3, CP1, CP2, Pz, CP4, CPz, FC1, FC5
+================================================================================
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S05 [4class] profile=lawhern128 X=(880, 12, 448) class counts={'feet': 220, 'left_hand': 220, 'rest': 220, 'right_hand': 220}
+S05 seed42 F1 [fit] Ep 001 | tr 1.4336 | val 22.8% | best_val_loss=1.3864 (ep 1) | lr 1.0e-03
+S05 seed42 F1 [fit] Ep 050 | tr 0.3645 | val 67.2% | best_val_loss=0.7529 (ep 50) | lr 9.8e-04
+S05 seed42 F1 [fit] Ep 100 | tr 0.1920 | val 79.4% | best_val_loss=0.4206 (ep 95) | lr 9.1e-04
+S05 seed42 F1 [fit] Ep 150 | tr 0.1336 | val 80.0% | best_val_loss=0.4110 (ep 128) | lr 8.0e-04
+S05 seed42 F1 [fit] Ep 200 | tr 0.1064 | val 79.4% | best_val_loss=0.3864 (ep 172) | lr 6.6e-04
+S05 seed42 F1 [fit] Ep 250 | tr 0.1140 | val 82.8% | best_val_loss=0.3763 (ep 214) | lr 5.0e-04
+S05 seed42 F1 [fit] Ep 300 | tr 0.0927 | val 82.2% | best_val_loss=0.3695 (ep 258) | lr 3.5e-04
+S05 seed42 F1 [fit] Ep 350 | tr 0.0813 | val 85.6% | best_val_loss=0.3695 (ep 258) | lr 2.1e-04
+S05 seed42 F1 [fit] Early stop @ ep 358 (best epoch 258)
+S05 seed42 F1 [refit] Ep 001/258 | tr 1.4354 (refit, no early stopping)
+S05 seed42 F1 [refit] Ep 050/258 | tr 0.4047 (refit, no early stopping)
+S05 seed42 F1 [refit] Ep 100/258 | tr 0.2176 (refit, no early stopping)
+S05 seed42 F1 [refit] Ep 150/258 | tr 0.1745 (refit, no early stopping)
+S05 seed42 F1 [refit] Ep 200/258 | tr 0.1673 (refit, no early stopping)
+S05 seed42 F1 [refit] Ep 250/258 | tr 0.1352 (refit, no early stopping)
+S05 seed42 F1: test 86.25% (val 82.78%, epochs 258)
+S05 seed43 F1 [fit] Ep 001 | tr 1.4411 | val 28.3% | best_val_loss=1.3851 (ep 1) | lr 1.0e-03
+S05 seed43 F1 [fit] Ep 050 | tr 0.3976 | val 60.6% | best_val_loss=0.8090 (ep 48) | lr 9.8e-04
+S05 seed43 F1 [fit] Ep 100 | tr 0.2652 | val 83.9% | best_val_loss=0.3521 (ep 99) | lr 9.1e-04
+S05 seed43 F1 [fit] Ep 150 | tr 0.1478 | val 85.0% | best_val_loss=0.3435 (ep 133) | lr 8.0e-04
+S05 seed43 F1 [fit] Ep 200 | tr 0.1068 | val 83.9% | best_val_loss=0.3361 (ep 172) | lr 6.6e-04
+S05 seed43 F1 [fit] Ep 250 | tr 0.1087 | val 86.7% | best_val_loss=0.3184 (ep 211) | lr 5.0e-04
+S05 seed43 F1 [fit] Ep 300 | tr 0.0794 | val 84.4% | best_val_loss=0.3184 (ep 211) | lr 3.5e-04
+S05 seed43 F1 [fit] Early stop @ ep 311 (best epoch 211)
+S05 seed43 F1 [refit] Ep 001/211 | tr 1.4325 (refit, no early stopping)
+S05 seed43 F1 [refit] Ep 050/211 | tr 0.4512 (refit, no early stopping)
+S05 seed43 F1 [refit] Ep 100/211 | tr 0.2650 (refit, no early stopping)
+S05 seed43 F1 [refit] Ep 150/211 | tr 0.2069 (refit, no early stopping)
+S05 seed43 F1 [refit] Ep 200/211 | tr 0.1688 (refit, no early stopping)
+S05 seed43 F1: test 86.25% (val 86.67%, epochs 211)
+S05 seed44 F1 [fit] Ep 001 | tr 1.4063 | val 27.2% | best_val_loss=1.3855 (ep 1) | lr 1.0e-03
+S05 seed44 F1 [fit] Ep 050 | tr 0.3200 | val 68.3% | best_val_loss=0.7748 (ep 50) | lr 9.8e-04
+S05 seed44 F1 [fit] Ep 100 | tr 0.1932 | val 83.9% | best_val_loss=0.3367 (ep 95) | lr 9.1e-04
+S05 seed44 F1 [fit] Ep 150 | tr 0.1121 | val 82.8% | best_val_loss=0.3139 (ep 141) | lr 8.0e-04
+S05 seed44 F1 [fit] Ep 200 | tr 0.0921 | val 83.3% | best_val_loss=0.3139 (ep 141) | lr 6.6e-04
+S05 seed44 F1 [fit] Early stop @ ep 241 (best epoch 141)
+S05 seed44 F1 [refit] Ep 001/141 | tr 1.4031 (refit, no early stopping)
+S05 seed44 F1 [refit] Ep 050/141 | tr 0.3405 (refit, no early stopping)
+S05 seed44 F1 [refit] Ep 100/141 | tr 0.2596 (refit, no early stopping)
+S05 seed44 F1: test 86.25% (val 85.00%, epochs 141)
+S05 seed ensemble (3 seeds): test 90.00% (single seeds 86.2, 86.2, 86.2)
+
+================================================================================
+SUBJECT 06 — relieff_reduced — 4class — session — profile lawhern128 — 12 ch: C2, C1, C4, C3, CP3, CP1, CP2, CPz, Pz, FC1, FC5, CP4
+================================================================================
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S06 [4class] profile=lawhern128 X=(1760, 12, 448) class counts={'feet': 440, 'left_hand': 440, 'rest': 440, 'right_hand': 440}
+S06 seed42 F1 [fit] Ep 001 | tr 1.4136 | val 23.6% | best_val_loss=1.3864 (ep 1) | lr 1.0e-03
+S06 seed42 F1 [fit] Ep 050 | tr 0.2720 | val 77.3% | best_val_loss=0.5192 (ep 50) | lr 9.8e-04
+S06 seed42 F1 [fit] Ep 100 | tr 0.1578 | val 85.0% | best_val_loss=0.4545 (ep 70) | lr 9.1e-04
+S06 seed42 F1 [fit] Ep 150 | tr 0.1230 | val 85.9% | best_val_loss=0.4177 (ep 113) | lr 8.0e-04
+S06 seed42 F1 [fit] Ep 200 | tr 0.1080 | val 83.2% | best_val_loss=0.4177 (ep 113) | lr 6.6e-04
+S06 seed42 F1 [fit] Early stop @ ep 213 (best epoch 113)
+S06 seed42 F1 [refit] Ep 001/113 | tr 1.3963 (refit, no early stopping)
+S06 seed42 F1 [refit] Ep 050/113 | tr 0.2412 (refit, no early stopping)
+S06 seed42 F1 [refit] Ep 100/113 | tr 0.2101 (refit, no early stopping)
+S06 seed42 F1: test 98.07% (val 85.91%, epochs 113)
+S06 seed43 F1 [fit] Ep 001 | tr 1.4045 | val 26.4% | best_val_loss=1.3860 (ep 1) | lr 1.0e-03
+S06 seed43 F1 [fit] Ep 050 | tr 0.3201 | val 79.5% | best_val_loss=0.4476 (ep 48) | lr 9.8e-04
+S06 seed43 F1 [fit] Ep 100 | tr 0.1590 | val 85.5% | best_val_loss=0.3502 (ep 97) | lr 9.1e-04
+S06 seed43 F1 [fit] Ep 150 | tr 0.1060 | val 85.5% | best_val_loss=0.3502 (ep 97) | lr 8.0e-04
+S06 seed43 F1 [fit] Early stop @ ep 197 (best epoch 97)
+S06 seed43 F1 [refit] Ep 001/97 | tr 1.4104 (refit, no early stopping)
+S06 seed43 F1 [refit] Ep 050/97 | tr 0.3162 (refit, no early stopping)
+S06 seed43 F1: test 96.14% (val 86.36%, epochs 97)
+S06 seed44 F1 [fit] Ep 001 | tr 1.3982 | val 28.2% | best_val_loss=1.3859 (ep 1) | lr 1.0e-03
+S06 seed44 F1 [fit] Ep 050 | tr 0.3912 | val 57.7% | best_val_loss=0.7813 (ep 47) | lr 9.8e-04
+S06 seed44 F1 [fit] Ep 100 | tr 0.1793 | val 80.5% | best_val_loss=0.3773 (ep 98) | lr 9.1e-04
+S06 seed44 F1 [fit] Ep 150 | tr 0.1550 | val 87.3% | best_val_loss=0.3386 (ep 142) | lr 8.0e-04
+S06 seed44 F1 [fit] Ep 200 | tr 0.0957 | val 87.3% | best_val_loss=0.3386 (ep 142) | lr 6.6e-04
+S06 seed44 F1 [fit] Early stop @ ep 242 (best epoch 142)
+S06 seed44 F1 [refit] Ep 001/142 | tr 1.3971 (refit, no early stopping)
+S06 seed44 F1 [refit] Ep 050/142 | tr 0.2814 (refit, no early stopping)
+S06 seed44 F1 [refit] Ep 100/142 | tr 0.1816 (refit, no early stopping)
+S06 seed44 F1: test 97.73% (val 87.27%, epochs 142)
+S06 seed ensemble (3 seeds): test 98.41% (single seeds 98.1, 96.1, 97.7)
+
+================================================================================
+SUBJECT 07 — relieff_reduced — 4class — session — profile lawhern128 — 12 ch: C4, C2, C1, C3, CP3, CP1, CP2, Pz, CP4, CPz, FC1, FC5
+================================================================================
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S07 [4class] profile=lawhern128 X=(1760, 12, 448) class counts={'feet': 440, 'left_hand': 440, 'rest': 440, 'right_hand': 440}
+S07 seed42 F1 [fit] Ep 001 | tr 1.3671 | val 24.5% | best_val_loss=1.3839 (ep 1) | lr 1.0e-03
+S07 seed42 F1 [fit] Ep 050 | tr 0.3211 | val 68.2% | best_val_loss=0.6782 (ep 50) | lr 9.8e-04
+S07 seed42 F1 [fit] Ep 100 | tr 0.2302 | val 73.6% | best_val_loss=0.5960 (ep 69) | lr 9.1e-04
+S07 seed42 F1 [fit] Ep 150 | tr 0.1825 | val 75.0% | best_val_loss=0.5960 (ep 69) | lr 8.0e-04
+S07 seed42 F1 [fit] Early stop @ ep 169 (best epoch 69)
+S07 seed42 F1 [refit] Ep 001/69 | tr 1.3665 (refit, no early stopping)
+S07 seed42 F1 [refit] Ep 050/69 | tr 0.4010 (refit, no early stopping)
+S07 seed42 F1: test 86.70% (val 74.55%, epochs 69)
+S07 seed43 F1 [fit] Ep 001 | tr 1.4213 | val 24.1% | best_val_loss=1.3856 (ep 1) | lr 1.0e-03
+S07 seed43 F1 [fit] Ep 050 | tr 0.3342 | val 70.9% | best_val_loss=0.7094 (ep 50) | lr 9.8e-04
+S07 seed43 F1 [fit] Ep 100 | tr 0.2201 | val 73.6% | best_val_loss=0.5517 (ep 86) | lr 9.1e-04
+S07 seed43 F1 [fit] Ep 150 | tr 0.1901 | val 75.0% | best_val_loss=0.5387 (ep 111) | lr 8.0e-04
+S07 seed43 F1 [fit] Ep 200 | tr 0.1510 | val 74.5% | best_val_loss=0.5387 (ep 111) | lr 6.6e-04
+S07 seed43 F1 [fit] Early stop @ ep 211 (best epoch 111)
+S07 seed43 F1 [refit] Ep 001/111 | tr 1.3928 (refit, no early stopping)
+S07 seed43 F1 [refit] Ep 050/111 | tr 0.3682 (refit, no early stopping)
+S07 seed43 F1 [refit] Ep 100/111 | tr 0.3124 (refit, no early stopping)
+S07 seed43 F1: test 93.98% (val 76.36%, epochs 111)
+S07 seed44 F1 [fit] Ep 001 | tr 1.3937 | val 24.1% | best_val_loss=1.3857 (ep 1) | lr 1.0e-03
+S07 seed44 F1 [fit] Ep 050 | tr 0.3766 | val 65.5% | best_val_loss=0.8315 (ep 48) | lr 9.8e-04
+S07 seed44 F1 [fit] Ep 100 | tr 0.2666 | val 70.5% | best_val_loss=0.5922 (ep 75) | lr 9.1e-04
+S07 seed44 F1 [fit] Ep 150 | tr 0.1663 | val 70.9% | best_val_loss=0.5922 (ep 75) | lr 8.0e-04
+S07 seed44 F1 [fit] Early stop @ ep 175 (best epoch 75)
+S07 seed44 F1 [refit] Ep 001/75 | tr 1.3937 (refit, no early stopping)
+S07 seed44 F1 [refit] Ep 050/75 | tr 0.3830 (refit, no early stopping)
+S07 seed44 F1: test 86.82% (val 69.55%, epochs 75)
+S07 seed ensemble (3 seeds): test 93.07% (single seeds 86.7, 94.0, 86.8)
+
+================================================================================
+SUBJECT 08 — relieff_reduced — 4class — session — profile lawhern128 — 12 ch: C2, C1, C4, C3, CP3, CP1, CP2, Pz, CP4, CPz, FC1, FC5
+================================================================================
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S08 [4class] profile=lawhern128 X=(1308, 12, 448) class counts={'feet': 326, 'left_hand': 328, 'rest': 326, 'right_hand': 328}
+S08 seed42 F1 [fit] Ep 001 | tr 1.4550 | val 23.2% | best_val_loss=1.3862 (ep 1) | lr 1.0e-03
+S08 seed42 F1 [fit] Ep 050 | tr 0.3238 | val 60.4% | best_val_loss=0.8516 (ep 50) | lr 9.8e-04
+S08 seed42 F1 [fit] Ep 100 | tr 0.2029 | val 75.6% | best_val_loss=0.5179 (ep 79) | lr 9.1e-04
+S08 seed42 F1 [fit] Ep 150 | tr 0.1208 | val 78.0% | best_val_loss=0.4820 (ep 123) | lr 8.0e-04
+S08 seed42 F1 [fit] Ep 200 | tr 0.0893 | val 79.3% | best_val_loss=0.4820 (ep 123) | lr 6.6e-04
+S08 seed42 F1 [fit] Early stop @ ep 223 (best epoch 123)
+S08 seed42 F1 [refit] Ep 001/123 | tr 1.4276 (refit, no early stopping)
+S08 seed42 F1 [refit] Ep 050/123 | tr 0.3268 (refit, no early stopping)
+S08 seed42 F1 [refit] Ep 100/123 | tr 0.2580 (refit, no early stopping)
+S08 seed42 F1: test 95.57% (val 78.66%, epochs 123)
+S08 seed43 F1 [fit] Ep 001 | tr 1.4345 | val 26.2% | best_val_loss=1.3862 (ep 1) | lr 1.0e-03
+S08 seed43 F1 [fit] Ep 050 | tr 0.3317 | val 57.3% | best_val_loss=1.1650 (ep 50) | lr 9.8e-04
+S08 seed43 F1 [fit] Ep 100 | tr 0.1974 | val 75.0% | best_val_loss=0.4736 (ep 87) | lr 9.1e-04
+S08 seed43 F1 [fit] Ep 150 | tr 0.1695 | val 79.3% | best_val_loss=0.4371 (ep 118) | lr 8.0e-04
+S08 seed43 F1 [fit] Ep 200 | tr 0.0930 | val 79.3% | best_val_loss=0.4371 (ep 118) | lr 6.6e-04
+S08 seed43 F1 [fit] Early stop @ ep 218 (best epoch 118)
+S08 seed43 F1 [refit] Ep 001/118 | tr 1.4303 (refit, no early stopping)
+S08 seed43 F1 [refit] Ep 050/118 | tr 0.3288 (refit, no early stopping)
+S08 seed43 F1 [refit] Ep 100/118 | tr 0.2488 (refit, no early stopping)
+S08 seed43 F1: test 94.34% (val 79.27%, epochs 118)
+S08 seed44 F1 [fit] Ep 001 | tr 1.4149 | val 17.7% | best_val_loss=1.3854 (ep 1) | lr 1.0e-03
+S08 seed44 F1 [fit] Ep 050 | tr 0.3102 | val 57.3% | best_val_loss=1.1846 (ep 48) | lr 9.8e-04
+S08 seed44 F1 [fit] Ep 100 | tr 0.1678 | val 76.8% | best_val_loss=0.4862 (ep 80) | lr 9.1e-04
+S08 seed44 F1 [fit] Ep 150 | tr 0.1382 | val 79.9% | best_val_loss=0.4862 (ep 80) | lr 8.0e-04
+S08 seed44 F1 [fit] Early stop @ ep 180 (best epoch 80)
+S08 seed44 F1 [refit] Ep 001/80 | tr 1.3783 (refit, no early stopping)
+S08 seed44 F1 [refit] Ep 050/80 | tr 0.3366 (refit, no early stopping)
+S08 seed44 F1: test 91.90% (val 75.00%, epochs 80)
+S08 seed ensemble (3 seeds): test 97.40% (single seeds 95.6, 94.3, 91.9)
+
+================================================================================
+SUBJECT 09 — relieff_reduced — 4class — session — profile lawhern128 — 12 ch: C4, C1, C2, C3, CP3, CP1, CP2, Pz, CPz, CP4, FC1, FCz
+================================================================================
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S09 [4class] profile=lawhern128 X=(1760, 12, 448) class counts={'feet': 440, 'left_hand': 440, 'rest': 440, 'right_hand': 440}
+S09 seed42 F1 [fit] Ep 001 | tr 1.4501 | val 27.3% | best_val_loss=1.3857 (ep 1) | lr 1.0e-03
+S09 seed42 F1 [fit] Ep 050 | tr 0.5936 | val 42.7% | best_val_loss=1.3677 (ep 11) | lr 9.8e-04
+S09 seed42 F1 [fit] Ep 100 | tr 0.4314 | val 62.7% | best_val_loss=0.8729 (ep 85) | lr 9.1e-04
+S09 seed42 F1 [fit] Ep 150 | tr 0.3153 | val 65.9% | best_val_loss=0.8729 (ep 85) | lr 8.0e-04
+S09 seed42 F1 [fit] Early stop @ ep 185 (best epoch 85)
+S09 seed42 F1 [refit] Ep 001/85 | tr 1.4365 (refit, no early stopping)
+S09 seed42 F1 [refit] Ep 050/85 | tr 0.7742 (refit, no early stopping)
+S09 seed42 F1: test 75.57% (val 65.45%, epochs 85)
+S09 seed43 F1 [fit] Ep 001 | tr 1.4259 | val 27.7% | best_val_loss=1.3860 (ep 1) | lr 1.0e-03
+S09 seed43 F1 [fit] Ep 050 | tr 0.6413 | val 30.0% | best_val_loss=1.3828 (ep 6) | lr 9.8e-04
+S09 seed43 F1 [fit] Ep 100 | tr 0.4099 | val 69.5% | best_val_loss=0.6734 (ep 100) | lr 9.1e-04
+S09 seed43 F1 [fit] Ep 150 | tr 0.2757 | val 79.5% | best_val_loss=0.4508 (ep 150) | lr 8.0e-04
+S09 seed43 F1 [fit] Ep 200 | tr 0.2677 | val 82.7% | best_val_loss=0.4139 (ep 196) | lr 6.6e-04
+S09 seed43 F1 [fit] Ep 250 | tr 0.2169 | val 85.5% | best_val_loss=0.4035 (ep 232) | lr 5.0e-04
+S09 seed43 F1 [fit] Ep 300 | tr 0.2386 | val 85.5% | best_val_loss=0.3803 (ep 267) | lr 3.5e-04
+S09 seed43 F1 [fit] Ep 350 | tr 0.1737 | val 84.1% | best_val_loss=0.3803 (ep 267) | lr 2.1e-04
+S09 seed43 F1 [fit] Early stop @ ep 367 (best epoch 267)
+S09 seed43 F1 [refit] Ep 001/267 | tr 1.4326 (refit, no early stopping)
+S09 seed43 F1 [refit] Ep 050/267 | tr 0.5439 (refit, no early stopping)
+S09 seed43 F1 [refit] Ep 100/267 | tr 0.3210 (refit, no early stopping)
+S09 seed43 F1 [refit] Ep 150/267 | tr 0.2538 (refit, no early stopping)
+S09 seed43 F1 [refit] Ep 200/267 | tr 0.2126 (refit, no early stopping)
+S09 seed43 F1 [refit] Ep 250/267 | tr 0.2165 (refit, no early stopping)
+S09 seed43 F1: test 98.86% (val 86.36%, epochs 267)
+S09 seed44 F1 [fit] Ep 001 | tr 1.4329 | val 26.4% | best_val_loss=1.3859 (ep 1) | lr 1.0e-03
+S09 seed44 F1 [fit] Ep 050 | tr 0.6978 | val 40.9% | best_val_loss=1.3828 (ep 9) | lr 9.8e-04
+S09 seed44 F1 [fit] Ep 100 | tr 0.4859 | val 58.6% | best_val_loss=0.8737 (ep 91) | lr 9.1e-04
+S09 seed44 F1 [fit] Ep 150 | tr 0.3477 | val 64.5% | best_val_loss=0.8718 (ep 125) | lr 8.0e-04
+S09 seed44 F1 [fit] Ep 200 | tr 0.3125 | val 65.9% | best_val_loss=0.8718 (ep 125) | lr 6.6e-04
+S09 seed44 F1 [fit] Early stop @ ep 225 (best epoch 125)
+S09 seed44 F1 [refit] Ep 001/125 | tr 1.4248 (refit, no early stopping)
+S09 seed44 F1 [refit] Ep 050/125 | tr 0.6079 (refit, no early stopping)
+S09 seed44 F1 [refit] Ep 100/125 | tr 0.4721 (refit, no early stopping)
+S09 seed44 F1: test 87.39% (val 65.45%, epochs 125)
+S09 seed ensemble (3 seeds): test 97.27% (single seeds 75.6, 98.9, 87.4)
+Results written to D:\EEG\NeuroGrounded-EEG\EEGNetV4\HGD\4class\results_session\relieff_reduced (grand mean 90.82% over 9 subjects; chance 25.0%, majority 25.0%)
+Report saved: D:\EEG\NeuroGrounded-EEG\EEGNetV4\HGD\4class\results_session\relieff_reduced\relieff_reduced_report.txt
+
+ReliefF 4class: 90.82% +/- 9.59%

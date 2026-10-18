@@ -1,0 +1,317 @@
+{
+ "model": "EEGNetv4",
+ "class_mode": "4class",
+ "dataset": "Schirrmeister2017",
+ "note_dataset": "High-Gamma Dataset (Schirrmeister2017): EXECUTED movements, 14 subjects, official training runs (~880 trials) and test runs (~160 trials).",
+ "sfreq_hz": "per profile (profiles[*].sfreq)",
+ "ems_params": {
+  "factor_new": 0.001,
+  "init_block_size": 1000,
+  "used_when": "profile norm == 'ems'"
+ },
+ "split_key": "run",
+ "event_duration_s": 4.0,
+ "profiles": {
+  "original": {
+   "sfreq": 100,
+   "band_hz": [
+    4.0,
+    38.0
+   ],
+   "window_s": [
+    0.0,
+    4.0
+   ],
+   "norm": null,
+   "car": false,
+   "lr": 0.0005,
+   "weight_decay": 0.0001,
+   "scheduler": "plateau",
+   "plateau_factor": 0.5,
+   "plateau_patience": 30,
+   "max_epochs": 600,
+   "patience": 150,
+   "batch_size": 96,
+   "label_smoothing": 0.1,
+   "grad_clip": 10.0,
+   "dropout": 0.3,
+   "augment": false,
+   "kernel_length": 64
+  },
+  "ems": {
+   "sfreq": 100,
+   "band_hz": [
+    4.0,
+    38.0
+   ],
+   "window_s": [
+    0.0,
+    4.0
+   ],
+   "norm": "ems",
+   "car": false,
+   "lr": 0.0005,
+   "weight_decay": 0.0001,
+   "scheduler": "plateau",
+   "plateau_factor": 0.5,
+   "plateau_patience": 30,
+   "max_epochs": 600,
+   "patience": 150,
+   "batch_size": 96,
+   "label_smoothing": 0.1,
+   "grad_clip": 10.0,
+   "dropout": 0.3,
+   "augment": false,
+   "kernel_length": 64
+  },
+  "lawhern128": {
+   "sfreq": 128,
+   "band_hz": [
+    4.0,
+    38.0
+   ],
+   "window_s": [
+    0.5,
+    4.0
+   ],
+   "norm": "ems",
+   "car": false,
+   "lr": 0.001,
+   "weight_decay": 0.0001,
+   "scheduler": "cosine",
+   "plateau_factor": 0.5,
+   "plateau_patience": 30,
+   "max_epochs": 500,
+   "patience": 100,
+   "batch_size": 64,
+   "label_smoothing": 0.0,
+   "grad_clip": 10.0,
+   "dropout": 0.25,
+   "augment": false,
+   "kernel_length": 64
+  }
+ },
+ "augmentation": {
+  "mixup_alpha": 0.2,
+  "scale": [
+   0.8,
+   1.2
+  ],
+  "noise_rel_std": 0.05,
+  "channel_drop_p": 0.1,
+  "sr_segments": 8
+ },
+ "profile_default": "original",
+ "profile_selection": {
+  "class_mode": "4class",
+  "rule": "leave-one-subject-out mean validation accuracy",
+  "per_subject": {
+   "1": "lawhern128",
+   "2": "lawhern128",
+   "3": "lawhern128",
+   "4": "lawhern128",
+   "5": "lawhern128",
+   "6": "lawhern128",
+   "7": "lawhern128",
+   "8": "lawhern128",
+   "9": "lawhern128"
+  },
+  "overall": "lawhern128",
+  "unanimous": true,
+  "validation_accuracy": {
+   "original": {
+    "1": 0.7125,
+    "2": 0.7241379310344828,
+    "3": 0.85,
+    "4": 0.9642857142857143,
+    "5": 0.8055555555555556,
+    "6": 0.7636363636363637,
+    "7": 0.7636363636363637,
+    "8": 0.8597560975609756,
+    "9": 0.6681818181818182
+   },
+   "ems": {
+    "1": 0.6875,
+    "2": 0.8029556650246306,
+    "3": 0.8545454545454545,
+    "4": 0.9598214285714286,
+    "5": 0.7555555555555555,
+    "6": 0.8454545454545455,
+    "7": 0.7545454545454545,
+    "8": 0.7621951219512195,
+    "9": 0.6409090909090909
+   },
+   "lawhern128": {
+    "1": 0.725,
+    "2": 0.8669950738916257,
+    "3": 0.9363636363636364,
+    "4": 1.0,
+    "5": 0.8333333333333334,
+    "6": 0.8681818181818182,
+    "7": 0.6818181818181818,
+    "8": 0.8353658536585366,
+    "9": 0.8045454545454546
+   }
+  },
+  "mean_validation_accuracy": {
+   "original": 0.7901877604323637,
+   "ems": 0.7848313685063756,
+   "lawhern128": 0.8390670390880651
+  },
+  "seed": 42,
+  "candidates": [
+   "original",
+   "ems",
+   "lawhern128"
+  ]
+ },
+ "env_overrides": {
+  "EEG_PROFILE": null,
+  "EEG_MAX_EPOCHS": null,
+  "EEG_PATIENCE": null
+ },
+ "model_fixed": {
+  "F1": 8,
+  "D": 2,
+  "F2": 16,
+  "third_kernel_size": [
+   8,
+   4
+  ],
+  "kernel_length": "per profile"
+ },
+ "optimizer": "AdamW (betas per profile)",
+ "scheduler": "per profile: plateau = ReduceLROnPlateau on VALIDATION loss; cosine; none. Refit replays the plateau learning rates of the first fit",
+ "checkpoint_rule": "lowest validation loss, early stopping with patience; refit keeps final weights",
+ "folds": "train on the official HGD training runs (last 25% = validation, chronological), refit on all training runs, test once on the official test runs",
+ "protocol": {
+  "name": "session",
+  "val_fraction": 0.25,
+  "refit": true,
+  "min_refit_epochs": 20,
+  "fixed_epochs": false,
+  "seed_ensemble": true
+ },
+ "attribution": {
+  "methods": [
+   "grad",
+   "grad_x_input",
+   "integrated_gradients",
+   "smoothgrad"
+  ],
+  "ig_steps": 32,
+  "smoothgrad_samples": 12,
+  "smoothgrad_noise_std": 0.1,
+  "target": "pre-softmax logit of the true class",
+  "computed_on": "validation block of each fold"
+ },
+ "faithfulness": {
+  "k": [
+   2,
+   4,
+   6
+  ],
+  "random_draws": 10,
+  "removal": "channel set to 0 (its standardised mean) on the TEST block; evaluation only, never used for any choice",
+  "ranking": "mean of the four attribution maps from the VALIDATION block"
+ },
+ "randomisation_check": "Spearman between trained-model and untrained-model saliency",
+ "erd": {
+  "baseline_s": [
+   -0.5,
+   0.0
+  ],
+  "active_s": [
+   1.0,
+   3.0
+  ],
+  "sfreq_hz": 128,
+  "band_hz": [
+   8.0,
+   30.0
+  ],
+  "standardisation": "none"
+ },
+ "physiology_exploratory": {
+  "sfreq_hz": 250,
+  "bands_hz": {
+   "theta": [
+    4.0,
+    8.0
+   ],
+   "mu": [
+    8.0,
+    13.0
+   ],
+   "beta": [
+    13.0,
+    30.0
+   ],
+   "lowgamma": [
+    30.0,
+    40.0
+   ],
+   "highgamma": [
+    60.0,
+    90.0
+   ]
+  },
+  "epoch_s": [
+   -1.0,
+   5.0
+  ],
+  "used_for_decisions": false
+ },
+ "full_channels": [
+  "FC5",
+  "FC3",
+  "FC1",
+  "FCz",
+  "FC2",
+  "FC4",
+  "FC6",
+  "C5",
+  "C3",
+  "C1",
+  "Cz",
+  "C2",
+  "C4",
+  "C6",
+  "CP5",
+  "CP3",
+  "CP1",
+  "CPz",
+  "CP2",
+  "CP4",
+  "CP6",
+  "Pz"
+ ],
+ "reduced_n_channels": 12,
+ "seeds": [
+  42,
+  43,
+  44
+ ],
+ "subject_ids": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "label_names": [
+  "feet",
+  "left_hand",
+  "rest",
+  "right_hand"
+ ],
+ "versions": {
+  "torch": "2.0.1+cu118",
+  "mne": "1.9.0",
+  "numpy": "1.26.4"
+ }
+}

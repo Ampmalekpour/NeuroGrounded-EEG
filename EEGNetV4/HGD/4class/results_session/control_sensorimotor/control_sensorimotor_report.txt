@@ -1,0 +1,24 @@
+EEGNetv4 - HGD - control 'control_sensorimotor' - 4class
+================================================================================
+
+Subject 01: 73.75%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 73.75% (majority-class 25.0%)
+Subject 02: 77.50%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 77.50% (majority-class 25.0%)
+Subject 03: 93.12%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 93.12% (majority-class 25.0%)
+Subject 04: 96.88%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 96.88% (majority-class 25.0%)
+Subject 05: 87.50%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 87.50% (majority-class 25.0%)
+Subject 06: 98.64%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 98.64% (majority-class 25.0%)
+Subject 07: 89.66%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 89.66% (majority-class 25.0%)
+Subject 08: 99.39%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 99.39% (majority-class 25.1%)
+Subject 09: 97.05%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 97.05% (majority-class 25.0%)
+
+GRAND MEAN: 90.39% +/- 9.32% (SD across subjects)
+chance 25.0% | mean majority-class 25.0%

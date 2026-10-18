@@ -1,0 +1,384 @@
+$ D:\EEG\braindec\.venv\Scripts\python.exe -u D:\EEG\NeuroGrounded-EEG\EEGNetV4\HGD\4class\eegnetv4_hgd_4class_tune.py   [EEG_PROTOCOL=session]
+Using device: cuda | class mode: 4class | seeds: [42, 43, 44] | subjects: [1, 2, 3, 4, 5, 6, 7, 8, 9] | synthetic: False | protocol: session
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S01 [4class] profile=original X=(480, 22, 400) class counts={'feet': 120, 'left_hand': 120, 'rest': 120, 'right_hand': 120}
+[tune original] S01 F1 Ep 001 | tr 1.5393 | val 28.7% | best_val_loss=1.3835 (ep 1) | lr 5.0e-04
+[tune original] S01 F1 Ep 050 | tr 0.9718 | val 46.2% | best_val_loss=1.2457 (ep 50) | lr 5.0e-04
+[tune original] S01 F1 Ep 100 | tr 0.7334 | val 52.5% | best_val_loss=1.0294 (ep 100) | lr 5.0e-04
+[tune original] S01 F1 Ep 150 | tr 0.6417 | val 61.3% | best_val_loss=0.9212 (ep 150) | lr 5.0e-04
+[tune original] S01 F1 Ep 200 | tr 0.5578 | val 60.0% | best_val_loss=0.8992 (ep 181) | lr 5.0e-04
+[tune original] S01 F1 Ep 250 | tr 0.5348 | val 63.7% | best_val_loss=0.8593 (ep 234) | lr 5.0e-04
+[tune original] S01 F1 Ep 300 | tr 0.5168 | val 66.2% | best_val_loss=0.8581 (ep 292) | lr 2.5e-04
+[tune original] S01 F1 Ep 350 | tr 0.5112 | val 68.8% | best_val_loss=0.8581 (ep 292) | lr 1.3e-04
+[tune original] S01 F1 Ep 400 | tr 0.5018 | val 70.0% | best_val_loss=0.8499 (ep 400) | lr 6.3e-05
+[tune original] S01 F1 Ep 450 | tr 0.5196 | val 71.2% | best_val_loss=0.8486 (ep 409) | lr 3.1e-05
+[tune original] S01 F1 Ep 500 | tr 0.5037 | val 68.8% | best_val_loss=0.8486 (ep 409) | lr 7.8e-06
+[tune original] S01 F1 Ep 550 | tr 0.4959 | val 71.2% | best_val_loss=0.8484 (ep 548) | lr 3.9e-06
+[tune original] S01 F1 Ep 600 | tr 0.5238 | val 71.2% | best_val_loss=0.8475 (ep 598) | lr 3.9e-06
+[tune]       original S01: mean validation accuracy 71.25%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S02 [4class] profile=original X=(973, 22, 400) class counts={'feet': 244, 'left_hand': 242, 'rest': 243, 'right_hand': 244}
+[tune original] S02 F1 Ep 001 | tr 1.4287 | val 36.5% | best_val_loss=1.3822 (ep 1) | lr 5.0e-04
+[tune original] S02 F1 Ep 050 | tr 0.8645 | val 42.9% | best_val_loss=1.3073 (ep 19) | lr 5.0e-04
+[tune original] S02 F1 Ep 100 | tr 0.7461 | val 58.1% | best_val_loss=1.1030 (ep 86) | lr 2.5e-04
+[tune original] S02 F1 Ep 150 | tr 0.7093 | val 61.6% | best_val_loss=0.9757 (ep 145) | lr 2.5e-04
+[tune original] S02 F1 Ep 200 | tr 0.6477 | val 67.5% | best_val_loss=0.9558 (ep 199) | lr 2.5e-04
+[tune original] S02 F1 Ep 250 | tr 0.6328 | val 72.4% | best_val_loss=0.9191 (ep 224) | lr 2.5e-04
+[tune original] S02 F1 Ep 300 | tr 0.6163 | val 70.0% | best_val_loss=0.9191 (ep 224) | lr 6.3e-05
+[tune original] S02 F1 Ep 350 | tr 0.6021 | val 71.4% | best_val_loss=0.9178 (ep 327) | lr 3.1e-05
+[tune original] S02 F1 Ep 400 | tr 0.6014 | val 70.9% | best_val_loss=0.9068 (ep 381) | lr 3.1e-05
+[tune original] S02 F1 Ep 450 | tr 0.6089 | val 70.0% | best_val_loss=0.9068 (ep 381) | lr 7.8e-06
+[tune original] S02 F1 Ep 500 | tr 0.6003 | val 70.9% | best_val_loss=0.9068 (ep 381) | lr 3.9e-06
+[tune original] S02 F1 Early stop @ ep 531 (best epoch 381)
+[tune]       original S02: mean validation accuracy 72.41%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S03 [4class] profile=original X=(1040, 22, 400) class counts={'feet': 260, 'left_hand': 260, 'rest': 260, 'right_hand': 260}
+[tune original] S03 F1 Ep 001 | tr 1.4275 | val 23.2% | best_val_loss=1.3859 (ep 1) | lr 5.0e-04
+[tune original] S03 F1 Ep 050 | tr 0.6224 | val 65.9% | best_val_loss=0.9023 (ep 50) | lr 5.0e-04
+[tune original] S03 F1 Ep 100 | tr 0.5286 | val 89.1% | best_val_loss=0.7216 (ep 71) | lr 5.0e-04
+[tune original] S03 F1 Ep 150 | tr 0.5136 | val 88.2% | best_val_loss=0.7216 (ep 71) | lr 1.3e-04
+[tune original] S03 F1 Ep 200 | tr 0.5022 | val 87.7% | best_val_loss=0.7216 (ep 71) | lr 3.1e-05
+[tune original] S03 F1 Early stop @ ep 221 (best epoch 71)
+[tune]       original S03: mean validation accuracy 85.00%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S04 [4class] profile=original X=(1057, 22, 400) class counts={'feet': 265, 'left_hand': 264, 'rest': 264, 'right_hand': 264}
+[tune original] S04 F1 Ep 001 | tr 1.4037 | val 29.5% | best_val_loss=1.3816 (ep 1) | lr 5.0e-04
+[tune original] S04 F1 Ep 050 | tr 0.9365 | val 61.6% | best_val_loss=0.9793 (ep 50) | lr 5.0e-04
+[tune original] S04 F1 Ep 100 | tr 0.9603 | val 73.7% | best_val_loss=0.8067 (ep 100) | lr 5.0e-04
+[tune original] S04 F1 Ep 150 | tr 0.7087 | val 86.2% | best_val_loss=0.6993 (ep 150) | lr 5.0e-04
+[tune original] S04 F1 Ep 200 | tr 0.6416 | val 89.7% | best_val_loss=0.6090 (ep 194) | lr 5.0e-04
+[tune original] S04 F1 Ep 250 | tr 0.6553 | val 89.7% | best_val_loss=0.5539 (ep 241) | lr 5.0e-04
+[tune original] S04 F1 Ep 300 | tr 0.5759 | val 95.5% | best_val_loss=0.5383 (ep 286) | lr 5.0e-04
+[tune original] S04 F1 Ep 350 | tr 0.5768 | val 93.3% | best_val_loss=0.5251 (ep 339) | lr 5.0e-04
+[tune original] S04 F1 Ep 400 | tr 0.5376 | val 94.6% | best_val_loss=0.5086 (ep 393) | lr 5.0e-04
+[tune original] S04 F1 Ep 450 | tr 0.6289 | val 92.4% | best_val_loss=0.5086 (ep 393) | lr 2.5e-04
+[tune original] S04 F1 Ep 500 | tr 0.5076 | val 93.8% | best_val_loss=0.5086 (ep 393) | lr 6.3e-05
+[tune original] S04 F1 Early stop @ ep 543 (best epoch 393)
+[tune]       original S04: mean validation accuracy 96.43%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S05 [4class] profile=original X=(880, 22, 400) class counts={'feet': 220, 'left_hand': 220, 'rest': 220, 'right_hand': 220}
+[tune original] S05 F1 Ep 001 | tr 1.4545 | val 30.6% | best_val_loss=1.3867 (ep 1) | lr 5.0e-04
+[tune original] S05 F1 Ep 050 | tr 0.8220 | val 44.4% | best_val_loss=1.2342 (ep 50) | lr 5.0e-04
+[tune original] S05 F1 Ep 100 | tr 0.6972 | val 66.1% | best_val_loss=0.8494 (ep 92) | lr 5.0e-04
+[tune original] S05 F1 Ep 150 | tr 0.6058 | val 81.1% | best_val_loss=0.7626 (ep 150) | lr 5.0e-04
+[tune original] S05 F1 Ep 200 | tr 0.5884 | val 80.6% | best_val_loss=0.7395 (ep 187) | lr 5.0e-04
+[tune original] S05 F1 Ep 250 | tr 0.5311 | val 80.0% | best_val_loss=0.7326 (ep 232) | lr 2.5e-04
+[tune original] S05 F1 Ep 300 | tr 0.5127 | val 80.0% | best_val_loss=0.7319 (ep 255) | lr 1.3e-04
+[tune original] S05 F1 Ep 350 | tr 0.5156 | val 80.6% | best_val_loss=0.7281 (ep 332) | lr 1.3e-04
+[tune original] S05 F1 Ep 400 | tr 0.5174 | val 81.7% | best_val_loss=0.7230 (ep 374) | lr 1.3e-04
+[tune original] S05 F1 Ep 450 | tr 0.5100 | val 81.1% | best_val_loss=0.7190 (ep 449) | lr 6.3e-05
+[tune original] S05 F1 Ep 500 | tr 0.5021 | val 80.0% | best_val_loss=0.7183 (ep 462) | lr 3.1e-05
+[tune original] S05 F1 Ep 550 | tr 0.4910 | val 80.0% | best_val_loss=0.7183 (ep 462) | lr 1.6e-05
+[tune original] S05 F1 Ep 600 | tr 0.5039 | val 80.0% | best_val_loss=0.7175 (ep 570) | lr 7.8e-06
+[tune]       original S05: mean validation accuracy 80.56%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S06 [4class] profile=original X=(1760, 22, 400) class counts={'feet': 440, 'left_hand': 440, 'rest': 440, 'right_hand': 440}
+[tune original] S06 F1 Ep 001 | tr 1.4698 | val 28.6% | best_val_loss=1.3866 (ep 1) | lr 5.0e-04
+[tune original] S06 F1 Ep 050 | tr 0.8539 | val 37.7% | best_val_loss=1.3003 (ep 20) | lr 5.0e-04
+[tune original] S06 F1 Ep 100 | tr 0.7521 | val 74.5% | best_val_loss=0.7941 (ep 100) | lr 2.5e-04
+[tune original] S06 F1 Ep 150 | tr 0.6919 | val 78.2% | best_val_loss=0.7645 (ep 149) | lr 2.5e-04
+[tune original] S06 F1 Ep 200 | tr 0.6481 | val 78.6% | best_val_loss=0.7551 (ep 197) | lr 2.5e-04
+[tune original] S06 F1 Ep 250 | tr 0.6378 | val 76.4% | best_val_loss=0.7492 (ep 250) | lr 1.3e-04
+[tune original] S06 F1 Ep 300 | tr 0.6004 | val 76.4% | best_val_loss=0.7415 (ep 294) | lr 1.3e-04
+[tune original] S06 F1 Ep 350 | tr 0.6089 | val 76.8% | best_val_loss=0.7415 (ep 294) | lr 6.3e-05
+[tune original] S06 F1 Ep 400 | tr 0.6054 | val 76.4% | best_val_loss=0.7415 (ep 294) | lr 1.6e-05
+[tune original] S06 F1 Early stop @ ep 444 (best epoch 294)
+[tune]       original S06: mean validation accuracy 76.36%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S07 [4class] profile=original X=(1760, 22, 400) class counts={'feet': 440, 'left_hand': 440, 'rest': 440, 'right_hand': 440}
+[tune original] S07 F1 Ep 001 | tr 1.4697 | val 27.7% | best_val_loss=1.3850 (ep 1) | lr 5.0e-04
+[tune original] S07 F1 Ep 050 | tr 0.7964 | val 60.5% | best_val_loss=0.9579 (ep 50) | lr 5.0e-04
+[tune original] S07 F1 Ep 100 | tr 0.6851 | val 73.2% | best_val_loss=0.8711 (ep 95) | lr 5.0e-04
+[tune original] S07 F1 Ep 150 | tr 0.6225 | val 76.4% | best_val_loss=0.8453 (ep 140) | lr 5.0e-04
+[tune original] S07 F1 Ep 200 | tr 0.5905 | val 75.9% | best_val_loss=0.8453 (ep 140) | lr 2.5e-04
+[tune original] S07 F1 Ep 250 | tr 0.5832 | val 76.8% | best_val_loss=0.8453 (ep 140) | lr 6.3e-05
+[tune original] S07 F1 Early stop @ ep 290 (best epoch 140)
+[tune]       original S07: mean validation accuracy 76.36%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S08 [4class] profile=original X=(1308, 22, 400) class counts={'feet': 326, 'left_hand': 328, 'rest': 326, 'right_hand': 328}
+[tune original] S08 F1 Ep 001 | tr 1.3836 | val 26.8% | best_val_loss=1.3863 (ep 1) | lr 5.0e-04
+[tune original] S08 F1 Ep 050 | tr 0.7681 | val 28.7% | best_val_loss=1.3371 (ep 17) | lr 2.5e-04
+[tune original] S08 F1 Ep 100 | tr 0.7033 | val 72.6% | best_val_loss=0.7505 (ep 99) | lr 2.5e-04
+[tune original] S08 F1 Ep 150 | tr 0.6584 | val 73.2% | best_val_loss=0.7177 (ep 143) | lr 2.5e-04
+[tune original] S08 F1 Ep 200 | tr 0.6018 | val 75.6% | best_val_loss=0.6920 (ep 200) | lr 2.5e-04
+[tune original] S08 F1 Ep 250 | tr 0.5643 | val 78.0% | best_val_loss=0.6672 (ep 248) | lr 2.5e-04
+[tune original] S08 F1 Ep 300 | tr 0.5534 | val 81.1% | best_val_loss=0.6571 (ep 299) | lr 2.5e-04
+[tune original] S08 F1 Ep 350 | tr 0.5339 | val 84.8% | best_val_loss=0.6441 (ep 349) | lr 2.5e-04
+[tune original] S08 F1 Ep 400 | tr 0.5400 | val 82.9% | best_val_loss=0.6363 (ep 393) | lr 2.5e-04
+[tune original] S08 F1 Ep 450 | tr 0.5333 | val 82.9% | best_val_loss=0.6311 (ep 443) | lr 2.5e-04
+[tune original] S08 F1 Ep 500 | tr 0.5171 | val 84.1% | best_val_loss=0.6311 (ep 443) | lr 1.3e-04
+[tune original] S08 F1 Ep 550 | tr 0.4992 | val 84.1% | best_val_loss=0.6311 (ep 443) | lr 3.1e-05
+[tune original] S08 F1 Early stop @ ep 593 (best epoch 443)
+[tune]       original S08: mean validation accuracy 85.98%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S09 [4class] profile=original X=(1760, 22, 400) class counts={'feet': 440, 'left_hand': 440, 'rest': 440, 'right_hand': 440}
+[tune original] S09 F1 Ep 001 | tr 1.4499 | val 25.5% | best_val_loss=1.3859 (ep 1) | lr 5.0e-04
+[tune original] S09 F1 Ep 050 | tr 1.1490 | val 45.9% | best_val_loss=1.2342 (ep 50) | lr 5.0e-04
+[tune original] S09 F1 Ep 100 | tr 0.9213 | val 51.4% | best_val_loss=1.0996 (ep 83) | lr 5.0e-04
+[tune original] S09 F1 Ep 150 | tr 0.8495 | val 56.4% | best_val_loss=1.0320 (ep 150) | lr 2.5e-04
+[tune original] S09 F1 Ep 200 | tr 0.7954 | val 57.7% | best_val_loss=1.0095 (ep 200) | lr 2.5e-04
+[tune original] S09 F1 Ep 250 | tr 0.7589 | val 60.5% | best_val_loss=0.9878 (ep 250) | lr 2.5e-04
+[tune original] S09 F1 Ep 300 | tr 0.7186 | val 60.9% | best_val_loss=0.9783 (ep 279) | lr 2.5e-04
+[tune original] S09 F1 Ep 350 | tr 0.7105 | val 60.5% | best_val_loss=0.9729 (ep 344) | lr 1.3e-04
+[tune original] S09 F1 Ep 400 | tr 0.6857 | val 63.6% | best_val_loss=0.9658 (ep 394) | lr 1.3e-04
+[tune original] S09 F1 Ep 450 | tr 0.6777 | val 63.6% | best_val_loss=0.9562 (ep 448) | lr 1.3e-04
+[tune original] S09 F1 Ep 500 | tr 0.6626 | val 67.7% | best_val_loss=0.9438 (ep 500) | lr 1.3e-04
+[tune original] S09 F1 Ep 550 | tr 0.6500 | val 66.4% | best_val_loss=0.9426 (ep 539) | lr 6.3e-05
+[tune original] S09 F1 Ep 600 | tr 0.6517 | val 68.2% | best_val_loss=0.9355 (ep 598) | lr 6.3e-05
+[tune]       original S09: mean validation accuracy 66.82%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S01 [4class] profile=ems X=(480, 22, 400) class counts={'feet': 120, 'left_hand': 120, 'rest': 120, 'right_hand': 120}
+[tune ems] S01 F1 Ep 001 | tr 1.5371 | val 32.5% | best_val_loss=1.3859 (ep 1) | lr 5.0e-04
+[tune ems] S01 F1 Ep 050 | tr 0.9430 | val 31.2% | best_val_loss=1.2913 (ep 50) | lr 5.0e-04
+[tune ems] S01 F1 Ep 100 | tr 0.7417 | val 38.8% | best_val_loss=1.1880 (ep 100) | lr 5.0e-04
+[tune ems] S01 F1 Ep 150 | tr 0.6739 | val 55.0% | best_val_loss=1.0410 (ep 150) | lr 5.0e-04
+[tune ems] S01 F1 Ep 200 | tr 0.5696 | val 63.7% | best_val_loss=0.9203 (ep 200) | lr 5.0e-04
+[tune ems] S01 F1 Ep 250 | tr 0.5662 | val 66.2% | best_val_loss=0.8694 (ep 234) | lr 5.0e-04
+[tune ems] S01 F1 Ep 300 | tr 0.5136 | val 68.8% | best_val_loss=0.8655 (ep 265) | lr 2.5e-04
+[tune ems] S01 F1 Ep 350 | tr 0.5007 | val 68.8% | best_val_loss=0.8655 (ep 265) | lr 1.3e-04
+[tune ems] S01 F1 Ep 400 | tr 0.4835 | val 71.2% | best_val_loss=0.8655 (ep 265) | lr 3.1e-05
+[tune ems] S01 F1 Early stop @ ep 415 (best epoch 265)
+[tune]            ems S01: mean validation accuracy 68.75%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S02 [4class] profile=ems X=(973, 22, 400) class counts={'feet': 244, 'left_hand': 242, 'rest': 243, 'right_hand': 244}
+[tune ems] S02 F1 Ep 001 | tr 1.4156 | val 21.7% | best_val_loss=1.3858 (ep 1) | lr 5.0e-04
+[tune ems] S02 F1 Ep 050 | tr 0.8369 | val 42.9% | best_val_loss=1.2985 (ep 45) | lr 5.0e-04
+[tune ems] S02 F1 Ep 100 | tr 0.6872 | val 76.8% | best_val_loss=0.8327 (ep 99) | lr 5.0e-04
+[tune ems] S02 F1 Ep 150 | tr 0.6386 | val 75.4% | best_val_loss=0.8044 (ep 144) | lr 5.0e-04
+[tune ems] S02 F1 Ep 200 | tr 0.5801 | val 76.8% | best_val_loss=0.7805 (ep 190) | lr 5.0e-04
+[tune ems] S02 F1 Ep 250 | tr 0.5624 | val 78.8% | best_val_loss=0.7589 (ep 246) | lr 5.0e-04
+[tune ems] S02 F1 Ep 300 | tr 0.5510 | val 79.8% | best_val_loss=0.7484 (ep 278) | lr 5.0e-04
+[tune ems] S02 F1 Ep 350 | tr 0.5329 | val 77.8% | best_val_loss=0.7484 (ep 278) | lr 1.3e-04
+[tune ems] S02 F1 Ep 400 | tr 0.5281 | val 78.3% | best_val_loss=0.7484 (ep 278) | lr 6.3e-05
+[tune ems] S02 F1 Early stop @ ep 428 (best epoch 278)
+[tune]            ems S02: mean validation accuracy 80.30%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S03 [4class] profile=ems X=(1040, 22, 400) class counts={'feet': 260, 'left_hand': 260, 'rest': 260, 'right_hand': 260}
+[tune ems] S03 F1 Ep 001 | tr 1.4225 | val 25.0% | best_val_loss=1.3862 (ep 1) | lr 5.0e-04
+[tune ems] S03 F1 Ep 050 | tr 0.6635 | val 51.8% | best_val_loss=1.2020 (ep 50) | lr 2.5e-04
+[tune ems] S03 F1 Ep 100 | tr 0.5779 | val 87.3% | best_val_loss=0.6866 (ep 78) | lr 2.5e-04
+[tune ems] S03 F1 Ep 150 | tr 0.5641 | val 86.8% | best_val_loss=0.6866 (ep 78) | lr 6.3e-05
+[tune ems] S03 F1 Ep 200 | tr 0.5575 | val 86.4% | best_val_loss=0.6866 (ep 78) | lr 3.1e-05
+[tune ems] S03 F1 Early stop @ ep 228 (best epoch 78)
+[tune]            ems S03: mean validation accuracy 85.45%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S04 [4class] profile=ems X=(1057, 22, 400) class counts={'feet': 265, 'left_hand': 264, 'rest': 264, 'right_hand': 264}
+[tune ems] S04 F1 Ep 001 | tr 1.4140 | val 31.2% | best_val_loss=1.3857 (ep 1) | lr 5.0e-04
+[tune ems] S04 F1 Ep 050 | tr 0.9118 | val 62.1% | best_val_loss=0.9634 (ep 50) | lr 5.0e-04
+[tune ems] S04 F1 Ep 100 | tr 0.8275 | val 78.1% | best_val_loss=0.8101 (ep 97) | lr 5.0e-04
+[tune ems] S04 F1 Ep 150 | tr 0.6474 | val 87.9% | best_val_loss=0.6609 (ep 148) | lr 5.0e-04
+[tune ems] S04 F1 Ep 200 | tr 0.7086 | val 90.2% | best_val_loss=0.5960 (ep 193) | lr 5.0e-04
+[tune ems] S04 F1 Ep 250 | tr 0.5780 | val 90.2% | best_val_loss=0.5510 (ep 248) | lr 5.0e-04
+[tune ems] S04 F1 Ep 300 | tr 0.5305 | val 92.4% | best_val_loss=0.5464 (ep 281) | lr 5.0e-04
+[tune ems] S04 F1 Ep 350 | tr 0.6350 | val 92.9% | best_val_loss=0.5284 (ep 342) | lr 5.0e-04
+[tune ems] S04 F1 Ep 400 | tr 0.6057 | val 96.0% | best_val_loss=0.5222 (ep 400) | lr 2.5e-04
+[tune ems] S04 F1 Ep 450 | tr 0.5247 | val 93.8% | best_val_loss=0.5222 (ep 400) | lr 1.3e-04
+[tune ems] S04 F1 Ep 500 | tr 0.5459 | val 94.2% | best_val_loss=0.5222 (ep 400) | lr 3.1e-05
+[tune ems] S04 F1 Ep 550 | tr 0.5395 | val 94.2% | best_val_loss=0.5222 (ep 400) | lr 1.6e-05
+[tune ems] S04 F1 Early stop @ ep 550 (best epoch 400)
+[tune]            ems S04: mean validation accuracy 95.98%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S05 [4class] profile=ems X=(880, 22, 400) class counts={'feet': 220, 'left_hand': 220, 'rest': 220, 'right_hand': 220}
+[tune ems] S05 F1 Ep 001 | tr 1.4547 | val 25.0% | best_val_loss=1.3863 (ep 1) | lr 5.0e-04
+[tune ems] S05 F1 Ep 050 | tr 0.8869 | val 27.8% | best_val_loss=1.3863 (ep 1) | lr 2.5e-04
+[tune ems] S05 F1 Ep 100 | tr 0.8067 | val 67.2% | best_val_loss=0.8575 (ep 100) | lr 2.5e-04
+[tune ems] S05 F1 Ep 150 | tr 0.7079 | val 68.9% | best_val_loss=0.8231 (ep 150) | lr 2.5e-04
+[tune ems] S05 F1 Ep 200 | tr 0.6839 | val 70.6% | best_val_loss=0.7990 (ep 200) | lr 2.5e-04
+[tune ems] S05 F1 Ep 250 | tr 0.6327 | val 72.8% | best_val_loss=0.7708 (ep 250) | lr 2.5e-04
+[tune ems] S05 F1 Ep 300 | tr 0.6028 | val 75.0% | best_val_loss=0.7549 (ep 295) | lr 2.5e-04
+[tune ems] S05 F1 Ep 350 | tr 0.5830 | val 76.1% | best_val_loss=0.7495 (ep 349) | lr 1.3e-04
+[tune ems] S05 F1 Ep 400 | tr 0.5745 | val 76.1% | best_val_loss=0.7441 (ep 385) | lr 1.3e-04
+[tune ems] S05 F1 Ep 450 | tr 0.5786 | val 75.0% | best_val_loss=0.7369 (ep 436) | lr 1.3e-04
+[tune ems] S05 F1 Ep 500 | tr 0.5696 | val 75.6% | best_val_loss=0.7369 (ep 436) | lr 3.1e-05
+[tune ems] S05 F1 Ep 550 | tr 0.5475 | val 76.7% | best_val_loss=0.7369 (ep 436) | lr 1.6e-05
+[tune ems] S05 F1 Early stop @ ep 586 (best epoch 436)
+[tune]            ems S05: mean validation accuracy 75.56%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S06 [4class] profile=ems X=(1760, 22, 400) class counts={'feet': 440, 'left_hand': 440, 'rest': 440, 'right_hand': 440}
+[tune ems] S06 F1 Ep 001 | tr 1.4612 | val 29.5% | best_val_loss=1.3863 (ep 1) | lr 5.0e-04
+[tune ems] S06 F1 Ep 050 | tr 0.8181 | val 37.7% | best_val_loss=1.3853 (ep 10) | lr 2.5e-04
+[tune ems] S06 F1 Ep 100 | tr 0.7442 | val 70.9% | best_val_loss=0.8047 (ep 100) | lr 2.5e-04
+[tune ems] S06 F1 Ep 150 | tr 0.6712 | val 73.2% | best_val_loss=0.7887 (ep 150) | lr 2.5e-04
+[tune ems] S06 F1 Ep 200 | tr 0.6531 | val 76.4% | best_val_loss=0.7721 (ep 196) | lr 2.5e-04
+[tune ems] S06 F1 Ep 250 | tr 0.6130 | val 79.1% | best_val_loss=0.7537 (ep 246) | lr 2.5e-04
+[tune ems] S06 F1 Ep 300 | tr 0.5683 | val 83.2% | best_val_loss=0.7226 (ep 300) | lr 2.5e-04
+[tune ems] S06 F1 Ep 350 | tr 0.5442 | val 83.2% | best_val_loss=0.6962 (ep 346) | lr 2.5e-04
+[tune ems] S06 F1 Ep 400 | tr 0.5422 | val 85.0% | best_val_loss=0.6791 (ep 397) | lr 2.5e-04
+[tune ems] S06 F1 Ep 450 | tr 0.5109 | val 83.6% | best_val_loss=0.6639 (ep 450) | lr 2.5e-04
+[tune ems] S06 F1 Ep 500 | tr 0.5132 | val 84.1% | best_val_loss=0.6560 (ep 479) | lr 2.5e-04
+[tune ems] S06 F1 Ep 550 | tr 0.4963 | val 84.5% | best_val_loss=0.6469 (ep 527) | lr 2.5e-04
+[tune ems] S06 F1 Ep 600 | tr 0.4875 | val 84.1% | best_val_loss=0.6404 (ep 584) | lr 1.3e-04
+[tune]            ems S06: mean validation accuracy 84.55%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S07 [4class] profile=ems X=(1760, 22, 400) class counts={'feet': 440, 'left_hand': 440, 'rest': 440, 'right_hand': 440}
+[tune ems] S07 F1 Ep 001 | tr 1.4593 | val 23.6% | best_val_loss=1.3863 (ep 1) | lr 5.0e-04
+[tune ems] S07 F1 Ep 050 | tr 0.7711 | val 64.5% | best_val_loss=0.9799 (ep 50) | lr 5.0e-04
+[tune ems] S07 F1 Ep 100 | tr 0.6771 | val 70.0% | best_val_loss=0.8566 (ep 100) | lr 5.0e-04
+[tune ems] S07 F1 Ep 150 | tr 0.6197 | val 72.7% | best_val_loss=0.8262 (ep 149) | lr 5.0e-04
+[tune ems] S07 F1 Ep 200 | tr 0.5929 | val 75.5% | best_val_loss=0.8124 (ep 200) | lr 5.0e-04
+[tune ems] S07 F1 Ep 250 | tr 0.5544 | val 75.5% | best_val_loss=0.8036 (ep 237) | lr 5.0e-04
+[tune ems] S07 F1 Ep 300 | tr 0.5442 | val 73.6% | best_val_loss=0.8027 (ep 295) | lr 2.5e-04
+[tune ems] S07 F1 Ep 350 | tr 0.5319 | val 71.8% | best_val_loss=0.7985 (ep 314) | lr 1.3e-04
+[tune ems] S07 F1 Ep 400 | tr 0.5313 | val 72.7% | best_val_loss=0.7985 (ep 314) | lr 6.3e-05
+[tune ems] S07 F1 Ep 450 | tr 0.5211 | val 73.2% | best_val_loss=0.7985 (ep 314) | lr 1.6e-05
+[tune ems] S07 F1 Early stop @ ep 464 (best epoch 314)
+[tune]            ems S07: mean validation accuracy 75.45%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S08 [4class] profile=ems X=(1308, 22, 400) class counts={'feet': 326, 'left_hand': 328, 'rest': 326, 'right_hand': 328}
+[tune ems] S08 F1 Ep 001 | tr 1.3898 | val 26.8% | best_val_loss=1.3861 (ep 1) | lr 5.0e-04
+[tune ems] S08 F1 Ep 050 | tr 0.7886 | val 26.2% | best_val_loss=1.3846 (ep 7) | lr 2.5e-04
+[tune ems] S08 F1 Ep 100 | tr 0.7034 | val 65.2% | best_val_loss=0.8724 (ep 99) | lr 2.5e-04
+[tune ems] S08 F1 Ep 150 | tr 0.6698 | val 74.4% | best_val_loss=0.7427 (ep 149) | lr 2.5e-04
+[tune ems] S08 F1 Ep 200 | tr 0.6219 | val 76.2% | best_val_loss=0.7269 (ep 174) | lr 2.5e-04
+[tune ems] S08 F1 Ep 250 | tr 0.6029 | val 75.0% | best_val_loss=0.7250 (ep 243) | lr 6.3e-05
+[tune ems] S08 F1 Ep 300 | tr 0.5855 | val 76.2% | best_val_loss=0.7249 (ep 289) | lr 3.1e-05
+[tune ems] S08 F1 Ep 350 | tr 0.5743 | val 76.2% | best_val_loss=0.7234 (ep 348) | lr 1.6e-05
+[tune ems] S08 F1 Ep 400 | tr 0.6072 | val 76.2% | best_val_loss=0.7224 (ep 380) | lr 1.6e-05
+[tune ems] S08 F1 Ep 450 | tr 0.5933 | val 76.8% | best_val_loss=0.7215 (ep 438) | lr 7.8e-06
+[tune ems] S08 F1 Ep 500 | tr 0.5820 | val 76.8% | best_val_loss=0.7215 (ep 438) | lr 3.9e-06
+[tune ems] S08 F1 Ep 550 | tr 0.5728 | val 76.2% | best_val_loss=0.7215 (ep 438) | lr 9.8e-07
+[tune ems] S08 F1 Ep 600 | tr 0.6076 | val 76.8% | best_val_loss=0.7214 (ep 586) | lr 4.9e-07
+[tune]            ems S08: mean validation accuracy 76.22%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S09 [4class] profile=ems X=(1760, 22, 400) class counts={'feet': 440, 'left_hand': 440, 'rest': 440, 'right_hand': 440}
+[tune ems] S09 F1 Ep 001 | tr 1.4461 | val 25.9% | best_val_loss=1.3863 (ep 1) | lr 5.0e-04
+[tune ems] S09 F1 Ep 050 | tr 1.1324 | val 38.6% | best_val_loss=1.2518 (ep 50) | lr 5.0e-04
+[tune ems] S09 F1 Ep 100 | tr 0.8972 | val 42.7% | best_val_loss=1.2330 (ep 55) | lr 2.5e-04
+[tune ems] S09 F1 Ep 150 | tr 0.8105 | val 55.9% | best_val_loss=1.0548 (ep 141) | lr 2.5e-04
+[tune ems] S09 F1 Ep 200 | tr 0.7489 | val 57.7% | best_val_loss=0.9856 (ep 186) | lr 2.5e-04
+[tune ems] S09 F1 Ep 250 | tr 0.7185 | val 60.9% | best_val_loss=0.9684 (ep 245) | lr 1.3e-04
+[tune ems] S09 F1 Ep 300 | tr 0.7120 | val 61.8% | best_val_loss=0.9498 (ep 294) | lr 1.3e-04
+[tune ems] S09 F1 Ep 350 | tr 0.6848 | val 64.1% | best_val_loss=0.9497 (ep 335) | lr 6.3e-05
+[tune ems] S09 F1 Ep 400 | tr 0.6889 | val 63.6% | best_val_loss=0.9416 (ep 381) | lr 6.3e-05
+[tune ems] S09 F1 Ep 450 | tr 0.6754 | val 64.5% | best_val_loss=0.9396 (ep 448) | lr 3.1e-05
+[tune ems] S09 F1 Ep 500 | tr 0.6712 | val 65.0% | best_val_loss=0.9373 (ep 471) | lr 3.1e-05
+[tune ems] S09 F1 Ep 550 | tr 0.6723 | val 64.5% | best_val_loss=0.9357 (ep 546) | lr 1.6e-05
+[tune ems] S09 F1 Ep 600 | tr 0.6773 | val 64.1% | best_val_loss=0.9357 (ep 546) | lr 7.8e-06
+[tune]            ems S09: mean validation accuracy 64.09%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S01 [4class] profile=lawhern128 X=(480, 22, 448) class counts={'feet': 120, 'left_hand': 120, 'rest': 120, 'right_hand': 120}
+[tune lawhern128] S01 F1 Ep 001 | tr 1.4570 | val 27.5% | best_val_loss=1.3870 (ep 1) | lr 1.0e-03
+[tune lawhern128] S01 F1 Ep 050 | tr 0.3713 | val 36.2% | best_val_loss=1.3647 (ep 15) | lr 9.8e-04
+[tune lawhern128] S01 F1 Ep 100 | tr 0.2057 | val 55.0% | best_val_loss=1.1957 (ep 83) | lr 9.1e-04
+[tune lawhern128] S01 F1 Ep 150 | tr 0.1309 | val 66.2% | best_val_loss=0.9364 (ep 132) | lr 8.0e-04
+[tune lawhern128] S01 F1 Ep 200 | tr 0.0747 | val 68.8% | best_val_loss=0.8572 (ep 180) | lr 6.6e-04
+[tune lawhern128] S01 F1 Ep 250 | tr 0.0557 | val 70.0% | best_val_loss=0.8145 (ep 225) | lr 5.0e-04
+[tune lawhern128] S01 F1 Ep 300 | tr 0.0483 | val 70.0% | best_val_loss=0.7995 (ep 272) | lr 3.5e-04
+[tune lawhern128] S01 F1 Ep 350 | tr 0.0345 | val 71.2% | best_val_loss=0.7995 (ep 272) | lr 2.1e-04
+[tune lawhern128] S01 F1 Early stop @ ep 372 (best epoch 272)
+[tune]     lawhern128 S01: mean validation accuracy 72.50%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S02 [4class] profile=lawhern128 X=(973, 22, 448) class counts={'feet': 244, 'left_hand': 242, 'rest': 243, 'right_hand': 244}
+[tune lawhern128] S02 F1 Ep 001 | tr 1.4271 | val 25.1% | best_val_loss=1.3860 (ep 1) | lr 1.0e-03
+[tune lawhern128] S02 F1 Ep 050 | tr 0.4009 | val 59.6% | best_val_loss=0.8255 (ep 50) | lr 9.8e-04
+[tune lawhern128] S02 F1 Ep 100 | tr 0.2209 | val 78.8% | best_val_loss=0.5312 (ep 80) | lr 9.1e-04
+[tune lawhern128] S02 F1 Ep 150 | tr 0.1289 | val 81.3% | best_val_loss=0.5057 (ep 142) | lr 8.0e-04
+[tune lawhern128] S02 F1 Ep 200 | tr 0.0803 | val 79.3% | best_val_loss=0.5057 (ep 142) | lr 6.6e-04
+[tune lawhern128] S02 F1 Early stop @ ep 242 (best epoch 142)
+[tune]     lawhern128 S02: mean validation accuracy 86.70%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S03 [4class] profile=lawhern128 X=(1040, 22, 448) class counts={'feet': 260, 'left_hand': 260, 'rest': 260, 'right_hand': 260}
+[tune lawhern128] S03 F1 Ep 001 | tr 1.4177 | val 25.9% | best_val_loss=1.3859 (ep 1) | lr 1.0e-03
+[tune lawhern128] S03 F1 Ep 050 | tr 0.1175 | val 90.0% | best_val_loss=0.2803 (ep 49) | lr 9.8e-04
+[tune lawhern128] S03 F1 Ep 100 | tr 0.0555 | val 90.9% | best_val_loss=0.1921 (ep 84) | lr 9.1e-04
+[tune lawhern128] S03 F1 Ep 150 | tr 0.0407 | val 93.2% | best_val_loss=0.1795 (ep 102) | lr 8.0e-04
+[tune lawhern128] S03 F1 Ep 200 | tr 0.0290 | val 92.3% | best_val_loss=0.1795 (ep 102) | lr 6.6e-04
+[tune lawhern128] S03 F1 Early stop @ ep 202 (best epoch 102)
+[tune]     lawhern128 S03: mean validation accuracy 93.64%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S04 [4class] profile=lawhern128 X=(1057, 22, 448) class counts={'feet': 265, 'left_hand': 264, 'rest': 264, 'right_hand': 264}
+[tune lawhern128] S04 F1 Ep 001 | tr 1.3857 | val 26.3% | best_val_loss=1.3856 (ep 1) | lr 1.0e-03
+[tune lawhern128] S04 F1 Ep 050 | tr 0.0994 | val 94.6% | best_val_loss=0.1464 (ep 47) | lr 9.8e-04
+[tune lawhern128] S04 F1 Ep 100 | tr 0.0515 | val 98.2% | best_val_loss=0.0493 (ep 99) | lr 9.1e-04
+[tune lawhern128] S04 F1 Ep 150 | tr 0.0242 | val 100.0% | best_val_loss=0.0275 (ep 150) | lr 8.0e-04
+[tune lawhern128] S04 F1 Ep 200 | tr 0.0138 | val 97.3% | best_val_loss=0.0245 (ep 173) | lr 6.6e-04
+[tune lawhern128] S04 F1 Ep 250 | tr 0.0180 | val 99.6% | best_val_loss=0.0218 (ep 238) | lr 5.0e-04
+[tune lawhern128] S04 F1 Ep 300 | tr 0.0100 | val 97.8% | best_val_loss=0.0155 (ep 268) | lr 3.5e-04
+[tune lawhern128] S04 F1 Ep 350 | tr 0.0104 | val 99.1% | best_val_loss=0.0155 (ep 268) | lr 2.1e-04
+[tune lawhern128] S04 F1 Early stop @ ep 368 (best epoch 268)
+[tune]     lawhern128 S04: mean validation accuracy 100.00%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S05 [4class] profile=lawhern128 X=(880, 22, 448) class counts={'feet': 220, 'left_hand': 220, 'rest': 220, 'right_hand': 220}
+[tune lawhern128] S05 F1 Ep 001 | tr 1.4294 | val 23.9% | best_val_loss=1.3868 (ep 1) | lr 1.0e-03
+[tune lawhern128] S05 F1 Ep 050 | tr 0.3543 | val 70.6% | best_val_loss=0.6095 (ep 47) | lr 9.8e-04
+[tune lawhern128] S05 F1 Ep 100 | tr 0.1803 | val 77.2% | best_val_loss=0.4785 (ep 95) | lr 9.1e-04
+[tune lawhern128] S05 F1 Ep 150 | tr 0.1403 | val 80.0% | best_val_loss=0.4568 (ep 129) | lr 8.0e-04
+[tune lawhern128] S05 F1 Ep 200 | tr 0.1211 | val 81.7% | best_val_loss=0.4382 (ep 162) | lr 6.6e-04
+[tune lawhern128] S05 F1 Ep 250 | tr 0.0876 | val 80.0% | best_val_loss=0.4382 (ep 162) | lr 5.0e-04
+[tune lawhern128] S05 F1 Early stop @ ep 262 (best epoch 162)
+[tune]     lawhern128 S05: mean validation accuracy 83.33%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S06 [4class] profile=lawhern128 X=(1760, 22, 448) class counts={'feet': 440, 'left_hand': 440, 'rest': 440, 'right_hand': 440}
+[tune lawhern128] S06 F1 Ep 001 | tr 1.4252 | val 23.6% | best_val_loss=1.3868 (ep 1) | lr 1.0e-03
+[tune lawhern128] S06 F1 Ep 050 | tr 0.2412 | val 73.6% | best_val_loss=0.5632 (ep 50) | lr 9.8e-04
+[tune lawhern128] S06 F1 Ep 100 | tr 0.1296 | val 85.9% | best_val_loss=0.3571 (ep 88) | lr 9.1e-04
+[tune lawhern128] S06 F1 Ep 150 | tr 0.1178 | val 86.8% | best_val_loss=0.3525 (ep 101) | lr 8.0e-04
+[tune lawhern128] S06 F1 Ep 200 | tr 0.0627 | val 88.2% | best_val_loss=0.3525 (ep 101) | lr 6.6e-04
+[tune lawhern128] S06 F1 Early stop @ ep 201 (best epoch 101)
+[tune]     lawhern128 S06: mean validation accuracy 86.82%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S07 [4class] profile=lawhern128 X=(1760, 22, 448) class counts={'feet': 440, 'left_hand': 440, 'rest': 440, 'right_hand': 440}
+[tune lawhern128] S07 F1 Ep 001 | tr 1.4036 | val 25.5% | best_val_loss=1.3874 (ep 1) | lr 1.0e-03
+[tune lawhern128] S07 F1 Ep 050 | tr 0.3100 | val 67.7% | best_val_loss=0.6965 (ep 50) | lr 9.8e-04
+[tune lawhern128] S07 F1 Ep 100 | tr 0.1849 | val 69.1% | best_val_loss=0.6770 (ep 60) | lr 9.1e-04
+[tune lawhern128] S07 F1 Ep 150 | tr 0.0974 | val 71.8% | best_val_loss=0.6770 (ep 60) | lr 8.0e-04
+[tune lawhern128] S07 F1 Early stop @ ep 160 (best epoch 60)
+[tune]     lawhern128 S07: mean validation accuracy 68.18%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S08 [4class] profile=lawhern128 X=(1308, 22, 448) class counts={'feet': 326, 'left_hand': 328, 'rest': 326, 'right_hand': 328}
+[tune lawhern128] S08 F1 Ep 001 | tr 1.4231 | val 26.8% | best_val_loss=1.3863 (ep 1) | lr 1.0e-03
+[tune lawhern128] S08 F1 Ep 050 | tr 0.2461 | val 62.8% | best_val_loss=0.9399 (ep 50) | lr 9.8e-04
+[tune lawhern128] S08 F1 Ep 100 | tr 0.1189 | val 81.1% | best_val_loss=0.4314 (ep 94) | lr 9.1e-04
+[tune lawhern128] S08 F1 Ep 150 | tr 0.0747 | val 83.5% | best_val_loss=0.3950 (ep 107) | lr 8.0e-04
+[tune lawhern128] S08 F1 Ep 200 | tr 0.0491 | val 82.3% | best_val_loss=0.3950 (ep 107) | lr 6.6e-04
+[tune lawhern128] S08 F1 Early stop @ ep 207 (best epoch 107)
+[tune]     lawhern128 S08: mean validation accuracy 83.54%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S09 [4class] profile=lawhern128 X=(1760, 22, 448) class counts={'feet': 440, 'left_hand': 440, 'rest': 440, 'right_hand': 440}
+[tune lawhern128] S09 F1 Ep 001 | tr 1.4295 | val 22.7% | best_val_loss=1.3865 (ep 1) | lr 1.0e-03
+[tune lawhern128] S09 F1 Ep 050 | tr 0.6687 | val 37.7% | best_val_loss=1.3627 (ep 10) | lr 9.8e-04
+[tune lawhern128] S09 F1 Ep 100 | tr 0.4160 | val 67.3% | best_val_loss=0.6944 (ep 92) | lr 9.1e-04
+[tune lawhern128] S09 F1 Ep 150 | tr 0.2862 | val 71.8% | best_val_loss=0.5794 (ep 138) | lr 8.0e-04
+[tune lawhern128] S09 F1 Ep 200 | tr 0.2236 | val 72.3% | best_val_loss=0.5673 (ep 166) | lr 6.6e-04
+[tune lawhern128] S09 F1 Ep 250 | tr 0.1876 | val 74.5% | best_val_loss=0.5673 (ep 166) | lr 5.0e-04
+[tune lawhern128] S09 F1 Ep 300 | tr 0.1552 | val 78.6% | best_val_loss=0.5561 (ep 289) | lr 3.5e-04
+[tune lawhern128] S09 F1 Ep 350 | tr 0.1340 | val 78.2% | best_val_loss=0.5440 (ep 324) | lr 2.1e-04
+[tune lawhern128] S09 F1 Ep 400 | tr 0.1767 | val 78.2% | best_val_loss=0.5440 (ep 324) | lr 9.8e-05
+[tune lawhern128] S09 F1 Early stop @ ep 424 (best epoch 324)
+[tune]     lawhern128 S09: mean validation accuracy 80.45%
+
+================================================================================
+PROFILE SELECTION - 4class (validation accuracy only)
+================================================================================
+        original: 79.02%
+             ems: 78.48%
+      lawhern128: 83.91%
+chosen per subject (LOSO): {'1': 'lawhern128', '2': 'lawhern128', '3': 'lawhern128', '4': 'lawhern128', '5': 'lawhern128', '6': 'lawhern128', '7': 'lawhern128', '8': 'lawhern128', '9': 'lawhern128'}
+unanimous: True | written to D:\EEG\NeuroGrounded-EEG\EEGNetV4\HGD\4class\results_session\selected_profile.json

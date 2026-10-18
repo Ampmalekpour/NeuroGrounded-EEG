@@ -1,0 +1,74 @@
+{
+ "eegnetv4/2class/tune": {
+  "state": "ok",
+  "minutes": 11.9,
+  "log": "EEGNetV4\\HGD\\2class\\logs_session\\tune.log",
+  "finished": "2026-10-17 20:28:49"
+ },
+ "eegnetv4/2class/saliency": {
+  "state": "ok",
+  "minutes": 29.4,
+  "log": "EEGNetV4\\HGD\\2class\\logs_session\\saliency.log",
+  "finished": "2026-10-17 20:58:15"
+ },
+ "eegnetv4/2class/csp": {
+  "state": "ok",
+  "minutes": 9.1,
+  "log": "EEGNetV4\\HGD\\2class\\logs_session\\csp.log",
+  "finished": "2026-10-17 21:07:23"
+ },
+ "eegnetv4/2class/relieff": {
+  "state": "ok",
+  "minutes": 10.8,
+  "log": "EEGNetV4\\HGD\\2class\\logs_session\\relieff.log",
+  "finished": "2026-10-17 21:18:08"
+ },
+ "eegnetv4/2class/mi": {
+  "state": "ok",
+  "minutes": 12.9,
+  "log": "EEGNetV4\\HGD\\2class\\logs_session\\mi.log",
+  "finished": "2026-10-17 21:31:04"
+ },
+ "eegnetv4/2class/controls": {
+  "state": "ok",
+  "minutes": 65.3,
+  "log": "EEGNetV4\\HGD\\2class\\logs_session\\controls.log",
+  "finished": "2026-10-17 22:36:23"
+ },
+ "eegnetv4/4class/tune": {
+  "state": "ok",
+  "minutes": 18.7,
+  "log": "EEGNetV4\\HGD\\4class\\logs_session\\tune.log",
+  "finished": "2026-10-17 22:55:07"
+ },
+ "eegnetv4/4class/saliency": {
+  "state": "ok",
+  "minutes": 36.3,
+  "log": "EEGNetV4\\HGD\\4class\\logs_session\\saliency.log",
+  "finished": "2026-10-17 23:31:24"
+ },
+ "eegnetv4/4class/csp": {
+  "state": "ok",
+  "minutes": 14.3,
+  "log": "EEGNetV4\\HGD\\4class\\logs_session\\csp.log",
+  "finished": "2026-10-17 23:45:40"
+ },
+ "eegnetv4/4class/relieff": {
+  "state": "ok",
+  "minutes": 11.3,
+  "log": "EEGNetV4\\HGD\\4class\\logs_session\\relieff.log",
+  "finished": "2026-10-17 23:57:01"
+ },
+ "eegnetv4/4class/mi": {
+  "state": "ok",
+  "minutes": 12.7,
+  "log": "EEGNetV4\\HGD\\4class\\logs_session\\mi.log",
+  "finished": "2026-10-18 00:09:45"
+ },
+ "eegnetv4/4class/controls": {
+  "state": "ok",
+  "minutes": 73.5,
+  "log": "EEGNetV4\\HGD\\4class\\logs_session\\controls.log",
+  "finished": "2026-10-18 01:23:15"
+ }
+}

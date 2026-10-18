@@ -1,0 +1,24 @@
+EEGNetv4 - HGD - FULL 22-CHANNEL BASELINE - 2class
+================================================================================
+
+Subject 01: 51.25%
+    seed -1 fold 1: 51.25% (majority-class 50.0%)
+Subject 02: 88.75%
+    seed -1 fold 1: 88.75% (majority-class 50.0%)
+Subject 03: 98.75%
+    seed -1 fold 1: 98.75% (majority-class 50.0%)
+Subject 04: 100.00%
+    seed -1 fold 1: 100.00% (majority-class 50.0%)
+Subject 05: 78.75%
+    seed -1 fold 1: 78.75% (majority-class 50.0%)
+Subject 06: 99.55%
+    seed -1 fold 1: 99.55% (majority-class 50.0%)
+Subject 07: 87.05%
+    seed -1 fold 1: 87.05% (majority-class 50.0%)
+Subject 08: 62.20%
+    seed -1 fold 1: 62.20% (majority-class 50.0%)
+Subject 09: 97.73%
+    seed -1 fold 1: 97.73% (majority-class 50.0%)
+
+GRAND MEAN: 84.89% +/- 17.69% (SD across subjects)
+chance 50.0% | mean majority-class 50.0%
