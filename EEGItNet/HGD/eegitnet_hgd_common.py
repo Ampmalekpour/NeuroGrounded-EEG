@@ -83,7 +83,7 @@ def _env_str_list(name, default):
 
 
 SEEDS = _env_int_list("EEG_SEEDS", [42])
-SUBJECT_IDS = _env_int_list("EEG_SUBJECTS", range(1, 10))
+SUBJECT_IDS = _env_int_list("EEG_SUBJECTS", range(1, 15))      # HGD has 14 subjects
 MODEL_NAME = "EEGITNet"
 CLASS_MODE = os.environ.get("EEG_CLASS_MODE", "")
 if CLASS_MODE not in ("2class", "4class"):
