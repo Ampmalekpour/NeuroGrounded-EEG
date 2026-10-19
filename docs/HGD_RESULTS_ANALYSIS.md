@@ -46,18 +46,21 @@ Left vs right is the harder, genuine task, and the paper's 2-class numbers are n
 
 ## 4. What you can do
 
-1. **Check whether the test files are really identical (2 minutes).**
+1. **Repair the local data cache (found: the server files are fine).**
+   - Checked on the real machine: the cached `train\6.edf` and `test\6.edf` were byte-identical, but the
+     server holds distinct files (train about 0.9 GB, test about 0.16 GB). The cached S11 "train" file was
+     the small test file.
+   - So the HGD results in `results_session/` used a 160-trial hold-out for S06–S14 only because of the
+     broken cache. With the right files, all 14 subjects use the official train and test runs.
+   - Repair (re-downloads only the wrong files):
 
-   ```powershell
-   python -c "import mne; print(mne.get_config('MNE_DATA'), mne.get_config('MNE_DATASETS_SCHIRRMEISTER2017_PATH'))"
-   Get-ChildItem -Recurse -Filter 6.edf $HOME\mne_data | Get-FileHash | Select Hash, Path
-   ```
+     ```powershell
+     python analysis\fix_hgd_cache.py --check     # report only
+     python analysis\fix_hgd_cache.py             # fix
+     python analysis\check_hgd_data.py            # must now show distinct recordings for all 14 subjects
+     ```
 
-   - If `train\6.edf` and `test\6.edf` have different hashes, MOABB read the wrong file. Delete the cached
-     `test` files of S06–S14, run `python analysis\check_hgd_data.py` again (it downloads them), and the
-     pipeline then uses the genuine 160-trial test runs automatically.
-   - If the hashes are equal, the files on the server are identical and the hold-out is the best that can be done.
-   - Before re-running a model, rename its `results_session` folder so nothing is overwritten.
+   - Keep the earlier results. Rename them before re-running (see `docs/HGD_RERUN.md`).
 2. **Full-bandwidth sensitivity run (new, opt-in).**
 
    ```powershell
