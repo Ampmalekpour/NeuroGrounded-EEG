@@ -165,3 +165,29 @@ protocol writes to `results_session/`, `logs_session/`, `report_session/` and `r
 
 HGD contains executed movements; the manuscript should say so. Physiology block for HGD adds a high-gamma
 (60–90 Hz) ERD map, since Schirrmeister et al. (2017) found high gamma informative on this dataset.
+
+## J. PhysioNet EEG Motor Movement/Imagery (MOABB `PhysionetMI`): all four models (original scripts in `EEGItNet/PhysioNet/legacy_unrevised/original_scripts/`)
+
+Applies to `EEGNetV4/PhysioNet`, `EEGItNet/PhysioNet`, `Deep4net/PhysioNet` and `EEGConformer/PhysioNet`
+(one pipeline; the models differ in architecture and training profiles). Original code:
+`EEGiTNet-Physionet-SWT_Pipelline-_2th_try.py` (the paper's pipeline, labelled "EEGNetV$" but using
+EEG-ITNet) and the later draft `EEGiTNet_pipeline_final_2.py`.
+
+| # | Original behaviour | Reviewer | Status |
+|---|---|---|---|
+| 1 | **Classes not defined; wrong in the paper version.** Runs, event remapping and class definitions were not given. The paper version built windows without a mapping (braindecode then numbers the names alphabetically: feet=0, hands=1, left_hand=2, rest=3, right_hand=4) and removed label 0, so "4-class" was hands / left / **rest** / right: feet dropped, rest (the majority event) kept. | 4, 15 | **FIXED**: imagery runs only. 2class = left vs right fist (runs 4, 8, 12); 4class = left fist, right fist, both fists, both feet (runs 4–14). Rest is never a class. An explicit mapping is used everywhere and checked against the annotation names at load time |
+| 2 | **Repeated ≈48 % accuracies** in the 4-class table are consistent with predicting the majority class. | 15 | **FIXED** at the source (item 1). T5 now reports per-class recall, predicted shares, the majority-class rate and a collapse count |
+| 3 | **"22ch" label for a 64-channel baseline;** 10- vs 12-channel ambiguity. | 5 | **FIXED**: the baseline is `full64` / "64ch". Every reduced montage has 12 channels (81.25 % fewer). T2 lists every selected electrode per subject and method |
+| 4 | **Ten subjects shown, N = 109 claimed;** means not matching the displayed values. | 4 | **FIXED**: the cohort is 105 subjects (88, 92, 100, 104 excluded by default and listed in `results.json`; `EEG_PHYSIONET_EXCLUDE` to change). T1 lists all of them; class and trial counts per subject are in `results.json` (`meta.class_counts`) and `analysis/check_physionet_data.py` |
+| 5 | **Shuffled stratified K-fold; saliency on the test fold.** | 6, 11 | **FIXED**: session protocol as for BNCI and HGD, with a run-wise chronological split (no official split exists): test = last run of each type, validation = last 25 % of each class's training trials, refit, test once, 3-seed ensemble. Saliency on validation trials only |
+| 6 | **Circular selection:** attribution methods ranked by their ERD correlation; one global top-12 montage from all subjects, then retrained on the same subjects. | 7, 11, 12 | **FIXED**: all four methods averaged (the choice does not depend on ERD). Montages are leave-one-subject-out, as for BNCI and HGD |
+| 7 | **Attribution code assumed 4 classes and a temporal output** (`model(x).view(B, 4, -1)`), so it was wrong for 2-class. | 8 | **FIXED**: true-class logit of the model output, any number of classes |
+| 8 | ERD timing in the paper version was already right (−0.5–3 s epoch: pre-cue baseline −0.5–0 s, active 1–3 s). Its left/right ids depended on the order of a re-mapping step. | 9, 13 | **KEPT / FIXED**: same intervals, now stated in `T9_config.json`. ERD comes from raw µV at 8–30 Hz, at one sampling rate for all models; left/right ids come from the explicit mapping |
+| 9 | **PhysioNet-specific architecture changes** described inconsistently (Sec. 3.3 vs 3.4). | 14 | **FIXED**: each model's exact configuration is written to `T9_config.json`. The manuscript's PhysioNet setting (dropout 0.25; Deep4Net temporal filter 10, pooling 2) is the `original` profile next to the literature settings. The profile is chosen on validation data only. 3 seeds, ensemble and per-seed tables (T6) |
+| 10 | Spatial normalisation (e.g. Euclidean alignment) was proposed in the later draft. | 7, 12 | **NOT USED**: it mixes electrodes, so channel saliency and selection would no longer refer to single electrodes. Normalisation is channel-wise (z-score with training-run statistics, or EMS) |
+
+Comparison with the manuscript: the paper's PhysioNet 4-class numbers (Table 3) come from the
+hands/left/rest/right task (item 1). They are not comparable with the corrected 4-class task, whose chance
+level is 25 %. The 2-class definition in the paper is not documented. The new numbers should replace both
+tables. Text values that can be read from the manuscript: EEGConformer 4-class 64ch 55.53 %, Ours 55.52 %,
+CSP 48.39 %, ReliefF 48.42 %, MI 48.53 %.

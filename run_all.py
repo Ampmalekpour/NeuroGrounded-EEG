@@ -1,9 +1,10 @@
 # run_all.py  (repository root)
 #
-# Coordinator for both datasets (--dataset bnci | hgd, default bnci). Runs every experiment of each
-# model in this order:
+# Coordinator for all datasets (--dataset bnci | hgd | physionet, default bnci). Runs every experiment
+# of each model in this order:
 #
-#   EEGNetV4 -> EEG-ITNet -> Deep4Net -> EEGConformer     (folders <Model>/BNCI_001 or <Model>/HGD)
+#   EEGNetV4 -> EEG-ITNet -> Deep4Net -> EEGConformer     (folders <Model>/BNCI_001, <Model>/HGD or
+#                                                           <Model>/PhysioNet)
 #
 # for both class modes, then builds each model's reviewer tables and a cross-model summary.
 #
@@ -16,6 +17,8 @@
 #                      reports/<BNCI_001|HGD>_session/.
 #   blocks             4 chronological blocks (first revision). Writes to <class>/results/,
 #                      <class>/logs/, <model folder>/report/ and reports/<BNCI_001|HGD>/.
+# PhysioNet has no official split: its session protocol trains on the first two imagery runs of each
+# type and tests once on the last one (see <Model>/PhysioNet/README.md); blocks is not available.
 # The two protocols never write into each other's folders, so earlier results are kept.
 #
 # For each model and class mode (2class, then 4class) the steps run in this order:
@@ -34,12 +37,14 @@
 # Examples
 #   python run_all.py                                  # all 4 models, BNCI, session protocol
 #   python run_all.py --dataset hgd --models eegnetv4  # EEGNetV4 on HGD
+#   python run_all.py --dataset physionet --models eegnetv4   # the whole EEGNetV4 PhysioNet suite
+#                                                     # (same as EEGNetV4/PhysioNet/run_suite.py)
 #   python run_all.py --models eegitnet deep4net       # some models (still in the fixed order)
 #   python run_all.py --classes 2class                 # one class mode
 #   python run_all.py --steps aggregate                # rebuild all tables from existing results
 #   python run_all.py --protocol blocks --models eegitnet --classes 4class   # finish the old protocol
 # Environment variables (EEG_SEEDS, EEG_SUBJECTS, EEG_SYNTHETIC, EEG_TUNE_CANDIDATES,
-# EEG_SKIP_PHYSIOLOGY, ...) are passed on. Session protocol default: EEG_SEEDS=42,43,44.
+# EEG_SKIP_PHYSIOLOGY, ...) are passed on. Default for every protocol except blocks: EEG_SEEDS=42,43,44.
 
 import os
 import sys
@@ -57,11 +62,13 @@ MODEL_DIRS = {                  # run in this order
     "deep4net": "Deep4net",
     "eegconformer": "EEGConformer",
 }
-DATASET_DIRS = {"bnci": "BNCI_001", "hgd": "HGD"}
+DATASET_DIRS = {"bnci": "BNCI_001", "hgd": "HGD", "physionet": "PhysioNet"}
 PROTOCOL_DIRS = {               # results, logs, per-model report, combined-report suffix, status suffix
     "session": ("results_session", "logs_session", "report_session", "_session", "_session"),
     "blocks": ("results", "logs", "report", "", ""),
 }
+DATASET_PROTOCOLS = {"bnci": ["session", "blocks"], "hgd": ["session", "blocks"], "physionet": ["session"]}
+BASELINE_DIR = {"bnci": "full22", "hgd": "full22", "physionet": "full64"}   # full-montage experiment
 
 
 def protocol_paths(dataset, protocol):
@@ -69,7 +76,8 @@ def protocol_paths(dataset, protocol):
     The BNCI names are unchanged from earlier runs, so their status files and reports are reused."""
     res_sub, log_sub, rep_sub, rep_suffix, status_suffix = PROTOCOL_DIRS[protocol]
     ds = DATASET_DIRS[dataset]
-    status = f"run_all_status{status_suffix}.json" if dataset == "bnci" else f"run_all_status_hgd{status_suffix}.json"
+    status = (f"run_all_status{status_suffix}.json" if dataset == "bnci"
+              else f"run_all_status_{dataset}{status_suffix}.json")
     return res_sub, log_sub, rep_sub, os.path.join(REPO, "reports", ds + rep_suffix), status
 AGGREGATOR = os.path.join(REPO, "analysis", "aggregate_results.py")
 STEPS = ["tune", "saliency", "csp", "relieff", "mi", "controls"]
@@ -92,8 +100,9 @@ def step_script(cls_dir, step):
     return found[0]
 
 
-def is_done(results_dir, step, controls):
+def is_done(results_dir, step, controls, dataset="bnci"):
     targets = [CONTROL_DONE[c] for c in controls] if step == "controls" else DONE[step]
+    targets = [t.replace("full22", BASELINE_DIR[dataset]) for t in targets]
     return all(os.path.exists(os.path.join(results_dir, t)) for t in targets)
 
 
@@ -112,9 +121,10 @@ def run_step(cls_dir, step, controls, log_path, results_dir, protocol):
 
 
 def main():
-    ap = argparse.ArgumentParser(description="BNCI2014-001 coordinator (see the header of run_all.py)")
+    ap = argparse.ArgumentParser(description="BNCI2014-001 / HGD / PhysioNet coordinator (see the header of run_all.py)")
     ap.add_argument("--dataset", choices=list(DATASET_DIRS), default="bnci")
-    ap.add_argument("--protocol", choices=list(PROTOCOL_DIRS), default="session")
+    ap.add_argument("--protocol", choices=list(PROTOCOL_DIRS), default=None,
+                    help="default: session")
     ap.add_argument("--models", nargs="*", default=list(MODEL_DIRS), help=f"subset of {list(MODEL_DIRS)}")
     ap.add_argument("--classes", nargs="*", default=["2class", "4class"])
     ap.add_argument("--steps", nargs="*", default=STEPS + ["aggregate"],
@@ -126,6 +136,10 @@ def main():
     ap.add_argument("--margin", type=float, default=6.0, help="TOST margin for the tables (pp)")
     a = ap.parse_args()
 
+    a.protocol = a.protocol or DATASET_PROTOCOLS[a.dataset][0]
+    if a.protocol not in DATASET_PROTOCOLS[a.dataset]:
+        raise SystemExit(f"--protocol {a.protocol} is not available for {a.dataset}; "
+                         f"choose from {DATASET_PROTOCOLS[a.dataset]}")
     steps = [s for s in a.steps if not (a.no_tune and s == "tune")]
     unknown = set(steps) - set(STEPS + ["aggregate"])
     if unknown:
@@ -136,7 +150,7 @@ def main():
     MODELS = {m: os.path.join(REPO, d, DATASET_DIRS[a.dataset]) for m, d in MODEL_DIRS.items()}
     models = [m for m in MODELS if m in a.models]                    # always in the fixed order
     res_sub, log_sub, rep_sub, combined_out, status_name = protocol_paths(a.dataset, a.protocol)
-    if a.protocol == "session" and not os.environ.get("EEG_SEEDS"):
+    if a.protocol != "blocks" and not os.environ.get("EEG_SEEDS"):
         os.environ["EEG_SEEDS"] = "42,43,44"                          # needed for the seed ensemble
     print(f"[run_all] dataset={a.dataset} protocol={a.protocol} models={models} classes={a.classes} "
           f"seeds={os.environ.get('EEG_SEEDS', '42')} -> {res_sub}/")
@@ -149,7 +163,7 @@ def main():
         results_dir = os.path.join(cls_dir, res_sub)
         for step in [s for s in STEPS if s in steps]:
             key = f"{model}/{cls}/{step}"
-            if not a.force and is_done(results_dir, step, a.controls):
+            if not a.force and is_done(results_dir, step, a.controls, a.dataset):
                 print(f"[run_all] {key}: results exist - skipped (use --force to redo)")
                 status[key] = dict(status.get(key, {}), state="skipped (done)")
                 continue

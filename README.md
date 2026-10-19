@@ -29,7 +29,10 @@ EEGNetV4/
 EEGConformer/
   HGD/                                same structure; keeps the Conformer pipeline (500 Hz, 100 epochs)
   BNCI_001/                           BNCI2014-001: common + 2class/ + 4class/
-run_all.py                            coordinator (--dataset bnci | hgd): EEGNetV4 -> EEG-ITNet -> Deep4Net -> EEGConformer
+<Model>/PhysioNet/                    PhysioNet EEG-MMI (64 ch, 105 subjects): common + 2class/ + 4class/
+                                      + run_suite.py (the whole suite of that model with one command)
+run_all.py                            coordinator (--dataset bnci | hgd | physionet): EEGNetV4 -> EEG-ITNet -> Deep4Net -> EEGConformer
+analysis/check_physionet_data.py      PhysioNet download + per-subject run / trial / sampling-rate check
 reports/BNCI_001_session/SUMMARY.md   cross-model summary, session protocol (reports/BNCI_001/ = blocks)
 analysis/equivalence_stats.py         paired TOST / CI / per-subject losses from results.json files
 analysis/aggregate_results.py         builds the reviewer tables (T1-T10) for one model/dataset folder (--combine: across models)
@@ -46,12 +49,12 @@ cd D:\EEG\NeuroGrounded-EEG
 python run_all.py                   # BNCI2014-001: EEGNetV4 -> EEG-ITNet -> Deep4Net -> EEGConformer
 python run_all.py --dataset hgd     # HGD: same order
 python run_all.py --dataset hgd --models eegnetv4    # one model
+python run_all.py --dataset physionet --models eegnetv4   # PhysioNet, one model (= EEGNetV4\PhysioNet\run_suite.py)
 ```
 
-Default protocol `session` = each dataset's official split (BNCI: session 1 → session 2; HGD: training
-runs → test runs), with validation-only tuning, refit and a seed ensemble. Output in `results_session/`,
-`report_session/` and `reports/<BNCI_001|HGD>_session/`. First-revision results (`--protocol blocks`) keep
-their own `results/` and `report/` folders. See each `<Model>/<Dataset>/README.md`.
+PhysioNet runs the same `session` pipeline. It has no official split, so it trains on the first two
+imagery runs of each type and tests on the last one. Output goes to `results_session/`,
+`report_session/` and `reports/PhysioNet_session/`. See `docs/PHYSIONET.md`.
 
 ## Setup and run (Windows PowerShell)
 
