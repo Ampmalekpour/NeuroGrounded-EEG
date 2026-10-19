@@ -10,7 +10,8 @@
 # selected_profile.json) and writes <folder>/report/REPORT.md and, per class mode, CSV files:
 #   T1 accuracy per subject and method, mean and SD                      (review 1, 2, 11)
 #   T2 montage / configuration per subject and method                    (review 5, 12)
-#   T3 equivalence (TOST) of every 12-channel montage vs 22 channels      (review 10)
+#   T3 equivalence (TOST) of every 12-channel montage vs the full montage (review 10)
+#      (22 channels for BNCI / HGD, 64 channels for PhysioNet: experiment full22 / full64)
 #   T4 paired comparison of "Ours" vs every other montage (Holm)          (review 11, 12)
 #   T5 confusion matrices, per-class recall, chance / majority, collapse   (review 15)
 #   T6 seed stability                                                    (review 14)
@@ -40,6 +41,7 @@ from scipy import stats
 
 METHODS = [
     ("full22", "22ch"),
+    ("full64", "64ch"),                        # PhysioNet full montage
     ("saliency_reduced", "Ours"),
     ("csp_reduced", "CSP"),
     ("relieff_reduced", "RLF"),
@@ -80,9 +82,23 @@ def load_methods(results_root):
         if os.path.exists(path):
             d = _load(path)
             out[label] = {"records": d["records"], "meta": d["meta"], "seed_records": d.get("seed_records")}
-        else:
+        elif exp not in BASELINE_EXPS:
             missing.append(label)
+    if not any(lab in out for lab in BASELINE_EXPS.values()):
+        missing.insert(0, "full montage (22ch / 64ch)")
     return out, missing
+
+
+BASELINE_EXPS = {"full22": "22ch", "full64": "64ch"}
+
+
+def baseline_of(methods_or_root):
+    """(experiment folder, label) of the full-montage baseline: full22 (BNCI, HGD) or full64 (PhysioNet)."""
+    for exp, label in BASELINE_EXPS.items():
+        if (label in methods_or_root if isinstance(methods_or_root, dict)
+                else os.path.isdir(os.path.join(methods_or_root, exp))):
+            return exp, label
+    return "full22", "22ch"
 
 
 def subject_acc(records):
@@ -250,6 +266,7 @@ def build_class_report(folder, cls, out_dir, margin, results_subdir="results"):
         md.append("Not available yet: " + ", ".join(missing))
 
     accs = {label: method_subject_acc(e) for label, e in methods.items()}
+    base_exp, base = baseline_of(methods)
     subjects = sorted(set().union(*[set(a) for a in accs.values()]))
     any_rec = next(iter(methods.values()))["records"][0]
     chance = any_rec["chance_acc"]
@@ -266,14 +283,23 @@ def build_class_report(folder, cls, out_dir, margin, results_subdir="results"):
     first = next(iter(methods.values()))
     if first.get("seed_records"):
         n_seeds = len({r["seed"] for r in first["seed_records"]})
-        how = (f"Session protocol: trained on session 1, tested once on session 2. Subject accuracy = "
+        folds_note = first["meta"].get("config", {}).get("folds", "single train / validation / test split")
+        how = (f"Protocol: {folds_note}. Subject accuracy = "
                f"seed ensemble (mean softmax of {n_seeds} seeds); single seeds in T6.")
     else:
         n_seeds = len({r["seed"] for r in first["records"]})
         how = f"Subject accuracy = mean over the folds, then over seeds ({n_seeds} seed(s))."
+    if len(subjects) > 20:                 # many subjects (PhysioNet): subjects as rows in the report
+        cols = [r[0] for r in rows]
+        t_header = ["Subject"] + cols
+        t_rows = [[header[1 + i]] + [r[1 + i] for r in rows] for i in range(len(subjects))]
+        t_rows += [["Mean"] + [r[-2] for r in rows], ["SD"] + [r[-1] for r in rows]]
+        table = md_table(t_header, t_rows)
+    else:
+        table = md_table(header, rows)
     md += [f"### T1. Test accuracy (%) per subject — chance {pct(chance, 1)}%",
-           how + " SD = across subjects. Random = mean of the random-montage draws.",
-           md_table(header, rows)]
+           how + f" SD = across subjects (n = {len(subjects)}). Random = mean of the random-montage draws.",
+           table]
 
     # T2 montages
     header2 = ["Method", "Subject", "Profile", "N channels", "Channels"]
@@ -294,7 +320,7 @@ def build_class_report(folder, cls, out_dir, margin, results_subdir="results"):
            "(all 12-channel montages are leave-one-subject-out)."]
     summary_rows = []
     for label, e in methods.items():
-        if label == "22ch" or "draw_montages" in e:
+        if label == base or "draw_montages" in e:
             continue
         monts = [tuple(e["meta"]["montages"].get(str(s), [])) for s in subjects]
         most = max(monts, key=monts.count)                 # ties -> lowest subject id (deterministic)
@@ -302,34 +328,34 @@ def build_class_report(folder, cls, out_dir, margin, results_subdir="results"):
     if summary_rows:
         md.append(md_table(["Method", "Distinct montages across subjects", "Most frequent montage"], summary_rows))
 
-    # T3 equivalence vs 22ch
-    if "22ch" in accs:
+    # T3 equivalence vs the full montage
+    if base in accs:
         header3 = ["Method", "n", "Mean diff (pp)", "SD", "90% CI", "TOST p", f"Equivalent (±{margin:g} pp)",
                    "Worst subject (pp)", f"Subjects losing >{margin:g} pp", "Equivalent at margins (pp)"]
         rows3 = []
         for label, a in accs.items():
-            if label == "22ch":
+            if label == base:
                 continue
-            common = [s for s in subjects if s in a and s in accs["22ch"]]
+            common = [s for s in subjects if s in a and s in accs[base]]
             if len(common) < 3:
                 continue
-            diff = np.array([100 * (a[s] - accs["22ch"][s]) for s in common])
+            diff = np.array([100 * (a[s] - accs[base][s]) for s in common])
             t = tost(diff, margin)
             ok_margins = [m for m in (1, 2, 3, 4, 5, 6, 8, 10) if tost(diff, m)["equivalent"]]
             rows3.append([label, t["n"], f"{t['mean_diff']:+.2f}", f"{t['sd_diff']:.2f}",
                           f"[{t['ci_low']:+.2f}, {t['ci_high']:+.2f}]", pval(t["p_tost"]),
                           "yes" if t["equivalent"] else "no", f"{diff.min():+.2f}",
                           int((diff < -margin).sum()), ",".join(str(m) for m in ok_margins) or "none"])
-        write_csv(os.path.join(out_dir, "T3_equivalence_vs_22ch.csv"), header3, rows3)
-        md += ["### T3. Equivalence of each 12-channel montage with 22 channels (paired TOST)",
-               "Difference = montage − 22ch, in percentage points. Equivalent means the 90% CI lies inside "
+        write_csv(os.path.join(out_dir, f"T3_equivalence_vs_{base}.csv"), header3, rows3)
+        md += [f"### T3. Equivalence of each 12-channel montage with all {base[:-2]} channels (paired TOST)",
+               f"Difference = montage − {base}, in percentage points. Equivalent means the 90% CI lies inside "
                "the margin; it does not mean identical accuracy.", md_table(header3, rows3)]
 
     # T4 Ours vs others
     if "Ours" in accs:
         comps = []
         for label, a in accs.items():
-            if label in ("Ours", "22ch"):
+            if label in ("Ours", base):
                 continue
             common = [s for s in subjects if s in a and s in accs["Ours"]]
             if len(common) < 3:
@@ -388,7 +414,7 @@ def build_class_report(folder, cls, out_dir, margin, results_subdir="results"):
     md.append(md_table(header6, rows6))
 
     # T7 alignment
-    align_path = os.path.join(results_root, "full22", "alignment_metrics.json")
+    align_path = os.path.join(results_root, base_exp, "alignment_metrics.json")
     if os.path.exists(align_path):
         al = _load(align_path)
         header7 = ["Attribution", "Metric", "Mean r (Fisher)", "95% CI", "SD of r", "n subjects"]
@@ -408,7 +434,7 @@ def build_class_report(folder, cls, out_dir, margin, results_subdir="results"):
                "magnitude / class_specific / lateralisation compare unsigned saliency with desynchronisation "
                "strength (−ERD) and are sign-invariant; `legacy_signed_LR` is the old statistic, shown only "
                "for comparison (its sign is not interpretable). Mean and CI via Fisher z. Per-subject values: "
-               "`results/full22/alignment_metrics.json`.", md_table(header7, rows7)]
+               f"`results/{base_exp}/alignment_metrics.json`.", md_table(header7, rows7)]
         rows7b = []
         for m in al["summary"]:
             for k in ORIG_KEYS:
@@ -427,7 +453,7 @@ def build_class_report(folder, cls, out_dir, margin, results_subdir="results"):
                    md_table(header7b, rows7b)]
 
     # T10 exploratory physiology
-    phys_path = os.path.join(results_root, "full22", "physiology_correlations.json")
+    phys_path = os.path.join(results_root, base_exp, "physiology_correlations.json")
     if os.path.exists(phys_path):
         ph = _load(phys_path)
         if ph.get("error"):
@@ -446,7 +472,7 @@ def build_class_report(folder, cls, out_dir, margin, results_subdir="results"):
                    "Group maps: `figures/physiology_maps_group.png`.", md_table(header10, rows10)]
 
     # T8 faithfulness / randomisation
-    recs22 = methods.get("22ch", {}).get("records", [])
+    recs22 = methods.get(base, {}).get("records", [])
     faith = [r for r in recs22 if "faithfulness" in r]
     if faith:
         ks = sorted({k for r in faith for k in r["faithfulness"] if k != "intact"}, key=int)
@@ -471,7 +497,7 @@ def build_class_report(folder, cls, out_dir, margin, results_subdir="results"):
             p_tb = paired(per["top"] - per["bottom"])["p_t"]
             rows8.append([k, fmt(per["top"]), fmt(per["random"]), fmt(per["bottom"]), pval(p_tr), pval(p_tb)])
         write_csv(os.path.join(out_dir, "T8_deletion_test.csv"), header8, rows8)
-        md += ["### T8a. Faithfulness: deletion test on the test block",
+        md += ["### T8a. Faithfulness: deletion test on the test trials",
                "Accuracy drop (intact − channels removed), mean ± SD across subjects. Ranking from validation "
                "saliency; removal = channel set to its standardised mean. A faithful ranking gives the "
                "largest drop for top-ranked channels.", md_table(header8, rows8)]
@@ -493,7 +519,7 @@ def build_class_report(folder, cls, out_dir, margin, results_subdir="results"):
                    md_table(header8b, rows8b)]
 
     # T9 configuration
-    meta22 = methods.get("22ch", next(iter(methods.values())))["meta"]
+    meta22 = methods.get(base, next(iter(methods.values())))["meta"]
     with open(os.path.join(out_dir, "T9_config.json"), "w", encoding="utf-8") as f:
         json.dump(meta22.get("config", {}), f, indent=1)
     md += ["### T9. Configuration", "Full snapshot: `T9_config.json`."]
@@ -512,7 +538,7 @@ def build_class_report(folder, cls, out_dir, margin, results_subdir="results"):
     md.append("```\n" + "\n".join(f"{k}: {json.dumps(cfg[k])}" for k in keys) + "\n```")
 
     # figures
-    fig_src = os.path.join(results_root, "full22")
+    fig_src = os.path.join(results_root, base_exp)
     pngs = sorted(glob.glob(os.path.join(fig_src, "*.png")))
     if pngs:
         fig_dir = os.path.join(out_dir, "figures")
@@ -534,7 +560,7 @@ def build_combined(folders, classes, out, results_subdir="results"):
     os.makedirs(out, exist_ok=True)
     md = [f"# Cross-model summary — {', '.join(os.path.relpath(f, os.getcwd()) for f in folders)}",
           f"Generated {datetime.datetime.now():%Y-%m-%d %H:%M}. Per-model details: `<model folder>/report*/REPORT.md` (results folder `<class>/{results_subdir}/`)."]
-    labels = [lab for _, lab in METHODS]
+    labels = ["Full montage" if lab == "22ch" else lab for _, lab in METHODS if lab != "64ch"]
     acc_rows, al_rows, phys = [], [], {}
     for folder in folders:
         for cls in classes:
@@ -545,13 +571,16 @@ def build_combined(folders, classes, out, results_subdir="results"):
             name = model_name(folder, cls)
             row = [name, cls]
             for lab in labels:
+                if lab == "Full montage":
+                    lab = baseline_of(methods)[1]
                 if lab in methods:
                     v = list(method_subject_acc(methods[lab]).values())
                     row.append(f"{pct(np.mean(v))} ± {pct(np.std(v, ddof=1)) if len(v) > 1 else '—'}")
                 else:
                     row.append("—")
             acc_rows.append(row)
-            ap_ = os.path.join(root, "full22", "alignment_metrics.json")
+            base_exp = baseline_of(root)[0]
+            ap_ = os.path.join(root, base_exp, "alignment_metrics.json")
             if os.path.exists(ap_):
                 al = _load(ap_)
                 ps = al["per_subject"]
@@ -562,13 +591,14 @@ def build_combined(folders, classes, out, results_subdir="results"):
                         v = [ps[s][m][k] for s in ps if k in ps[s].get(m, {})]
                         vals.append(num(fisher_mean_ci(v)[0]) if v else "—")
                     al_rows.append([name, cls, m] + vals)
-            pp = os.path.join(root, "full22", "physiology_correlations.json")
+            pp = os.path.join(root, base_exp, "physiology_correlations.json")
             if os.path.exists(pp):
                 ph = _load(pp)
                 for k, s in ph.get("summary", {}).get("mean4", {}).items():
                     if k.endswith("|pearson") and "|abs|" not in k:
                         phys.setdefault(k.split("|")[0], {})[f"{name} {cls}"] = s["mean"]
-    h1 = ["Model", "Class"] + labels
+    h1 = ["Model", "Class"] + ["Full montage (22ch BNCI/HGD, 64ch PhysioNet)" if l == "Full montage" else l
+                               for l in labels]
     write_csv(os.path.join(out, "C1_accuracy.csv"), h1, acc_rows)
     md += ["## C1. Test accuracy (%), mean ± SD across subjects", md_table(h1, acc_rows) if acc_rows else "_none_"]
     h2 = ["Model", "Class", "Attribution", "magnitude r", "class-specific r", "lateralisation r",

@@ -13,3 +13,5 @@ __pycache__/
 **/results*/**/erd_cache/
 **/results*/**/physiology_cache/
 **/report*/*/figures/
+# PhysioNet: preprocessed-window cache (rebuilt automatically)
+cache/
