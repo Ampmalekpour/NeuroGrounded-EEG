@@ -17,6 +17,10 @@
 #                      reports/<BNCI_001|HGD>_session/.
 #   blocks             4 chronological blocks (first revision). Writes to <class>/results/,
 #                      <class>/logs/, <model folder>/report/ and reports/<BNCI_001|HGD>/.
+#   wide               HGD only: the session protocol with full-bandwidth profiles (250 Hz, 4-100 Hz;
+#                      Schirrmeister et al. 2017 used a 4 Hz high-pass only). A sensitivity analysis next
+#                      to the 4-38 Hz result; writes to <class>/results_session_wide/, logs_session_wide/,
+#                      report_session_wide/ and reports/HGD_session_wide/ (never touches results_session/).
 # PhysioNet has no official split: its session protocol trains on the first two imagery runs of each
 # type and tests once on the last one (see <Model>/PhysioNet/README.md); blocks is not available.
 # The two protocols never write into each other's folders, so earlier results are kept.
@@ -66,8 +70,9 @@ DATASET_DIRS = {"bnci": "BNCI_001", "hgd": "HGD", "physionet": "PhysioNet"}
 PROTOCOL_DIRS = {               # results, logs, per-model report, combined-report suffix, status suffix
     "session": ("results_session", "logs_session", "report_session", "_session", "_session"),
     "blocks": ("results", "logs", "report", "", ""),
+    "wide": ("results_session_wide", "logs_session_wide", "report_session_wide", "_session_wide", "_session_wide"),
 }
-DATASET_PROTOCOLS = {"bnci": ["session", "blocks"], "hgd": ["session", "blocks"], "physionet": ["session"]}
+DATASET_PROTOCOLS = {"bnci": ["session", "blocks"], "hgd": ["session", "blocks", "wide"], "physionet": ["session"]}
 BASELINE_DIR = {"bnci": "full22", "hgd": "full22", "physionet": "full64"}   # full-montage experiment
 
 
@@ -108,7 +113,9 @@ def is_done(results_dir, step, controls, dataset="bnci"):
 
 def run_step(cls_dir, step, controls, log_path, results_dir, protocol):
     cmd = [sys.executable, "-u", step_script(cls_dir, step)] + (controls if step == "controls" else [])
-    env = dict(os.environ, EEG_RESULTS_DIR=results_dir, EEG_PROTOCOL=protocol, PYTHONUNBUFFERED="1")
+    wide = protocol == "wide"                         # session protocol, full-bandwidth profiles
+    env = dict(os.environ, EEG_RESULTS_DIR=results_dir, EEG_PROTOCOL="session" if wide else protocol,
+               EEG_BAND="wide" if wide else "narrow", PYTHONUNBUFFERED="1")
     os.makedirs(os.path.dirname(log_path), exist_ok=True)
     with open(log_path, "w", encoding="utf-8") as log:
         log.write("$ " + " ".join(cmd) + f"   [EEG_PROTOCOL={protocol}]\n")

@@ -30,7 +30,7 @@
 #
 # Environment variables (all optional): EEG_PROTOCOL (session | blocks), EEG_SEEDS, EEG_SUBJECTS,
 # EEG_MAX_EPOCHS, EEG_PATIENCE, EEG_RESULTS_DIR, EEG_SYNTHETIC=1 (dry run), EEG_PROFILE,
-# EEG_TUNE_CANDIDATES, EEG_REFIT=0, EEG_SKIP_PHYSIOLOGY=1.
+# EEG_TUNE_CANDIDATES, EEG_REFIT=0, EEG_SKIP_PHYSIOLOGY=1, EEG_BAND=wide (full-bandwidth sensitivity run).
 
 import os
 import gc
@@ -148,10 +148,27 @@ PROFILES = {
     # EEG-ITNet paper setting (Salami et al. 2022): 128 Hz (inception kernels 125/250/500 ms),
     # braindecode default dropout 0.4, standardised input
     "salami128": dict(_BASE, sfreq=128, norm="ems", dropout=0.4),
+    # full-bandwidth: 250 Hz, 4-100 Hz, braindecode default dropout 0.4
+    "wide250":      dict(_BASE, sfreq=250, band_hz=(4.0, 100.0), norm="ems", window_s=(0.5, 4.0), dropout=0.4),
+    "wide250_full": dict(_BASE, sfreq=250, band_hz=(4.0, 100.0), norm="ems", window_s=(0.0, 4.0), dropout=0.4),
 }
 DEFAULT_PROFILE = "original"
 TUNE_CANDIDATES = ["original", "ems", "salami128"]
+WIDE_CANDIDATES = ["wide250", "wide250_full"]
 CSP_REG = None
+# ---- Full-bandwidth sensitivity runs (EEG_BAND=wide; coordinator: --protocol wide) ------------------
+# Every profile above stops at 38-40 Hz (neural rhythms, the manuscript's setting). Schirrmeister et al.
+# (2017) used a 4 Hz HIGH-PASS ONLY on this dataset: HGD has executed movements with strong high-gamma
+# modulation, and they reached ~91-93 % (4-class, official test set, 44 channels). The "wide" profiles use
+# 250 Hz and 4-100 Hz. Without EEG_BAND=wide they are never used; their results go to results_session_wide/.
+# Executed movements also produce EMG, so high-gamma decoding is not purely cortical: report this run as a
+# sensitivity analysis next to the 4-38 Hz result, not instead of it.
+BAND = os.environ.get("EEG_BAND", "narrow")
+if BAND not in ("narrow", "wide"):
+    raise SystemExit("EEG_BAND must be 'narrow' or 'wide'")
+if BAND == "wide":
+    TUNE_CANDIDATES = list(WIDE_CANDIDATES)
+    DEFAULT_PROFILE = WIDE_CANDIDATES[0]
 AUGMENT = dict(mixup_alpha=0.2, scale=(0.8, 1.2), noise_rel_std=0.05, channel_drop_p=0.1, sr_segments=8)
 SELECTED_PROFILE_FILE = os.path.join(RESULTS_ROOT, "selected_profile.json")
 
@@ -225,7 +242,8 @@ def config_snapshot():
         "duplicated_recordings_dropped": DEDUP_LOG,
         "holdout_when_no_genuine_test_run": {"trials_4class": HOLDOUT_TRIALS, "max_fraction": HOLDOUT_MAX_FRAC},
         "event_duration_s": EVENT_DURATION_S,
-        "profiles": PROFILES, "augmentation": AUGMENT, "profile_default": DEFAULT_PROFILE,
+        "profiles": PROFILES, "augmentation": AUGMENT, "profile_default": DEFAULT_PROFILE, "band": BAND,
+        "tune_candidates": TUNE_CANDIDATES,
         "profile_selection": selection,
         "env_overrides": {k: os.environ.get(k) for k in ("EEG_PROFILE", "EEG_MAX_EPOCHS", "EEG_PATIENCE")},
         "model_fixed": "braindecode EEGITNet defaults (drop_prob from the profile)",

@@ -52,6 +52,9 @@ python run_all.py --dataset hgd --models eegnetv4    # one model
 python run_all.py --dataset physionet --models eegnetv4   # PhysioNet, one model (= EEGNetV4\PhysioNet\run_suite.py)
 ```
 
+HGD also has a full-bandwidth sensitivity run: `python run_all.py --dataset hgd --protocol wide` (250 Hz, 4–100 Hz;
+results in `results_session_wide/`). Why the HGD accuracy is lower than in the paper: `docs/HGD_RESULTS_ANALYSIS.md`.
+
 PhysioNet runs the same `session` pipeline. It has no official split, so it trains on the first two
 imagery runs of each type and tests on the last one. Output goes to `results_session/`,
 `report_session/` and `reports/PhysioNet_session/`. See `docs/PHYSIONET.md`.
