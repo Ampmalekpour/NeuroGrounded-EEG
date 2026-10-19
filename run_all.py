@@ -127,6 +127,46 @@ def run_step(cls_dir, step, controls, log_path, results_dir, protocol):
         return proc.wait()
 
 
+def hgd_preflight(models_dirs, classes, res_sub):
+    """HGD only. Returns a list of problems that would silently invalidate a run:
+    1. cached train and test recordings with the same size (the MOABB cache bug: the test file is a copy of
+       the train file, see analysis/fix_hgd_cache.py),
+    2. existing results that were computed with such duplicates dropped (a hold-out instead of the official
+       test run): the coordinator would skip those steps and report the old numbers."""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("fix_hgd_cache", os.path.join(REPO, "analysis", "fix_hgd_cache.py"))
+    fx = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(fx)
+    problems = []
+    subjects = [int(v) for v in os.environ.get("EEG_SUBJECTS", "").replace(" ", "").split(",") if v] or list(range(1, 15))
+    root = fx.cache_root()
+    bad = []
+    for sid in subjects:
+        size = {}
+        for kind in ("train", "test"):
+            canonical, legacy = fx.local_paths(root, kind, sid)
+            path = legacy if os.path.isfile(legacy) else canonical          # MOABB reads the legacy copy first
+            if os.path.isfile(path):
+                size[kind] = os.path.getsize(path)
+        if len(size) == 2 and size["train"] == size["test"]:
+            bad.append(sid)
+    if bad:
+        problems.append("the cached HGD train and test recordings have the same size for subject(s) "
+                        + ", ".join(f"S{b:02d}" for b in bad) + " (a copy of one file): run  python "
+                        "analysis\\fix_hgd_cache.py  and  python analysis\\check_hgd_data.py  first")
+    for d in models_dirs:
+        for cls in classes:
+            path = os.path.join(d, cls, res_sub, "full22", "results.json")
+            if os.path.exists(path):
+                with open(path, encoding="utf-8") as f:
+                    dropped = json.load(f).get("meta", {}).get("config", {}).get("duplicated_recordings_dropped")
+                if dropped:
+                    problems.append(f"{os.path.relpath(path, REPO)} was computed with duplicated test recordings "
+                                    f"dropped (hold-out for {len(dropped)} subjects); rename that results folder "
+                                    f"(see docs/HGD_RERUN.md) or the steps would be skipped")
+    return problems
+
+
 def main():
     ap = argparse.ArgumentParser(description="BNCI2014-001 / HGD / PhysioNet coordinator (see the header of run_all.py)")
     ap.add_argument("--dataset", choices=list(DATASET_DIRS), default="bnci")
@@ -140,6 +180,8 @@ def main():
     ap.add_argument("--no-tune", action="store_true", help="skip the tuning step")
     ap.add_argument("--force", action="store_true", help="re-run steps whose results already exist")
     ap.add_argument("--keep-going", action="store_true", help="continue after a failed step")
+    ap.add_argument("--allow-holdout", action="store_true",
+                    help="HGD: do not stop for duplicated cached recordings / stale hold-out results")
     ap.add_argument("--margin", type=float, default=6.0, help="TOST margin for the tables (pp)")
     a = ap.parse_args()
 
@@ -161,6 +203,15 @@ def main():
         os.environ["EEG_SEEDS"] = "42,43,44"                          # needed for the seed ensemble
     print(f"[run_all] dataset={a.dataset} protocol={a.protocol} models={models} classes={a.classes} "
           f"seeds={os.environ.get('EEG_SEEDS', '42')} -> {res_sub}/")
+
+    if a.dataset == "hgd" and not a.allow_holdout and os.environ.get("EEG_SYNTHETIC", "0") != "1":
+        problems = hgd_preflight([MODELS[m] for m in models], a.classes, res_sub)
+        if problems:
+            print("[run_all] HGD pre-flight check failed:")
+            for pr in problems:
+                print("  - " + pr)
+            raise SystemExit("[run_all] fix the above, or use --allow-holdout to run anyway")
+        print("[run_all] HGD pre-flight check passed: train and test recordings differ, no stale hold-out results")
 
     status_path = os.path.join(HERE, status_name)
     status = json.load(open(status_path, encoding="utf-8")) if os.path.exists(status_path) else {}

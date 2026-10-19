@@ -301,6 +301,25 @@ def build_class_report(folder, cls, out_dir, margin, results_subdir="results"):
            how + f" SD = across subjects (n = {len(subjects)}). Random = mean of the random-montage draws.",
            table]
 
+    # T0 data summary per subject (reviewer 4, 15: trial counts and class counts of the analysed cohort)
+    base_recs = methods[base]["records"] if base in methods else next(iter(methods.values()))["records"]
+    cfg0 = next(iter(methods.values()))["meta"].get("config", {})
+    header0 = ["Subject", "Training trials (incl. validation)", "Validation trials", "Test trials",
+               "Test trials per class", "Majority-class test accuracy (%)", "Chance (%)"]
+    rows0 = []
+    for r in sorted(base_recs, key=lambda r: r["subject"]):
+        rows0.append([f"S{r['subject']:02d}", r["n_train"], r["n_val"], r["n_test"],
+                      ", ".join(f"{k} {v}" for k, v in r["test_class_counts"].items()),
+                      pct(r["majority_class_acc"]), pct(r["chance_acc"])])
+    write_csv(os.path.join(out_dir, "T0_data_summary.csv"), header0, rows0)
+    dropped = cfg0.get("duplicated_recordings_dropped") or {}
+    md += ["### T0. Data used per subject",
+           "Trials after the class selection of this experiment (training trials include the validation part, "
+           "which is also used to fit the final model; the test trials are never used for any choice)."
+           + (f" **Duplicated recordings were dropped for {len(dropped)} subject(s); their test set is a "
+              f"chronological hold-out, not the official test run.**" if dropped else ""),
+           md_table(header0, rows0)]
+
     # T2 montages
     header2 = ["Method", "Subject", "Profile", "N channels", "Channels"]
     rows2 = []
@@ -392,11 +411,23 @@ def build_class_report(folder, cls, out_dir, margin, results_subdir="results"):
                       pct(np.mean([r["majority_class_acc"] for r in recs])), f"{collapse} / {len(recs)}"])
         for i, n in enumerate(names):
             cm_rows.append([label, n] + [int(v) for v in cm[i]])
+    sub_rows = []                                          # per-subject confusion matrices (reviewer 15)
+    for label, e in methods.items():
+        per = {}
+        for r in e["records"]:
+            per.setdefault(r["subject"], []).append(np.array(r["confusion_matrix"]))
+        for sid in sorted(per):
+            cm_s = np.sum(per[sid], axis=0)
+            for i, n in enumerate(names):
+                sub_rows.append([label, f"S{sid:02d}", n] + [int(v) for v in cm_s[i]])
+    write_csv(os.path.join(out_dir, "T5_confusion_per_subject.csv"),
+              ["Method", "Subject", "True class"] + [f"pred {n}" for n in names], sub_rows)
     write_csv(os.path.join(out_dir, "T5_confusion_summary.csv"), header5, rows5)
     write_csv(os.path.join(out_dir, "T5_confusion_matrices.csv"),
               ["Method", "True class"] + [f"pred {n}" for n in names], cm_rows)
     md += [f"### T5. Confusion, class balance and majority baseline (chance {pct(chance, 1)}%)",
-           "Pooled over all subjects, folds and seeds; full matrices in `T5_confusion_matrices.csv`. "
+           "Pooled over all subjects, folds and seeds; full matrices in `T5_confusion_matrices.csv`, per subject in "
+           "`T5_confusion_per_subject.csv`. "
            "The last column flags models that collapsed to one class.", md_table(header5, rows5)]
 
     # T6 seeds

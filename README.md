@@ -52,6 +52,9 @@ python run_all.py --dataset hgd --models eegnetv4    # one model
 python run_all.py --dataset physionet --models eegnetv4   # PhysioNet, one model (= EEGNetV4\PhysioNet\run_suite.py)
 ```
 
+Every `<Model>/<Dataset>/` folder has a `run_suite.py` that runs the whole suite of that model (same as `run_all.py --dataset ... --models ...`).
+HGD data cache problem and re-run steps: `docs/HGD_RERUN.md`.
+
 HGD also has a full-bandwidth sensitivity run: `python run_all.py --dataset hgd --protocol wide` (250 Hz, 4–100 Hz;
 results in `results_session_wide/`). Why the HGD accuracy is lower than in the paper: `docs/HGD_RESULTS_ANALYSIS.md`.
 
