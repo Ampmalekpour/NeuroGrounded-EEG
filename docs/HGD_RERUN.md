@@ -52,3 +52,9 @@ python Deep4net\HGD\run_suite.py
 python EEGConformer\HGD\run_suite.py
 python EEGNetV4\HGD\run_suite.py --protocol wide     # optional: 250 Hz, 4-100 Hz, results_session_wide/
 ```
+
+## If Deep4Net stops with "Output size is too small"
+
+That is the older braindecode (0.8 / 1.0): Deep4Net's default pooling (3) needs about 445 samples, but
+the 100 Hz profiles have 400. `deep4net_hgd_common.py` now picks the pooling from the window length
+(2 for 400 samples, 3 otherwise), so the same model is built on every braindecode version. Pull and run again.

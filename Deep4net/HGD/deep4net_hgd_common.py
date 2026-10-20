@@ -254,7 +254,7 @@ def config_snapshot():
         "tune_candidates": TUNE_CANDIDATES,
         "profile_selection": selection,
         "env_overrides": {k: os.environ.get(k) for k in ("EEG_PROFILE", "EEG_MAX_EPOCHS", "EEG_PATIENCE")},
-        "model_fixed": "braindecode Deep4Net defaults, final_conv_length=auto (drop_prob from the profile)",
+        "model_fixed": "braindecode Deep4Net defaults, final_conv_length=auto; time pooling 3 (2 for the 400-sample windows), drop_prob from the profile",
         "optimizer": "AdamW (betas per profile)",
         "scheduler": "per profile: plateau = ReduceLROnPlateau on VALIDATION loss; cosine; none. "
                      "Refit replays the plateau learning rates of the first fit",
@@ -643,16 +643,38 @@ def full_montages():
 # ────────────────────────────────────────────────
 # Model
 # ────────────────────────────────────────────────
+def deep4_pool(n_times):
+    """Time pooling (length = stride) of Deep4Net. braindecode's default is 3, but with 10-sample filters
+    that needs at least ~445 samples: older braindecode versions (0.8, 1.0) stop with 'Output size is too
+    small' for a 4-s window at 100 Hz (400 samples), while newer ones accept it. The pooling is therefore
+    chosen from the window length, so the same architecture is built whatever the braindecode version:
+    3 if the last pooling layer still has an output, otherwise 2 (400 samples -> 2; 448 and longer -> 3)."""
+    def last_len(p):
+        x = n_times
+        for _ in range(4):                       # four conv(10 samples) + pooling blocks
+            x = x - 9
+            if x < 1:
+                return 0
+            x = (x - p) // p + 1
+            if x < 1:
+                return 0
+        return x
+    return 3 if last_len(3) >= 1 else 2
+
+
 def build_model(n_chans, n_times, n_classes, cfg=None):
-    """braindecode Deep4Net (final_conv_length='auto'); dropout from the profile. Older braindecode
-    versions use in_chans / n_classes / input_window_samples."""
+    """braindecode Deep4Net (final_conv_length='auto'); dropout from the profile, time pooling from
+    deep4_pool(n_times). Older braindecode versions use in_chans / n_classes / input_window_samples."""
     cfg = cfg or get_cfg()
+    pool = deep4_pool(n_times)
     try:
         model = Deep4Net(n_chans=n_chans, n_outputs=n_classes, n_times=n_times,
-                         final_conv_length="auto", drop_prob=cfg["dropout"])
+                         final_conv_length="auto", drop_prob=cfg["dropout"],
+                         pool_time_length=pool, pool_time_stride=pool)
     except TypeError:
         model = Deep4Net(in_chans=n_chans, n_classes=n_classes, input_window_samples=n_times,
-                         final_conv_length="auto", drop_prob=cfg["dropout"])
+                         final_conv_length="auto", drop_prob=cfg["dropout"],
+                         pool_time_length=pool, pool_time_stride=pool)
     return model.to(DEVICE)
 
 
