@@ -1,0 +1,15 @@
+Subject,Training trials (incl. validation),Validation trials,Test trials,Test trials per class,Majority-class test accuracy (%),Chance (%)
+S01,320,80,160,"feet 40, left_hand 40, rest 40, right_hand 40",25.00,25.00
+S02,813,203,160,"feet 40, left_hand 40, rest 40, right_hand 40",25.00,25.00
+S03,880,220,160,"feet 40, left_hand 40, rest 40, right_hand 40",25.00,25.00
+S04,897,224,160,"feet 40, left_hand 40, rest 40, right_hand 40",25.00,25.00
+S05,720,180,160,"feet 40, left_hand 40, rest 40, right_hand 40",25.00,25.00
+S06,880,220,160,"feet 40, left_hand 40, rest 40, right_hand 40",25.00,25.00
+S07,880,220,160,"feet 40, left_hand 40, rest 40, right_hand 40",25.00,25.00
+S08,654,164,160,"feet 40, left_hand 40, rest 40, right_hand 40",25.00,25.00
+S09,880,220,160,"feet 40, left_hand 40, rest 40, right_hand 40",25.00,25.00
+S10,880,220,160,"feet 40, left_hand 40, rest 40, right_hand 40",25.00,25.00
+S11,880,220,160,"feet 40, left_hand 40, rest 40, right_hand 40",25.00,25.00
+S12,880,220,160,"feet 40, left_hand 40, rest 40, right_hand 40",25.00,25.00
+S13,800,200,160,"feet 40, left_hand 40, rest 40, right_hand 40",25.00,25.00
+S14,880,220,160,"feet 40, left_hand 40, rest 40, right_hand 40",25.00,25.00

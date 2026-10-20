@@ -1,74 +1,74 @@
 {
  "eegnetv4/2class/tune": {
-  "state": "skipped (done)",
-  "minutes": 16.3,
+  "state": "ok",
+  "minutes": 21.5,
   "log": "EEGNetV4\\HGD\\2class\\logs_session\\tune.log",
-  "finished": "2026-10-18 22:25:50"
+  "finished": "2026-10-20 00:29:40"
  },
  "eegnetv4/2class/saliency": {
   "state": "ok",
-  "minutes": 27.5,
+  "minutes": 246.6,
   "log": "EEGNetV4\\HGD\\2class\\logs_session\\saliency.log",
-  "finished": "2026-10-18 23:08:03"
+  "finished": "2026-10-20 04:36:17"
  },
  "eegnetv4/2class/csp": {
   "state": "ok",
-  "minutes": 12.1,
+  "minutes": 13.6,
   "log": "EEGNetV4\\HGD\\2class\\logs_session\\csp.log",
-  "finished": "2026-10-18 23:20:11"
+  "finished": "2026-10-20 04:49:53"
  },
  "eegnetv4/2class/relieff": {
   "state": "ok",
-  "minutes": 12.3,
+  "minutes": 14.1,
   "log": "EEGNetV4\\HGD\\2class\\logs_session\\relieff.log",
-  "finished": "2026-10-18 23:32:26"
+  "finished": "2026-10-20 05:03:58"
  },
  "eegnetv4/2class/mi": {
   "state": "ok",
-  "minutes": 11.2,
+  "minutes": 12.8,
   "log": "EEGNetV4\\HGD\\2class\\logs_session\\mi.log",
-  "finished": "2026-10-18 23:43:41"
+  "finished": "2026-10-20 05:16:48"
  },
  "eegnetv4/2class/controls": {
   "state": "ok",
-  "minutes": 65.6,
+  "minutes": 69.9,
   "log": "EEGNetV4\\HGD\\2class\\logs_session\\controls.log",
-  "finished": "2026-10-19 00:49:18"
+  "finished": "2026-10-20 06:26:44"
  },
  "eegnetv4/4class/tune": {
   "state": "ok",
-  "minutes": 23.6,
+  "minutes": 26.3,
   "log": "EEGNetV4\\HGD\\4class\\logs_session\\tune.log",
-  "finished": "2026-10-19 01:12:51"
+  "finished": "2026-10-20 06:53:02"
  },
  "eegnetv4/4class/saliency": {
   "state": "ok",
-  "minutes": 44.8,
+  "minutes": 58.5,
   "log": "EEGNetV4\\HGD\\4class\\logs_session\\saliency.log",
-  "finished": "2026-10-19 01:57:37"
+  "finished": "2026-10-20 07:51:31"
  },
  "eegnetv4/4class/csp": {
   "state": "ok",
-  "minutes": 19.7,
+  "minutes": 22.2,
   "log": "EEGNetV4\\HGD\\4class\\logs_session\\csp.log",
-  "finished": "2026-10-19 02:17:18"
+  "finished": "2026-10-20 08:13:43"
  },
  "eegnetv4/4class/relieff": {
   "state": "ok",
-  "minutes": 19.0,
+  "minutes": 22.6,
   "log": "EEGNetV4\\HGD\\4class\\logs_session\\relieff.log",
-  "finished": "2026-10-19 02:36:17"
+  "finished": "2026-10-20 08:36:21"
  },
  "eegnetv4/4class/mi": {
   "state": "ok",
-  "minutes": 18.7,
+  "minutes": 22.3,
   "log": "EEGNetV4\\HGD\\4class\\logs_session\\mi.log",
-  "finished": "2026-10-19 02:54:57"
+  "finished": "2026-10-20 08:58:39"
  },
  "eegnetv4/4class/controls": {
   "state": "ok",
-  "minutes": 997.9,
+  "minutes": 707.9,
   "log": "EEGNetV4\\HGD\\4class\\logs_session\\controls.log",
-  "finished": "2026-10-19 19:32:52"
+  "finished": "2026-10-20 20:46:31"
  }
 }

@@ -1,49 +1,49 @@
 EEGNetv4 - HGD - SALIENCY 12-channel (LOSO) - 2class
 ================================================================================
 
-Subject 01: 72.50%  | montage: C2, C1, CP1, FC4, C4, Pz, CP2, CPz, C3, CP3, CP4, C5
+Subject 01: 58.75%  | montage: C2, C1, CP3, FC4, Pz, C4, FCz, CP1, CP4, CP2, CPz, C3
+    seed -1 fold 1: 58.75% (majority-class 50.0%)
+Subject 02: 87.50%  | montage: C2, C1, CP3, CP1, CP4, FCz, Pz, C4, C3, FC4, CP2, CPz
+    seed -1 fold 1: 87.50% (majority-class 50.0%)
+Subject 03: 97.50%  | montage: C2, C1, CP3, FCz, Pz, FC4, CPz, C4, CP4, C3, C6, FC6
+    seed -1 fold 1: 97.50% (majority-class 50.0%)
+Subject 04: 98.75%  | montage: C2, C1, CP3, CPz, Pz, CP1, C3, CP4, FC4, CP5, FC6, CP2
+    seed -1 fold 1: 98.75% (majority-class 50.0%)
+Subject 05: 73.75%  | montage: C2, C1, CP3, FC4, CP2, CP4, Pz, FCz, C4, C6, CP5, CPz
+    seed -1 fold 1: 73.75% (majority-class 50.0%)
+Subject 06: 81.25%  | montage: C2, C1, C4, C3, FC4, CP3, FCz, CPz, CP1, FC3, Pz, FC6
+    seed -1 fold 1: 81.25% (majority-class 50.0%)
+Subject 07: 67.50%  | montage: C2, C1, CP3, C4, CP1, FC4, Pz, C3, CP2, CPz, FCz, FC6
+    seed -1 fold 1: 67.50% (majority-class 50.0%)
+Subject 08: 65.00%  | montage: C2, C1, CP3, CP1, FC4, CP4, CP2, C3, FC6, C4, CPz, FCz
+    seed -1 fold 1: 65.00% (majority-class 50.0%)
+Subject 09: 72.50%  | montage: C2, C1, CP1, FC4, C4, FCz, CP3, CP2, Pz, CPz, FC6, C3
     seed -1 fold 1: 72.50% (majority-class 50.0%)
-Subject 02: 82.50%  | montage: C2, C1, CP1, C4, Pz, CP2, FC4, CPz, C3, CP3, C5, CP4
-    seed -1 fold 1: 82.50% (majority-class 50.0%)
-Subject 03: 93.75%  | montage: C2, C1, C4, Pz, FC4, CPz, CP1, CP2, C3, FC1, FCz, CP3
-    seed -1 fold 1: 93.75% (majority-class 50.0%)
-Subject 04: 98.75%  | montage: C2, C1, CP1, Pz, CPz, CP2, FC4, C4, C3, CP3, FC1, FC6
+Subject 10: 98.75%  | montage: C2, C1, CP3, FC4, CP4, CP2, FCz, CP1, Pz, C4, CPz, C6
     seed -1 fold 1: 98.75% (majority-class 50.0%)
-Subject 05: 77.50%  | montage: C2, C1, FC4, CP2, CP1, C4, Pz, CPz, CP3, FC1, CP4, C3
-    seed -1 fold 1: 77.50% (majority-class 50.0%)
-Subject 06: 91.25%  | montage: C2, C1, CP1, FC4, C4, C3, CP2, CPz, FC1, Pz, FCz, C5
-    seed -1 fold 1: 91.25% (majority-class 50.0%)
-Subject 07: 62.50%  | montage: C2, C1, CP1, FC4, C4, CP2, Pz, CPz, C3, CP3, FC3, C5
+Subject 11: 62.50%  | montage: C2, C1, CP3, CP1, Pz, FC4, CPz, FCz, C3, C6, CP5, FC6
     seed -1 fold 1: 62.50% (majority-class 50.0%)
-Subject 08: 68.18%  | montage: C2, C1, CP1, C4, FC4, CP2, Pz, CPz, CP3, C3, FC1, FC3
-    seed -1 fold 1: 68.18% (majority-class 50.0%)
-Subject 09: 66.25%  | montage: C2, C1, CP1, FC4, C4, CPz, CP2, Pz, FC3, FC6, FC1, C3
-    seed -1 fold 1: 66.25% (majority-class 50.0%)
-Subject 10: 98.75%  | montage: C1, C2, CP1, C4, CP2, Pz, FC4, CPz, C5, CP3, FC1, FC3
-    seed -1 fold 1: 98.75% (majority-class 50.0%)
-Subject 11: 50.00%  | montage: C2, C1, CP1, C4, FC4, CP2, Pz, CPz, C3, CP3, FC3, C5
-    seed -1 fold 1: 50.00% (majority-class 50.0%)
-Subject 12: 100.00%  | montage: C2, C1, CP1, CP2, FC4, Pz, C3, C4, CPz, FC3, CP3, FC1
-    seed -1 fold 1: 100.00% (majority-class 50.0%)
-Subject 13: 85.00%  | montage: C2, C1, C4, CP2, FC4, CP1, C3, CPz, Pz, CP3, CP4, FCz
-    seed -1 fold 1: 85.00% (majority-class 50.0%)
-Subject 14: 91.25%  | montage: C2, C1, CP1, FC4, C4, C3, CPz, Pz, FC1, CP2, CP4, CP3
-    seed -1 fold 1: 91.25% (majority-class 50.0%)
+Subject 12: 95.00%  | montage: C2, C1, CP3, FC4, FCz, CP2, CP1, C3, Pz, FC3, C6, CP4
+    seed -1 fold 1: 95.00% (majority-class 50.0%)
+Subject 13: 82.50%  | montage: C2, C1, CP4, C4, FCz, CP3, C3, FC4, CPz, CP5, CP2, FC6
+    seed -1 fold 1: 82.50% (majority-class 50.0%)
+Subject 14: 93.75%  | montage: C2, C1, CP3, CP4, C3, FC4, FCz, CP1, CP5, FC6, C6, C4
+    seed -1 fold 1: 93.75% (majority-class 50.0%)
 
-GRAND MEAN: 81.30% +/- 15.57% (SD across subjects)
+GRAND MEAN: 81.07% +/- 14.43% (SD across subjects)
 chance 50.0% | mean majority-class 50.0%
 
 Attribution methods used: all
 Alignment (participant-level mean [95% CI]):
-                  grad magnitude_pearson        +0.270 [+0.110, +0.429] n=14
-                  grad class_specific_pearson   +0.222 [+0.077, +0.368] n=14
-                  grad lateralisation_pearson   -0.006 [-0.131, +0.119] n=14
-          grad_x_input magnitude_pearson        +0.093 [-0.085, +0.272] n=14
-          grad_x_input class_specific_pearson   +0.005 [-0.148, +0.157] n=14
-          grad_x_input lateralisation_pearson   -0.209 [-0.375, -0.042] n=14
-  integrated_gradients magnitude_pearson        +0.084 [-0.101, +0.269] n=14
-  integrated_gradients class_specific_pearson   -0.018 [-0.175, +0.139] n=14
-  integrated_gradients lateralisation_pearson   -0.188 [-0.350, -0.025] n=14
-            smoothgrad magnitude_pearson        +0.270 [+0.110, +0.429] n=14
-            smoothgrad class_specific_pearson   +0.223 [+0.077, +0.369] n=14
-            smoothgrad lateralisation_pearson   -0.005 [-0.131, +0.120] n=14
+                  grad magnitude_pearson        +0.273 [+0.084, +0.462] n=14
+                  grad class_specific_pearson   +0.260 [+0.094, +0.427] n=14
+                  grad lateralisation_pearson   -0.184 [-0.298, -0.071] n=14
+          grad_x_input magnitude_pearson        +0.133 [-0.068, +0.334] n=14
+          grad_x_input class_specific_pearson   +0.079 [-0.099, +0.258] n=14
+          grad_x_input lateralisation_pearson   -0.335 [-0.491, -0.178] n=14
+  integrated_gradients magnitude_pearson        +0.125 [-0.081, +0.331] n=14
+  integrated_gradients class_specific_pearson   +0.053 [-0.128, +0.234] n=14
+  integrated_gradients lateralisation_pearson   -0.304 [-0.469, -0.140] n=14
+            smoothgrad magnitude_pearson        +0.273 [+0.084, +0.462] n=14
+            smoothgrad class_specific_pearson   +0.261 [+0.094, +0.427] n=14
+            smoothgrad lateralisation_pearson   -0.184 [-0.298, -0.069] n=14

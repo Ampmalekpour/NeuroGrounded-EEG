@@ -1,0 +1,34 @@
+EEGNetv4 - HGD - control 'control_erd' - 2class
+================================================================================
+
+Subject 01: 48.75%  | montage: C2, C4, C1, C3, CP3, CP1, CP2, Pz, CP6, CP5, CP4, CPz
+    seed -1 fold 1: 48.75% (majority-class 50.0%)
+Subject 02: 92.50%  | montage: C4, C2, C1, C3, CP3, CP1, CP2, Pz, CP6, CP4, CP5, CPz
+    seed -1 fold 1: 92.50% (majority-class 50.0%)
+Subject 03: 97.50%  | montage: C2, C4, C1, C3, CP3, CP1, CP2, Pz, CP5, CP4, CPz, CP6
+    seed -1 fold 1: 97.50% (majority-class 50.0%)
+Subject 04: 97.50%  | montage: C4, C2, C1, C3, CP3, CP1, CP2, Pz, CP6, CP4, CP5, CPz
+    seed -1 fold 1: 97.50% (majority-class 50.0%)
+Subject 05: 77.50%  | montage: C4, C2, C1, C3, CP3, CP1, Pz, CP2, CP4, CP6, CP5, CPz
+    seed -1 fold 1: 77.50% (majority-class 50.0%)
+Subject 06: 87.50%  | montage: C4, C2, C1, C3, CP3, CP1, CP2, CP6, CP4, Pz, CP5, C6
+    seed -1 fold 1: 87.50% (majority-class 50.0%)
+Subject 07: 63.75%  | montage: C4, C2, C1, C3, CP3, CP1, CP2, Pz, CP6, CP5, CP4, C6
+    seed -1 fold 1: 63.75% (majority-class 50.0%)
+Subject 08: 60.61%  | montage: C4, C2, C1, C3, CP3, CP1, CP4, CP2, Pz, CP6, CP5, CPz
+    seed -1 fold 1: 60.61% (majority-class 50.0%)
+Subject 09: 81.25%  | montage: C4, C2, C1, C3, CP3, CP1, CP2, Pz, CP6, CP4, CPz, CP5
+    seed -1 fold 1: 81.25% (majority-class 50.0%)
+Subject 10: 97.50%  | montage: C4, C2, C1, C3, CP3, CP1, CP2, Pz, CP6, CP4, CP5, CPz
+    seed -1 fold 1: 97.50% (majority-class 50.0%)
+Subject 11: 43.75%  | montage: C4, C2, C1, C3, CP3, CP1, CP2, Pz, CP6, CP4, CP5, C6
+    seed -1 fold 1: 43.75% (majority-class 50.0%)
+Subject 12: 100.00%  | montage: C4, C2, C1, C3, CP3, CP1, CP2, CP6, CP4, CP5, Pz, C6
+    seed -1 fold 1: 100.00% (majority-class 50.0%)
+Subject 13: 70.00%  | montage: C4, C2, C1, C3, CP3, CP1, CP2, Pz, CP4, CP6, CP5, CPz
+    seed -1 fold 1: 70.00% (majority-class 50.0%)
+Subject 14: 96.25%  | montage: C4, C2, C1, CP3, C3, CP1, CP2, Pz, CP6, CP4, CP5, CPz
+    seed -1 fold 1: 96.25% (majority-class 50.0%)
+
+GRAND MEAN: 79.60% +/- 19.28% (SD across subjects)
+chance 50.0% | mean majority-class 50.0%

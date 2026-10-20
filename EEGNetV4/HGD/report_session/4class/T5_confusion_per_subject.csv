@@ -1,0 +1,449 @@
+Method,Subject,True class,pred feet,pred left_hand,pred rest,pred right_hand
+22ch,S01,feet,31,2,6,1
+22ch,S01,left_hand,0,25,0,15
+22ch,S01,rest,2,0,37,1
+22ch,S01,right_hand,0,13,0,27
+22ch,S02,feet,37,0,3,0
+22ch,S02,left_hand,0,40,0,0
+22ch,S02,rest,15,2,23,0
+22ch,S02,right_hand,0,5,0,35
+22ch,S03,feet,40,0,0,0
+22ch,S03,left_hand,0,39,0,1
+22ch,S03,rest,3,0,37,0
+22ch,S03,right_hand,0,0,0,40
+22ch,S04,feet,40,0,0,0
+22ch,S04,left_hand,0,39,0,1
+22ch,S04,rest,2,0,38,0
+22ch,S04,right_hand,0,0,0,40
+22ch,S05,feet,38,0,2,0
+22ch,S05,left_hand,0,29,0,11
+22ch,S05,rest,1,0,38,1
+22ch,S05,right_hand,0,9,0,31
+22ch,S06,feet,37,0,2,1
+22ch,S06,left_hand,0,29,0,11
+22ch,S06,rest,4,0,36,0
+22ch,S06,right_hand,0,1,1,38
+22ch,S07,feet,35,2,2,1
+22ch,S07,left_hand,0,29,0,11
+22ch,S07,rest,3,1,36,0
+22ch,S07,right_hand,1,12,0,27
+22ch,S08,feet,40,0,0,0
+22ch,S08,left_hand,1,32,0,7
+22ch,S08,rest,0,0,40,0
+22ch,S08,right_hand,0,10,0,30
+22ch,S09,feet,36,4,0,0
+22ch,S09,left_hand,0,34,1,5
+22ch,S09,rest,0,0,38,2
+22ch,S09,right_hand,1,10,0,29
+22ch,S10,feet,34,0,5,1
+22ch,S10,left_hand,0,39,0,1
+22ch,S10,rest,7,1,28,4
+22ch,S10,right_hand,0,0,0,40
+22ch,S11,feet,38,0,1,1
+22ch,S11,left_hand,1,26,1,12
+22ch,S11,rest,0,2,38,0
+22ch,S11,right_hand,2,15,0,23
+22ch,S12,feet,23,0,17,0
+22ch,S12,left_hand,0,39,0,1
+22ch,S12,rest,0,0,40,0
+22ch,S12,right_hand,0,0,0,40
+22ch,S13,feet,38,1,1,0
+22ch,S13,left_hand,0,35,0,5
+22ch,S13,rest,3,1,35,1
+22ch,S13,right_hand,1,7,0,32
+22ch,S14,feet,35,0,0,5
+22ch,S14,left_hand,0,39,0,1
+22ch,S14,rest,1,1,38,0
+22ch,S14,right_hand,0,0,0,40
+Ours,S01,feet,30,3,6,1
+Ours,S01,left_hand,0,26,0,14
+Ours,S01,rest,3,1,35,1
+Ours,S01,right_hand,0,10,0,30
+Ours,S02,feet,37,0,3,0
+Ours,S02,left_hand,0,36,0,4
+Ours,S02,rest,11,2,26,1
+Ours,S02,right_hand,0,8,0,32
+Ours,S03,feet,40,0,0,0
+Ours,S03,left_hand,0,37,1,2
+Ours,S03,rest,2,0,38,0
+Ours,S03,right_hand,0,1,0,39
+Ours,S04,feet,40,0,0,0
+Ours,S04,left_hand,0,37,0,3
+Ours,S04,rest,2,0,38,0
+Ours,S04,right_hand,0,0,0,40
+Ours,S05,feet,40,0,0,0
+Ours,S05,left_hand,0,29,0,11
+Ours,S05,rest,4,0,36,0
+Ours,S05,right_hand,0,4,0,36
+Ours,S06,feet,37,0,3,0
+Ours,S06,left_hand,1,32,0,7
+Ours,S06,rest,2,0,38,0
+Ours,S06,right_hand,0,4,1,35
+Ours,S07,feet,34,3,3,0
+Ours,S07,left_hand,0,31,0,9
+Ours,S07,rest,2,1,37,0
+Ours,S07,right_hand,0,13,0,27
+Ours,S08,feet,40,0,0,0
+Ours,S08,left_hand,0,34,0,6
+Ours,S08,rest,0,0,40,0
+Ours,S08,right_hand,0,7,0,33
+Ours,S09,feet,38,2,0,0
+Ours,S09,left_hand,0,24,5,11
+Ours,S09,rest,3,0,37,0
+Ours,S09,right_hand,3,8,2,27
+Ours,S10,feet,31,0,8,1
+Ours,S10,left_hand,0,40,0,0
+Ours,S10,rest,6,1,30,3
+Ours,S10,right_hand,0,1,0,39
+Ours,S11,feet,39,0,0,1
+Ours,S11,left_hand,1,28,2,9
+Ours,S11,rest,0,1,37,2
+Ours,S11,right_hand,1,22,0,17
+Ours,S12,feet,20,0,20,0
+Ours,S12,left_hand,4,31,2,3
+Ours,S12,rest,1,0,39,0
+Ours,S12,right_hand,0,1,0,39
+Ours,S13,feet,35,2,1,2
+Ours,S13,left_hand,0,31,0,9
+Ours,S13,rest,3,1,36,0
+Ours,S13,right_hand,0,10,0,30
+Ours,S14,feet,34,1,1,4
+Ours,S14,left_hand,0,36,4,0
+Ours,S14,rest,1,2,36,1
+Ours,S14,right_hand,0,1,1,38
+CSP,S01,feet,32,2,4,2
+CSP,S01,left_hand,0,30,1,9
+CSP,S01,rest,3,1,36,0
+CSP,S01,right_hand,0,14,1,25
+CSP,S02,feet,38,0,2,0
+CSP,S02,left_hand,0,38,0,2
+CSP,S02,rest,12,0,27,1
+CSP,S02,right_hand,0,7,0,33
+CSP,S03,feet,40,0,0,0
+CSP,S03,left_hand,0,38,0,2
+CSP,S03,rest,3,1,36,0
+CSP,S03,right_hand,0,1,0,39
+CSP,S04,feet,40,0,0,0
+CSP,S04,left_hand,0,36,0,4
+CSP,S04,rest,1,0,39,0
+CSP,S04,right_hand,0,0,0,40
+CSP,S05,feet,36,1,3,0
+CSP,S05,left_hand,0,29,0,11
+CSP,S05,rest,0,0,39,1
+CSP,S05,right_hand,0,6,0,34
+CSP,S06,feet,38,0,2,0
+CSP,S06,left_hand,0,35,0,5
+CSP,S06,rest,2,0,37,1
+CSP,S06,right_hand,0,1,1,38
+CSP,S07,feet,33,3,3,1
+CSP,S07,left_hand,0,28,0,12
+CSP,S07,rest,2,2,36,0
+CSP,S07,right_hand,0,20,0,20
+CSP,S08,feet,40,0,0,0
+CSP,S08,left_hand,0,35,0,5
+CSP,S08,rest,0,0,40,0
+CSP,S08,right_hand,0,10,0,30
+CSP,S09,feet,38,2,0,0
+CSP,S09,left_hand,0,29,2,9
+CSP,S09,rest,2,0,38,0
+CSP,S09,right_hand,1,5,0,34
+CSP,S10,feet,36,0,4,0
+CSP,S10,left_hand,0,39,0,1
+CSP,S10,rest,7,2,29,2
+CSP,S10,right_hand,0,0,0,40
+CSP,S11,feet,39,0,0,1
+CSP,S11,left_hand,2,20,2,16
+CSP,S11,rest,0,2,38,0
+CSP,S11,right_hand,0,22,0,18
+CSP,S12,feet,19,0,21,0
+CSP,S12,left_hand,1,34,2,3
+CSP,S12,rest,1,0,39,0
+CSP,S12,right_hand,0,1,0,39
+CSP,S13,feet,37,0,2,1
+CSP,S13,left_hand,0,36,0,4
+CSP,S13,rest,2,1,36,1
+CSP,S13,right_hand,1,5,0,34
+CSP,S14,feet,37,0,0,3
+CSP,S14,left_hand,0,36,3,1
+CSP,S14,rest,0,1,39,0
+CSP,S14,right_hand,0,3,1,36
+RLF,S01,feet,33,3,4,0
+RLF,S01,left_hand,0,31,0,9
+RLF,S01,rest,3,0,36,1
+RLF,S01,right_hand,0,14,0,26
+RLF,S02,feet,37,0,3,0
+RLF,S02,left_hand,0,34,1,5
+RLF,S02,rest,16,1,23,0
+RLF,S02,right_hand,0,1,1,38
+RLF,S03,feet,39,0,1,0
+RLF,S03,left_hand,0,38,1,1
+RLF,S03,rest,6,0,34,0
+RLF,S03,right_hand,0,1,0,39
+RLF,S04,feet,40,0,0,0
+RLF,S04,left_hand,0,39,0,1
+RLF,S04,rest,2,0,38,0
+RLF,S04,right_hand,0,0,0,40
+RLF,S05,feet,38,1,1,0
+RLF,S05,left_hand,0,29,0,11
+RLF,S05,rest,2,0,38,0
+RLF,S05,right_hand,0,1,0,39
+RLF,S06,feet,37,0,3,0
+RLF,S06,left_hand,0,33,0,7
+RLF,S06,rest,3,0,36,1
+RLF,S06,right_hand,0,1,1,38
+RLF,S07,feet,34,3,2,1
+RLF,S07,left_hand,0,33,0,7
+RLF,S07,rest,2,2,36,0
+RLF,S07,right_hand,0,15,1,24
+RLF,S08,feet,40,0,0,0
+RLF,S08,left_hand,0,32,0,8
+RLF,S08,rest,0,0,40,0
+RLF,S08,right_hand,0,7,0,33
+RLF,S09,feet,36,3,1,0
+RLF,S09,left_hand,0,28,1,11
+RLF,S09,rest,1,0,38,1
+RLF,S09,right_hand,1,11,0,28
+RLF,S10,feet,33,0,7,0
+RLF,S10,left_hand,0,39,0,1
+RLF,S10,rest,8,2,28,2
+RLF,S10,right_hand,0,0,0,40
+RLF,S11,feet,39,1,0,0
+RLF,S11,left_hand,1,28,2,9
+RLF,S11,rest,0,2,38,0
+RLF,S11,right_hand,2,13,1,24
+RLF,S12,feet,22,0,18,0
+RLF,S12,left_hand,11,23,2,4
+RLF,S12,rest,2,0,38,0
+RLF,S12,right_hand,1,0,0,39
+RLF,S13,feet,34,1,4,1
+RLF,S13,left_hand,0,32,0,8
+RLF,S13,rest,2,5,33,0
+RLF,S13,right_hand,1,13,0,26
+RLF,S14,feet,34,1,0,5
+RLF,S14,left_hand,0,38,2,0
+RLF,S14,rest,0,1,38,1
+RLF,S14,right_hand,0,2,1,37
+MI,S01,feet,33,1,3,3
+MI,S01,left_hand,0,24,0,16
+MI,S01,rest,3,0,36,1
+MI,S01,right_hand,0,16,0,24
+MI,S02,feet,38,0,2,0
+MI,S02,left_hand,0,38,0,2
+MI,S02,rest,15,0,23,2
+MI,S02,right_hand,0,9,0,31
+MI,S03,feet,40,0,0,0
+MI,S03,left_hand,0,39,0,1
+MI,S03,rest,3,0,37,0
+MI,S03,right_hand,0,1,0,39
+MI,S04,feet,39,0,1,0
+MI,S04,left_hand,0,40,0,0
+MI,S04,rest,2,0,38,0
+MI,S04,right_hand,0,1,0,39
+MI,S05,feet,38,1,1,0
+MI,S05,left_hand,0,28,0,12
+MI,S05,rest,2,0,38,0
+MI,S05,right_hand,0,4,0,36
+MI,S06,feet,37,0,3,0
+MI,S06,left_hand,0,32,0,8
+MI,S06,rest,2,0,37,1
+MI,S06,right_hand,0,3,1,36
+MI,S07,feet,35,2,3,0
+MI,S07,left_hand,0,35,0,5
+MI,S07,rest,3,1,35,1
+MI,S07,right_hand,0,19,0,21
+MI,S08,feet,40,0,0,0
+MI,S08,left_hand,1,30,0,9
+MI,S08,rest,0,0,40,0
+MI,S08,right_hand,0,19,0,21
+MI,S09,feet,36,3,0,1
+MI,S09,left_hand,0,32,1,7
+MI,S09,rest,0,0,37,3
+MI,S09,right_hand,1,11,0,28
+MI,S10,feet,37,0,3,0
+MI,S10,left_hand,0,39,0,1
+MI,S10,rest,6,2,30,2
+MI,S10,right_hand,0,0,0,40
+MI,S11,feet,37,1,0,2
+MI,S11,left_hand,3,27,1,9
+MI,S11,rest,0,1,39,0
+MI,S11,right_hand,1,16,0,23
+MI,S12,feet,32,0,8,0
+MI,S12,left_hand,0,40,0,0
+MI,S12,rest,6,0,33,1
+MI,S12,right_hand,0,0,0,40
+MI,S13,feet,34,2,3,1
+MI,S13,left_hand,0,35,0,5
+MI,S13,rest,3,2,34,1
+MI,S13,right_hand,1,5,0,34
+MI,S14,feet,37,0,0,3
+MI,S14,left_hand,0,39,1,0
+MI,S14,rest,1,1,37,1
+MI,S14,right_hand,0,3,1,36
+Fixed sensorimotor,S01,feet,31,0,7,2
+Fixed sensorimotor,S01,left_hand,0,25,0,15
+Fixed sensorimotor,S01,rest,3,0,36,1
+Fixed sensorimotor,S01,right_hand,0,15,0,25
+Fixed sensorimotor,S02,feet,36,0,4,0
+Fixed sensorimotor,S02,left_hand,0,33,1,6
+Fixed sensorimotor,S02,rest,15,2,22,1
+Fixed sensorimotor,S02,right_hand,0,5,1,34
+Fixed sensorimotor,S03,feet,40,0,0,0
+Fixed sensorimotor,S03,left_hand,0,36,0,4
+Fixed sensorimotor,S03,rest,2,0,38,0
+Fixed sensorimotor,S03,right_hand,0,1,0,39
+Fixed sensorimotor,S04,feet,40,0,0,0
+Fixed sensorimotor,S04,left_hand,0,36,0,4
+Fixed sensorimotor,S04,rest,1,0,38,1
+Fixed sensorimotor,S04,right_hand,0,0,0,40
+Fixed sensorimotor,S05,feet,39,0,1,0
+Fixed sensorimotor,S05,left_hand,0,29,0,11
+Fixed sensorimotor,S05,rest,3,0,37,0
+Fixed sensorimotor,S05,right_hand,0,3,0,37
+Fixed sensorimotor,S06,feet,38,0,2,0
+Fixed sensorimotor,S06,left_hand,0,36,0,4
+Fixed sensorimotor,S06,rest,3,0,36,1
+Fixed sensorimotor,S06,right_hand,0,6,1,33
+Fixed sensorimotor,S07,feet,35,1,2,2
+Fixed sensorimotor,S07,left_hand,0,31,0,9
+Fixed sensorimotor,S07,rest,3,1,36,0
+Fixed sensorimotor,S07,right_hand,0,16,0,24
+Fixed sensorimotor,S08,feet,40,0,0,0
+Fixed sensorimotor,S08,left_hand,0,32,0,8
+Fixed sensorimotor,S08,rest,0,0,40,0
+Fixed sensorimotor,S08,right_hand,0,21,0,19
+Fixed sensorimotor,S09,feet,36,4,0,0
+Fixed sensorimotor,S09,left_hand,0,25,2,13
+Fixed sensorimotor,S09,rest,1,1,38,0
+Fixed sensorimotor,S09,right_hand,1,12,1,26
+Fixed sensorimotor,S10,feet,31,0,8,1
+Fixed sensorimotor,S10,left_hand,0,38,0,2
+Fixed sensorimotor,S10,rest,5,2,30,3
+Fixed sensorimotor,S10,right_hand,0,0,0,40
+Fixed sensorimotor,S11,feet,37,1,0,2
+Fixed sensorimotor,S11,left_hand,1,25,1,13
+Fixed sensorimotor,S11,rest,0,1,39,0
+Fixed sensorimotor,S11,right_hand,2,23,1,14
+Fixed sensorimotor,S12,feet,32,0,8,0
+Fixed sensorimotor,S12,left_hand,0,40,0,0
+Fixed sensorimotor,S12,rest,3,0,36,1
+Fixed sensorimotor,S12,right_hand,0,1,0,39
+Fixed sensorimotor,S13,feet,35,1,3,1
+Fixed sensorimotor,S13,left_hand,0,32,0,8
+Fixed sensorimotor,S13,rest,2,5,33,0
+Fixed sensorimotor,S13,right_hand,0,9,1,30
+Fixed sensorimotor,S14,feet,34,1,1,4
+Fixed sensorimotor,S14,left_hand,0,37,2,1
+Fixed sensorimotor,S14,rest,1,1,38,0
+Fixed sensorimotor,S14,right_hand,0,2,1,37
+ERD-only,S01,feet,32,0,5,3
+ERD-only,S01,left_hand,0,24,0,16
+ERD-only,S01,rest,3,2,35,0
+ERD-only,S01,right_hand,0,11,0,29
+ERD-only,S02,feet,37,0,3,0
+ERD-only,S02,left_hand,0,35,0,5
+ERD-only,S02,rest,17,3,20,0
+ERD-only,S02,right_hand,0,9,0,31
+ERD-only,S03,feet,39,0,1,0
+ERD-only,S03,left_hand,0,39,0,1
+ERD-only,S03,rest,5,0,35,0
+ERD-only,S03,right_hand,0,0,0,40
+ERD-only,S04,feet,39,0,1,0
+ERD-only,S04,left_hand,0,37,0,3
+ERD-only,S04,rest,3,0,36,1
+ERD-only,S04,right_hand,0,3,0,37
+ERD-only,S05,feet,39,1,0,0
+ERD-only,S05,left_hand,0,24,0,16
+ERD-only,S05,rest,1,0,39,0
+ERD-only,S05,right_hand,0,2,0,38
+ERD-only,S06,feet,37,0,2,1
+ERD-only,S06,left_hand,0,34,0,6
+ERD-only,S06,rest,2,0,37,1
+ERD-only,S06,right_hand,0,2,1,37
+ERD-only,S07,feet,36,3,0,1
+ERD-only,S07,left_hand,0,33,0,7
+ERD-only,S07,rest,3,0,37,0
+ERD-only,S07,right_hand,0,16,0,24
+ERD-only,S08,feet,40,0,0,0
+ERD-only,S08,left_hand,1,32,0,7
+ERD-only,S08,rest,0,0,40,0
+ERD-only,S08,right_hand,0,9,1,30
+ERD-only,S09,feet,37,3,0,0
+ERD-only,S09,left_hand,0,31,2,7
+ERD-only,S09,rest,1,0,38,1
+ERD-only,S09,right_hand,1,6,1,32
+ERD-only,S10,feet,35,0,5,0
+ERD-only,S10,left_hand,0,39,0,1
+ERD-only,S10,rest,6,2,30,2
+ERD-only,S10,right_hand,0,0,0,40
+ERD-only,S11,feet,37,2,0,1
+ERD-only,S11,left_hand,2,30,0,8
+ERD-only,S11,rest,0,0,39,1
+ERD-only,S11,right_hand,1,16,0,23
+ERD-only,S12,feet,26,0,14,0
+ERD-only,S12,left_hand,2,36,0,2
+ERD-only,S12,rest,3,0,37,0
+ERD-only,S12,right_hand,1,0,0,39
+ERD-only,S13,feet,36,2,1,1
+ERD-only,S13,left_hand,0,34,0,6
+ERD-only,S13,rest,2,3,34,1
+ERD-only,S13,right_hand,1,9,0,30
+ERD-only,S14,feet,32,0,1,7
+ERD-only,S14,left_hand,0,37,3,0
+ERD-only,S14,rest,1,1,36,2
+ERD-only,S14,right_hand,0,2,1,37
+Random (mean of draws),S01,feet,161,9,20,10
+Random (mean of draws),S01,left_hand,0,136,2,62
+Random (mean of draws),S01,rest,12,3,182,3
+Random (mean of draws),S01,right_hand,0,81,0,119
+Random (mean of draws),S02,feet,188,0,12,0
+Random (mean of draws),S02,left_hand,0,184,0,16
+Random (mean of draws),S02,rest,82,4,107,7
+Random (mean of draws),S02,right_hand,0,27,0,173
+Random (mean of draws),S03,feet,195,0,5,0
+Random (mean of draws),S03,left_hand,0,187,2,11
+Random (mean of draws),S03,rest,17,1,181,1
+Random (mean of draws),S03,right_hand,0,8,0,192
+Random (mean of draws),S04,feet,199,0,1,0
+Random (mean of draws),S04,left_hand,0,181,0,19
+Random (mean of draws),S04,rest,11,0,189,0
+Random (mean of draws),S04,right_hand,0,4,0,196
+Random (mean of draws),S05,feet,192,3,5,0
+Random (mean of draws),S05,left_hand,0,141,0,59
+Random (mean of draws),S05,rest,8,0,189,3
+Random (mean of draws),S05,right_hand,0,21,0,179
+Random (mean of draws),S06,feet,185,0,10,5
+Random (mean of draws),S06,left_hand,1,159,0,40
+Random (mean of draws),S06,rest,17,0,181,2
+Random (mean of draws),S06,right_hand,1,19,5,175
+Random (mean of draws),S07,feet,174,10,9,7
+Random (mean of draws),S07,left_hand,0,141,0,59
+Random (mean of draws),S07,rest,13,6,179,2
+Random (mean of draws),S07,right_hand,0,81,0,119
+Random (mean of draws),S08,feet,200,0,0,0
+Random (mean of draws),S08,left_hand,1,133,0,66
+Random (mean of draws),S08,rest,1,0,199,0
+Random (mean of draws),S08,right_hand,0,79,0,121
+Random (mean of draws),S09,feet,172,21,3,4
+Random (mean of draws),S09,left_hand,2,134,8,56
+Random (mean of draws),S09,rest,10,1,182,7
+Random (mean of draws),S09,right_hand,10,65,6,119
+Random (mean of draws),S10,feet,177,0,20,3
+Random (mean of draws),S10,left_hand,0,196,0,4
+Random (mean of draws),S10,rest,19,7,157,17
+Random (mean of draws),S10,right_hand,0,0,0,200
+Random (mean of draws),S11,feet,184,5,2,9
+Random (mean of draws),S11,left_hand,4,129,3,64
+Random (mean of draws),S11,rest,1,8,191,0
+Random (mean of draws),S11,right_hand,4,111,0,85
+Random (mean of draws),S12,feet,133,0,67,0
+Random (mean of draws),S12,left_hand,1,194,3,2
+Random (mean of draws),S12,rest,17,0,181,2
+Random (mean of draws),S12,right_hand,4,3,2,191
+Random (mean of draws),S13,feet,177,11,8,4
+Random (mean of draws),S13,left_hand,0,154,1,45
+Random (mean of draws),S13,rest,13,13,171,3
+Random (mean of draws),S13,right_hand,4,61,0,135
+Random (mean of draws),S14,feet,176,1,2,21
+Random (mean of draws),S14,left_hand,0,182,11,7
+Random (mean of draws),S14,rest,9,7,180,4
+Random (mean of draws),S14,right_hand,0,10,5,185

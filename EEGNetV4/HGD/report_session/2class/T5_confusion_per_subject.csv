@@ -1,0 +1,225 @@
+Method,Subject,True class,pred left_hand,pred right_hand
+22ch,S01,left_hand,40,0
+22ch,S01,right_hand,40,0
+22ch,S02,left_hand,38,2
+22ch,S02,right_hand,7,33
+22ch,S03,left_hand,39,1
+22ch,S03,right_hand,1,39
+22ch,S04,left_hand,40,0
+22ch,S04,right_hand,0,40
+22ch,S05,left_hand,22,18
+22ch,S05,right_hand,4,36
+22ch,S06,left_hand,32,8
+22ch,S06,right_hand,2,38
+22ch,S07,left_hand,23,17
+22ch,S07,right_hand,13,27
+22ch,S08,left_hand,38,2
+22ch,S08,right_hand,11,29
+22ch,S09,left_hand,32,8
+22ch,S09,right_hand,8,32
+22ch,S10,left_hand,39,1
+22ch,S10,right_hand,0,40
+22ch,S11,left_hand,32,8
+22ch,S11,right_hand,19,21
+22ch,S12,left_hand,39,1
+22ch,S12,right_hand,0,40
+22ch,S13,left_hand,34,6
+22ch,S13,right_hand,9,31
+22ch,S14,left_hand,39,1
+22ch,S14,right_hand,3,37
+Ours,S01,left_hand,27,13
+Ours,S01,right_hand,20,20
+Ours,S02,left_hand,35,5
+Ours,S02,right_hand,5,35
+Ours,S03,left_hand,38,2
+Ours,S03,right_hand,0,40
+Ours,S04,left_hand,39,1
+Ours,S04,right_hand,0,40
+Ours,S05,left_hand,29,11
+Ours,S05,right_hand,10,30
+Ours,S06,left_hand,33,7
+Ours,S06,right_hand,8,32
+Ours,S07,left_hand,25,15
+Ours,S07,right_hand,11,29
+Ours,S08,left_hand,28,12
+Ours,S08,right_hand,16,24
+Ours,S09,left_hand,28,12
+Ours,S09,right_hand,10,30
+Ours,S10,left_hand,39,1
+Ours,S10,right_hand,0,40
+Ours,S11,left_hand,28,12
+Ours,S11,right_hand,18,22
+Ours,S12,left_hand,36,4
+Ours,S12,right_hand,0,40
+Ours,S13,left_hand,35,5
+Ours,S13,right_hand,9,31
+Ours,S14,left_hand,39,1
+Ours,S14,right_hand,4,36
+CSP,S01,left_hand,16,24
+CSP,S01,right_hand,12,28
+CSP,S02,left_hand,37,3
+CSP,S02,right_hand,6,34
+CSP,S03,left_hand,39,1
+CSP,S03,right_hand,1,39
+CSP,S04,left_hand,38,2
+CSP,S04,right_hand,0,40
+CSP,S05,left_hand,32,8
+CSP,S05,right_hand,6,34
+CSP,S06,left_hand,35,5
+CSP,S06,right_hand,4,36
+CSP,S07,left_hand,27,13
+CSP,S07,right_hand,17,23
+CSP,S08,left_hand,31,9
+CSP,S08,right_hand,8,32
+CSP,S09,left_hand,31,9
+CSP,S09,right_hand,11,29
+CSP,S10,left_hand,39,1
+CSP,S10,right_hand,0,40
+CSP,S11,left_hand,29,11
+CSP,S11,right_hand,13,27
+CSP,S12,left_hand,40,0
+CSP,S12,right_hand,0,40
+CSP,S13,left_hand,36,4
+CSP,S13,right_hand,7,33
+CSP,S14,left_hand,37,3
+CSP,S14,right_hand,2,38
+RLF,S01,left_hand,34,6
+RLF,S01,right_hand,30,10
+RLF,S02,left_hand,35,5
+RLF,S02,right_hand,5,35
+RLF,S03,left_hand,39,1
+RLF,S03,right_hand,0,40
+RLF,S04,left_hand,39,1
+RLF,S04,right_hand,2,38
+RLF,S05,left_hand,28,12
+RLF,S05,right_hand,3,37
+RLF,S06,left_hand,32,8
+RLF,S06,right_hand,3,37
+RLF,S07,left_hand,32,8
+RLF,S07,right_hand,14,26
+RLF,S08,left_hand,33,7
+RLF,S08,right_hand,13,27
+RLF,S09,left_hand,31,9
+RLF,S09,right_hand,8,32
+RLF,S10,left_hand,40,0
+RLF,S10,right_hand,0,40
+RLF,S11,left_hand,30,10
+RLF,S11,right_hand,12,28
+RLF,S12,left_hand,39,1
+RLF,S12,right_hand,0,40
+RLF,S13,left_hand,35,5
+RLF,S13,right_hand,10,30
+RLF,S14,left_hand,39,1
+RLF,S14,right_hand,5,35
+MI,S01,left_hand,27,13
+MI,S01,right_hand,21,19
+MI,S02,left_hand,38,2
+MI,S02,right_hand,8,32
+MI,S03,left_hand,39,1
+MI,S03,right_hand,2,38
+MI,S04,left_hand,39,1
+MI,S04,right_hand,0,40
+MI,S05,left_hand,30,10
+MI,S05,right_hand,7,33
+MI,S06,left_hand,33,7
+MI,S06,right_hand,3,37
+MI,S07,left_hand,24,16
+MI,S07,right_hand,17,23
+MI,S08,left_hand,23,17
+MI,S08,right_hand,20,20
+MI,S09,left_hand,27,13
+MI,S09,right_hand,13,27
+MI,S10,left_hand,40,0
+MI,S10,right_hand,0,40
+MI,S11,left_hand,24,16
+MI,S11,right_hand,13,27
+MI,S12,left_hand,40,0
+MI,S12,right_hand,0,40
+MI,S13,left_hand,36,4
+MI,S13,right_hand,11,29
+MI,S14,left_hand,37,3
+MI,S14,right_hand,2,38
+Fixed sensorimotor,S01,left_hand,33,7
+Fixed sensorimotor,S01,right_hand,32,8
+Fixed sensorimotor,S02,left_hand,33,7
+Fixed sensorimotor,S02,right_hand,5,35
+Fixed sensorimotor,S03,left_hand,36,4
+Fixed sensorimotor,S03,right_hand,1,39
+Fixed sensorimotor,S04,left_hand,37,3
+Fixed sensorimotor,S04,right_hand,0,40
+Fixed sensorimotor,S05,left_hand,33,7
+Fixed sensorimotor,S05,right_hand,10,30
+Fixed sensorimotor,S06,left_hand,35,5
+Fixed sensorimotor,S06,right_hand,1,39
+Fixed sensorimotor,S07,left_hand,24,16
+Fixed sensorimotor,S07,right_hand,13,27
+Fixed sensorimotor,S08,left_hand,26,14
+Fixed sensorimotor,S08,right_hand,16,24
+Fixed sensorimotor,S09,left_hand,30,10
+Fixed sensorimotor,S09,right_hand,10,30
+Fixed sensorimotor,S10,left_hand,39,1
+Fixed sensorimotor,S10,right_hand,0,40
+Fixed sensorimotor,S11,left_hand,29,11
+Fixed sensorimotor,S11,right_hand,17,23
+Fixed sensorimotor,S12,left_hand,40,0
+Fixed sensorimotor,S12,right_hand,0,40
+Fixed sensorimotor,S13,left_hand,34,6
+Fixed sensorimotor,S13,right_hand,16,24
+Fixed sensorimotor,S14,left_hand,38,2
+Fixed sensorimotor,S14,right_hand,2,38
+ERD-only,S01,left_hand,29,11
+ERD-only,S01,right_hand,27,13
+ERD-only,S02,left_hand,38,2
+ERD-only,S02,right_hand,4,36
+ERD-only,S03,left_hand,39,1
+ERD-only,S03,right_hand,0,40
+ERD-only,S04,left_hand,39,1
+ERD-only,S04,right_hand,1,39
+ERD-only,S05,left_hand,32,8
+ERD-only,S05,right_hand,4,36
+ERD-only,S06,left_hand,34,6
+ERD-only,S06,right_hand,1,39
+ERD-only,S07,left_hand,26,14
+ERD-only,S07,right_hand,18,22
+ERD-only,S08,left_hand,33,7
+ERD-only,S08,right_hand,11,29
+ERD-only,S09,left_hand,33,7
+ERD-only,S09,right_hand,8,32
+ERD-only,S10,left_hand,39,1
+ERD-only,S10,right_hand,0,40
+ERD-only,S11,left_hand,31,9
+ERD-only,S11,right_hand,19,21
+ERD-only,S12,left_hand,39,1
+ERD-only,S12,right_hand,0,40
+ERD-only,S13,left_hand,33,7
+ERD-only,S13,right_hand,9,31
+ERD-only,S14,left_hand,39,1
+ERD-only,S14,right_hand,3,37
+Random (mean of draws),S01,left_hand,114,86
+Random (mean of draws),S01,right_hand,82,118
+Random (mean of draws),S02,left_hand,183,17
+Random (mean of draws),S02,right_hand,34,166
+Random (mean of draws),S03,left_hand,193,7
+Random (mean of draws),S03,right_hand,4,196
+Random (mean of draws),S04,left_hand,191,9
+Random (mean of draws),S04,right_hand,2,198
+Random (mean of draws),S05,left_hand,145,55
+Random (mean of draws),S05,right_hand,52,148
+Random (mean of draws),S06,left_hand,160,40
+Random (mean of draws),S06,right_hand,18,182
+Random (mean of draws),S07,left_hand,122,78
+Random (mean of draws),S07,right_hand,71,129
+Random (mean of draws),S08,left_hand,108,92
+Random (mean of draws),S08,right_hand,81,119
+Random (mean of draws),S09,left_hand,112,88
+Random (mean of draws),S09,right_hand,51,149
+Random (mean of draws),S10,left_hand,199,1
+Random (mean of draws),S10,right_hand,1,199
+Random (mean of draws),S11,left_hand,120,80
+Random (mean of draws),S11,right_hand,71,129
+Random (mean of draws),S12,left_hand,198,2
+Random (mean of draws),S12,right_hand,3,197
+Random (mean of draws),S13,left_hand,162,38
+Random (mean of draws),S13,right_hand,55,145
+Random (mean of draws),S14,left_hand,189,11
+Random (mean of draws),S14,right_hand,14,186

@@ -1,0 +1,34 @@
+EEGNetv4 - HGD - control 'control_random_draw4' - 2class
+================================================================================
+
+Subject 01: 60.00%  | montage: FCz, FC2, FC4, FC6, C3, C2, C4, CP1, CPz, CP2, CP6, Pz
+    seed -1 fold 1: 60.00% (majority-class 50.0%)
+Subject 02: 93.75%  | montage: FC5, FC1, FC6, C5, C3, Cz, C2, C6, CP5, CP3, CP2, Pz
+    seed -1 fold 1: 93.75% (majority-class 50.0%)
+Subject 03: 98.75%  | montage: FC3, FC1, FCz, FC6, C5, C1, Cz, C2, CP5, CP3, CP6, Pz
+    seed -1 fold 1: 98.75% (majority-class 50.0%)
+Subject 04: 96.25%  | montage: FC5, FC3, FC1, FCz, FC6, C5, Cz, C4, C6, CP1, CPz, Pz
+    seed -1 fold 1: 96.25% (majority-class 50.0%)
+Subject 05: 76.25%  | montage: FC5, FC3, FCz, FC4, C3, C1, C4, CP5, CP3, CPz, CP4, Pz
+    seed -1 fold 1: 76.25% (majority-class 50.0%)
+Subject 06: 85.00%  | montage: FCz, FC4, FC6, C5, C3, C1, C2, C4, CP1, CP2, CP4, Pz
+    seed -1 fold 1: 85.00% (majority-class 50.0%)
+Subject 07: 55.00%  | montage: FC5, FC3, FC1, FC4, Cz, C2, C6, CP5, CPz, CP2, CP4, Pz
+    seed -1 fold 1: 55.00% (majority-class 50.0%)
+Subject 08: 51.52%  | montage: FC5, FC3, FC1, FCz, C5, C3, C1, C4, CP5, CP1, CPz, CP2
+    seed -1 fold 1: 51.52% (majority-class 50.0%)
+Subject 09: 58.75%  | montage: FC3, FC1, FCz, FC2, FC4, FC6, C5, Cz, C6, CP3, CP1, CP4
+    seed -1 fold 1: 58.75% (majority-class 50.0%)
+Subject 10: 95.00%  | montage: FC5, FC3, FC4, FC6, C3, Cz, C2, C4, CP1, CPz, CP4, CP6
+    seed -1 fold 1: 95.00% (majority-class 50.0%)
+Subject 11: 43.75%  | montage: FC5, FC1, FCz, FC2, FC6, C5, C3, Cz, C4, C6, CPz, CP2
+    seed -1 fold 1: 43.75% (majority-class 50.0%)
+Subject 12: 100.00%  | montage: FC4, FC6, C3, C1, Cz, C2, C4, CP5, CP1, CPz, CP2, CP4
+    seed -1 fold 1: 100.00% (majority-class 50.0%)
+Subject 13: 77.50%  | montage: FCz, C5, C3, C1, C4, CP5, CP3, CP1, CPz, CP4, CP6, Pz
+    seed -1 fold 1: 77.50% (majority-class 50.0%)
+Subject 14: 82.50%  | montage: FC5, FC3, FC1, FC2, C5, Cz, C2, C4, C6, CP5, CP2, Pz
+    seed -1 fold 1: 82.50% (majority-class 50.0%)
+
+GRAND MEAN: 76.72% +/- 19.48% (SD across subjects)
+chance 50.0% | mean majority-class 50.0%

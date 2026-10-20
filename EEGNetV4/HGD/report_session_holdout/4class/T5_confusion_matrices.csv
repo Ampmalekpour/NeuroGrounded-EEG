@@ -1,0 +1,33 @@
+Method,True class,pred feet,pred left_hand,pred rest,pred right_hand
+22ch,feet,466,6,41,7
+22ch,left_hand,1,439,0,81
+22ch,rest,48,4,459,10
+22ch,right_hand,5,95,1,420
+Ours,feet,472,8,31,9
+Ours,left_hand,1,442,3,75
+Ours,rest,48,3,461,9
+Ours,right_hand,2,109,3,407
+CSP,feet,477,7,30,6
+CSP,left_hand,1,449,3,68
+CSP,rest,49,11,457,4
+CSP,right_hand,4,88,1,428
+RLF,feet,473,9,31,7
+RLF,left_hand,1,427,4,89
+RLF,rest,47,7,458,9
+RLF,right_hand,0,89,6,426
+MI,feet,467,7,37,9
+MI,left_hand,1,438,0,82
+MI,rest,52,10,450,9
+MI,right_hand,2,102,2,415
+Fixed sensorimotor,feet,464,11,32,13
+Fixed sensorimotor,left_hand,0,415,3,103
+Fixed sensorimotor,rest,48,5,456,12
+Fixed sensorimotor,right_hand,4,104,4,409
+ERD-only,feet,469,8,36,7
+ERD-only,left_hand,3,443,1,74
+ERD-only,rest,53,8,454,6
+ERD-only,right_hand,1,89,1,430
+Random (mean of draws),feet,2320,51,186,43
+Random (mean of draws),left_hand,6,2126,15,458
+Random (mean of draws),rest,229,25,2291,60
+Random (mean of draws),right_hand,22,549,25,2009

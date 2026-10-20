@@ -1,0 +1,15 @@
+Subject,Training trials (incl. validation),Validation trials,Test trials,Test trials per class,Majority-class test accuracy (%),Chance (%)
+S01,160,40,80,"left_hand 40, right_hand 40",50.00,50.00
+S02,406,102,80,"left_hand 40, right_hand 40",50.00,50.00
+S03,440,110,80,"left_hand 40, right_hand 40",50.00,50.00
+S04,448,112,80,"left_hand 40, right_hand 40",50.00,50.00
+S05,360,90,80,"left_hand 40, right_hand 40",50.00,50.00
+S06,440,110,80,"left_hand 40, right_hand 40",50.00,50.00
+S07,440,110,80,"left_hand 40, right_hand 40",50.00,50.00
+S08,328,82,80,"left_hand 40, right_hand 40",50.00,50.00
+S09,440,110,80,"left_hand 40, right_hand 40",50.00,50.00
+S10,440,110,80,"left_hand 40, right_hand 40",50.00,50.00
+S11,440,110,80,"left_hand 40, right_hand 40",50.00,50.00
+S12,440,110,80,"left_hand 40, right_hand 40",50.00,50.00
+S13,400,100,80,"left_hand 40, right_hand 40",50.00,50.00
+S14,440,110,80,"left_hand 40, right_hand 40",50.00,50.00
