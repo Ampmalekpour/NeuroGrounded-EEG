@@ -20,13 +20,15 @@ files have the same size, or if the results folder still holds hold-out results.
 
 ```powershell
 foreach ($c in "2class","4class") {
-  Rename-Item EEGNetV4\HGD\$c\results_session EEGNetV4\HGD\$c\results_session_holdout
-  Rename-Item EEGNetV4\HGD\$c\logs_session    EEGNetV4\HGD\$c\logs_session_holdout
+  Rename-Item "EEGNetV4\HGD\$c\results_session" "results_session_holdout"
+  Rename-Item "EEGNetV4\HGD\$c\logs_session"    "logs_session_holdout"
 }
-Rename-Item EEGNetV4\HGD\report_session EEGNetV4\HGD\report_session_holdout
-Rename-Item reports\HGD_session reports\HGD_session_holdout
-Rename-Item run_all_status_hgd_session.json run_all_status_hgd_session_holdout.json
+Rename-Item "EEGNetV4\HGD\report_session" "report_session_holdout"
+Rename-Item "reports\HGD_session" "HGD_session_holdout"
+Rename-Item "run_all_status_hgd_session.json" "run_all_status_hgd_session_holdout.json"
 ```
+
+(`Rename-Item` takes only the new NAME as its second argument, not a path.)
 
 ## 3. Run the whole EEGNetV4 suite (one command)
 
