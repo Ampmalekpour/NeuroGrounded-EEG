@@ -7,3 +7,11 @@ EEGNetV4,4class,grad,0.451,0.426,-0.030,0.196,-0.471
 EEGNetV4,4class,grad_x_input,0.419,0.297,-0.122,0.182,-0.423
 EEGNetV4,4class,integrated_gradients,0.389,0.263,-0.109,0.182,-0.402
 EEGNetV4,4class,smoothgrad,0.452,0.428,-0.025,0.196,-0.472
+Deep4net,2class,grad,0.307,0.351,-0.081,0.100,-0.360
+Deep4net,2class,grad_x_input,0.222,0.243,-0.277,0.055,-0.252
+Deep4net,2class,integrated_gradients,0.224,0.242,-0.375,0.034,-0.254
+Deep4net,2class,smoothgrad,0.307,0.351,-0.083,0.100,-0.360
+Deep4net,4class,grad,0.412,0.416,0.002,0.111,-0.422
+Deep4net,4class,grad_x_input,0.390,0.350,-0.203,0.096,-0.393
+Deep4net,4class,integrated_gradients,0.411,0.345,-0.316,0.083,-0.400
+Deep4net,4class,smoothgrad,0.412,0.416,0.005,0.110,-0.422

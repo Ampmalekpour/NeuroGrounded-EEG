@@ -1,0 +1,169 @@
+Method,Subject,Profile,N channels,Channels
+22ch,S01,schirrmeister,22,FC5 FC3 FC1 FCz FC2 FC4 FC6 C5 C3 C1 Cz C2 C4 C6 CP5 CP3 CP1 CPz CP2 CP4 CP6 Pz
+22ch,S02,schirrmeister,22,FC5 FC3 FC1 FCz FC2 FC4 FC6 C5 C3 C1 Cz C2 C4 C6 CP5 CP3 CP1 CPz CP2 CP4 CP6 Pz
+22ch,S03,schirrmeister,22,FC5 FC3 FC1 FCz FC2 FC4 FC6 C5 C3 C1 Cz C2 C4 C6 CP5 CP3 CP1 CPz CP2 CP4 CP6 Pz
+22ch,S04,schirrmeister,22,FC5 FC3 FC1 FCz FC2 FC4 FC6 C5 C3 C1 Cz C2 C4 C6 CP5 CP3 CP1 CPz CP2 CP4 CP6 Pz
+22ch,S05,schirrmeister,22,FC5 FC3 FC1 FCz FC2 FC4 FC6 C5 C3 C1 Cz C2 C4 C6 CP5 CP3 CP1 CPz CP2 CP4 CP6 Pz
+22ch,S06,schirrmeister,22,FC5 FC3 FC1 FCz FC2 FC4 FC6 C5 C3 C1 Cz C2 C4 C6 CP5 CP3 CP1 CPz CP2 CP4 CP6 Pz
+22ch,S07,schirrmeister,22,FC5 FC3 FC1 FCz FC2 FC4 FC6 C5 C3 C1 Cz C2 C4 C6 CP5 CP3 CP1 CPz CP2 CP4 CP6 Pz
+22ch,S08,schirrmeister,22,FC5 FC3 FC1 FCz FC2 FC4 FC6 C5 C3 C1 Cz C2 C4 C6 CP5 CP3 CP1 CPz CP2 CP4 CP6 Pz
+22ch,S09,schirrmeister,22,FC5 FC3 FC1 FCz FC2 FC4 FC6 C5 C3 C1 Cz C2 C4 C6 CP5 CP3 CP1 CPz CP2 CP4 CP6 Pz
+22ch,S10,schirrmeister,22,FC5 FC3 FC1 FCz FC2 FC4 FC6 C5 C3 C1 Cz C2 C4 C6 CP5 CP3 CP1 CPz CP2 CP4 CP6 Pz
+22ch,S11,schirrmeister,22,FC5 FC3 FC1 FCz FC2 FC4 FC6 C5 C3 C1 Cz C2 C4 C6 CP5 CP3 CP1 CPz CP2 CP4 CP6 Pz
+22ch,S12,schirrmeister,22,FC5 FC3 FC1 FCz FC2 FC4 FC6 C5 C3 C1 Cz C2 C4 C6 CP5 CP3 CP1 CPz CP2 CP4 CP6 Pz
+22ch,S13,schirrmeister,22,FC5 FC3 FC1 FCz FC2 FC4 FC6 C5 C3 C1 Cz C2 C4 C6 CP5 CP3 CP1 CPz CP2 CP4 CP6 Pz
+22ch,S14,schirrmeister,22,FC5 FC3 FC1 FCz FC2 FC4 FC6 C5 C3 C1 Cz C2 C4 C6 CP5 CP3 CP1 CPz CP2 CP4 CP6 Pz
+Ours,S01,schirrmeister,12,C3 C1 C2 C4 Pz FC2 FCz CP1 FC1 CP6 FC4 CP2
+Ours,S02,schirrmeister,12,C3 C1 C2 C4 Pz CP1 FCz FC2 CPz FC4 CP2 CP5
+Ours,S03,schirrmeister,12,C3 C1 C4 C2 Pz FC2 FCz FC4 FC1 CPz CP1 CP6
+Ours,S04,schirrmeister,12,C3 C1 C4 C2 Pz FC2 CP1 CP6 CP5 FCz CP2 FC1
+Ours,S05,schirrmeister,12,C3 C1 C4 C2 FC2 FCz Pz CP1 FC4 FC1 CPz CP2
+Ours,S06,schirrmeister,12,C3 C1 C2 C4 FC2 CP1 Pz FCz FC4 CP6 CP2 CPz
+Ours,S07,schirrmeister,12,C3 C1 C4 C2 Pz FC2 CP1 FCz FC4 FC1 CP5 CP2
+Ours,S08,schirrmeister,12,C3 C4 C1 C2 FC2 Pz CP1 FC4 FCz CP2 CP6 FC1
+Ours,S09,schirrmeister,12,C3 C1 C4 C2 FC2 Pz CP1 FC4 FCz FC1 CPz CP5
+Ours,S10,schirrmeister,12,C3 C1 C4 C2 Pz CP1 FCz FC2 FC1 CP2 FC4 CP5
+Ours,S11,schirrmeister,12,C3 C1 C4 C2 Pz FC2 CP1 FCz FC4 FC1 CP2 CP6
+Ours,S12,schirrmeister,12,C3 C1 C2 C4 FC2 Pz FCz CP1 FC4 FC1 CP2 CPz
+Ours,S13,schirrmeister,12,C3 C1 C2 C4 Pz FC2 CP1 FC4 FC1 CP2 FCz CP6
+Ours,S14,schirrmeister,12,C3 C1 C4 C2 FC2 Pz CP1 FC4 FCz FC1 CP5 CP6
+CSP,S01,schirrmeister,12,CP2 C2 CPz CP1 C1 C4 C3 CP3 Pz FCz FC1 FC2
+CSP,S02,schirrmeister,12,CP2 C2 C1 C3 C4 CP1 CPz CP3 Pz FCz CP5 FC1
+CSP,S03,schirrmeister,12,CP2 C2 CPz C1 CP1 C4 C3 CP3 Pz FCz FC1 CP5
+CSP,S04,schirrmeister,12,CP2 CP1 C2 C1 CPz C4 CP3 C3 Pz FCz CP5 FC1
+CSP,S05,schirrmeister,12,CP2 C2 CPz C4 C1 CP1 C3 CP3 FCz Pz FC1 FC2
+CSP,S06,schirrmeister,12,CP2 C2 C1 C3 C4 CP1 CPz CP3 Pz FCz FC1 CP5
+CSP,S07,schirrmeister,12,CP2 C2 C4 C1 CPz CP1 C3 CP3 Pz FCz FC1 C6
+CSP,S08,schirrmeister,12,CP2 C2 C1 CP1 CPz C3 C4 CP3 Pz FCz FC1 CP5
+CSP,S09,schirrmeister,12,CP2 C2 CP1 C4 C1 CPz C3 CP3 FCz Pz FC1 C6
+CSP,S10,schirrmeister,12,CP2 C2 CP1 C1 C4 CPz C3 CP3 Pz FCz FC1 FC2
+CSP,S11,schirrmeister,12,CP2 CPz C2 CP1 C1 C3 C4 CP3 Pz FCz FC1 FC2
+CSP,S12,schirrmeister,12,CP2 C2 CP1 C1 C4 CPz C3 CP3 Pz FCz FC1 CP5
+CSP,S13,schirrmeister,12,CP2 C2 C1 CP1 CPz C4 C3 CP3 Pz FCz CP5 FC1
+CSP,S14,schirrmeister,12,CP2 CP1 C2 C1 CPz C4 C3 CP3 Pz FCz CP5 C6
+RLF,S01,schirrmeister,12,C1 C2 C4 C3 CP3 CP1 CP2 CP4 Pz CPz CP5 FC1
+RLF,S02,schirrmeister,12,C1 C2 C4 C3 CP3 CP1 CP2 CP4 Pz CPz CP5 FC1
+RLF,S03,schirrmeister,12,C1 C2 C4 C3 CP3 CP1 CP2 Pz CP4 CPz CP5 FC1
+RLF,S04,schirrmeister,12,C1 C2 C4 CP3 C3 CP1 CP2 CP4 CPz Pz CP5 FC1
+RLF,S05,schirrmeister,12,C1 C2 C4 CP3 C3 CP1 CP2 CP4 Pz CPz CP5 FC1
+RLF,S06,schirrmeister,12,C1 C2 C4 C3 CP3 CP1 CP2 CP4 CPz CP5 FC1 Pz
+RLF,S07,schirrmeister,12,C1 C2 C4 C3 CP3 CP1 CP2 CP4 Pz CPz CP5 FC1
+RLF,S08,schirrmeister,12,C1 C2 C4 C3 CP3 CP1 CP2 CP4 Pz CPz CP5 FC1
+RLF,S09,schirrmeister,12,C1 C2 C4 C3 CP3 CP1 CP2 CP4 CPz Pz CP5 FC1
+RLF,S10,schirrmeister,12,C1 C2 C4 CP3 C3 CP1 CP2 Pz CP4 CPz CP5 FC1
+RLF,S11,schirrmeister,12,C1 C2 C4 C3 CP3 CP1 CP2 CP4 Pz CPz FC1 CP5
+RLF,S12,schirrmeister,12,C1 C2 C4 C3 CP3 CP1 CP2 CP4 CPz Pz CP5 FC1
+RLF,S13,schirrmeister,12,C2 C1 C4 C3 CP3 CP1 CP2 CP4 Pz CPz CP5 FC1
+RLF,S14,schirrmeister,12,C1 C2 C4 C3 CP3 CP1 CP2 CP4 CPz Pz CP5 FCz
+MI,S01,schirrmeister,12,C2 C1 C4 C3 CP1 CP3 CP2 CP4 C6 FCz FC4 CPz
+MI,S02,schirrmeister,12,C1 C2 C4 C3 CP3 CP1 CP2 CP4 C6 FC4 CP5 FC3
+MI,S03,schirrmeister,12,C1 C2 C4 C3 CP1 CP3 CP2 CP4 C6 FCz CPz FC4
+MI,S04,schirrmeister,12,C1 C2 C4 C3 CP1 CP3 CP2 CP4 C6 CPz FC4 FCz
+MI,S05,schirrmeister,12,C1 C2 C4 C3 CP1 CP3 CP2 CP4 C6 FCz FC4 CPz
+MI,S06,schirrmeister,12,C1 C2 C4 C3 CP1 CP3 CP2 CP4 C6 FC4 CPz CP6
+MI,S07,schirrmeister,12,C1 C2 C4 C3 CP3 CP1 CP4 CP2 C6 FC4 FCz CP6
+MI,S08,schirrmeister,12,C2 C1 C4 C3 CP3 CP1 CP4 CP2 C6 FC4 FCz CP6
+MI,S09,schirrmeister,12,C1 C2 C4 C3 CP3 CP1 CP2 CP4 C6 CPz FC4 CP6
+MI,S10,schirrmeister,12,C1 C2 C4 C3 CP1 CP3 CP2 CP4 C6 FC4 FCz FC2
+MI,S11,schirrmeister,12,C2 C1 C4 C3 CP3 CP1 CP2 CP4 C6 FC4 FCz CPz
+MI,S12,schirrmeister,12,C2 C1 C4 C3 CP1 CP3 CP2 CP4 C6 FC4 FCz CPz
+MI,S13,schirrmeister,12,C2 C1 C4 C3 CP1 CP3 CP2 CP4 C6 FC4 FCz CPz
+MI,S14,schirrmeister,12,C1 C2 C4 C3 CP1 CP3 CP2 CP4 C6 FCz CPz CP6
+Fixed sensorimotor,S01,schirrmeister,12,FC3 FC1 FC2 FC4 C3 C1 Cz C2 C4 CP3 CPz CP4
+Fixed sensorimotor,S02,schirrmeister,12,FC3 FC1 FC2 FC4 C3 C1 Cz C2 C4 CP3 CPz CP4
+Fixed sensorimotor,S03,schirrmeister,12,FC3 FC1 FC2 FC4 C3 C1 Cz C2 C4 CP3 CPz CP4
+Fixed sensorimotor,S04,schirrmeister,12,FC3 FC1 FC2 FC4 C3 C1 Cz C2 C4 CP3 CPz CP4
+Fixed sensorimotor,S05,schirrmeister,12,FC3 FC1 FC2 FC4 C3 C1 Cz C2 C4 CP3 CPz CP4
+Fixed sensorimotor,S06,schirrmeister,12,FC3 FC1 FC2 FC4 C3 C1 Cz C2 C4 CP3 CPz CP4
+Fixed sensorimotor,S07,schirrmeister,12,FC3 FC1 FC2 FC4 C3 C1 Cz C2 C4 CP3 CPz CP4
+Fixed sensorimotor,S08,schirrmeister,12,FC3 FC1 FC2 FC4 C3 C1 Cz C2 C4 CP3 CPz CP4
+Fixed sensorimotor,S09,schirrmeister,12,FC3 FC1 FC2 FC4 C3 C1 Cz C2 C4 CP3 CPz CP4
+Fixed sensorimotor,S10,schirrmeister,12,FC3 FC1 FC2 FC4 C3 C1 Cz C2 C4 CP3 CPz CP4
+Fixed sensorimotor,S11,schirrmeister,12,FC3 FC1 FC2 FC4 C3 C1 Cz C2 C4 CP3 CPz CP4
+Fixed sensorimotor,S12,schirrmeister,12,FC3 FC1 FC2 FC4 C3 C1 Cz C2 C4 CP3 CPz CP4
+Fixed sensorimotor,S13,schirrmeister,12,FC3 FC1 FC2 FC4 C3 C1 Cz C2 C4 CP3 CPz CP4
+Fixed sensorimotor,S14,schirrmeister,12,FC3 FC1 FC2 FC4 C3 C1 Cz C2 C4 CP3 CPz CP4
+ERD-only,S01,schirrmeister,12,C2 C4 C1 C3 CP3 CP1 CP2 Pz CP6 CP4 CP5 CPz
+ERD-only,S02,schirrmeister,12,C4 C2 C1 C3 CP3 CP1 CP2 Pz CP6 CP4 CP5 CPz
+ERD-only,S03,schirrmeister,12,C2 C4 C1 C3 CP3 CP1 CP2 Pz CP4 CP6 CP5 CPz
+ERD-only,S04,schirrmeister,12,C4 C2 C1 CP3 C3 CP1 CP2 Pz CP6 CP4 CP5 CPz
+ERD-only,S05,schirrmeister,12,C4 C2 C1 CP3 C3 CP1 CP2 CP4 Pz CP6 CPz CP5
+ERD-only,S06,schirrmeister,12,C4 C2 C1 C3 CP3 CP2 CP1 CP6 CP4 Pz CP5 C6
+ERD-only,S07,schirrmeister,12,C4 C2 C1 C3 CP3 CP1 CP2 Pz CP6 CP4 C6 CP5
+ERD-only,S08,schirrmeister,12,C4 C2 C1 C3 CP3 CP1 CP2 CP4 Pz CP6 CP5 CPz
+ERD-only,S09,schirrmeister,12,C4 C2 C1 C3 CP3 CP1 CP2 Pz CP4 CP6 CPz CP5
+ERD-only,S10,schirrmeister,12,C4 C2 C1 C3 CP3 CP1 CP2 Pz CP6 CP4 CP5 CPz
+ERD-only,S11,schirrmeister,12,C4 C2 C1 C3 CP3 CP1 CP2 Pz CP6 CP4 CP5 C6
+ERD-only,S12,schirrmeister,12,C4 C2 C1 C3 CP3 CP1 CP2 CP6 CP4 CP5 Pz C6
+ERD-only,S13,schirrmeister,12,C4 C2 C1 CP3 C3 CP1 CP2 Pz CP4 CP6 CPz CP5
+ERD-only,S14,schirrmeister,12,C4 C2 C1 CP3 C3 CP1 CP2 Pz CP6 CP4 CPz CP5
+Random (mean of draws) draw 0,S01,schirrmeister,12,FC3 FC1 FCz FC2 C3 CP5 CP3 CP1 CPz CP4 CP6 Pz
+Random (mean of draws) draw 0,S02,schirrmeister,12,FC5 FC3 FCz FC6 C3 C2 C6 CP5 CP3 CP2 CP4 CP6
+Random (mean of draws) draw 0,S03,schirrmeister,12,FC3 FC1 FC2 FC4 C5 C3 Cz C4 C6 CP5 CP4 Pz
+Random (mean of draws) draw 0,S04,schirrmeister,12,FC3 FCz FC2 FC6 C5 C3 C6 CP3 CP1 CPz CP2 Pz
+Random (mean of draws) draw 0,S05,schirrmeister,12,FC5 FC3 FCz FC2 FC4 C5 C1 C2 C6 CP1 CPz CP2
+Random (mean of draws) draw 0,S06,schirrmeister,12,FC1 FC2 C5 C3 C1 Cz C2 C6 CP5 CP3 CP2 Pz
+Random (mean of draws) draw 0,S07,schirrmeister,12,FC5 FC3 FC1 FCz FC4 C3 C1 C4 C6 CP3 CP1 CP2
+Random (mean of draws) draw 0,S08,schirrmeister,12,FCz FC2 FC6 C3 C1 C4 C6 CP5 CP2 CP4 CP6 Pz
+Random (mean of draws) draw 0,S09,schirrmeister,12,FC5 FC1 FC4 FC6 C5 C1 Cz C4 CP3 CP2 CP4 Pz
+Random (mean of draws) draw 0,S10,schirrmeister,12,FC5 FCz FC2 FC4 FC6 C5 C1 C4 C6 CP5 CPz CP4
+Random (mean of draws) draw 0,S11,schirrmeister,12,FC1 FC2 FC6 C5 C3 C1 C2 C4 C6 CP5 CP6 Pz
+Random (mean of draws) draw 0,S12,schirrmeister,12,FC1 FC2 FC4 FC6 C5 Cz C4 CP5 CP1 CPz CP2 Pz
+Random (mean of draws) draw 0,S13,schirrmeister,12,FC3 FC1 FCz FC2 C1 Cz C6 CP3 CP1 CP2 CP4 Pz
+Random (mean of draws) draw 0,S14,schirrmeister,12,FCz FC2 FC4 C5 Cz C6 CP3 CP1 CPz CP4 CP6 Pz
+Random (mean of draws) draw 1,S01,schirrmeister,12,FC3 FC2 FC4 C3 Cz C2 C4 C6 CP5 CP3 CP2 CP4
+Random (mean of draws) draw 1,S02,schirrmeister,12,FC3 FC1 FC2 FC4 FC6 C3 C1 C4 CP5 CP1 CPz CP4
+Random (mean of draws) draw 1,S03,schirrmeister,12,FC3 FC2 FC4 FC6 C5 C1 Cz C4 CPz CP2 CP6 Pz
+Random (mean of draws) draw 1,S04,schirrmeister,12,FC5 FCz C5 C3 C1 Cz CP5 CP1 CPz CP2 CP4 Pz
+Random (mean of draws) draw 1,S05,schirrmeister,12,FC1 FCz FC2 C5 C3 Cz C4 C6 CPz CP2 CP4 Pz
+Random (mean of draws) draw 1,S06,schirrmeister,12,FC1 FC2 FC4 FC6 C3 C1 Cz C4 CP5 CP3 CPz Pz
+Random (mean of draws) draw 1,S07,schirrmeister,12,FC5 FC3 FC1 FCz C5 C3 C2 C6 CP1 CP4 CP6 Pz
+Random (mean of draws) draw 1,S08,schirrmeister,12,FC5 FCz FC6 C5 C1 C4 C6 CP5 CP3 CP1 CPz CP4
+Random (mean of draws) draw 1,S09,schirrmeister,12,FC5 FC3 FC2 FC4 FC6 C5 C2 C4 CP3 CP1 CPz CP6
+Random (mean of draws) draw 1,S10,schirrmeister,12,FC5 FC2 FC4 FC6 C5 C3 C2 C4 CP5 CP3 CPz CP6
+Random (mean of draws) draw 1,S11,schirrmeister,12,FCz FC4 FC6 C3 C1 Cz C4 C6 CP3 CP1 CP2 Pz
+Random (mean of draws) draw 1,S12,schirrmeister,12,FC3 FC2 FC4 FC6 C5 C3 Cz C2 C4 CP3 CP1 CP4
+Random (mean of draws) draw 1,S13,schirrmeister,12,FC3 FCz FC6 C5 C3 Cz C2 C4 CPz CP4 CP6 Pz
+Random (mean of draws) draw 1,S14,schirrmeister,12,FC3 FC1 FC6 C3 C1 C2 C4 C6 CP1 CPz CP4 CP6
+Random (mean of draws) draw 2,S01,schirrmeister,12,FC5 FC3 FC1 FC4 FC6 C5 C3 C1 C4 CPz CP4 Pz
+Random (mean of draws) draw 2,S02,schirrmeister,12,FC3 FCz C3 C1 Cz C2 C6 CP3 CP1 CPz CP4 Pz
+Random (mean of draws) draw 2,S03,schirrmeister,12,FC5 FC1 FCz FC4 FC6 C1 C2 C6 CP5 CP2 CP6 Pz
+Random (mean of draws) draw 2,S04,schirrmeister,12,FC5 FCz FC4 FC6 C5 C3 C1 C2 C4 CPz CP2 Pz
+Random (mean of draws) draw 2,S05,schirrmeister,12,FC5 FC1 FC4 FC6 C3 C1 C2 C4 CP5 CP1 CP2 Pz
+Random (mean of draws) draw 2,S06,schirrmeister,12,FC5 FC2 FC6 C3 C1 Cz C2 C6 CP5 CP3 CPz Pz
+Random (mean of draws) draw 2,S07,schirrmeister,12,FCz FC2 FC6 C5 C3 C1 C6 CP1 CP2 CP4 CP6 Pz
+Random (mean of draws) draw 2,S08,schirrmeister,12,FC5 FC3 FCz FC6 C5 C3 C4 CP3 CP1 CPz CP2 CP6
+Random (mean of draws) draw 2,S09,schirrmeister,12,FC3 FC1 FCz C3 Cz C2 C6 CP1 CPz CP2 CP4 CP6
+Random (mean of draws) draw 2,S10,schirrmeister,12,FC3 FC2 C5 C1 Cz C6 CP5 CP3 CP1 CPz CP6 Pz
+Random (mean of draws) draw 2,S11,schirrmeister,12,FC5 FC3 FCz FC2 FC4 C5 C3 Cz C6 CP5 CPz CP6
+Random (mean of draws) draw 2,S12,schirrmeister,12,FCz FC4 C5 C1 Cz C2 C6 CP5 CPz CP2 CP4 CP6
+Random (mean of draws) draw 2,S13,schirrmeister,12,FC5 FC1 FC2 C5 C3 C1 Cz C6 CP5 CP3 CP4 Pz
+Random (mean of draws) draw 2,S14,schirrmeister,12,FC5 FC1 FCz FC2 FC4 C1 C2 C6 CP5 CP3 CPz CP2
+Random (mean of draws) draw 3,S01,schirrmeister,12,FC5 FC3 FC2 FC4 FC6 C3 CP5 CP3 CPz CP2 CP4 Pz
+Random (mean of draws) draw 3,S02,schirrmeister,12,FC5 FC2 C5 C3 C1 C2 C6 CP5 CP3 CP1 CP6 Pz
+Random (mean of draws) draw 3,S03,schirrmeister,12,FC5 FC1 FC2 FC4 C2 C4 C6 CP3 CP1 CPz CP4 CP6
+Random (mean of draws) draw 3,S04,schirrmeister,12,FC5 FC1 FCz FC4 FC6 Cz C2 C4 CP3 CP1 CP2 CP4
+Random (mean of draws) draw 3,S05,schirrmeister,12,FC5 FC3 FC2 FC4 FC6 C1 Cz C2 C4 C6 CP1 CPz
+Random (mean of draws) draw 3,S06,schirrmeister,12,FC1 FCz FC2 C1 Cz C2 C6 CP1 CPz CP2 CP4 CP6
+Random (mean of draws) draw 3,S07,schirrmeister,12,FC5 FCz FC2 C3 Cz C2 C6 CP5 CP1 CPz CP2 Pz
+Random (mean of draws) draw 3,S08,schirrmeister,12,FC5 FC4 FC6 C5 C3 C1 Cz C6 CP5 CP3 CP2 CP6
+Random (mean of draws) draw 3,S09,schirrmeister,12,FC3 FC1 FCz FC2 C5 C3 C2 C4 C6 CP3 CP4 Pz
+Random (mean of draws) draw 3,S10,schirrmeister,12,FC3 FC1 FC2 C5 C3 C1 CP5 CP1 CPz CP4 CP6 Pz
+Random (mean of draws) draw 3,S11,schirrmeister,12,FC5 FCz FC2 FC6 C1 Cz C2 CPz CP2 CP4 CP6 Pz
+Random (mean of draws) draw 3,S12,schirrmeister,12,FC5 FC1 FC2 C3 C1 Cz C4 CP1 CP2 CP4 CP6 Pz
+Random (mean of draws) draw 3,S13,schirrmeister,12,FC5 FC3 FC1 FC2 FC4 C5 C4 C6 CP3 CPz CP2 CP4
+Random (mean of draws) draw 3,S14,schirrmeister,12,FCz FC6 C3 C1 Cz C4 C6 CP5 CP3 CP1 CPz CP2
+Random (mean of draws) draw 4,S01,schirrmeister,12,FCz FC2 FC4 FC6 C3 C2 C4 CP1 CPz CP2 CP6 Pz
+Random (mean of draws) draw 4,S02,schirrmeister,12,FC5 FC1 FC6 C5 C3 Cz C2 C6 CP5 CP3 CP2 Pz
+Random (mean of draws) draw 4,S03,schirrmeister,12,FC3 FC1 FCz FC6 C5 C1 Cz C2 CP5 CP3 CP6 Pz
+Random (mean of draws) draw 4,S04,schirrmeister,12,FC5 FC3 FC1 FCz FC6 C5 Cz C4 C6 CP1 CPz Pz
+Random (mean of draws) draw 4,S05,schirrmeister,12,FC5 FC3 FCz FC4 C3 C1 C4 CP5 CP3 CPz CP4 Pz
+Random (mean of draws) draw 4,S06,schirrmeister,12,FCz FC4 FC6 C5 C3 C1 C2 C4 CP1 CP2 CP4 Pz
+Random (mean of draws) draw 4,S07,schirrmeister,12,FC5 FC3 FC1 FC4 Cz C2 C6 CP5 CPz CP2 CP4 Pz
+Random (mean of draws) draw 4,S08,schirrmeister,12,FC5 FC3 FC1 FCz C5 C3 C1 C4 CP5 CP1 CPz CP2
+Random (mean of draws) draw 4,S09,schirrmeister,12,FC3 FC1 FCz FC2 FC4 FC6 C5 Cz C6 CP3 CP1 CP4
+Random (mean of draws) draw 4,S10,schirrmeister,12,FC5 FC3 FC4 FC6 C3 Cz C2 C4 CP1 CPz CP4 CP6
+Random (mean of draws) draw 4,S11,schirrmeister,12,FC5 FC1 FCz FC2 FC6 C5 C3 Cz C4 C6 CPz CP2
+Random (mean of draws) draw 4,S12,schirrmeister,12,FC4 FC6 C3 C1 Cz C2 C4 CP5 CP1 CPz CP2 CP4
+Random (mean of draws) draw 4,S13,schirrmeister,12,FCz C5 C3 C1 C4 CP5 CP3 CP1 CPz CP4 CP6 Pz
+Random (mean of draws) draw 4,S14,schirrmeister,12,FC5 FC3 FC1 FC2 C5 Cz C2 C4 C6 CP5 CP2 Pz

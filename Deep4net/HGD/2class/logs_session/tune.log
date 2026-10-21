@@ -1,0 +1,512 @@
+$ D:\EEG\braindec\.venv\Scripts\python.exe -u D:\EEG\NeuroGrounded-EEG\Deep4net\HGD\2class\deep4net_hgd_2class_tune.py   [EEG_PROTOCOL=session]
+Using device: cuda | class mode: 2class | seeds: [42, 43, 44] | subjects: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14] | synthetic: False | protocol: session
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S01 [2class] profile=original X=(240, 22, 400) class counts={'left_hand': 120, 'right_hand': 120}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune original] S01 F1 Ep 001 | tr 1.0023 | val 42.5% | best val acc 0.0% (ep 0) | lr 5.0e-04
+[tune original] S01 F1 Ep 050 | tr 0.2779 | val 45.0% | best val acc 47.5% (ep 38) | lr 2.5e-04
+[tune original] S01 F1 Ep 100 | tr 0.2753 | val 42.5% | best val acc 47.5% (ep 38) | lr 6.3e-05
+[tune original] S01 F1 Ep 150 | tr 0.2468 | val 47.5% | best val acc 47.5% (ep 140) | lr 3.1e-05
+[tune original] S01 F1 Ep 200 | tr 0.2489 | val 47.5% | best val acc 47.5% (ep 140) | lr 7.8e-06
+[tune original] S01 F1 Ep 250 | tr 0.2401 | val 47.5% | best val acc 47.5% (ep 243) | lr 2.0e-06
+[tune original] S01 F1 Ep 300 | tr 0.2439 | val 47.5% | best val acc 47.5% (ep 243) | lr 9.8e-07
+[tune original] S01 F1 Ep 350 | tr 0.2466 | val 47.5% | best val acc 47.5% (ep 243) | lr 2.4e-07
+[tune original] S01 F1 Early stop @ ep 393 (best epoch 243)
+[tune]       original S01: mean validation accuracy 47.50%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S02 [2class] profile=original X=(486, 22, 400) class counts={'left_hand': 242, 'right_hand': 244}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune original] S02 F1 Ep 001 | tr 1.0915 | val 63.7% | best val acc 0.0% (ep 0) | lr 5.0e-04
+[tune original] S02 F1 Ep 050 | tr 0.2948 | val 74.5% | best val acc 76.5% (ep 41) | lr 5.0e-04
+[tune original] S02 F1 Ep 100 | tr 0.2534 | val 75.5% | best val acc 77.5% (ep 98) | lr 2.5e-04
+[tune original] S02 F1 Ep 150 | tr 0.2417 | val 75.5% | best val acc 79.4% (ep 113) | lr 2.5e-04
+[tune original] S02 F1 Ep 200 | tr 0.2333 | val 76.5% | best val acc 81.4% (ep 182) | lr 2.5e-04
+[tune original] S02 F1 Ep 250 | tr 0.2431 | val 78.4% | best val acc 81.4% (ep 182) | lr 1.3e-04
+[tune original] S02 F1 Ep 300 | tr 0.2224 | val 79.4% | best val acc 81.4% (ep 182) | lr 3.1e-05
+[tune original] S02 F1 Early stop @ ep 332 (best epoch 182)
+[tune]       original S02: mean validation accuracy 81.37%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S03 [2class] profile=original X=(520, 22, 400) class counts={'left_hand': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune original] S03 F1 Ep 001 | tr 0.9427 | val 56.4% | best val acc 0.0% (ep 0) | lr 5.0e-04
+[tune original] S03 F1 Ep 050 | tr 0.2522 | val 90.9% | best val acc 93.6% (ep 34) | lr 5.0e-04
+[tune original] S03 F1 Ep 100 | tr 0.2305 | val 90.0% | best val acc 94.5% (ep 66) | lr 1.3e-04
+[tune original] S03 F1 Ep 150 | tr 0.2283 | val 90.9% | best val acc 94.5% (ep 66) | lr 6.3e-05
+[tune original] S03 F1 Ep 200 | tr 0.2241 | val 90.9% | best val acc 94.5% (ep 66) | lr 1.6e-05
+[tune original] S03 F1 Early stop @ ep 216 (best epoch 66)
+[tune]       original S03: mean validation accuracy 94.55%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S04 [2class] profile=original X=(528, 22, 400) class counts={'left_hand': 264, 'right_hand': 264}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune original] S04 F1 Ep 001 | tr 1.0345 | val 53.6% | best val acc 0.0% (ep 0) | lr 5.0e-04
+[tune original] S04 F1 Ep 050 | tr 0.2575 | val 82.1% | best val acc 83.0% (ep 46) | lr 5.0e-04
+[tune original] S04 F1 Ep 100 | tr 0.2371 | val 84.8% | best val acc 85.7% (ep 97) | lr 2.5e-04
+[tune original] S04 F1 Ep 150 | tr 0.2238 | val 83.9% | best val acc 85.7% (ep 97) | lr 1.3e-04
+[tune original] S04 F1 Ep 200 | tr 0.2224 | val 82.1% | best val acc 86.6% (ep 178) | lr 1.3e-04
+[tune original] S04 F1 Ep 250 | tr 0.2186 | val 86.6% | best val acc 87.5% (ep 240) | lr 1.3e-04
+[tune original] S04 F1 Ep 300 | tr 0.2185 | val 83.9% | best val acc 87.5% (ep 272) | lr 3.1e-05
+[tune original] S04 F1 Ep 350 | tr 0.2159 | val 85.7% | best val acc 87.5% (ep 272) | lr 1.6e-05
+[tune original] S04 F1 Ep 400 | tr 0.2164 | val 85.7% | best val acc 87.5% (ep 272) | lr 3.9e-06
+[tune original] S04 F1 Early stop @ ep 422 (best epoch 272)
+[tune]       original S04: mean validation accuracy 87.50%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S05 [2class] profile=original X=(440, 22, 400) class counts={'left_hand': 220, 'right_hand': 220}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune original] S05 F1 Ep 001 | tr 0.9864 | val 52.2% | best val acc 0.0% (ep 0) | lr 5.0e-04
+[tune original] S05 F1 Ep 050 | tr 0.2554 | val 54.4% | best val acc 55.6% (ep 20) | lr 2.5e-04
+[tune original] S05 F1 Ep 100 | tr 0.2504 | val 55.6% | best val acc 60.0% (ep 52) | lr 6.3e-05
+[tune original] S05 F1 Ep 150 | tr 0.2506 | val 52.2% | best val acc 60.0% (ep 52) | lr 3.1e-05
+[tune original] S05 F1 Ep 200 | tr 0.2376 | val 52.2% | best val acc 60.0% (ep 52) | lr 7.8e-06
+[tune original] S05 F1 Early stop @ ep 202 (best epoch 52)
+[tune]       original S05: mean validation accuracy 60.00%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S06 [2class] profile=original X=(520, 22, 400) class counts={'left_hand': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune original] S06 F1 Ep 001 | tr 0.9891 | val 50.9% | best val acc 0.0% (ep 0) | lr 5.0e-04
+[tune original] S06 F1 Ep 050 | tr 0.3046 | val 51.8% | best val acc 60.0% (ep 28) | lr 2.5e-04
+[tune original] S06 F1 Ep 100 | tr 0.2601 | val 53.6% | best val acc 60.0% (ep 28) | lr 6.3e-05
+[tune original] S06 F1 Ep 150 | tr 0.2714 | val 55.5% | best val acc 60.0% (ep 28) | lr 3.1e-05
+[tune original] S06 F1 Early stop @ ep 178 (best epoch 28)
+[tune]       original S06: mean validation accuracy 60.00%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S07 [2class] profile=original X=(520, 22, 400) class counts={'left_hand': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune original] S07 F1 Ep 001 | tr 1.0635 | val 50.0% | best val acc 0.0% (ep 0) | lr 5.0e-04
+[tune original] S07 F1 Ep 050 | tr 0.2881 | val 45.5% | best val acc 50.9% (ep 22) | lr 2.5e-04
+[tune original] S07 F1 Ep 100 | tr 0.2612 | val 44.5% | best val acc 50.9% (ep 22) | lr 6.3e-05
+[tune original] S07 F1 Ep 150 | tr 0.2477 | val 44.5% | best val acc 50.9% (ep 22) | lr 3.1e-05
+[tune original] S07 F1 Early stop @ ep 172 (best epoch 22)
+[tune]       original S07: mean validation accuracy 50.91%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S08 [2class] profile=original X=(408, 22, 400) class counts={'left_hand': 204, 'right_hand': 204}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune original] S08 F1 Ep 001 | tr 1.0500 | val 50.0% | best val acc 0.0% (ep 0) | lr 5.0e-04
+[tune original] S08 F1 Ep 050 | tr 0.3040 | val 57.3% | best val acc 57.3% (ep 29) | lr 2.5e-04
+[tune original] S08 F1 Ep 100 | tr 0.2708 | val 51.2% | best val acc 59.8% (ep 57) | lr 6.3e-05
+[tune original] S08 F1 Ep 150 | tr 0.2585 | val 50.0% | best val acc 59.8% (ep 57) | lr 3.1e-05
+[tune original] S08 F1 Ep 200 | tr 0.2602 | val 48.8% | best val acc 59.8% (ep 57) | lr 7.8e-06
+[tune original] S08 F1 Early stop @ ep 207 (best epoch 57)
+[tune]       original S08: mean validation accuracy 59.76%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S09 [2class] profile=original X=(520, 22, 400) class counts={'left_hand': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune original] S09 F1 Ep 001 | tr 1.0663 | val 50.0% | best val acc 0.0% (ep 0) | lr 5.0e-04
+[tune original] S09 F1 Ep 050 | tr 0.2675 | val 54.5% | best val acc 58.2% (ep 46) | lr 2.5e-04
+[tune original] S09 F1 Ep 100 | tr 0.2412 | val 60.0% | best val acc 60.9% (ep 81) | lr 6.3e-05
+[tune original] S09 F1 Ep 150 | tr 0.2432 | val 59.1% | best val acc 60.9% (ep 81) | lr 3.1e-05
+[tune original] S09 F1 Ep 200 | tr 0.2380 | val 60.0% | best val acc 60.9% (ep 81) | lr 7.8e-06
+[tune original] S09 F1 Early stop @ ep 231 (best epoch 81)
+[tune]       original S09: mean validation accuracy 60.91%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S10 [2class] profile=original X=(520, 22, 400) class counts={'left_hand': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune original] S10 F1 Ep 001 | tr 1.0615 | val 54.5% | best val acc 0.0% (ep 0) | lr 5.0e-04
+[tune original] S10 F1 Ep 050 | tr 0.2559 | val 84.5% | best val acc 84.5% (ep 50) | lr 5.0e-04
+[tune original] S10 F1 Ep 100 | tr 0.2297 | val 84.5% | best val acc 88.2% (ep 65) | lr 2.5e-04
+[tune original] S10 F1 Ep 150 | tr 0.2216 | val 86.4% | best val acc 88.2% (ep 65) | lr 2.5e-04
+[tune original] S10 F1 Ep 200 | tr 0.2140 | val 87.3% | best val acc 90.0% (ep 188) | lr 2.5e-04
+[tune original] S10 F1 Ep 250 | tr 0.2202 | val 89.1% | best val acc 90.9% (ep 240) | lr 2.5e-04
+[tune original] S10 F1 Ep 300 | tr 0.2105 | val 89.1% | best val acc 90.9% (ep 240) | lr 1.3e-04
+[tune original] S10 F1 Ep 350 | tr 0.2091 | val 89.1% | best val acc 90.9% (ep 240) | lr 3.1e-05
+[tune original] S10 F1 Early stop @ ep 390 (best epoch 240)
+[tune]       original S10: mean validation accuracy 90.91%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S11 [2class] profile=original X=(520, 22, 400) class counts={'left_hand': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune original] S11 F1 Ep 001 | tr 0.9608 | val 49.1% | best val acc 0.0% (ep 0) | lr 5.0e-04
+[tune original] S11 F1 Ep 050 | tr 0.2661 | val 55.5% | best val acc 58.2% (ep 21) | lr 2.5e-04
+[tune original] S11 F1 Ep 100 | tr 0.2476 | val 53.6% | best val acc 58.2% (ep 21) | lr 6.3e-05
+[tune original] S11 F1 Ep 150 | tr 0.2440 | val 53.6% | best val acc 58.2% (ep 21) | lr 3.1e-05
+[tune original] S11 F1 Early stop @ ep 171 (best epoch 21)
+[tune]       original S11: mean validation accuracy 58.18%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S12 [2class] profile=original X=(520, 22, 400) class counts={'left_hand': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune original] S12 F1 Ep 001 | tr 0.8916 | val 48.2% | best val acc 0.0% (ep 0) | lr 5.0e-04
+[tune original] S12 F1 Ep 050 | tr 0.2516 | val 92.7% | best val acc 94.5% (ep 45) | lr 5.0e-04
+[tune original] S12 F1 Ep 100 | tr 0.2285 | val 92.7% | best val acc 95.5% (ep 84) | lr 5.0e-04
+[tune original] S12 F1 Ep 150 | tr 0.2190 | val 97.3% | best val acc 97.3% (ep 146) | lr 2.5e-04
+[tune original] S12 F1 Ep 200 | tr 0.2131 | val 97.3% | best val acc 97.3% (ep 146) | lr 1.3e-04
+[tune original] S12 F1 Ep 250 | tr 0.2123 | val 97.3% | best val acc 97.3% (ep 249) | lr 6.3e-05
+[tune original] S12 F1 Ep 300 | tr 0.2128 | val 97.3% | best val acc 97.3% (ep 263) | lr 3.1e-05
+[tune original] S12 F1 Ep 350 | tr 0.2116 | val 97.3% | best val acc 97.3% (ep 348) | lr 1.6e-05
+[tune original] S12 F1 Ep 400 | tr 0.2112 | val 97.3% | best val acc 97.3% (ep 390) | lr 7.8e-06
+[tune original] S12 F1 Ep 450 | tr 0.2123 | val 97.3% | best val acc 97.3% (ep 440) | lr 7.8e-06
+[tune original] S12 F1 Ep 500 | tr 0.2130 | val 97.3% | best val acc 97.3% (ep 465) | lr 3.9e-06
+[tune original] S12 F1 Ep 550 | tr 0.2113 | val 97.3% | best val acc 97.3% (ep 545) | lr 3.9e-06
+[tune original] S12 F1 Ep 600 | tr 0.2194 | val 97.3% | best val acc 97.3% (ep 545) | lr 2.0e-06
+[tune]       original S12: mean validation accuracy 97.27%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S13 [2class] profile=original X=(480, 22, 400) class counts={'left_hand': 240, 'right_hand': 240}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune original] S13 F1 Ep 001 | tr 1.1386 | val 49.0% | best val acc 0.0% (ep 0) | lr 5.0e-04
+[tune original] S13 F1 Ep 050 | tr 0.3114 | val 56.0% | best val acc 63.0% (ep 27) | lr 2.5e-04
+[tune original] S13 F1 Ep 100 | tr 0.2497 | val 60.0% | best val acc 63.0% (ep 27) | lr 6.3e-05
+[tune original] S13 F1 Ep 150 | tr 0.2452 | val 58.0% | best val acc 63.0% (ep 27) | lr 3.1e-05
+[tune original] S13 F1 Early stop @ ep 177 (best epoch 27)
+[tune]       original S13: mean validation accuracy 63.00%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S14 [2class] profile=original X=(520, 22, 400) class counts={'left_hand': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune original] S14 F1 Ep 001 | tr 0.9686 | val 48.2% | best val acc 0.0% (ep 0) | lr 5.0e-04
+[tune original] S14 F1 Ep 050 | tr 0.2594 | val 72.7% | best val acc 80.9% (ep 24) | lr 5.0e-04
+[tune original] S14 F1 Ep 100 | tr 0.2314 | val 77.3% | best val acc 80.9% (ep 98) | lr 5.0e-04
+[tune original] S14 F1 Ep 150 | tr 0.2262 | val 76.4% | best val acc 81.8% (ep 116) | lr 2.5e-04
+[tune original] S14 F1 Ep 200 | tr 0.2194 | val 80.0% | best val acc 81.8% (ep 116) | lr 6.3e-05
+[tune original] S14 F1 Ep 250 | tr 0.2152 | val 77.3% | best val acc 81.8% (ep 116) | lr 3.1e-05
+[tune original] S14 F1 Early stop @ ep 266 (best epoch 116)
+[tune]       original S14: mean validation accuracy 81.82%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S01 [2class] profile=schirrmeister X=(240, 22, 1125) class counts={'left_hand': 120, 'right_hand': 120}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune schirrmeister] S01 F1 Ep 001 | tr 7.6099 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+[tune schirrmeister] S01 F1 Ep 050 | tr 0.3524 | val 42.5% | best val acc 60.0% (ep 25) | lr 9.4e-03
+[tune schirrmeister] S01 F1 Ep 100 | tr 0.2388 | val 50.0% | best val acc 60.0% (ep 25) | lr 7.5e-03
+[tune schirrmeister] S01 F1 Early stop @ ep 125 (best epoch 25)
+[tune]  schirrmeister S01: mean validation accuracy 60.00%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S02 [2class] profile=schirrmeister X=(486, 22, 1125) class counts={'left_hand': 242, 'right_hand': 244}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune schirrmeister] S02 F1 Ep 001 | tr 7.8811 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+[tune schirrmeister] S02 F1 Ep 050 | tr 0.3007 | val 81.4% | best val acc 85.3% (ep 49) | lr 9.4e-03
+[tune schirrmeister] S02 F1 Ep 100 | tr 0.2324 | val 84.3% | best val acc 89.2% (ep 85) | lr 7.5e-03
+[tune schirrmeister] S02 F1 Ep 150 | tr 0.2160 | val 83.3% | best val acc 89.2% (ep 85) | lr 5.1e-03
+[tune schirrmeister] S02 F1 Ep 200 | tr 0.2160 | val 86.3% | best val acc 91.2% (ep 153) | lr 2.5e-03
+[tune schirrmeister] S02 F1 Ep 250 | tr 0.2112 | val 87.3% | best val acc 91.2% (ep 153) | lr 7.0e-04
+[tune schirrmeister] S02 F1 Early stop @ ep 253 (best epoch 153)
+[tune]  schirrmeister S02: mean validation accuracy 91.18%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S03 [2class] profile=schirrmeister X=(520, 22, 1125) class counts={'left_hand': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune schirrmeister] S03 F1 Ep 001 | tr 5.3781 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+[tune schirrmeister] S03 F1 Ep 050 | tr 0.2606 | val 93.6% | best val acc 96.4% (ep 29) | lr 9.4e-03
+[tune schirrmeister] S03 F1 Ep 100 | tr 0.2312 | val 96.4% | best val acc 96.4% (ep 87) | lr 7.5e-03
+[tune schirrmeister] S03 F1 Ep 150 | tr 0.2171 | val 96.4% | best val acc 97.3% (ep 148) | lr 5.1e-03
+[tune schirrmeister] S03 F1 Ep 200 | tr 0.2201 | val 96.4% | best val acc 97.3% (ep 159) | lr 2.5e-03
+[tune schirrmeister] S03 F1 Ep 250 | tr 0.2117 | val 97.3% | best val acc 97.3% (ep 159) | lr 7.0e-04
+[tune schirrmeister] S03 F1 Early stop @ ep 259 (best epoch 159)
+[tune]  schirrmeister S03: mean validation accuracy 97.27%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S04 [2class] profile=schirrmeister X=(528, 22, 1125) class counts={'left_hand': 264, 'right_hand': 264}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune schirrmeister] S04 F1 Ep 001 | tr 5.3595 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+[tune schirrmeister] S04 F1 Ep 050 | tr 0.2323 | val 96.4% | best val acc 96.4% (ep 50) | lr 9.4e-03
+[tune schirrmeister] S04 F1 Ep 100 | tr 0.2270 | val 98.2% | best val acc 99.1% (ep 94) | lr 7.5e-03
+[tune schirrmeister] S04 F1 Ep 150 | tr 0.2127 | val 96.4% | best val acc 99.1% (ep 135) | lr 5.1e-03
+[tune schirrmeister] S04 F1 Ep 200 | tr 0.2134 | val 97.3% | best val acc 99.1% (ep 135) | lr 2.5e-03
+[tune schirrmeister] S04 F1 Early stop @ ep 235 (best epoch 135)
+[tune]  schirrmeister S04: mean validation accuracy 99.11%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S05 [2class] profile=schirrmeister X=(440, 22, 1125) class counts={'left_hand': 220, 'right_hand': 220}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune schirrmeister] S05 F1 Ep 001 | tr 6.2729 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+[tune schirrmeister] S05 F1 Ep 050 | tr 0.2779 | val 56.7% | best val acc 63.3% (ep 36) | lr 9.4e-03
+[tune schirrmeister] S05 F1 Ep 100 | tr 0.2352 | val 60.0% | best val acc 63.3% (ep 36) | lr 7.5e-03
+[tune schirrmeister] S05 F1 Early stop @ ep 136 (best epoch 36)
+[tune]  schirrmeister S05: mean validation accuracy 63.33%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S06 [2class] profile=schirrmeister X=(520, 22, 1125) class counts={'left_hand': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune schirrmeister] S06 F1 Ep 001 | tr 7.9150 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+[tune schirrmeister] S06 F1 Ep 050 | tr 0.2748 | val 76.4% | best val acc 82.7% (ep 30) | lr 9.4e-03
+[tune schirrmeister] S06 F1 Ep 100 | tr 0.2361 | val 75.5% | best val acc 82.7% (ep 30) | lr 7.5e-03
+[tune schirrmeister] S06 F1 Early stop @ ep 130 (best epoch 30)
+[tune]  schirrmeister S06: mean validation accuracy 82.73%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S07 [2class] profile=schirrmeister X=(520, 22, 1125) class counts={'left_hand': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune schirrmeister] S07 F1 Ep 001 | tr 8.0700 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+[tune schirrmeister] S07 F1 Ep 050 | tr 0.6239 | val 51.8% | best val acc 59.1% (ep 42) | lr 9.4e-03
+[tune schirrmeister] S07 F1 Ep 100 | tr 0.2917 | val 51.8% | best val acc 60.9% (ep 74) | lr 7.5e-03
+[tune schirrmeister] S07 F1 Ep 150 | tr 0.2350 | val 52.7% | best val acc 60.9% (ep 74) | lr 5.1e-03
+[tune schirrmeister] S07 F1 Early stop @ ep 174 (best epoch 74)
+[tune]  schirrmeister S07: mean validation accuracy 60.91%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S08 [2class] profile=schirrmeister X=(408, 22, 1125) class counts={'left_hand': 204, 'right_hand': 204}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune schirrmeister] S08 F1 Ep 001 | tr 7.8114 | val 48.8% | best val acc 0.0% (ep 0) | lr 1.0e-02
+[tune schirrmeister] S08 F1 Ep 050 | tr 0.2757 | val 46.3% | best val acc 54.9% (ep 36) | lr 9.4e-03
+[tune schirrmeister] S08 F1 Ep 100 | tr 0.2388 | val 51.2% | best val acc 54.9% (ep 36) | lr 7.5e-03
+[tune schirrmeister] S08 F1 Early stop @ ep 136 (best epoch 36)
+[tune]  schirrmeister S08: mean validation accuracy 54.88%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S09 [2class] profile=schirrmeister X=(520, 22, 1125) class counts={'left_hand': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune schirrmeister] S09 F1 Ep 001 | tr 6.9049 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+[tune schirrmeister] S09 F1 Ep 050 | tr 0.3448 | val 49.1% | best val acc 60.0% (ep 25) | lr 9.4e-03
+[tune schirrmeister] S09 F1 Ep 100 | tr 0.2680 | val 53.6% | best val acc 60.0% (ep 25) | lr 7.5e-03
+[tune schirrmeister] S09 F1 Early stop @ ep 125 (best epoch 25)
+[tune]  schirrmeister S09: mean validation accuracy 60.00%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S10 [2class] profile=schirrmeister X=(520, 22, 1125) class counts={'left_hand': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune schirrmeister] S10 F1 Ep 001 | tr 9.2984 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+[tune schirrmeister] S10 F1 Ep 050 | tr 0.2535 | val 95.5% | best val acc 97.3% (ep 45) | lr 9.4e-03
+[tune schirrmeister] S10 F1 Ep 100 | tr 0.2355 | val 95.5% | best val acc 97.3% (ep 95) | lr 7.5e-03
+[tune schirrmeister] S10 F1 Ep 150 | tr 0.2211 | val 93.6% | best val acc 97.3% (ep 95) | lr 5.1e-03
+[tune schirrmeister] S10 F1 Early stop @ ep 195 (best epoch 95)
+[tune]  schirrmeister S10: mean validation accuracy 97.27%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S11 [2class] profile=schirrmeister X=(520, 22, 1125) class counts={'left_hand': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune schirrmeister] S11 F1 Ep 001 | tr 3.4235 | val 50.9% | best val acc 0.0% (ep 0) | lr 1.0e-02
+[tune schirrmeister] S11 F1 Ep 050 | tr 0.3157 | val 61.8% | best val acc 65.5% (ep 46) | lr 9.4e-03
+[tune schirrmeister] S11 F1 Ep 100 | tr 0.2357 | val 60.0% | best val acc 68.2% (ep 53) | lr 7.5e-03
+[tune schirrmeister] S11 F1 Ep 150 | tr 0.2182 | val 62.7% | best val acc 68.2% (ep 53) | lr 5.1e-03
+[tune schirrmeister] S11 F1 Early stop @ ep 153 (best epoch 53)
+[tune]  schirrmeister S11: mean validation accuracy 68.18%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S12 [2class] profile=schirrmeister X=(520, 22, 1125) class counts={'left_hand': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune schirrmeister] S12 F1 Ep 001 | tr 5.8216 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+[tune schirrmeister] S12 F1 Ep 050 | tr 0.2340 | val 95.5% | best val acc 99.1% (ep 45) | lr 9.4e-03
+[tune schirrmeister] S12 F1 Ep 100 | tr 0.2215 | val 99.1% | best val acc 100.0% (ep 77) | lr 7.5e-03
+[tune schirrmeister] S12 F1 Ep 150 | tr 0.2185 | val 98.2% | best val acc 100.0% (ep 77) | lr 5.1e-03
+[tune schirrmeister] S12 F1 Early stop @ ep 177 (best epoch 77)
+[tune]  schirrmeister S12: mean validation accuracy 100.00%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S13 [2class] profile=schirrmeister X=(480, 22, 1125) class counts={'left_hand': 240, 'right_hand': 240}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune schirrmeister] S13 F1 Ep 001 | tr 7.8274 | val 52.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+[tune schirrmeister] S13 F1 Ep 050 | tr 0.3200 | val 61.0% | best val acc 64.0% (ep 36) | lr 9.4e-03
+[tune schirrmeister] S13 F1 Ep 100 | tr 0.2315 | val 65.0% | best val acc 69.0% (ep 65) | lr 7.5e-03
+[tune schirrmeister] S13 F1 Ep 150 | tr 0.2174 | val 64.0% | best val acc 70.0% (ep 112) | lr 5.1e-03
+[tune schirrmeister] S13 F1 Ep 200 | tr 0.2171 | val 67.0% | best val acc 70.0% (ep 112) | lr 2.5e-03
+[tune schirrmeister] S13 F1 Early stop @ ep 212 (best epoch 112)
+[tune]  schirrmeister S13: mean validation accuracy 70.00%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S14 [2class] profile=schirrmeister X=(520, 22, 1125) class counts={'left_hand': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune schirrmeister] S14 F1 Ep 001 | tr 5.5104 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+[tune schirrmeister] S14 F1 Ep 050 | tr 0.2612 | val 88.2% | best val acc 98.2% (ep 46) | lr 9.4e-03
+[tune schirrmeister] S14 F1 Ep 100 | tr 0.2429 | val 91.8% | best val acc 100.0% (ep 95) | lr 7.5e-03
+[tune schirrmeister] S14 F1 Ep 150 | tr 0.2180 | val 94.5% | best val acc 100.0% (ep 95) | lr 5.1e-03
+[tune schirrmeister] S14 F1 Early stop @ ep 195 (best epoch 95)
+[tune]  schirrmeister S14: mean validation accuracy 100.00%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S01 [2class] profile=cosine100 X=(240, 22, 400) class counts={'left_hand': 120, 'right_hand': 120}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune cosine100] S01 F1 Ep 001 | tr 9.9899 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+[tune cosine100] S01 F1 Ep 050 | tr 0.3468 | val 42.5% | best val acc 62.5% (ep 23) | lr 9.4e-03
+[tune cosine100] S01 F1 Ep 100 | tr 0.2490 | val 45.0% | best val acc 62.5% (ep 23) | lr 7.5e-03
+[tune cosine100] S01 F1 Early stop @ ep 123 (best epoch 23)
+[tune]      cosine100 S01: mean validation accuracy 62.50%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S02 [2class] profile=cosine100 X=(486, 22, 400) class counts={'left_hand': 242, 'right_hand': 244}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune cosine100] S02 F1 Ep 001 | tr 7.7760 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+[tune cosine100] S02 F1 Ep 050 | tr 0.2659 | val 87.3% | best val acc 90.2% (ep 40) | lr 9.4e-03
+[tune cosine100] S02 F1 Ep 100 | tr 0.2310 | val 84.3% | best val acc 90.2% (ep 73) | lr 7.5e-03
+[tune cosine100] S02 F1 Ep 150 | tr 0.2171 | val 90.2% | best val acc 92.2% (ep 135) | lr 5.1e-03
+[tune cosine100] S02 F1 Ep 200 | tr 0.2181 | val 90.2% | best val acc 92.2% (ep 135) | lr 2.5e-03
+[tune cosine100] S02 F1 Early stop @ ep 235 (best epoch 135)
+[tune]      cosine100 S02: mean validation accuracy 92.16%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S03 [2class] profile=cosine100 X=(520, 22, 400) class counts={'left_hand': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune cosine100] S03 F1 Ep 001 | tr 8.3136 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+[tune cosine100] S03 F1 Ep 050 | tr 0.2788 | val 95.5% | best val acc 96.4% (ep 38) | lr 9.4e-03
+[tune cosine100] S03 F1 Ep 100 | tr 0.2467 | val 90.9% | best val acc 96.4% (ep 38) | lr 7.5e-03
+[tune cosine100] S03 F1 Early stop @ ep 138 (best epoch 38)
+[tune]      cosine100 S03: mean validation accuracy 96.36%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S04 [2class] profile=cosine100 X=(528, 22, 400) class counts={'left_hand': 264, 'right_hand': 264}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune cosine100] S04 F1 Ep 001 | tr 2.7201 | val 51.8% | best val acc 0.0% (ep 0) | lr 1.0e-02
+[tune cosine100] S04 F1 Ep 050 | tr 0.2712 | val 94.6% | best val acc 94.6% (ep 48) | lr 9.4e-03
+[tune cosine100] S04 F1 Ep 100 | tr 0.2367 | val 95.5% | best val acc 98.2% (ep 86) | lr 7.5e-03
+[tune cosine100] S04 F1 Ep 150 | tr 0.2165 | val 96.4% | best val acc 99.1% (ep 148) | lr 5.1e-03
+[tune cosine100] S04 F1 Ep 200 | tr 0.2140 | val 97.3% | best val acc 99.1% (ep 148) | lr 2.5e-03
+[tune cosine100] S04 F1 Ep 250 | tr 0.2109 | val 98.2% | best val acc 99.1% (ep 215) | lr 7.0e-04
+[tune cosine100] S04 F1 Ep 300 | tr 0.2112 | val 99.1% | best val acc 99.1% (ep 215) | lr 1.3e-06
+[tune]      cosine100 S04: mean validation accuracy 99.11%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S05 [2class] profile=cosine100 X=(440, 22, 400) class counts={'left_hand': 220, 'right_hand': 220}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune cosine100] S05 F1 Ep 001 | tr 7.1922 | val 48.9% | best val acc 0.0% (ep 0) | lr 1.0e-02
+[tune cosine100] S05 F1 Ep 050 | tr 0.3532 | val 60.0% | best val acc 64.4% (ep 23) | lr 9.4e-03
+[tune cosine100] S05 F1 Ep 100 | tr 0.2416 | val 53.3% | best val acc 64.4% (ep 85) | lr 7.5e-03
+[tune cosine100] S05 F1 Ep 150 | tr 0.2218 | val 60.0% | best val acc 64.4% (ep 136) | lr 5.1e-03
+[tune cosine100] S05 F1 Ep 200 | tr 0.2131 | val 62.2% | best val acc 64.4% (ep 136) | lr 2.5e-03
+[tune cosine100] S05 F1 Ep 250 | tr 0.2148 | val 61.1% | best val acc 66.7% (ep 201) | lr 7.0e-04
+[tune cosine100] S05 F1 Ep 300 | tr 0.2172 | val 61.1% | best val acc 66.7% (ep 201) | lr 1.3e-06
+[tune]      cosine100 S05: mean validation accuracy 66.67%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S06 [2class] profile=cosine100 X=(520, 22, 400) class counts={'left_hand': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune cosine100] S06 F1 Ep 001 | tr 9.0068 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+[tune cosine100] S06 F1 Ep 050 | tr 0.4294 | val 49.1% | best val acc 56.4% (ep 39) | lr 9.4e-03
+[tune cosine100] S06 F1 Ep 100 | tr 0.2752 | val 47.3% | best val acc 56.4% (ep 39) | lr 7.5e-03
+[tune cosine100] S06 F1 Early stop @ ep 139 (best epoch 39)
+[tune]      cosine100 S06: mean validation accuracy 56.36%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S07 [2class] profile=cosine100 X=(520, 22, 400) class counts={'left_hand': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune cosine100] S07 F1 Ep 001 | tr 9.1181 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+[tune cosine100] S07 F1 Ep 050 | tr 0.2762 | val 49.1% | best val acc 55.5% (ep 45) | lr 9.4e-03
+[tune cosine100] S07 F1 Ep 100 | tr 0.2244 | val 50.0% | best val acc 55.5% (ep 45) | lr 7.5e-03
+[tune cosine100] S07 F1 Early stop @ ep 145 (best epoch 45)
+[tune]      cosine100 S07: mean validation accuracy 55.45%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S08 [2class] profile=cosine100 X=(408, 22, 400) class counts={'left_hand': 204, 'right_hand': 204}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune cosine100] S08 F1 Ep 001 | tr 6.0261 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+[tune cosine100] S08 F1 Ep 050 | tr 0.2725 | val 45.1% | best val acc 58.5% (ep 32) | lr 9.4e-03
+[tune cosine100] S08 F1 Ep 100 | tr 0.2281 | val 45.1% | best val acc 58.5% (ep 32) | lr 7.5e-03
+[tune cosine100] S08 F1 Early stop @ ep 132 (best epoch 32)
+[tune]      cosine100 S08: mean validation accuracy 58.54%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S09 [2class] profile=cosine100 X=(520, 22, 400) class counts={'left_hand': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune cosine100] S09 F1 Ep 001 | tr 8.9072 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+[tune cosine100] S09 F1 Ep 050 | tr 0.2843 | val 53.6% | best val acc 58.2% (ep 49) | lr 9.4e-03
+[tune cosine100] S09 F1 Ep 100 | tr 0.2263 | val 49.1% | best val acc 58.2% (ep 81) | lr 7.5e-03
+[tune cosine100] S09 F1 Ep 150 | tr 0.2179 | val 52.7% | best val acc 58.2% (ep 81) | lr 5.1e-03
+[tune cosine100] S09 F1 Early stop @ ep 181 (best epoch 81)
+[tune]      cosine100 S09: mean validation accuracy 58.18%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S10 [2class] profile=cosine100 X=(520, 22, 400) class counts={'left_hand': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune cosine100] S10 F1 Ep 001 | tr 10.0712 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+[tune cosine100] S10 F1 Ep 050 | tr 0.2465 | val 92.7% | best val acc 96.4% (ep 39) | lr 9.4e-03
+[tune cosine100] S10 F1 Ep 100 | tr 0.2329 | val 92.7% | best val acc 96.4% (ep 94) | lr 7.5e-03
+[tune cosine100] S10 F1 Ep 150 | tr 0.2157 | val 90.9% | best val acc 96.4% (ep 125) | lr 5.1e-03
+[tune cosine100] S10 F1 Ep 200 | tr 0.2226 | val 93.6% | best val acc 96.4% (ep 125) | lr 2.5e-03
+[tune cosine100] S10 F1 Ep 250 | tr 0.2111 | val 93.6% | best val acc 96.4% (ep 205) | lr 7.0e-04
+[tune cosine100] S10 F1 Ep 300 | tr 0.2184 | val 91.8% | best val acc 96.4% (ep 205) | lr 1.3e-06
+[tune]      cosine100 S10: mean validation accuracy 96.36%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S11 [2class] profile=cosine100 X=(520, 22, 400) class counts={'left_hand': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune cosine100] S11 F1 Ep 001 | tr 4.9933 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+[tune cosine100] S11 F1 Ep 050 | tr 0.2960 | val 54.5% | best val acc 60.9% (ep 30) | lr 9.4e-03
+[tune cosine100] S11 F1 Ep 100 | tr 0.2416 | val 56.4% | best val acc 64.5% (ep 66) | lr 7.5e-03
+[tune cosine100] S11 F1 Ep 150 | tr 0.2166 | val 56.4% | best val acc 64.5% (ep 66) | lr 5.1e-03
+[tune cosine100] S11 F1 Early stop @ ep 166 (best epoch 66)
+[tune]      cosine100 S11: mean validation accuracy 64.55%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S12 [2class] profile=cosine100 X=(520, 22, 400) class counts={'left_hand': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune cosine100] S12 F1 Ep 001 | tr 7.0559 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+[tune cosine100] S12 F1 Ep 050 | tr 0.2284 | val 98.2% | best val acc 98.2% (ep 50) | lr 9.4e-03
+[tune cosine100] S12 F1 Ep 100 | tr 0.2229 | val 99.1% | best val acc 100.0% (ep 99) | lr 7.5e-03
+[tune cosine100] S12 F1 Ep 150 | tr 0.2229 | val 99.1% | best val acc 100.0% (ep 99) | lr 5.1e-03
+[tune cosine100] S12 F1 Ep 200 | tr 0.2103 | val 100.0% | best val acc 100.0% (ep 185) | lr 2.5e-03
+[tune cosine100] S12 F1 Ep 250 | tr 0.2081 | val 100.0% | best val acc 100.0% (ep 209) | lr 7.0e-04
+[tune cosine100] S12 F1 Ep 300 | tr 0.2200 | val 100.0% | best val acc 100.0% (ep 209) | lr 1.3e-06
+[tune]      cosine100 S12: mean validation accuracy 100.00%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S13 [2class] profile=cosine100 X=(480, 22, 400) class counts={'left_hand': 240, 'right_hand': 240}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune cosine100] S13 F1 Ep 001 | tr 9.1289 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+[tune cosine100] S13 F1 Ep 050 | tr 0.3099 | val 52.0% | best val acc 55.0% (ep 22) | lr 9.4e-03
+[tune cosine100] S13 F1 Ep 100 | tr 0.2325 | val 51.0% | best val acc 57.0% (ep 90) | lr 7.5e-03
+[tune cosine100] S13 F1 Ep 150 | tr 0.2223 | val 52.0% | best val acc 57.0% (ep 128) | lr 5.1e-03
+[tune cosine100] S13 F1 Ep 200 | tr 0.2183 | val 53.0% | best val acc 59.0% (ep 192) | lr 2.5e-03
+[tune cosine100] S13 F1 Ep 250 | tr 0.2163 | val 52.0% | best val acc 59.0% (ep 192) | lr 7.0e-04
+[tune cosine100] S13 F1 Early stop @ ep 292 (best epoch 192)
+[tune]      cosine100 S13: mean validation accuracy 59.00%
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S14 [2class] profile=cosine100 X=(520, 22, 400) class counts={'left_hand': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+[tune cosine100] S14 F1 Ep 001 | tr 7.6142 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+[tune cosine100] S14 F1 Ep 050 | tr 0.2921 | val 83.6% | best val acc 88.2% (ep 45) | lr 9.4e-03
+[tune cosine100] S14 F1 Ep 100 | tr 0.2350 | val 85.5% | best val acc 88.2% (ep 45) | lr 7.5e-03
+[tune cosine100] S14 F1 Ep 150 | tr 0.2191 | val 85.5% | best val acc 88.2% (ep 121) | lr 5.1e-03
+[tune cosine100] S14 F1 Ep 200 | tr 0.2236 | val 90.0% | best val acc 90.9% (ep 162) | lr 2.5e-03
+[tune cosine100] S14 F1 Ep 250 | tr 0.2154 | val 87.3% | best val acc 90.9% (ep 162) | lr 7.0e-04
+[tune cosine100] S14 F1 Early stop @ ep 262 (best epoch 162)
+[tune]      cosine100 S14: mean validation accuracy 90.91%
+
+================================================================================
+PROFILE SELECTION - 2class (validation accuracy only)
+================================================================================
+        original: 70.98%
+   schirrmeister: 78.92%
+       cosine100: 75.44%
+chosen per subject (LOSO): {'1': 'schirrmeister', '2': 'schirrmeister', '3': 'schirrmeister', '4': 'schirrmeister', '5': 'schirrmeister', '6': 'schirrmeister', '7': 'schirrmeister', '8': 'schirrmeister', '9': 'schirrmeister', '10': 'schirrmeister', '11': 'schirrmeister', '12': 'schirrmeister', '13': 'schirrmeister', '14': 'schirrmeister'}
+unanimous: True | written to D:\EEG\NeuroGrounded-EEG\Deep4net\HGD\2class\results_session\selected_profile.json

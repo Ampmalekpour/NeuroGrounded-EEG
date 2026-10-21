@@ -1,0 +1,34 @@
+Deep4Net - HGD - FULL 22-CHANNEL BASELINE - 2class
+================================================================================
+
+Subject 01: 46.25%
+    seed -1 fold 1: 46.25% (majority-class 50.0%)
+Subject 02: 81.25%
+    seed -1 fold 1: 81.25% (majority-class 50.0%)
+Subject 03: 98.75%
+    seed -1 fold 1: 98.75% (majority-class 50.0%)
+Subject 04: 97.50%
+    seed -1 fold 1: 97.50% (majority-class 50.0%)
+Subject 05: 56.25%
+    seed -1 fold 1: 56.25% (majority-class 50.0%)
+Subject 06: 78.75%
+    seed -1 fold 1: 78.75% (majority-class 50.0%)
+Subject 07: 61.25%
+    seed -1 fold 1: 61.25% (majority-class 50.0%)
+Subject 08: 63.75%
+    seed -1 fold 1: 63.75% (majority-class 50.0%)
+Subject 09: 46.25%
+    seed -1 fold 1: 46.25% (majority-class 50.0%)
+Subject 10: 100.00%
+    seed -1 fold 1: 100.00% (majority-class 50.0%)
+Subject 11: 56.25%
+    seed -1 fold 1: 56.25% (majority-class 50.0%)
+Subject 12: 98.75%
+    seed -1 fold 1: 98.75% (majority-class 50.0%)
+Subject 13: 77.50%
+    seed -1 fold 1: 77.50% (majority-class 50.0%)
+Subject 14: 96.25%
+    seed -1 fold 1: 96.25% (majority-class 50.0%)
+
+GRAND MEAN: 75.63% +/- 20.45% (SD across subjects)
+chance 50.0% | mean majority-class 50.0%

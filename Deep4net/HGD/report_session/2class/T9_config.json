@@ -1,0 +1,401 @@
+{
+ "model": "Deep4Net",
+ "class_mode": "2class",
+ "dataset": "Schirrmeister2017",
+ "note_dataset": "High-Gamma Dataset (Schirrmeister2017): EXECUTED movements, 14 subjects, official training runs (~880 trials) and test runs (~160 trials).",
+ "sfreq_hz": "per profile (profiles[*].sfreq)",
+ "ems_params": {
+  "factor_new": 0.001,
+  "init_block_size": 1000,
+  "used_when": "profile norm == 'ems'"
+ },
+ "split_key": "run",
+ "duplicated_recordings_dropped": {},
+ "holdout_when_no_genuine_test_run": {
+  "trials_4class": 160,
+  "max_fraction": 0.2
+ },
+ "event_duration_s": 4.0,
+ "profiles": {
+  "original": {
+   "sfreq": 100,
+   "band_hz": [
+    4.0,
+    38.0
+   ],
+   "window_s": [
+    0.0,
+    4.0
+   ],
+   "norm": "ems",
+   "car": false,
+   "lr": 0.0005,
+   "weight_decay": 0.0001,
+   "scheduler": "plateau",
+   "plateau_factor": 0.5,
+   "plateau_patience": 30,
+   "max_epochs": 600,
+   "patience": 150,
+   "batch_size": 96,
+   "label_smoothing": 0.1,
+   "grad_clip": 10.0,
+   "dropout": 0.3,
+   "augment": false,
+   "select_on": "val_acc",
+   "min_select_epoch": 20
+  },
+  "schirrmeister": {
+   "sfreq": 250,
+   "band_hz": [
+    4.0,
+    38.0
+   ],
+   "window_s": [
+    -0.5,
+    4.0
+   ],
+   "norm": "ems",
+   "car": false,
+   "lr": 0.01,
+   "weight_decay": 0.0005,
+   "scheduler": "cosine",
+   "plateau_factor": 0.5,
+   "plateau_patience": 30,
+   "max_epochs": 300,
+   "patience": 100,
+   "batch_size": 64,
+   "label_smoothing": 0.1,
+   "grad_clip": 10.0,
+   "dropout": 0.5,
+   "augment": false,
+   "select_on": "val_acc",
+   "min_select_epoch": 20
+  },
+  "cosine100": {
+   "sfreq": 100,
+   "band_hz": [
+    4.0,
+    38.0
+   ],
+   "window_s": [
+    0.0,
+    4.0
+   ],
+   "norm": "ems",
+   "car": false,
+   "lr": 0.01,
+   "weight_decay": 0.0005,
+   "scheduler": "cosine",
+   "plateau_factor": 0.5,
+   "plateau_patience": 30,
+   "max_epochs": 300,
+   "patience": 100,
+   "batch_size": 64,
+   "label_smoothing": 0.1,
+   "grad_clip": 10.0,
+   "dropout": 0.5,
+   "augment": false,
+   "select_on": "val_acc",
+   "min_select_epoch": 20
+  },
+  "wide250": {
+   "sfreq": 250,
+   "band_hz": [
+    4.0,
+    100.0
+   ],
+   "window_s": [
+    -0.5,
+    4.0
+   ],
+   "norm": "ems",
+   "car": false,
+   "lr": 0.01,
+   "weight_decay": 0.0005,
+   "scheduler": "cosine",
+   "plateau_factor": 0.5,
+   "plateau_patience": 30,
+   "max_epochs": 300,
+   "patience": 100,
+   "batch_size": 64,
+   "label_smoothing": 0.1,
+   "grad_clip": 10.0,
+   "dropout": 0.5,
+   "augment": false,
+   "select_on": "val_acc",
+   "min_select_epoch": 20
+  },
+  "wide250_lowlr": {
+   "sfreq": 250,
+   "band_hz": [
+    4.0,
+    100.0
+   ],
+   "window_s": [
+    -0.5,
+    4.0
+   ],
+   "norm": "ems",
+   "car": false,
+   "lr": 0.001,
+   "weight_decay": 0.0001,
+   "scheduler": "cosine",
+   "plateau_factor": 0.5,
+   "plateau_patience": 30,
+   "max_epochs": 300,
+   "patience": 100,
+   "batch_size": 64,
+   "label_smoothing": 0.1,
+   "grad_clip": 10.0,
+   "dropout": 0.5,
+   "augment": false,
+   "select_on": "val_acc",
+   "min_select_epoch": 20
+  }
+ },
+ "augmentation": {
+  "mixup_alpha": 0.2,
+  "scale": [
+   0.8,
+   1.2
+  ],
+  "noise_rel_std": 0.05,
+  "channel_drop_p": 0.1,
+  "sr_segments": 8
+ },
+ "profile_default": "original",
+ "band": "narrow",
+ "tune_candidates": [
+  "original",
+  "schirrmeister",
+  "cosine100"
+ ],
+ "profile_selection": {
+  "class_mode": "2class",
+  "rule": "leave-one-subject-out mean validation accuracy",
+  "per_subject": {
+   "1": "schirrmeister",
+   "2": "schirrmeister",
+   "3": "schirrmeister",
+   "4": "schirrmeister",
+   "5": "schirrmeister",
+   "6": "schirrmeister",
+   "7": "schirrmeister",
+   "8": "schirrmeister",
+   "9": "schirrmeister",
+   "10": "schirrmeister",
+   "11": "schirrmeister",
+   "12": "schirrmeister",
+   "13": "schirrmeister",
+   "14": "schirrmeister"
+  },
+  "overall": "schirrmeister",
+  "unanimous": true,
+  "validation_accuracy": {
+   "original": {
+    "1": 0.475,
+    "2": 0.8137254901960784,
+    "3": 0.9454545454545454,
+    "4": 0.875,
+    "5": 0.6,
+    "6": 0.6,
+    "7": 0.509090909090909,
+    "8": 0.5975609756097561,
+    "9": 0.6090909090909091,
+    "10": 0.9090909090909091,
+    "11": 0.5818181818181818,
+    "12": 0.9727272727272728,
+    "13": 0.63,
+    "14": 0.8181818181818182
+   },
+   "schirrmeister": {
+    "1": 0.6,
+    "2": 0.9117647058823529,
+    "3": 0.9727272727272728,
+    "4": 0.9910714285714286,
+    "5": 0.6333333333333333,
+    "6": 0.8272727272727273,
+    "7": 0.6090909090909091,
+    "8": 0.5487804878048781,
+    "9": 0.6,
+    "10": 0.9727272727272728,
+    "11": 0.6818181818181818,
+    "12": 1.0,
+    "13": 0.7,
+    "14": 1.0
+   },
+   "cosine100": {
+    "1": 0.625,
+    "2": 0.9215686274509803,
+    "3": 0.9636363636363636,
+    "4": 0.9910714285714286,
+    "5": 0.6666666666666666,
+    "6": 0.5636363636363636,
+    "7": 0.5545454545454546,
+    "8": 0.5853658536585366,
+    "9": 0.5818181818181818,
+    "10": 0.9636363636363636,
+    "11": 0.6454545454545455,
+    "12": 1.0,
+    "13": 0.59,
+    "14": 0.9090909090909091
+   }
+  },
+  "mean_validation_accuracy": {
+   "original": 0.7097672150900273,
+   "schirrmeister": 0.7891847370877397,
+   "cosine100": 0.7543921970118425
+  },
+  "seed": 42,
+  "candidates": [
+   "original",
+   "schirrmeister",
+   "cosine100"
+  ]
+ },
+ "env_overrides": {
+  "EEG_PROFILE": null,
+  "EEG_MAX_EPOCHS": null,
+  "EEG_PATIENCE": null
+ },
+ "model_fixed": "braindecode Deep4Net defaults, final_conv_length=auto; time pooling 3 (2 for the 400-sample windows), drop_prob from the profile",
+ "optimizer": "AdamW (betas per profile)",
+ "scheduler": "per profile: plateau = ReduceLROnPlateau on VALIDATION loss; cosine; none. Refit replays the plateau learning rates of the first fit",
+ "checkpoint_rule": "lowest validation loss, early stopping with patience; refit keeps final weights",
+ "folds": "train on the official HGD training runs (last 25% = validation, chronological), refit on all training runs, test once on the official test runs",
+ "protocol": {
+  "name": "session",
+  "val_fraction": 0.25,
+  "refit": true,
+  "min_refit_epochs": 20,
+  "fixed_epochs": false,
+  "seed_ensemble": true
+ },
+ "attribution": {
+  "methods": [
+   "grad",
+   "grad_x_input",
+   "integrated_gradients",
+   "smoothgrad"
+  ],
+  "ig_steps": 32,
+  "smoothgrad_samples": 12,
+  "smoothgrad_noise_std": 0.1,
+  "target": "pre-softmax logit of the true class",
+  "computed_on": "validation block of each fold"
+ },
+ "faithfulness": {
+  "k": [
+   2,
+   4,
+   6
+  ],
+  "random_draws": 10,
+  "removal": "channel set to 0 (its standardised mean) on the TEST block; evaluation only, never used for any choice",
+  "ranking": "mean of the four attribution maps from the VALIDATION block"
+ },
+ "randomisation_check": "Spearman between trained-model and untrained-model saliency",
+ "erd": {
+  "baseline_s": [
+   -0.5,
+   0.0
+  ],
+  "active_s": [
+   1.0,
+   3.0
+  ],
+  "sfreq_hz": 128,
+  "band_hz": [
+   8.0,
+   30.0
+  ],
+  "standardisation": "none"
+ },
+ "physiology_exploratory": {
+  "sfreq_hz": 250,
+  "bands_hz": {
+   "theta": [
+    4.0,
+    8.0
+   ],
+   "mu": [
+    8.0,
+    13.0
+   ],
+   "beta": [
+    13.0,
+    30.0
+   ],
+   "lowgamma": [
+    30.0,
+    40.0
+   ],
+   "highgamma": [
+    60.0,
+    90.0
+   ]
+  },
+  "epoch_s": [
+   -1.0,
+   5.0
+  ],
+  "used_for_decisions": false
+ },
+ "full_channels": [
+  "FC5",
+  "FC3",
+  "FC1",
+  "FCz",
+  "FC2",
+  "FC4",
+  "FC6",
+  "C5",
+  "C3",
+  "C1",
+  "Cz",
+  "C2",
+  "C4",
+  "C6",
+  "CP5",
+  "CP3",
+  "CP1",
+  "CPz",
+  "CP2",
+  "CP4",
+  "CP6",
+  "Pz"
+ ],
+ "reduced_n_channels": 12,
+ "seeds": [
+  42,
+  43,
+  44
+ ],
+ "subject_ids": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14
+ ],
+ "label_names": [
+  "feet",
+  "left_hand",
+  "rest",
+  "right_hand"
+ ],
+ "versions": {
+  "torch": "2.0.1+cu118",
+  "mne": "1.9.0",
+  "numpy": "1.26.4"
+ }
+}

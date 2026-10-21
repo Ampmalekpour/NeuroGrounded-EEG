@@ -1,0 +1,630 @@
+$ D:\EEG\braindec\.venv\Scripts\python.exe -u D:\EEG\NeuroGrounded-EEG\Deep4net\HGD\4class\deep4net_hgd_4class_relieff.py   [EEG_PROTOCOL=session]
+Using device: cuda | class mode: 4class | seeds: [42, 43, 44] | subjects: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14] | synthetic: False | protocol: session
+
+================================================================================
+PHASE 1: PER-SUBJECT RELIEFF SCORES (22 ch) - 4class
+================================================================================
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S01 [4class] profile=schirrmeister X=(480, 22, 1125) class counts={'feet': 120, 'left_hand': 120, 'rest': 120, 'right_hand': 120}
+  S01 ReliefF top-12: C4 (1.000), C1 (0.894), C2 (0.852), CP3 (0.684), CP4 (0.498), C3 (0.493), CP1 (0.419), CP2 (0.341), Pz (0.276), CPz (0.274), Cz (0.261), C6 (0.231)
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S02 [4class] profile=schirrmeister X=(973, 22, 1125) class counts={'feet': 244, 'left_hand': 242, 'rest': 243, 'right_hand': 244}
+  S02 ReliefF top-12: CP1 (1.000), CP3 (0.772), C4 (0.771), C1 (0.627), FCz (0.540), C6 (0.537), CP2 (0.536), FC1 (0.534), CPz (0.498), C3 (0.494), C2 (0.492), FC5 (0.480)
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S03 [4class] profile=schirrmeister X=(1040, 22, 1125) class counts={'feet': 260, 'left_hand': 260, 'rest': 260, 'right_hand': 260}
+  S03 ReliefF top-12: C4 (1.000), CP4 (0.919), CP3 (0.875), C1 (0.861), CP2 (0.797), C2 (0.662), CPz (0.581), CP1 (0.570), C3 (0.476), FC5 (0.462), C6 (0.418), CP5 (0.409)
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S04 [4class] profile=schirrmeister X=(1057, 22, 1125) class counts={'feet': 265, 'left_hand': 264, 'rest': 264, 'right_hand': 264}
+  S04 ReliefF top-12: C3 (1.000), C2 (0.940), C4 (0.821), CP2 (0.495), CP3 (0.444), Pz (0.414), C1 (0.395), CP1 (0.347), CP4 (0.304), FC6 (0.289), FCz (0.271), FC4 (0.257)
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S05 [4class] profile=schirrmeister X=(880, 22, 1125) class counts={'feet': 220, 'left_hand': 220, 'rest': 220, 'right_hand': 220}
+  S05 ReliefF top-12: C1 (1.000), C3 (0.976), C2 (0.878), C4 (0.741), CP2 (0.352), CP3 (0.337), Pz (0.300), CP1 (0.245), FCz (0.221), CPz (0.217), C5 (0.212), FC3 (0.210)
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S06 [4class] profile=schirrmeister X=(1040, 22, 1125) class counts={'feet': 260, 'left_hand': 260, 'rest': 260, 'right_hand': 260}
+  S06 ReliefF top-12: Pz (1.000), C4 (0.968), C1 (0.828), C3 (0.800), C2 (0.761), CP4 (0.637), CP3 (0.528), C5 (0.477), CP5 (0.441), FCz (0.392), FC5 (0.389), FC2 (0.372)
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S07 [4class] profile=schirrmeister X=(1040, 22, 1125) class counts={'feet': 260, 'left_hand': 260, 'rest': 260, 'right_hand': 260}
+  S07 ReliefF top-12: C2 (1.000), C1 (0.999), C3 (0.618), CP3 (0.579), CP2 (0.529), CPz (0.527), CP1 (0.479), CP5 (0.374), C5 (0.355), FC1 (0.349), C4 (0.318), FCz (0.286)
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S08 [4class] profile=schirrmeister X=(814, 22, 1125) class counts={'feet': 203, 'left_hand': 204, 'rest': 203, 'right_hand': 204}
+  S08 ReliefF top-12: C1 (1.000), C4 (0.890), C2 (0.762), CP1 (0.742), CP2 (0.707), C3 (0.604), CP3 (0.532), CPz (0.521), FC1 (0.465), FC4 (0.386), FCz (0.384), FC2 (0.360)
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S09 [4class] profile=schirrmeister X=(1040, 22, 1125) class counts={'feet': 260, 'left_hand': 260, 'rest': 260, 'right_hand': 260}
+  S09 ReliefF top-12: C2 (1.000), C1 (0.566), CP5 (0.339), CP3 (0.306), C5 (0.255), Pz (0.244), C4 (0.212), CP2 (0.203), CP4 (0.196), FCz (0.196), CP1 (0.188), FC1 (0.171)
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S10 [4class] profile=schirrmeister X=(1040, 22, 1125) class counts={'feet': 260, 'left_hand': 260, 'rest': 260, 'right_hand': 260}
+  S10 ReliefF top-12: C3 (1.000), CP4 (0.998), C2 (0.940), CP2 (0.903), C1 (0.817), CP6 (0.726), C6 (0.671), C4 (0.584), CP3 (0.582), CP1 (0.563), CPz (0.536), CP5 (0.528)
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S11 [4class] profile=schirrmeister X=(1040, 22, 1125) class counts={'feet': 260, 'left_hand': 260, 'rest': 260, 'right_hand': 260}
+  S11 ReliefF top-12: CP1 (1.000), C1 (0.987), CP3 (0.974), C4 (0.918), C2 (0.844), CP4 (0.830), CP2 (0.816), C3 (0.729), Cz (0.567), CP5 (0.560), CPz (0.516), Pz (0.465)
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S12 [4class] profile=schirrmeister X=(1040, 22, 1125) class counts={'feet': 260, 'left_hand': 260, 'rest': 260, 'right_hand': 260}
+  S12 ReliefF top-12: C1 (1.000), CP1 (0.955), C2 (0.901), CP3 (0.876), C4 (0.600), CP4 (0.478), C3 (0.463), Pz (0.376), Cz (0.350), CP2 (0.285), FCz (0.280), CP6 (0.251)
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S13 [4class] profile=schirrmeister X=(960, 22, 1125) class counts={'feet': 240, 'left_hand': 240, 'rest': 240, 'right_hand': 240}
+  S13 ReliefF top-12: C1 (1.000), CP3 (0.612), CP1 (0.600), C3 (0.568), C2 (0.522), FCz (0.507), FC1 (0.493), CP5 (0.468), FC3 (0.447), C4 (0.418), CP4 (0.391), FC2 (0.389)
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S14 [4class] profile=schirrmeister X=(1040, 22, 1125) class counts={'feet': 260, 'left_hand': 260, 'rest': 260, 'right_hand': 260}
+  S14 ReliefF top-12: C2 (1.000), C1 (0.978), C4 (0.782), C3 (0.547), CP1 (0.468), CP3 (0.431), Pz (0.426), FC3 (0.406), FC1 (0.384), CP5 (0.341), FC5 (0.311), CP2 (0.303)
+
+================================================================================
+SUBJECT 01 — relieff_reduced — 4class — session — profile schirrmeister — 12 ch: C1, C2, C4, C3, CP3, CP1, CP2, CP4, Pz, CPz, CP5, FC1
+================================================================================
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S01 [4class] profile=schirrmeister X=(480, 12, 1125) class counts={'feet': 120, 'left_hand': 120, 'rest': 120, 'right_hand': 120}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S01 seed42 F1 [fit] Ep 001 | tr 10.5808 | val 27.5% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S01 seed42 F1 [fit] Ep 050 | tr 0.4898 | val 73.8% | best val acc 73.8% (ep 48) | lr 9.4e-03
+S01 seed42 F1 [fit] Ep 100 | tr 0.4219 | val 70.0% | best val acc 78.8% (ep 95) | lr 7.5e-03
+S01 seed42 F1 [fit] Ep 150 | tr 0.3865 | val 75.0% | best val acc 78.8% (ep 95) | lr 5.1e-03
+S01 seed42 F1 [fit] Ep 200 | tr 0.3730 | val 72.5% | best val acc 78.8% (ep 169) | lr 2.5e-03
+S01 seed42 F1 [fit] Ep 250 | tr 0.3715 | val 77.5% | best val acc 78.8% (ep 240) | lr 7.0e-04
+S01 seed42 F1 [fit] Ep 300 | tr 0.3703 | val 76.2% | best val acc 78.8% (ep 240) | lr 1.3e-06
+S01 seed42 F1 [refit] Ep 001/240 | tr 8.2669 (refit, no early stopping)
+S01 seed42 F1 [refit] Ep 050/240 | tr 0.5352 (refit, no early stopping)
+S01 seed42 F1 [refit] Ep 100/240 | tr 0.4029 (refit, no early stopping)
+S01 seed42 F1 [refit] Ep 150/240 | tr 0.3805 (refit, no early stopping)
+S01 seed42 F1 [refit] Ep 200/240 | tr 0.3763 (refit, no early stopping)
+S01 seed42 F1: test 66.25% (val 78.75%, epochs 240)
+S01 seed43 F1 [fit] Ep 001 | tr 6.8269 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S01 seed43 F1 [fit] Ep 050 | tr 0.4793 | val 65.0% | best val acc 65.0% (ep 50) | lr 9.4e-03
+S01 seed43 F1 [fit] Ep 100 | tr 0.3886 | val 67.5% | best val acc 68.8% (ep 78) | lr 7.5e-03
+S01 seed43 F1 [fit] Ep 150 | tr 0.3725 | val 62.5% | best val acc 70.0% (ep 128) | lr 5.1e-03
+S01 seed43 F1 [fit] Ep 200 | tr 0.3676 | val 70.0% | best val acc 70.0% (ep 199) | lr 2.5e-03
+S01 seed43 F1 [fit] Ep 250 | tr 0.3662 | val 66.2% | best val acc 71.2% (ep 229) | lr 7.0e-04
+S01 seed43 F1 [fit] Ep 300 | tr 0.3685 | val 65.0% | best val acc 71.2% (ep 229) | lr 1.3e-06
+S01 seed43 F1 [refit] Ep 001/229 | tr 7.3607 (refit, no early stopping)
+S01 seed43 F1 [refit] Ep 050/229 | tr 0.4769 (refit, no early stopping)
+S01 seed43 F1 [refit] Ep 100/229 | tr 0.3968 (refit, no early stopping)
+S01 seed43 F1 [refit] Ep 150/229 | tr 0.3766 (refit, no early stopping)
+S01 seed43 F1 [refit] Ep 200/229 | tr 0.3746 (refit, no early stopping)
+S01 seed43 F1: test 65.00% (val 71.25%, epochs 229)
+S01 seed44 F1 [fit] Ep 001 | tr 7.4584 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S01 seed44 F1 [fit] Ep 050 | tr 0.5319 | val 61.3% | best val acc 70.0% (ep 49) | lr 9.4e-03
+S01 seed44 F1 [fit] Ep 100 | tr 0.3977 | val 63.7% | best val acc 72.5% (ep 88) | lr 7.5e-03
+S01 seed44 F1 [fit] Ep 150 | tr 0.3837 | val 68.8% | best val acc 76.2% (ep 145) | lr 5.1e-03
+S01 seed44 F1 [fit] Ep 200 | tr 0.3738 | val 73.8% | best val acc 76.2% (ep 145) | lr 2.5e-03
+S01 seed44 F1 [fit] Early stop @ ep 245 (best epoch 145)
+S01 seed44 F1 [refit] Ep 001/145 | tr 7.1165 (refit, no early stopping)
+S01 seed44 F1 [refit] Ep 050/145 | tr 0.4995 (refit, no early stopping)
+S01 seed44 F1 [refit] Ep 100/145 | tr 0.4018 (refit, no early stopping)
+S01 seed44 F1: test 69.38% (val 76.25%, epochs 145)
+S01 seed ensemble (3 seeds): test 68.75% (single seeds 66.2, 65.0, 69.4)
+
+================================================================================
+SUBJECT 02 — relieff_reduced — 4class — session — profile schirrmeister — 12 ch: C1, C2, C4, C3, CP3, CP1, CP2, CP4, Pz, CPz, CP5, FC1
+================================================================================
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S02 [4class] profile=schirrmeister X=(973, 12, 1125) class counts={'feet': 244, 'left_hand': 242, 'rest': 243, 'right_hand': 244}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S02 seed42 F1 [fit] Ep 001 | tr 4.5029 | val 30.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S02 seed42 F1 [fit] Ep 050 | tr 0.4582 | val 69.5% | best val acc 71.4% (ep 49) | lr 9.4e-03
+S02 seed42 F1 [fit] Ep 100 | tr 0.4009 | val 70.4% | best val acc 71.4% (ep 52) | lr 7.5e-03
+S02 seed42 F1 [fit] Ep 150 | tr 0.3865 | val 64.0% | best val acc 71.4% (ep 52) | lr 5.1e-03
+S02 seed42 F1 [fit] Early stop @ ep 152 (best epoch 52)
+S02 seed42 F1 [refit] Ep 001/52 | tr 4.4798 (refit, no early stopping)
+S02 seed42 F1 [refit] Ep 050/52 | tr 0.5466 (refit, no early stopping)
+S02 seed42 F1: test 81.25% (val 71.43%, epochs 52)
+S02 seed43 F1 [fit] Ep 001 | tr 5.0688 | val 26.6% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S02 seed43 F1 [fit] Ep 050 | tr 0.4822 | val 67.5% | best val acc 75.9% (ep 37) | lr 9.4e-03
+S02 seed43 F1 [fit] Ep 100 | tr 0.3971 | val 72.4% | best val acc 76.4% (ep 63) | lr 7.5e-03
+S02 seed43 F1 [fit] Ep 150 | tr 0.3843 | val 69.5% | best val acc 76.4% (ep 63) | lr 5.1e-03
+S02 seed43 F1 [fit] Early stop @ ep 163 (best epoch 63)
+S02 seed43 F1 [refit] Ep 001/63 | tr 3.5528 (refit, no early stopping)
+S02 seed43 F1 [refit] Ep 050/63 | tr 0.4555 (refit, no early stopping)
+S02 seed43 F1: test 82.50% (val 76.35%, epochs 63)
+S02 seed44 F1 [fit] Ep 001 | tr 4.9355 | val 24.6% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S02 seed44 F1 [fit] Ep 050 | tr 0.4559 | val 70.0% | best val acc 71.4% (ep 21) | lr 9.4e-03
+S02 seed44 F1 [fit] Ep 100 | tr 0.3973 | val 70.0% | best val acc 74.9% (ep 57) | lr 7.5e-03
+S02 seed44 F1 [fit] Ep 150 | tr 0.3828 | val 69.0% | best val acc 74.9% (ep 57) | lr 5.1e-03
+S02 seed44 F1 [fit] Early stop @ ep 157 (best epoch 57)
+S02 seed44 F1 [refit] Ep 001/57 | tr 4.1348 (refit, no early stopping)
+S02 seed44 F1 [refit] Ep 050/57 | tr 0.4858 (refit, no early stopping)
+S02 seed44 F1: test 83.75% (val 74.88%, epochs 57)
+S02 seed ensemble (3 seeds): test 82.50% (single seeds 81.2, 82.5, 83.8)
+
+================================================================================
+SUBJECT 03 — relieff_reduced — 4class — session — profile schirrmeister — 12 ch: C1, C2, C4, C3, CP3, CP1, CP2, Pz, CP4, CPz, CP5, FC1
+================================================================================
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S03 [4class] profile=schirrmeister X=(1040, 12, 1125) class counts={'feet': 260, 'left_hand': 260, 'rest': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S03 seed42 F1 [fit] Ep 001 | tr 6.3044 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S03 seed42 F1 [fit] Ep 050 | tr 0.4460 | val 90.9% | best val acc 92.7% (ep 45) | lr 9.4e-03
+S03 seed42 F1 [fit] Ep 100 | tr 0.3898 | val 92.3% | best val acc 94.1% (ep 87) | lr 7.5e-03
+S03 seed42 F1 [fit] Ep 150 | tr 0.3766 | val 93.6% | best val acc 94.1% (ep 115) | lr 5.1e-03
+S03 seed42 F1 [fit] Ep 200 | tr 0.3750 | val 93.2% | best val acc 94.5% (ep 162) | lr 2.5e-03
+S03 seed42 F1 [fit] Ep 250 | tr 0.3721 | val 93.6% | best val acc 94.5% (ep 162) | lr 7.0e-04
+S03 seed42 F1 [fit] Early stop @ ep 262 (best epoch 162)
+S03 seed42 F1 [refit] Ep 001/162 | tr 4.3511 (refit, no early stopping)
+S03 seed42 F1 [refit] Ep 050/162 | tr 0.4163 (refit, no early stopping)
+S03 seed42 F1 [refit] Ep 100/162 | tr 0.3875 (refit, no early stopping)
+S03 seed42 F1 [refit] Ep 150/162 | tr 0.3822 (refit, no early stopping)
+S03 seed42 F1: test 93.12% (val 94.55%, epochs 162)
+S03 seed43 F1 [fit] Ep 001 | tr 4.6885 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S03 seed43 F1 [fit] Ep 050 | tr 0.4342 | val 88.6% | best val acc 91.8% (ep 49) | lr 9.4e-03
+S03 seed43 F1 [fit] Ep 100 | tr 0.3982 | val 90.9% | best val acc 94.1% (ep 77) | lr 7.5e-03
+S03 seed43 F1 [fit] Ep 150 | tr 0.3823 | val 90.0% | best val acc 94.1% (ep 77) | lr 5.1e-03
+S03 seed43 F1 [fit] Early stop @ ep 177 (best epoch 77)
+S03 seed43 F1 [refit] Ep 001/77 | tr 4.3713 (refit, no early stopping)
+S03 seed43 F1 [refit] Ep 050/77 | tr 0.4182 (refit, no early stopping)
+S03 seed43 F1: test 93.12% (val 94.09%, epochs 77)
+S03 seed44 F1 [fit] Ep 001 | tr 4.5547 | val 24.5% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S03 seed44 F1 [fit] Ep 050 | tr 0.4407 | val 90.5% | best val acc 93.6% (ep 43) | lr 9.4e-03
+S03 seed44 F1 [fit] Ep 100 | tr 0.4094 | val 91.8% | best val acc 95.0% (ep 71) | lr 7.5e-03
+S03 seed44 F1 [fit] Ep 150 | tr 0.3814 | val 93.6% | best val acc 95.5% (ep 142) | lr 5.1e-03
+S03 seed44 F1 [fit] Ep 200 | tr 0.3739 | val 93.6% | best val acc 95.5% (ep 142) | lr 2.5e-03
+S03 seed44 F1 [fit] Early stop @ ep 242 (best epoch 142)
+S03 seed44 F1 [refit] Ep 001/142 | tr 3.7637 (refit, no early stopping)
+S03 seed44 F1 [refit] Ep 050/142 | tr 0.4288 (refit, no early stopping)
+S03 seed44 F1 [refit] Ep 100/142 | tr 0.3882 (refit, no early stopping)
+S03 seed44 F1: test 90.62% (val 95.45%, epochs 142)
+S03 seed ensemble (3 seeds): test 93.12% (single seeds 93.1, 93.1, 90.6)
+
+================================================================================
+SUBJECT 04 — relieff_reduced — 4class — session — profile schirrmeister — 12 ch: C1, C2, C4, CP3, C3, CP1, CP2, CP4, CPz, Pz, CP5, FC1
+================================================================================
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S04 [4class] profile=schirrmeister X=(1057, 12, 1125) class counts={'feet': 265, 'left_hand': 264, 'rest': 264, 'right_hand': 264}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S04 seed42 F1 [fit] Ep 001 | tr 3.8021 | val 25.9% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S04 seed42 F1 [fit] Ep 050 | tr 0.4215 | val 91.1% | best val acc 92.0% (ep 49) | lr 9.4e-03
+S04 seed42 F1 [fit] Ep 100 | tr 0.4020 | val 90.2% | best val acc 93.8% (ep 86) | lr 7.5e-03
+S04 seed42 F1 [fit] Ep 150 | tr 0.3784 | val 94.2% | best val acc 94.2% (ep 150) | lr 5.1e-03
+S04 seed42 F1 [fit] Ep 200 | tr 0.3724 | val 91.5% | best val acc 94.6% (ep 191) | lr 2.5e-03
+S04 seed42 F1 [fit] Ep 250 | tr 0.3674 | val 92.4% | best val acc 94.6% (ep 191) | lr 7.0e-04
+S04 seed42 F1 [fit] Early stop @ ep 291 (best epoch 191)
+S04 seed42 F1 [refit] Ep 001/191 | tr 3.3506 (refit, no early stopping)
+S04 seed42 F1 [refit] Ep 050/191 | tr 0.6344 (refit, no early stopping)
+S04 seed42 F1 [refit] Ep 100/191 | tr 0.5096 (refit, no early stopping)
+S04 seed42 F1 [refit] Ep 150/191 | tr 0.5022 (refit, no early stopping)
+S04 seed42 F1: test 89.38% (val 94.64%, epochs 191)
+S04 seed43 F1 [fit] Ep 001 | tr 3.6879 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S04 seed43 F1 [fit] Ep 050 | tr 0.4446 | val 90.2% | best val acc 92.4% (ep 47) | lr 9.4e-03
+S04 seed43 F1 [fit] Ep 100 | tr 0.3880 | val 91.5% | best val acc 94.2% (ep 97) | lr 7.5e-03
+S04 seed43 F1 [fit] Ep 150 | tr 0.3757 | val 90.6% | best val acc 94.2% (ep 97) | lr 5.1e-03
+S04 seed43 F1 [fit] Early stop @ ep 197 (best epoch 97)
+S04 seed43 F1 [refit] Ep 001/97 | tr 2.9317 (refit, no early stopping)
+S04 seed43 F1 [refit] Ep 050/97 | tr 0.7582 (refit, no early stopping)
+S04 seed43 F1: test 86.25% (val 94.20%, epochs 97)
+S04 seed44 F1 [fit] Ep 001 | tr 4.1143 | val 25.9% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S04 seed44 F1 [fit] Ep 050 | tr 0.4215 | val 95.1% | best val acc 96.9% (ep 36) | lr 9.4e-03
+S04 seed44 F1 [fit] Ep 100 | tr 0.3862 | val 97.3% | best val acc 97.3% (ep 100) | lr 7.5e-03
+S04 seed44 F1 [fit] Ep 150 | tr 0.3779 | val 94.6% | best val acc 97.8% (ep 126) | lr 5.1e-03
+S04 seed44 F1 [fit] Ep 200 | tr 0.3695 | val 94.2% | best val acc 98.2% (ep 188) | lr 2.5e-03
+S04 seed44 F1 [fit] Ep 250 | tr 0.3643 | val 94.6% | best val acc 98.2% (ep 188) | lr 7.0e-04
+S04 seed44 F1 [fit] Early stop @ ep 288 (best epoch 188)
+S04 seed44 F1 [refit] Ep 001/188 | tr 3.6733 (refit, no early stopping)
+S04 seed44 F1 [refit] Ep 050/188 | tr 0.7542 (refit, no early stopping)
+S04 seed44 F1 [refit] Ep 100/188 | tr 0.6066 (refit, no early stopping)
+S04 seed44 F1 [refit] Ep 150/188 | tr 0.5244 (refit, no early stopping)
+S04 seed44 F1: test 91.88% (val 98.21%, epochs 188)
+S04 seed ensemble (3 seeds): test 91.25% (single seeds 89.4, 86.2, 91.9)
+
+================================================================================
+SUBJECT 05 — relieff_reduced — 4class — session — profile schirrmeister — 12 ch: C1, C2, C4, CP3, C3, CP1, CP2, CP4, Pz, CPz, CP5, FC1
+================================================================================
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S05 [4class] profile=schirrmeister X=(880, 12, 1125) class counts={'feet': 220, 'left_hand': 220, 'rest': 220, 'right_hand': 220}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S05 seed42 F1 [fit] Ep 001 | tr 5.3235 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S05 seed42 F1 [fit] Ep 050 | tr 0.4957 | val 67.2% | best val acc 72.2% (ep 37) | lr 9.4e-03
+S05 seed42 F1 [fit] Ep 100 | tr 0.4046 | val 72.2% | best val acc 76.1% (ep 92) | lr 7.5e-03
+S05 seed42 F1 [fit] Ep 150 | tr 0.3929 | val 75.0% | best val acc 76.1% (ep 101) | lr 5.1e-03
+S05 seed42 F1 [fit] Ep 200 | tr 0.3839 | val 71.7% | best val acc 77.8% (ep 174) | lr 2.5e-03
+S05 seed42 F1 [fit] Ep 250 | tr 0.3789 | val 73.3% | best val acc 77.8% (ep 174) | lr 7.0e-04
+S05 seed42 F1 [fit] Early stop @ ep 274 (best epoch 174)
+S05 seed42 F1 [refit] Ep 001/174 | tr 4.1181 (refit, no early stopping)
+S05 seed42 F1 [refit] Ep 050/174 | tr 0.5290 (refit, no early stopping)
+S05 seed42 F1 [refit] Ep 100/174 | tr 0.4199 (refit, no early stopping)
+S05 seed42 F1 [refit] Ep 150/174 | tr 0.3935 (refit, no early stopping)
+S05 seed42 F1: test 76.88% (val 77.78%, epochs 174)
+S05 seed43 F1 [fit] Ep 001 | tr 5.7765 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S05 seed43 F1 [fit] Ep 050 | tr 0.4847 | val 67.2% | best val acc 68.9% (ep 49) | lr 9.4e-03
+S05 seed43 F1 [fit] Ep 100 | tr 0.4095 | val 72.2% | best val acc 74.4% (ep 82) | lr 7.5e-03
+S05 seed43 F1 [fit] Ep 150 | tr 0.3875 | val 72.8% | best val acc 74.4% (ep 82) | lr 5.1e-03
+S05 seed43 F1 [fit] Early stop @ ep 182 (best epoch 82)
+S05 seed43 F1 [refit] Ep 001/82 | tr 4.7490 (refit, no early stopping)
+S05 seed43 F1 [refit] Ep 050/82 | tr 0.4930 (refit, no early stopping)
+S05 seed43 F1: test 78.12% (val 74.44%, epochs 82)
+S05 seed44 F1 [fit] Ep 001 | tr 6.0971 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S05 seed44 F1 [fit] Ep 050 | tr 0.5063 | val 64.4% | best val acc 70.0% (ep 28) | lr 9.4e-03
+S05 seed44 F1 [fit] Ep 100 | tr 0.4065 | val 70.0% | best val acc 72.8% (ep 90) | lr 7.5e-03
+S05 seed44 F1 [fit] Ep 150 | tr 0.3877 | val 70.6% | best val acc 73.9% (ep 132) | lr 5.1e-03
+S05 seed44 F1 [fit] Ep 200 | tr 0.3771 | val 71.1% | best val acc 73.9% (ep 132) | lr 2.5e-03
+S05 seed44 F1 [fit] Ep 250 | tr 0.3777 | val 71.1% | best val acc 73.9% (ep 238) | lr 7.0e-04
+S05 seed44 F1 [fit] Ep 300 | tr 0.3713 | val 71.7% | best val acc 73.9% (ep 238) | lr 1.3e-06
+S05 seed44 F1 [refit] Ep 001/238 | tr 4.9674 (refit, no early stopping)
+S05 seed44 F1 [refit] Ep 050/238 | tr 0.5312 (refit, no early stopping)
+S05 seed44 F1 [refit] Ep 100/238 | tr 0.4146 (refit, no early stopping)
+S05 seed44 F1 [refit] Ep 150/238 | tr 0.3947 (refit, no early stopping)
+S05 seed44 F1 [refit] Ep 200/238 | tr 0.3841 (refit, no early stopping)
+S05 seed44 F1: test 73.75% (val 73.89%, epochs 238)
+S05 seed ensemble (3 seeds): test 79.38% (single seeds 76.9, 78.1, 73.8)
+
+================================================================================
+SUBJECT 06 — relieff_reduced — 4class — session — profile schirrmeister — 12 ch: C1, C2, C4, C3, CP3, CP1, CP2, CP4, CPz, CP5, FC1, Pz
+================================================================================
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S06 [4class] profile=schirrmeister X=(1040, 12, 1125) class counts={'feet': 260, 'left_hand': 260, 'rest': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S06 seed42 F1 [fit] Ep 001 | tr 4.4957 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S06 seed42 F1 [fit] Ep 050 | tr 0.5130 | val 67.3% | best val acc 67.7% (ep 44) | lr 9.4e-03
+S06 seed42 F1 [fit] Ep 100 | tr 0.4188 | val 74.1% | best val acc 75.0% (ep 91) | lr 7.5e-03
+S06 seed42 F1 [fit] Ep 150 | tr 0.3949 | val 75.0% | best val acc 75.9% (ep 109) | lr 5.1e-03
+S06 seed42 F1 [fit] Ep 200 | tr 0.3836 | val 69.5% | best val acc 76.4% (ep 195) | lr 2.5e-03
+S06 seed42 F1 [fit] Ep 250 | tr 0.3761 | val 70.9% | best val acc 76.4% (ep 195) | lr 7.0e-04
+S06 seed42 F1 [fit] Early stop @ ep 295 (best epoch 195)
+S06 seed42 F1 [refit] Ep 001/195 | tr 4.6762 (refit, no early stopping)
+S06 seed42 F1 [refit] Ep 050/195 | tr 0.4807 (refit, no early stopping)
+S06 seed42 F1 [refit] Ep 100/195 | tr 0.4108 (refit, no early stopping)
+S06 seed42 F1 [refit] Ep 150/195 | tr 0.3876 (refit, no early stopping)
+S06 seed42 F1: test 83.75% (val 76.36%, epochs 195)
+S06 seed43 F1 [fit] Ep 001 | tr 5.3661 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S06 seed43 F1 [fit] Ep 050 | tr 0.4685 | val 77.7% | best val acc 81.8% (ep 49) | lr 9.4e-03
+S06 seed43 F1 [fit] Ep 100 | tr 0.4011 | val 75.0% | best val acc 83.2% (ep 76) | lr 7.5e-03
+S06 seed43 F1 [fit] Ep 150 | tr 0.3842 | val 78.2% | best val acc 83.2% (ep 76) | lr 5.1e-03
+S06 seed43 F1 [fit] Early stop @ ep 176 (best epoch 76)
+S06 seed43 F1 [refit] Ep 001/76 | tr 4.8083 (refit, no early stopping)
+S06 seed43 F1 [refit] Ep 050/76 | tr 0.4874 (refit, no early stopping)
+S06 seed43 F1: test 77.50% (val 83.18%, epochs 76)
+S06 seed44 F1 [fit] Ep 001 | tr 4.8449 | val 24.1% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S06 seed44 F1 [fit] Ep 050 | tr 0.5181 | val 72.3% | best val acc 72.7% (ep 45) | lr 9.4e-03
+S06 seed44 F1 [fit] Ep 100 | tr 0.4107 | val 73.6% | best val acc 78.6% (ep 96) | lr 7.5e-03
+S06 seed44 F1 [fit] Ep 150 | tr 0.3967 | val 71.8% | best val acc 78.6% (ep 96) | lr 5.1e-03
+S06 seed44 F1 [fit] Early stop @ ep 196 (best epoch 96)
+S06 seed44 F1 [refit] Ep 001/96 | tr 4.7628 (refit, no early stopping)
+S06 seed44 F1 [refit] Ep 050/96 | tr 0.4417 (refit, no early stopping)
+S06 seed44 F1: test 84.38% (val 78.64%, epochs 96)
+S06 seed ensemble (3 seeds): test 85.62% (single seeds 83.8, 77.5, 84.4)
+
+================================================================================
+SUBJECT 07 — relieff_reduced — 4class — session — profile schirrmeister — 12 ch: C1, C2, C4, C3, CP3, CP1, CP2, CP4, Pz, CPz, CP5, FC1
+================================================================================
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S07 [4class] profile=schirrmeister X=(1040, 12, 1125) class counts={'feet': 260, 'left_hand': 260, 'rest': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S07 seed42 F1 [fit] Ep 001 | tr 5.0475 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S07 seed42 F1 [fit] Ep 050 | tr 0.4716 | val 73.2% | best val acc 73.6% (ep 49) | lr 9.4e-03
+S07 seed42 F1 [fit] Ep 100 | tr 0.3962 | val 71.8% | best val acc 74.1% (ep 52) | lr 7.5e-03
+S07 seed42 F1 [fit] Ep 150 | tr 0.3801 | val 70.9% | best val acc 75.5% (ep 133) | lr 5.1e-03
+S07 seed42 F1 [fit] Ep 200 | tr 0.3732 | val 71.8% | best val acc 75.9% (ep 190) | lr 2.5e-03
+S07 seed42 F1 [fit] Ep 250 | tr 0.3698 | val 73.6% | best val acc 75.9% (ep 190) | lr 7.0e-04
+S07 seed42 F1 [fit] Ep 300 | tr 0.3693 | val 74.1% | best val acc 77.3% (ep 255) | lr 1.3e-06
+S07 seed42 F1 [refit] Ep 001/255 | tr 4.1907 (refit, no early stopping)
+S07 seed42 F1 [refit] Ep 050/255 | tr 0.4536 (refit, no early stopping)
+S07 seed42 F1 [refit] Ep 100/255 | tr 0.3940 (refit, no early stopping)
+S07 seed42 F1 [refit] Ep 150/255 | tr 0.3795 (refit, no early stopping)
+S07 seed42 F1 [refit] Ep 200/255 | tr 0.3739 (refit, no early stopping)
+S07 seed42 F1 [refit] Ep 250/255 | tr 0.3710 (refit, no early stopping)
+S07 seed42 F1: test 67.50% (val 77.27%, epochs 255)
+S07 seed43 F1 [fit] Ep 001 | tr 4.2861 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S07 seed43 F1 [fit] Ep 050 | tr 0.4716 | val 70.0% | best val acc 72.7% (ep 45) | lr 9.4e-03
+S07 seed43 F1 [fit] Ep 100 | tr 0.3891 | val 71.4% | best val acc 74.5% (ep 83) | lr 7.5e-03
+S07 seed43 F1 [fit] Ep 150 | tr 0.3781 | val 70.5% | best val acc 75.0% (ep 112) | lr 5.1e-03
+S07 seed43 F1 [fit] Ep 200 | tr 0.3745 | val 70.5% | best val acc 75.0% (ep 112) | lr 2.5e-03
+S07 seed43 F1 [fit] Early stop @ ep 212 (best epoch 112)
+S07 seed43 F1 [refit] Ep 001/112 | tr 4.4420 (refit, no early stopping)
+S07 seed43 F1 [refit] Ep 050/112 | tr 0.4474 (refit, no early stopping)
+S07 seed43 F1 [refit] Ep 100/112 | tr 0.3966 (refit, no early stopping)
+S07 seed43 F1: test 71.88% (val 75.00%, epochs 112)
+S07 seed44 F1 [fit] Ep 001 | tr 5.7455 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S07 seed44 F1 [fit] Ep 050 | tr 0.4482 | val 71.8% | best val acc 74.1% (ep 48) | lr 9.4e-03
+S07 seed44 F1 [fit] Ep 100 | tr 0.3881 | val 74.1% | best val acc 77.3% (ep 74) | lr 7.5e-03
+S07 seed44 F1 [fit] Ep 150 | tr 0.3769 | val 77.3% | best val acc 77.7% (ep 133) | lr 5.1e-03
+S07 seed44 F1 [fit] Ep 200 | tr 0.3708 | val 73.2% | best val acc 77.7% (ep 133) | lr 2.5e-03
+S07 seed44 F1 [fit] Early stop @ ep 233 (best epoch 133)
+S07 seed44 F1 [refit] Ep 001/133 | tr 4.2750 (refit, no early stopping)
+S07 seed44 F1 [refit] Ep 050/133 | tr 0.4449 (refit, no early stopping)
+S07 seed44 F1 [refit] Ep 100/133 | tr 0.3956 (refit, no early stopping)
+S07 seed44 F1: test 70.00% (val 77.73%, epochs 133)
+S07 seed ensemble (3 seeds): test 70.62% (single seeds 67.5, 71.9, 70.0)
+
+================================================================================
+SUBJECT 08 — relieff_reduced — 4class — session — profile schirrmeister — 12 ch: C1, C2, C4, C3, CP3, CP1, CP2, CP4, Pz, CPz, CP5, FC1
+================================================================================
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S08 [4class] profile=schirrmeister X=(814, 12, 1125) class counts={'feet': 203, 'left_hand': 204, 'rest': 203, 'right_hand': 204}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S08 seed42 F1 [fit] Ep 001 | tr 5.3479 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S08 seed42 F1 [fit] Ep 050 | tr 0.4976 | val 73.2% | best val acc 75.0% (ep 44) | lr 9.4e-03
+S08 seed42 F1 [fit] Ep 100 | tr 0.4004 | val 75.6% | best val acc 78.0% (ep 98) | lr 7.5e-03
+S08 seed42 F1 [fit] Ep 150 | tr 0.3865 | val 78.7% | best val acc 78.7% (ep 136) | lr 5.1e-03
+S08 seed42 F1 [fit] Ep 200 | tr 0.3750 | val 77.4% | best val acc 78.7% (ep 162) | lr 2.5e-03
+S08 seed42 F1 [fit] Ep 250 | tr 0.3704 | val 76.8% | best val acc 79.3% (ep 210) | lr 7.0e-04
+S08 seed42 F1 [fit] Ep 300 | tr 0.3721 | val 77.4% | best val acc 79.3% (ep 210) | lr 1.3e-06
+S08 seed42 F1 [refit] Ep 001/210 | tr 4.7935 (refit, no early stopping)
+S08 seed42 F1 [refit] Ep 050/210 | tr 0.4812 (refit, no early stopping)
+S08 seed42 F1 [refit] Ep 100/210 | tr 0.4036 (refit, no early stopping)
+S08 seed42 F1 [refit] Ep 150/210 | tr 0.3926 (refit, no early stopping)
+S08 seed42 F1 [refit] Ep 200/210 | tr 0.3809 (refit, no early stopping)
+S08 seed42 F1: test 79.38% (val 79.27%, epochs 210)
+S08 seed43 F1 [fit] Ep 001 | tr 4.9969 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S08 seed43 F1 [fit] Ep 050 | tr 0.4465 | val 71.3% | best val acc 76.2% (ep 46) | lr 9.4e-03
+S08 seed43 F1 [fit] Ep 100 | tr 0.4016 | val 77.4% | best val acc 79.3% (ep 69) | lr 7.5e-03
+S08 seed43 F1 [fit] Ep 150 | tr 0.3898 | val 78.0% | best val acc 79.9% (ep 116) | lr 5.1e-03
+S08 seed43 F1 [fit] Ep 200 | tr 0.3740 | val 76.8% | best val acc 79.9% (ep 191) | lr 2.5e-03
+S08 seed43 F1 [fit] Ep 250 | tr 0.3688 | val 75.0% | best val acc 79.9% (ep 191) | lr 7.0e-04
+S08 seed43 F1 [fit] Early stop @ ep 291 (best epoch 191)
+S08 seed43 F1 [refit] Ep 001/191 | tr 4.6003 (refit, no early stopping)
+S08 seed43 F1 [refit] Ep 050/191 | tr 0.5148 (refit, no early stopping)
+S08 seed43 F1 [refit] Ep 100/191 | tr 0.4115 (refit, no early stopping)
+S08 seed43 F1 [refit] Ep 150/191 | tr 0.3901 (refit, no early stopping)
+S08 seed43 F1: test 77.50% (val 79.88%, epochs 191)
+S08 seed44 F1 [fit] Ep 001 | tr 4.1077 | val 37.8% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S08 seed44 F1 [fit] Ep 050 | tr 0.4632 | val 75.0% | best val acc 76.2% (ep 22) | lr 9.4e-03
+S08 seed44 F1 [fit] Ep 100 | tr 0.3945 | val 73.2% | best val acc 78.7% (ep 79) | lr 7.5e-03
+S08 seed44 F1 [fit] Ep 150 | tr 0.3840 | val 73.8% | best val acc 78.7% (ep 147) | lr 5.1e-03
+S08 seed44 F1 [fit] Ep 200 | tr 0.3784 | val 78.0% | best val acc 78.7% (ep 147) | lr 2.5e-03
+S08 seed44 F1 [fit] Early stop @ ep 247 (best epoch 147)
+S08 seed44 F1 [refit] Ep 001/147 | tr 3.6898 (refit, no early stopping)
+S08 seed44 F1 [refit] Ep 050/147 | tr 0.5108 (refit, no early stopping)
+S08 seed44 F1 [refit] Ep 100/147 | tr 0.4036 (refit, no early stopping)
+S08 seed44 F1: test 85.62% (val 78.66%, epochs 147)
+S08 seed ensemble (3 seeds): test 83.12% (single seeds 79.4, 77.5, 85.6)
+
+================================================================================
+SUBJECT 09 — relieff_reduced — 4class — session — profile schirrmeister — 12 ch: C1, C2, C4, C3, CP3, CP1, CP2, CP4, CPz, Pz, CP5, FC1
+================================================================================
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S09 [4class] profile=schirrmeister X=(1040, 12, 1125) class counts={'feet': 260, 'left_hand': 260, 'rest': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S09 seed42 F1 [fit] Ep 001 | tr 6.2764 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S09 seed42 F1 [fit] Ep 050 | tr 0.4756 | val 41.8% | best val acc 48.2% (ep 46) | lr 9.4e-03
+S09 seed42 F1 [fit] Ep 100 | tr 0.3965 | val 41.8% | best val acc 49.1% (ep 65) | lr 7.5e-03
+S09 seed42 F1 [fit] Ep 150 | tr 0.3846 | val 45.0% | best val acc 49.1% (ep 65) | lr 5.1e-03
+S09 seed42 F1 [fit] Early stop @ ep 165 (best epoch 65)
+S09 seed42 F1 [refit] Ep 001/65 | tr 5.6289 (refit, no early stopping)
+S09 seed42 F1 [refit] Ep 050/65 | tr 0.5388 (refit, no early stopping)
+S09 seed42 F1: test 55.62% (val 49.09%, epochs 65)
+S09 seed43 F1 [fit] Ep 001 | tr 9.3132 | val 27.3% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S09 seed43 F1 [fit] Ep 050 | tr 0.4994 | val 49.1% | best val acc 50.9% (ep 48) | lr 9.4e-03
+S09 seed43 F1 [fit] Ep 100 | tr 0.4013 | val 46.8% | best val acc 50.9% (ep 48) | lr 7.5e-03
+S09 seed43 F1 [fit] Early stop @ ep 148 (best epoch 48)
+S09 seed43 F1 [refit] Ep 001/48 | tr 6.5305 (refit, no early stopping)
+S09 seed43 F1: test 51.25% (val 50.91%, epochs 48)
+S09 seed44 F1 [fit] Ep 001 | tr 6.0149 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S09 seed44 F1 [fit] Ep 050 | tr 0.5245 | val 47.7% | best val acc 52.7% (ep 47) | lr 9.4e-03
+S09 seed44 F1 [fit] Ep 100 | tr 0.4104 | val 52.3% | best val acc 54.5% (ep 81) | lr 7.5e-03
+S09 seed44 F1 [fit] Ep 150 | tr 0.3907 | val 50.9% | best val acc 54.5% (ep 81) | lr 5.1e-03
+S09 seed44 F1 [fit] Early stop @ ep 181 (best epoch 81)
+S09 seed44 F1 [refit] Ep 001/81 | tr 5.0504 (refit, no early stopping)
+S09 seed44 F1 [refit] Ep 050/81 | tr 0.5169 (refit, no early stopping)
+S09 seed44 F1: test 45.00% (val 54.55%, epochs 81)
+S09 seed ensemble (3 seeds): test 55.00% (single seeds 55.6, 51.2, 45.0)
+
+================================================================================
+SUBJECT 10 — relieff_reduced — 4class — session — profile schirrmeister — 12 ch: C1, C2, C4, CP3, C3, CP1, CP2, Pz, CP4, CPz, CP5, FC1
+================================================================================
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S10 [4class] profile=schirrmeister X=(1040, 12, 1125) class counts={'feet': 260, 'left_hand': 260, 'rest': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S10 seed42 F1 [fit] Ep 001 | tr 4.6046 | val 22.7% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S10 seed42 F1 [fit] Ep 050 | tr 0.4414 | val 85.5% | best val acc 87.3% (ep 27) | lr 9.4e-03
+S10 seed42 F1 [fit] Ep 100 | tr 0.3848 | val 85.9% | best val acc 87.3% (ep 69) | lr 7.5e-03
+S10 seed42 F1 [fit] Ep 150 | tr 0.3721 | val 83.6% | best val acc 87.7% (ep 104) | lr 5.1e-03
+S10 seed42 F1 [fit] Ep 200 | tr 0.3732 | val 86.4% | best val acc 87.7% (ep 104) | lr 2.5e-03
+S10 seed42 F1 [fit] Early stop @ ep 204 (best epoch 104)
+S10 seed42 F1 [refit] Ep 001/104 | tr 3.9878 (refit, no early stopping)
+S10 seed42 F1 [refit] Ep 050/104 | tr 0.4276 (refit, no early stopping)
+S10 seed42 F1 [refit] Ep 100/104 | tr 0.3969 (refit, no early stopping)
+S10 seed42 F1: test 83.75% (val 87.73%, epochs 104)
+S10 seed43 F1 [fit] Ep 001 | tr 4.3231 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S10 seed43 F1 [fit] Ep 050 | tr 0.4621 | val 84.5% | best val acc 86.4% (ep 40) | lr 9.4e-03
+S10 seed43 F1 [fit] Ep 100 | tr 0.4027 | val 86.4% | best val acc 86.8% (ep 89) | lr 7.5e-03
+S10 seed43 F1 [fit] Ep 150 | tr 0.3753 | val 82.7% | best val acc 86.8% (ep 102) | lr 5.1e-03
+S10 seed43 F1 [fit] Ep 200 | tr 0.3704 | val 84.1% | best val acc 86.8% (ep 102) | lr 2.5e-03
+S10 seed43 F1 [fit] Early stop @ ep 202 (best epoch 102)
+S10 seed43 F1 [refit] Ep 001/102 | tr 3.5014 (refit, no early stopping)
+S10 seed43 F1 [refit] Ep 050/102 | tr 0.4425 (refit, no early stopping)
+S10 seed43 F1 [refit] Ep 100/102 | tr 0.3967 (refit, no early stopping)
+S10 seed43 F1: test 85.62% (val 86.82%, epochs 102)
+S10 seed44 F1 [fit] Ep 001 | tr 4.6136 | val 26.8% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S10 seed44 F1 [fit] Ep 050 | tr 0.4423 | val 85.5% | best val acc 86.4% (ep 47) | lr 9.4e-03
+S10 seed44 F1 [fit] Ep 100 | tr 0.3927 | val 84.5% | best val acc 88.6% (ep 52) | lr 7.5e-03
+S10 seed44 F1 [fit] Ep 150 | tr 0.3809 | val 83.6% | best val acc 88.6% (ep 52) | lr 5.1e-03
+S10 seed44 F1 [fit] Early stop @ ep 152 (best epoch 52)
+S10 seed44 F1 [refit] Ep 001/52 | tr 3.0951 (refit, no early stopping)
+S10 seed44 F1 [refit] Ep 050/52 | tr 0.4343 (refit, no early stopping)
+S10 seed44 F1: test 83.12% (val 88.64%, epochs 52)
+S10 seed ensemble (3 seeds): test 84.38% (single seeds 83.8, 85.6, 83.1)
+
+================================================================================
+SUBJECT 11 — relieff_reduced — 4class — session — profile schirrmeister — 12 ch: C1, C2, C4, C3, CP3, CP1, CP2, CP4, Pz, CPz, FC1, CP5
+================================================================================
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S11 [4class] profile=schirrmeister X=(1040, 12, 1125) class counts={'feet': 260, 'left_hand': 260, 'rest': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S11 seed42 F1 [fit] Ep 001 | tr 4.2226 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S11 seed42 F1 [fit] Ep 050 | tr 0.5223 | val 71.8% | best val acc 74.5% (ep 38) | lr 9.4e-03
+S11 seed42 F1 [fit] Ep 100 | tr 0.4171 | val 70.0% | best val acc 75.5% (ep 57) | lr 7.5e-03
+S11 seed42 F1 [fit] Ep 150 | tr 0.3940 | val 73.6% | best val acc 75.5% (ep 57) | lr 5.1e-03
+S11 seed42 F1 [fit] Early stop @ ep 157 (best epoch 57)
+S11 seed42 F1 [refit] Ep 001/57 | tr 3.7285 (refit, no early stopping)
+S11 seed42 F1 [refit] Ep 050/57 | tr 0.5616 (refit, no early stopping)
+S11 seed42 F1: test 71.88% (val 75.45%, epochs 57)
+S11 seed43 F1 [fit] Ep 001 | tr 4.2764 | val 39.1% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S11 seed43 F1 [fit] Ep 050 | tr 0.5200 | val 68.2% | best val acc 74.1% (ep 45) | lr 9.4e-03
+S11 seed43 F1 [fit] Ep 100 | tr 0.4208 | val 69.1% | best val acc 74.1% (ep 45) | lr 7.5e-03
+S11 seed43 F1 [fit] Early stop @ ep 145 (best epoch 45)
+S11 seed43 F1 [refit] Ep 001/45 | tr 4.3342 (refit, no early stopping)
+S11 seed43 F1: test 68.12% (val 74.09%, epochs 45)
+S11 seed44 F1 [fit] Ep 001 | tr 3.9843 | val 36.8% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S11 seed44 F1 [fit] Ep 050 | tr 0.5270 | val 67.7% | best val acc 72.7% (ep 45) | lr 9.4e-03
+S11 seed44 F1 [fit] Ep 100 | tr 0.4203 | val 70.0% | best val acc 73.6% (ep 81) | lr 7.5e-03
+S11 seed44 F1 [fit] Ep 150 | tr 0.3943 | val 71.4% | best val acc 73.6% (ep 141) | lr 5.1e-03
+S11 seed44 F1 [fit] Ep 200 | tr 0.3824 | val 70.0% | best val acc 75.5% (ep 152) | lr 2.5e-03
+S11 seed44 F1 [fit] Ep 250 | tr 0.3813 | val 71.4% | best val acc 75.5% (ep 152) | lr 7.0e-04
+S11 seed44 F1 [fit] Early stop @ ep 252 (best epoch 152)
+S11 seed44 F1 [refit] Ep 001/152 | tr 4.0091 (refit, no early stopping)
+S11 seed44 F1 [refit] Ep 050/152 | tr 0.5152 (refit, no early stopping)
+S11 seed44 F1 [refit] Ep 100/152 | tr 0.4181 (refit, no early stopping)
+S11 seed44 F1 [refit] Ep 150/152 | tr 0.4019 (refit, no early stopping)
+S11 seed44 F1: test 69.38% (val 75.45%, epochs 152)
+S11 seed ensemble (3 seeds): test 71.88% (single seeds 71.9, 68.1, 69.4)
+
+================================================================================
+SUBJECT 12 — relieff_reduced — 4class — session — profile schirrmeister — 12 ch: C1, C2, C4, C3, CP3, CP1, CP2, CP4, CPz, Pz, CP5, FC1
+================================================================================
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S12 [4class] profile=schirrmeister X=(1040, 12, 1125) class counts={'feet': 260, 'left_hand': 260, 'rest': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S12 seed42 F1 [fit] Ep 001 | tr 4.6893 | val 25.5% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S12 seed42 F1 [fit] Ep 050 | tr 0.4344 | val 85.0% | best val acc 92.3% (ep 25) | lr 9.4e-03
+S12 seed42 F1 [fit] Ep 100 | tr 0.3847 | val 93.2% | best val acc 93.2% (ep 100) | lr 7.5e-03
+S12 seed42 F1 [fit] Ep 150 | tr 0.3774 | val 90.5% | best val acc 93.6% (ep 144) | lr 5.1e-03
+S12 seed42 F1 [fit] Ep 200 | tr 0.3689 | val 92.3% | best val acc 95.0% (ep 163) | lr 2.5e-03
+S12 seed42 F1 [fit] Ep 250 | tr 0.3662 | val 92.7% | best val acc 95.0% (ep 163) | lr 7.0e-04
+S12 seed42 F1 [fit] Early stop @ ep 263 (best epoch 163)
+S12 seed42 F1 [refit] Ep 001/163 | tr 3.8759 (refit, no early stopping)
+S12 seed42 F1 [refit] Ep 050/163 | tr 0.4289 (refit, no early stopping)
+S12 seed42 F1 [refit] Ep 100/163 | tr 0.3872 (refit, no early stopping)
+S12 seed42 F1 [refit] Ep 150/163 | tr 0.3754 (refit, no early stopping)
+S12 seed42 F1: test 90.62% (val 95.00%, epochs 163)
+S12 seed43 F1 [fit] Ep 001 | tr 4.5873 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S12 seed43 F1 [fit] Ep 050 | tr 0.4414 | val 88.6% | best val acc 91.8% (ep 45) | lr 9.4e-03
+S12 seed43 F1 [fit] Ep 100 | tr 0.3834 | val 90.9% | best val acc 93.2% (ep 70) | lr 7.5e-03
+S12 seed43 F1 [fit] Ep 150 | tr 0.3740 | val 90.0% | best val acc 93.2% (ep 70) | lr 5.1e-03
+S12 seed43 F1 [fit] Early stop @ ep 170 (best epoch 70)
+S12 seed43 F1 [refit] Ep 001/70 | tr 4.0946 (refit, no early stopping)
+S12 seed43 F1 [refit] Ep 050/70 | tr 0.4129 (refit, no early stopping)
+S12 seed43 F1: test 90.62% (val 93.18%, epochs 70)
+S12 seed44 F1 [fit] Ep 001 | tr 4.7990 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S12 seed44 F1 [fit] Ep 050 | tr 0.4267 | val 88.2% | best val acc 91.4% (ep 38) | lr 9.4e-03
+S12 seed44 F1 [fit] Ep 100 | tr 0.3959 | val 90.5% | best val acc 91.4% (ep 38) | lr 7.5e-03
+S12 seed44 F1 [fit] Early stop @ ep 138 (best epoch 38)
+S12 seed44 F1 [refit] Ep 001/38 | tr 5.2118 (refit, no early stopping)
+S12 seed44 F1: test 87.50% (val 91.36%, epochs 38)
+S12 seed ensemble (3 seeds): test 89.38% (single seeds 90.6, 90.6, 87.5)
+
+================================================================================
+SUBJECT 13 — relieff_reduced — 4class — session — profile schirrmeister — 12 ch: C2, C1, C4, C3, CP3, CP1, CP2, CP4, Pz, CPz, CP5, FC1
+================================================================================
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S13 [4class] profile=schirrmeister X=(960, 12, 1125) class counts={'feet': 240, 'left_hand': 240, 'rest': 240, 'right_hand': 240}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S13 seed42 F1 [fit] Ep 001 | tr 5.9399 | val 26.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S13 seed42 F1 [fit] Ep 050 | tr 0.4579 | val 75.5% | best val acc 77.5% (ep 44) | lr 9.4e-03
+S13 seed42 F1 [fit] Ep 100 | tr 0.3971 | val 80.0% | best val acc 83.0% (ep 83) | lr 7.5e-03
+S13 seed42 F1 [fit] Ep 150 | tr 0.3788 | val 82.5% | best val acc 84.0% (ep 147) | lr 5.1e-03
+S13 seed42 F1 [fit] Ep 200 | tr 0.3739 | val 83.5% | best val acc 85.0% (ep 189) | lr 2.5e-03
+S13 seed42 F1 [fit] Ep 250 | tr 0.3716 | val 84.0% | best val acc 85.0% (ep 189) | lr 7.0e-04
+S13 seed42 F1 [fit] Early stop @ ep 289 (best epoch 189)
+S13 seed42 F1 [refit] Ep 001/189 | tr 5.1055 (refit, no early stopping)
+S13 seed42 F1 [refit] Ep 050/189 | tr 0.4382 (refit, no early stopping)
+S13 seed42 F1 [refit] Ep 100/189 | tr 0.3983 (refit, no early stopping)
+S13 seed42 F1 [refit] Ep 150/189 | tr 0.3813 (refit, no early stopping)
+S13 seed42 F1: test 73.12% (val 85.00%, epochs 189)
+S13 seed43 F1 [fit] Ep 001 | tr 4.7235 | val 29.5% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S13 seed43 F1 [fit] Ep 050 | tr 0.4540 | val 74.5% | best val acc 80.5% (ep 31) | lr 9.4e-03
+S13 seed43 F1 [fit] Ep 100 | tr 0.3949 | val 76.0% | best val acc 81.0% (ep 94) | lr 7.5e-03
+S13 seed43 F1 [fit] Ep 150 | tr 0.3776 | val 79.0% | best val acc 81.5% (ep 107) | lr 5.1e-03
+S13 seed43 F1 [fit] Ep 200 | tr 0.3733 | val 81.5% | best val acc 82.0% (ep 152) | lr 2.5e-03
+S13 seed43 F1 [fit] Ep 250 | tr 0.3716 | val 79.5% | best val acc 82.0% (ep 152) | lr 7.0e-04
+S13 seed43 F1 [fit] Early stop @ ep 252 (best epoch 152)
+S13 seed43 F1 [refit] Ep 001/152 | tr 4.0805 (refit, no early stopping)
+S13 seed43 F1 [refit] Ep 050/152 | tr 0.4577 (refit, no early stopping)
+S13 seed43 F1 [refit] Ep 100/152 | tr 0.4016 (refit, no early stopping)
+S13 seed43 F1 [refit] Ep 150/152 | tr 0.3889 (refit, no early stopping)
+S13 seed43 F1: test 71.25% (val 82.00%, epochs 152)
+S13 seed44 F1 [fit] Ep 001 | tr 4.1793 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S13 seed44 F1 [fit] Ep 050 | tr 0.4738 | val 72.0% | best val acc 79.0% (ep 41) | lr 9.4e-03
+S13 seed44 F1 [fit] Ep 100 | tr 0.3930 | val 74.5% | best val acc 79.0% (ep 85) | lr 7.5e-03
+S13 seed44 F1 [fit] Ep 150 | tr 0.3875 | val 81.5% | best val acc 81.5% (ep 150) | lr 5.1e-03
+S13 seed44 F1 [fit] Ep 200 | tr 0.3740 | val 79.0% | best val acc 82.0% (ep 179) | lr 2.5e-03
+S13 seed44 F1 [fit] Ep 250 | tr 0.3721 | val 79.5% | best val acc 82.0% (ep 179) | lr 7.0e-04
+S13 seed44 F1 [fit] Early stop @ ep 279 (best epoch 179)
+S13 seed44 F1 [refit] Ep 001/179 | tr 3.7876 (refit, no early stopping)
+S13 seed44 F1 [refit] Ep 050/179 | tr 0.4520 (refit, no early stopping)
+S13 seed44 F1 [refit] Ep 100/179 | tr 0.3918 (refit, no early stopping)
+S13 seed44 F1 [refit] Ep 150/179 | tr 0.3810 (refit, no early stopping)
+S13 seed44 F1: test 71.88% (val 82.00%, epochs 179)
+S13 seed ensemble (3 seeds): test 75.00% (single seeds 73.1, 71.2, 71.9)
+
+================================================================================
+SUBJECT 14 — relieff_reduced — 4class — session — profile schirrmeister — 12 ch: C1, C2, C4, C3, CP3, CP1, CP2, CP4, CPz, Pz, CP5, FCz
+================================================================================
+No stim channel nor annotations found, skipping setting annotations.
+No stim channel nor annotations found, skipping setting annotations.
+  S14 [4class] profile=schirrmeister X=(1040, 12, 1125) class counts={'feet': 260, 'left_hand': 260, 'rest': 260, 'right_hand': 260}
+D:\EEG\braindec\.venv\lib\site-packages\braindecode\models\base.py:180: UserWarning: LogSoftmax final layer will be removed! Please adjust your loss function accordingly (e.g. CrossEntropyLoss)!
+  warnings.warn("LogSoftmax final layer will be removed! " +
+S14 seed42 F1 [fit] Ep 001 | tr 6.6700 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S14 seed42 F1 [fit] Ep 050 | tr 0.4485 | val 86.8% | best val acc 89.1% (ep 37) | lr 9.4e-03
+S14 seed42 F1 [fit] Ep 100 | tr 0.4026 | val 90.9% | best val acc 93.6% (ep 64) | lr 7.5e-03
+S14 seed42 F1 [fit] Ep 150 | tr 0.3878 | val 91.8% | best val acc 93.6% (ep 133) | lr 5.1e-03
+S14 seed42 F1 [fit] Ep 200 | tr 0.3753 | val 90.9% | best val acc 93.6% (ep 133) | lr 2.5e-03
+S14 seed42 F1 [fit] Early stop @ ep 233 (best epoch 133)
+S14 seed42 F1 [refit] Ep 001/133 | tr 5.0440 (refit, no early stopping)
+S14 seed42 F1 [refit] Ep 050/133 | tr 0.4229 (refit, no early stopping)
+S14 seed42 F1 [refit] Ep 100/133 | tr 0.3910 (refit, no early stopping)
+S14 seed42 F1: test 91.88% (val 93.64%, epochs 133)
+S14 seed43 F1 [fit] Ep 001 | tr 5.8217 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S14 seed43 F1 [fit] Ep 050 | tr 0.4394 | val 90.9% | best val acc 90.9% (ep 50) | lr 9.4e-03
+S14 seed43 F1 [fit] Ep 100 | tr 0.4034 | val 85.5% | best val acc 92.3% (ep 96) | lr 7.5e-03
+S14 seed43 F1 [fit] Ep 150 | tr 0.3874 | val 95.0% | best val acc 95.0% (ep 150) | lr 5.1e-03
+S14 seed43 F1 [fit] Ep 200 | tr 0.3780 | val 91.8% | best val acc 95.0% (ep 150) | lr 2.5e-03
+S14 seed43 F1 [fit] Ep 250 | tr 0.3699 | val 91.8% | best val acc 95.0% (ep 150) | lr 7.0e-04
+S14 seed43 F1 [fit] Early stop @ ep 250 (best epoch 150)
+S14 seed43 F1 [refit] Ep 001/150 | tr 4.0974 (refit, no early stopping)
+S14 seed43 F1 [refit] Ep 050/150 | tr 0.4589 (refit, no early stopping)
+S14 seed43 F1 [refit] Ep 100/150 | tr 0.3907 (refit, no early stopping)
+S14 seed43 F1 [refit] Ep 150/150 | tr 0.3871 (refit, no early stopping)
+S14 seed43 F1: test 88.75% (val 95.00%, epochs 150)
+S14 seed44 F1 [fit] Ep 001 | tr 6.4094 | val 27.7% | best val acc 0.0% (ep 0) | lr 1.0e-02
+S14 seed44 F1 [fit] Ep 050 | tr 0.4538 | val 84.1% | best val acc 89.5% (ep 47) | lr 9.4e-03
+S14 seed44 F1 [fit] Ep 100 | tr 0.3984 | val 88.6% | best val acc 92.3% (ep 88) | lr 7.5e-03
+S14 seed44 F1 [fit] Ep 150 | tr 0.3932 | val 89.1% | best val acc 92.7% (ep 149) | lr 5.1e-03
+S14 seed44 F1 [fit] Ep 200 | tr 0.3793 | val 90.5% | best val acc 93.2% (ep 187) | lr 2.5e-03
+S14 seed44 F1 [fit] Ep 250 | tr 0.3716 | val 91.4% | best val acc 93.2% (ep 187) | lr 7.0e-04
+S14 seed44 F1 [fit] Early stop @ ep 287 (best epoch 187)
+S14 seed44 F1 [refit] Ep 001/187 | tr 5.8344 (refit, no early stopping)
+S14 seed44 F1 [refit] Ep 050/187 | tr 0.4231 (refit, no early stopping)
+S14 seed44 F1 [refit] Ep 100/187 | tr 0.3932 (refit, no early stopping)
+S14 seed44 F1 [refit] Ep 150/187 | tr 0.3778 (refit, no early stopping)
+S14 seed44 F1: test 91.25% (val 93.18%, epochs 187)
+S14 seed ensemble (3 seeds): test 92.50% (single seeds 91.9, 88.8, 91.2)
+Results written to D:\EEG\NeuroGrounded-EEG\Deep4net\HGD\4class\results_session\relieff_reduced (grand mean 80.18% over 14 subjects; chance 25.0%, majority 25.0%)
+Report saved: D:\EEG\NeuroGrounded-EEG\Deep4net\HGD\4class\results_session\relieff_reduced\relieff_reduced_report.txt
+
+ReliefF 4class: 80.18% +/- 10.88%

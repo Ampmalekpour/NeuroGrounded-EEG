@@ -1,0 +1,9 @@
+Method,Pooled acc,Per-class recall,Predicted share per class,Mean majority-class acc,Folds predicting one class ≥90%
+22ch,75.62,"left_hand 73.0, right_hand 78.2","left_hand 47.4, right_hand 52.6",50.00,0 / 14
+Ours,76.52,"left_hand 74.6, right_hand 78.4","left_hand 48.1, right_hand 51.9",50.00,0 / 14
+CSP,75.62,"left_hand 75.9, right_hand 75.4","left_hand 50.3, right_hand 49.7",50.00,0 / 14
+RLF,75.80,"left_hand 75.0, right_hand 76.6","left_hand 49.2, right_hand 50.8",50.00,0 / 14
+MI,75.71,"left_hand 74.1, right_hand 77.3","left_hand 48.4, right_hand 51.6",50.00,0 / 14
+Fixed sensorimotor,78.39,"left_hand 75.9, right_hand 80.9","left_hand 47.5, right_hand 52.5",50.00,0 / 14
+ERD-only,76.52,"left_hand 75.2, right_hand 77.9","left_hand 48.7, right_hand 51.3",50.00,0 / 14
+Random (mean of draws),74.07,"left_hand 72.1, right_hand 76.0","left_hand 48.0, right_hand 52.0",50.00,0 / 70

@@ -70,5 +70,77 @@
   "minutes": 707.9,
   "log": "EEGNetV4\\HGD\\4class\\logs_session\\controls.log",
   "finished": "2026-10-20 20:46:31"
+ },
+ "deep4net/2class/tune": {
+  "state": "ok",
+  "minutes": 20.9,
+  "log": "Deep4net\\HGD\\2class\\logs_session\\tune.log",
+  "finished": "2026-10-20 21:49:58"
+ },
+ "deep4net/2class/saliency": {
+  "state": "ok",
+  "minutes": 47.0,
+  "log": "Deep4net\\HGD\\2class\\logs_session\\saliency.log",
+  "finished": "2026-10-20 22:37:01"
+ },
+ "deep4net/2class/csp": {
+  "state": "ok",
+  "minutes": 14.4,
+  "log": "Deep4net\\HGD\\2class\\logs_session\\csp.log",
+  "finished": "2026-10-20 22:51:24"
+ },
+ "deep4net/2class/relieff": {
+  "state": "ok",
+  "minutes": 13.5,
+  "log": "Deep4net\\HGD\\2class\\logs_session\\relieff.log",
+  "finished": "2026-10-20 23:04:56"
+ },
+ "deep4net/2class/mi": {
+  "state": "ok",
+  "minutes": 13.1,
+  "log": "Deep4net\\HGD\\2class\\logs_session\\mi.log",
+  "finished": "2026-10-20 23:18:04"
+ },
+ "deep4net/2class/controls": {
+  "state": "ok",
+  "minutes": 78.7,
+  "log": "Deep4net\\HGD\\2class\\logs_session\\controls.log",
+  "finished": "2026-10-21 00:36:48"
+ },
+ "deep4net/4class/tune": {
+  "state": "ok",
+  "minutes": 20.6,
+  "log": "Deep4net\\HGD\\4class\\logs_session\\tune.log",
+  "finished": "2026-10-21 00:57:27"
+ },
+ "deep4net/4class/saliency": {
+  "state": "ok",
+  "minutes": 434.4,
+  "log": "Deep4net\\HGD\\4class\\logs_session\\saliency.log",
+  "finished": "2026-10-21 08:11:49"
+ },
+ "deep4net/4class/csp": {
+  "state": "ok",
+  "minutes": 26.4,
+  "log": "Deep4net\\HGD\\4class\\logs_session\\csp.log",
+  "finished": "2026-10-21 08:38:12"
+ },
+ "deep4net/4class/relieff": {
+  "state": "ok",
+  "minutes": 25.0,
+  "log": "Deep4net\\HGD\\4class\\logs_session\\relieff.log",
+  "finished": "2026-10-21 09:03:10"
+ },
+ "deep4net/4class/mi": {
+  "state": "ok",
+  "minutes": 24.8,
+  "log": "Deep4net\\HGD\\4class\\logs_session\\mi.log",
+  "finished": "2026-10-21 09:28:00"
+ },
+ "deep4net/4class/controls": {
+  "state": "ok",
+  "minutes": 660.4,
+  "log": "Deep4net\\HGD\\4class\\logs_session\\controls.log",
+  "finished": "2026-10-21 20:28:22"
  }
 }
