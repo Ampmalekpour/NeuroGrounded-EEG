@@ -1,0 +1,216 @@
+EEGConformer - PhysioNet - control 'control_erd' - 2class
+================================================================================
+
+Subject 01: 53.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 02: 73.33%  | montage: PO8, O2, O1, PO4, Oz, PO7, POz, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 73.33% (majority-class 53.3%)
+Subject 03: 46.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 04: 66.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 66.67% (majority-class 53.3%)
+Subject 05: 53.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P2, P4, Fp2
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 06: 60.00%  | montage: PO8, O2, O1, PO4, Oz, PO7, POz, PO3, Fpz, P4, P2, Pz
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 07: 86.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 86.67% (majority-class 53.3%)
+Subject 08: 60.00%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 09: 66.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 66.67% (majority-class 53.3%)
+Subject 10: 33.33%  | montage: PO8, O2, O1, PO4, Oz, PO7, POz, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 33.33% (majority-class 53.3%)
+Subject 11: 73.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 73.33% (majority-class 53.3%)
+Subject 12: 60.00%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, P4, Fpz, P2, Pz
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 13: 60.00%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 14: 66.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Pz
+    seed -1 fold 1: 66.67% (majority-class 53.3%)
+Subject 15: 93.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 93.33% (majority-class 53.3%)
+Subject 16: 60.00%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 17: 60.00%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 18: 40.00%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 40.00% (majority-class 53.3%)
+Subject 19: 46.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Pz
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 20: 53.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 21: 60.00%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 22: 60.00%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Pz
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 23: 86.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Pz
+    seed -1 fold 1: 86.67% (majority-class 53.3%)
+Subject 24: 53.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 25: 86.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 86.67% (majority-class 53.3%)
+Subject 26: 86.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Pz
+    seed -1 fold 1: 86.67% (majority-class 53.3%)
+Subject 27: 53.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 28: 53.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 29: 66.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 66.67% (majority-class 53.3%)
+Subject 30: 53.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 31: 60.00%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 32: 66.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Pz
+    seed -1 fold 1: 66.67% (majority-class 53.3%)
+Subject 33: 86.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 86.67% (majority-class 53.3%)
+Subject 34: 93.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 93.33% (majority-class 53.3%)
+Subject 35: 80.00%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 80.00% (majority-class 53.3%)
+Subject 36: 80.00%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 80.00% (majority-class 53.3%)
+Subject 37: 46.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 38: 66.67%  | montage: PO8, O2, O1, PO4, Oz, PO7, POz, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 66.67% (majority-class 53.3%)
+Subject 39: 46.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, Fpz, PO3, P4, P2, Fp2
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 40: 66.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 66.67% (majority-class 53.3%)
+Subject 41: 60.00%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 42: 100.00%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 100.00% (majority-class 53.3%)
+Subject 43: 66.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 66.67% (majority-class 53.3%)
+Subject 44: 80.00%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 80.00% (majority-class 53.3%)
+Subject 45: 46.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 46: 46.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 47: 53.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 48: 73.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 73.33% (majority-class 53.3%)
+Subject 49: 46.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 50: 60.00%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 51: 73.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Pz
+    seed -1 fold 1: 73.33% (majority-class 53.3%)
+Subject 52: 53.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 53: 86.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 86.67% (majority-class 53.3%)
+Subject 54: 93.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 93.33% (majority-class 53.3%)
+Subject 55: 60.00%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 56: 66.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 66.67% (majority-class 53.3%)
+Subject 57: 60.00%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 58: 60.00%  | montage: PO8, O2, O1, PO4, Oz, PO7, POz, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 59: 46.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 60: 73.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 73.33% (majority-class 53.3%)
+Subject 61: 66.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 66.67% (majority-class 53.3%)
+Subject 62: 73.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 73.33% (majority-class 53.3%)
+Subject 63: 53.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 64: 80.00%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 80.00% (majority-class 53.3%)
+Subject 65: 73.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Pz
+    seed -1 fold 1: 73.33% (majority-class 53.3%)
+Subject 66: 60.00%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Pz
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 67: 53.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 68: 33.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Pz
+    seed -1 fold 1: 33.33% (majority-class 53.3%)
+Subject 69: 60.00%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 70: 73.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Pz
+    seed -1 fold 1: 73.33% (majority-class 53.3%)
+Subject 71: 46.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, Fpz, PO3, P4, P2, Fp2
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 72: 80.00%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 80.00% (majority-class 53.3%)
+Subject 73: 66.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 66.67% (majority-class 53.3%)
+Subject 74: 33.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 33.33% (majority-class 53.3%)
+Subject 75: 53.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, Fpz, PO3, P4, P2, Fp2
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 76: 60.00%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 77: 46.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 78: 73.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 73.33% (majority-class 53.3%)
+Subject 79: 60.00%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 80: 66.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 66.67% (majority-class 53.3%)
+Subject 81: 46.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, Fpz, PO3, P4, P2, Fp2
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 82: 60.00%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Pz
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 83: 53.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, Fpz, PO3, P4, P2, Fp2
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 84: 33.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 33.33% (majority-class 53.3%)
+Subject 85: 80.00%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 80.00% (majority-class 53.3%)
+Subject 86: 46.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 87: 46.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 89: 53.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 90: 60.00%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 91: 60.00%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Pz
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 93: 80.00%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Pz
+    seed -1 fold 1: 80.00% (majority-class 53.3%)
+Subject 94: 66.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 66.67% (majority-class 53.3%)
+Subject 95: 33.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 33.33% (majority-class 53.3%)
+Subject 96: 66.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 66.67% (majority-class 53.3%)
+Subject 97: 53.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, Fpz, PO3, P4, P2, Fp2
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 98: 53.33%  | montage: PO8, O2, O1, PO4, Oz, PO7, POz, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 99: 60.00%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Pz
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 101: 40.00%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 40.00% (majority-class 53.3%)
+Subject 102: 53.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, P4, Fpz, P2, Fp2
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 103: 66.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 66.67% (majority-class 53.3%)
+Subject 105: 53.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Pz
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 106: 60.00%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Pz
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 107: 73.33%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Fp2
+    seed -1 fold 1: 73.33% (majority-class 53.3%)
+Subject 108: 66.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Pz
+    seed -1 fold 1: 66.67% (majority-class 53.3%)
+Subject 109: 46.67%  | montage: PO8, O2, O1, PO4, Oz, POz, PO7, PO3, Fpz, P4, P2, Pz
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+
+GRAND MEAN: 61.90% +/- 14.46% (SD across subjects)
+chance 50.0% | mean majority-class 53.3%

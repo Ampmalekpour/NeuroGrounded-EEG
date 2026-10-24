@@ -1,0 +1,1990 @@
+$ D:\EEG\.venv\Scripts\python.exe -u D:\EEG\NeuroGrounded-EEG_PhysioNet_pipelines_v1\EEGNetV4\PhysioNet\2class\eegnetv4_physionet_2class_tune.py   [EEG_PROTOCOL=session]
+Using device: cuda | class mode: 2class | seeds: [42, 43, 44] | subjects: 105 | synthetic: False | protocol: session | cohort: 105
+  S001 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+D:\EEG\.venv\lib\site-packages\torch\autograd\graph.py:744: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\cudnn\Conv_v8.cpp:919.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+D:\EEG\.venv\lib\site-packages\torch\nn\modules\conv.py:456: UserWarning: Plan failed with a cudnnException: CUDNN_BACKEND_EXECUTION_PLAN_DESCRIPTOR: cudnnFinalize Descriptor Failed cudnn_status: CUDNN_STATUS_NOT_SUPPORTED (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\builder\windows\pytorch\aten\src\ATen\native\cudnn\Conv_v8.cpp:919.)
+  return F.conv2d(input, weight, bias, self.stride,
+[tune zscore] S001 F1 Ep 001 | tr 0.7032 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S001 F1 Ep 050 | tr 0.2299 | val 37.5% | best val acc 50.0% (ep 24) | lr 9.4e-04
+[tune zscore] S001 F1 Ep 100 | tr 0.2220 | val 50.0% | best val acc 50.0% (ep 91) | lr 7.5e-04
+[tune zscore] S001 F1 Ep 150 | tr 0.2053 | val 50.0% | best val acc 50.0% (ep 112) | lr 5.1e-04
+[tune zscore] S001 F1 Early stop @ ep 192 (best epoch 112)
+[tune]         zscore S001: mean validation accuracy 50.00%
+  S002 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S002 F1 Ep 001 | tr 0.7663 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S002 F1 Ep 050 | tr 0.2132 | val 62.5% | best val acc 75.0% (ep 47) | lr 9.4e-04
+[tune zscore] S002 F1 Ep 100 | tr 0.2093 | val 75.0% | best val acc 75.0% (ep 100) | lr 7.5e-04
+[tune zscore] S002 F1 Ep 150 | tr 0.2032 | val 75.0% | best val acc 75.0% (ep 150) | lr 5.1e-04
+[tune zscore] S002 F1 Ep 200 | tr 0.2082 | val 75.0% | best val acc 75.0% (ep 200) | lr 2.6e-04
+[tune zscore] S002 F1 Ep 250 | tr 0.2143 | val 75.0% | best val acc 75.0% (ep 205) | lr 7.1e-05
+[tune zscore] S002 F1 Early stop @ ep 285 (best epoch 205)
+[tune]         zscore S002: mean validation accuracy 75.00%
+  S003 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S003 F1 Ep 001 | tr 0.7677 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S003 F1 Ep 050 | tr 0.2463 | val 37.5% | best val acc 50.0% (ep 20) | lr 9.4e-04
+[tune zscore] S003 F1 Ep 100 | tr 0.2161 | val 37.5% | best val acc 50.0% (ep 20) | lr 7.5e-04
+[tune zscore] S003 F1 Early stop @ ep 100 (best epoch 20)
+[tune]         zscore S003: mean validation accuracy 50.00%
+  S004 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S004 F1 Ep 001 | tr 0.6710 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S004 F1 Ep 050 | tr 0.2158 | val 75.0% | best val acc 75.0% (ep 50) | lr 9.4e-04
+[tune zscore] S004 F1 Ep 100 | tr 0.2112 | val 87.5% | best val acc 87.5% (ep 100) | lr 7.5e-04
+[tune zscore] S004 F1 Ep 150 | tr 0.2127 | val 62.5% | best val acc 87.5% (ep 101) | lr 5.1e-04
+[tune zscore] S004 F1 Early stop @ ep 181 (best epoch 101)
+[tune]         zscore S004: mean validation accuracy 87.50%
+  S005 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 21, 'right_hand': 24} train/test trials=[30, 15]
+[tune zscore] S005 F1 Ep 001 | tr 0.7350 | val 75.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S005 F1 Ep 050 | tr 0.2405 | val 50.0% | best val acc 50.0% (ep 20) | lr 9.4e-04
+[tune zscore] S005 F1 Ep 100 | tr 0.2124 | val 50.0% | best val acc 62.5% (ep 74) | lr 7.5e-04
+[tune zscore] S005 F1 Ep 150 | tr 0.2082 | val 50.0% | best val acc 62.5% (ep 74) | lr 5.1e-04
+[tune zscore] S005 F1 Early stop @ ep 154 (best epoch 74)
+[tune]         zscore S005: mean validation accuracy 62.50%
+  S006 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune zscore] S006 F1 Ep 001 | tr 0.7154 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S006 F1 Ep 050 | tr 0.2374 | val 50.0% | best val acc 62.5% (ep 30) | lr 9.4e-04
+[tune zscore] S006 F1 Ep 100 | tr 0.2222 | val 37.5% | best val acc 62.5% (ep 30) | lr 7.5e-04
+[tune zscore] S006 F1 Early stop @ ep 110 (best epoch 30)
+[tune]         zscore S006: mean validation accuracy 62.50%
+  S007 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S007 F1 Ep 001 | tr 0.7199 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S007 F1 Ep 050 | tr 0.2205 | val 75.0% | best val acc 87.5% (ep 43) | lr 9.4e-04
+[tune zscore] S007 F1 Ep 100 | tr 0.2248 | val 62.5% | best val acc 87.5% (ep 43) | lr 7.5e-04
+[tune zscore] S007 F1 Early stop @ ep 123 (best epoch 43)
+[tune]         zscore S007: mean validation accuracy 87.50%
+  S008 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S008 F1 Ep 001 | tr 0.7692 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S008 F1 Ep 050 | tr 0.2313 | val 37.5% | best val acc 50.0% (ep 28) | lr 9.4e-04
+[tune zscore] S008 F1 Ep 100 | tr 0.2118 | val 37.5% | best val acc 50.0% (ep 28) | lr 7.5e-04
+[tune zscore] S008 F1 Early stop @ ep 108 (best epoch 28)
+[tune]         zscore S008: mean validation accuracy 50.00%
+  S009 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune zscore] S009 F1 Ep 001 | tr 0.7028 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S009 F1 Ep 050 | tr 0.2318 | val 50.0% | best val acc 50.0% (ep 50) | lr 9.4e-04
+[tune zscore] S009 F1 Ep 100 | tr 0.2053 | val 50.0% | best val acc 50.0% (ep 100) | lr 7.5e-04
+[tune zscore] S009 F1 Ep 150 | tr 0.2149 | val 50.0% | best val acc 50.0% (ep 100) | lr 5.1e-04
+[tune zscore] S009 F1 Early stop @ ep 180 (best epoch 100)
+[tune]         zscore S009: mean validation accuracy 50.00%
+  S010 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune zscore] S010 F1 Ep 001 | tr 0.7556 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S010 F1 Ep 050 | tr 0.2197 | val 62.5% | best val acc 62.5% (ep 49) | lr 9.4e-04
+[tune zscore] S010 F1 Ep 100 | tr 0.2112 | val 37.5% | best val acc 62.5% (ep 49) | lr 7.5e-04
+[tune zscore] S010 F1 Early stop @ ep 129 (best epoch 49)
+[tune]         zscore S010: mean validation accuracy 62.50%
+  S011 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S011 F1 Ep 001 | tr 0.6680 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S011 F1 Ep 050 | tr 0.2273 | val 37.5% | best val acc 50.0% (ep 20) | lr 9.4e-04
+[tune zscore] S011 F1 Ep 100 | tr 0.2171 | val 37.5% | best val acc 50.0% (ep 20) | lr 7.5e-04
+[tune zscore] S011 F1 Early stop @ ep 100 (best epoch 20)
+[tune]         zscore S011: mean validation accuracy 50.00%
+  S012 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 21, 'right_hand': 24} train/test trials=[30, 15]
+[tune zscore] S012 F1 Ep 001 | tr 0.7087 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S012 F1 Ep 050 | tr 0.2236 | val 50.0% | best val acc 62.5% (ep 46) | lr 9.4e-04
+[tune zscore] S012 F1 Ep 100 | tr 0.2243 | val 62.5% | best val acc 62.5% (ep 100) | lr 7.5e-04
+[tune zscore] S012 F1 Ep 150 | tr 0.2118 | val 62.5% | best val acc 62.5% (ep 150) | lr 5.1e-04
+[tune zscore] S012 F1 Ep 200 | tr 0.2133 | val 62.5% | best val acc 75.0% (ep 152) | lr 2.6e-04
+[tune zscore] S012 F1 Ep 250 | tr 0.2089 | val 75.0% | best val acc 75.0% (ep 231) | lr 7.1e-05
+[tune zscore] S012 F1 Ep 300 | tr 0.2089 | val 75.0% | best val acc 75.0% (ep 300) | lr 1.0e-06
+[tune]         zscore S012: mean validation accuracy 75.00%
+  S013 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S013 F1 Ep 001 | tr 0.7181 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S013 F1 Ep 050 | tr 0.2700 | val 50.0% | best val acc 50.0% (ep 46) | lr 9.4e-04
+[tune zscore] S013 F1 Ep 100 | tr 0.2459 | val 37.5% | best val acc 62.5% (ep 88) | lr 7.5e-04
+[tune zscore] S013 F1 Ep 150 | tr 0.2126 | val 25.0% | best val acc 62.5% (ep 88) | lr 5.1e-04
+[tune zscore] S013 F1 Early stop @ ep 168 (best epoch 88)
+[tune]         zscore S013: mean validation accuracy 62.50%
+  S014 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S014 F1 Ep 001 | tr 0.7360 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S014 F1 Ep 050 | tr 0.2377 | val 50.0% | best val acc 50.0% (ep 20) | lr 9.4e-04
+[tune zscore] S014 F1 Ep 100 | tr 0.2120 | val 37.5% | best val acc 50.0% (ep 20) | lr 7.5e-04
+[tune zscore] S014 F1 Early stop @ ep 100 (best epoch 20)
+[tune]         zscore S014: mean validation accuracy 50.00%
+  S015 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S015 F1 Ep 001 | tr 0.7216 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S015 F1 Ep 050 | tr 0.2161 | val 37.5% | best val acc 37.5% (ep 20) | lr 9.4e-04
+[tune zscore] S015 F1 Ep 100 | tr 0.2080 | val 50.0% | best val acc 50.0% (ep 61) | lr 7.5e-04
+[tune zscore] S015 F1 Early stop @ ep 141 (best epoch 61)
+[tune]         zscore S015: mean validation accuracy 50.00%
+  S016 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S016 F1 Ep 001 | tr 0.6479 | val 75.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S016 F1 Ep 050 | tr 0.2556 | val 62.5% | best val acc 75.0% (ep 46) | lr 9.4e-04
+[tune zscore] S016 F1 Ep 100 | tr 0.2392 | val 75.0% | best val acc 75.0% (ep 89) | lr 7.5e-04
+[tune zscore] S016 F1 Ep 150 | tr 0.2084 | val 75.0% | best val acc 75.0% (ep 135) | lr 5.1e-04
+[tune zscore] S016 F1 Ep 200 | tr 0.2090 | val 75.0% | best val acc 75.0% (ep 152) | lr 2.6e-04
+[tune zscore] S016 F1 Early stop @ ep 232 (best epoch 152)
+[tune]         zscore S016: mean validation accuracy 75.00%
+  S017 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S017 F1 Ep 001 | tr 0.8415 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S017 F1 Ep 050 | tr 0.2409 | val 50.0% | best val acc 50.0% (ep 50) | lr 9.4e-04
+[tune zscore] S017 F1 Ep 100 | tr 0.2095 | val 50.0% | best val acc 62.5% (ep 79) | lr 7.5e-04
+[tune zscore] S017 F1 Ep 150 | tr 0.2201 | val 37.5% | best val acc 62.5% (ep 79) | lr 5.1e-04
+[tune zscore] S017 F1 Early stop @ ep 159 (best epoch 79)
+[tune]         zscore S017: mean validation accuracy 62.50%
+  S018 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S018 F1 Ep 001 | tr 0.7914 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S018 F1 Ep 050 | tr 0.2401 | val 75.0% | best val acc 75.0% (ep 41) | lr 9.4e-04
+[tune zscore] S018 F1 Ep 100 | tr 0.2174 | val 62.5% | best val acc 75.0% (ep 41) | lr 7.5e-04
+[tune zscore] S018 F1 Early stop @ ep 121 (best epoch 41)
+[tune]         zscore S018: mean validation accuracy 75.00%
+  S019 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S019 F1 Ep 001 | tr 0.6470 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S019 F1 Ep 050 | tr 0.2231 | val 50.0% | best val acc 50.0% (ep 36) | lr 9.4e-04
+[tune zscore] S019 F1 Ep 100 | tr 0.2179 | val 25.0% | best val acc 50.0% (ep 36) | lr 7.5e-04
+[tune zscore] S019 F1 Early stop @ ep 116 (best epoch 36)
+[tune]         zscore S019: mean validation accuracy 50.00%
+  S020 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S020 F1 Ep 001 | tr 0.7465 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S020 F1 Ep 050 | tr 0.2244 | val 62.5% | best val acc 62.5% (ep 50) | lr 9.4e-04
+[tune zscore] S020 F1 Ep 100 | tr 0.2085 | val 75.0% | best val acc 75.0% (ep 97) | lr 7.5e-04
+[tune zscore] S020 F1 Ep 150 | tr 0.2053 | val 50.0% | best val acc 75.0% (ep 111) | lr 5.1e-04
+[tune zscore] S020 F1 Early stop @ ep 191 (best epoch 111)
+[tune]         zscore S020: mean validation accuracy 75.00%
+  S021 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune zscore] S021 F1 Ep 001 | tr 0.8108 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S021 F1 Ep 050 | tr 0.2319 | val 12.5% | best val acc 25.0% (ep 32) | lr 9.4e-04
+[tune zscore] S021 F1 Ep 100 | tr 0.2191 | val 12.5% | best val acc 25.0% (ep 32) | lr 7.5e-04
+[tune zscore] S021 F1 Early stop @ ep 112 (best epoch 32)
+[tune]         zscore S021: mean validation accuracy 25.00%
+  S022 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S022 F1 Ep 001 | tr 0.6509 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S022 F1 Ep 050 | tr 0.2238 | val 75.0% | best val acc 75.0% (ep 50) | lr 9.4e-04
+[tune zscore] S022 F1 Ep 100 | tr 0.2156 | val 75.0% | best val acc 75.0% (ep 100) | lr 7.5e-04
+[tune zscore] S022 F1 Ep 150 | tr 0.2096 | val 75.0% | best val acc 87.5% (ep 116) | lr 5.1e-04
+[tune zscore] S022 F1 Early stop @ ep 196 (best epoch 116)
+[tune]         zscore S022: mean validation accuracy 87.50%
+  S023 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S023 F1 Ep 001 | tr 0.7835 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S023 F1 Ep 050 | tr 0.2157 | val 50.0% | best val acc 62.5% (ep 42) | lr 9.4e-04
+[tune zscore] S023 F1 Ep 100 | tr 0.2091 | val 50.0% | best val acc 62.5% (ep 42) | lr 7.5e-04
+[tune zscore] S023 F1 Ep 150 | tr 0.2157 | val 50.0% | best val acc 62.5% (ep 122) | lr 5.1e-04
+[tune zscore] S023 F1 Ep 200 | tr 0.2094 | val 50.0% | best val acc 62.5% (ep 122) | lr 2.6e-04
+[tune zscore] S023 F1 Early stop @ ep 202 (best epoch 122)
+[tune]         zscore S023: mean validation accuracy 62.50%
+  S024 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S024 F1 Ep 001 | tr 0.7444 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S024 F1 Ep 050 | tr 0.2215 | val 50.0% | best val acc 50.0% (ep 30) | lr 9.4e-04
+[tune zscore] S024 F1 Ep 100 | tr 0.2122 | val 50.0% | best val acc 50.0% (ep 30) | lr 7.5e-04
+[tune zscore] S024 F1 Ep 150 | tr 0.2045 | val 75.0% | best val acc 75.0% (ep 150) | lr 5.1e-04
+[tune zscore] S024 F1 Ep 200 | tr 0.2128 | val 50.0% | best val acc 75.0% (ep 156) | lr 2.6e-04
+[tune zscore] S024 F1 Early stop @ ep 236 (best epoch 156)
+[tune]         zscore S024: mean validation accuracy 75.00%
+  S025 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S025 F1 Ep 001 | tr 0.8203 | val 75.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S025 F1 Ep 050 | tr 0.2594 | val 62.5% | best val acc 75.0% (ep 37) | lr 9.4e-04
+[tune zscore] S025 F1 Ep 100 | tr 0.2135 | val 62.5% | best val acc 75.0% (ep 37) | lr 7.5e-04
+[tune zscore] S025 F1 Ep 150 | tr 0.2081 | val 75.0% | best val acc 87.5% (ep 114) | lr 5.1e-04
+[tune zscore] S025 F1 Early stop @ ep 194 (best epoch 114)
+[tune]         zscore S025: mean validation accuracy 87.50%
+  S026 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune zscore] S026 F1 Ep 001 | tr 0.7612 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S026 F1 Ep 050 | tr 0.2489 | val 37.5% | best val acc 37.5% (ep 20) | lr 9.4e-04
+[tune zscore] S026 F1 Ep 100 | tr 0.2168 | val 37.5% | best val acc 37.5% (ep 20) | lr 7.5e-04
+[tune zscore] S026 F1 Early stop @ ep 100 (best epoch 20)
+[tune]         zscore S026: mean validation accuracy 37.50%
+  S027 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S027 F1 Ep 001 | tr 0.8801 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S027 F1 Ep 050 | tr 0.2140 | val 37.5% | best val acc 37.5% (ep 20) | lr 9.4e-04
+[tune zscore] S027 F1 Ep 100 | tr 0.2123 | val 37.5% | best val acc 37.5% (ep 20) | lr 7.5e-04
+[tune zscore] S027 F1 Early stop @ ep 100 (best epoch 20)
+[tune]         zscore S027: mean validation accuracy 37.50%
+  S028 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S028 F1 Ep 001 | tr 0.8453 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S028 F1 Ep 050 | tr 0.2347 | val 87.5% | best val acc 87.5% (ep 49) | lr 9.4e-04
+[tune zscore] S028 F1 Ep 100 | tr 0.2108 | val 87.5% | best val acc 100.0% (ep 90) | lr 7.5e-04
+[tune zscore] S028 F1 Ep 150 | tr 0.2218 | val 75.0% | best val acc 100.0% (ep 90) | lr 5.1e-04
+[tune zscore] S028 F1 Early stop @ ep 170 (best epoch 90)
+[tune]         zscore S028: mean validation accuracy 100.00%
+  S029 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S029 F1 Ep 001 | tr 0.7453 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S029 F1 Ep 050 | tr 0.2415 | val 50.0% | best val acc 62.5% (ep 36) | lr 9.4e-04
+[tune zscore] S029 F1 Ep 100 | tr 0.2223 | val 50.0% | best val acc 62.5% (ep 74) | lr 7.5e-04
+[tune zscore] S029 F1 Ep 150 | tr 0.2057 | val 50.0% | best val acc 62.5% (ep 136) | lr 5.1e-04
+[tune zscore] S029 F1 Ep 200 | tr 0.2059 | val 50.0% | best val acc 62.5% (ep 136) | lr 2.6e-04
+[tune zscore] S029 F1 Early stop @ ep 216 (best epoch 136)
+[tune]         zscore S029: mean validation accuracy 62.50%
+  S030 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune zscore] S030 F1 Ep 001 | tr 0.8013 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S030 F1 Ep 050 | tr 0.2207 | val 62.5% | best val acc 62.5% (ep 48) | lr 9.4e-04
+[tune zscore] S030 F1 Ep 100 | tr 0.2061 | val 62.5% | best val acc 62.5% (ep 92) | lr 7.5e-04
+[tune zscore] S030 F1 Ep 150 | tr 0.2093 | val 37.5% | best val acc 62.5% (ep 92) | lr 5.1e-04
+[tune zscore] S030 F1 Early stop @ ep 172 (best epoch 92)
+[tune]         zscore S030: mean validation accuracy 62.50%
+  S031 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S031 F1 Ep 001 | tr 0.8115 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S031 F1 Ep 050 | tr 0.2529 | val 37.5% | best val acc 37.5% (ep 20) | lr 9.4e-04
+[tune zscore] S031 F1 Ep 100 | tr 0.2186 | val 25.0% | best val acc 37.5% (ep 20) | lr 7.5e-04
+[tune zscore] S031 F1 Early stop @ ep 100 (best epoch 20)
+[tune]         zscore S031: mean validation accuracy 37.50%
+  S032 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 21, 'right_hand': 24} train/test trials=[30, 15]
+[tune zscore] S032 F1 Ep 001 | tr 0.6642 | val 100.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S032 F1 Ep 050 | tr 0.2270 | val 50.0% | best val acc 75.0% (ep 20) | lr 9.4e-04
+[tune zscore] S032 F1 Ep 100 | tr 0.2275 | val 100.0% | best val acc 100.0% (ep 91) | lr 7.5e-04
+[tune zscore] S032 F1 Ep 150 | tr 0.2098 | val 100.0% | best val acc 100.0% (ep 145) | lr 5.1e-04
+[tune zscore] S032 F1 Ep 200 | tr 0.2112 | val 100.0% | best val acc 100.0% (ep 199) | lr 2.6e-04
+[tune zscore] S032 F1 Ep 250 | tr 0.2114 | val 100.0% | best val acc 100.0% (ep 217) | lr 7.1e-05
+[tune zscore] S032 F1 Ep 300 | tr 0.2071 | val 100.0% | best val acc 100.0% (ep 300) | lr 1.0e-06
+[tune]         zscore S032: mean validation accuracy 100.00%
+  S033 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S033 F1 Ep 001 | tr 0.6540 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S033 F1 Ep 050 | tr 0.2562 | val 87.5% | best val acc 87.5% (ep 50) | lr 9.4e-04
+[tune zscore] S033 F1 Ep 100 | tr 0.2136 | val 75.0% | best val acc 87.5% (ep 96) | lr 7.5e-04
+[tune zscore] S033 F1 Ep 150 | tr 0.2128 | val 75.0% | best val acc 87.5% (ep 148) | lr 5.1e-04
+[tune zscore] S033 F1 Ep 200 | tr 0.2140 | val 75.0% | best val acc 87.5% (ep 148) | lr 2.6e-04
+[tune zscore] S033 F1 Early stop @ ep 228 (best epoch 148)
+[tune]         zscore S033: mean validation accuracy 87.50%
+  S034 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 21, 'right_hand': 24} train/test trials=[30, 15]
+[tune zscore] S034 F1 Ep 001 | tr 0.7858 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S034 F1 Ep 050 | tr 0.2169 | val 75.0% | best val acc 75.0% (ep 50) | lr 9.4e-04
+[tune zscore] S034 F1 Ep 100 | tr 0.2157 | val 50.0% | best val acc 75.0% (ep 63) | lr 7.5e-04
+[tune zscore] S034 F1 Early stop @ ep 143 (best epoch 63)
+[tune]         zscore S034: mean validation accuracy 75.00%
+  S035 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S035 F1 Ep 001 | tr 0.6082 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S035 F1 Ep 050 | tr 0.2124 | val 62.5% | best val acc 62.5% (ep 50) | lr 9.4e-04
+[tune zscore] S035 F1 Ep 100 | tr 0.2166 | val 62.5% | best val acc 62.5% (ep 81) | lr 7.5e-04
+[tune zscore] S035 F1 Ep 150 | tr 0.2065 | val 62.5% | best val acc 62.5% (ep 130) | lr 5.1e-04
+[tune zscore] S035 F1 Ep 200 | tr 0.2056 | val 62.5% | best val acc 62.5% (ep 130) | lr 2.6e-04
+[tune zscore] S035 F1 Early stop @ ep 210 (best epoch 130)
+[tune]         zscore S035: mean validation accuracy 62.50%
+  S036 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S036 F1 Ep 001 | tr 0.7655 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S036 F1 Ep 050 | tr 0.2771 | val 37.5% | best val acc 37.5% (ep 30) | lr 9.4e-04
+[tune zscore] S036 F1 Ep 100 | tr 0.2299 | val 37.5% | best val acc 37.5% (ep 30) | lr 7.5e-04
+[tune zscore] S036 F1 Early stop @ ep 110 (best epoch 30)
+[tune]         zscore S036: mean validation accuracy 37.50%
+  S037 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S037 F1 Ep 001 | tr 0.7855 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S037 F1 Ep 050 | tr 0.2388 | val 50.0% | best val acc 50.0% (ep 50) | lr 9.4e-04
+[tune zscore] S037 F1 Ep 100 | tr 0.2260 | val 62.5% | best val acc 62.5% (ep 100) | lr 7.5e-04
+[tune zscore] S037 F1 Ep 150 | tr 0.2074 | val 50.0% | best val acc 62.5% (ep 118) | lr 5.1e-04
+[tune zscore] S037 F1 Early stop @ ep 198 (best epoch 118)
+[tune]         zscore S037: mean validation accuracy 62.50%
+  S038 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S038 F1 Ep 001 | tr 0.7406 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S038 F1 Ep 050 | tr 0.2164 | val 75.0% | best val acc 75.0% (ep 50) | lr 9.4e-04
+[tune zscore] S038 F1 Ep 100 | tr 0.2158 | val 75.0% | best val acc 87.5% (ep 61) | lr 7.5e-04
+[tune zscore] S038 F1 Early stop @ ep 141 (best epoch 61)
+[tune]         zscore S038: mean validation accuracy 87.50%
+  S039 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S039 F1 Ep 001 | tr 0.7901 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S039 F1 Ep 050 | tr 0.2299 | val 37.5% | best val acc 50.0% (ep 20) | lr 9.4e-04
+[tune zscore] S039 F1 Ep 100 | tr 0.2112 | val 62.5% | best val acc 62.5% (ep 97) | lr 7.5e-04
+[tune zscore] S039 F1 Ep 150 | tr 0.2136 | val 50.0% | best val acc 62.5% (ep 135) | lr 5.1e-04
+[tune zscore] S039 F1 Ep 200 | tr 0.2139 | val 62.5% | best val acc 62.5% (ep 135) | lr 2.6e-04
+[tune zscore] S039 F1 Early stop @ ep 215 (best epoch 135)
+[tune]         zscore S039: mean validation accuracy 62.50%
+  S040 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 21, 'right_hand': 24} train/test trials=[30, 15]
+[tune zscore] S040 F1 Ep 001 | tr 0.7656 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S040 F1 Ep 050 | tr 0.2085 | val 62.5% | best val acc 62.5% (ep 48) | lr 9.4e-04
+[tune zscore] S040 F1 Ep 100 | tr 0.2169 | val 62.5% | best val acc 87.5% (ep 76) | lr 7.5e-04
+[tune zscore] S040 F1 Ep 150 | tr 0.2080 | val 75.0% | best val acc 87.5% (ep 76) | lr 5.1e-04
+[tune zscore] S040 F1 Early stop @ ep 156 (best epoch 76)
+[tune]         zscore S040: mean validation accuracy 87.50%
+  S041 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune zscore] S041 F1 Ep 001 | tr 0.6263 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S041 F1 Ep 050 | tr 0.2333 | val 37.5% | best val acc 37.5% (ep 44) | lr 9.4e-04
+[tune zscore] S041 F1 Ep 100 | tr 0.2110 | val 50.0% | best val acc 50.0% (ep 75) | lr 7.5e-04
+[tune zscore] S041 F1 Ep 150 | tr 0.2166 | val 50.0% | best val acc 62.5% (ep 110) | lr 5.1e-04
+[tune zscore] S041 F1 Ep 200 | tr 0.2163 | val 62.5% | best val acc 62.5% (ep 185) | lr 2.6e-04
+[tune zscore] S041 F1 Ep 250 | tr 0.2086 | val 62.5% | best val acc 62.5% (ep 185) | lr 7.1e-05
+[tune zscore] S041 F1 Early stop @ ep 265 (best epoch 185)
+[tune]         zscore S041: mean validation accuracy 62.50%
+  S042 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S042 F1 Ep 001 | tr 0.7815 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S042 F1 Ep 050 | tr 0.2454 | val 50.0% | best val acc 62.5% (ep 26) | lr 9.4e-04
+[tune zscore] S042 F1 Ep 100 | tr 0.2138 | val 50.0% | best val acc 62.5% (ep 26) | lr 7.5e-04
+[tune zscore] S042 F1 Early stop @ ep 106 (best epoch 26)
+[tune]         zscore S042: mean validation accuracy 62.50%
+  S043 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S043 F1 Ep 001 | tr 0.6837 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S043 F1 Ep 050 | tr 0.2190 | val 37.5% | best val acc 50.0% (ep 20) | lr 9.4e-04
+[tune zscore] S043 F1 Ep 100 | tr 0.2092 | val 50.0% | best val acc 75.0% (ep 85) | lr 7.5e-04
+[tune zscore] S043 F1 Ep 150 | tr 0.2090 | val 50.0% | best val acc 75.0% (ep 85) | lr 5.1e-04
+[tune zscore] S043 F1 Early stop @ ep 165 (best epoch 85)
+[tune]         zscore S043: mean validation accuracy 75.00%
+  S044 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S044 F1 Ep 001 | tr 0.8226 | val 75.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S044 F1 Ep 050 | tr 0.2381 | val 50.0% | best val acc 50.0% (ep 28) | lr 9.4e-04
+[tune zscore] S044 F1 Ep 100 | tr 0.2159 | val 37.5% | best val acc 50.0% (ep 28) | lr 7.5e-04
+[tune zscore] S044 F1 Early stop @ ep 108 (best epoch 28)
+[tune]         zscore S044: mean validation accuracy 50.00%
+  S045 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S045 F1 Ep 001 | tr 0.7129 | val 75.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S045 F1 Ep 050 | tr 0.2472 | val 75.0% | best val acc 75.0% (ep 50) | lr 9.4e-04
+[tune zscore] S045 F1 Ep 100 | tr 0.2059 | val 62.5% | best val acc 75.0% (ep 93) | lr 7.5e-04
+[tune zscore] S045 F1 Ep 150 | tr 0.2090 | val 62.5% | best val acc 75.0% (ep 115) | lr 5.1e-04
+[tune zscore] S045 F1 Early stop @ ep 195 (best epoch 115)
+[tune]         zscore S045: mean validation accuracy 75.00%
+  S046 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S046 F1 Ep 001 | tr 0.7905 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S046 F1 Ep 050 | tr 0.2427 | val 50.0% | best val acc 75.0% (ep 24) | lr 9.4e-04
+[tune zscore] S046 F1 Ep 100 | tr 0.2114 | val 50.0% | best val acc 75.0% (ep 24) | lr 7.5e-04
+[tune zscore] S046 F1 Early stop @ ep 104 (best epoch 24)
+[tune]         zscore S046: mean validation accuracy 75.00%
+  S047 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune zscore] S047 F1 Ep 001 | tr 0.7817 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S047 F1 Ep 050 | tr 0.2495 | val 50.0% | best val acc 50.0% (ep 48) | lr 9.4e-04
+[tune zscore] S047 F1 Ep 100 | tr 0.2124 | val 50.0% | best val acc 62.5% (ep 63) | lr 7.5e-04
+[tune zscore] S047 F1 Early stop @ ep 143 (best epoch 63)
+[tune]         zscore S047: mean validation accuracy 62.50%
+  S048 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S048 F1 Ep 001 | tr 0.7803 | val 75.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S048 F1 Ep 050 | tr 0.2380 | val 50.0% | best val acc 50.0% (ep 49) | lr 9.4e-04
+[tune zscore] S048 F1 Ep 100 | tr 0.2132 | val 50.0% | best val acc 50.0% (ep 90) | lr 7.5e-04
+[tune zscore] S048 F1 Ep 150 | tr 0.2105 | val 62.5% | best val acc 62.5% (ep 141) | lr 5.1e-04
+[tune zscore] S048 F1 Ep 200 | tr 0.2152 | val 75.0% | best val acc 75.0% (ep 189) | lr 2.6e-04
+[tune zscore] S048 F1 Ep 250 | tr 0.2068 | val 87.5% | best val acc 87.5% (ep 213) | lr 7.1e-05
+[tune zscore] S048 F1 Ep 300 | tr 0.2146 | val 87.5% | best val acc 87.5% (ep 271) | lr 1.0e-06
+[tune]         zscore S048: mean validation accuracy 87.50%
+  S049 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S049 F1 Ep 001 | tr 0.7997 | val 87.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S049 F1 Ep 050 | tr 0.2311 | val 62.5% | best val acc 75.0% (ep 41) | lr 9.4e-04
+[tune zscore] S049 F1 Ep 100 | tr 0.2200 | val 62.5% | best val acc 75.0% (ep 41) | lr 7.5e-04
+[tune zscore] S049 F1 Early stop @ ep 121 (best epoch 41)
+[tune]         zscore S049: mean validation accuracy 75.00%
+  S050 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S050 F1 Ep 001 | tr 0.7502 | val 75.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S050 F1 Ep 050 | tr 0.2409 | val 37.5% | best val acc 75.0% (ep 41) | lr 9.4e-04
+[tune zscore] S050 F1 Ep 100 | tr 0.2204 | val 37.5% | best val acc 75.0% (ep 41) | lr 7.5e-04
+[tune zscore] S050 F1 Early stop @ ep 121 (best epoch 41)
+[tune]         zscore S050: mean validation accuracy 75.00%
+  S051 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune zscore] S051 F1 Ep 001 | tr 0.8482 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S051 F1 Ep 050 | tr 0.2555 | val 87.5% | best val acc 87.5% (ep 50) | lr 9.4e-04
+[tune zscore] S051 F1 Ep 100 | tr 0.2152 | val 62.5% | best val acc 87.5% (ep 88) | lr 7.5e-04
+[tune zscore] S051 F1 Ep 150 | tr 0.2106 | val 62.5% | best val acc 100.0% (ep 119) | lr 5.1e-04
+[tune zscore] S051 F1 Early stop @ ep 199 (best epoch 119)
+[tune]         zscore S051: mean validation accuracy 100.00%
+  S052 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune zscore] S052 F1 Ep 001 | tr 0.7984 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S052 F1 Ep 050 | tr 0.2095 | val 25.0% | best val acc 37.5% (ep 20) | lr 9.4e-04
+[tune zscore] S052 F1 Ep 100 | tr 0.2048 | val 37.5% | best val acc 37.5% (ep 20) | lr 7.5e-04
+[tune zscore] S052 F1 Early stop @ ep 100 (best epoch 20)
+[tune]         zscore S052: mean validation accuracy 37.50%
+  S053 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S053 F1 Ep 001 | tr 0.7783 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S053 F1 Ep 050 | tr 0.2191 | val 50.0% | best val acc 62.5% (ep 27) | lr 9.4e-04
+[tune zscore] S053 F1 Ep 100 | tr 0.2097 | val 62.5% | best val acc 62.5% (ep 97) | lr 7.5e-04
+[tune zscore] S053 F1 Ep 150 | tr 0.2177 | val 75.0% | best val acc 75.0% (ep 136) | lr 5.1e-04
+[tune zscore] S053 F1 Ep 200 | tr 0.2129 | val 75.0% | best val acc 75.0% (ep 136) | lr 2.6e-04
+[tune zscore] S053 F1 Early stop @ ep 216 (best epoch 136)
+[tune]         zscore S053: mean validation accuracy 75.00%
+  S054 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S054 F1 Ep 001 | tr 0.7072 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S054 F1 Ep 050 | tr 0.2556 | val 75.0% | best val acc 75.0% (ep 50) | lr 9.4e-04
+[tune zscore] S054 F1 Ep 100 | tr 0.2040 | val 87.5% | best val acc 87.5% (ep 100) | lr 7.5e-04
+[tune zscore] S054 F1 Ep 150 | tr 0.2078 | val 100.0% | best val acc 100.0% (ep 147) | lr 5.1e-04
+[tune zscore] S054 F1 Ep 200 | tr 0.2207 | val 75.0% | best val acc 100.0% (ep 179) | lr 2.6e-04
+[tune zscore] S054 F1 Ep 250 | tr 0.2056 | val 87.5% | best val acc 100.0% (ep 179) | lr 7.1e-05
+[tune zscore] S054 F1 Early stop @ ep 259 (best epoch 179)
+[tune]         zscore S054: mean validation accuracy 100.00%
+  S055 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S055 F1 Ep 001 | tr 0.6647 | val 75.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S055 F1 Ep 050 | tr 0.2502 | val 87.5% | best val acc 100.0% (ep 29) | lr 9.4e-04
+[tune zscore] S055 F1 Ep 100 | tr 0.2112 | val 87.5% | best val acc 100.0% (ep 84) | lr 7.5e-04
+[tune zscore] S055 F1 Ep 150 | tr 0.2103 | val 75.0% | best val acc 100.0% (ep 84) | lr 5.1e-04
+[tune zscore] S055 F1 Early stop @ ep 164 (best epoch 84)
+[tune]         zscore S055: mean validation accuracy 100.00%
+  S056 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S056 F1 Ep 001 | tr 0.7554 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S056 F1 Ep 050 | tr 0.2694 | val 75.0% | best val acc 87.5% (ep 41) | lr 9.4e-04
+[tune zscore] S056 F1 Ep 100 | tr 0.2313 | val 75.0% | best val acc 87.5% (ep 41) | lr 7.5e-04
+[tune zscore] S056 F1 Ep 150 | tr 0.2158 | val 75.0% | best val acc 87.5% (ep 107) | lr 5.1e-04
+[tune zscore] S056 F1 Early stop @ ep 187 (best epoch 107)
+[tune]         zscore S056: mean validation accuracy 87.50%
+  S057 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune zscore] S057 F1 Ep 001 | tr 0.7570 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S057 F1 Ep 050 | tr 0.2118 | val 75.0% | best val acc 75.0% (ep 50) | lr 9.4e-04
+[tune zscore] S057 F1 Ep 100 | tr 0.2080 | val 87.5% | best val acc 87.5% (ep 96) | lr 7.5e-04
+[tune zscore] S057 F1 Ep 150 | tr 0.2158 | val 100.0% | best val acc 100.0% (ep 150) | lr 5.1e-04
+[tune zscore] S057 F1 Ep 200 | tr 0.2077 | val 100.0% | best val acc 100.0% (ep 174) | lr 2.6e-04
+[tune zscore] S057 F1 Ep 250 | tr 0.2064 | val 100.0% | best val acc 100.0% (ep 250) | lr 7.1e-05
+[tune zscore] S057 F1 Ep 300 | tr 0.2084 | val 100.0% | best val acc 100.0% (ep 253) | lr 1.0e-06
+[tune]         zscore S057: mean validation accuracy 100.00%
+  S058 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune zscore] S058 F1 Ep 001 | tr 0.8140 | val 12.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S058 F1 Ep 050 | tr 0.2687 | val 50.0% | best val acc 50.0% (ep 30) | lr 9.4e-04
+[tune zscore] S058 F1 Ep 100 | tr 0.2167 | val 50.0% | best val acc 50.0% (ep 30) | lr 7.5e-04
+[tune zscore] S058 F1 Early stop @ ep 110 (best epoch 30)
+[tune]         zscore S058: mean validation accuracy 50.00%
+  S059 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune zscore] S059 F1 Ep 001 | tr 0.7058 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S059 F1 Ep 050 | tr 0.2142 | val 62.5% | best val acc 62.5% (ep 50) | lr 9.4e-04
+[tune zscore] S059 F1 Ep 100 | tr 0.2158 | val 75.0% | best val acc 87.5% (ep 83) | lr 7.5e-04
+[tune zscore] S059 F1 Ep 150 | tr 0.2127 | val 75.0% | best val acc 87.5% (ep 83) | lr 5.1e-04
+[tune zscore] S059 F1 Early stop @ ep 163 (best epoch 83)
+[tune]         zscore S059: mean validation accuracy 87.50%
+  S060 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S060 F1 Ep 001 | tr 0.8107 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S060 F1 Ep 050 | tr 0.2321 | val 62.5% | best val acc 62.5% (ep 50) | lr 9.4e-04
+[tune zscore] S060 F1 Ep 100 | tr 0.2085 | val 75.0% | best val acc 75.0% (ep 91) | lr 7.5e-04
+[tune zscore] S060 F1 Ep 150 | tr 0.2070 | val 87.5% | best val acc 87.5% (ep 150) | lr 5.1e-04
+[tune zscore] S060 F1 Ep 200 | tr 0.2112 | val 87.5% | best val acc 87.5% (ep 197) | lr 2.6e-04
+[tune zscore] S060 F1 Ep 250 | tr 0.2151 | val 87.5% | best val acc 87.5% (ep 220) | lr 7.1e-05
+[tune zscore] S060 F1 Ep 300 | tr 0.2187 | val 87.5% | best val acc 87.5% (ep 220) | lr 1.0e-06
+[tune zscore] S060 F1 Early stop @ ep 300 (best epoch 220)
+[tune]         zscore S060: mean validation accuracy 87.50%
+  S061 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S061 F1 Ep 001 | tr 0.7374 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S061 F1 Ep 050 | tr 0.2621 | val 50.0% | best val acc 50.0% (ep 48) | lr 9.4e-04
+[tune zscore] S061 F1 Ep 100 | tr 0.2099 | val 50.0% | best val acc 50.0% (ep 48) | lr 7.5e-04
+[tune zscore] S061 F1 Ep 150 | tr 0.2354 | val 62.5% | best val acc 62.5% (ep 126) | lr 5.1e-04
+[tune zscore] S061 F1 Ep 200 | tr 0.2144 | val 50.0% | best val acc 62.5% (ep 172) | lr 2.6e-04
+[tune zscore] S061 F1 Ep 250 | tr 0.2147 | val 62.5% | best val acc 62.5% (ep 172) | lr 7.1e-05
+[tune zscore] S061 F1 Early stop @ ep 252 (best epoch 172)
+[tune]         zscore S061: mean validation accuracy 62.50%
+  S062 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S062 F1 Ep 001 | tr 0.6521 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S062 F1 Ep 050 | tr 0.2385 | val 37.5% | best val acc 50.0% (ep 20) | lr 9.4e-04
+[tune zscore] S062 F1 Ep 100 | tr 0.2105 | val 37.5% | best val acc 50.0% (ep 20) | lr 7.5e-04
+[tune zscore] S062 F1 Early stop @ ep 100 (best epoch 20)
+[tune]         zscore S062: mean validation accuracy 50.00%
+  S063 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S063 F1 Ep 001 | tr 0.6458 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S063 F1 Ep 050 | tr 0.2374 | val 62.5% | best val acc 62.5% (ep 49) | lr 9.4e-04
+[tune zscore] S063 F1 Ep 100 | tr 0.2200 | val 50.0% | best val acc 62.5% (ep 82) | lr 7.5e-04
+[tune zscore] S063 F1 Ep 150 | tr 0.2071 | val 50.0% | best val acc 62.5% (ep 82) | lr 5.1e-04
+[tune zscore] S063 F1 Early stop @ ep 162 (best epoch 82)
+[tune]         zscore S063: mean validation accuracy 62.50%
+  S064 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S064 F1 Ep 001 | tr 0.7609 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S064 F1 Ep 050 | tr 0.2682 | val 50.0% | best val acc 50.0% (ep 22) | lr 9.4e-04
+[tune zscore] S064 F1 Ep 100 | tr 0.2110 | val 62.5% | best val acc 62.5% (ep 100) | lr 7.5e-04
+[tune zscore] S064 F1 Ep 150 | tr 0.2104 | val 62.5% | best val acc 62.5% (ep 102) | lr 5.1e-04
+[tune zscore] S064 F1 Early stop @ ep 182 (best epoch 102)
+[tune]         zscore S064: mean validation accuracy 62.50%
+  S065 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune zscore] S065 F1 Ep 001 | tr 0.6854 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S065 F1 Ep 050 | tr 0.2086 | val 87.5% | best val acc 87.5% (ep 50) | lr 9.4e-04
+[tune zscore] S065 F1 Ep 100 | tr 0.2085 | val 75.0% | best val acc 87.5% (ep 96) | lr 7.5e-04
+[tune zscore] S065 F1 Ep 150 | tr 0.2037 | val 87.5% | best val acc 87.5% (ep 150) | lr 5.1e-04
+[tune zscore] S065 F1 Ep 200 | tr 0.2096 | val 87.5% | best val acc 87.5% (ep 189) | lr 2.6e-04
+[tune zscore] S065 F1 Ep 250 | tr 0.2036 | val 75.0% | best val acc 87.5% (ep 189) | lr 7.1e-05
+[tune zscore] S065 F1 Early stop @ ep 269 (best epoch 189)
+[tune]         zscore S065: mean validation accuracy 87.50%
+  S066 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S066 F1 Ep 001 | tr 0.9243 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S066 F1 Ep 050 | tr 0.2424 | val 50.0% | best val acc 62.5% (ep 33) | lr 9.4e-04
+[tune zscore] S066 F1 Ep 100 | tr 0.2374 | val 50.0% | best val acc 62.5% (ep 54) | lr 7.5e-04
+[tune zscore] S066 F1 Ep 150 | tr 0.2109 | val 50.0% | best val acc 62.5% (ep 111) | lr 5.1e-04
+[tune zscore] S066 F1 Early stop @ ep 191 (best epoch 111)
+[tune]         zscore S066: mean validation accuracy 62.50%
+  S067 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S067 F1 Ep 001 | tr 0.6876 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S067 F1 Ep 050 | tr 0.2119 | val 62.5% | best val acc 62.5% (ep 43) | lr 9.4e-04
+[tune zscore] S067 F1 Ep 100 | tr 0.2168 | val 62.5% | best val acc 75.0% (ep 80) | lr 7.5e-04
+[tune zscore] S067 F1 Ep 150 | tr 0.2162 | val 50.0% | best val acc 75.0% (ep 80) | lr 5.1e-04
+[tune zscore] S067 F1 Early stop @ ep 160 (best epoch 80)
+[tune]         zscore S067: mean validation accuracy 75.00%
+  S068 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S068 F1 Ep 001 | tr 0.7813 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S068 F1 Ep 050 | tr 0.2208 | val 25.0% | best val acc 50.0% (ep 20) | lr 9.4e-04
+[tune zscore] S068 F1 Ep 100 | tr 0.2203 | val 25.0% | best val acc 50.0% (ep 62) | lr 7.5e-04
+[tune zscore] S068 F1 Early stop @ ep 142 (best epoch 62)
+[tune]         zscore S068: mean validation accuracy 50.00%
+  S069 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune zscore] S069 F1 Ep 001 | tr 0.8888 | val 75.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S069 F1 Ep 050 | tr 0.2273 | val 50.0% | best val acc 50.0% (ep 28) | lr 9.4e-04
+[tune zscore] S069 F1 Ep 100 | tr 0.2123 | val 50.0% | best val acc 50.0% (ep 28) | lr 7.5e-04
+[tune zscore] S069 F1 Early stop @ ep 108 (best epoch 28)
+[tune]         zscore S069: mean validation accuracy 50.00%
+  S070 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S070 F1 Ep 001 | tr 0.7907 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S070 F1 Ep 050 | tr 0.2187 | val 50.0% | best val acc 62.5% (ep 31) | lr 9.4e-04
+[tune zscore] S070 F1 Ep 100 | tr 0.2097 | val 62.5% | best val acc 62.5% (ep 63) | lr 7.5e-04
+[tune zscore] S070 F1 Ep 150 | tr 0.2056 | val 50.0% | best val acc 62.5% (ep 103) | lr 5.1e-04
+[tune zscore] S070 F1 Early stop @ ep 183 (best epoch 103)
+[tune]         zscore S070: mean validation accuracy 62.50%
+  S071 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S071 F1 Ep 001 | tr 0.7212 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S071 F1 Ep 050 | tr 0.2368 | val 25.0% | best val acc 25.0% (ep 24) | lr 9.4e-04
+[tune zscore] S071 F1 Ep 100 | tr 0.2206 | val 50.0% | best val acc 50.0% (ep 100) | lr 7.5e-04
+[tune zscore] S071 F1 Ep 150 | tr 0.2170 | val 50.0% | best val acc 50.0% (ep 100) | lr 5.1e-04
+[tune zscore] S071 F1 Early stop @ ep 180 (best epoch 100)
+[tune]         zscore S071: mean validation accuracy 50.00%
+  S072 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S072 F1 Ep 001 | tr 0.7298 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S072 F1 Ep 050 | tr 0.2840 | val 50.0% | best val acc 50.0% (ep 45) | lr 9.4e-04
+[tune zscore] S072 F1 Ep 100 | tr 0.2090 | val 50.0% | best val acc 50.0% (ep 97) | lr 7.5e-04
+[tune zscore] S072 F1 Ep 150 | tr 0.2095 | val 62.5% | best val acc 75.0% (ep 147) | lr 5.1e-04
+[tune zscore] S072 F1 Ep 200 | tr 0.2099 | val 87.5% | best val acc 87.5% (ep 200) | lr 2.6e-04
+[tune zscore] S072 F1 Ep 250 | tr 0.2065 | val 75.0% | best val acc 87.5% (ep 233) | lr 7.1e-05
+[tune zscore] S072 F1 Ep 300 | tr 0.2055 | val 75.0% | best val acc 87.5% (ep 233) | lr 1.0e-06
+[tune]         zscore S072: mean validation accuracy 87.50%
+  S073 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S073 F1 Ep 001 | tr 0.6420 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S073 F1 Ep 050 | tr 0.2651 | val 25.0% | best val acc 50.0% (ep 20) | lr 9.4e-04
+[tune zscore] S073 F1 Ep 100 | tr 0.2120 | val 25.0% | best val acc 50.0% (ep 20) | lr 7.5e-04
+[tune zscore] S073 F1 Early stop @ ep 100 (best epoch 20)
+[tune]         zscore S073: mean validation accuracy 50.00%
+  S074 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune zscore] S074 F1 Ep 001 | tr 0.8177 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S074 F1 Ep 050 | tr 0.2431 | val 62.5% | best val acc 62.5% (ep 45) | lr 9.4e-04
+[tune zscore] S074 F1 Ep 100 | tr 0.2150 | val 62.5% | best val acc 62.5% (ep 45) | lr 7.5e-04
+[tune zscore] S074 F1 Early stop @ ep 125 (best epoch 45)
+[tune]         zscore S074: mean validation accuracy 62.50%
+  S075 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S075 F1 Ep 001 | tr 0.7619 | val 75.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S075 F1 Ep 050 | tr 0.2348 | val 50.0% | best val acc 50.0% (ep 23) | lr 9.4e-04
+[tune zscore] S075 F1 Ep 100 | tr 0.2166 | val 50.0% | best val acc 50.0% (ep 23) | lr 7.5e-04
+[tune zscore] S075 F1 Early stop @ ep 103 (best epoch 23)
+[tune]         zscore S075: mean validation accuracy 50.00%
+  S076 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S076 F1 Ep 001 | tr 0.7424 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S076 F1 Ep 050 | tr 0.2627 | val 50.0% | best val acc 50.0% (ep 20) | lr 9.4e-04
+[tune zscore] S076 F1 Ep 100 | tr 0.2196 | val 50.0% | best val acc 50.0% (ep 20) | lr 7.5e-04
+[tune zscore] S076 F1 Early stop @ ep 100 (best epoch 20)
+[tune]         zscore S076: mean validation accuracy 50.00%
+  S077 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 21, 'right_hand': 24} train/test trials=[30, 15]
+[tune zscore] S077 F1 Ep 001 | tr 0.7987 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S077 F1 Ep 050 | tr 0.2561 | val 62.5% | best val acc 75.0% (ep 40) | lr 9.4e-04
+[tune zscore] S077 F1 Ep 100 | tr 0.2169 | val 50.0% | best val acc 75.0% (ep 40) | lr 7.5e-04
+[tune zscore] S077 F1 Early stop @ ep 120 (best epoch 40)
+[tune]         zscore S077: mean validation accuracy 75.00%
+  S078 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S078 F1 Ep 001 | tr 0.7338 | val 75.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S078 F1 Ep 050 | tr 0.2438 | val 50.0% | best val acc 50.0% (ep 49) | lr 9.4e-04
+[tune zscore] S078 F1 Ep 100 | tr 0.2062 | val 37.5% | best val acc 50.0% (ep 49) | lr 7.5e-04
+[tune zscore] S078 F1 Early stop @ ep 129 (best epoch 49)
+[tune]         zscore S078: mean validation accuracy 50.00%
+  S079 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S079 F1 Ep 001 | tr 0.7343 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S079 F1 Ep 050 | tr 0.2373 | val 25.0% | best val acc 50.0% (ep 28) | lr 9.4e-04
+[tune zscore] S079 F1 Ep 100 | tr 0.2163 | val 25.0% | best val acc 50.0% (ep 55) | lr 7.5e-04
+[tune zscore] S079 F1 Early stop @ ep 135 (best epoch 55)
+[tune]         zscore S079: mean validation accuracy 50.00%
+  S080 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S080 F1 Ep 001 | tr 0.7067 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S080 F1 Ep 050 | tr 0.2218 | val 37.5% | best val acc 50.0% (ep 42) | lr 9.4e-04
+[tune zscore] S080 F1 Ep 100 | tr 0.2151 | val 50.0% | best val acc 50.0% (ep 95) | lr 7.5e-04
+[tune zscore] S080 F1 Ep 150 | tr 0.2114 | val 50.0% | best val acc 50.0% (ep 95) | lr 5.1e-04
+[tune zscore] S080 F1 Ep 200 | tr 0.2047 | val 37.5% | best val acc 62.5% (ep 173) | lr 2.6e-04
+[tune zscore] S080 F1 Ep 250 | tr 0.2104 | val 50.0% | best val acc 62.5% (ep 173) | lr 7.1e-05
+[tune zscore] S080 F1 Early stop @ ep 253 (best epoch 173)
+[tune]         zscore S080: mean validation accuracy 62.50%
+  S081 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S081 F1 Ep 001 | tr 0.7467 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S081 F1 Ep 050 | tr 0.2486 | val 25.0% | best val acc 37.5% (ep 20) | lr 9.4e-04
+[tune zscore] S081 F1 Ep 100 | tr 0.2124 | val 12.5% | best val acc 37.5% (ep 20) | lr 7.5e-04
+[tune zscore] S081 F1 Early stop @ ep 100 (best epoch 20)
+[tune]         zscore S081: mean validation accuracy 37.50%
+  S082 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S082 F1 Ep 001 | tr 0.7897 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S082 F1 Ep 050 | tr 0.2256 | val 50.0% | best val acc 62.5% (ep 25) | lr 9.4e-04
+[tune zscore] S082 F1 Ep 100 | tr 0.2119 | val 62.5% | best val acc 62.5% (ep 69) | lr 7.5e-04
+[tune zscore] S082 F1 Early stop @ ep 149 (best epoch 69)
+[tune]         zscore S082: mean validation accuracy 62.50%
+  S083 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S083 F1 Ep 001 | tr 0.7037 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S083 F1 Ep 050 | tr 0.2575 | val 50.0% | best val acc 62.5% (ep 34) | lr 9.4e-04
+[tune zscore] S083 F1 Ep 100 | tr 0.2147 | val 62.5% | best val acc 62.5% (ep 34) | lr 7.5e-04
+[tune zscore] S083 F1 Early stop @ ep 114 (best epoch 34)
+[tune]         zscore S083: mean validation accuracy 62.50%
+  S084 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S084 F1 Ep 001 | tr 0.7836 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S084 F1 Ep 050 | tr 0.2193 | val 50.0% | best val acc 50.0% (ep 20) | lr 9.4e-04
+[tune zscore] S084 F1 Ep 100 | tr 0.2043 | val 50.0% | best val acc 50.0% (ep 20) | lr 7.5e-04
+[tune zscore] S084 F1 Early stop @ ep 100 (best epoch 20)
+[tune]         zscore S084: mean validation accuracy 50.00%
+  S085 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S085 F1 Ep 001 | tr 0.7896 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S085 F1 Ep 050 | tr 0.2253 | val 75.0% | best val acc 87.5% (ep 30) | lr 9.4e-04
+[tune zscore] S085 F1 Ep 100 | tr 0.2125 | val 75.0% | best val acc 87.5% (ep 30) | lr 7.5e-04
+[tune zscore] S085 F1 Ep 150 | tr 0.2148 | val 75.0% | best val acc 87.5% (ep 129) | lr 5.1e-04
+[tune zscore] S085 F1 Ep 200 | tr 0.2051 | val 75.0% | best val acc 87.5% (ep 129) | lr 2.6e-04
+[tune zscore] S085 F1 Early stop @ ep 209 (best epoch 129)
+[tune]         zscore S085: mean validation accuracy 87.50%
+  S086 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S086 F1 Ep 001 | tr 0.7995 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S086 F1 Ep 050 | tr 0.2385 | val 62.5% | best val acc 62.5% (ep 39) | lr 9.4e-04
+[tune zscore] S086 F1 Ep 100 | tr 0.2208 | val 62.5% | best val acc 62.5% (ep 39) | lr 7.5e-04
+[tune zscore] S086 F1 Early stop @ ep 119 (best epoch 39)
+[tune]         zscore S086: mean validation accuracy 62.50%
+  S087 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S087 F1 Ep 001 | tr 0.7040 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S087 F1 Ep 050 | tr 0.2308 | val 50.0% | best val acc 50.0% (ep 37) | lr 9.4e-04
+[tune zscore] S087 F1 Ep 100 | tr 0.2207 | val 62.5% | best val acc 62.5% (ep 100) | lr 7.5e-04
+[tune zscore] S087 F1 Ep 150 | tr 0.2122 | val 50.0% | best val acc 62.5% (ep 102) | lr 5.1e-04
+[tune zscore] S087 F1 Early stop @ ep 182 (best epoch 102)
+[tune]         zscore S087: mean validation accuracy 62.50%
+  S089 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune zscore] S089 F1 Ep 001 | tr 0.6334 | val 12.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S089 F1 Ep 050 | tr 0.2523 | val 50.0% | best val acc 50.0% (ep 20) | lr 9.4e-04
+[tune zscore] S089 F1 Ep 100 | tr 0.2109 | val 37.5% | best val acc 50.0% (ep 20) | lr 7.5e-04
+[tune zscore] S089 F1 Early stop @ ep 100 (best epoch 20)
+[tune]         zscore S089: mean validation accuracy 50.00%
+  S090 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S090 F1 Ep 001 | tr 0.7347 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S090 F1 Ep 050 | tr 0.2219 | val 50.0% | best val acc 50.0% (ep 48) | lr 9.4e-04
+[tune zscore] S090 F1 Ep 100 | tr 0.2154 | val 62.5% | best val acc 62.5% (ep 100) | lr 7.5e-04
+[tune zscore] S090 F1 Ep 150 | tr 0.2128 | val 62.5% | best val acc 62.5% (ep 142) | lr 5.1e-04
+[tune zscore] S090 F1 Ep 200 | tr 0.2105 | val 62.5% | best val acc 75.0% (ep 197) | lr 2.6e-04
+[tune zscore] S090 F1 Ep 250 | tr 0.2051 | val 62.5% | best val acc 75.0% (ep 197) | lr 7.1e-05
+[tune zscore] S090 F1 Early stop @ ep 277 (best epoch 197)
+[tune]         zscore S090: mean validation accuracy 75.00%
+  S091 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S091 F1 Ep 001 | tr 0.7761 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S091 F1 Ep 050 | tr 0.2231 | val 50.0% | best val acc 50.0% (ep 36) | lr 9.4e-04
+[tune zscore] S091 F1 Ep 100 | tr 0.2116 | val 50.0% | best val acc 50.0% (ep 36) | lr 7.5e-04
+[tune zscore] S091 F1 Ep 150 | tr 0.2094 | val 62.5% | best val acc 62.5% (ep 125) | lr 5.1e-04
+[tune zscore] S091 F1 Ep 200 | tr 0.2151 | val 62.5% | best val acc 62.5% (ep 125) | lr 2.6e-04
+[tune zscore] S091 F1 Early stop @ ep 205 (best epoch 125)
+[tune]         zscore S091: mean validation accuracy 62.50%
+  S093 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S093 F1 Ep 001 | tr 0.6662 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S093 F1 Ep 050 | tr 0.2243 | val 75.0% | best val acc 75.0% (ep 50) | lr 9.4e-04
+[tune zscore] S093 F1 Ep 100 | tr 0.2056 | val 75.0% | best val acc 75.0% (ep 91) | lr 7.5e-04
+[tune zscore] S093 F1 Ep 150 | tr 0.2142 | val 75.0% | best val acc 75.0% (ep 91) | lr 5.1e-04
+[tune zscore] S093 F1 Early stop @ ep 171 (best epoch 91)
+[tune]         zscore S093: mean validation accuracy 75.00%
+  S094 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S094 F1 Ep 001 | tr 0.7437 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S094 F1 Ep 050 | tr 0.2300 | val 50.0% | best val acc 75.0% (ep 43) | lr 9.4e-04
+[tune zscore] S094 F1 Ep 100 | tr 0.2132 | val 50.0% | best val acc 75.0% (ep 43) | lr 7.5e-04
+[tune zscore] S094 F1 Early stop @ ep 123 (best epoch 43)
+[tune]         zscore S094: mean validation accuracy 75.00%
+  S095 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S095 F1 Ep 001 | tr 0.6485 | val 75.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S095 F1 Ep 050 | tr 0.2326 | val 37.5% | best val acc 37.5% (ep 28) | lr 9.4e-04
+[tune zscore] S095 F1 Ep 100 | tr 0.2122 | val 37.5% | best val acc 50.0% (ep 60) | lr 7.5e-04
+[tune zscore] S095 F1 Ep 150 | tr 0.2216 | val 37.5% | best val acc 50.0% (ep 135) | lr 5.1e-04
+[tune zscore] S095 F1 Ep 200 | tr 0.2078 | val 50.0% | best val acc 50.0% (ep 183) | lr 2.6e-04
+[tune zscore] S095 F1 Ep 250 | tr 0.2178 | val 50.0% | best val acc 50.0% (ep 207) | lr 7.1e-05
+[tune zscore] S095 F1 Ep 300 | tr 0.2077 | val 50.0% | best val acc 50.0% (ep 257) | lr 1.0e-06
+[tune]         zscore S095: mean validation accuracy 50.00%
+  S096 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S096 F1 Ep 001 | tr 0.7476 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S096 F1 Ep 050 | tr 0.2669 | val 62.5% | best val acc 75.0% (ep 39) | lr 9.4e-04
+[tune zscore] S096 F1 Ep 100 | tr 0.2129 | val 62.5% | best val acc 75.0% (ep 39) | lr 7.5e-04
+[tune zscore] S096 F1 Early stop @ ep 119 (best epoch 39)
+[tune]         zscore S096: mean validation accuracy 75.00%
+  S097 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S097 F1 Ep 001 | tr 0.6764 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S097 F1 Ep 050 | tr 0.2204 | val 37.5% | best val acc 50.0% (ep 27) | lr 9.4e-04
+[tune zscore] S097 F1 Ep 100 | tr 0.2246 | val 37.5% | best val acc 50.0% (ep 27) | lr 7.5e-04
+[tune zscore] S097 F1 Early stop @ ep 107 (best epoch 27)
+[tune]         zscore S097: mean validation accuracy 50.00%
+  S098 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S098 F1 Ep 001 | tr 0.7870 | val 75.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S098 F1 Ep 050 | tr 0.2234 | val 62.5% | best val acc 75.0% (ep 36) | lr 9.4e-04
+[tune zscore] S098 F1 Ep 100 | tr 0.2092 | val 50.0% | best val acc 75.0% (ep 36) | lr 7.5e-04
+[tune zscore] S098 F1 Early stop @ ep 116 (best epoch 36)
+[tune]         zscore S098: mean validation accuracy 75.00%
+  S099 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S099 F1 Ep 001 | tr 0.7498 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S099 F1 Ep 050 | tr 0.2358 | val 37.5% | best val acc 50.0% (ep 20) | lr 9.4e-04
+[tune zscore] S099 F1 Ep 100 | tr 0.2228 | val 0.0% | best val acc 50.0% (ep 20) | lr 7.5e-04
+[tune zscore] S099 F1 Early stop @ ep 100 (best epoch 20)
+[tune]         zscore S099: mean validation accuracy 50.00%
+  S101 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S101 F1 Ep 001 | tr 0.6876 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S101 F1 Ep 050 | tr 0.2216 | val 75.0% | best val acc 75.0% (ep 50) | lr 9.4e-04
+[tune zscore] S101 F1 Ep 100 | tr 0.2166 | val 75.0% | best val acc 87.5% (ep 78) | lr 7.5e-04
+[tune zscore] S101 F1 Ep 150 | tr 0.2111 | val 87.5% | best val acc 87.5% (ep 150) | lr 5.1e-04
+[tune zscore] S101 F1 Ep 200 | tr 0.2109 | val 75.0% | best val acc 87.5% (ep 191) | lr 2.6e-04
+[tune zscore] S101 F1 Ep 250 | tr 0.2037 | val 87.5% | best val acc 87.5% (ep 250) | lr 7.1e-05
+[tune zscore] S101 F1 Ep 300 | tr 0.2095 | val 75.0% | best val acc 87.5% (ep 250) | lr 1.0e-06
+[tune]         zscore S101: mean validation accuracy 87.50%
+  S102 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S102 F1 Ep 001 | tr 0.8134 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S102 F1 Ep 050 | tr 0.2264 | val 75.0% | best val acc 75.0% (ep 50) | lr 9.4e-04
+[tune zscore] S102 F1 Ep 100 | tr 0.2081 | val 62.5% | best val acc 75.0% (ep 91) | lr 7.5e-04
+[tune zscore] S102 F1 Ep 150 | tr 0.2126 | val 62.5% | best val acc 75.0% (ep 91) | lr 5.1e-04
+[tune zscore] S102 F1 Early stop @ ep 171 (best epoch 91)
+[tune]         zscore S102: mean validation accuracy 75.00%
+  S103 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S103 F1 Ep 001 | tr 0.7293 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S103 F1 Ep 050 | tr 0.2786 | val 50.0% | best val acc 50.0% (ep 34) | lr 9.4e-04
+[tune zscore] S103 F1 Ep 100 | tr 0.2045 | val 50.0% | best val acc 50.0% (ep 34) | lr 7.5e-04
+[tune zscore] S103 F1 Early stop @ ep 114 (best epoch 34)
+[tune]         zscore S103: mean validation accuracy 50.00%
+  S105 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S105 F1 Ep 001 | tr 0.8358 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S105 F1 Ep 050 | tr 0.2469 | val 37.5% | best val acc 37.5% (ep 45) | lr 9.4e-04
+[tune zscore] S105 F1 Ep 100 | tr 0.2172 | val 50.0% | best val acc 50.0% (ep 98) | lr 7.5e-04
+[tune zscore] S105 F1 Ep 150 | tr 0.2286 | val 50.0% | best val acc 50.0% (ep 98) | lr 5.1e-04
+[tune zscore] S105 F1 Early stop @ ep 178 (best epoch 98)
+[tune]         zscore S105: mean validation accuracy 50.00%
+  S106 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune zscore] S106 F1 Ep 001 | tr 0.8311 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S106 F1 Ep 050 | tr 0.2194 | val 37.5% | best val acc 62.5% (ep 20) | lr 9.4e-04
+[tune zscore] S106 F1 Ep 100 | tr 0.2112 | val 37.5% | best val acc 62.5% (ep 20) | lr 7.5e-04
+[tune zscore] S106 F1 Early stop @ ep 100 (best epoch 20)
+[tune]         zscore S106: mean validation accuracy 62.50%
+  S107 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune zscore] S107 F1 Ep 001 | tr 0.7765 | val 75.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S107 F1 Ep 050 | tr 0.2334 | val 50.0% | best val acc 75.0% (ep 22) | lr 9.4e-04
+[tune zscore] S107 F1 Ep 100 | tr 0.2116 | val 50.0% | best val acc 75.0% (ep 22) | lr 7.5e-04
+[tune zscore] S107 F1 Early stop @ ep 102 (best epoch 22)
+[tune]         zscore S107: mean validation accuracy 75.00%
+  S108 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune zscore] S108 F1 Ep 001 | tr 0.7285 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S108 F1 Ep 050 | tr 0.2689 | val 37.5% | best val acc 50.0% (ep 39) | lr 9.4e-04
+[tune zscore] S108 F1 Ep 100 | tr 0.2436 | val 62.5% | best val acc 62.5% (ep 79) | lr 7.5e-04
+[tune zscore] S108 F1 Ep 150 | tr 0.2120 | val 50.0% | best val acc 75.0% (ep 124) | lr 5.1e-04
+[tune zscore] S108 F1 Ep 200 | tr 0.2086 | val 50.0% | best val acc 75.0% (ep 124) | lr 2.6e-04
+[tune zscore] S108 F1 Early stop @ ep 204 (best epoch 124)
+[tune]         zscore S108: mean validation accuracy 75.00%
+  S109 [2class] profile=zscore X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune zscore] S109 F1 Ep 001 | tr 0.7328 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune zscore] S109 F1 Ep 050 | tr 0.2292 | val 75.0% | best val acc 75.0% (ep 39) | lr 9.4e-04
+[tune zscore] S109 F1 Ep 100 | tr 0.2058 | val 75.0% | best val acc 87.5% (ep 87) | lr 7.5e-04
+[tune zscore] S109 F1 Ep 150 | tr 0.2082 | val 75.0% | best val acc 87.5% (ep 114) | lr 5.1e-04
+[tune zscore] S109 F1 Early stop @ ep 194 (best epoch 114)
+[tune]         zscore S109: mean validation accuracy 87.50%
+  S001 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S001 F1 Ep 001 | tr 0.7035 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S001 F1 Ep 050 | tr 0.2250 | val 37.5% | best val acc 50.0% (ep 22) | lr 9.4e-04
+[tune ems] S001 F1 Ep 100 | tr 0.2249 | val 37.5% | best val acc 50.0% (ep 91) | lr 7.5e-04
+[tune ems] S001 F1 Ep 150 | tr 0.2082 | val 37.5% | best val acc 50.0% (ep 91) | lr 5.1e-04
+[tune ems] S001 F1 Early stop @ ep 171 (best epoch 91)
+[tune]            ems S001: mean validation accuracy 50.00%
+  S002 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S002 F1 Ep 001 | tr 0.7758 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S002 F1 Ep 050 | tr 0.2130 | val 75.0% | best val acc 75.0% (ep 50) | lr 9.4e-04
+[tune ems] S002 F1 Ep 100 | tr 0.2095 | val 75.0% | best val acc 75.0% (ep 93) | lr 7.5e-04
+[tune ems] S002 F1 Ep 150 | tr 0.2053 | val 75.0% | best val acc 75.0% (ep 150) | lr 5.1e-04
+[tune ems] S002 F1 Ep 200 | tr 0.2081 | val 62.5% | best val acc 75.0% (ep 197) | lr 2.6e-04
+[tune ems] S002 F1 Ep 250 | tr 0.2135 | val 75.0% | best val acc 75.0% (ep 207) | lr 7.1e-05
+[tune ems] S002 F1 Early stop @ ep 287 (best epoch 207)
+[tune]            ems S002: mean validation accuracy 75.00%
+  S003 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S003 F1 Ep 001 | tr 0.7468 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S003 F1 Ep 050 | tr 0.2356 | val 37.5% | best val acc 50.0% (ep 20) | lr 9.4e-04
+[tune ems] S003 F1 Ep 100 | tr 0.2214 | val 50.0% | best val acc 62.5% (ep 97) | lr 7.5e-04
+[tune ems] S003 F1 Ep 150 | tr 0.2142 | val 37.5% | best val acc 62.5% (ep 97) | lr 5.1e-04
+[tune ems] S003 F1 Early stop @ ep 177 (best epoch 97)
+[tune]            ems S003: mean validation accuracy 62.50%
+  S004 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S004 F1 Ep 001 | tr 0.6457 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S004 F1 Ep 050 | tr 0.2174 | val 62.5% | best val acc 62.5% (ep 50) | lr 9.4e-04
+[tune ems] S004 F1 Ep 100 | tr 0.2138 | val 75.0% | best val acc 75.0% (ep 100) | lr 7.5e-04
+[tune ems] S004 F1 Ep 150 | tr 0.2130 | val 75.0% | best val acc 75.0% (ep 141) | lr 5.1e-04
+[tune ems] S004 F1 Ep 200 | tr 0.2050 | val 75.0% | best val acc 75.0% (ep 191) | lr 2.6e-04
+[tune ems] S004 F1 Ep 250 | tr 0.2100 | val 62.5% | best val acc 75.0% (ep 219) | lr 7.1e-05
+[tune ems] S004 F1 Early stop @ ep 299 (best epoch 219)
+[tune]            ems S004: mean validation accuracy 75.00%
+  S005 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 21, 'right_hand': 24} train/test trials=[30, 15]
+[tune ems] S005 F1 Ep 001 | tr 0.7311 | val 75.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S005 F1 Ep 050 | tr 0.2432 | val 50.0% | best val acc 50.0% (ep 20) | lr 9.4e-04
+[tune ems] S005 F1 Ep 100 | tr 0.2121 | val 50.0% | best val acc 50.0% (ep 20) | lr 7.5e-04
+[tune ems] S005 F1 Early stop @ ep 100 (best epoch 20)
+[tune]            ems S005: mean validation accuracy 50.00%
+  S006 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune ems] S006 F1 Ep 001 | tr 0.7328 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S006 F1 Ep 050 | tr 0.2396 | val 62.5% | best val acc 62.5% (ep 47) | lr 9.4e-04
+[tune ems] S006 F1 Ep 100 | tr 0.2273 | val 50.0% | best val acc 62.5% (ep 74) | lr 7.5e-04
+[tune ems] S006 F1 Ep 150 | tr 0.2049 | val 62.5% | best val acc 62.5% (ep 74) | lr 5.1e-04
+[tune ems] S006 F1 Early stop @ ep 154 (best epoch 74)
+[tune]            ems S006: mean validation accuracy 62.50%
+  S007 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S007 F1 Ep 001 | tr 0.7128 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S007 F1 Ep 050 | tr 0.2273 | val 87.5% | best val acc 87.5% (ep 46) | lr 9.4e-04
+[tune ems] S007 F1 Ep 100 | tr 0.2228 | val 87.5% | best val acc 87.5% (ep 70) | lr 7.5e-04
+[tune ems] S007 F1 Ep 150 | tr 0.2145 | val 62.5% | best val acc 87.5% (ep 70) | lr 5.1e-04
+[tune ems] S007 F1 Early stop @ ep 150 (best epoch 70)
+[tune]            ems S007: mean validation accuracy 87.50%
+  S008 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S008 F1 Ep 001 | tr 0.7652 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S008 F1 Ep 050 | tr 0.2319 | val 37.5% | best val acc 50.0% (ep 28) | lr 9.4e-04
+[tune ems] S008 F1 Ep 100 | tr 0.2139 | val 37.5% | best val acc 50.0% (ep 28) | lr 7.5e-04
+[tune ems] S008 F1 Early stop @ ep 108 (best epoch 28)
+[tune]            ems S008: mean validation accuracy 50.00%
+  S009 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune ems] S009 F1 Ep 001 | tr 0.7027 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S009 F1 Ep 050 | tr 0.2347 | val 50.0% | best val acc 50.0% (ep 50) | lr 9.4e-04
+[tune ems] S009 F1 Ep 100 | tr 0.2049 | val 50.0% | best val acc 50.0% (ep 100) | lr 7.5e-04
+[tune ems] S009 F1 Ep 150 | tr 0.2161 | val 50.0% | best val acc 50.0% (ep 105) | lr 5.1e-04
+[tune ems] S009 F1 Early stop @ ep 185 (best epoch 105)
+[tune]            ems S009: mean validation accuracy 50.00%
+  S010 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune ems] S010 F1 Ep 001 | tr 0.7529 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S010 F1 Ep 050 | tr 0.2167 | val 50.0% | best val acc 50.0% (ep 24) | lr 9.4e-04
+[tune ems] S010 F1 Ep 100 | tr 0.2150 | val 50.0% | best val acc 50.0% (ep 24) | lr 7.5e-04
+[tune ems] S010 F1 Early stop @ ep 104 (best epoch 24)
+[tune]            ems S010: mean validation accuracy 50.00%
+  S011 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S011 F1 Ep 001 | tr 0.6743 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S011 F1 Ep 050 | tr 0.2260 | val 25.0% | best val acc 50.0% (ep 20) | lr 9.4e-04
+[tune ems] S011 F1 Ep 100 | tr 0.2177 | val 37.5% | best val acc 50.0% (ep 20) | lr 7.5e-04
+[tune ems] S011 F1 Early stop @ ep 100 (best epoch 20)
+[tune]            ems S011: mean validation accuracy 50.00%
+  S012 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 21, 'right_hand': 24} train/test trials=[30, 15]
+[tune ems] S012 F1 Ep 001 | tr 0.6964 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S012 F1 Ep 050 | tr 0.2211 | val 50.0% | best val acc 62.5% (ep 44) | lr 9.4e-04
+[tune ems] S012 F1 Ep 100 | tr 0.2135 | val 62.5% | best val acc 62.5% (ep 68) | lr 7.5e-04
+[tune ems] S012 F1 Ep 150 | tr 0.2057 | val 62.5% | best val acc 62.5% (ep 128) | lr 5.1e-04
+[tune ems] S012 F1 Ep 200 | tr 0.2090 | val 62.5% | best val acc 62.5% (ep 128) | lr 2.6e-04
+[tune ems] S012 F1 Early stop @ ep 208 (best epoch 128)
+[tune]            ems S012: mean validation accuracy 62.50%
+  S013 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S013 F1 Ep 001 | tr 0.7081 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S013 F1 Ep 050 | tr 0.2571 | val 50.0% | best val acc 50.0% (ep 46) | lr 9.4e-04
+[tune ems] S013 F1 Ep 100 | tr 0.2380 | val 37.5% | best val acc 62.5% (ep 88) | lr 7.5e-04
+[tune ems] S013 F1 Ep 150 | tr 0.2131 | val 25.0% | best val acc 62.5% (ep 88) | lr 5.1e-04
+[tune ems] S013 F1 Early stop @ ep 168 (best epoch 88)
+[tune]            ems S013: mean validation accuracy 62.50%
+  S014 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S014 F1 Ep 001 | tr 0.7342 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S014 F1 Ep 050 | tr 0.2471 | val 50.0% | best val acc 50.0% (ep 20) | lr 9.4e-04
+[tune ems] S014 F1 Ep 100 | tr 0.2089 | val 37.5% | best val acc 62.5% (ep 85) | lr 7.5e-04
+[tune ems] S014 F1 Ep 150 | tr 0.2128 | val 50.0% | best val acc 62.5% (ep 85) | lr 5.1e-04
+[tune ems] S014 F1 Early stop @ ep 165 (best epoch 85)
+[tune]            ems S014: mean validation accuracy 62.50%
+  S015 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S015 F1 Ep 001 | tr 0.7070 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S015 F1 Ep 050 | tr 0.2144 | val 50.0% | best val acc 50.0% (ep 29) | lr 9.4e-04
+[tune ems] S015 F1 Ep 100 | tr 0.2131 | val 62.5% | best val acc 62.5% (ep 100) | lr 7.5e-04
+[tune ems] S015 F1 Ep 150 | tr 0.2071 | val 62.5% | best val acc 62.5% (ep 126) | lr 5.1e-04
+[tune ems] S015 F1 Ep 200 | tr 0.2050 | val 37.5% | best val acc 62.5% (ep 126) | lr 2.6e-04
+[tune ems] S015 F1 Early stop @ ep 206 (best epoch 126)
+[tune]            ems S015: mean validation accuracy 62.50%
+  S016 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S016 F1 Ep 001 | tr 0.6566 | val 75.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S016 F1 Ep 050 | tr 0.2502 | val 75.0% | best val acc 75.0% (ep 50) | lr 9.4e-04
+[tune ems] S016 F1 Ep 100 | tr 0.2387 | val 62.5% | best val acc 75.0% (ep 89) | lr 7.5e-04
+[tune ems] S016 F1 Ep 150 | tr 0.2095 | val 75.0% | best val acc 75.0% (ep 135) | lr 5.1e-04
+[tune ems] S016 F1 Ep 200 | tr 0.2075 | val 75.0% | best val acc 75.0% (ep 135) | lr 2.6e-04
+[tune ems] S016 F1 Early stop @ ep 215 (best epoch 135)
+[tune]            ems S016: mean validation accuracy 75.00%
+  S017 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S017 F1 Ep 001 | tr 0.8568 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S017 F1 Ep 050 | tr 0.2440 | val 50.0% | best val acc 50.0% (ep 20) | lr 9.4e-04
+[tune ems] S017 F1 Ep 100 | tr 0.2100 | val 50.0% | best val acc 50.0% (ep 20) | lr 7.5e-04
+[tune ems] S017 F1 Early stop @ ep 100 (best epoch 20)
+[tune]            ems S017: mean validation accuracy 50.00%
+  S018 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S018 F1 Ep 001 | tr 0.7920 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S018 F1 Ep 050 | tr 0.2390 | val 75.0% | best val acc 75.0% (ep 41) | lr 9.4e-04
+[tune ems] S018 F1 Ep 100 | tr 0.2148 | val 62.5% | best val acc 75.0% (ep 41) | lr 7.5e-04
+[tune ems] S018 F1 Ep 150 | tr 0.2061 | val 62.5% | best val acc 75.0% (ep 107) | lr 5.1e-04
+[tune ems] S018 F1 Early stop @ ep 187 (best epoch 107)
+[tune]            ems S018: mean validation accuracy 75.00%
+  S019 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S019 F1 Ep 001 | tr 0.6416 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S019 F1 Ep 050 | tr 0.2264 | val 37.5% | best val acc 50.0% (ep 20) | lr 9.4e-04
+[tune ems] S019 F1 Ep 100 | tr 0.2215 | val 37.5% | best val acc 50.0% (ep 20) | lr 7.5e-04
+[tune ems] S019 F1 Early stop @ ep 100 (best epoch 20)
+[tune]            ems S019: mean validation accuracy 50.00%
+  S020 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S020 F1 Ep 001 | tr 0.7463 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S020 F1 Ep 050 | tr 0.2217 | val 75.0% | best val acc 75.0% (ep 50) | lr 9.4e-04
+[tune ems] S020 F1 Ep 100 | tr 0.2071 | val 62.5% | best val acc 75.0% (ep 66) | lr 7.5e-04
+[tune ems] S020 F1 Ep 150 | tr 0.2063 | val 62.5% | best val acc 75.0% (ep 108) | lr 5.1e-04
+[tune ems] S020 F1 Early stop @ ep 188 (best epoch 108)
+[tune]            ems S020: mean validation accuracy 75.00%
+  S021 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune ems] S021 F1 Ep 001 | tr 0.8348 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S021 F1 Ep 050 | tr 0.2346 | val 25.0% | best val acc 37.5% (ep 34) | lr 9.4e-04
+[tune ems] S021 F1 Ep 100 | tr 0.2155 | val 25.0% | best val acc 37.5% (ep 34) | lr 7.5e-04
+[tune ems] S021 F1 Early stop @ ep 114 (best epoch 34)
+[tune]            ems S021: mean validation accuracy 37.50%
+  S022 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S022 F1 Ep 001 | tr 0.6682 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S022 F1 Ep 050 | tr 0.2281 | val 62.5% | best val acc 75.0% (ep 48) | lr 9.4e-04
+[tune ems] S022 F1 Ep 100 | tr 0.2152 | val 87.5% | best val acc 87.5% (ep 99) | lr 7.5e-04
+[tune ems] S022 F1 Ep 150 | tr 0.2090 | val 75.0% | best val acc 87.5% (ep 99) | lr 5.1e-04
+[tune ems] S022 F1 Early stop @ ep 179 (best epoch 99)
+[tune]            ems S022: mean validation accuracy 87.50%
+  S023 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S023 F1 Ep 001 | tr 0.7807 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S023 F1 Ep 050 | tr 0.2227 | val 62.5% | best val acc 62.5% (ep 42) | lr 9.4e-04
+[tune ems] S023 F1 Ep 100 | tr 0.2099 | val 62.5% | best val acc 62.5% (ep 64) | lr 7.5e-04
+[tune ems] S023 F1 Early stop @ ep 144 (best epoch 64)
+[tune]            ems S023: mean validation accuracy 62.50%
+  S024 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S024 F1 Ep 001 | tr 0.7445 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S024 F1 Ep 050 | tr 0.2177 | val 50.0% | best val acc 62.5% (ep 32) | lr 9.4e-04
+[tune ems] S024 F1 Ep 100 | tr 0.2116 | val 50.0% | best val acc 62.5% (ep 32) | lr 7.5e-04
+[tune ems] S024 F1 Early stop @ ep 112 (best epoch 32)
+[tune]            ems S024: mean validation accuracy 62.50%
+  S025 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S025 F1 Ep 001 | tr 0.8104 | val 75.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S025 F1 Ep 050 | tr 0.2570 | val 50.0% | best val acc 75.0% (ep 25) | lr 9.4e-04
+[tune ems] S025 F1 Ep 100 | tr 0.2106 | val 62.5% | best val acc 75.0% (ep 25) | lr 7.5e-04
+[tune ems] S025 F1 Early stop @ ep 105 (best epoch 25)
+[tune]            ems S025: mean validation accuracy 75.00%
+  S026 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune ems] S026 F1 Ep 001 | tr 0.7591 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S026 F1 Ep 050 | tr 0.2430 | val 37.5% | best val acc 37.5% (ep 20) | lr 9.4e-04
+[tune ems] S026 F1 Ep 100 | tr 0.2186 | val 37.5% | best val acc 37.5% (ep 20) | lr 7.5e-04
+[tune ems] S026 F1 Early stop @ ep 100 (best epoch 20)
+[tune]            ems S026: mean validation accuracy 37.50%
+  S027 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S027 F1 Ep 001 | tr 0.8747 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S027 F1 Ep 050 | tr 0.2148 | val 25.0% | best val acc 37.5% (ep 28) | lr 9.4e-04
+[tune ems] S027 F1 Ep 100 | tr 0.2159 | val 37.5% | best val acc 37.5% (ep 28) | lr 7.5e-04
+[tune ems] S027 F1 Early stop @ ep 108 (best epoch 28)
+[tune]            ems S027: mean validation accuracy 37.50%
+  S028 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S028 F1 Ep 001 | tr 0.8571 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S028 F1 Ep 050 | tr 0.2324 | val 62.5% | best val acc 62.5% (ep 47) | lr 9.4e-04
+[tune ems] S028 F1 Ep 100 | tr 0.2104 | val 62.5% | best val acc 62.5% (ep 89) | lr 7.5e-04
+[tune ems] S028 F1 Ep 150 | tr 0.2202 | val 75.0% | best val acc 75.0% (ep 143) | lr 5.1e-04
+[tune ems] S028 F1 Ep 200 | tr 0.2053 | val 62.5% | best val acc 75.0% (ep 184) | lr 2.6e-04
+[tune ems] S028 F1 Ep 250 | tr 0.2125 | val 62.5% | best val acc 75.0% (ep 184) | lr 7.1e-05
+[tune ems] S028 F1 Early stop @ ep 264 (best epoch 184)
+[tune]            ems S028: mean validation accuracy 75.00%
+  S029 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S029 F1 Ep 001 | tr 0.7259 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S029 F1 Ep 050 | tr 0.2291 | val 50.0% | best val acc 50.0% (ep 40) | lr 9.4e-04
+[tune ems] S029 F1 Ep 100 | tr 0.2202 | val 50.0% | best val acc 50.0% (ep 40) | lr 7.5e-04
+[tune ems] S029 F1 Ep 150 | tr 0.2042 | val 62.5% | best val acc 62.5% (ep 144) | lr 5.1e-04
+[tune ems] S029 F1 Ep 200 | tr 0.2065 | val 75.0% | best val acc 75.0% (ep 159) | lr 2.6e-04
+[tune ems] S029 F1 Early stop @ ep 239 (best epoch 159)
+[tune]            ems S029: mean validation accuracy 75.00%
+  S030 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune ems] S030 F1 Ep 001 | tr 0.7962 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S030 F1 Ep 050 | tr 0.2208 | val 62.5% | best val acc 62.5% (ep 47) | lr 9.4e-04
+[tune ems] S030 F1 Ep 100 | tr 0.2065 | val 75.0% | best val acc 75.0% (ep 94) | lr 7.5e-04
+[tune ems] S030 F1 Ep 150 | tr 0.2095 | val 50.0% | best val acc 75.0% (ep 116) | lr 5.1e-04
+[tune ems] S030 F1 Early stop @ ep 196 (best epoch 116)
+[tune]            ems S030: mean validation accuracy 75.00%
+  S031 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S031 F1 Ep 001 | tr 0.8457 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S031 F1 Ep 050 | tr 0.2585 | val 12.5% | best val acc 25.0% (ep 20) | lr 9.4e-04
+[tune ems] S031 F1 Ep 100 | tr 0.2206 | val 12.5% | best val acc 25.0% (ep 20) | lr 7.5e-04
+[tune ems] S031 F1 Early stop @ ep 100 (best epoch 20)
+[tune]            ems S031: mean validation accuracy 25.00%
+  S032 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 21, 'right_hand': 24} train/test trials=[30, 15]
+[tune ems] S032 F1 Ep 001 | tr 0.6742 | val 100.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S032 F1 Ep 050 | tr 0.2312 | val 62.5% | best val acc 100.0% (ep 25) | lr 9.4e-04
+[tune ems] S032 F1 Ep 100 | tr 0.2282 | val 87.5% | best val acc 100.0% (ep 71) | lr 7.5e-04
+[tune ems] S032 F1 Ep 150 | tr 0.2075 | val 100.0% | best val acc 100.0% (ep 145) | lr 5.1e-04
+[tune ems] S032 F1 Ep 200 | tr 0.2113 | val 100.0% | best val acc 100.0% (ep 197) | lr 2.6e-04
+[tune ems] S032 F1 Ep 250 | tr 0.2107 | val 100.0% | best val acc 100.0% (ep 216) | lr 7.1e-05
+[tune ems] S032 F1 Ep 300 | tr 0.2072 | val 100.0% | best val acc 100.0% (ep 300) | lr 1.0e-06
+[tune]            ems S032: mean validation accuracy 100.00%
+  S033 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S033 F1 Ep 001 | tr 0.6596 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S033 F1 Ep 050 | tr 0.2571 | val 87.5% | best val acc 87.5% (ep 48) | lr 9.4e-04
+[tune ems] S033 F1 Ep 100 | tr 0.2190 | val 100.0% | best val acc 100.0% (ep 100) | lr 7.5e-04
+[tune ems] S033 F1 Ep 150 | tr 0.2131 | val 87.5% | best val acc 100.0% (ep 102) | lr 5.1e-04
+[tune ems] S033 F1 Ep 200 | tr 0.2117 | val 87.5% | best val acc 100.0% (ep 155) | lr 2.6e-04
+[tune ems] S033 F1 Early stop @ ep 235 (best epoch 155)
+[tune]            ems S033: mean validation accuracy 100.00%
+  S034 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 21, 'right_hand': 24} train/test trials=[30, 15]
+[tune ems] S034 F1 Ep 001 | tr 0.7628 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S034 F1 Ep 050 | tr 0.2160 | val 50.0% | best val acc 50.0% (ep 36) | lr 9.4e-04
+[tune ems] S034 F1 Ep 100 | tr 0.2127 | val 62.5% | best val acc 75.0% (ep 66) | lr 7.5e-04
+[tune ems] S034 F1 Early stop @ ep 146 (best epoch 66)
+[tune]            ems S034: mean validation accuracy 75.00%
+  S035 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S035 F1 Ep 001 | tr 0.6097 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S035 F1 Ep 050 | tr 0.2117 | val 62.5% | best val acc 62.5% (ep 50) | lr 9.4e-04
+[tune ems] S035 F1 Ep 100 | tr 0.2176 | val 62.5% | best val acc 62.5% (ep 82) | lr 7.5e-04
+[tune ems] S035 F1 Ep 150 | tr 0.2068 | val 62.5% | best val acc 62.5% (ep 150) | lr 5.1e-04
+[tune ems] S035 F1 Ep 200 | tr 0.2052 | val 75.0% | best val acc 75.0% (ep 188) | lr 2.6e-04
+[tune ems] S035 F1 Ep 250 | tr 0.2073 | val 75.0% | best val acc 75.0% (ep 231) | lr 7.1e-05
+[tune ems] S035 F1 Ep 300 | tr 0.2052 | val 75.0% | best val acc 75.0% (ep 231) | lr 1.0e-06
+[tune]            ems S035: mean validation accuracy 75.00%
+  S036 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S036 F1 Ep 001 | tr 0.7680 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S036 F1 Ep 050 | tr 0.2844 | val 37.5% | best val acc 50.0% (ep 44) | lr 9.4e-04
+[tune ems] S036 F1 Ep 100 | tr 0.2369 | val 37.5% | best val acc 50.0% (ep 44) | lr 7.5e-04
+[tune ems] S036 F1 Early stop @ ep 124 (best epoch 44)
+[tune]            ems S036: mean validation accuracy 50.00%
+  S037 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S037 F1 Ep 001 | tr 0.8072 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S037 F1 Ep 050 | tr 0.2372 | val 62.5% | best val acc 62.5% (ep 50) | lr 9.4e-04
+[tune ems] S037 F1 Ep 100 | tr 0.2247 | val 62.5% | best val acc 62.5% (ep 100) | lr 7.5e-04
+[tune ems] S037 F1 Ep 150 | tr 0.2081 | val 50.0% | best val acc 62.5% (ep 118) | lr 5.1e-04
+[tune ems] S037 F1 Early stop @ ep 198 (best epoch 118)
+[tune]            ems S037: mean validation accuracy 62.50%
+  S038 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S038 F1 Ep 001 | tr 0.7376 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S038 F1 Ep 050 | tr 0.2167 | val 75.0% | best val acc 75.0% (ep 50) | lr 9.4e-04
+[tune ems] S038 F1 Ep 100 | tr 0.2165 | val 75.0% | best val acc 87.5% (ep 61) | lr 7.5e-04
+[tune ems] S038 F1 Early stop @ ep 141 (best epoch 61)
+[tune]            ems S038: mean validation accuracy 87.50%
+  S039 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S039 F1 Ep 001 | tr 0.7737 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S039 F1 Ep 050 | tr 0.2277 | val 50.0% | best val acc 50.0% (ep 20) | lr 9.4e-04
+[tune ems] S039 F1 Ep 100 | tr 0.2115 | val 37.5% | best val acc 50.0% (ep 20) | lr 7.5e-04
+[tune ems] S039 F1 Early stop @ ep 100 (best epoch 20)
+[tune]            ems S039: mean validation accuracy 50.00%
+  S040 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 21, 'right_hand': 24} train/test trials=[30, 15]
+[tune ems] S040 F1 Ep 001 | tr 0.7717 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S040 F1 Ep 050 | tr 0.2076 | val 50.0% | best val acc 50.0% (ep 44) | lr 9.4e-04
+[tune ems] S040 F1 Ep 100 | tr 0.2143 | val 50.0% | best val acc 50.0% (ep 44) | lr 7.5e-04
+[tune ems] S040 F1 Early stop @ ep 124 (best epoch 44)
+[tune]            ems S040: mean validation accuracy 50.00%
+  S041 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune ems] S041 F1 Ep 001 | tr 0.6334 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S041 F1 Ep 050 | tr 0.2360 | val 37.5% | best val acc 37.5% (ep 20) | lr 9.4e-04
+[tune ems] S041 F1 Ep 100 | tr 0.2114 | val 37.5% | best val acc 50.0% (ep 91) | lr 7.5e-04
+[tune ems] S041 F1 Ep 150 | tr 0.2172 | val 50.0% | best val acc 62.5% (ep 109) | lr 5.1e-04
+[tune ems] S041 F1 Early stop @ ep 189 (best epoch 109)
+[tune]            ems S041: mean validation accuracy 62.50%
+  S042 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S042 F1 Ep 001 | tr 0.7941 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S042 F1 Ep 050 | tr 0.2502 | val 62.5% | best val acc 75.0% (ep 42) | lr 9.4e-04
+[tune ems] S042 F1 Ep 100 | tr 0.2132 | val 50.0% | best val acc 75.0% (ep 42) | lr 7.5e-04
+[tune ems] S042 F1 Early stop @ ep 122 (best epoch 42)
+[tune]            ems S042: mean validation accuracy 75.00%
+  S043 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S043 F1 Ep 001 | tr 0.6921 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S043 F1 Ep 050 | tr 0.2191 | val 62.5% | best val acc 62.5% (ep 43) | lr 9.4e-04
+[tune ems] S043 F1 Ep 100 | tr 0.2072 | val 50.0% | best val acc 75.0% (ep 85) | lr 7.5e-04
+[tune ems] S043 F1 Ep 150 | tr 0.2109 | val 75.0% | best val acc 75.0% (ep 85) | lr 5.1e-04
+[tune ems] S043 F1 Early stop @ ep 165 (best epoch 85)
+[tune]            ems S043: mean validation accuracy 75.00%
+  S044 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S044 F1 Ep 001 | tr 0.7976 | val 75.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S044 F1 Ep 050 | tr 0.2377 | val 50.0% | best val acc 62.5% (ep 27) | lr 9.4e-04
+[tune ems] S044 F1 Ep 100 | tr 0.2132 | val 37.5% | best val acc 62.5% (ep 27) | lr 7.5e-04
+[tune ems] S044 F1 Early stop @ ep 107 (best epoch 27)
+[tune]            ems S044: mean validation accuracy 62.50%
+  S045 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S045 F1 Ep 001 | tr 0.7464 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S045 F1 Ep 050 | tr 0.2607 | val 62.5% | best val acc 75.0% (ep 43) | lr 9.4e-04
+[tune ems] S045 F1 Ep 100 | tr 0.2071 | val 75.0% | best val acc 87.5% (ep 66) | lr 7.5e-04
+[tune ems] S045 F1 Early stop @ ep 146 (best epoch 66)
+[tune]            ems S045: mean validation accuracy 87.50%
+  S046 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S046 F1 Ep 001 | tr 0.7859 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S046 F1 Ep 050 | tr 0.2409 | val 50.0% | best val acc 75.0% (ep 25) | lr 9.4e-04
+[tune ems] S046 F1 Ep 100 | tr 0.2122 | val 62.5% | best val acc 75.0% (ep 25) | lr 7.5e-04
+[tune ems] S046 F1 Early stop @ ep 105 (best epoch 25)
+[tune]            ems S046: mean validation accuracy 75.00%
+  S047 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune ems] S047 F1 Ep 001 | tr 0.7649 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S047 F1 Ep 050 | tr 0.2397 | val 37.5% | best val acc 50.0% (ep 24) | lr 9.4e-04
+[tune ems] S047 F1 Ep 100 | tr 0.2130 | val 50.0% | best val acc 62.5% (ep 70) | lr 7.5e-04
+[tune ems] S047 F1 Ep 150 | tr 0.2175 | val 50.0% | best val acc 62.5% (ep 70) | lr 5.1e-04
+[tune ems] S047 F1 Early stop @ ep 150 (best epoch 70)
+[tune]            ems S047: mean validation accuracy 62.50%
+  S048 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S048 F1 Ep 001 | tr 0.7800 | val 75.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S048 F1 Ep 050 | tr 0.2361 | val 50.0% | best val acc 50.0% (ep 49) | lr 9.4e-04
+[tune ems] S048 F1 Ep 100 | tr 0.2186 | val 50.0% | best val acc 50.0% (ep 87) | lr 7.5e-04
+[tune ems] S048 F1 Ep 150 | tr 0.2093 | val 62.5% | best val acc 75.0% (ep 141) | lr 5.1e-04
+[tune ems] S048 F1 Ep 200 | tr 0.2129 | val 75.0% | best val acc 75.0% (ep 191) | lr 2.6e-04
+[tune ems] S048 F1 Ep 250 | tr 0.2081 | val 75.0% | best val acc 75.0% (ep 191) | lr 7.1e-05
+[tune ems] S048 F1 Early stop @ ep 271 (best epoch 191)
+[tune]            ems S048: mean validation accuracy 75.00%
+  S049 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S049 F1 Ep 001 | tr 0.8061 | val 87.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S049 F1 Ep 050 | tr 0.2295 | val 75.0% | best val acc 75.0% (ep 41) | lr 9.4e-04
+[tune ems] S049 F1 Ep 100 | tr 0.2162 | val 62.5% | best val acc 75.0% (ep 41) | lr 7.5e-04
+[tune ems] S049 F1 Early stop @ ep 121 (best epoch 41)
+[tune]            ems S049: mean validation accuracy 75.00%
+  S050 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S050 F1 Ep 001 | tr 0.7489 | val 75.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S050 F1 Ep 050 | tr 0.2407 | val 62.5% | best val acc 62.5% (ep 46) | lr 9.4e-04
+[tune ems] S050 F1 Ep 100 | tr 0.2178 | val 62.5% | best val acc 75.0% (ep 78) | lr 7.5e-04
+[tune ems] S050 F1 Ep 150 | tr 0.2082 | val 62.5% | best val acc 75.0% (ep 78) | lr 5.1e-04
+[tune ems] S050 F1 Early stop @ ep 158 (best epoch 78)
+[tune]            ems S050: mean validation accuracy 75.00%
+  S051 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune ems] S051 F1 Ep 001 | tr 0.8363 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S051 F1 Ep 050 | tr 0.2509 | val 75.0% | best val acc 87.5% (ep 29) | lr 9.4e-04
+[tune ems] S051 F1 Ep 100 | tr 0.2112 | val 87.5% | best val acc 87.5% (ep 90) | lr 7.5e-04
+[tune ems] S051 F1 Ep 150 | tr 0.2101 | val 62.5% | best val acc 87.5% (ep 116) | lr 5.1e-04
+[tune ems] S051 F1 Early stop @ ep 196 (best epoch 116)
+[tune]            ems S051: mean validation accuracy 87.50%
+  S052 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune ems] S052 F1 Ep 001 | tr 0.7870 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S052 F1 Ep 050 | tr 0.2148 | val 12.5% | best val acc 37.5% (ep 20) | lr 9.4e-04
+[tune ems] S052 F1 Ep 100 | tr 0.2071 | val 25.0% | best val acc 37.5% (ep 20) | lr 7.5e-04
+[tune ems] S052 F1 Early stop @ ep 100 (best epoch 20)
+[tune]            ems S052: mean validation accuracy 37.50%
+  S053 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S053 F1 Ep 001 | tr 0.7832 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S053 F1 Ep 050 | tr 0.2162 | val 50.0% | best val acc 62.5% (ep 27) | lr 9.4e-04
+[tune ems] S053 F1 Ep 100 | tr 0.2103 | val 62.5% | best val acc 62.5% (ep 83) | lr 7.5e-04
+[tune ems] S053 F1 Ep 150 | tr 0.2203 | val 75.0% | best val acc 75.0% (ep 136) | lr 5.1e-04
+[tune ems] S053 F1 Ep 200 | tr 0.2142 | val 75.0% | best val acc 75.0% (ep 136) | lr 2.6e-04
+[tune ems] S053 F1 Early stop @ ep 216 (best epoch 136)
+[tune]            ems S053: mean validation accuracy 75.00%
+  S054 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S054 F1 Ep 001 | tr 0.7057 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S054 F1 Ep 050 | tr 0.2507 | val 62.5% | best val acc 75.0% (ep 40) | lr 9.4e-04
+[tune ems] S054 F1 Ep 100 | tr 0.2027 | val 75.0% | best val acc 87.5% (ep 89) | lr 7.5e-04
+[tune ems] S054 F1 Ep 150 | tr 0.2096 | val 87.5% | best val acc 87.5% (ep 145) | lr 5.1e-04
+[tune ems] S054 F1 Ep 200 | tr 0.2243 | val 87.5% | best val acc 87.5% (ep 180) | lr 2.6e-04
+[tune ems] S054 F1 Ep 250 | tr 0.2038 | val 87.5% | best val acc 87.5% (ep 234) | lr 7.1e-05
+[tune ems] S054 F1 Ep 300 | tr 0.2114 | val 87.5% | best val acc 87.5% (ep 234) | lr 1.0e-06
+[tune]            ems S054: mean validation accuracy 87.50%
+  S055 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S055 F1 Ep 001 | tr 0.6639 | val 87.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S055 F1 Ep 050 | tr 0.2545 | val 75.0% | best val acc 87.5% (ep 42) | lr 9.4e-04
+[tune ems] S055 F1 Ep 100 | tr 0.2114 | val 62.5% | best val acc 87.5% (ep 98) | lr 7.5e-04
+[tune ems] S055 F1 Ep 150 | tr 0.2142 | val 75.0% | best val acc 87.5% (ep 116) | lr 5.1e-04
+[tune ems] S055 F1 Early stop @ ep 196 (best epoch 116)
+[tune]            ems S055: mean validation accuracy 87.50%
+  S056 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S056 F1 Ep 001 | tr 0.7593 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S056 F1 Ep 050 | tr 0.2720 | val 75.0% | best val acc 87.5% (ep 43) | lr 9.4e-04
+[tune ems] S056 F1 Ep 100 | tr 0.2276 | val 75.0% | best val acc 87.5% (ep 43) | lr 7.5e-04
+[tune ems] S056 F1 Ep 150 | tr 0.2129 | val 75.0% | best val acc 87.5% (ep 108) | lr 5.1e-04
+[tune ems] S056 F1 Early stop @ ep 188 (best epoch 108)
+[tune]            ems S056: mean validation accuracy 87.50%
+  S057 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune ems] S057 F1 Ep 001 | tr 0.7449 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S057 F1 Ep 050 | tr 0.2093 | val 75.0% | best val acc 75.0% (ep 50) | lr 9.4e-04
+[tune ems] S057 F1 Ep 100 | tr 0.2084 | val 87.5% | best val acc 87.5% (ep 96) | lr 7.5e-04
+[tune ems] S057 F1 Ep 150 | tr 0.2158 | val 75.0% | best val acc 87.5% (ep 147) | lr 5.1e-04
+[tune ems] S057 F1 Ep 200 | tr 0.2067 | val 75.0% | best val acc 87.5% (ep 174) | lr 2.6e-04
+[tune ems] S057 F1 Ep 250 | tr 0.2089 | val 75.0% | best val acc 87.5% (ep 174) | lr 7.1e-05
+[tune ems] S057 F1 Early stop @ ep 254 (best epoch 174)
+[tune]            ems S057: mean validation accuracy 87.50%
+  S058 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune ems] S058 F1 Ep 001 | tr 0.8272 | val 12.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S058 F1 Ep 050 | tr 0.2598 | val 50.0% | best val acc 50.0% (ep 30) | lr 9.4e-04
+[tune ems] S058 F1 Ep 100 | tr 0.2144 | val 50.0% | best val acc 50.0% (ep 30) | lr 7.5e-04
+[tune ems] S058 F1 Early stop @ ep 110 (best epoch 30)
+[tune]            ems S058: mean validation accuracy 50.00%
+  S059 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune ems] S059 F1 Ep 001 | tr 0.6977 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S059 F1 Ep 050 | tr 0.2132 | val 62.5% | best val acc 62.5% (ep 50) | lr 9.4e-04
+[tune ems] S059 F1 Ep 100 | tr 0.2142 | val 75.0% | best val acc 87.5% (ep 86) | lr 7.5e-04
+[tune ems] S059 F1 Ep 150 | tr 0.2128 | val 75.0% | best val acc 87.5% (ep 86) | lr 5.1e-04
+[tune ems] S059 F1 Early stop @ ep 166 (best epoch 86)
+[tune]            ems S059: mean validation accuracy 87.50%
+  S060 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S060 F1 Ep 001 | tr 0.7773 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S060 F1 Ep 050 | tr 0.2394 | val 62.5% | best val acc 75.0% (ep 31) | lr 9.4e-04
+[tune ems] S060 F1 Ep 100 | tr 0.2075 | val 75.0% | best val acc 87.5% (ep 92) | lr 7.5e-04
+[tune ems] S060 F1 Ep 150 | tr 0.2098 | val 87.5% | best val acc 87.5% (ep 150) | lr 5.1e-04
+[tune ems] S060 F1 Ep 200 | tr 0.2106 | val 87.5% | best val acc 87.5% (ep 200) | lr 2.6e-04
+[tune ems] S060 F1 Ep 250 | tr 0.2144 | val 87.5% | best val acc 87.5% (ep 249) | lr 7.1e-05
+[tune ems] S060 F1 Ep 300 | tr 0.2214 | val 87.5% | best val acc 87.5% (ep 249) | lr 1.0e-06
+[tune]            ems S060: mean validation accuracy 87.50%
+  S061 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S061 F1 Ep 001 | tr 0.7314 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S061 F1 Ep 050 | tr 0.2540 | val 50.0% | best val acc 62.5% (ep 20) | lr 9.4e-04
+[tune ems] S061 F1 Ep 100 | tr 0.2152 | val 50.0% | best val acc 62.5% (ep 20) | lr 7.5e-04
+[tune ems] S061 F1 Early stop @ ep 100 (best epoch 20)
+[tune]            ems S061: mean validation accuracy 62.50%
+  S062 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S062 F1 Ep 001 | tr 0.6549 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S062 F1 Ep 050 | tr 0.2453 | val 25.0% | best val acc 37.5% (ep 20) | lr 9.4e-04
+[tune ems] S062 F1 Ep 100 | tr 0.2131 | val 25.0% | best val acc 37.5% (ep 20) | lr 7.5e-04
+[tune ems] S062 F1 Early stop @ ep 100 (best epoch 20)
+[tune]            ems S062: mean validation accuracy 37.50%
+  S063 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S063 F1 Ep 001 | tr 0.6409 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S063 F1 Ep 050 | tr 0.2382 | val 50.0% | best val acc 62.5% (ep 26) | lr 9.4e-04
+[tune ems] S063 F1 Ep 100 | tr 0.2192 | val 62.5% | best val acc 62.5% (ep 100) | lr 7.5e-04
+[tune ems] S063 F1 Ep 150 | tr 0.2080 | val 50.0% | best val acc 62.5% (ep 110) | lr 5.1e-04
+[tune ems] S063 F1 Early stop @ ep 190 (best epoch 110)
+[tune]            ems S063: mean validation accuracy 62.50%
+  S064 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S064 F1 Ep 001 | tr 0.7675 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S064 F1 Ep 050 | tr 0.2663 | val 62.5% | best val acc 62.5% (ep 49) | lr 9.4e-04
+[tune ems] S064 F1 Ep 100 | tr 0.2103 | val 62.5% | best val acc 62.5% (ep 49) | lr 7.5e-04
+[tune ems] S064 F1 Early stop @ ep 129 (best epoch 49)
+[tune]            ems S064: mean validation accuracy 62.50%
+  S065 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune ems] S065 F1 Ep 001 | tr 0.6833 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S065 F1 Ep 050 | tr 0.2083 | val 87.5% | best val acc 87.5% (ep 50) | lr 9.4e-04
+[tune ems] S065 F1 Ep 100 | tr 0.2102 | val 87.5% | best val acc 87.5% (ep 96) | lr 7.5e-04
+[tune ems] S065 F1 Ep 150 | tr 0.2034 | val 87.5% | best val acc 87.5% (ep 150) | lr 5.1e-04
+[tune ems] S065 F1 Ep 200 | tr 0.2107 | val 87.5% | best val acc 87.5% (ep 189) | lr 2.6e-04
+[tune ems] S065 F1 Ep 250 | tr 0.2036 | val 87.5% | best val acc 87.5% (ep 224) | lr 7.1e-05
+[tune ems] S065 F1 Ep 300 | tr 0.2014 | val 87.5% | best val acc 87.5% (ep 300) | lr 1.0e-06
+[tune]            ems S065: mean validation accuracy 87.50%
+  S066 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S066 F1 Ep 001 | tr 0.9123 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S066 F1 Ep 050 | tr 0.2447 | val 50.0% | best val acc 62.5% (ep 35) | lr 9.4e-04
+[tune ems] S066 F1 Ep 100 | tr 0.2278 | val 50.0% | best val acc 62.5% (ep 94) | lr 7.5e-04
+[tune ems] S066 F1 Ep 150 | tr 0.2122 | val 62.5% | best val acc 62.5% (ep 148) | lr 5.1e-04
+[tune ems] S066 F1 Ep 200 | tr 0.2078 | val 75.0% | best val acc 75.0% (ep 195) | lr 2.6e-04
+[tune ems] S066 F1 Ep 250 | tr 0.2069 | val 87.5% | best val acc 87.5% (ep 239) | lr 7.1e-05
+[tune ems] S066 F1 Ep 300 | tr 0.2046 | val 87.5% | best val acc 87.5% (ep 266) | lr 1.0e-06
+[tune]            ems S066: mean validation accuracy 87.50%
+  S067 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S067 F1 Ep 001 | tr 0.6873 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S067 F1 Ep 050 | tr 0.2101 | val 62.5% | best val acc 75.0% (ep 42) | lr 9.4e-04
+[tune ems] S067 F1 Ep 100 | tr 0.2219 | val 75.0% | best val acc 75.0% (ep 96) | lr 7.5e-04
+[tune ems] S067 F1 Ep 150 | tr 0.2158 | val 62.5% | best val acc 75.0% (ep 96) | lr 5.1e-04
+[tune ems] S067 F1 Early stop @ ep 176 (best epoch 96)
+[tune]            ems S067: mean validation accuracy 75.00%
+  S068 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S068 F1 Ep 001 | tr 0.7751 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S068 F1 Ep 050 | tr 0.2191 | val 37.5% | best val acc 50.0% (ep 20) | lr 9.4e-04
+[tune ems] S068 F1 Ep 100 | tr 0.2237 | val 50.0% | best val acc 50.0% (ep 61) | lr 7.5e-04
+[tune ems] S068 F1 Early stop @ ep 141 (best epoch 61)
+[tune]            ems S068: mean validation accuracy 50.00%
+  S069 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune ems] S069 F1 Ep 001 | tr 0.8857 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S069 F1 Ep 050 | tr 0.2275 | val 37.5% | best val acc 75.0% (ep 22) | lr 9.4e-04
+[tune ems] S069 F1 Ep 100 | tr 0.2162 | val 50.0% | best val acc 75.0% (ep 22) | lr 7.5e-04
+[tune ems] S069 F1 Early stop @ ep 102 (best epoch 22)
+[tune]            ems S069: mean validation accuracy 75.00%
+  S070 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S070 F1 Ep 001 | tr 0.7876 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S070 F1 Ep 050 | tr 0.2196 | val 62.5% | best val acc 62.5% (ep 45) | lr 9.4e-04
+[tune ems] S070 F1 Ep 100 | tr 0.2102 | val 62.5% | best val acc 62.5% (ep 63) | lr 7.5e-04
+[tune ems] S070 F1 Early stop @ ep 143 (best epoch 63)
+[tune]            ems S070: mean validation accuracy 62.50%
+  S071 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S071 F1 Ep 001 | tr 0.7214 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S071 F1 Ep 050 | tr 0.2385 | val 25.0% | best val acc 37.5% (ep 43) | lr 9.4e-04
+[tune ems] S071 F1 Ep 100 | tr 0.2203 | val 37.5% | best val acc 50.0% (ep 67) | lr 7.5e-04
+[tune ems] S071 F1 Early stop @ ep 147 (best epoch 67)
+[tune]            ems S071: mean validation accuracy 50.00%
+  S072 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S072 F1 Ep 001 | tr 0.7368 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S072 F1 Ep 050 | tr 0.2609 | val 37.5% | best val acc 50.0% (ep 42) | lr 9.4e-04
+[tune ems] S072 F1 Ep 100 | tr 0.2079 | val 50.0% | best val acc 62.5% (ep 97) | lr 7.5e-04
+[tune ems] S072 F1 Ep 150 | tr 0.2089 | val 75.0% | best val acc 75.0% (ep 145) | lr 5.1e-04
+[tune ems] S072 F1 Ep 200 | tr 0.2108 | val 87.5% | best val acc 87.5% (ep 189) | lr 2.6e-04
+[tune ems] S072 F1 Ep 250 | tr 0.2058 | val 75.0% | best val acc 87.5% (ep 189) | lr 7.1e-05
+[tune ems] S072 F1 Early stop @ ep 269 (best epoch 189)
+[tune]            ems S072: mean validation accuracy 87.50%
+  S073 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S073 F1 Ep 001 | tr 0.6573 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S073 F1 Ep 050 | tr 0.2602 | val 50.0% | best val acc 50.0% (ep 22) | lr 9.4e-04
+[tune ems] S073 F1 Ep 100 | tr 0.2109 | val 50.0% | best val acc 50.0% (ep 22) | lr 7.5e-04
+[tune ems] S073 F1 Early stop @ ep 102 (best epoch 22)
+[tune]            ems S073: mean validation accuracy 50.00%
+  S074 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune ems] S074 F1 Ep 001 | tr 0.8096 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S074 F1 Ep 050 | tr 0.2335 | val 50.0% | best val acc 50.0% (ep 46) | lr 9.4e-04
+[tune ems] S074 F1 Ep 100 | tr 0.2136 | val 62.5% | best val acc 62.5% (ep 85) | lr 7.5e-04
+[tune ems] S074 F1 Ep 150 | tr 0.2104 | val 50.0% | best val acc 62.5% (ep 85) | lr 5.1e-04
+[tune ems] S074 F1 Early stop @ ep 165 (best epoch 85)
+[tune]            ems S074: mean validation accuracy 62.50%
+  S075 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S075 F1 Ep 001 | tr 0.7642 | val 75.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S075 F1 Ep 050 | tr 0.2350 | val 50.0% | best val acc 50.0% (ep 26) | lr 9.4e-04
+[tune ems] S075 F1 Ep 100 | tr 0.2162 | val 37.5% | best val acc 50.0% (ep 26) | lr 7.5e-04
+[tune ems] S075 F1 Early stop @ ep 106 (best epoch 26)
+[tune]            ems S075: mean validation accuracy 50.00%
+  S076 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S076 F1 Ep 001 | tr 0.7252 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S076 F1 Ep 050 | tr 0.2527 | val 50.0% | best val acc 50.0% (ep 20) | lr 9.4e-04
+[tune ems] S076 F1 Ep 100 | tr 0.2222 | val 37.5% | best val acc 50.0% (ep 20) | lr 7.5e-04
+[tune ems] S076 F1 Early stop @ ep 100 (best epoch 20)
+[tune]            ems S076: mean validation accuracy 50.00%
+  S077 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 21, 'right_hand': 24} train/test trials=[30, 15]
+[tune ems] S077 F1 Ep 001 | tr 0.7881 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S077 F1 Ep 050 | tr 0.2499 | val 62.5% | best val acc 75.0% (ep 30) | lr 9.4e-04
+[tune ems] S077 F1 Ep 100 | tr 0.2173 | val 50.0% | best val acc 75.0% (ep 30) | lr 7.5e-04
+[tune ems] S077 F1 Early stop @ ep 110 (best epoch 30)
+[tune]            ems S077: mean validation accuracy 75.00%
+  S078 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S078 F1 Ep 001 | tr 0.7278 | val 75.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S078 F1 Ep 050 | tr 0.2500 | val 37.5% | best val acc 50.0% (ep 27) | lr 9.4e-04
+[tune ems] S078 F1 Ep 100 | tr 0.2080 | val 37.5% | best val acc 50.0% (ep 27) | lr 7.5e-04
+[tune ems] S078 F1 Early stop @ ep 107 (best epoch 27)
+[tune]            ems S078: mean validation accuracy 50.00%
+  S079 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S079 F1 Ep 001 | tr 0.7111 | val 75.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S079 F1 Ep 050 | tr 0.2315 | val 50.0% | best val acc 50.0% (ep 50) | lr 9.4e-04
+[tune ems] S079 F1 Ep 100 | tr 0.2181 | val 37.5% | best val acc 50.0% (ep 64) | lr 7.5e-04
+[tune ems] S079 F1 Early stop @ ep 144 (best epoch 64)
+[tune]            ems S079: mean validation accuracy 50.00%
+  S080 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S080 F1 Ep 001 | tr 0.7200 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S080 F1 Ep 050 | tr 0.2193 | val 75.0% | best val acc 75.0% (ep 48) | lr 9.4e-04
+[tune ems] S080 F1 Ep 100 | tr 0.2101 | val 75.0% | best val acc 75.0% (ep 95) | lr 7.5e-04
+[tune ems] S080 F1 Ep 150 | tr 0.2074 | val 75.0% | best val acc 75.0% (ep 95) | lr 5.1e-04
+[tune ems] S080 F1 Early stop @ ep 175 (best epoch 95)
+[tune]            ems S080: mean validation accuracy 75.00%
+  S081 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S081 F1 Ep 001 | tr 0.7576 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S081 F1 Ep 050 | tr 0.2443 | val 12.5% | best val acc 25.0% (ep 20) | lr 9.4e-04
+[tune ems] S081 F1 Ep 100 | tr 0.2129 | val 25.0% | best val acc 25.0% (ep 20) | lr 7.5e-04
+[tune ems] S081 F1 Early stop @ ep 100 (best epoch 20)
+[tune]            ems S081: mean validation accuracy 25.00%
+  S082 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S082 F1 Ep 001 | tr 0.7858 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S082 F1 Ep 050 | tr 0.2238 | val 37.5% | best val acc 62.5% (ep 44) | lr 9.4e-04
+[tune ems] S082 F1 Ep 100 | tr 0.2135 | val 50.0% | best val acc 62.5% (ep 69) | lr 7.5e-04
+[tune ems] S082 F1 Early stop @ ep 149 (best epoch 69)
+[tune]            ems S082: mean validation accuracy 62.50%
+  S083 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S083 F1 Ep 001 | tr 0.6895 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S083 F1 Ep 050 | tr 0.2476 | val 62.5% | best val acc 62.5% (ep 50) | lr 9.4e-04
+[tune ems] S083 F1 Ep 100 | tr 0.2080 | val 62.5% | best val acc 62.5% (ep 64) | lr 7.5e-04
+[tune ems] S083 F1 Early stop @ ep 144 (best epoch 64)
+[tune]            ems S083: mean validation accuracy 62.50%
+  S084 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S084 F1 Ep 001 | tr 0.7858 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S084 F1 Ep 050 | tr 0.2194 | val 50.0% | best val acc 50.0% (ep 20) | lr 9.4e-04
+[tune ems] S084 F1 Ep 100 | tr 0.2034 | val 50.0% | best val acc 50.0% (ep 20) | lr 7.5e-04
+[tune ems] S084 F1 Early stop @ ep 100 (best epoch 20)
+[tune]            ems S084: mean validation accuracy 50.00%
+  S085 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S085 F1 Ep 001 | tr 0.7898 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S085 F1 Ep 050 | tr 0.2260 | val 75.0% | best val acc 75.0% (ep 50) | lr 9.4e-04
+[tune ems] S085 F1 Ep 100 | tr 0.2129 | val 75.0% | best val acc 87.5% (ep 76) | lr 7.5e-04
+[tune ems] S085 F1 Ep 150 | tr 0.2143 | val 87.5% | best val acc 87.5% (ep 150) | lr 5.1e-04
+[tune ems] S085 F1 Ep 200 | tr 0.2053 | val 87.5% | best val acc 100.0% (ep 158) | lr 2.6e-04
+[tune ems] S085 F1 Early stop @ ep 238 (best epoch 158)
+[tune]            ems S085: mean validation accuracy 100.00%
+  S086 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S086 F1 Ep 001 | tr 0.7673 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S086 F1 Ep 050 | tr 0.2347 | val 62.5% | best val acc 62.5% (ep 43) | lr 9.4e-04
+[tune ems] S086 F1 Ep 100 | tr 0.2221 | val 62.5% | best val acc 62.5% (ep 73) | lr 7.5e-04
+[tune ems] S086 F1 Ep 150 | tr 0.2080 | val 62.5% | best val acc 62.5% (ep 142) | lr 5.1e-04
+[tune ems] S086 F1 Ep 200 | tr 0.2091 | val 62.5% | best val acc 62.5% (ep 142) | lr 2.6e-04
+[tune ems] S086 F1 Early stop @ ep 222 (best epoch 142)
+[tune]            ems S086: mean validation accuracy 62.50%
+  S087 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S087 F1 Ep 001 | tr 0.7100 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S087 F1 Ep 050 | tr 0.2340 | val 50.0% | best val acc 50.0% (ep 20) | lr 9.4e-04
+[tune ems] S087 F1 Ep 100 | tr 0.2246 | val 50.0% | best val acc 50.0% (ep 20) | lr 7.5e-04
+[tune ems] S087 F1 Early stop @ ep 100 (best epoch 20)
+[tune]            ems S087: mean validation accuracy 50.00%
+  S089 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune ems] S089 F1 Ep 001 | tr 0.6376 | val 12.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S089 F1 Ep 050 | tr 0.2443 | val 50.0% | best val acc 50.0% (ep 20) | lr 9.4e-04
+[tune ems] S089 F1 Ep 100 | tr 0.2088 | val 37.5% | best val acc 50.0% (ep 20) | lr 7.5e-04
+[tune ems] S089 F1 Early stop @ ep 100 (best epoch 20)
+[tune]            ems S089: mean validation accuracy 50.00%
+  S090 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S090 F1 Ep 001 | tr 0.7415 | val 75.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S090 F1 Ep 050 | tr 0.2258 | val 50.0% | best val acc 50.0% (ep 48) | lr 9.4e-04
+[tune ems] S090 F1 Ep 100 | tr 0.2144 | val 50.0% | best val acc 50.0% (ep 62) | lr 7.5e-04
+[tune ems] S090 F1 Ep 150 | tr 0.2142 | val 62.5% | best val acc 62.5% (ep 142) | lr 5.1e-04
+[tune ems] S090 F1 Ep 200 | tr 0.2092 | val 62.5% | best val acc 62.5% (ep 200) | lr 2.6e-04
+[tune ems] S090 F1 Ep 250 | tr 0.2056 | val 62.5% | best val acc 62.5% (ep 246) | lr 7.1e-05
+[tune ems] S090 F1 Ep 300 | tr 0.2089 | val 75.0% | best val acc 75.0% (ep 300) | lr 1.0e-06
+[tune]            ems S090: mean validation accuracy 75.00%
+  S091 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S091 F1 Ep 001 | tr 0.7681 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S091 F1 Ep 050 | tr 0.2280 | val 50.0% | best val acc 50.0% (ep 35) | lr 9.4e-04
+[tune ems] S091 F1 Ep 100 | tr 0.2086 | val 50.0% | best val acc 50.0% (ep 35) | lr 7.5e-04
+[tune ems] S091 F1 Early stop @ ep 115 (best epoch 35)
+[tune]            ems S091: mean validation accuracy 50.00%
+  S093 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S093 F1 Ep 001 | tr 0.6873 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S093 F1 Ep 050 | tr 0.2283 | val 37.5% | best val acc 50.0% (ep 36) | lr 9.4e-04
+[tune ems] S093 F1 Ep 100 | tr 0.2075 | val 50.0% | best val acc 62.5% (ep 69) | lr 7.5e-04
+[tune ems] S093 F1 Ep 150 | tr 0.2118 | val 50.0% | best val acc 62.5% (ep 123) | lr 5.1e-04
+[tune ems] S093 F1 Ep 200 | tr 0.2028 | val 62.5% | best val acc 62.5% (ep 123) | lr 2.6e-04
+[tune ems] S093 F1 Early stop @ ep 203 (best epoch 123)
+[tune]            ems S093: mean validation accuracy 62.50%
+  S094 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S094 F1 Ep 001 | tr 0.7566 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S094 F1 Ep 050 | tr 0.2294 | val 50.0% | best val acc 62.5% (ep 32) | lr 9.4e-04
+[tune ems] S094 F1 Ep 100 | tr 0.2118 | val 50.0% | best val acc 62.5% (ep 32) | lr 7.5e-04
+[tune ems] S094 F1 Early stop @ ep 112 (best epoch 32)
+[tune]            ems S094: mean validation accuracy 62.50%
+  S095 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S095 F1 Ep 001 | tr 0.6546 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S095 F1 Ep 050 | tr 0.2387 | val 50.0% | best val acc 50.0% (ep 29) | lr 9.4e-04
+[tune ems] S095 F1 Ep 100 | tr 0.2147 | val 37.5% | best val acc 50.0% (ep 60) | lr 7.5e-04
+[tune ems] S095 F1 Ep 150 | tr 0.2303 | val 25.0% | best val acc 62.5% (ep 134) | lr 5.1e-04
+[tune ems] S095 F1 Ep 200 | tr 0.2084 | val 37.5% | best val acc 62.5% (ep 134) | lr 2.6e-04
+[tune ems] S095 F1 Early stop @ ep 214 (best epoch 134)
+[tune]            ems S095: mean validation accuracy 62.50%
+  S096 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S096 F1 Ep 001 | tr 0.7543 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S096 F1 Ep 050 | tr 0.2696 | val 62.5% | best val acc 62.5% (ep 26) | lr 9.4e-04
+[tune ems] S096 F1 Ep 100 | tr 0.2146 | val 75.0% | best val acc 75.0% (ep 75) | lr 7.5e-04
+[tune ems] S096 F1 Ep 150 | tr 0.2098 | val 62.5% | best val acc 75.0% (ep 75) | lr 5.1e-04
+[tune ems] S096 F1 Early stop @ ep 155 (best epoch 75)
+[tune]            ems S096: mean validation accuracy 75.00%
+  S097 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S097 F1 Ep 001 | tr 0.6760 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S097 F1 Ep 050 | tr 0.2296 | val 37.5% | best val acc 50.0% (ep 45) | lr 9.4e-04
+[tune ems] S097 F1 Ep 100 | tr 0.2177 | val 50.0% | best val acc 62.5% (ep 75) | lr 7.5e-04
+[tune ems] S097 F1 Ep 150 | tr 0.2133 | val 50.0% | best val acc 62.5% (ep 75) | lr 5.1e-04
+[tune ems] S097 F1 Early stop @ ep 155 (best epoch 75)
+[tune]            ems S097: mean validation accuracy 62.50%
+  S098 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S098 F1 Ep 001 | tr 0.8037 | val 75.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S098 F1 Ep 050 | tr 0.2328 | val 62.5% | best val acc 75.0% (ep 38) | lr 9.4e-04
+[tune ems] S098 F1 Ep 100 | tr 0.2116 | val 50.0% | best val acc 75.0% (ep 38) | lr 7.5e-04
+[tune ems] S098 F1 Early stop @ ep 118 (best epoch 38)
+[tune]            ems S098: mean validation accuracy 75.00%
+  S099 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S099 F1 Ep 001 | tr 0.7531 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S099 F1 Ep 050 | tr 0.2391 | val 37.5% | best val acc 50.0% (ep 26) | lr 9.4e-04
+[tune ems] S099 F1 Ep 100 | tr 0.2155 | val 25.0% | best val acc 50.0% (ep 26) | lr 7.5e-04
+[tune ems] S099 F1 Early stop @ ep 106 (best epoch 26)
+[tune]            ems S099: mean validation accuracy 50.00%
+  S101 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S101 F1 Ep 001 | tr 0.6806 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S101 F1 Ep 050 | tr 0.2184 | val 75.0% | best val acc 75.0% (ep 50) | lr 9.4e-04
+[tune ems] S101 F1 Ep 100 | tr 0.2136 | val 75.0% | best val acc 87.5% (ep 97) | lr 7.5e-04
+[tune ems] S101 F1 Ep 150 | tr 0.2105 | val 75.0% | best val acc 87.5% (ep 97) | lr 5.1e-04
+[tune ems] S101 F1 Ep 200 | tr 0.2107 | val 87.5% | best val acc 87.5% (ep 195) | lr 2.6e-04
+[tune ems] S101 F1 Ep 250 | tr 0.2036 | val 87.5% | best val acc 87.5% (ep 210) | lr 7.1e-05
+[tune ems] S101 F1 Early stop @ ep 290 (best epoch 210)
+[tune]            ems S101: mean validation accuracy 87.50%
+  S102 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S102 F1 Ep 001 | tr 0.8013 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S102 F1 Ep 050 | tr 0.2285 | val 62.5% | best val acc 75.0% (ep 48) | lr 9.4e-04
+[tune ems] S102 F1 Ep 100 | tr 0.2092 | val 62.5% | best val acc 75.0% (ep 48) | lr 7.5e-04
+[tune ems] S102 F1 Early stop @ ep 128 (best epoch 48)
+[tune]            ems S102: mean validation accuracy 75.00%
+  S103 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S103 F1 Ep 001 | tr 0.7214 | val 50.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S103 F1 Ep 050 | tr 0.2822 | val 50.0% | best val acc 50.0% (ep 34) | lr 9.4e-04
+[tune ems] S103 F1 Ep 100 | tr 0.2053 | val 37.5% | best val acc 50.0% (ep 34) | lr 7.5e-04
+[tune ems] S103 F1 Early stop @ ep 114 (best epoch 34)
+[tune]            ems S103: mean validation accuracy 50.00%
+  S105 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S105 F1 Ep 001 | tr 0.8370 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S105 F1 Ep 050 | tr 0.2457 | val 37.5% | best val acc 37.5% (ep 43) | lr 9.4e-04
+[tune ems] S105 F1 Ep 100 | tr 0.2223 | val 50.0% | best val acc 50.0% (ep 99) | lr 7.5e-04
+[tune ems] S105 F1 Ep 150 | tr 0.2187 | val 50.0% | best val acc 50.0% (ep 99) | lr 5.1e-04
+[tune ems] S105 F1 Early stop @ ep 179 (best epoch 99)
+[tune]            ems S105: mean validation accuracy 50.00%
+  S106 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune ems] S106 F1 Ep 001 | tr 0.8320 | val 25.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S106 F1 Ep 050 | tr 0.2225 | val 37.5% | best val acc 75.0% (ep 20) | lr 9.4e-04
+[tune ems] S106 F1 Ep 100 | tr 0.2097 | val 50.0% | best val acc 75.0% (ep 20) | lr 7.5e-04
+[tune ems] S106 F1 Early stop @ ep 100 (best epoch 20)
+[tune]            ems S106: mean validation accuracy 75.00%
+  S107 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune ems] S107 F1 Ep 001 | tr 0.7796 | val 75.0% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S107 F1 Ep 050 | tr 0.2287 | val 50.0% | best val acc 87.5% (ep 25) | lr 9.4e-04
+[tune ems] S107 F1 Ep 100 | tr 0.2111 | val 50.0% | best val acc 87.5% (ep 25) | lr 7.5e-04
+[tune ems] S107 F1 Early stop @ ep 105 (best epoch 25)
+[tune]            ems S107: mean validation accuracy 87.50%
+  S108 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune ems] S108 F1 Ep 001 | tr 0.7186 | val 37.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S108 F1 Ep 050 | tr 0.2617 | val 37.5% | best val acc 37.5% (ep 29) | lr 9.4e-04
+[tune ems] S108 F1 Ep 100 | tr 0.2408 | val 62.5% | best val acc 62.5% (ep 79) | lr 7.5e-04
+[tune ems] S108 F1 Ep 150 | tr 0.2133 | val 37.5% | best val acc 75.0% (ep 144) | lr 5.1e-04
+[tune ems] S108 F1 Ep 200 | tr 0.2078 | val 37.5% | best val acc 75.0% (ep 144) | lr 2.6e-04
+[tune ems] S108 F1 Early stop @ ep 224 (best epoch 144)
+[tune]            ems S108: mean validation accuracy 75.00%
+  S109 [2class] profile=ems X=(45, 64, 480) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune ems] S109 F1 Ep 001 | tr 0.7327 | val 62.5% | best val acc 0.0% (ep 0) | lr 1.0e-03
+[tune ems] S109 F1 Ep 050 | tr 0.2287 | val 62.5% | best val acc 87.5% (ep 40) | lr 9.4e-04
+[tune ems] S109 F1 Ep 100 | tr 0.2053 | val 62.5% | best val acc 87.5% (ep 40) | lr 7.5e-04
+[tune ems] S109 F1 Early stop @ ep 120 (best epoch 40)
+[tune]            ems S109: mean validation accuracy 87.50%
+  S001 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S001 F1 Ep 001 | tr 0.6945 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S001 F1 Ep 050 | tr 0.0206 | val 62.5% | best val acc 75.0% (ep 6) | lr 1.0e-03
+[tune original] S001 F1 Ep 100 | tr 0.0114 | val 75.0% | best val acc 75.0% (ep 6) | lr 1.0e-04
+[tune]       original S001: mean validation accuracy 75.00%
+  S002 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S002 F1 Ep 001 | tr 0.6595 | val 62.5% | best val acc 62.5% (ep 1) | lr 1.0e-02
+[tune original] S002 F1 Ep 050 | tr 0.0109 | val 50.0% | best val acc 50.0% (ep 2) | lr 1.0e-03
+[tune original] S002 F1 Ep 100 | tr 0.0094 | val 62.5% | best val acc 50.0% (ep 2) | lr 1.0e-04
+[tune]       original S002: mean validation accuracy 50.00%
+  S003 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S003 F1 Ep 001 | tr 0.8109 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S003 F1 Ep 050 | tr 0.0144 | val 75.0% | best val acc 75.0% (ep 50) | lr 1.0e-03
+[tune original] S003 F1 Ep 100 | tr 0.0143 | val 62.5% | best val acc 62.5% (ep 91) | lr 1.0e-04
+[tune]       original S003: mean validation accuracy 62.50%
+  S004 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S004 F1 Ep 001 | tr 0.6985 | val 37.5% | best val acc 37.5% (ep 1) | lr 1.0e-02
+[tune original] S004 F1 Ep 050 | tr 0.0379 | val 75.0% | best val acc 37.5% (ep 1) | lr 1.0e-03
+[tune original] S004 F1 Ep 100 | tr 0.0143 | val 75.0% | best val acc 37.5% (ep 1) | lr 1.0e-04
+[tune]       original S004: mean validation accuracy 37.50%
+  S005 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 21, 'right_hand': 24} train/test trials=[30, 15]
+[tune original] S005 F1 Ep 001 | tr 0.7598 | val 37.5% | best val acc 37.5% (ep 1) | lr 1.0e-02
+[tune original] S005 F1 Ep 050 | tr 0.0126 | val 62.5% | best val acc 62.5% (ep 8) | lr 1.0e-03
+[tune original] S005 F1 Ep 100 | tr 0.0126 | val 62.5% | best val acc 62.5% (ep 8) | lr 1.0e-04
+[tune]       original S005: mean validation accuracy 62.50%
+  S006 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune original] S006 F1 Ep 001 | tr 0.6579 | val 37.5% | best val acc 37.5% (ep 1) | lr 1.0e-02
+[tune original] S006 F1 Ep 050 | tr 0.0168 | val 37.5% | best val acc 37.5% (ep 1) | lr 1.0e-03
+[tune original] S006 F1 Ep 100 | tr 0.0046 | val 37.5% | best val acc 37.5% (ep 1) | lr 1.0e-04
+[tune]       original S006: mean validation accuracy 37.50%
+  S007 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S007 F1 Ep 001 | tr 0.7307 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S007 F1 Ep 050 | tr 0.0190 | val 37.5% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S007 F1 Ep 100 | tr 0.0286 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S007: mean validation accuracy 50.00%
+  S008 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S008 F1 Ep 001 | tr 0.7423 | val 75.0% | best val acc 75.0% (ep 1) | lr 1.0e-02
+[tune original] S008 F1 Ep 050 | tr 0.0154 | val 50.0% | best val acc 75.0% (ep 3) | lr 1.0e-03
+[tune original] S008 F1 Ep 100 | tr 0.0150 | val 50.0% | best val acc 75.0% (ep 3) | lr 1.0e-04
+[tune]       original S008: mean validation accuracy 75.00%
+  S009 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune original] S009 F1 Ep 001 | tr 0.7546 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S009 F1 Ep 050 | tr 0.0073 | val 37.5% | best val acc 62.5% (ep 6) | lr 1.0e-03
+[tune original] S009 F1 Ep 100 | tr 0.0040 | val 50.0% | best val acc 62.5% (ep 6) | lr 1.0e-04
+[tune]       original S009: mean validation accuracy 62.50%
+  S010 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune original] S010 F1 Ep 001 | tr 0.7326 | val 75.0% | best val acc 75.0% (ep 1) | lr 1.0e-02
+[tune original] S010 F1 Ep 050 | tr 0.0325 | val 50.0% | best val acc 62.5% (ep 7) | lr 1.0e-03
+[tune original] S010 F1 Ep 100 | tr 0.0257 | val 62.5% | best val acc 62.5% (ep 7) | lr 1.0e-04
+[tune]       original S010: mean validation accuracy 62.50%
+  S011 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S011 F1 Ep 001 | tr 0.7727 | val 62.5% | best val acc 62.5% (ep 1) | lr 1.0e-02
+[tune original] S011 F1 Ep 050 | tr 0.0075 | val 50.0% | best val acc 62.5% (ep 7) | lr 1.0e-03
+[tune original] S011 F1 Ep 100 | tr 0.0072 | val 62.5% | best val acc 62.5% (ep 7) | lr 1.0e-04
+[tune]       original S011: mean validation accuracy 62.50%
+  S012 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 21, 'right_hand': 24} train/test trials=[30, 15]
+[tune original] S012 F1 Ep 001 | tr 0.7825 | val 62.5% | best val acc 62.5% (ep 1) | lr 1.0e-02
+[tune original] S012 F1 Ep 050 | tr 0.0435 | val 50.0% | best val acc 62.5% (ep 2) | lr 1.0e-03
+[tune original] S012 F1 Ep 100 | tr 0.0794 | val 50.0% | best val acc 62.5% (ep 2) | lr 1.0e-04
+[tune]       original S012: mean validation accuracy 62.50%
+  S013 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S013 F1 Ep 001 | tr 0.6855 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S013 F1 Ep 050 | tr 0.0210 | val 62.5% | best val acc 75.0% (ep 29) | lr 1.0e-03
+[tune original] S013 F1 Ep 100 | tr 0.0326 | val 62.5% | best val acc 75.0% (ep 29) | lr 1.0e-04
+[tune]       original S013: mean validation accuracy 75.00%
+  S014 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S014 F1 Ep 001 | tr 0.8470 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S014 F1 Ep 050 | tr 0.0629 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S014 F1 Ep 100 | tr 0.0530 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S014: mean validation accuracy 50.00%
+  S015 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S015 F1 Ep 001 | tr 0.7181 | val 25.0% | best val acc 25.0% (ep 1) | lr 1.0e-02
+[tune original] S015 F1 Ep 050 | tr 0.0489 | val 62.5% | best val acc 37.5% (ep 9) | lr 1.0e-03
+[tune original] S015 F1 Ep 100 | tr 0.0246 | val 62.5% | best val acc 37.5% (ep 9) | lr 1.0e-04
+[tune]       original S015: mean validation accuracy 37.50%
+  S016 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S016 F1 Ep 001 | tr 0.7923 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S016 F1 Ep 050 | tr 0.0507 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S016 F1 Ep 100 | tr 0.0818 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S016: mean validation accuracy 50.00%
+  S017 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S017 F1 Ep 001 | tr 0.6966 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S017 F1 Ep 050 | tr 0.0129 | val 50.0% | best val acc 37.5% (ep 4) | lr 1.0e-03
+[tune original] S017 F1 Ep 100 | tr 0.0106 | val 50.0% | best val acc 37.5% (ep 4) | lr 1.0e-04
+[tune]       original S017: mean validation accuracy 37.50%
+  S018 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S018 F1 Ep 001 | tr 0.6889 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S018 F1 Ep 050 | tr 0.0528 | val 87.5% | best val acc 87.5% (ep 48) | lr 1.0e-03
+[tune original] S018 F1 Ep 100 | tr 0.0417 | val 100.0% | best val acc 87.5% (ep 48) | lr 1.0e-04
+[tune]       original S018: mean validation accuracy 87.50%
+  S019 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S019 F1 Ep 001 | tr 0.8792 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S019 F1 Ep 050 | tr 0.0267 | val 62.5% | best val acc 62.5% (ep 50) | lr 1.0e-03
+[tune original] S019 F1 Ep 100 | tr 0.0778 | val 75.0% | best val acc 75.0% (ep 100) | lr 1.0e-04
+[tune]       original S019: mean validation accuracy 75.00%
+  S020 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S020 F1 Ep 001 | tr 0.7775 | val 62.5% | best val acc 62.5% (ep 1) | lr 1.0e-02
+[tune original] S020 F1 Ep 050 | tr 0.0334 | val 37.5% | best val acc 62.5% (ep 1) | lr 1.0e-03
+[tune original] S020 F1 Ep 100 | tr 0.0238 | val 50.0% | best val acc 62.5% (ep 1) | lr 1.0e-04
+[tune]       original S020: mean validation accuracy 62.50%
+  S021 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune original] S021 F1 Ep 001 | tr 0.7910 | val 37.5% | best val acc 37.5% (ep 1) | lr 1.0e-02
+[tune original] S021 F1 Ep 050 | tr 0.0384 | val 50.0% | best val acc 37.5% (ep 1) | lr 1.0e-03
+[tune original] S021 F1 Ep 100 | tr 0.0369 | val 50.0% | best val acc 37.5% (ep 1) | lr 1.0e-04
+[tune]       original S021: mean validation accuracy 37.50%
+  S022 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S022 F1 Ep 001 | tr 0.7583 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S022 F1 Ep 050 | tr 0.0367 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S022 F1 Ep 100 | tr 0.0337 | val 25.0% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S022: mean validation accuracy 50.00%
+  S023 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S023 F1 Ep 001 | tr 0.7026 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S023 F1 Ep 050 | tr 0.0215 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S023 F1 Ep 100 | tr 0.0618 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S023: mean validation accuracy 50.00%
+  S024 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S024 F1 Ep 001 | tr 0.7346 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S024 F1 Ep 050 | tr 0.0185 | val 50.0% | best val acc 50.0% (ep 7) | lr 1.0e-03
+[tune original] S024 F1 Ep 100 | tr 0.0133 | val 75.0% | best val acc 75.0% (ep 100) | lr 1.0e-04
+[tune]       original S024: mean validation accuracy 75.00%
+  S025 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S025 F1 Ep 001 | tr 0.7714 | val 25.0% | best val acc 25.0% (ep 1) | lr 1.0e-02
+[tune original] S025 F1 Ep 050 | tr 0.0088 | val 37.5% | best val acc 25.0% (ep 1) | lr 1.0e-03
+[tune original] S025 F1 Ep 100 | tr 0.0162 | val 37.5% | best val acc 25.0% (ep 1) | lr 1.0e-04
+[tune]       original S025: mean validation accuracy 25.00%
+  S026 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune original] S026 F1 Ep 001 | tr 0.6695 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S026 F1 Ep 050 | tr 0.0473 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S026 F1 Ep 100 | tr 0.0478 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S026: mean validation accuracy 50.00%
+  S027 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S027 F1 Ep 001 | tr 0.7675 | val 37.5% | best val acc 37.5% (ep 1) | lr 1.0e-02
+[tune original] S027 F1 Ep 050 | tr 0.0160 | val 25.0% | best val acc 37.5% (ep 1) | lr 1.0e-03
+[tune original] S027 F1 Ep 100 | tr 0.0080 | val 25.0% | best val acc 37.5% (ep 1) | lr 1.0e-04
+[tune]       original S027: mean validation accuracy 37.50%
+  S028 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S028 F1 Ep 001 | tr 0.7951 | val 62.5% | best val acc 62.5% (ep 1) | lr 1.0e-02
+[tune original] S028 F1 Ep 050 | tr 0.0110 | val 50.0% | best val acc 62.5% (ep 1) | lr 1.0e-03
+[tune original] S028 F1 Ep 100 | tr 0.0187 | val 62.5% | best val acc 62.5% (ep 1) | lr 1.0e-04
+[tune]       original S028: mean validation accuracy 62.50%
+  S029 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S029 F1 Ep 001 | tr 0.6785 | val 12.5% | best val acc 12.5% (ep 1) | lr 1.0e-02
+[tune original] S029 F1 Ep 050 | tr 0.0154 | val 37.5% | best val acc 12.5% (ep 1) | lr 1.0e-03
+[tune original] S029 F1 Ep 100 | tr 0.0126 | val 25.0% | best val acc 12.5% (ep 1) | lr 1.0e-04
+[tune]       original S029: mean validation accuracy 12.50%
+  S030 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune original] S030 F1 Ep 001 | tr 0.6461 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S030 F1 Ep 050 | tr 0.0693 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S030 F1 Ep 100 | tr 0.0706 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S030: mean validation accuracy 50.00%
+  S031 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S031 F1 Ep 001 | tr 0.7261 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S031 F1 Ep 050 | tr 0.0509 | val 25.0% | best val acc 37.5% (ep 13) | lr 1.0e-03
+[tune original] S031 F1 Ep 100 | tr 0.0379 | val 12.5% | best val acc 37.5% (ep 13) | lr 1.0e-04
+[tune]       original S031: mean validation accuracy 37.50%
+  S032 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 21, 'right_hand': 24} train/test trials=[30, 15]
+[tune original] S032 F1 Ep 001 | tr 0.7432 | val 62.5% | best val acc 62.5% (ep 1) | lr 1.0e-02
+[tune original] S032 F1 Ep 050 | tr 0.0102 | val 50.0% | best val acc 50.0% (ep 50) | lr 1.0e-03
+[tune original] S032 F1 Ep 100 | tr 0.0146 | val 50.0% | best val acc 50.0% (ep 100) | lr 1.0e-04
+[tune]       original S032: mean validation accuracy 50.00%
+  S033 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S033 F1 Ep 001 | tr 0.6639 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S033 F1 Ep 050 | tr 0.0068 | val 37.5% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S033 F1 Ep 100 | tr 0.0042 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S033: mean validation accuracy 50.00%
+  S034 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 21, 'right_hand': 24} train/test trials=[30, 15]
+[tune original] S034 F1 Ep 001 | tr 0.6859 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S034 F1 Ep 050 | tr 0.0342 | val 62.5% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S034 F1 Ep 100 | tr 0.0353 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S034: mean validation accuracy 50.00%
+  S035 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S035 F1 Ep 001 | tr 0.7555 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S035 F1 Ep 050 | tr 0.0453 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S035 F1 Ep 100 | tr 0.0546 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S035: mean validation accuracy 50.00%
+  S036 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S036 F1 Ep 001 | tr 0.7460 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S036 F1 Ep 050 | tr 0.0651 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S036 F1 Ep 100 | tr 0.0730 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S036: mean validation accuracy 50.00%
+  S037 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S037 F1 Ep 001 | tr 0.7444 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S037 F1 Ep 050 | tr 0.0229 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S037 F1 Ep 100 | tr 0.0158 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S037: mean validation accuracy 50.00%
+  S038 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S038 F1 Ep 001 | tr 0.7432 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S038 F1 Ep 050 | tr 0.0110 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S038 F1 Ep 100 | tr 0.0124 | val 62.5% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S038: mean validation accuracy 50.00%
+  S039 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S039 F1 Ep 001 | tr 0.7473 | val 25.0% | best val acc 25.0% (ep 1) | lr 1.0e-02
+[tune original] S039 F1 Ep 050 | tr 0.0242 | val 50.0% | best val acc 25.0% (ep 1) | lr 1.0e-03
+[tune original] S039 F1 Ep 100 | tr 0.0169 | val 50.0% | best val acc 25.0% (ep 1) | lr 1.0e-04
+[tune]       original S039: mean validation accuracy 25.00%
+  S040 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 21, 'right_hand': 24} train/test trials=[30, 15]
+[tune original] S040 F1 Ep 001 | tr 0.7395 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S040 F1 Ep 050 | tr 0.0140 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S040 F1 Ep 100 | tr 0.0122 | val 37.5% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S040: mean validation accuracy 50.00%
+  S041 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune original] S041 F1 Ep 001 | tr 0.7438 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S041 F1 Ep 050 | tr 0.0476 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S041 F1 Ep 100 | tr 0.0308 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S041: mean validation accuracy 50.00%
+  S042 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S042 F1 Ep 001 | tr 0.7522 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S042 F1 Ep 050 | tr 0.0191 | val 50.0% | best val acc 62.5% (ep 7) | lr 1.0e-03
+[tune original] S042 F1 Ep 100 | tr 0.0181 | val 75.0% | best val acc 62.5% (ep 7) | lr 1.0e-04
+[tune]       original S042: mean validation accuracy 62.50%
+  S043 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S043 F1 Ep 001 | tr 0.7649 | val 37.5% | best val acc 37.5% (ep 1) | lr 1.0e-02
+[tune original] S043 F1 Ep 050 | tr 0.0190 | val 37.5% | best val acc 50.0% (ep 2) | lr 1.0e-03
+[tune original] S043 F1 Ep 100 | tr 0.0056 | val 25.0% | best val acc 50.0% (ep 2) | lr 1.0e-04
+[tune]       original S043: mean validation accuracy 50.00%
+  S044 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S044 F1 Ep 001 | tr 0.8086 | val 37.5% | best val acc 37.5% (ep 1) | lr 1.0e-02
+[tune original] S044 F1 Ep 050 | tr 0.0509 | val 50.0% | best val acc 87.5% (ep 5) | lr 1.0e-03
+[tune original] S044 F1 Ep 100 | tr 0.1582 | val 75.0% | best val acc 87.5% (ep 5) | lr 1.0e-04
+[tune]       original S044: mean validation accuracy 87.50%
+  S045 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S045 F1 Ep 001 | tr 0.7707 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S045 F1 Ep 050 | tr 0.0166 | val 62.5% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S045 F1 Ep 100 | tr 0.0190 | val 25.0% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S045: mean validation accuracy 50.00%
+  S046 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S046 F1 Ep 001 | tr 0.7559 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S046 F1 Ep 050 | tr 0.1036 | val 25.0% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S046 F1 Ep 100 | tr 0.0465 | val 37.5% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S046: mean validation accuracy 50.00%
+  S047 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune original] S047 F1 Ep 001 | tr 0.6772 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S047 F1 Ep 050 | tr 0.0968 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S047 F1 Ep 100 | tr 0.0585 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S047: mean validation accuracy 50.00%
+  S048 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S048 F1 Ep 001 | tr 0.6834 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S048 F1 Ep 050 | tr 0.0548 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S048 F1 Ep 100 | tr 0.0696 | val 62.5% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S048: mean validation accuracy 50.00%
+  S049 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S049 F1 Ep 001 | tr 0.7435 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S049 F1 Ep 050 | tr 0.0499 | val 87.5% | best val acc 50.0% (ep 2) | lr 1.0e-03
+[tune original] S049 F1 Ep 100 | tr 0.0410 | val 87.5% | best val acc 87.5% (ep 100) | lr 1.0e-04
+[tune]       original S049: mean validation accuracy 87.50%
+  S050 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S050 F1 Ep 001 | tr 0.8137 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S050 F1 Ep 050 | tr 0.0188 | val 75.0% | best val acc 75.0% (ep 7) | lr 1.0e-03
+[tune original] S050 F1 Ep 100 | tr 0.0063 | val 75.0% | best val acc 75.0% (ep 7) | lr 1.0e-04
+[tune]       original S050: mean validation accuracy 75.00%
+  S051 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune original] S051 F1 Ep 001 | tr 0.7006 | val 25.0% | best val acc 25.0% (ep 1) | lr 1.0e-02
+[tune original] S051 F1 Ep 050 | tr 0.0984 | val 50.0% | best val acc 25.0% (ep 1) | lr 1.0e-03
+[tune original] S051 F1 Ep 100 | tr 0.0248 | val 50.0% | best val acc 25.0% (ep 1) | lr 1.0e-04
+[tune]       original S051: mean validation accuracy 25.00%
+  S052 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune original] S052 F1 Ep 001 | tr 0.7271 | val 62.5% | best val acc 62.5% (ep 1) | lr 1.0e-02
+[tune original] S052 F1 Ep 050 | tr 0.0736 | val 62.5% | best val acc 62.5% (ep 1) | lr 1.0e-03
+[tune original] S052 F1 Ep 100 | tr 0.0291 | val 62.5% | best val acc 62.5% (ep 1) | lr 1.0e-04
+[tune]       original S052: mean validation accuracy 62.50%
+  S053 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S053 F1 Ep 001 | tr 0.7394 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S053 F1 Ep 050 | tr 0.0175 | val 50.0% | best val acc 75.0% (ep 2) | lr 1.0e-03
+[tune original] S053 F1 Ep 100 | tr 0.0084 | val 50.0% | best val acc 75.0% (ep 2) | lr 1.0e-04
+[tune]       original S053: mean validation accuracy 75.00%
+  S054 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S054 F1 Ep 001 | tr 0.7431 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S054 F1 Ep 050 | tr 0.0233 | val 50.0% | best val acc 50.0% (ep 3) | lr 1.0e-03
+[tune original] S054 F1 Ep 100 | tr 0.0147 | val 75.0% | best val acc 75.0% (ep 100) | lr 1.0e-04
+[tune]       original S054: mean validation accuracy 75.00%
+  S055 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S055 F1 Ep 001 | tr 0.8186 | val 62.5% | best val acc 62.5% (ep 1) | lr 1.0e-02
+[tune original] S055 F1 Ep 050 | tr 0.0414 | val 62.5% | best val acc 62.5% (ep 25) | lr 1.0e-03
+[tune original] S055 F1 Ep 100 | tr 0.0358 | val 62.5% | best val acc 62.5% (ep 100) | lr 1.0e-04
+[tune]       original S055: mean validation accuracy 62.50%
+  S056 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S056 F1 Ep 001 | tr 0.7556 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S056 F1 Ep 050 | tr 0.0138 | val 62.5% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S056 F1 Ep 100 | tr 0.0115 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S056: mean validation accuracy 50.00%
+  S057 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune original] S057 F1 Ep 001 | tr 0.7936 | val 37.5% | best val acc 37.5% (ep 1) | lr 1.0e-02
+[tune original] S057 F1 Ep 050 | tr 0.0664 | val 50.0% | best val acc 37.5% (ep 1) | lr 1.0e-03
+[tune original] S057 F1 Ep 100 | tr 0.0369 | val 62.5% | best val acc 37.5% (ep 1) | lr 1.0e-04
+[tune]       original S057: mean validation accuracy 37.50%
+  S058 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune original] S058 F1 Ep 001 | tr 0.6845 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S058 F1 Ep 050 | tr 0.0093 | val 50.0% | best val acc 75.0% (ep 8) | lr 1.0e-03
+[tune original] S058 F1 Ep 100 | tr 0.0360 | val 37.5% | best val acc 75.0% (ep 8) | lr 1.0e-04
+[tune]       original S058: mean validation accuracy 75.00%
+  S059 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune original] S059 F1 Ep 001 | tr 0.7769 | val 62.5% | best val acc 62.5% (ep 1) | lr 1.0e-02
+[tune original] S059 F1 Ep 050 | tr 0.0484 | val 50.0% | best val acc 62.5% (ep 1) | lr 1.0e-03
+[tune original] S059 F1 Ep 100 | tr 0.0150 | val 50.0% | best val acc 62.5% (ep 1) | lr 1.0e-04
+[tune]       original S059: mean validation accuracy 62.50%
+  S060 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S060 F1 Ep 001 | tr 0.6998 | val 62.5% | best val acc 62.5% (ep 1) | lr 1.0e-02
+[tune original] S060 F1 Ep 050 | tr 0.0118 | val 50.0% | best val acc 62.5% (ep 1) | lr 1.0e-03
+[tune original] S060 F1 Ep 100 | tr 0.0234 | val 50.0% | best val acc 62.5% (ep 1) | lr 1.0e-04
+[tune]       original S060: mean validation accuracy 62.50%
+  S061 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S061 F1 Ep 001 | tr 0.7328 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S061 F1 Ep 050 | tr 0.0390 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S061 F1 Ep 100 | tr 0.0336 | val 25.0% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S061: mean validation accuracy 50.00%
+  S062 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S062 F1 Ep 001 | tr 0.8012 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S062 F1 Ep 050 | tr 0.0027 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S062 F1 Ep 100 | tr 0.0138 | val 62.5% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S062: mean validation accuracy 50.00%
+  S063 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S063 F1 Ep 001 | tr 0.7351 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S063 F1 Ep 050 | tr 0.0170 | val 37.5% | best val acc 62.5% (ep 5) | lr 1.0e-03
+[tune original] S063 F1 Ep 100 | tr 0.0034 | val 25.0% | best val acc 62.5% (ep 5) | lr 1.0e-04
+[tune]       original S063: mean validation accuracy 62.50%
+  S064 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S064 F1 Ep 001 | tr 0.7216 | val 37.5% | best val acc 37.5% (ep 1) | lr 1.0e-02
+[tune original] S064 F1 Ep 050 | tr 0.0381 | val 37.5% | best val acc 37.5% (ep 1) | lr 1.0e-03
+[tune original] S064 F1 Ep 100 | tr 0.0207 | val 37.5% | best val acc 37.5% (ep 1) | lr 1.0e-04
+[tune]       original S064: mean validation accuracy 37.50%
+  S065 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune original] S065 F1 Ep 001 | tr 0.7449 | val 25.0% | best val acc 25.0% (ep 1) | lr 1.0e-02
+[tune original] S065 F1 Ep 050 | tr 0.0534 | val 50.0% | best val acc 25.0% (ep 1) | lr 1.0e-03
+[tune original] S065 F1 Ep 100 | tr 0.0079 | val 62.5% | best val acc 25.0% (ep 1) | lr 1.0e-04
+[tune]       original S065: mean validation accuracy 25.00%
+  S066 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S066 F1 Ep 001 | tr 0.7649 | val 37.5% | best val acc 37.5% (ep 1) | lr 1.0e-02
+[tune original] S066 F1 Ep 050 | tr 0.1044 | val 75.0% | best val acc 75.0% (ep 50) | lr 1.0e-03
+[tune original] S066 F1 Ep 100 | tr 0.0443 | val 87.5% | best val acc 87.5% (ep 100) | lr 1.0e-04
+[tune]       original S066: mean validation accuracy 87.50%
+  S067 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S067 F1 Ep 001 | tr 0.7486 | val 62.5% | best val acc 62.5% (ep 1) | lr 1.0e-02
+[tune original] S067 F1 Ep 050 | tr 0.0047 | val 62.5% | best val acc 62.5% (ep 4) | lr 1.0e-03
+[tune original] S067 F1 Ep 100 | tr 0.0018 | val 62.5% | best val acc 75.0% (ep 57) | lr 1.0e-04
+[tune]       original S067: mean validation accuracy 75.00%
+  S068 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S068 F1 Ep 001 | tr 0.7165 | val 75.0% | best val acc 75.0% (ep 1) | lr 1.0e-02
+[tune original] S068 F1 Ep 050 | tr 0.0355 | val 62.5% | best val acc 87.5% (ep 7) | lr 1.0e-03
+[tune original] S068 F1 Ep 100 | tr 0.0258 | val 62.5% | best val acc 87.5% (ep 7) | lr 1.0e-04
+[tune]       original S068: mean validation accuracy 87.50%
+  S069 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune original] S069 F1 Ep 001 | tr 0.7413 | val 62.5% | best val acc 62.5% (ep 1) | lr 1.0e-02
+[tune original] S069 F1 Ep 050 | tr 0.0113 | val 37.5% | best val acc 50.0% (ep 2) | lr 1.0e-03
+[tune original] S069 F1 Ep 100 | tr 0.0122 | val 37.5% | best val acc 50.0% (ep 2) | lr 1.0e-04
+[tune]       original S069: mean validation accuracy 50.00%
+  S070 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S070 F1 Ep 001 | tr 0.7038 | val 37.5% | best val acc 37.5% (ep 1) | lr 1.0e-02
+[tune original] S070 F1 Ep 050 | tr 0.0143 | val 50.0% | best val acc 37.5% (ep 1) | lr 1.0e-03
+[tune original] S070 F1 Ep 100 | tr 0.0267 | val 50.0% | best val acc 37.5% (ep 1) | lr 1.0e-04
+[tune]       original S070: mean validation accuracy 37.50%
+  S071 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S071 F1 Ep 001 | tr 0.7742 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S071 F1 Ep 050 | tr 0.0273 | val 25.0% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S071 F1 Ep 100 | tr 0.0877 | val 37.5% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S071: mean validation accuracy 50.00%
+  S072 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S072 F1 Ep 001 | tr 0.7093 | val 75.0% | best val acc 75.0% (ep 1) | lr 1.0e-02
+[tune original] S072 F1 Ep 050 | tr 0.0065 | val 50.0% | best val acc 50.0% (ep 3) | lr 1.0e-03
+[tune original] S072 F1 Ep 100 | tr 0.0088 | val 50.0% | best val acc 50.0% (ep 3) | lr 1.0e-04
+[tune]       original S072: mean validation accuracy 50.00%
+  S073 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S073 F1 Ep 001 | tr 0.6130 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S073 F1 Ep 050 | tr 0.0237 | val 37.5% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S073 F1 Ep 100 | tr 0.0135 | val 37.5% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S073: mean validation accuracy 50.00%
+  S074 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune original] S074 F1 Ep 001 | tr 0.7974 | val 37.5% | best val acc 37.5% (ep 1) | lr 1.0e-02
+[tune original] S074 F1 Ep 050 | tr 0.0518 | val 37.5% | best val acc 37.5% (ep 1) | lr 1.0e-03
+[tune original] S074 F1 Ep 100 | tr 0.0446 | val 37.5% | best val acc 37.5% (ep 1) | lr 1.0e-04
+[tune]       original S074: mean validation accuracy 37.50%
+  S075 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S075 F1 Ep 001 | tr 0.6563 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S075 F1 Ep 050 | tr 0.0127 | val 62.5% | best val acc 50.0% (ep 14) | lr 1.0e-03
+[tune original] S075 F1 Ep 100 | tr 0.0411 | val 50.0% | best val acc 50.0% (ep 14) | lr 1.0e-04
+[tune]       original S075: mean validation accuracy 50.00%
+  S076 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S076 F1 Ep 001 | tr 0.7360 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S076 F1 Ep 050 | tr 0.0129 | val 62.5% | best val acc 50.0% (ep 13) | lr 1.0e-03
+[tune original] S076 F1 Ep 100 | tr 0.0413 | val 50.0% | best val acc 50.0% (ep 13) | lr 1.0e-04
+[tune]       original S076: mean validation accuracy 50.00%
+  S077 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 21, 'right_hand': 24} train/test trials=[30, 15]
+[tune original] S077 F1 Ep 001 | tr 0.7558 | val 37.5% | best val acc 37.5% (ep 1) | lr 1.0e-02
+[tune original] S077 F1 Ep 050 | tr 0.0386 | val 50.0% | best val acc 37.5% (ep 1) | lr 1.0e-03
+[tune original] S077 F1 Ep 100 | tr 0.0247 | val 62.5% | best val acc 37.5% (ep 1) | lr 1.0e-04
+[tune]       original S077: mean validation accuracy 37.50%
+  S078 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S078 F1 Ep 001 | tr 0.6647 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S078 F1 Ep 050 | tr 0.0685 | val 75.0% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S078 F1 Ep 100 | tr 0.0745 | val 62.5% | best val acc 62.5% (ep 100) | lr 1.0e-04
+[tune]       original S078: mean validation accuracy 62.50%
+  S079 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S079 F1 Ep 001 | tr 0.7331 | val 12.5% | best val acc 12.5% (ep 1) | lr 1.0e-02
+[tune original] S079 F1 Ep 050 | tr 0.0288 | val 37.5% | best val acc 25.0% (ep 2) | lr 1.0e-03
+[tune original] S079 F1 Ep 100 | tr 0.0283 | val 37.5% | best val acc 25.0% (ep 2) | lr 1.0e-04
+[tune]       original S079: mean validation accuracy 25.00%
+  S080 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S080 F1 Ep 001 | tr 0.7885 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S080 F1 Ep 050 | tr 0.0358 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S080 F1 Ep 100 | tr 0.0362 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S080: mean validation accuracy 50.00%
+  S081 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S081 F1 Ep 001 | tr 0.7606 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S081 F1 Ep 050 | tr 0.0164 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S081 F1 Ep 100 | tr 0.0439 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S081: mean validation accuracy 50.00%
+  S082 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S082 F1 Ep 001 | tr 0.7040 | val 62.5% | best val acc 62.5% (ep 1) | lr 1.0e-02
+[tune original] S082 F1 Ep 050 | tr 0.0253 | val 75.0% | best val acc 75.0% (ep 50) | lr 1.0e-03
+[tune original] S082 F1 Ep 100 | tr 0.0121 | val 75.0% | best val acc 75.0% (ep 100) | lr 1.0e-04
+[tune]       original S082: mean validation accuracy 75.00%
+  S083 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S083 F1 Ep 001 | tr 0.6862 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S083 F1 Ep 050 | tr 0.0280 | val 62.5% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S083 F1 Ep 100 | tr 0.0062 | val 62.5% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S083: mean validation accuracy 50.00%
+  S084 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S084 F1 Ep 001 | tr 0.8104 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S084 F1 Ep 050 | tr 0.0208 | val 75.0% | best val acc 75.0% (ep 50) | lr 1.0e-03
+[tune original] S084 F1 Ep 100 | tr 0.0153 | val 75.0% | best val acc 75.0% (ep 50) | lr 1.0e-04
+[tune]       original S084: mean validation accuracy 75.00%
+  S085 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S085 F1 Ep 001 | tr 0.7254 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S085 F1 Ep 050 | tr 0.0263 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S085 F1 Ep 100 | tr 0.0115 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S085: mean validation accuracy 50.00%
+  S086 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S086 F1 Ep 001 | tr 0.7496 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S086 F1 Ep 050 | tr 0.0491 | val 50.0% | best val acc 75.0% (ep 3) | lr 1.0e-03
+[tune original] S086 F1 Ep 100 | tr 0.0322 | val 62.5% | best val acc 62.5% (ep 100) | lr 1.0e-04
+[tune]       original S086: mean validation accuracy 62.50%
+  S087 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S087 F1 Ep 001 | tr 0.7888 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S087 F1 Ep 050 | tr 0.0047 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S087 F1 Ep 100 | tr 0.0090 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S087: mean validation accuracy 50.00%
+  S089 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune original] S089 F1 Ep 001 | tr 0.7774 | val 25.0% | best val acc 25.0% (ep 1) | lr 1.0e-02
+[tune original] S089 F1 Ep 050 | tr 0.0682 | val 50.0% | best val acc 37.5% (ep 2) | lr 1.0e-03
+[tune original] S089 F1 Ep 100 | tr 0.0099 | val 50.0% | best val acc 37.5% (ep 2) | lr 1.0e-04
+[tune]       original S089: mean validation accuracy 37.50%
+  S090 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S090 F1 Ep 001 | tr 0.7161 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S090 F1 Ep 050 | tr 0.0100 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S090 F1 Ep 100 | tr 0.0312 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S090: mean validation accuracy 50.00%
+  S091 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S091 F1 Ep 001 | tr 0.7413 | val 62.5% | best val acc 62.5% (ep 1) | lr 1.0e-02
+[tune original] S091 F1 Ep 050 | tr 0.0339 | val 37.5% | best val acc 62.5% (ep 1) | lr 1.0e-03
+[tune original] S091 F1 Ep 100 | tr 0.0367 | val 37.5% | best val acc 62.5% (ep 1) | lr 1.0e-04
+[tune]       original S091: mean validation accuracy 62.50%
+  S093 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S093 F1 Ep 001 | tr 0.7556 | val 25.0% | best val acc 25.0% (ep 1) | lr 1.0e-02
+[tune original] S093 F1 Ep 050 | tr 0.0115 | val 37.5% | best val acc 25.0% (ep 1) | lr 1.0e-03
+[tune original] S093 F1 Ep 100 | tr 0.0092 | val 37.5% | best val acc 25.0% (ep 1) | lr 1.0e-04
+[tune]       original S093: mean validation accuracy 25.00%
+  S094 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S094 F1 Ep 001 | tr 0.6581 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S094 F1 Ep 050 | tr 0.0238 | val 37.5% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S094 F1 Ep 100 | tr 0.0544 | val 37.5% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S094: mean validation accuracy 50.00%
+  S095 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S095 F1 Ep 001 | tr 0.6725 | val 37.5% | best val acc 37.5% (ep 1) | lr 1.0e-02
+[tune original] S095 F1 Ep 050 | tr 0.0140 | val 62.5% | best val acc 50.0% (ep 2) | lr 1.0e-03
+[tune original] S095 F1 Ep 100 | tr 0.0189 | val 62.5% | best val acc 50.0% (ep 2) | lr 1.0e-04
+[tune]       original S095: mean validation accuracy 50.00%
+  S096 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S096 F1 Ep 001 | tr 0.7783 | val 62.5% | best val acc 62.5% (ep 1) | lr 1.0e-02
+[tune original] S096 F1 Ep 050 | tr 0.0566 | val 37.5% | best val acc 62.5% (ep 2) | lr 1.0e-03
+[tune original] S096 F1 Ep 100 | tr 0.0215 | val 37.5% | best val acc 62.5% (ep 2) | lr 1.0e-04
+[tune]       original S096: mean validation accuracy 62.50%
+  S097 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S097 F1 Ep 001 | tr 0.7833 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S097 F1 Ep 050 | tr 0.0206 | val 75.0% | best val acc 75.0% (ep 48) | lr 1.0e-03
+[tune original] S097 F1 Ep 100 | tr 0.0489 | val 75.0% | best val acc 75.0% (ep 59) | lr 1.0e-04
+[tune]       original S097: mean validation accuracy 75.00%
+  S098 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S098 F1 Ep 001 | tr 0.7483 | val 62.5% | best val acc 62.5% (ep 1) | lr 1.0e-02
+[tune original] S098 F1 Ep 050 | tr 0.1192 | val 50.0% | best val acc 87.5% (ep 3) | lr 1.0e-03
+[tune original] S098 F1 Ep 100 | tr 0.0564 | val 50.0% | best val acc 87.5% (ep 3) | lr 1.0e-04
+[tune]       original S098: mean validation accuracy 87.50%
+  S099 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S099 F1 Ep 001 | tr 0.7400 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S099 F1 Ep 050 | tr 0.0326 | val 50.0% | best val acc 62.5% (ep 4) | lr 1.0e-03
+[tune original] S099 F1 Ep 100 | tr 0.0280 | val 50.0% | best val acc 62.5% (ep 4) | lr 1.0e-04
+[tune]       original S099: mean validation accuracy 62.50%
+  S101 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S101 F1 Ep 001 | tr 0.7075 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S101 F1 Ep 050 | tr 0.0293 | val 75.0% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S101 F1 Ep 100 | tr 0.0785 | val 75.0% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S101: mean validation accuracy 50.00%
+  S102 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S102 F1 Ep 001 | tr 0.9383 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S102 F1 Ep 050 | tr 0.1155 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S102 F1 Ep 100 | tr 0.0361 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S102: mean validation accuracy 50.00%
+  S103 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S103 F1 Ep 001 | tr 0.7013 | val 75.0% | best val acc 75.0% (ep 1) | lr 1.0e-02
+[tune original] S103 F1 Ep 050 | tr 0.0249 | val 50.0% | best val acc 75.0% (ep 1) | lr 1.0e-03
+[tune original] S103 F1 Ep 100 | tr 0.0459 | val 50.0% | best val acc 75.0% (ep 1) | lr 1.0e-04
+[tune]       original S103: mean validation accuracy 75.00%
+  S105 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S105 F1 Ep 001 | tr 0.6952 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S105 F1 Ep 050 | tr 0.0506 | val 37.5% | best val acc 62.5% (ep 14) | lr 1.0e-03
+[tune original] S105 F1 Ep 100 | tr 0.0446 | val 37.5% | best val acc 62.5% (ep 14) | lr 1.0e-04
+[tune]       original S105: mean validation accuracy 62.50%
+  S106 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune original] S106 F1 Ep 001 | tr 0.7291 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S106 F1 Ep 050 | tr 0.0182 | val 37.5% | best val acc 62.5% (ep 3) | lr 1.0e-03
+[tune original] S106 F1 Ep 100 | tr 0.0156 | val 25.0% | best val acc 62.5% (ep 3) | lr 1.0e-04
+[tune]       original S106: mean validation accuracy 62.50%
+  S107 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 24, 'right_hand': 21} train/test trials=[30, 15]
+[tune original] S107 F1 Ep 001 | tr 0.7908 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S107 F1 Ep 050 | tr 0.0327 | val 37.5% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S107 F1 Ep 100 | tr 0.0311 | val 62.5% | best val acc 50.0% (ep 1) | lr 1.0e-04
+[tune]       original S107: mean validation accuracy 50.00%
+  S108 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 22, 'right_hand': 23} train/test trials=[30, 15]
+[tune original] S108 F1 Ep 001 | tr 0.7195 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S108 F1 Ep 050 | tr 0.0095 | val 75.0% | best val acc 75.0% (ep 50) | lr 1.0e-03
+[tune original] S108 F1 Ep 100 | tr 0.0121 | val 75.0% | best val acc 75.0% (ep 100) | lr 1.0e-04
+[tune]       original S108: mean validation accuracy 75.00%
+  S109 [2class] profile=original X=(45, 64, 320) class counts={'left_hand': 23, 'right_hand': 22} train/test trials=[30, 15]
+[tune original] S109 F1 Ep 001 | tr 0.7104 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-02
+[tune original] S109 F1 Ep 050 | tr 0.0204 | val 50.0% | best val acc 50.0% (ep 1) | lr 1.0e-03
+[tune original] S109 F1 Ep 100 | tr 0.0258 | val 50.0% | best val acc 50.0% (ep 91) | lr 1.0e-04
+[tune]       original S109: mean validation accuracy 50.00%
+
+================================================================================
+PROFILE SELECTION - 2class (validation accuracy only)
+================================================================================
+          zscore: 66.31%
+             ems: 65.95%
+        original: 54.88%
+chosen per subject (LOSO): {'1': 'zscore', '2': 'zscore', '3': 'zscore', '4': 'zscore', '5': 'zscore', '6': 'zscore', '7': 'zscore', '8': 'zscore', '9': 'zscore', '10': 'zscore', '11': 'zscore', '12': 'zscore', '13': 'zscore', '14': 'zscore', '15': 'zscore', '16': 'zscore', '17': 'zscore', '18': 'zscore', '19': 'zscore', '20': 'zscore', '21': 'zscore', '22': 'zscore', '23': 'zscore', '24': 'zscore', '25': 'zscore', '26': 'zscore', '27': 'zscore', '28': 'zscore', '29': 'zscore', '30': 'zscore', '31': 'zscore', '32': 'zscore', '33': 'zscore', '34': 'zscore', '35': 'zscore', '36': 'zscore', '37': 'zscore', '38': 'zscore', '39': 'zscore', '40': 'zscore', '41': 'zscore', '42': 'zscore', '43': 'zscore', '44': 'zscore', '45': 'zscore', '46': 'zscore', '47': 'zscore', '48': 'zscore', '49': 'zscore', '50': 'zscore', '51': 'zscore', '52': 'zscore', '53': 'zscore', '54': 'zscore', '55': 'zscore', '56': 'zscore', '57': 'zscore', '58': 'zscore', '59': 'zscore', '60': 'zscore', '61': 'zscore', '62': 'zscore', '63': 'zscore', '64': 'zscore', '65': 'zscore', '66': 'zscore', '67': 'zscore', '68': 'zscore', '69': 'zscore', '70': 'zscore', '71': 'zscore', '72': 'zscore', '73': 'zscore', '74': 'zscore', '75': 'zscore', '76': 'zscore', '77': 'zscore', '78': 'zscore', '79': 'zscore', '80': 'zscore', '81': 'zscore', '82': 'zscore', '83': 'zscore', '84': 'zscore', '85': 'zscore', '86': 'zscore', '87': 'zscore', '89': 'zscore', '90': 'zscore', '91': 'zscore', '93': 'zscore', '94': 'zscore', '95': 'zscore', '96': 'zscore', '97': 'zscore', '98': 'zscore', '99': 'zscore', '101': 'zscore', '102': 'zscore', '103': 'zscore', '105': 'zscore', '106': 'zscore', '107': 'zscore', '108': 'zscore', '109': 'zscore'}
+unanimous: True | written to D:\EEG\NeuroGrounded-EEG_PhysioNet_pipelines_v1\EEGNetV4\PhysioNet\2class\results_session\selected_profile.json
+[0m

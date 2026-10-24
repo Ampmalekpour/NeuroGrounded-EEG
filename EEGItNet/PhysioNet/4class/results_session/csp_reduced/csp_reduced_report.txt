@@ -1,0 +1,216 @@
+EEG-ITNet - PhysioNet - CSP 12-channel (LOSO) - 4class
+================================================================================
+
+Subject 01: 46.67%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, AF4
+    seed -1 fold 1: 46.67% (majority-class 26.7%)
+Subject 02: 30.00%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, AF4
+    seed -1 fold 1: 30.00% (majority-class 26.7%)
+Subject 03: 20.00%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, AF4
+    seed -1 fold 1: 20.00% (majority-class 26.7%)
+Subject 04: 33.33%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, AF4
+    seed -1 fold 1: 33.33% (majority-class 26.7%)
+Subject 05: 16.67%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 16.67% (majority-class 26.7%)
+Subject 06: 36.67%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, AF4
+    seed -1 fold 1: 36.67% (majority-class 26.7%)
+Subject 07: 33.33%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, F4, F2, F7, Fp2
+    seed -1 fold 1: 33.33% (majority-class 26.7%)
+Subject 08: 20.00%  | montage: F1, AFz, F3, Fpz, AF3, F5, Fp1, Fz, F4, F2, F7, Fp2
+    seed -1 fold 1: 20.00% (majority-class 26.7%)
+Subject 09: 23.33%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, Fp2, F7, F4, F2
+    seed -1 fold 1: 23.33% (majority-class 26.7%)
+Subject 10: 30.00%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, AF4
+    seed -1 fold 1: 30.00% (majority-class 26.7%)
+Subject 11: 23.33%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 23.33% (majority-class 26.7%)
+Subject 12: 23.33%  | montage: F1, Fpz, AFz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 23.33% (majority-class 26.7%)
+Subject 13: 26.67%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, AF4
+    seed -1 fold 1: 26.67% (majority-class 26.7%)
+Subject 14: 33.33%  | montage: F1, Fpz, AFz, F3, AF3, Fp1, F5, Fz, F4, F2, F7, Fp2
+    seed -1 fold 1: 33.33% (majority-class 26.7%)
+Subject 15: 36.67%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, F4, F2, Fp2, AF4
+    seed -1 fold 1: 36.67% (majority-class 26.7%)
+Subject 16: 30.00%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 30.00% (majority-class 26.7%)
+Subject 17: 20.00%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, F4, F2, F7, Fp2
+    seed -1 fold 1: 20.00% (majority-class 26.7%)
+Subject 18: 46.67%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 46.67% (majority-class 26.7%)
+Subject 19: 23.33%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, AF4
+    seed -1 fold 1: 23.33% (majority-class 26.7%)
+Subject 20: 26.67%  | montage: F1, AFz, F3, Fpz, AF3, F5, Fp1, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 26.67% (majority-class 26.7%)
+Subject 21: 20.00%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, AF4
+    seed -1 fold 1: 20.00% (majority-class 26.7%)
+Subject 22: 23.33%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 23.33% (majority-class 26.7%)
+Subject 23: 23.33%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, F4, F2, F7, AF4
+    seed -1 fold 1: 23.33% (majority-class 26.7%)
+Subject 24: 26.67%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, AF4
+    seed -1 fold 1: 26.67% (majority-class 26.7%)
+Subject 25: 40.00%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, AF4
+    seed -1 fold 1: 40.00% (majority-class 26.7%)
+Subject 26: 36.67%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 36.67% (majority-class 26.7%)
+Subject 27: 26.67%  | montage: F1, Fpz, AFz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 26.67% (majority-class 26.7%)
+Subject 28: 40.00%  | montage: F1, AFz, F3, Fpz, AF3, F5, Fp1, Fz, F4, F2, F7, Fp2
+    seed -1 fold 1: 40.00% (majority-class 26.7%)
+Subject 29: 26.67%  | montage: F1, Fpz, AFz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 26.67% (majority-class 26.7%)
+Subject 30: 23.33%  | montage: F1, Fpz, AFz, F3, AF3, F5, Fp1, Fz, F4, F2, F7, Fp2
+    seed -1 fold 1: 23.33% (majority-class 26.7%)
+Subject 31: 30.00%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 30.00% (majority-class 26.7%)
+Subject 32: 23.33%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 23.33% (majority-class 26.7%)
+Subject 33: 23.33%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, F4, F2, Fp2, AF4
+    seed -1 fold 1: 23.33% (majority-class 26.7%)
+Subject 34: 16.67%  | montage: F1, AFz, F3, Fpz, AF3, F5, Fp1, Fz, F4, F2, F7, Fp2
+    seed -1 fold 1: 16.67% (majority-class 26.7%)
+Subject 35: 46.67%  | montage: F1, Fpz, AFz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, AF4
+    seed -1 fold 1: 46.67% (majority-class 26.7%)
+Subject 36: 53.33%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, AF4
+    seed -1 fold 1: 53.33% (majority-class 26.7%)
+Subject 37: 20.00%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 20.00% (majority-class 26.7%)
+Subject 38: 16.67%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, AF4
+    seed -1 fold 1: 16.67% (majority-class 26.7%)
+Subject 39: 23.33%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, F4, F2, F7, Fp2
+    seed -1 fold 1: 23.33% (majority-class 26.7%)
+Subject 40: 40.00%  | montage: F1, AFz, F3, Fpz, AF3, F5, Fp1, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 40.00% (majority-class 26.7%)
+Subject 41: 36.67%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, AF4
+    seed -1 fold 1: 36.67% (majority-class 26.7%)
+Subject 42: 20.00%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 20.00% (majority-class 26.7%)
+Subject 43: 16.67%  | montage: F1, AFz, F3, Fpz, AF3, F5, Fp1, Fz, F4, F2, Fp2, AF4
+    seed -1 fold 1: 16.67% (majority-class 26.7%)
+Subject 44: 26.67%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, F2, F4, Fp2, F7
+    seed -1 fold 1: 26.67% (majority-class 26.7%)
+Subject 45: 13.33%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 13.33% (majority-class 26.7%)
+Subject 46: 26.67%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, AF4
+    seed -1 fold 1: 26.67% (majority-class 26.7%)
+Subject 47: 16.67%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, AF4
+    seed -1 fold 1: 16.67% (majority-class 26.7%)
+Subject 48: 20.00%  | montage: F1, AFz, F3, Fpz, AF3, F5, Fp1, Fz, F4, F2, AF4, Fp2
+    seed -1 fold 1: 20.00% (majority-class 26.7%)
+Subject 49: 20.00%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, F4, F2, F7, Fp2
+    seed -1 fold 1: 20.00% (majority-class 26.7%)
+Subject 50: 30.00%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 30.00% (majority-class 26.7%)
+Subject 51: 26.67%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 26.67% (majority-class 26.7%)
+Subject 52: 26.67%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, F4, F2, Fp2, AF4
+    seed -1 fold 1: 26.67% (majority-class 26.7%)
+Subject 53: 30.00%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 30.00% (majority-class 26.7%)
+Subject 54: 23.33%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 23.33% (majority-class 26.7%)
+Subject 55: 33.33%  | montage: F1, AFz, F3, Fpz, AF3, Fp1, F5, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 33.33% (majority-class 26.7%)
+Subject 56: 40.00%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, AF4
+    seed -1 fold 1: 40.00% (majority-class 26.7%)
+Subject 57: 33.33%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F2, F4, Fp2, AF4
+    seed -1 fold 1: 33.33% (majority-class 26.7%)
+Subject 58: 23.33%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 23.33% (majority-class 26.7%)
+Subject 59: 23.33%  | montage: F1, Fpz, AFz, F3, AF3, Fp1, F5, Fz, F2, F4, Fp2, F7
+    seed -1 fold 1: 23.33% (majority-class 26.7%)
+Subject 60: 26.67%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, AF4
+    seed -1 fold 1: 26.67% (majority-class 26.7%)
+Subject 61: 26.67%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 26.67% (majority-class 26.7%)
+Subject 62: 33.33%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, F7, Fp2
+    seed -1 fold 1: 33.33% (majority-class 26.7%)
+Subject 63: 26.67%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 26.67% (majority-class 26.7%)
+Subject 64: 33.33%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 33.33% (majority-class 26.7%)
+Subject 65: 26.67%  | montage: F1, AFz, F3, Fpz, AF3, F5, Fp1, Fz, F4, F2, F7, Fp2
+    seed -1 fold 1: 26.67% (majority-class 26.7%)
+Subject 66: 33.33%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 33.33% (majority-class 26.7%)
+Subject 67: 26.67%  | montage: F1, Fpz, AFz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 26.67% (majority-class 26.7%)
+Subject 68: 13.33%  | montage: F1, AFz, F3, Fpz, AF3, F5, Fp1, Fz, F2, F4, F7, Fp2
+    seed -1 fold 1: 13.33% (majority-class 26.7%)
+Subject 69: 20.00%  | montage: F1, AFz, F3, Fpz, AF3, F5, Fp1, Fz, F4, F2, Fp2, AF4
+    seed -1 fold 1: 20.00% (majority-class 26.7%)
+Subject 70: 23.33%  | montage: F1, AFz, F3, Fpz, AF3, F5, Fp1, Fz, F4, F2, F7, Fp2
+    seed -1 fold 1: 23.33% (majority-class 26.7%)
+Subject 71: 23.33%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 23.33% (majority-class 26.7%)
+Subject 72: 43.33%  | montage: F1, AFz, F3, Fpz, AF3, F5, Fp1, Fz, F4, F2, AF4, Fp2
+    seed -1 fold 1: 43.33% (majority-class 26.7%)
+Subject 73: 13.33%  | montage: F1, Fpz, AFz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 13.33% (majority-class 26.7%)
+Subject 74: 26.67%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 26.67% (majority-class 26.7%)
+Subject 75: 40.00%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 40.00% (majority-class 26.7%)
+Subject 76: 36.67%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, AF4
+    seed -1 fold 1: 36.67% (majority-class 26.7%)
+Subject 77: 36.67%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, F4, F2, F7, Fp2
+    seed -1 fold 1: 36.67% (majority-class 26.7%)
+Subject 78: 30.00%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, F4, F2, F7, Fp2
+    seed -1 fold 1: 30.00% (majority-class 26.7%)
+Subject 79: 13.33%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 13.33% (majority-class 26.7%)
+Subject 80: 26.67%  | montage: F1, AFz, F3, Fpz, AF3, F5, Fp1, Fz, F4, F2, F7, Fp2
+    seed -1 fold 1: 26.67% (majority-class 26.7%)
+Subject 81: 33.33%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, AF4
+    seed -1 fold 1: 33.33% (majority-class 26.7%)
+Subject 82: 26.67%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 26.67% (majority-class 26.7%)
+Subject 83: 26.67%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, F7, Fp2
+    seed -1 fold 1: 26.67% (majority-class 26.7%)
+Subject 84: 30.00%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, F4, F2, Fp2, AF4
+    seed -1 fold 1: 30.00% (majority-class 26.7%)
+Subject 85: 30.00%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 30.00% (majority-class 26.7%)
+Subject 86: 33.33%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 33.33% (majority-class 26.7%)
+Subject 87: 33.33%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, F7, Fp2
+    seed -1 fold 1: 33.33% (majority-class 26.7%)
+Subject 89: 33.33%  | montage: F1, AFz, F3, Fpz, AF3, F5, Fp1, Fz, F4, F2, F7, Fp2
+    seed -1 fold 1: 33.33% (majority-class 26.7%)
+Subject 90: 20.00%  | montage: F1, AFz, F3, Fpz, AF3, F5, Fp1, Fz, F4, F2, F7, Fp2
+    seed -1 fold 1: 20.00% (majority-class 26.7%)
+Subject 91: 26.67%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 26.67% (majority-class 26.7%)
+Subject 93: 30.00%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 30.00% (majority-class 26.7%)
+Subject 94: 36.67%  | montage: F1, AFz, F3, Fpz, AF3, F5, Fp1, Fz, F4, F2, F7, Fp2
+    seed -1 fold 1: 36.67% (majority-class 26.7%)
+Subject 95: 26.67%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 26.67% (majority-class 26.7%)
+Subject 96: 20.00%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 20.00% (majority-class 26.7%)
+Subject 97: 36.67%  | montage: F1, AFz, F3, Fpz, AF3, Fp1, F5, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 36.67% (majority-class 26.7%)
+Subject 98: 26.67%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, F7, AF4
+    seed -1 fold 1: 26.67% (majority-class 26.7%)
+Subject 99: 30.00%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 30.00% (majority-class 26.7%)
+Subject 101: 26.67%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, F4, F2, Fp2, AF4
+    seed -1 fold 1: 26.67% (majority-class 26.7%)
+Subject 102: 43.33%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 43.33% (majority-class 26.7%)
+Subject 103: 30.00%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, F4, F2, F7, Fp2
+    seed -1 fold 1: 30.00% (majority-class 26.7%)
+Subject 105: 26.67%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, F4, F2, Fp2, AF4
+    seed -1 fold 1: 26.67% (majority-class 26.7%)
+Subject 106: 30.00%  | montage: F1, AFz, F3, Fpz, AF3, F5, Fp1, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 30.00% (majority-class 26.7%)
+Subject 107: 13.33%  | montage: F1, AFz, Fpz, F3, AF3, Fp1, F5, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 13.33% (majority-class 26.7%)
+Subject 108: 26.67%  | montage: F1, AFz, Fpz, F3, AF3, F5, Fp1, Fz, F4, F2, Fp2, F7
+    seed -1 fold 1: 26.67% (majority-class 26.7%)
+Subject 109: 26.67%  | montage: F1, AFz, F3, Fpz, AF3, F5, Fp1, Fz, F4, F2, F7, Fp2
+    seed -1 fold 1: 26.67% (majority-class 26.7%)
+
+GRAND MEAN: 28.10% +/- 8.00% (SD across subjects)
+chance 25.0% | mean majority-class 26.7%

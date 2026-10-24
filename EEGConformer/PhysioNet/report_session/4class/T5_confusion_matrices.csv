@@ -1,0 +1,33 @@
+Method,True class,pred left_hand,pred right_hand,pred hands,pred feet
+64ch,left_hand,254,123,208,208
+64ch,right_hand,116,232,220,214
+64ch,hands,121,149,296,222
+64ch,feet,95,133,159,400
+Ours,left_hand,205,151,246,191
+Ours,right_hand,138,218,209,217
+Ours,hands,124,143,301,220
+Ours,feet,107,148,191,341
+CSP,left_hand,214,138,223,218
+CSP,right_hand,150,166,216,250
+CSP,hands,143,130,296,219
+CSP,feet,135,119,207,326
+RLF,left_hand,213,153,243,184
+RLF,right_hand,142,208,222,210
+RLF,hands,126,139,311,212
+RLF,feet,100,156,174,357
+MI,left_hand,241,159,229,164
+MI,right_hand,155,203,217,207
+MI,hands,126,146,292,224
+MI,feet,113,170,181,323
+Fixed sensorimotor,left_hand,229,140,227,197
+Fixed sensorimotor,right_hand,142,227,229,184
+Fixed sensorimotor,hands,165,177,274,172
+Fixed sensorimotor,feet,131,158,164,334
+ERD-only,left_hand,223,160,216,194
+ERD-only,right_hand,148,198,220,216
+ERD-only,hands,158,161,293,176
+ERD-only,feet,124,122,168,373
+Random (mean of draws),left_hand,1160,683,1109,1013
+Random (mean of draws),right_hand,670,1044,1131,1065
+Random (mean of draws),hands,764,775,1443,958
+Random (mean of draws),feet,637,652,792,1854

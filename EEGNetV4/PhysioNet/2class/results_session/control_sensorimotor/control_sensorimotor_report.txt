@@ -1,0 +1,216 @@
+EEGNetv4 - PhysioNet - control 'control_sensorimotor' - 2class
+================================================================================
+
+Subject 01: 40.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 40.00% (majority-class 53.3%)
+Subject 02: 53.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 03: 53.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 04: 66.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 66.67% (majority-class 53.3%)
+Subject 05: 60.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 06: 46.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 07: 86.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 86.67% (majority-class 53.3%)
+Subject 08: 40.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 40.00% (majority-class 53.3%)
+Subject 09: 46.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 10: 26.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 26.67% (majority-class 53.3%)
+Subject 11: 46.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 12: 53.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 13: 46.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 14: 53.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 15: 46.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 16: 53.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 17: 60.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 18: 80.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 80.00% (majority-class 53.3%)
+Subject 19: 33.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 33.33% (majority-class 53.3%)
+Subject 20: 60.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 21: 40.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 40.00% (majority-class 53.3%)
+Subject 22: 53.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 23: 66.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 66.67% (majority-class 53.3%)
+Subject 24: 26.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 26.67% (majority-class 53.3%)
+Subject 25: 46.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 26: 46.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 27: 53.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 28: 40.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 40.00% (majority-class 53.3%)
+Subject 29: 73.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 73.33% (majority-class 53.3%)
+Subject 30: 53.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 31: 73.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 73.33% (majority-class 53.3%)
+Subject 32: 73.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 73.33% (majority-class 53.3%)
+Subject 33: 60.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 34: 80.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 80.00% (majority-class 53.3%)
+Subject 35: 46.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 36: 73.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 73.33% (majority-class 53.3%)
+Subject 37: 40.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 40.00% (majority-class 53.3%)
+Subject 38: 40.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 40.00% (majority-class 53.3%)
+Subject 39: 53.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 40: 53.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 41: 46.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 42: 60.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 43: 60.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 44: 46.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 45: 26.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 26.67% (majority-class 53.3%)
+Subject 46: 60.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 47: 66.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 66.67% (majority-class 53.3%)
+Subject 48: 46.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 49: 66.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 66.67% (majority-class 53.3%)
+Subject 50: 33.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 33.33% (majority-class 53.3%)
+Subject 51: 60.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 52: 53.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 53: 60.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 54: 66.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 66.67% (majority-class 53.3%)
+Subject 55: 46.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 56: 46.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 57: 80.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 80.00% (majority-class 53.3%)
+Subject 58: 60.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 59: 60.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 60: 46.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 61: 73.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 73.33% (majority-class 53.3%)
+Subject 62: 53.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 63: 40.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 40.00% (majority-class 53.3%)
+Subject 64: 80.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 80.00% (majority-class 53.3%)
+Subject 65: 60.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 66: 60.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 67: 53.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 68: 53.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 69: 66.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 66.67% (majority-class 53.3%)
+Subject 70: 60.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 71: 53.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 72: 86.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 86.67% (majority-class 53.3%)
+Subject 73: 73.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 73.33% (majority-class 53.3%)
+Subject 74: 46.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 75: 46.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 76: 53.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 77: 53.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 78: 53.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 79: 46.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 80: 53.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 81: 53.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 82: 46.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 83: 53.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 84: 60.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 85: 80.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 80.00% (majority-class 53.3%)
+Subject 86: 46.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 87: 60.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 89: 40.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 40.00% (majority-class 53.3%)
+Subject 90: 40.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 40.00% (majority-class 53.3%)
+Subject 91: 40.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 40.00% (majority-class 53.3%)
+Subject 93: 46.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 94: 53.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 95: 60.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 96: 53.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 97: 40.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 40.00% (majority-class 53.3%)
+Subject 98: 60.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 99: 60.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 101: 40.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 40.00% (majority-class 53.3%)
+Subject 102: 60.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 103: 53.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 105: 60.00%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 106: 53.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 107: 26.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 26.67% (majority-class 53.3%)
+Subject 108: 33.33%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 33.33% (majority-class 53.3%)
+Subject 109: 46.67%  | montage: FC3, FC1, FC2, FC4, C3, C1, Cz, C2, C4, CP3, CPz, CP4
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+
+GRAND MEAN: 54.03% +/- 12.87% (SD across subjects)
+chance 50.0% | mean majority-class 53.3%

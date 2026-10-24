@@ -1,0 +1,231 @@
+EEG-ITNet - PhysioNet - SALIENCY 12-channel (LOSO) - 2class
+================================================================================
+
+Subject 01: 33.33%  | montage: P2, T10, AF4, FC5, P5, FC6, PO7, FC3, FT8, C2, C1, CP2
+    seed -1 fold 1: 33.33% (majority-class 53.3%)
+Subject 02: 60.00%  | montage: T10, P2, FT8, FC3, P5, AF4, C1, FC6, C2, P8, FC5, P3
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 03: 33.33%  | montage: T10, P2, P5, AF4, FC3, P8, CP2, C2, FC5, FT8, FC6, C1
+    seed -1 fold 1: 33.33% (majority-class 53.3%)
+Subject 04: 53.33%  | montage: T10, P2, AF4, FC3, FT8, P5, C1, P8, C2, FC6, P3, CP2
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 05: 40.00%  | montage: P2, T10, FC3, AF4, C2, P5, FT8, CP6, FC1, C1, P8, FC5
+    seed -1 fold 1: 40.00% (majority-class 53.3%)
+Subject 06: 46.67%  | montage: P2, T10, P5, FC3, C2, C1, P8, FT8, AF4, FC5, FC6, P3
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 07: 66.67%  | montage: T10, P2, AF4, C2, FC3, FC5, C1, FC6, FT8, P5, CP2, CP6
+    seed -1 fold 1: 66.67% (majority-class 53.3%)
+Subject 08: 33.33%  | montage: P2, T10, FT8, AF4, FC3, CP6, C1, P5, P8, C2, CP2, FC1
+    seed -1 fold 1: 33.33% (majority-class 53.3%)
+Subject 09: 46.67%  | montage: T10, P2, AF4, FC3, C1, P8, C2, FC5, P5, POz, FT8, FC6
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 10: 60.00%  | montage: P2, T10, AF4, FT8, C2, FC5, P5, C1, FC3, CP2, FC6, CP6
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 11: 33.33%  | montage: T10, P2, FT8, P5, AF4, FC5, C2, P8, FC3, FC6, P3, CP2
+    seed -1 fold 1: 33.33% (majority-class 53.3%)
+Subject 12: 46.67%  | montage: P2, T10, AF4, FT8, P5, C1, CP2, FC6, FC3, C2, FC5, CP6
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 13: 46.67%  | montage: P2, T10, FC3, P8, P5, C1, FC6, AF4, CP6, FT8, C2, FC5
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 14: 60.00%  | montage: T10, P2, AF4, P5, FC3, P8, FT8, C1, FC5, C2, CP6, FC6
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 15: 60.00%  | montage: P2, T10, AF4, FC3, C2, CP2, C1, CP6, FC6, FT8, P5, P8
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 16: 53.33%  | montage: P2, T10, AF4, CP6, FC3, C2, FT8, P8, P5, FC6, FC1, C1
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 17: 46.67%  | montage: P2, T10, AF4, C2, P5, FC6, FC3, P8, FT8, C1, CP2, O2
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 18: 66.67%  | montage: T10, P2, P5, C2, FC5, AF4, FT8, FC3, P8, C1, FC6, P3
+    seed -1 fold 1: 66.67% (majority-class 53.3%)
+Subject 19: 40.00%  | montage: P2, T10, FT8, P5, C2, FC5, FC3, P8, AF4, C1, PO7, P3
+    seed -1 fold 1: 40.00% (majority-class 53.3%)
+Subject 20: 53.33%  | montage: P2, T10, P5, C1, AF4, FT8, FC3, CP6, FC5, C2, P8, FC1
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 21: 46.67%  | montage: T10, P2, AF4, C2, P8, FT8, C1, FC3, P5, CP2, FC5, FC6
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 22: 66.67%  | montage: T10, P2, AF4, C2, FC1, FC3, FC6, P5, C1, FT8, P8, FC5
+    seed -1 fold 1: 66.67% (majority-class 53.3%)
+Subject 23: 60.00%  | montage: P2, T10, P5, FC3, C1, CP6, AF4, C2, CP2, P8, FC1, FT8
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 24: 53.33%  | montage: T10, P2, AF4, C1, FT8, P5, FC3, P8, CP6, FC1, FC6, P3
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 25: 60.00%  | montage: T10, P2, P5, FC3, P8, AF4, FT8, C2, C1, CP6, FC1, FC5
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 26: 46.67%  | montage: P2, T10, AF4, FT8, P5, FC3, C2, FC6, CP6, C1, P8, FC5
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 27: 60.00%  | montage: P2, T10, AF4, FT8, C2, FC5, FC6, P8, CP2, P5, FC3, O2
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 28: 40.00%  | montage: T10, P2, FC3, AF4, FT8, C2, C1, CP2, CP6, P3, P5, P8
+    seed -1 fold 1: 40.00% (majority-class 53.3%)
+Subject 29: 46.67%  | montage: P2, T10, AF4, P5, FC3, C2, FT8, CP6, CP2, P8, C1, FC5
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 30: 60.00%  | montage: T10, P2, FC3, C2, AF4, P5, P8, FT8, C1, FC6, CP6, FC1
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 31: 40.00%  | montage: P2, T10, FC3, AF4, P5, CP2, C2, C1, FT8, FC5, CP6, P8
+    seed -1 fold 1: 40.00% (majority-class 53.3%)
+Subject 32: 60.00%  | montage: P2, T10, AF4, FC3, C2, FT8, P5, FC6, C1, P8, FC5, CP2
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 33: 40.00%  | montage: P2, T10, AF4, P8, C1, FC3, FT8, P5, FC6, C2, CP6, FC1
+    seed -1 fold 1: 40.00% (majority-class 53.3%)
+Subject 34: 40.00%  | montage: P2, T10, P5, CP6, FC3, C2, C1, FC6, FC5, AF4, P8, FT8
+    seed -1 fold 1: 40.00% (majority-class 53.3%)
+Subject 35: 53.33%  | montage: T10, P2, AF4, FT8, FC3, P5, FC5, CP2, C1, P8, FC6, C2
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 36: 80.00%  | montage: P2, T10, AF4, C1, FC3, FC6, FT8, P5, C2, CP6, FC5, P3
+    seed -1 fold 1: 80.00% (majority-class 53.3%)
+Subject 37: 33.33%  | montage: T10, P2, P5, AF4, C1, FC3, C2, P8, FT8, FC1, CP2, CP6
+    seed -1 fold 1: 33.33% (majority-class 53.3%)
+Subject 38: 46.67%  | montage: P2, T10, P5, FC3, FT8, AF4, C2, FC6, C1, FC5, CP2, P8
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 39: 73.33%  | montage: T10, P2, C2, FT8, FC3, P5, AF4, C1, P8, CP2, FC5, FC6
+    seed -1 fold 1: 73.33% (majority-class 53.3%)
+Subject 40: 66.67%  | montage: T10, P2, FC5, C2, FC3, AF4, P5, CP6, P8, FT8, C1, FC6
+    seed -1 fold 1: 66.67% (majority-class 53.3%)
+Subject 41: 53.33%  | montage: T10, P2, FC3, C1, AF4, FT8, P5, FC6, P8, P3, C2, FC1
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 42: 53.33%  | montage: P2, T10, P5, AF4, FC3, C2, FT8, C1, P8, FC1, FC5, CP2
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 43: 53.33%  | montage: P2, T10, FC3, P5, FT8, AF4, C2, FC6, P8, C1, FC5, CP2
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 44: 60.00%  | montage: T10, P2, C2, C1, AF4, FC3, FT8, P5, FC6, P8, FC5, CP6
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 45: 46.67%  | montage: P2, T10, FC3, AF4, P5, FT8, C2, FC6, CP6, FC1, CP2, P8
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 46: 46.67%  | montage: T10, P2, FC3, P5, AF4, C1, FT8, FC5, C2, CP2, FC6, P8
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 47: 53.33%  | montage: T10, P2, FC3, FT8, P8, AF4, P5, C1, C2, CP2, FC5, P3
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 48: 60.00%  | montage: P2, T10, AF4, FT8, FC3, FC5, CP2, P5, C2, C1, FC1, P8
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 49: 60.00%  | montage: P2, T10, C2, AF4, FT8, FC3, P5, CP6, CP2, C1, O2, FC5
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 50: 26.67%  | montage: P2, FC3, T10, AF4, C1, P5, C2, FC6, FT8, FC5, P8, P3
+    seed -1 fold 1: 26.67% (majority-class 53.3%)
+Subject 51: 46.67%  | montage: P2, T10, C2, AF4, FC6, P5, FT8, FC5, FC3, CP2, C1, P3
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 52: 26.67%  | montage: P2, T10, AF4, P5, FC3, C2, C1, CP6, FC6, FC1, PO7, FT8
+    seed -1 fold 1: 26.67% (majority-class 53.3%)
+Subject 53: 46.67%  | montage: P2, T10, P5, C2, C1, P8, CP6, AF4, FT8, FC3, FC1, FC6
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 54: 60.00%  | montage: P2, T10, AF4, P5, C1, FT8, FC3, CP6, C2, FC6, FC5, P3
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 55: 73.33%  | montage: T10, P2, AF4, C2, FC3, FC6, P5, CP6, FT8, CP2, C1, FC1
+    seed -1 fold 1: 73.33% (majority-class 53.3%)
+Subject 56: 40.00%  | montage: T10, P2, P5, P8, CP6, C2, FT8, AF4, FC5, P3, FC3, C1
+    seed -1 fold 1: 40.00% (majority-class 53.3%)
+Subject 57: 86.67%  | montage: T10, P2, AF4, P5, FT8, C1, FC3, C2, FC5, P8, CP6, FC1
+    seed -1 fold 1: 86.67% (majority-class 53.3%)
+Subject 58: 73.33%  | montage: T10, P2, AF4, FT8, P5, C2, FC3, P8, FC6, C1, CP6, FC5
+    seed -1 fold 1: 73.33% (majority-class 53.3%)
+Subject 59: 53.33%  | montage: P2, T10, AF4, FC3, C2, C1, FT8, P8, FC5, P5, FC6, P3
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 60: 53.33%  | montage: P2, T10, P5, C2, AF4, FT8, FC3, CP6, FC5, C1, FC1, FC6
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 61: 46.67%  | montage: T10, P2, AF4, P5, FC5, P8, FT8, CP6, C2, C1, FC3, CP2
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 62: 60.00%  | montage: T10, P2, P5, C2, AF4, C1, P8, FT8, FC3, FC6, CP6, FC5
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 63: 40.00%  | montage: P2, T10, AF4, P5, FT8, C1, C2, FC3, FC5, O2, P3, P8
+    seed -1 fold 1: 40.00% (majority-class 53.3%)
+Subject 64: 86.67%  | montage: T10, P2, C2, AF4, FT8, P5, FC3, CP6, FC6, FC1, C1, FC5
+    seed -1 fold 1: 86.67% (majority-class 53.3%)
+Subject 65: 53.33%  | montage: P2, T10, C1, AF4, FC3, P5, FC6, P8, FC1, FT8, C2, FC5
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 66: 60.00%  | montage: P2, T10, AF4, C2, P8, P5, C1, FT8, CP2, FC6, FC3, CP6
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 67: 73.33%  | montage: P2, T10, P5, FC3, AF4, C1, FT8, C2, P8, CP6, FC6, FC5
+    seed -1 fold 1: 73.33% (majority-class 53.3%)
+Subject 68: 46.67%  | montage: T10, P2, FC3, AF4, C2, FC6, P8, P5, FT8, C1, FC5, CP6
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 69: 66.67%  | montage: T10, P2, AF4, FT8, C2, C1, FC3, P8, P5, FC6, PO8, CP6
+    seed -1 fold 1: 66.67% (majority-class 53.3%)
+Subject 70: 60.00%  | montage: T10, P2, C2, P5, FC3, FT8, FC6, O2, AF4, FC5, P8, FC1
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 71: 40.00%  | montage: P2, T10, P8, FC3, C1, C2, AF4, P5, CP6, FT8, FC5, CP2
+    seed -1 fold 1: 40.00% (majority-class 53.3%)
+Subject 72: 66.67%  | montage: P2, T10, AF4, P5, FT8, FC3, C1, C2, CP6, FC5, P3, PO7
+    seed -1 fold 1: 66.67% (majority-class 53.3%)
+Subject 73: 40.00%  | montage: P2, T10, FT8, AF4, FC3, P5, C2, C1, FC5, CP2, FC1, CP6
+    seed -1 fold 1: 40.00% (majority-class 53.3%)
+Subject 74: 60.00%  | montage: P2, T10, AF4, P5, P8, FT8, FC6, C2, FC3, C1, CP6, CP2
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 75: 60.00%  | montage: T10, AF4, P2, P8, C1, P5, FT8, FC5, CP6, FC6, C2, P3
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 76: 46.67%  | montage: P2, T10, C2, FT8, FC3, P5, C1, CP2, P8, AF4, CP6, FC5
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 77: 53.33%  | montage: T10, P2, FT8, AF4, P8, P5, CP2, FC3, C1, FC5, C2, FC6
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 78: 53.33%  | montage: P2, T10, AF4, FC3, C2, P5, FC5, P8, CP6, C1, P3, O2
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 79: 46.67%  | montage: T10, P2, C2, FT8, FC3, P5, AF4, FC5, P8, CP6, C1, FC6
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 80: 40.00%  | montage: P2, T10, P5, FC3, C1, AF4, FT8, C2, P8, FC5, FC6, CP6
+    seed -1 fold 1: 40.00% (majority-class 53.3%)
+Subject 81: 66.67%  | montage: P2, T10, C1, AF4, FC3, FT8, P8, C2, FC5, P5, CP2, FC6
+    seed -1 fold 1: 66.67% (majority-class 53.3%)
+Subject 82: 46.67%  | montage: P2, C2, T10, P5, AF4, C1, FC3, FT8, FC6, P8, FC5, P3
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 83: 33.33%  | montage: T10, P2, FT8, P5, FC3, CP2, C2, P8, C1, CP6, FC1, AF4
+    seed -1 fold 1: 33.33% (majority-class 53.3%)
+Subject 84: 60.00%  | montage: P2, T10, P5, C1, P8, FT8, FC3, FC5, C2, AF4, CP6, FC1
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 85: 53.33%  | montage: P2, T10, FC3, C1, AF4, P8, FT8, C2, P5, O2, FC1, FC6
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 86: 60.00%  | montage: T10, P2, AF4, P5, FT8, FC3, C2, P8, CP6, FC1, FC5, C1
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 87: 60.00%  | montage: P2, T10, P5, C1, C2, FC3, P8, FC6, AF4, FT8, CP6, FC1
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 89: 60.00%  | montage: P2, T10, C2, P5, C1, FC3, AF4, FC5, P3, FT8, P8, CP6
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 90: 60.00%  | montage: T10, AF4, P2, P5, C2, FT8, FC3, FC5, CP2, P8, C1, CP6
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 91: 60.00%  | montage: P2, T10, AF4, P5, FC3, FT8, C1, P8, P3, FC6, C2, FC5
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 93: 53.33%  | montage: T10, P2, FT8, AF4, P5, C2, FC3, C1, FC1, P8, FC6, CP6
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 94: 46.67%  | montage: P2, T10, FT8, P5, P8, FC3, FC1, AF4, C2, FC5, C1, CP6
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 95: 53.33%  | montage: P2, T10, P5, AF4, C2, FC3, FT8, FC5, CP6, P3, C1, O2
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 96: 60.00%  | montage: T10, P2, AF4, FC3, FT8, C2, P8, FC5, P5, CP2, CP6, C1
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 97: 46.67%  | montage: T10, P2, C2, C1, P5, P8, AF4, FC5, FT8, FC3, CP6, FC6
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 98: 66.67%  | montage: P2, T10, FT8, FC3, P5, AF4, C2, FC6, C1, CP6, FC5, CP2
+    seed -1 fold 1: 66.67% (majority-class 53.3%)
+Subject 99: 60.00%  | montage: P2, T10, P5, FC6, FC3, C2, FT8, AF4, C1, CP6, PO7, P3
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+Subject 101: 53.33%  | montage: P2, T10, AF4, FC3, C2, FT8, P5, CP2, FC6, C1, CP6, P8
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 102: 53.33%  | montage: P2, T10, FT8, AF4, C1, P5, FC3, C2, P8, CP2, CP6, FC5
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 103: 46.67%  | montage: T10, P2, AF4, FT8, C2, C1, FC3, P5, P8, FC6, FC5, P3
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 105: 53.33%  | montage: T10, P2, FC6, C2, FT8, P5, P8, AF4, FC5, FC3, CP6, CP2
+    seed -1 fold 1: 53.33% (majority-class 53.3%)
+Subject 106: 40.00%  | montage: P2, T10, C2, P5, AF4, FC3, CP2, FT8, C1, P8, PO7, O2
+    seed -1 fold 1: 40.00% (majority-class 53.3%)
+Subject 107: 40.00%  | montage: P2, T10, FT8, C2, C1, P8, P5, AF4, CP6, FC3, FC6, P3
+    seed -1 fold 1: 40.00% (majority-class 53.3%)
+Subject 108: 46.67%  | montage: T10, P2, P5, AF4, FT8, FC3, CP6, FC1, C1, C2, P8, FC6
+    seed -1 fold 1: 46.67% (majority-class 53.3%)
+Subject 109: 60.00%  | montage: T10, P2, AF4, P8, P5, C1, CP2, FT8, FC5, FC3, C2, P3
+    seed -1 fold 1: 60.00% (majority-class 53.3%)
+
+GRAND MEAN: 53.02% +/- 11.71% (SD across subjects)
+chance 50.0% | mean majority-class 53.3%
+
+Attribution methods used: all
+Alignment (participant-level mean [95% CI]):
+                  grad magnitude_pearson        -0.013 [-0.038, +0.012] n=105
+                  grad class_specific_pearson   +0.013 [-0.004, +0.030] n=105
+                  grad lateralisation_pearson   -0.012 [-0.037, +0.012] n=105
+          grad_x_input magnitude_pearson        -0.049 [-0.087, -0.011] n=105
+          grad_x_input class_specific_pearson   +0.009 [-0.023, +0.040] n=105
+          grad_x_input lateralisation_pearson   -0.150 [-0.215, -0.085] n=105
+  integrated_gradients magnitude_pearson        -0.050 [-0.086, -0.015] n=105
+  integrated_gradients class_specific_pearson   +0.008 [-0.022, +0.037] n=105
+  integrated_gradients lateralisation_pearson   -0.150 [-0.215, -0.085] n=105
+            smoothgrad magnitude_pearson        -0.013 [-0.038, +0.012] n=105
+            smoothgrad class_specific_pearson   +0.013 [-0.004, +0.030] n=105
+            smoothgrad lateralisation_pearson   -0.012 [-0.037, +0.013] n=105

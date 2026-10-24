@@ -1,0 +1,5 @@
+Attribution,"Spearman(trained, untrained model)",95% CI,n subjects
+grad,0.010,"[-0.004, 0.024]",105
+grad_x_input,0.074,"[0.058, 0.089]",105
+integrated_gradients,0.072,"[0.056, 0.088]",105
+smoothgrad,0.010,"[-0.004, 0.024]",105
