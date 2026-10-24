@@ -1,0 +1,434 @@
+Dataset,Model,Classes,Source,Subject,Full montage,Ours,CSP,RLF,MI,Fixed sensorimotor,ERD-only,Random,Winner(s)
+BNCI2014-001,EEGNetV4,2class,PAPER Table 5,S01,79.51,50.00,67.71,70.14,69.79,,,,Full montage
+BNCI2014-001,EEGNetV4,2class,PAPER Table 5,S02,54.86,56.25,57.64,61.46,65.97,,,,MI
+BNCI2014-001,EEGNetV4,2class,PAPER Table 5,S03,79.17,90.28,51.04,64.58,78.12,,,,Ours
+BNCI2014-001,EEGNetV4,2class,PAPER Table 5,S04,65.28,61.81,51.74,56.25,56.25,,,,Full montage
+BNCI2014-001,EEGNetV4,2class,PAPER Table 5,S05,61.46,54.51,55.90,55.56,60.42,,,,Full montage
+BNCI2014-001,EEGNetV4,2class,PAPER Table 5,S06,61.81,61.46,57.99,50.69,59.72,,,,Full montage
+BNCI2014-001,EEGNetV4,2class,PAPER Table 5,S07,85.07,61.11,72.57,82.29,92.71,,,,MI
+BNCI2014-001,EEGNetV4,2class,PAPER Table 5,S08,84.72,88.89,67.71,66.67,83.68,,,,Ours
+BNCI2014-001,EEGNetV4,2class,PAPER Table 5,S09,82.64,81.94,80.90,70.83,81.25,,,,Full montage
+BNCI2014-001,EEGNetV4,2class,PAPER Table 5,Mean,72.72,67.36,62.58,64.27,71.99,,,,Full montage
+BNCI2014-001,EEGNetV4,2class,PAPER Table 5,SD,11.74,15.39,10.18,9.62,12.56,,,,
+BNCI2014-001,EEGNetV4,2class,ours: session protocol,S01,50.69,50.69,80.56,50.00,50.00,83.33,51.39,58.19,CSP
+BNCI2014-001,EEGNetV4,2class,ours: session protocol,S02,45.14,50.00,50.00,50.00,50.00,50.00,50.00,50.00,"Ours, CSP, RLF, MI"
+BNCI2014-001,EEGNetV4,2class,ours: session protocol,S03,93.06,88.89,94.44,90.97,90.97,93.75,88.19,90.28,CSP
+BNCI2014-001,EEGNetV4,2class,ours: session protocol,S04,63.89,63.19,63.89,59.03,59.03,68.06,49.31,62.22,"Full montage, CSP"
+BNCI2014-001,EEGNetV4,2class,ours: session protocol,S05,52.08,55.56,50.69,51.39,54.17,53.47,52.08,52.78,Ours
+BNCI2014-001,EEGNetV4,2class,ours: session protocol,S06,59.03,55.56,51.39,62.50,57.64,55.56,53.47,58.19,RLF
+BNCI2014-001,EEGNetV4,2class,ours: session protocol,S07,57.64,51.39,55.56,55.56,52.78,56.25,54.17,53.47,Full montage
+BNCI2014-001,EEGNetV4,2class,ours: session protocol,S08,92.36,93.06,92.36,92.36,90.97,93.75,92.36,90.28,Ours
+BNCI2014-001,EEGNetV4,2class,ours: session protocol,S09,90.28,88.19,90.97,89.58,90.28,88.89,90.28,89.03,CSP
+BNCI2014-001,EEGNetV4,2class,ours: session protocol,Mean,67.13,66.28,69.98,66.82,66.20,71.45,64.58,67.16,CSP
+BNCI2014-001,EEGNetV4,2class,ours: session protocol,SD,19.34,18.29,19.41,18.59,18.65,18.43,19.36,17.40,
+BNCI2014-001,EEGNetV4,2class,ours: blocks (1st revision),S01,79.86,78.82,81.25,80.21,80.56,84.03,80.56,76.94,CSP
+BNCI2014-001,EEGNetV4,2class,ours: blocks (1st revision),S02,50.69,51.04,51.04,52.08,50.00,51.39,49.65,51.88,RLF
+BNCI2014-001,EEGNetV4,2class,ours: blocks (1st revision),S03,93.75,95.14,92.36,94.79,93.06,92.01,91.32,93.12,Ours
+BNCI2014-001,EEGNetV4,2class,ours: blocks (1st revision),S04,55.21,57.64,62.50,58.68,63.89,62.85,58.33,60.62,MI
+BNCI2014-001,EEGNetV4,2class,ours: blocks (1st revision),S05,60.76,50.35,52.08,53.12,50.35,48.96,57.99,51.46,Full montage
+BNCI2014-001,EEGNetV4,2class,ours: blocks (1st revision),S06,55.21,53.82,51.74,56.94,57.29,52.43,53.82,52.78,MI
+BNCI2014-001,EEGNetV4,2class,ours: blocks (1st revision),S07,77.43,62.85,71.18,68.06,61.81,55.21,58.68,56.39,Full montage
+BNCI2014-001,EEGNetV4,2class,ours: blocks (1st revision),S08,92.71,94.44,94.10,94.44,93.06,93.40,94.79,93.61,"Ours, RLF"
+BNCI2014-001,EEGNetV4,2class,ours: blocks (1st revision),S09,90.28,80.90,82.29,82.29,80.21,81.25,81.25,79.17,Full montage
+BNCI2014-001,EEGNetV4,2class,ours: blocks (1st revision),Mean,72.88,69.44,70.95,71.18,70.03,69.06,69.60,68.44,Full montage
+BNCI2014-001,EEGNetV4,2class,ours: blocks (1st revision),SD,17.55,18.15,17.40,17.19,17.07,18.42,17.29,17.48,
+BNCI2014-001,EEGItNet,2class,PAPER Table 5,S01,67.71,64.58,57.29,72.22,70.83,,,,RLF
+BNCI2014-001,EEGItNet,2class,PAPER Table 5,S02,52.78,56.25,52.08,54.17,54.86,,,,Ours
+BNCI2014-001,EEGItNet,2class,PAPER Table 5,S03,81.60,83.68,68.06,81.25,83.33,,,,Ours
+BNCI2014-001,EEGItNet,2class,PAPER Table 5,S04,78.12,75.35,67.01,76.74,75.00,,,,Full montage
+BNCI2014-001,EEGItNet,2class,PAPER Table 5,S05,65.97,66.32,61.11,64.58,62.85,,,,Ours
+BNCI2014-001,EEGItNet,2class,PAPER Table 5,S06,63.54,60.07,57.99,62.15,63.89,,,,MI
+BNCI2014-001,EEGItNet,2class,PAPER Table 5,S07,67.36,71.88,61.46,68.75,68.06,,,,Ours
+BNCI2014-001,EEGItNet,2class,PAPER Table 5,S08,91.67,89.58,83.33,89.58,91.67,,,,"Full montage, MI"
+BNCI2014-001,EEGItNet,2class,PAPER Table 5,S09,76.39,81.94,73.26,79.51,80.21,,,,Ours
+BNCI2014-001,EEGItNet,2class,PAPER Table 5,Mean,71.68,72.18,64.62,72.11,72.30,,,,MI
+BNCI2014-001,EEGItNet,2class,PAPER Table 5,SD,11.47,11.36,9.48,10.92,11.46,,,,
+BNCI2014-001,EEGItNet,2class,ours: session protocol,S01,72.92,72.22,70.14,52.08,66.67,65.28,76.39,62.78,Full montage
+BNCI2014-001,EEGItNet,2class,ours: session protocol,S02,55.56,56.94,51.39,53.47,52.78,56.25,56.25,54.03,Ours
+BNCI2014-001,EEGItNet,2class,ours: session protocol,S03,81.25,76.39,79.86,76.39,66.67,78.47,72.22,73.06,Full montage
+BNCI2014-001,EEGItNet,2class,ours: session protocol,S04,70.83,67.36,65.28,64.58,67.36,60.42,65.28,61.39,Full montage
+BNCI2014-001,EEGItNet,2class,ours: session protocol,S05,63.19,64.58,65.97,61.81,61.81,59.72,63.89,60.28,CSP
+BNCI2014-001,EEGItNet,2class,ours: session protocol,S06,61.11,65.28,59.03,63.89,61.81,59.03,65.28,58.19,Ours
+BNCI2014-001,EEGItNet,2class,ours: session protocol,S07,69.44,66.67,63.19,69.44,65.28,64.58,67.36,65.83,"Full montage, RLF"
+BNCI2014-001,EEGItNet,2class,ours: session protocol,S08,84.72,88.89,85.42,85.42,79.17,87.50,86.11,82.64,Ours
+BNCI2014-001,EEGItNet,2class,ours: session protocol,S09,80.56,86.11,81.25,85.42,78.47,79.17,85.42,75.14,Ours
+BNCI2014-001,EEGItNet,2class,ours: session protocol,Mean,71.06,71.60,69.06,68.06,66.67,67.82,70.91,65.93,Ours
+BNCI2014-001,EEGItNet,2class,ours: session protocol,SD,9.92,10.48,11.21,12.30,8.20,11.06,10.08,9.21,
+BNCI2014-001,EEGItNet,2class,ours: blocks (1st revision),S01,70.83,64.58,69.10,68.75,55.90,67.36,69.10,63.33,Full montage
+BNCI2014-001,EEGItNet,2class,ours: blocks (1st revision),S02,59.38,58.33,53.82,54.86,52.08,55.21,59.72,55.00,Full montage
+BNCI2014-001,EEGItNet,2class,ours: blocks (1st revision),S03,72.57,70.14,69.10,70.49,70.49,78.12,72.57,70.21,Full montage
+BNCI2014-001,EEGItNet,2class,ours: blocks (1st revision),S04,70.83,70.83,68.06,75.00,64.58,66.67,71.88,66.74,RLF
+BNCI2014-001,EEGItNet,2class,ours: blocks (1st revision),S05,60.42,63.19,61.46,59.38,62.85,62.15,63.54,60.42,Ours
+BNCI2014-001,EEGItNet,2class,ours: blocks (1st revision),S06,61.11,61.11,55.90,57.29,58.68,63.54,60.42,58.75,"Full montage, Ours"
+BNCI2014-001,EEGItNet,2class,ours: blocks (1st revision),S07,67.01,69.79,70.49,68.06,66.67,66.67,69.79,65.14,CSP
+BNCI2014-001,EEGItNet,2class,ours: blocks (1st revision),S08,86.11,82.29,86.11,85.07,82.29,83.68,81.25,81.46,"Full montage, CSP"
+BNCI2014-001,EEGItNet,2class,ours: blocks (1st revision),S09,67.01,67.36,69.44,64.58,65.62,63.89,67.01,64.17,CSP
+BNCI2014-001,EEGItNet,2class,ours: blocks (1st revision),Mean,68.36,67.51,67.05,67.05,64.35,67.48,68.36,65.02,Full montage
+BNCI2014-001,EEGItNet,2class,ours: blocks (1st revision),SD,8.25,7.02,9.49,9.44,8.82,8.55,6.72,7.62,
+BNCI2014-001,Deep4net,2class,PAPER Table 5,S01,80.56,84.38,76.39,68.75,70.83,,,,Ours
+BNCI2014-001,Deep4net,2class,PAPER Table 5,S02,52.08,48.26,47.22,57.99,54.86,,,,RLF
+BNCI2014-001,Deep4net,2class,PAPER Table 5,S03,94.10,94.44,89.93,91.67,91.32,,,,Ours
+BNCI2014-001,Deep4net,2class,PAPER Table 5,S04,59.38,62.15,60.42,63.19,63.19,,,,"RLF, MI"
+BNCI2014-001,Deep4net,2class,PAPER Table 5,S05,56.94,58.68,55.90,61.46,60.07,,,,RLF
+BNCI2014-001,Deep4net,2class,PAPER Table 5,S06,64.58,62.50,61.11,59.72,61.46,,,,Full montage
+BNCI2014-001,Deep4net,2class,PAPER Table 5,S07,56.94,67.71,57.99,59.72,56.60,,,,Ours
+BNCI2014-001,Deep4net,2class,PAPER Table 5,S08,96.18,96.18,94.44,93.40,96.88,,,,MI
+BNCI2014-001,Deep4net,2class,PAPER Table 5,S09,92.71,92.36,84.37,94.10,93.40,,,,RLF
+BNCI2014-001,Deep4net,2class,PAPER Table 5,Mean,72.61,74.07,69.75,72.22,72.07,,,,Ours
+BNCI2014-001,Deep4net,2class,PAPER Table 5,SD,18.15,17.90,16.86,15.93,17.01,,,,
+BNCI2014-001,Deep4net,2class,ours: session protocol,S01,56.25,64.58,68.75,56.94,55.56,60.42,52.78,58.33,CSP
+BNCI2014-001,Deep4net,2class,ours: session protocol,S02,46.53,49.31,49.31,48.61,52.78,47.22,49.31,49.58,MI
+BNCI2014-001,Deep4net,2class,ours: session protocol,S03,72.92,73.61,74.31,59.72,59.03,73.61,69.44,72.08,CSP
+BNCI2014-001,Deep4net,2class,ours: session protocol,S04,58.33,56.94,54.86,57.64,55.56,58.33,60.42,58.06,Full montage
+BNCI2014-001,Deep4net,2class,ours: session protocol,S05,60.42,58.33,59.72,60.42,60.42,56.25,61.11,59.58,"Full montage, RLF, MI"
+BNCI2014-001,Deep4net,2class,ours: session protocol,S06,56.94,52.08,53.47,55.56,55.56,53.47,54.86,53.61,Full montage
+BNCI2014-001,Deep4net,2class,ours: session protocol,S07,54.17,53.47,54.86,52.78,54.17,54.86,59.03,54.03,CSP
+BNCI2014-001,Deep4net,2class,ours: session protocol,S08,93.06,91.67,92.36,93.75,88.89,93.06,92.36,89.17,RLF
+BNCI2014-001,Deep4net,2class,ours: session protocol,S09,91.67,87.50,90.28,87.50,87.50,90.97,87.50,85.42,Full montage
+BNCI2014-001,Deep4net,2class,ours: session protocol,Mean,65.59,65.28,66.44,63.66,63.27,65.35,65.20,64.43,CSP
+BNCI2014-001,Deep4net,2class,ours: session protocol,SD,16.67,15.60,16.13,15.78,14.32,16.69,15.18,14.40,
+BNCI2014-001,EEGConformer,2class,PAPER Table 5,S01,90.97,89.58,89.58,89.58,88.89,,,,Full montage
+BNCI2014-001,EEGConformer,2class,PAPER Table 5,S02,60.42,59.72,60.42,55.56,55.56,,,,"Full montage, CSP"
+BNCI2014-001,EEGConformer,2class,PAPER Table 5,S03,97.22,97.22,93.75,95.83,93.06,,,,"Full montage, Ours"
+BNCI2014-001,EEGConformer,2class,PAPER Table 5,S04,75.00,74.31,74.31,72.92,75.00,,,,"Full montage, MI"
+BNCI2014-001,EEGConformer,2class,PAPER Table 5,S05,72.92,70.14,65.97,64.58,65.97,,,,Full montage
+BNCI2014-001,EEGConformer,2class,PAPER Table 5,S06,65.97,66.67,67.36,65.28,66.67,,,,CSP
+BNCI2014-001,EEGConformer,2class,PAPER Table 5,S07,81.94,80.56,78.47,78.47,79.86,,,,Full montage
+BNCI2014-001,EEGConformer,2class,PAPER Table 5,S08,97.22,97.22,97.92,92.36,97.92,,,,"CSP, MI"
+BNCI2014-001,EEGConformer,2class,PAPER Table 5,S09,93.06,95.14,93.75,93.75,94.44,,,,Ours
+BNCI2014-001,EEGConformer,2class,PAPER Table 5,Mean,81.64,81.17,80.17,78.70,79.71,,,,Full montage
+BNCI2014-001,EEGConformer,2class,PAPER Table 5,SD,13.78,14.23,13.99,14.89,14.90,,,,
+BNCI2014-001,EEGConformer,2class,ours: session protocol,S01,86.11,82.64,86.81,83.33,82.64,89.58,88.19,85.00,CSP
+BNCI2014-001,EEGConformer,2class,ours: session protocol,S02,59.03,48.61,52.08,54.17,54.17,52.78,50.69,56.11,Full montage
+BNCI2014-001,EEGConformer,2class,ours: session protocol,S03,93.75,91.67,93.75,88.89,89.58,91.67,92.36,92.22,"Full montage, CSP"
+BNCI2014-001,EEGConformer,2class,ours: session protocol,S04,75.00,76.39,70.83,77.08,75.00,70.14,77.78,73.61,RLF
+BNCI2014-001,EEGConformer,2class,ours: session protocol,S05,69.44,67.36,59.72,60.42,61.11,57.64,62.50,59.58,Full montage
+BNCI2014-001,EEGConformer,2class,ours: session protocol,S06,60.42,63.89,66.67,62.50,57.64,63.19,66.67,60.97,CSP
+BNCI2014-001,EEGConformer,2class,ours: session protocol,S07,79.86,75.00,77.78,75.69,71.53,83.33,77.08,73.89,Full montage
+BNCI2014-001,EEGConformer,2class,ours: session protocol,S08,95.83,95.83,95.14,94.44,94.44,95.83,91.67,94.58,"Full montage, Ours"
+BNCI2014-001,EEGConformer,2class,ours: session protocol,S09,88.89,86.11,89.58,86.11,88.19,88.19,85.42,88.47,CSP
+BNCI2014-001,EEGConformer,2class,ours: session protocol,Mean,78.70,76.39,76.93,75.85,74.92,76.93,76.93,76.05,Full montage
+BNCI2014-001,EEGConformer,2class,ours: session protocol,SD,13.70,14.82,15.53,13.99,14.85,16.17,14.39,14.77,
+BNCI2014-001,EEGNetV4,4class,PAPER Table 2,S01,69.44,69.27,65.45,69.97,67.19,,,,RLF
+BNCI2014-001,EEGNetV4,4class,PAPER Table 2,S02,40.80,36.46,34.20,41.67,39.58,,,,RLF
+BNCI2014-001,EEGNetV4,4class,PAPER Table 2,S03,86.28,84.90,81.42,83.33,83.85,,,,Full montage
+BNCI2014-001,EEGNetV4,4class,PAPER Table 2,S04,48.96,48.09,48.26,48.61,55.21,,,,MI
+BNCI2014-001,EEGNetV4,4class,PAPER Table 2,S05,40.10,36.28,28.99,45.49,30.38,,,,RLF
+BNCI2014-001,EEGNetV4,4class,PAPER Table 2,S06,45.83,44.10,44.44,45.83,46.53,,,,MI
+BNCI2014-001,EEGNetV4,4class,PAPER Table 2,S07,79.51,71.01,73.96,71.53,70.66,,,,Full montage
+BNCI2014-001,EEGNetV4,4class,PAPER Table 2,S08,76.91,74.65,75.17,76.56,76.56,,,,Full montage
+BNCI2014-001,EEGNetV4,4class,PAPER Table 2,S09,85.94,85.07,84.90,81.77,84.03,,,,Full montage
+BNCI2014-001,EEGNetV4,4class,PAPER Table 2,Mean,63.75,61.09,59.64,62.75,61.55,,,,Full montage
+BNCI2014-001,EEGNetV4,4class,PAPER Table 2,SD,19.62,19.91,21.03,17.08,19.57,,,,
+BNCI2014-001,EEGNetV4,4class,ours: session protocol,S01,77.78,71.88,70.83,72.57,71.53,73.96,70.83,71.94,Full montage
+BNCI2014-001,EEGNetV4,4class,ours: session protocol,S02,27.08,43.75,27.78,26.04,37.15,41.67,40.28,34.44,Ours
+BNCI2014-001,EEGNetV4,4class,ours: session protocol,S03,83.33,77.43,78.12,76.74,80.56,82.99,82.29,80.21,Full montage
+BNCI2014-001,EEGNetV4,4class,ours: session protocol,S04,50.69,51.39,48.96,44.44,43.40,45.14,46.18,48.33,Ours
+BNCI2014-001,EEGNetV4,4class,ours: session protocol,S05,46.18,31.25,25.00,34.38,37.15,35.42,28.12,25.42,Full montage
+BNCI2014-001,EEGNetV4,4class,ours: session protocol,S06,45.83,40.28,42.36,40.97,42.71,43.40,46.18,45.14,Full montage
+BNCI2014-001,EEGNetV4,4class,ours: session protocol,S07,73.61,71.18,67.01,69.79,70.49,78.47,68.40,66.88,Full montage
+BNCI2014-001,EEGNetV4,4class,ours: session protocol,S08,74.31,76.74,74.65,73.96,76.74,76.39,78.82,75.56,"Ours, MI"
+BNCI2014-001,EEGNetV4,4class,ours: session protocol,S09,85.76,84.03,84.38,79.86,78.82,79.51,81.25,82.22,Full montage
+BNCI2014-001,EEGNetV4,4class,ours: session protocol,Mean,62.73,60.88,57.68,57.64,59.84,61.88,60.26,58.90,Full montage
+BNCI2014-001,EEGNetV4,4class,ours: session protocol,SD,20.64,19.28,22.22,20.88,19.10,19.74,20.24,21.00,
+BNCI2014-001,EEGNetV4,4class,ours: blocks (1st revision),S01,70.83,70.83,69.27,68.40,67.36,67.71,70.49,69.76,"Full montage, Ours"
+BNCI2014-001,EEGNetV4,4class,ours: blocks (1st revision),S02,23.96,31.42,31.08,29.51,31.42,38.37,38.54,34.10,"Ours, MI"
+BNCI2014-001,EEGNetV4,4class,ours: blocks (1st revision),S03,86.46,83.33,81.25,76.74,82.99,84.38,84.55,79.10,Full montage
+BNCI2014-001,EEGNetV4,4class,ours: blocks (1st revision),S04,40.45,40.97,48.61,39.93,37.50,37.85,49.31,43.51,CSP
+BNCI2014-001,EEGNetV4,4class,ours: blocks (1st revision),S05,30.90,33.33,31.60,27.95,32.99,32.47,31.42,29.55,Ours
+BNCI2014-001,EEGNetV4,4class,ours: blocks (1st revision),S06,40.80,43.06,40.62,34.55,37.85,44.27,39.58,41.42,Ours
+BNCI2014-001,EEGNetV4,4class,ours: blocks (1st revision),S07,78.12,73.09,65.28,70.66,71.35,79.69,71.88,68.44,Full montage
+BNCI2014-001,EEGNetV4,4class,ours: blocks (1st revision),S08,75.00,75.17,76.04,69.79,76.39,76.22,74.83,74.51,MI
+BNCI2014-001,EEGNetV4,4class,ours: blocks (1st revision),S09,84.20,85.59,84.20,79.51,81.08,82.64,84.03,81.32,Ours
+BNCI2014-001,EEGNetV4,4class,ours: blocks (1st revision),Mean,58.97,59.64,58.66,55.23,57.66,60.40,60.51,57.97,Ours
+BNCI2014-001,EEGNetV4,4class,ours: blocks (1st revision),SD,24.61,22.06,21.04,21.63,22.13,21.74,20.79,20.54,
+BNCI2014-001,EEGItNet,4class,PAPER Table 2,S01,58.68,59.55,58.68,56.25,63.37,,,,MI
+BNCI2014-001,EEGItNet,4class,PAPER Table 2,S02,37.15,41.49,38.37,36.46,40.10,,,,Ours
+BNCI2014-001,EEGItNet,4class,PAPER Table 2,S03,71.18,57.64,60.42,64.58,64.06,,,,Full montage
+BNCI2014-001,EEGItNet,4class,PAPER Table 2,S04,53.99,57.12,53.99,47.05,56.08,,,,Ours
+BNCI2014-001,EEGItNet,4class,PAPER Table 2,S05,37.50,41.32,39.58,38.72,37.85,,,,Ours
+BNCI2014-001,EEGItNet,4class,PAPER Table 2,S06,44.44,41.67,45.31,42.53,44.27,,,,CSP
+BNCI2014-001,EEGItNet,4class,PAPER Table 2,S07,59.72,62.33,56.60,56.08,61.46,,,,Ours
+BNCI2014-001,EEGItNet,4class,PAPER Table 2,S08,65.45,59.03,59.20,61.81,63.19,,,,Full montage
+BNCI2014-001,EEGItNet,4class,PAPER Table 2,S09,66.49,65.45,63.89,67.01,66.15,,,,RLF
+BNCI2014-001,EEGItNet,4class,PAPER Table 2,Mean,54.96,53.96,52.89,52.28,55.17,,,,MI
+BNCI2014-001,EEGItNet,4class,PAPER Table 2,SD,12.63,9.68,9.43,11.43,11.28,,,,
+BNCI2014-001,EEGItNet,4class,ours: session protocol,S01,59.03,60.07,60.42,60.42,60.42,58.68,62.15,56.60,"CSP, RLF, MI"
+BNCI2014-001,EEGItNet,4class,ours: session protocol,S02,36.46,38.19,36.11,35.42,37.15,35.42,35.07,36.25,Ours
+BNCI2014-001,EEGItNet,4class,ours: session protocol,S03,61.81,55.90,59.72,60.42,56.60,59.38,58.33,57.36,Full montage
+BNCI2014-001,EEGItNet,4class,ours: session protocol,S04,50.35,50.00,51.39,47.57,46.18,40.97,47.22,45.35,CSP
+BNCI2014-001,EEGItNet,4class,ours: session protocol,S05,37.50,36.11,37.85,37.15,38.54,35.42,37.15,35.90,MI
+BNCI2014-001,EEGItNet,4class,ours: session protocol,S06,35.42,36.81,36.46,31.94,38.89,31.94,37.85,35.28,MI
+BNCI2014-001,EEGItNet,4class,ours: session protocol,S07,52.43,57.64,52.08,49.65,51.04,54.17,51.39,49.65,Ours
+BNCI2014-001,EEGItNet,4class,ours: session protocol,S08,60.42,57.64,56.60,60.07,55.90,56.25,57.64,55.56,Full montage
+BNCI2014-001,EEGItNet,4class,ours: session protocol,S09,65.28,62.85,59.72,61.11,65.97,61.46,61.46,60.62,MI
+BNCI2014-001,EEGItNet,4class,ours: session protocol,Mean,50.97,50.58,50.04,49.31,50.08,48.19,49.81,48.06,Full montage
+BNCI2014-001,EEGItNet,4class,ours: session protocol,SD,11.79,10.73,10.44,11.98,10.47,12.01,10.91,10.21,
+BNCI2014-001,Deep4net,4class,PAPER Table 2,S01,76.04,72.57,71.18,68.06,67.71,,,,Full montage
+BNCI2014-001,Deep4net,4class,PAPER Table 2,S02,29.34,28.65,32.47,31.42,32.47,,,,"CSP, MI"
+BNCI2014-001,Deep4net,4class,PAPER Table 2,S03,82.47,81.42,77.43,71.01,72.05,,,,Full montage
+BNCI2014-001,Deep4net,4class,PAPER Table 2,S04,55.73,51.22,45.31,38.19,44.97,,,,Full montage
+BNCI2014-001,Deep4net,4class,PAPER Table 2,S05,32.99,32.64,32.12,36.98,36.46,,,,RLF
+BNCI2014-001,Deep4net,4class,PAPER Table 2,S06,42.71,43.58,42.53,35.42,35.76,,,,Ours
+BNCI2014-001,Deep4net,4class,PAPER Table 2,S07,77.08,67.88,62.15,43.23,42.01,,,,Full montage
+BNCI2014-001,Deep4net,4class,PAPER Table 2,S08,82.29,80.38,77.26,69.97,72.92,,,,Full montage
+BNCI2014-001,Deep4net,4class,PAPER Table 2,S09,78.99,77.78,78.12,75.00,74.31,,,,Full montage
+BNCI2014-001,Deep4net,4class,PAPER Table 2,Mean,61.96,59.57,57.62,52.14,53.18,,,,Full montage
+BNCI2014-001,Deep4net,4class,PAPER Table 2,SD,21.98,20.88,19.57,18.24,18.05,,,,
+BNCI2014-001,Deep4net,4class,ours: session protocol,S01,62.15,61.81,58.68,60.07,56.60,65.28,61.46,59.38,Full montage
+BNCI2014-001,Deep4net,4class,ours: session protocol,S02,25.00,23.61,24.65,24.31,22.92,23.61,22.57,24.17,Full montage
+BNCI2014-001,Deep4net,4class,ours: session protocol,S03,54.17,55.56,52.08,54.51,53.47,51.39,53.47,54.79,Ours
+BNCI2014-001,Deep4net,4class,ours: session protocol,S04,42.01,38.89,40.62,42.01,38.54,26.04,40.62,36.46,"Full montage, RLF"
+BNCI2014-001,Deep4net,4class,ours: session protocol,S05,26.04,26.39,26.39,28.47,30.56,27.43,28.47,27.01,MI
+BNCI2014-001,Deep4net,4class,ours: session protocol,S06,24.31,26.39,26.04,23.96,23.26,24.31,26.74,24.44,Ours
+BNCI2014-001,Deep4net,4class,ours: session protocol,S07,31.94,38.89,34.72,35.07,37.85,41.67,31.25,36.74,Ours
+BNCI2014-001,Deep4net,4class,ours: session protocol,S08,65.97,63.54,63.54,63.89,66.67,67.01,66.32,60.56,MI
+BNCI2014-001,Deep4net,4class,ours: session protocol,S09,74.65,72.92,72.57,72.57,72.92,71.53,73.26,70.49,Full montage
+BNCI2014-001,Deep4net,4class,ours: session protocol,Mean,45.14,45.33,44.37,44.98,44.75,44.25,44.91,43.78,Ours
+BNCI2014-001,Deep4net,4class,ours: session protocol,SD,19.57,18.51,17.97,18.32,18.43,20.00,19.08,17.69,
+BNCI2014-001,EEGConformer,4class,PAPER Table 2,S01,78.82,70.83,69.79,71.53,69.79,,,,Full montage
+BNCI2014-001,EEGConformer,4class,PAPER Table 2,S02,30.90,32.29,37.15,35.07,34.03,,,,CSP
+BNCI2014-001,EEGConformer,4class,PAPER Table 2,S03,86.46,85.76,85.07,82.64,86.46,,,,"Full montage, MI"
+BNCI2014-001,EEGConformer,4class,PAPER Table 2,S04,55.90,50.69,48.96,51.39,50.69,,,,Full montage
+BNCI2014-001,EEGConformer,4class,PAPER Table 2,S05,32.64,34.03,33.68,31.25,31.25,,,,Ours
+BNCI2014-001,EEGConformer,4class,PAPER Table 2,S06,33.33,35.76,34.72,36.81,37.15,,,,MI
+BNCI2014-001,EEGConformer,4class,PAPER Table 2,S07,81.60,72.92,73.61,78.12,79.86,,,,Full montage
+BNCI2014-001,EEGConformer,4class,PAPER Table 2,S08,80.90,79.17,75.69,71.88,77.08,,,,Full montage
+BNCI2014-001,EEGConformer,4class,PAPER Table 2,S09,77.08,76.04,71.53,67.01,76.74,,,,Full montage
+BNCI2014-001,EEGConformer,4class,PAPER Table 2,Mean,61.96,59.72,58.91,58.41,60.34,,,,Full montage
+BNCI2014-001,EEGConformer,4class,PAPER Table 2,SD,23.82,21.47,20.17,20.00,22.00,,,,
+BNCI2014-001,EEGConformer,4class,ours: session protocol,S01,75.00,68.40,70.49,69.79,70.83,70.49,69.79,68.19,Full montage
+BNCI2014-001,EEGConformer,4class,ours: session protocol,S02,42.71,37.50,33.68,34.38,37.15,38.89,38.89,35.56,Full montage
+BNCI2014-001,EEGConformer,4class,ours: session protocol,S03,77.08,72.22,73.26,78.82,78.12,73.26,70.83,71.74,RLF
+BNCI2014-001,EEGConformer,4class,ours: session protocol,S04,71.18,66.67,62.85,61.46,62.85,53.47,60.42,60.69,Full montage
+BNCI2014-001,EEGConformer,4class,ours: session protocol,S05,43.06,38.89,40.97,34.72,35.76,33.33,38.19,34.44,Full montage
+BNCI2014-001,EEGConformer,4class,ours: session protocol,S06,46.18,42.71,39.24,40.62,44.44,40.62,41.32,40.14,Full montage
+BNCI2014-001,EEGConformer,4class,ours: session protocol,S07,78.82,72.57,67.01,65.62,68.75,75.00,69.10,67.85,Full montage
+BNCI2014-001,EEGConformer,4class,ours: session protocol,S08,74.65,70.49,68.75,66.67,72.92,75.69,70.14,70.21,Full montage
+BNCI2014-001,EEGConformer,4class,ours: session protocol,S09,75.00,74.65,73.26,73.61,74.31,69.79,75.00,73.68,Full montage
+BNCI2014-001,EEGConformer,4class,ours: session protocol,Mean,64.85,60.46,58.83,58.41,60.57,58.95,59.30,58.06,Full montage
+BNCI2014-001,EEGConformer,4class,ours: session protocol,SD,15.81,15.80,16.08,17.18,16.77,17.39,15.37,16.47,
+HGD,EEGNetV4,2class,PAPER Table 4,S01,98.75,96.25,95.00,97.92,97.92,,,,Full montage
+HGD,EEGNetV4,2class,PAPER Table 4,S02,98.15,98.35,97.73,97.53,97.73,,,,Ours
+HGD,EEGNetV4,2class,PAPER Table 4,S03,99.42,99.81,99.81,99.23,99.62,,,,"Ours, CSP"
+HGD,EEGNetV4,2class,PAPER Table 4,S04,99.43,99.43,99.24,99.43,99.43,,,,"Full montage, Ours, RLF, MI"
+HGD,EEGNetV4,2class,PAPER Table 4,S05,100.00,100.00,100.00,99.77,99.77,,,,"Full montage, Ours, CSP"
+HGD,EEGNetV4,2class,PAPER Table 4,S06,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,EEGNetV4,2class,PAPER Table 4,S07,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,EEGNetV4,2class,PAPER Table 4,S08,99.85,100.00,100.00,100.00,100.00,,,,"Ours, CSP, RLF, MI"
+HGD,EEGNetV4,2class,PAPER Table 4,S09,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,EEGNetV4,2class,PAPER Table 4,S10,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,EEGNetV4,2class,PAPER Table 4,S11,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,EEGNetV4,2class,PAPER Table 4,S12,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,EEGNetV4,2class,PAPER Table 4,S13,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,EEGNetV4,2class,PAPER Table 4,S14,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,EEGNetV4,2class,PAPER Table 4,Mean,99.69,99.56,99.41,99.56,99.61,,,,Full montage
+HGD,EEGNetV4,2class,PAPER Table 4,SD,0.57,1.05,1.41,0.82,0.78,,,,
+HGD,EEGNetV4,2class,ours: session protocol,S01,50.00,58.75,55.00,55.00,57.50,51.25,52.50,58.00,Ours
+HGD,EEGNetV4,2class,ours: session protocol,S02,88.75,87.50,88.75,87.50,87.50,85.00,92.50,87.25,"Full montage, CSP"
+HGD,EEGNetV4,2class,ours: session protocol,S03,97.50,97.50,97.50,98.75,96.25,93.75,98.75,97.25,RLF
+HGD,EEGNetV4,2class,ours: session protocol,S04,100.00,98.75,97.50,96.25,98.75,96.25,97.50,97.25,Full montage
+HGD,EEGNetV4,2class,ours: session protocol,S05,72.50,73.75,82.50,81.25,78.75,78.75,85.00,73.25,CSP
+HGD,EEGNetV4,2class,ours: session protocol,S06,87.50,81.25,88.75,86.25,87.50,92.50,91.25,85.50,CSP
+HGD,EEGNetV4,2class,ours: session protocol,S07,62.50,67.50,62.50,72.50,58.75,63.75,60.00,62.75,RLF
+HGD,EEGNetV4,2class,ours: session protocol,S08,83.75,65.00,78.75,75.00,53.75,62.50,77.50,56.75,Full montage
+HGD,EEGNetV4,2class,ours: session protocol,S09,80.00,72.50,75.00,78.75,67.50,75.00,81.25,65.25,Full montage
+HGD,EEGNetV4,2class,ours: session protocol,S10,98.75,98.75,98.75,100.00,100.00,98.75,98.75,99.50,"RLF, MI"
+HGD,EEGNetV4,2class,ours: session protocol,S11,66.25,62.50,70.00,72.50,63.75,65.00,65.00,62.25,RLF
+HGD,EEGNetV4,2class,ours: session protocol,S12,98.75,95.00,100.00,98.75,100.00,100.00,98.75,98.75,"CSP, MI"
+HGD,EEGNetV4,2class,ours: session protocol,S13,81.25,82.50,86.25,81.25,81.25,72.50,80.00,76.75,CSP
+HGD,EEGNetV4,2class,ours: session protocol,S14,95.00,93.75,93.75,92.50,93.75,95.00,95.00,93.75,Full montage
+HGD,EEGNetV4,2class,ours: session protocol,Mean,83.04,81.07,83.93,84.02,80.36,80.71,83.84,79.59,RLF
+HGD,EEGNetV4,2class,ours: session protocol,SD,15.46,14.43,14.12,12.89,17.06,15.95,15.38,16.43,
+HGD,EEGNetV4,2class,ours: HGD hold-out (cache bug),S01,50.00,72.50,50.00,55.00,58.75,51.25,48.75,58.00,Ours
+HGD,EEGNetV4,2class,ours: HGD hold-out (cache bug),S02,88.75,82.50,90.00,82.50,82.50,85.00,92.50,87.25,CSP
+HGD,EEGNetV4,2class,ours: HGD hold-out (cache bug),S03,97.50,93.75,98.75,93.75,92.50,93.75,97.50,97.25,CSP
+HGD,EEGNetV4,2class,ours: HGD hold-out (cache bug),S04,100.00,98.75,97.50,96.25,95.00,96.25,97.50,97.25,Full montage
+HGD,EEGNetV4,2class,ours: HGD hold-out (cache bug),S05,72.50,77.50,80.00,75.00,77.50,78.75,77.50,73.25,CSP
+HGD,EEGNetV4,2class,ours: HGD hold-out (cache bug),S06,86.25,91.25,90.00,86.25,83.75,83.75,87.50,85.75,Ours
+HGD,EEGNetV4,2class,ours: HGD hold-out (cache bug),S07,58.75,62.50,57.50,61.25,47.50,52.50,63.75,55.25,Ours
+HGD,EEGNetV4,2class,ours: HGD hold-out (cache bug),S08,71.21,68.18,69.70,46.97,43.94,50.00,60.61,49.70,Full montage
+HGD,EEGNetV4,2class,ours: HGD hold-out (cache bug),S09,75.00,66.25,75.00,67.50,78.75,76.25,81.25,64.00,MI
+HGD,EEGNetV4,2class,ours: HGD hold-out (cache bug),S10,97.50,98.75,97.50,93.75,100.00,100.00,97.50,97.50,MI
+HGD,EEGNetV4,2class,ours: HGD hold-out (cache bug),S11,62.50,50.00,43.75,56.25,50.00,50.00,43.75,51.25,Full montage
+HGD,EEGNetV4,2class,ours: HGD hold-out (cache bug),S12,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,"Full montage, Ours, CSP, RLF, MI"
+HGD,EEGNetV4,2class,ours: HGD hold-out (cache bug),S13,83.75,85.00,82.50,66.25,62.50,78.75,70.00,72.00,Ours
+HGD,EEGNetV4,2class,ours: HGD hold-out (cache bug),S14,91.25,91.25,93.75,92.50,92.50,88.75,96.25,91.25,CSP
+HGD,EEGNetV4,2class,ours: HGD hold-out (cache bug),Mean,81.07,81.30,80.42,76.66,76.09,77.50,79.60,77.12,Ours
+HGD,EEGNetV4,2class,ours: HGD hold-out (cache bug),SD,16.34,15.57,18.83,17.74,19.93,18.98,19.28,18.82,
+HGD,EEGItNet,2class,PAPER Table 4 (identical to its 4-class table),S01,82.50,78.75,82.08,88.33,92.50,,,,MI
+HGD,EEGItNet,2class,PAPER Table 4 (identical to its 4-class table),S02,87.68,88.50,88.08,90.35,90.56,,,,MI
+HGD,EEGItNet,2class,PAPER Table 4 (identical to its 4-class table),S03,95.38,98.65,98.08,98.08,97.31,,,,Ours
+HGD,EEGItNet,2class,PAPER Table 4 (identical to its 4-class table),S04,97.73,97.92,95.08,89.59,96.98,,,,Ours
+HGD,EEGItNet,2class,PAPER Table 4 (identical to its 4-class table),S05,82.73,94.55,82.50,76.82,84.09,,,,Ours
+HGD,EEGItNet,2class,PAPER Table 4 (identical to its 4-class table),S06,100.00,100.00,100.00,99.66,100.00,,,,"Full montage, Ours, CSP, MI"
+HGD,EEGItNet,2class,PAPER Table 4 (identical to its 4-class table),S07,100.00,100.00,99.89,99.09,100.00,,,,"Full montage, Ours, MI"
+HGD,EEGItNet,2class,PAPER Table 4 (identical to its 4-class table),S08,100.00,99.85,100.00,100.00,100.00,,,,"Full montage, CSP, RLF, MI"
+HGD,EEGItNet,2class,PAPER Table 4 (identical to its 4-class table),S09,100.00,100.00,99.89,100.00,100.00,,,,"Full montage, Ours, RLF, MI"
+HGD,EEGItNet,2class,PAPER Table 4 (identical to its 4-class table),S10,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,EEGItNet,2class,PAPER Table 4 (identical to its 4-class table),S11,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,EEGItNet,2class,PAPER Table 4 (identical to its 4-class table),S12,100.00,99.20,99.89,98.07,68.41,,,,Full montage
+HGD,EEGItNet,2class,PAPER Table 4 (identical to its 4-class table),S13,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,EEGItNet,2class,PAPER Table 4 (identical to its 4-class table),S14,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,EEGItNet,2class,PAPER Table 4 (identical to its 4-class table),Mean,96.14,96.96,96.11,95.71,94.99,,,,Ours
+HGD,EEGItNet,2class,PAPER Table 4 (identical to its 4-class table),SD,6.65,6.14,6.71,6.94,9.04,,,,
+HGD,Deep4net,2class,PAPER Table 4,S01,85.83,92.08,92.08,93.33,92.92,,,,RLF
+HGD,Deep4net,2class,PAPER Table 4,S02,97.74,96.71,97.73,96.30,97.74,,,,"Full montage, MI"
+HGD,Deep4net,2class,PAPER Table 4,S03,98.08,100.00,97.31,99.42,99.62,,,,Ours
+HGD,Deep4net,2class,PAPER Table 4,S04,99.43,99.62,99.05,99.05,99.24,,,,Ours
+HGD,Deep4net,2class,PAPER Table 4,S05,99.77,99.77,99.09,100.00,98.86,,,,RLF
+HGD,Deep4net,2class,PAPER Table 4,S06,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,Deep4net,2class,PAPER Table 4,S07,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,Deep4net,2class,PAPER Table 4,S08,100.00,100.00,99.85,100.00,100.00,,,,"Full montage, Ours, RLF, MI"
+HGD,Deep4net,2class,PAPER Table 4,S09,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,Deep4net,2class,PAPER Table 4,S10,99.89,100.00,100.00,100.00,100.00,,,,"Ours, CSP, RLF, MI"
+HGD,Deep4net,2class,PAPER Table 4,S11,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,Deep4net,2class,PAPER Table 4,S12,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,Deep4net,2class,PAPER Table 4,S13,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,Deep4net,2class,PAPER Table 4,S14,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,Deep4net,2class,PAPER Table 4,Mean,98.62,99.16,98.94,99.15,99.17,,,,MI
+HGD,Deep4net,2class,PAPER Table 4,SD,3.76,2.21,2.17,1.95,1.91,,,,
+HGD,Deep4net,2class,ours: session protocol,S01,46.25,56.25,60.00,56.25,56.25,57.50,56.25,52.25,CSP
+HGD,Deep4net,2class,ours: session protocol,S02,81.25,80.00,85.00,83.75,87.50,90.00,88.75,84.75,MI
+HGD,Deep4net,2class,ours: session protocol,S03,98.75,91.25,96.25,97.50,98.75,93.75,98.75,93.25,"Full montage, MI"
+HGD,Deep4net,2class,ours: session protocol,S04,97.50,97.50,98.75,98.75,92.50,98.75,92.50,96.25,"CSP, RLF"
+HGD,Deep4net,2class,ours: session protocol,S05,56.25,57.50,56.25,43.75,53.75,62.50,48.75,54.00,Ours
+HGD,Deep4net,2class,ours: session protocol,S06,78.75,77.50,68.75,81.25,78.75,85.00,82.50,73.75,RLF
+HGD,Deep4net,2class,ours: session protocol,S07,61.25,65.00,52.50,55.00,57.50,63.75,55.00,56.25,Ours
+HGD,Deep4net,2class,ours: session protocol,S08,63.75,65.00,66.25,62.50,63.75,62.50,62.50,59.25,CSP
+HGD,Deep4net,2class,ours: session protocol,S09,46.25,51.25,41.25,53.75,52.50,48.75,48.75,46.50,RLF
+HGD,Deep4net,2class,ours: session protocol,S10,100.00,100.00,100.00,100.00,100.00,100.00,98.75,96.50,"Full montage, Ours, CSP, RLF, MI"
+HGD,Deep4net,2class,ours: session protocol,S11,56.25,60.00,61.25,60.00,60.00,58.75,67.50,58.50,CSP
+HGD,Deep4net,2class,ours: session protocol,S12,98.75,97.50,96.25,97.50,95.00,98.75,97.50,98.00,Full montage
+HGD,Deep4net,2class,ours: session protocol,S13,77.50,73.75,78.75,76.25,68.75,83.75,77.50,72.50,CSP
+HGD,Deep4net,2class,ours: session protocol,S14,96.25,98.75,97.50,95.00,95.00,93.75,96.25,95.25,Ours
+HGD,Deep4net,2class,ours: session protocol,Mean,75.62,76.52,75.62,75.80,75.71,78.39,76.52,74.07,Ours
+HGD,Deep4net,2class,ours: session protocol,SD,20.45,17.79,20.06,20.14,18.53,18.39,19.52,19.45,
+HGD,EEGConformer,2class,PAPER Table 4,S01,54.58,58.33,60.42,63.75,68.33,,,,MI
+HGD,EEGConformer,2class,PAPER Table 4,S02,90.95,89.09,88.68,91.15,89.30,,,,RLF
+HGD,EEGConformer,2class,PAPER Table 4,S03,95.96,96.35,88.46,97.88,94.23,,,,RLF
+HGD,EEGConformer,2class,PAPER Table 4,S04,98.86,97.35,98.30,97.73,99.24,,,,MI
+HGD,EEGConformer,2class,PAPER Table 4,S05,74.32,79.32,62.95,70.68,66.59,,,,Ours
+HGD,EEGConformer,2class,PAPER Table 4,S06,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,EEGConformer,2class,PAPER Table 4,S07,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,EEGConformer,2class,PAPER Table 4,S08,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,EEGConformer,2class,PAPER Table 4,S09,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,EEGConformer,2class,PAPER Table 4,S10,100.00,99.89,99.77,100.00,99.89,,,,"Full montage, RLF"
+HGD,EEGConformer,2class,PAPER Table 4,S11,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,EEGConformer,2class,PAPER Table 4,S12,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,EEGConformer,2class,PAPER Table 4,S13,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,EEGConformer,2class,PAPER Table 4,S14,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,EEGConformer,2class,PAPER Table 4,Mean,93.91,94.31,92.76,94.37,94.11,,,,RLF
+HGD,EEGConformer,2class,PAPER Table 4,SD,13.31,11.93,13.78,11.83,11.71,,,,
+HGD,EEGNetV4,4class,PAPER Table 1,S01,82.50,86.25,81.46,89.17,85.00,,,,RLF
+HGD,EEGNetV4,4class,PAPER Table 1,S02,83.76,75.64,81.50,84.48,83.35,,,,RLF
+HGD,EEGNetV4,4class,PAPER Table 1,S03,80.67,96.15,78.46,93.27,96.63,,,,MI
+HGD,EEGNetV4,4class,PAPER Table 1,S04,96.12,95.18,90.82,95.74,94.51,,,,Full montage
+HGD,EEGNetV4,4class,PAPER Table 1,S05,98.98,98.64,97.16,99.09,98.64,,,,RLF
+HGD,EEGNetV4,4class,PAPER Table 1,S06,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,EEGNetV4,4class,PAPER Table 1,S07,100.00,99.94,99.77,99.94,99.94,,,,Full montage
+HGD,EEGNetV4,4class,PAPER Table 1,S08,99.92,100.00,99.92,100.00,100.00,,,,"Ours, RLF, MI"
+HGD,EEGNetV4,4class,PAPER Table 1,S09,100.00,99.83,99.94,100.00,100.00,,,,"Full montage, RLF, MI"
+HGD,EEGNetV4,4class,PAPER Table 1,S10,99.94,99.66,99.66,99.77,99.77,,,,Full montage
+HGD,EEGNetV4,4class,PAPER Table 1,S11,100.00,100.00,100.00,99.69,100.00,,,,"Full montage, Ours, CSP, MI"
+HGD,EEGNetV4,4class,PAPER Table 1,S12,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,EEGNetV4,4class,PAPER Table 1,S13,99.94,99.94,99.81,99.88,99.94,,,,"Full montage, Ours, MI"
+HGD,EEGNetV4,4class,PAPER Table 1,S14,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,EEGNetV4,4class,PAPER Table 1,Mean,95.85,96.52,94.89,97.22,96.98,,,,RLF
+HGD,EEGNetV4,4class,PAPER Table 1,SD,7.43,7.09,8.22,4.92,5.67,,,,
+HGD,EEGNetV4,4class,ours: session protocol,S01,75.00,75.62,76.88,78.75,73.12,73.12,75.00,74.75,RLF
+HGD,EEGNetV4,4class,ours: session protocol,S02,84.38,81.88,85.00,82.50,81.25,78.12,76.88,81.50,CSP
+HGD,EEGNetV4,4class,ours: session protocol,S03,97.50,96.25,95.62,93.75,96.88,95.62,95.62,94.38,Full montage
+HGD,EEGNetV4,4class,ours: session protocol,S04,98.12,96.88,96.88,98.12,97.50,96.25,93.12,95.62,"Full montage, RLF"
+HGD,EEGNetV4,4class,ours: session protocol,S05,85.00,88.12,86.25,90.00,87.50,88.75,87.50,87.62,RLF
+HGD,EEGNetV4,4class,ours: session protocol,S06,87.50,88.75,92.50,90.00,88.75,89.38,90.62,87.50,CSP
+HGD,EEGNetV4,4class,ours: session protocol,S07,79.38,80.62,73.12,79.38,78.75,78.75,81.25,76.62,Ours
+HGD,EEGNetV4,4class,ours: session protocol,S08,88.75,91.88,90.62,90.62,81.88,81.88,88.75,81.63,Ours
+HGD,EEGNetV4,4class,ours: session protocol,S09,85.62,78.75,86.88,81.25,83.12,78.12,86.25,75.88,CSP
+HGD,EEGNetV4,4class,ours: session protocol,S10,88.12,87.50,90.00,87.50,91.25,86.88,90.00,91.25,MI
+HGD,EEGNetV4,4class,ours: session protocol,S11,78.12,75.62,71.88,80.62,78.75,71.88,80.62,73.62,RLF
+HGD,EEGNetV4,4class,ours: session protocol,S12,88.75,80.62,81.88,76.25,90.62,91.88,86.25,87.38,MI
+HGD,EEGNetV4,4class,ours: session protocol,S13,87.50,82.50,89.38,78.12,85.62,81.25,83.75,79.62,CSP
+HGD,EEGNetV4,4class,ours: session protocol,S14,95.00,90.00,92.50,91.88,93.12,91.25,88.75,90.38,Full montage
+HGD,EEGNetV4,4class,ours: session protocol,Mean,87.05,85.36,86.38,85.62,86.29,84.51,86.03,84.12,Full montage
+HGD,EEGNetV4,4class,ours: session protocol,SD,6.79,7.00,7.89,6.86,7.22,7.99,5.94,7.43,
+HGD,EEGNetV4,4class,ours: HGD hold-out (cache bug),S01,75.00,71.88,80.62,81.25,76.25,73.12,78.12,74.75,RLF
+HGD,EEGNetV4,4class,ours: HGD hold-out (cache bug),S02,84.38,79.38,81.25,80.62,79.38,78.12,76.88,81.50,Full montage
+HGD,EEGNetV4,4class,ours: HGD hold-out (cache bug),S03,97.50,95.62,93.12,94.38,94.38,95.62,95.00,94.38,Full montage
+HGD,EEGNetV4,4class,ours: HGD hold-out (cache bug),S04,98.12,95.00,96.25,98.12,96.25,96.25,96.25,95.62,"Full montage, RLF"
+HGD,EEGNetV4,4class,ours: HGD hold-out (cache bug),S05,85.00,88.12,93.12,85.62,86.25,88.75,86.88,87.62,CSP
+HGD,EEGNetV4,4class,ours: HGD hold-out (cache bug),S06,90.00,87.50,89.38,89.38,90.00,86.88,86.25,87.25,"Full montage, MI"
+HGD,EEGNetV4,4class,ours: HGD hold-out (cache bug),S07,72.50,76.88,75.00,78.12,79.38,73.12,77.50,71.25,MI
+HGD,EEGNetV4,4class,ours: HGD hold-out (cache bug),S08,83.97,82.44,88.55,83.97,76.34,79.39,82.44,76.03,CSP
+HGD,EEGNetV4,4class,ours: HGD hold-out (cache bug),S09,68.75,74.38,71.88,74.38,80.62,71.25,82.50,70.50,MI
+HGD,EEGNetV4,4class,ours: HGD hold-out (cache bug),S10,85.62,87.50,88.75,87.50,84.38,88.12,88.12,86.00,CSP
+HGD,EEGNetV4,4class,ours: HGD hold-out (cache bug),S11,56.25,56.25,62.50,56.25,59.38,37.50,56.25,59.38,CSP
+HGD,EEGNetV4,4class,ours: HGD hold-out (cache bug),S12,96.25,97.50,97.50,98.12,91.88,96.88,94.38,95.38,RLF
+HGD,EEGNetV4,4class,ours: HGD hold-out (cache bug),S13,85.00,88.12,85.62,74.38,83.75,77.50,90.00,83.25,Ours
+HGD,EEGNetV4,4class,ours: HGD hold-out (cache bug),S14,96.88,93.12,94.38,93.12,89.38,91.88,91.88,91.62,Full montage
+HGD,EEGNetV4,4class,ours: HGD hold-out (cache bug),Mean,83.94,83.84,85.57,83.94,83.40,81.03,84.46,82.47,CSP
+HGD,EEGNetV4,4class,ours: HGD hold-out (cache bug),SD,12.26,11.31,10.21,11.24,9.46,15.43,10.40,10.86,
+HGD,EEGItNet,4class,PAPER Table 1,S01,82.50,78.75,82.08,88.33,92.50,,,,MI
+HGD,EEGItNet,4class,PAPER Table 1,S02,87.68,88.50,88.08,90.35,90.56,,,,MI
+HGD,EEGItNet,4class,PAPER Table 1,S03,95.38,98.65,98.08,98.08,97.31,,,,Ours
+HGD,EEGItNet,4class,PAPER Table 1,S04,97.73,97.92,95.08,89.59,96.98,,,,Ours
+HGD,EEGItNet,4class,PAPER Table 1,S05,82.73,94.55,82.50,76.82,84.09,,,,Ours
+HGD,EEGItNet,4class,PAPER Table 1,S06,100.00,100.00,100.00,99.66,100.00,,,,"Full montage, Ours, CSP, MI"
+HGD,EEGItNet,4class,PAPER Table 1,S07,100.00,100.00,99.89,99.09,100.00,,,,"Full montage, Ours, MI"
+HGD,EEGItNet,4class,PAPER Table 1,S08,100.00,99.85,100.00,100.00,100.00,,,,"Full montage, CSP, RLF, MI"
+HGD,EEGItNet,4class,PAPER Table 1,S09,100.00,100.00,99.89,100.00,100.00,,,,"Full montage, Ours, RLF, MI"
+HGD,EEGItNet,4class,PAPER Table 1,S10,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,EEGItNet,4class,PAPER Table 1,S11,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,EEGItNet,4class,PAPER Table 1,S12,100.00,99.20,99.89,98.07,68.41,,,,Full montage
+HGD,EEGItNet,4class,PAPER Table 1,S13,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,EEGItNet,4class,PAPER Table 1,S14,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,EEGItNet,4class,PAPER Table 1,Mean,96.14,96.96,96.11,95.71,94.99,,,,Ours
+HGD,EEGItNet,4class,PAPER Table 1,SD,6.65,6.14,6.71,6.94,9.04,,,,
+HGD,Deep4net,4class,PAPER Table 1,S01,79.38,78.75,47.71,73.75,76.88,,,,Full montage
+HGD,Deep4net,4class,PAPER Table 1,S02,87.56,87.35,84.89,85.61,88.70,,,,MI
+HGD,Deep4net,4class,PAPER Table 1,S03,95.10,95.77,81.63,95.58,95.29,,,,Ours
+HGD,Deep4net,4class,PAPER Table 1,S04,97.16,95.46,93.37,95.46,93.75,,,,Full montage
+HGD,Deep4net,4class,PAPER Table 1,S05,98.98,98.86,98.07,98.98,98.75,,,,"Full montage, RLF"
+HGD,Deep4net,4class,PAPER Table 1,S06,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,Deep4net,4class,PAPER Table 1,S07,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,Deep4net,4class,PAPER Table 1,S08,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,Deep4net,4class,PAPER Table 1,S09,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,Deep4net,4class,PAPER Table 1,S10,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,Deep4net,4class,PAPER Table 1,S11,98.44,98.75,100.00,93.12,95.62,,,,CSP
+HGD,Deep4net,4class,PAPER Table 1,S12,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,Deep4net,4class,PAPER Table 1,S13,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,Deep4net,4class,PAPER Table 1,S14,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,Deep4net,4class,PAPER Table 1,Mean,96.90,96.78,93.26,95.89,96.36,,,,Full montage
+HGD,Deep4net,4class,PAPER Table 1,SD,6.08,6.25,14.44,7.59,6.55,,,,
+HGD,Deep4net,4class,ours: session protocol,S01,65.62,66.25,64.38,68.75,65.00,66.25,65.62,66.25,RLF
+HGD,Deep4net,4class,ours: session protocol,S02,83.12,83.12,83.12,82.50,84.38,78.75,79.38,80.87,MI
+HGD,Deep4net,4class,ours: session protocol,S03,95.62,95.62,91.88,93.12,96.25,92.50,95.00,94.38,MI
+HGD,Deep4net,4class,ours: session protocol,S04,90.62,91.25,86.25,91.25,90.62,93.75,84.38,89.75,"Ours, RLF"
+HGD,Deep4net,4class,ours: session protocol,S05,80.00,76.25,76.25,79.38,78.12,76.25,75.00,77.88,Full montage
+HGD,Deep4net,4class,ours: session protocol,S06,87.50,83.12,80.62,85.62,81.88,81.88,76.25,81.50,Full montage
+HGD,Deep4net,4class,ours: session protocol,S07,73.12,71.88,72.50,70.62,73.75,71.25,70.62,71.75,MI
+HGD,Deep4net,4class,ours: session protocol,S08,81.25,85.00,84.38,83.12,82.50,80.00,83.12,80.62,Ours
+HGD,Deep4net,4class,ours: session protocol,S09,55.00,54.37,52.50,55.00,56.88,50.62,56.25,54.00,MI
+HGD,Deep4net,4class,ours: session protocol,S10,89.38,85.62,82.50,84.38,88.12,85.00,87.50,88.12,Full montage
+HGD,Deep4net,4class,ours: session protocol,S11,71.88,73.12,72.50,71.88,70.00,70.62,66.88,72.00,Ours
+HGD,Deep4net,4class,ours: session protocol,S12,90.00,88.75,90.00,89.38,91.25,90.00,88.12,88.00,MI
+HGD,Deep4net,4class,ours: session protocol,S13,74.38,80.00,79.38,75.00,70.62,71.25,78.12,72.88,Ours
+HGD,Deep4net,4class,ours: session protocol,S14,91.88,90.62,93.12,92.50,91.25,89.38,90.00,91.38,CSP
+HGD,Deep4net,4class,ours: session protocol,Mean,80.67,80.35,79.24,80.18,80.04,78.39,78.30,79.24,Full montage
+HGD,Deep4net,4class,ours: session protocol,SD,11.52,11.12,11.12,10.88,11.49,11.88,10.78,11.12,
+HGD,EEGConformer,4class,PAPER Table 1,S01,67.71,68.12,62.50,72.71,76.04,,,,MI
+HGD,EEGConformer,4class,PAPER Table 1,S02,80.98,79.34,77.08,80.37,80.16,,,,Full montage
+HGD,EEGConformer,4class,PAPER Table 1,S03,91.73,90.96,79.33,92.79,90.87,,,,RLF
+HGD,EEGConformer,4class,PAPER Table 1,S04,92.06,77.16,89.31,94.99,93.29,,,,RLF
+HGD,EEGConformer,4class,PAPER Table 1,S05,78.86,77.16,68.41,79.20,77.61,,,,RLF
+HGD,EEGConformer,4class,PAPER Table 1,S06,99.37,99.77,99.94,100.00,99.94,,,,RLF
+HGD,EEGConformer,4class,PAPER Table 1,S07,99.94,99.94,99.94,100.00,99.89,,,,RLF
+HGD,EEGConformer,4class,PAPER Table 1,S08,100.00,99.92,99.85,99.77,99.77,,,,Full montage
+HGD,EEGConformer,4class,PAPER Table 1,S09,99.94,99.94,100.00,99.89,100.00,,,,"CSP, MI"
+HGD,EEGConformer,4class,PAPER Table 1,S10,99.66,99.77,99.72,99.83,99.66,,,,RLF
+HGD,EEGConformer,4class,PAPER Table 1,S11,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,EEGConformer,4class,PAPER Table 1,S12,99.89,99.83,99.77,99.77,99.77,,,,Full montage
+HGD,EEGConformer,4class,PAPER Table 1,S13,100.00,100.00,100.00,100.00,100.00,,,,"Full montage, Ours, CSP, RLF, MI"
+HGD,EEGConformer,4class,PAPER Table 1,S14,99.94,99.83,99.94,99.83,99.89,,,,"Full montage, CSP"
+HGD,EEGConformer,4class,PAPER Table 1,Mean,93.58,92.27,91.13,94.22,94.06,,,,RLF
+HGD,EEGConformer,4class,PAPER Table 1,SD,10.40,11.54,13.50,9.50,9.22,,,,

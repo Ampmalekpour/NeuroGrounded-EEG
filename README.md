@@ -52,6 +52,8 @@ python run_all.py --dataset hgd --models eegnetv4    # one model
 python run_all.py --dataset physionet --models eegnetv4   # PhysioNet, one model (= EEGNetV4\PhysioNet\run_suite.py)
 ```
 
+`python analysis/master_table.py` builds one master table (xlsx, html, csv) of every result next to the paper's tables, with the
+winner of each row in blue, plus a sheet listing every selected electrode (`reports/master_table/`; needs `pip install openpyxl` for the xlsx).
 Every `<Model>/<Dataset>/` folder has a `run_suite.py` that runs the whole suite of that model (same as `run_all.py --dataset ... --models ...`).
 HGD data cache problem and re-run steps: `docs/HGD_RERUN.md`.
 
